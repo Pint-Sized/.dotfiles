@@ -76,45 +76,45 @@
           }
 
           #lock {
-              background-image: image(url("./lock.png"));
+              background-image: image(url("./images/lock.png"));
           }
           #lock:focus {
-              background-image: image(url("./lock-hover.png"));
+              background-image: image(url("./images/lock-hover.png"));
           }
 
           #logout {
-              background-image: image(url("./logout.png"));
+              background-image: image(url("./images/logout.png"));
           }
           #logout:focus {
-              background-image: image(url("./logout-hover.png"));
+              background-image: image(url("./images/logout-hover.png"));
           }
 
           #suspend {
-              background-image: image(url("./sleep.png"));
+              background-image: image(url("./images/sleep.png"));
           }
           #suspend:focus {
-              background-image: image(url("./sleep-hover.png"));
+              background-image: image(url("./images/sleep-hover.png"));
           }
 
           #shutdown {
-              background-image: image(url("./power.png"));
+              background-image: image(url("./images/power.png"));
           }
           #shutdown:focus {
-              background-image: image(url("./power-hover.png"));
+              background-image: image(url("./images/power-hover.png"));
           }
 
           #reboot {
-              background-image: image(url("./restart.png"));
+              background-image: image(url("./images/restart.png"));
           }
           #reboot:focus {
-              background-image: image(url("./restart-hover.png"));
+              background-image: image(url("./images/restart-hover.png"));
           }
 
           #hibernate {
-      	background-image: image(url("./sleep.png"));
+      	background-image: image(url("./images/sleep.png"));
           }
           #hibernate:focus {
-      	background-image: image(url("./sleep-hover.png"));
+      	background-image: image(url("./images/sleep-hover.png"));
           }
     '';
   };
