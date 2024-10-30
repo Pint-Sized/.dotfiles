@@ -1,0 +1,22 @@
+{
+  config,
+  pkgs,
+  catppuccin,
+  lib,
+  ...
+}:
+
+{
+  # ------- KITTY ------- #
+  programs.kitty = {
+    enable = true;
+    font = {
+      size = 11;
+      name = "0x Proto Nerd Font";
+    };
+    shellIntegration.enableFishIntegration = true;
+    settings = {
+      confirm_os_window_close = 0;
+    };
+  };
+}

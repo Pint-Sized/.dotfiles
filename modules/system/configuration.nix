@@ -1,0 +1,22 @@
+{
+  inputs,
+  config,
+  pkgs,
+  lib,
+  ...
+}:
+
+{
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    ./hardware.nix
+    ./packages.nix
+    ./services.nix
+    ./system.nix
+    ./wifi.nix
+  ];
+
+  system.stateVersion = "23.05"; # Did you read the comment?
+
+}
