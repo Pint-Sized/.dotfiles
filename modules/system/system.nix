@@ -101,9 +101,6 @@
 
   networking = {
     hostName = "sisyphus";
-    networkmanager = {
-      enable = true;
-    };
   };
 
   security = {
