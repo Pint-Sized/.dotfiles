@@ -65,7 +65,6 @@
     way-displays
     hyprpicker
     lm_sensors
-    leafpad
     kdePackages.ark
     # nur.repos.nltch.spotify-adblock
     # nur.repos.nltch.ciscoPacketTracer8

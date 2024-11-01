@@ -31,6 +31,7 @@
           inherit system;
           modules = [
             ./modules/system/configuration.nix
+            catppuccin.nixosModules.catppuccin
           ];
         };
       };

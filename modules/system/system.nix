@@ -3,6 +3,7 @@
   config,
   pkgs,
   lib,
+  catppuccin,
   ...
 }:
 
@@ -42,9 +43,24 @@
     };
   };
 
-  boot.loader = {
-    systemd-boot = {
-      enable = true;
+  catppuccin = {
+  	enable = true;
+  	accent = "mauve";
+  	flavor = "mocha";
+  };
+
+
+  boot = {
+	plymouth = {
+		catppuccin = {
+		  enable = true;
+		  flavor = "mocha";	
+		};
+	};
+    loader = {
+	  systemd-boot = {
+        enable = true;
+      };
     };
   };
 
@@ -67,7 +83,15 @@
     };
   };
 
+  
+
+
+
   console = {
+	catppuccin = {
+		enable = true;
+		flavor = "mocha";
+	};
     keyMap = "us";
   };
 

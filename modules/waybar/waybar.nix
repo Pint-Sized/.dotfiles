@@ -159,10 +159,7 @@
             "󰤢"
             "󰤥"
           ];
-          "format-wifi" = [
-            "<i class='fa-solid fa-wifi-slash'></i>"
-            "{icon}"
-          ];
+          "format-wifi" = "󰖩 Wifi";
           "rotate" = 0;
           "format-ethernet" = "󰈀 Eth.";
           "tooltip-format" = "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>";
