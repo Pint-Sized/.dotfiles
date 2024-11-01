@@ -23,6 +23,9 @@
     # ----------- FISH ------------- #
     ./modules/fish/fish.nix
 
+	# --------- GEDIT ------------- # 
+	./modules/gedit/gedit.nix
+
     # ---------- GIT --------------# 
     ./modules/git/git.nix
 
