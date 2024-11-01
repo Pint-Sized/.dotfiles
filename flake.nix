@@ -4,7 +4,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    #nur
+    nur.url = "github:nix-community/NUR/2b457ac396f54d0e184f658d852080a6bb6ce80b";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -18,6 +18,7 @@
       nixpkgs,
       home-manager,
       catppuccin,
+      nur,
       ...
     }:
     let
@@ -32,6 +33,10 @@
           modules = [
             ./modules/system/configuration.nix
             catppuccin.nixosModules.catppuccin
+            nur.nixosModules.nur
+            ({config, ...}: { 
+            environment.systemPackages = [config.nur.repos.nltch.spotify-adblock];
+            })
           ];
         };
       };

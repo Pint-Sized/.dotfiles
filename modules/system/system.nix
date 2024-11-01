@@ -57,17 +57,20 @@
       };
     };
     loader = {
-	timeout = 1;
-      systemd-boot = {
-      	enable = true;
+      timeout = 3;
+      systemd-boot.enable = false;
+      efi.canTouchEfiVariables = true;
+      efi.efiSysMountPoint = "/boot";
+      grub = {
+        enable = true;
+        devices = [ "nodev" ];
+        efiSupport = true;
+        # useOSProber = true;
+        catppuccin = {
+          enable = true;
+          flavor = "mocha";
+        };
       };
-    };
-    initrd = {
-    	systemd = {
-    		extraConfig = ''
-    		  DefaultTimeoutStopSec=3s
-    		'';
-    	};
     };
   };
 

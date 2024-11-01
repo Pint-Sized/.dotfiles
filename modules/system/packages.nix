@@ -5,7 +5,6 @@
   lib,
   ...
 }:
-
 {
   environment.systemPackages = with pkgs; [
     rclone
@@ -35,8 +34,6 @@
     pavucontrol
     playerctl
     wlogout
-    sublime
-    gedit
     zathura
     bat
     brightnessctl
@@ -44,7 +41,6 @@
     git
     wget
     waybar
-    dunst
     libnotify
     hyprpaper
     rofi-wayland
@@ -53,7 +49,6 @@
     protonup
     hyprlock
     xdg-desktop-portal-hyprland
-    kdePackages.polkit-kde-agent-1
     nautilus
     nixfmt-rfc-style
     wdisplays
@@ -68,7 +63,7 @@
     kdePackages.ark
     # nur.repos.nltch.spotify-adblock
     # nur.repos.nltch.ciscoPacketTracer8
-    pkgs.gnome.gnome-keyring
+    pkgs.gnome-keyring
     unzip
     zip
     cmake
@@ -93,14 +88,11 @@
     appeditor
     gparted
     mediawriter
-    nwg-look
     kdePackages.qt6ct
-    themix-gui
     glib
     nodejs_22
     freecad
     gnome-calculator
-    woeusb
     rustup
     gnumake
     libgcc
@@ -145,5 +137,17 @@
       };
     };
   };
-
+  # nixpkgs.config.packageOverrides = pkgs: {
+  #     nur = import (builtins.fetchTarball "https://github.com/nix-community/NUR/archive/master.tar.gz") {
+  #       inherit pkgs;
+  #   };
+  # };
 }
+
+
+
+
+
+
+
+
