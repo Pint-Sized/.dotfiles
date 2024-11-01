@@ -37,8 +37,8 @@
     ./modules/hyprland/pyprland.nix
     ./modules/hyprland/mocha.nix
 
-    # ---------- HYPRLOCK ----------- #
-    ./modules/hyprlock/hyprlock.nix
+	# ------------ HYPRLOCK ---------- #
+	./modules/hyprlock/hyprlock.nix
 
     # ----------- KITTY  ------------- #
     ./modules/kitty/kitty.nix

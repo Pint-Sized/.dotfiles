@@ -11,9 +11,12 @@
   wayland.windowManager.hyprland = {
     enable = true;
     catppuccin.enable = false;
-    plugins =
-      [
-      ];
+	xwayland = {
+	  enable = true;
+	};
+
+
+    plugins = [];
     extraConfig = ''
                       source=~/.config/hypr/mocha.conf
                       ################
@@ -35,7 +38,6 @@
                       # Set programs that you use
                       $terminal = kitty
                       $fileManager = nautilus
-                      $menu = wofi --show drun
                       $browser = io.gitlab.librewolf-community
 
                       #################
@@ -48,16 +50,17 @@
                       # exec-once = $terminal
                       # exec-once = nm-applet &
                       # exec-once = waybar & hyprpaper & firefox
-             		    exec-once = sleep 4
+             		  exec-once = sleep 4
+					  exec-once = hyprctl setcursor 16	
                       exec-once = swww-daemon &
                       exec-once = swww img ~/Wallpapers/LOTRblue.jpg &
                       exec-once = sleep 1
                       exec-once = waybar &
                       exec-once = udiskie &
                       exec-once = lxqt-policykit-agent
-            		    exec-once = wl-paste --watch cliphist store
-            		    exec-once = ulauncher --no-window-shadow
-      				exec-once = pypr
+            		  exec-once = wl-paste --watch cliphist store
+            		  exec-once = ulauncher --no-window-shadow
+      				  exec-once = pypr
       				
                       ####################
                       ### START-UP APPS###

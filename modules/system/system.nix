@@ -24,6 +24,7 @@
       EDITOR = "micro";
       SYSTEMD_EDITOR = "micro";
       VISUAL = "micro";
+      XCURSOR_SIZE = 16;
     };
     sessionVariables = {
       WLR_NO_HARDWARE_CURSORS = "1";
