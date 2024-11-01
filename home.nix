@@ -52,6 +52,9 @@
     # ------- ROFI ------------- #
     ./modules/rofi/rofi.nix
 
+	# ---------- SWAYNC ------------ #
+	./modules/swaync/swaync.nix
+
     # ---------- WAYBAR ----------- #
     ./modules/waybar/waybar.nix
 
