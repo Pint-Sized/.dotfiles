@@ -8,6 +8,7 @@
 {
   environment.systemPackages = with pkgs; [
     rclone
+    gedit
     python3
     wl-clipboard
     pyprland
