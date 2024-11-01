@@ -9,7 +9,7 @@
 
 {
   users.users.fionnbennett = {
-	shell = pkgs.fish;
+    shell = pkgs.fish;
     isNormalUser = true;
     description = "Fionn Bennett";
     extraGroups = [
@@ -44,23 +44,30 @@
   };
 
   catppuccin = {
-  	enable = true;
-  	accent = "mauve";
-  	flavor = "mocha";
+    enable = true;
+    accent = "mauve";
+    flavor = "mocha";
   };
 
-
   boot = {
-	plymouth = {
-		catppuccin = {
-		  enable = true;
-		  flavor = "mocha";	
-		};
-	};
-    loader = {
-	  systemd-boot = {
+    plymouth = {
+      catppuccin = {
         enable = true;
+        flavor = "mocha";
       };
+    };
+    loader = {
+	timeout = 1;
+      systemd-boot = {
+      	enable = true;
+      };
+    };
+    initrd = {
+    	systemd = {
+    		extraConfig = ''
+    		  DefaultTimeoutStopSec=3s
+    		'';
+    	};
     };
   };
 
@@ -83,15 +90,11 @@
     };
   };
 
-  
-
-
-
   console = {
-	catppuccin = {
-		enable = true;
-		flavor = "mocha";
-	};
+    catppuccin = {
+      enable = true;
+      flavor = "mocha";
+    };
     keyMap = "us";
   };
 

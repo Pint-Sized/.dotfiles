@@ -23,9 +23,9 @@
     # ----------- FISH ------------- #
     ./modules/fish/fish.nix
 
-	# ---------- GIT --------------# 
-	./modules/git/git.nix
-	
+    # ---------- GIT --------------# 
+    ./modules/git/git.nix
+
     # ---------- GTK ------------- #
     ./modules/gtk/gtk.nix
 
@@ -34,7 +34,7 @@
 
     # ------------- HYPRLAND ---------- #
     ./modules/hyprland/hyprland.nix
-	./modules/hyprland/pyprland.nix
+    ./modules/hyprland/pyprland.nix
     ./modules/hyprland/mocha.nix
 
     # ---------- HYPRLOCK ----------- #

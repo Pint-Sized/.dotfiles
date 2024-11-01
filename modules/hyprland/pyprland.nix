@@ -1,37 +1,37 @@
 {
-config,
-pkgs,
-catppuccin,
-lib,
-...
+  config,
+  pkgs,
+  catppuccin,
+  lib,
+  ...
 }:
 
 {
   home.file = {
     ".config/hypr/pyprland.toml" = {
       text = ''
-      [pyprland]
-      plugins = [
-       "expose",
-       "fetch_client_menu",
-       "lost_windows",
-       "magnify",
-       "scratchpads",
-       "shift_monitors",
-       "toggle_special",
-       "workspaces_follow_focus",
-      ]
+        [pyprland]
+        plugins = [
+         "expose",
+         "fetch_client_menu",
+         "lost_windows",
+         "magnify",
+         "scratchpads",
+         "shift_monitors",
+         "toggle_special",
+         "workspaces_follow_focus",
+        ]
 
-      # using variables for demonstration purposes (not needed)
-      [pyprland.variables]
-      term_classed = "kitty --class"
+        # using variables for demonstration purposes (not needed)
+        [pyprland.variables]
+        term_classed = "kitty --class"
 
-      [scratchpads.term]
-      animation = "fromTop"
-      command = "[term_classed] main-dropterm"
-      class = "main-dropterm"
-      size = "75% 60%"
-      max_size = "1920px 100%"
+        [scratchpads.term]
+        animation = "fromTop"
+        command = "[term_classed] main-dropterm"
+        class = "main-dropterm"
+        size = "75% 60%"
+        max_size = "1920px 100%"
       '';
     };
   };
