@@ -26,8 +26,7 @@
                       # See https://wiki.hyprland.org/Configuring/Monitors/
                       # monitor=,preferred,auto,auto
 
-                      # monitor=DP-1, 1920x1080@240,0x0,auto
-                      monitor=, preferred, auto, 1
+                      monitor=DP-1, 1920x1080@240,0x0,auto
 
                       ###################
                       ### MY PROGRAMS ###
