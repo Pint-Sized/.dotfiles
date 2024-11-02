@@ -9,68 +9,67 @@
 {
   imports = [
     # ------- BAT ------- #
-    ./modules/bat/bat.nix
+    ./modules/bat.nix
 
     # ------- BTOP ------- #
-    ./modules/btop/btop.nix
+    ./modules/btop.nix
 
     # ------- CATPPUCCIN ------- #
-    ./modules/catppuccin/catppuccin.nix
+    ./modules/catppuccin.nix
 
     # -------- CAVA ------------ #
-    ./modules/cava/cava.nix
+    ./modules/cava.nix
 
     # ----------- FISH ------------- #
-    ./modules/fish/fish.nix
+    ./modules/fish.nix
 
-	# --------- GEDIT ------------- # 
-	./modules/gedit/gedit.nix
+	  # --------- GEDIT ------------- # 
+	  ./modules/gedit.nix
 
     # ---------- GIT --------------# 
-    ./modules/git/git.nix
+    ./modules/git.nix
 
     # ---------- GTK ------------- #
-    ./modules/gtk/gtk.nix
+    ./modules/gtk.nix
 
     # -------------- HOME-SETTINGS ------ #
-    ./modules/home-settings/home-settings.nix
+    ./modules/home-settings.nix
 
     # ------------- HYPRLAND ---------- #
-    ./modules/hyprland/hyprland.nix
-    ./modules/hyprland/pyprland.nix
-    ./modules/hyprland/mocha.nix
+    ./modules/hyprland.nix
+    ./modules/pyprland.nix
 
 	# ------------ HYPRLOCK ---------- #
-	./modules/hyprlock/hyprlock.nix
+	./modules/hyprlock.nix
 
     # ----------- KITTY  ------------- #
-    ./modules/kitty/kitty.nix
+    ./modules/kitty.nix
 
     # ----------- MICRO ---------- #
-    ./modules/micro/micro.nix
+    ./modules/micro.nix
 
     # ---------- QT ----------- #
-    ./modules/qt/qt.nix
+    ./modules/qt.nix
 
     # ------- ROFI ------------- #
-    ./modules/rofi/rofi.nix
+    ./modules/rofi.nix
 
 	# ---------- SWAYNC ------------ #
-	./modules/swaync/swaync.nix
+	./modules/swaync.nix
 
     # ---------- WAYBAR ----------- #
-    ./modules/waybar/waybar.nix
+    ./modules/waybar.nix
 
     # -------- WLOGOUT -------- #
-    ./modules/wlogout/wlogout.nix
+    ./modules/wlogout.nix
 
     # --------- YAZI ------------ #
-    ./modules/yazi/yazi.nix
+    ./modules/yazi.nix
 
     # --------- ZATHURA ---------- #
-    ./modules/zathura/zathura.nix
+    ./modules/zathura.nix
   ];
 
-  programs.home-manager.enable = true;
-  home.stateVersion = "24.05";
+  programs.home-manager.enable = true; # allows home-manager to manage itself
+  home.stateVersion = "24.05"; # do not change without consulting manual
 }

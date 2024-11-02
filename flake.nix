@@ -31,7 +31,7 @@
         sisyphus = lib.nixosSystem {
           inherit system;
           modules = [
-            ./modules/system/configuration.nix
+            ./system/configuration.nix
             catppuccin.nixosModules.catppuccin
             nur.nixosModules.nur
             ({config, ...}: { 
