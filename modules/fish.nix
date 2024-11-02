@@ -10,6 +10,24 @@
   # ------- FISH ------- #
   programs.fish = {
     enable = true;
+    plugins = [
+      {
+        name = "done";
+        src = pkgs.fishPlugins.done;
+      }
+      {
+        name = "sponge";
+        src = pkgs.fishPlugins.sponge;
+      }
+      {
+        name = "autopair";
+        src = pkgs.fishPlugins.sponge;
+      }
+      {
+        name = "puffer";
+        src = pkgs.fishPlugins.puffer;
+      }
+    ];
     functions = {
       fish_greeting = "pokeget nidoran-m --hide-name | fastfetch --file-raw -";
       c = "clear";

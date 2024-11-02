@@ -120,7 +120,7 @@
               " "
             ];
           };
-          "on-click" = "pavucontrol";
+          "on-click" = "pavucontrol --tab=3";
         };
         "custom/notification" = {
           "tooltip" = false;

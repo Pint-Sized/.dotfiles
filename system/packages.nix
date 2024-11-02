@@ -8,8 +8,14 @@
 {
   environment.systemPackages = with pkgs; [
     rclone
-    gedit
+    remnote
+    wineWowPackages.waylandFull
+	bottles
+	fzf
     python3
+    fishPlugins.done
+    fishPlugins.sponge
+    fishPlugins.puffer
     wl-clipboard
     pyprland
     cliphist
