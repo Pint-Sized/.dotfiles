@@ -10,8 +10,10 @@
     rclone
     remnote
     wineWowPackages.waylandFull
-	bottles
-	fzf
+  	bottles
+  	openrazer-daemon
+  	polychromatic
+  	fzf
     python3
     fishPlugins.done
     fishPlugins.sponge
