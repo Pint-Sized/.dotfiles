@@ -10,6 +10,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     catppuccin.url = "github:catppuccin/nix";
+    nixvim.url = "github:nix-community/nixvim";
   };
 
   outputs =
@@ -19,6 +20,7 @@
       home-manager,
       catppuccin,
       nur,
+      nixvim,
       ...
     }:
     let
@@ -46,6 +48,7 @@
           modules = [
             ./home.nix
             catppuccin.homeManagerModules.catppuccin
+            <nixvim>.homeManagerModules.nixvim
           ];
         };
       };

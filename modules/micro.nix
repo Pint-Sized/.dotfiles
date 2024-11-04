@@ -51,7 +51,9 @@
           "parsecursor"= false;
           "paste"= false;
           "permbackup"= false;
-          "pluginrepos"= [];
+          "pluginrepos"= [
+            "https://codeberg.org/micro-plugins/filemanager2/raw/branch/main/repo.json"
+          ];
           "readonly"= false;
           "relativeruler"= false;
           "rmtrailingws"= false;
@@ -79,6 +81,17 @@
           "tabstospaces"= false;
           "useprimary"= true;
           "xterm"= false;
+          
+          "filemanager2.openonstart" = false;
+          "filemanager2.nerdfonts" = true;
+
+
+          "lsp.server"= "nix=nixd,python=pyls,go=gopls,typescript=deno lsp,rust=rust-analyzer";
+          "lsp.formatOnSave"= true;
+          "lsp.ignoreMessages"= "LS message1 to ignore|LS message 2 to ignore|...";
+          "lsp.tabcompletion"= true;
+          "lsp.ignoreTriggerCharacters"= "completion,signature";
+          "lsp.autocompleteDetails"= false;
     };
   };
 
@@ -103,7 +116,7 @@
   		  color-link type "#89b4fa"
   		  color-link type.keyword "#f9e2af"
   		  
-  		  color-link special "#f5c2e7"
+  		  color-link special "#cba6f7"
   		  color-link statement "#cba6f7"
   		  color-link preproc "#f5c2e7"
   		  

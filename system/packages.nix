@@ -19,6 +19,7 @@
     fishPlugins.done
     fishPlugins.sponge
     fishPlugins.puffer
+    fishPlugins.autopair
     wl-clipboard
     pyprland
     cliphist

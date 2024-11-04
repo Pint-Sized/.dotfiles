@@ -21,7 +21,7 @@
       }
       {
         name = "autopair";
-        src = pkgs.fishPlugins.sponge;
+        src = pkgs.fishPlugins.autopair;
       }
       {
         name = "puffer";

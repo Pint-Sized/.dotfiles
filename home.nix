@@ -3,6 +3,7 @@
   pkgs,
   catppuccin,
   lib,
+  nixvim,
   ...
 }:
 
@@ -47,6 +48,9 @@
 
     # ----------- MICRO ---------- #
     ./modules/micro.nix
+
+    # --------- NIXVIM --------- # 
+    ./modules/nixvim.nix
 
     # ---------- QT ----------- #
     ./modules/qt.nix
