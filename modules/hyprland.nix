@@ -305,7 +305,7 @@
                       bindr = $mainMod, L, exec, pkill wlogout || wlogout
                       bindr = $mainMod, P, exec, pkill waypaper || waypaper
                       bindr = $mainMod, I, exec, [float; move 72.5% 5%] pkill pavucontrol || pavucontrol
-                      bind = , v, pass, ^discord$
+                      # bind = , v, pass, ^discord$
                       bind = $mainMod ctrl, right, resizeactive, 10 0
                       bind = $mainMod ctrl, left, resizeactive, -10 0
                       bind = $mainMod ctrl, up, resizeactive, 0 -10

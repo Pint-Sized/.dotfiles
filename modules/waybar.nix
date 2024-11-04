@@ -14,7 +14,7 @@
       {
         "layer" = "top";
         "position" = "top";
-        # "width": 1280,
+        # "width": 1280;
 
         "margin-left" = 2;
         "margin-right" = 2;
@@ -39,9 +39,9 @@
           "network"
           # "cpu"
           # "memory"
+          "battery"
           "temperature"
           # "backlight"
-          "battery"
           "custom/notification"
           "custom/lock"
           "custom/power"
@@ -90,23 +90,23 @@
             "warning" = 30;
             "critical" = 15;
           };
-          "format" = "{icon}";
-          "format-charging" = "";
+          "format" = "{icon} {capacity}%";
+          "format-charging" = "󰂄 {capacity}%";
           "format-plugged" = "";
-          "format-alt" = "{icon}";
+          "format-alt" = "{icon} {time}";
           "format-icons" = [
-            ""
-            ""
-            ""
-            ""
-            ""
-            ""
-            ""
-            ""
-            ""
-            ""
-            ""
-            ""
+            "󰁹"
+            "󰂂"
+            "󰂁"
+            "󰂀"
+            "󰂀"
+            "󰁿"
+            "󰁽"
+            "󰁼"
+            "󰁻"
+            "󰁺"
+            "󰂃"
+            "󰂃"
           ];
         };
         "pulseaudio" = {
