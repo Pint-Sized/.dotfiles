@@ -9,6 +9,7 @@
   environment.systemPackages = with pkgs; [
     rclone
     remnote
+    home-manager
     wineWowPackages.waylandFull
   	bottles
   	openrazer-daemon
@@ -27,7 +28,7 @@
     nixd
     discord
     wev
-    zed-editor
+    # zed-editor
     rustdesk-flutter
     ntfs3g
     chezmoi
@@ -58,7 +59,7 @@
     protonup
     hyprlock
     xdg-desktop-portal-hyprland
-    nautilus
+    gnome.nautilus
     nixfmt-rfc-style
     wdisplays
     monitor
@@ -72,7 +73,7 @@
     kdePackages.ark
     # nur.repos.nltch.spotify-adblock
     # nur.repos.nltch.ciscoPacketTracer8
-    pkgs.gnome-keyring
+    # pkgs.gnome-keyring
     unzip
     zip
     cmake
@@ -101,7 +102,7 @@
     glib
     nodejs_22
     freecad
-    gnome-calculator
+    gnome.gnome-calculator
     rustup
     gnumake
     libgcc
@@ -120,11 +121,6 @@
       xwayland = {
         enable = true;
       };
-    };
-
-    coolercontrol = {
-      enable = true;
-      nvidiaSupport = true;
     };
 
     gamemode = {
