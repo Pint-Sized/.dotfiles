@@ -9,6 +9,8 @@
   environment.systemPackages = with pkgs; [
     rclone
     remnote
+    vimPlugins.nvchad-ui
+    neovim
     home-manager
     wineWowPackages.waylandFull
   	bottles

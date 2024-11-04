@@ -10,9 +10,6 @@
   home = {
     username = "fionnbennett";
     homeDirectory = "/home/fionnbennett";
-    sessionVariables = {
-      EDITOR = "micro";
-    };
     pointerCursor = {
     	size = 16;
     	name  = "catppuccin-mocha-mauve-cursors";

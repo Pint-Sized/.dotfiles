@@ -49,7 +49,7 @@
     ./modules/micro.nix
 
     # --------- NEOVIM --------- # 
-    ./modules/neovim.nix
+    ./modules/neovim/neovim.nix
 
     # ---------- QT ----------- #
     ./modules/qt.nix
