@@ -29,20 +29,22 @@
       lib = nixpkgs.lib;
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
-    in
-    {
+      pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
+    in {
       nixosConfigurations = {
         sisyphus = lib.nixosSystem {
           inherit system;
           modules = [
             ./system/configuration.nix
-            (import ./overlays)
             catppuccin.nixosModules.catppuccin
             nur.nixosModules.nur
             ({config, ...}: { 
             environment.systemPackages = [config.nur.repos.nltch.spotify-adblock];
             })
           ];
+          specialArgs = {
+            inherit pkgs-unstable;
+          };
         };
       };
       homeConfigurations = {

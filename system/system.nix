@@ -25,6 +25,7 @@
       SYSTEMD_EDITOR = "micro";
       VISUAL = "micro";
       XCURSOR_SIZE = 16;
+      NIXPKGS_ALLOW_UNFREE=1;
     };
     sessionVariables = {
       WLR_NO_HARDWARE_CURSORS = "1";
