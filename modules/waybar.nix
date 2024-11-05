@@ -14,7 +14,7 @@
       enable = true;
       flavor = "mocha";
       mode = "createLink";
-    }
+    };
     settings = [
       {
         "layer" = "top";

@@ -1,4 +1,4 @@
-{ pkgs, config, lib, catppuccin }:
+{ pkgs, config, lib, catppuccin, ... }:
 
 {
 	programs.mpv = {

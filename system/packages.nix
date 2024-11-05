@@ -3,6 +3,7 @@
   config,
   pkgs,
   lib,
+  nixpkgs-unstable,
   ...
 }:
 {
@@ -11,13 +12,12 @@
     obs-studio
     imv
     mpv
+    libsForQt5.qt5ct
     kdePackages.qt6ct
     foot
-    nushell
-    zed
+    unstable.zed-editor
     lm_sensors
     remnote
-    vimPlugins.nvchad-ui
     neovim
     home-manager
     wineWowPackages.waylandFull
@@ -39,7 +39,6 @@
     nixd
     discord
     wev
-    # zed-editor
     rustdesk-flutter
     ntfs3g
     chezmoi
