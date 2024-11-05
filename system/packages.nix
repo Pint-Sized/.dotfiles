@@ -8,6 +8,8 @@
 {
   environment.systemPackages = with pkgs; [
     rclone
+    imv
+    foot
     nushell
     zed
     lm_sensors

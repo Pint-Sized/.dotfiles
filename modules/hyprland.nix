@@ -65,9 +65,11 @@
                       ### START-UP APPS###
                       ####################
                       exec-once=[workspace 12 silent] spotify
-                      exec-once=[workspace 11 silent] webcord
-                      exec-once=[workspace 10 silent] flatpak run com.rtosta.zapzap
-                      exec-once=[workspace 9 silent] chromium --profile-directory=Default --app-id=abdndmcckigaeepaljhpcngbfdkbiggb #snapchat
+                      exec-once=[workspace 11 silent] thunderbird
+                      exec-once=[workspace 10 silent] com.github.eneshecan.WhatsAppForLinux
+                      exec-once=[workspace 9 silent] com.github.IsmaelMartinez.teams_for_linux
+                      exec-once=[workspace 8 silent] chromium --profile-directory=Default --app-id=abdndmcckigaeepaljhpcngbfdkbiggb
+                      exec-once=[workspace 7 silent] imv ~/School/School-TimetableV2.png
 
                       ##############
                       ### CURSOR ###

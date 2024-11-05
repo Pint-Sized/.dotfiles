@@ -39,9 +39,9 @@
           "network"
           "cpu"
           # "memory"
-          "battery"
           # "backlight"
           "temperature"
+          "battery"
           "custom/notification"
           "custom/lock"
           "custom/power"
@@ -307,16 +307,28 @@
           }
 
           #battery {
+            border-radius: 0px 1rem 1rem 0px;
             color: @green;
+            margin-right: 1rem;
           }
 
 
           #battery.charging {
             color: @green;
+            border-radius: 0px 1rem 1rem 0px;
+            margin-right: 1rem;
           }
 
           #battery.warning:not(.charging) {
+            color: @peach;
+            border-radius: 0px 1rem 1rem 0px;
+            margin-right: 1rem;
+          }
+
+          #battery.critical:not(.charging) {
             color: @red;
+            border-radius: 0px 1rem 1rem 0px;
+            margin-right: 1rem;
           }
 
           #backlight {
@@ -368,8 +380,6 @@
 
           #temperature {
       	color: @blue;
-      	border-radius: 0px 1rem 1rem 0px;
-      	margin-right: 1rem;
           }
 
           #cpu {

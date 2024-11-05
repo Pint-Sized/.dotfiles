@@ -12,13 +12,13 @@
       enable = true;
       accent = "mauve";
       flavor = "mocha";
-      size = "standard";
-      tweaks = [ "normal" ];
       icon = {
         enable = true;
         accent = "mauve";
         flavor = "mocha";
       };
+      size = "compact";
+      tweaks = [ "black" "rimless" ];
     };
     font = {
       name = "0xProto Nerd Font";

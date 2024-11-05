@@ -15,7 +15,7 @@
       };
       display = {
         separator = "->   ";
-        color = "red";
+        color = "cyan";
       };
       modules = [
         { type = "title"; }
