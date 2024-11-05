@@ -8,7 +8,10 @@
 {
   environment.systemPackages = with pkgs; [
     rclone
+    obs-studio
     imv
+    mpv
+    kdePackages.qt6ct
     foot
     nushell
     zed
@@ -61,7 +64,6 @@
     waybar
     libnotify
     hyprpaper
-    rofi-wayland
     webcord-vencord
     vscode
     protonup

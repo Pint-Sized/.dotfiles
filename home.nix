@@ -29,6 +29,9 @@
     # --------- FOOT -------------- #
     ./modules/foot.nix
 
+    # ------------ FZF ------------- # 
+    ./modules/fzf.nix
+
     # ---------- GIT --------------# 
     ./modules/git.nix
 
@@ -45,20 +48,29 @@
 	# ------------ HYPRLOCK ---------- #
 	./modules/hyprlock.nix
 
+    # ---------- IMV ----------- #
+    ./modules/imv.nix
+
     # ----------- KITTY  ------------- #
     ./modules/kitty.nix
 
     # ----------- MICRO ---------- #
     ./modules/micro.nix
 
+    # ------------ MPV ------------ #
+    ./modules/mpv.nix
+
     # --------- NEOVIM --------- # 
     ./modules/neovim/neovim.nix
 
+    # ---------- OBS-STUDIO ------------ #
+    ./modules/obs-studio.nix
+
+    # -------- PYPRLAND ------------- # 
+    ./modules/pyprland.nix
+
     # ---------- QT ----------- #
     ./modules/qt.nix
-
-    # ------- ROFI ------------- #
-    ./modules/rofi.nix
 
 	# ---------- SWAYNC ------------ #
 	./modules/swaync.nix

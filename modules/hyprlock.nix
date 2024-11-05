@@ -10,6 +10,11 @@
   # ------ HYPRLOCK ------- #
   programs.hyprlock = {
     enable = true;
+    catppuccin = {
+      enable = true;
+      accent = "mauve";
+      flavor = "mocha";
+    };
     settings = {
       general = {
         hide_cursor = false;
