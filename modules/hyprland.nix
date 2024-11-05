@@ -92,10 +92,6 @@
                       env = XDG_SESSION_TYPE,wayland
                       env = XDG_SESSION_DESKTOP,Hyprland
                       env = QT_QPA_PLATFORM,wayland;xcb
-                      env = GBM_BACKEND,nvidia-drm
-                      env = __GLX_VENDOR_LIBRARY_NAME,nvidia
-                      env = LIBVA_DRIVER_NAME,nvidia
-                      env = GTK_THEME,Nord
 
 
                       #####################
@@ -314,6 +310,7 @@
                       bind = $mainMod SHIFT, left, swapwindow, l
                       bind = $mainMod SHIFT, up, swapwindow, u
                       bind = $mainMod SHIFT, down, swapwindow, d
+                      bind = $mainMod, O, exec, remnote --enable-features=UseOzonePlatform --ozone-platform=wayland
 
                       ##############################
                       ### WINDOWS AND WORKSPACES ###

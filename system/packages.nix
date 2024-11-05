@@ -8,6 +8,9 @@
 {
   environment.systemPackages = with pkgs; [
     rclone
+    nushell
+    zed
+    lm_sensors
     remnote
     vimPlugins.nvchad-ui
     neovim

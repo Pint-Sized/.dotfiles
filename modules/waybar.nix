@@ -16,9 +16,9 @@
         "position" = "top";
         # "width": 1280;
 
-        "margin-left" = 2;
-        "margin-right" = 2;
-        "margin-top" = 2;
+        "margin-left" = 0;
+        "margin-right" = 0;
+        "margin-top" = 0;
         "margin-bottom" = 0;
         "exclusive" = true;
         "passthrough" = false;
@@ -27,7 +27,7 @@
         "modules-left" = [
           "custom/launcher"
           "hyprland/workspaces"
-          # "custom/music"
+          "custom/music"
           # "cava"
         ];
         "modules-center" = [
@@ -37,11 +37,11 @@
         "modules-right" = [
           "pulseaudio"
           "network"
-          # "cpu"
+          "cpu"
           # "memory"
           "battery"
-          "temperature"
           # "backlight"
+          "temperature"
           "custom/notification"
           "custom/lock"
           "custom/power"
@@ -72,7 +72,7 @@
         };
         "backlight" = {
           "device" = "intel_backlight";
-          "format" = "{icon}";
+          "format" = "{icon} {percent}%";
           "format-icons" = [
             ""
             ""
@@ -95,18 +95,18 @@
           "format-plugged" = "";
           "format-alt" = "{icon} {time}";
           "format-icons" = [
-            "󰁹"
-            "󰂂"
-            "󰂁"
-            "󰂀"
-            "󰂀"
-            "󰁿"
-            "󰁽"
-            "󰁼"
-            "󰁻"
+            "󰂃"
+            "󰂃"
             "󰁺"
-            "󰂃"
-            "󰂃"
+            "󰁻"
+            "󰁼"
+            "󰁽"
+            "󰁿"
+            "󰂀"
+            "󰂀"
+            "󰂁"
+            "󰂂"
+            "󰁹"
           ];
         };
         "pulseaudio" = {
@@ -179,14 +179,14 @@
           "format" = " {usage}%";
         };
         "temperature" = {
-          "hwmon-path" = "/sys/class/hwmon/hwmon3/temp1_input";
+          "hwmon-path" = "/sys/class/hwmon/hwmon6/temp1_input";
           "format" = " {temperatureC}°C";
           "tooltip" = false;
           "interval" = 5;
         };
         "custom/launcher" = {
           "format" = "";
-          "on-click" = "rofi -show drun; pkill rofi";
+          "on-click" = "ulauncher-toggle";
           "tooltip" = false;
         };
         "cava" = {
@@ -249,7 +249,8 @@
             border-radius: 0px 1rem 1rem 0px;
             margin: 5px;
             background-color: @surface0;
-            margin-left: 0rem
+            margin-left: 0rem;
+            margin-right: 1rem;
           }
 
           #workspaces button {
@@ -281,7 +282,12 @@
           #memory,
           #temperature,
           #network,
-          #memory,
+          #memory {
+            background-color: @surface0;
+            padding: 0.5rem 0.75rem;
+            margin: 5px 0;
+          }
+
           #custom-notification,
           #custom-lock,
           #custom-power {
@@ -329,7 +335,9 @@
 
           #custom-music {
             color: @mauve;
-            border-radius: 1rem 0px 0px 1rem;
+            border-radius: 1rem 1rem 1rem 1rem;
+            padding-left: 1rem;
+            
           }
 
           #custom-notification {
@@ -343,9 +351,9 @@
           }
 
           #custom-power {
-              margin-right: 1rem;
               border-radius: 0px 1rem 1rem 0px;
               color: @red;
+              margin-right: 6px;
           }
 
           #network {
@@ -372,6 +380,7 @@
           #custom-launcher {
       	color: @subtext1;
       	border-radius: 1rem 0px 0px 1rem;
+        margin-left: 6px;
           }
 
           #cava {

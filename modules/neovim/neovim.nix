@@ -1,4 +1,4 @@
-{ config, lib, pkgs, catppuccin, ... }:
+{ config, lib, pkgs, ... }:
 
 {
   programs.neovim = {
@@ -21,6 +21,7 @@
           # LazyVim
           LazyVim
           bufferline-nvim
+          vimacs
           cmp-buffer
           cmp-nvim-lsp
           cmp-path

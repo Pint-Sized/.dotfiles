@@ -20,6 +20,9 @@
     # -------- CAVA ------------ #
     ./modules/cava.nix
 
+    # ------- FASTFETCH -------- #
+    ./modules/fastfetch.nix
+
     # ----------- FISH ------------- #
     ./modules/fish.nix
 

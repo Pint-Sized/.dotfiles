@@ -6,13 +6,13 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
     nur.url = "github:nix-community/NUR/2b457ac396f54d0e184f658d852080a6bb6ce80b";
     home-manager = {
-      url = "github:nix-community/home-manager";
+      url = "github:nix-community/home-manager/release-24.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     catppuccin.url = "github:catppuccin/nix";
     nixvim.url = "github:nix-community/nixvim";
   };
-
+  
   outputs =
     {
       self,

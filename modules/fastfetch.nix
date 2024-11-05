@@ -1,0 +1,66 @@
+{
+  pkgs,
+  lib,
+  config,
+  catppuccin,
+  ...
+}:
+
+{
+  programs.fastfetch = {
+    enable = true;
+    settings = {
+      logo = {
+        type = "small";
+      };
+      display = {
+        separator = "->   ";
+        color = "red";
+      };
+      modules = [
+        { type = "title"; }
+        "separator"
+        {
+          key = " Distro    ";
+          type = "os";
+        }
+        {
+          key = " Cpu       ";
+          type = "cpu";
+        }
+        {
+          key = " Host      ";
+          type = "host";
+        }
+        {
+          key = " WM        ";
+          type = "wm";
+        }
+        {
+          key = " Locale    ";
+          type = "locale";
+        }
+        {
+          key = " Terminal  ";
+          type = "terminal";
+        }
+        {
+          key = "󰈺 Shell     ";
+          type = "shell";
+        }
+        {
+          key = "󱊣 Battery   ";
+          type = "battery";
+        }
+        "break"
+        {
+          type = "colors";
+          paddingLeft = 6;
+          symbol = "circle";
+        }
+
+      ];
+
+    };
+  };
+}
