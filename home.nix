@@ -43,10 +43,10 @@
 
     # ------------- HYPRLAND ---------- #
     ./modules/hyprland.nix
-    ./modules/pyprland.nix
 
-	# ------------ HYPRLOCK ---------- #
-	./modules/hyprlock.nix
+
+	  # ------------ HYPRLOCK ---------- #
+	  ./modules/hyprlock.nix
 
     # ---------- IMV ----------- #
     ./modules/imv.nix
@@ -61,7 +61,7 @@
     ./modules/mpv.nix
 
     # --------- NEOVIM --------- # 
-    ./modules/neovim/neovim.nix
+    # ./modules/neovim/neovim.nix
 
     # ---------- OBS-STUDIO ------------ #
     ./modules/obs-studio.nix
@@ -72,8 +72,8 @@
     # ---------- QT ----------- #
     ./modules/qt.nix
 
-	# ---------- SWAYNC ------------ #
-	./modules/swaync.nix
+	  # ---------- SWAYNC ------------ #
+	  ./modules/swaync.nix
 
     # ---------- WAYBAR ----------- #
     ./modules/waybar.nix

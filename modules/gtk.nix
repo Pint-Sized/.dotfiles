@@ -17,8 +17,8 @@
         accent = "mauve";
         flavor = "mocha";
       };
-      size = "compact";
-      tweaks = [ "black" "rimless" ];
+      size = "standard";
+      tweaks = [ "rimless" ];
     };
     font = {
       name = "0xProto Nerd Font";

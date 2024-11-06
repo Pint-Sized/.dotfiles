@@ -11,6 +11,9 @@
     (with pkgs; [
       rclone
       obs-studio
+      pandoc
+      shellcheck
+      celluloid
       imv
       mpv
       libsForQt5.qt5ct
@@ -44,7 +47,6 @@
       yarn
       volctl
       waypaper
-      wttrbar
       mpc-cli
       fastfetch
       pokeget-rs
@@ -62,7 +64,6 @@
       waybar
       libnotify
       hyprpaper
-      webcord-vencord
       vscode
       protonup
       hyprlock
@@ -75,13 +76,8 @@
       swww
       liquidctl
       deluge
-      way-displays
-      hyprpicker
       lm_sensors
       kdePackages.ark
-      # nur.repos.nltch.spotify-adblock
-      # nur.repos.nltch.ciscoPacketTracer8
-      # pkgs.gnome-keyring
       unzip
       zip
       cmake
@@ -90,7 +86,6 @@
       lxqt.lxqt-policykit
       ripgrep
       fd
-      emacs
       usbutils
       udisks
       coreutils
@@ -105,24 +100,24 @@
       ungoogled-chromium
       appeditor
       gparted
-      mediawriter
       kdePackages.qt6ct
       glib
       nodejs_22
-      freecad
       gnome.gnome-calculator
       rustup
       gnumake
       libgcc
       yazi
       evince
-        discord 
+      discord
     ])
 
     ++
 
-      (with pkgs-unstable; [ 
+      (with pkgs-unstable; [
         zed-editor
+        emacs
+
       ]);
 
   programs = {

@@ -21,11 +21,11 @@
   };
   environment = {
     variables = {
-      EDITOR = "micro";
-      SYSTEMD_EDITOR = "micro";
-      VISUAL = "micro";
+      EDITOR = "nvim";
+      SYSTEMD_EDITOR = "nvim";
+      VISUAL = "nvim";
       XCURSOR_SIZE = 16;
-      NIXPKGS_ALLOW_UNFREE=1;
+      NIXPKGS_ALLOW_UNFREE = 1;
     };
     sessionVariables = {
       WLR_NO_HARDWARE_CURSORS = "1";
@@ -36,7 +36,7 @@
     };
   };
 
-  fonts.packages = with pkgs; [ (nerdfonts.override { fonts = [ "0xProto" ]; }) ];
+  fonts.packages = with pkgs; [ (nerdfonts.override { fonts = [ "0xProto" "NerdFontsSymbolsOnly" ]; }) ];
   fonts.fontconfig = {
     defaultFonts = {
       serif = [ "0xProto Nerd Font" ];
@@ -139,11 +139,5 @@
     rtkit = {
       enable = true;
     };
-  };
-
-  systemd = {
-    extraConfig = ''
-      DefaultTimeoutStopSec=3s
-    '';
   };
 }

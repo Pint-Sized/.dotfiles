@@ -41,12 +41,12 @@
         ];
         "modules-right" = [
           "pulseaudio"
+          "battery"
           "network"
           "cpu"
           # "memory"
           # "backlight"
           "temperature"
-          "battery"
           "custom/notification"
           "custom/lock"
           "custom/power"
@@ -169,9 +169,9 @@
           "format-ethernet" = "󰈀 Eth.";
           "tooltip-format" = "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>";
           "format-linked" = "󰈀 {ifname} (No IP)";
-          "format-disconnected" = " ";
+          "format-disconnected" = " Disc.";
           "tooltip-format-disconnected" = "Disconnected";
-          "on-click" = "/usr/local/bin/ags -t ControlPanel";
+          "on-click" = "foot nvim ~/.dotfiles/system/wifi.nix";
           "interval" = 2;
         };
         "memory" = {
@@ -312,28 +312,19 @@
           }
 
           #battery {
-            border-radius: 0px 1rem 1rem 0px;
             color: @green;
-            margin-right: 1rem;
           }
-
 
           #battery.charging {
             color: @green;
-            border-radius: 0px 1rem 1rem 0px;
-            margin-right: 1rem;
           }
 
           #battery.warning:not(.charging) {
             color: @peach;
-            border-radius: 0px 1rem 1rem 0px;
-            margin-right: 1rem;
           }
 
           #battery.critical:not(.charging) {
             color: @red;
-            border-radius: 0px 1rem 1rem 0px;
-            margin-right: 1rem;
           }
 
           #backlight {
@@ -385,7 +376,9 @@
 
           #temperature {
       	color: @blue;
-          }
+        border-radius: 0px 1rem 1rem 0px;
+        margin-right: 1rem;
+        }
 
           #cpu {
       	color: @yellow;
