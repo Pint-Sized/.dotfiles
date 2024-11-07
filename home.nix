@@ -63,7 +63,7 @@
     ./modules/mpv.nix
 
     # --------- NIXVIM --------- # 
-    ./modules/nixvim.nix
+    ./modules/nixvim/nixvim.nix
 
     # ---------- OBS-STUDIO ------------ #
     ./modules/obs-studio.nix

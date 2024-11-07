@@ -86,7 +86,7 @@
           "filemanager2.nerdfonts" = true;
 
 
-          "lsp.server"= "nix=nixd,python=pyls,go=gopls,typescript=deno lsp,rust=rust-analyzer";
+          "lsp.server"= "nix=nil,python=pyls,go=gopls,typescript=deno lsp,rust=rust-analyzer";
           "lsp.formatOnSave"= true;
           "lsp.ignoreMessages"= "LS message1 to ignore|LS message 2 to ignore|...";
           "lsp.tabcompletion"= true;
@@ -94,7 +94,7 @@
           "lsp.autocompleteDetails"= false;
     };
   };
-
+  
   home.file = {
   	".config/micro/colorschemes/catppuccin-mocha-transparent.micro" = {
   		text = ''

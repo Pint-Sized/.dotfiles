@@ -64,11 +64,11 @@
                       ####################
                       ### START-UP APPS###
                       ####################
-                      exec-once=[workspace 12 silent] spotify
-                      exec-once=[workspace 11 silent] thunderbird
-                      exec-once=[workspace 10 silent] com.github.eneshecan.WhatsAppForLinux
-                      exec-once=[workspace 9 silent] com.github.IsmaelMartinez.teams_for_linux
-                      exec-once=[workspace 8 silent] chromium --profile-directory=Default --app-id=abdndmcckigaeepaljhpcngbfdkbiggb
+                      exec-once=[workspace 12 silent] spotify --enable-features=UseOzonePlatform --ozone-platform=wayland
+                      exec-once=[workspace 11 silent] betterbird-unwrapped
+                      exec-once=[workspace 10 silent] com.ktechpit.whatsie                       
+        		      exec-once=[workspace 9 silent] com.github.IsmaelMartinez.teams_for_linux 
+                      exec-once=[workspace 8 silent] chromium --profile-directory=Default --app-id=abdndmcckigaeepaljhpcngbfdkbiggb  
                       exec-once=[workspace 7 silent] imv ~/School/School-TimetableV2.png
 
                       ##############
@@ -325,7 +325,7 @@
                       bind = $mainMod SHIFT, up, swapwindow, u
                       bind = $mainMod SHIFT, down, swapwindow, d
                       bind = $mainMod, O, exec, remnote --enable-features=UseOzonePlatform --ozone-platform=wayland
-
+                      bind = $mainMod, R, exec, emacs --enable-features=UseOzonePlatform --ozone-platform-wayland
                       ##############################
                       ### WINDOWS AND WORKSPACES ###
                       ##############################

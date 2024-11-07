@@ -21,8 +21,8 @@
         "position" = "top";
         # "width": 1280;
 
-        "margin-left" = 0;
-        "margin-right" = 0;
+        "margin-left" = 6;
+        "margin-right" = 6;
         "margin-top" = 0;
         "margin-bottom" = 0;
         "exclusive" = true;
@@ -293,6 +293,7 @@
             margin: 5px 0;
           }
 
+          #custom-launcher,
           #custom-notification,
           #custom-lock,
           #custom-power {
@@ -351,7 +352,6 @@
           #custom-power {
               border-radius: 0px 1rem 1rem 0px;
               color: @red;
-              margin-right: 6px;
           }
 
           #network {

@@ -10,6 +10,8 @@
   environment.systemPackages =
     (with pkgs; [
       jq
+      thunderbird
+      nil
       rclone
       wttrbar
       g4music
@@ -121,7 +123,7 @@
 
       (with pkgs-unstable; [
         zed-editor
-        emacs-nox
+        emacs
 
       ]);
 

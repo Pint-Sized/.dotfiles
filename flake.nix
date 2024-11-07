@@ -25,7 +25,7 @@
       catppuccin,
       nur,
       nixpkgs-unstable,
-      nixvim
+      nixvim,
       ...
     }:
     let
