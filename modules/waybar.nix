@@ -33,7 +33,6 @@
           "custom/launcher"
           "hyprland/workspaces"
           "custom/music"
-          # "cava"
         ];
         "modules-center" = [
           "clock"
@@ -43,10 +42,10 @@
           "pulseaudio"
           "battery"
           "network"
-          "cpu"
-          # "memory"
           # "backlight"
           "temperature"
+          "cpu"
+          "memory"
           "custom/notification"
           "custom/lock"
           "custom/power"
@@ -62,18 +61,6 @@
         "tray" = {
           "icon-size" = 21;
           "spacing" = 10;
-        };
-        "custom/music" = {
-          "format" = "  {}";
-          "escape" = true;
-          "interval" = 1;
-          "tooltip" = false;
-          "exec" = "playerctl metadata --format='{{ title }}'";
-          "on-click" = "playerctl play-pause";
-          "on-scroll-up" = "playerctl previous";
-          "on-scroll-down" = "playerctl next";
-          "smooth-scrolling-threshold" = 1;
-          "max-length" = 20;
         };
         "backlight" = {
           "device" = "intel_backlight";
@@ -95,10 +82,10 @@
             "warning" = 30;
             "critical" = 15;
           };
-          "format" = "{icon} {capacity}%";
-          "format-charging" = "󰂄 {capacity}%";
+          "format" = "{icon}{capacity}%";
+          "format-charging" = "󰂄{capacity}%";
           "format-plugged" = "";
-          "format-alt" = "{icon} {time}";
+          "format-alt" = "{icon}{time}";
           "format-icons" = [
             "󰂃"
             "󰂃"
@@ -114,6 +101,27 @@
             "󰁹"
           ];
         };
+
+        "custom/music" = {
+          "format" = "{icon}{}";
+              "format-icons" = {
+                  "Playing" = "󰝚 ";
+                  "Paused" = "󰝛 ";
+                  "Stopped" = " ";
+              };
+              "escape" = true;
+              "tooltip" = true;
+              "exec" = "~/.config/waybar/scripts/caway -b 10 -f 60 -e";
+              "return-type" = "json";
+              "on-click" = "playerctl play-pause";
+              "on-scroll-up" = "playerctl previous";
+              "on-scroll-down" = "playerctl next";
+              "on-click-right" = "g4music";
+              "max-length" = 24;
+        };
+
+
+
         "pulseaudio" = {
           # "scroll-step" = 1;
           "format" = "{icon} {volume}%";
@@ -194,30 +202,6 @@
           "on-click" = "ulauncher-toggle";
           "tooltip" = false;
         };
-        "cava" = {
-          "framerate" = 60;
-          "autosens" = 1;
-          "bars" = 10;
-          "lower_cutoff_freq" = 50;
-          "higher_cutoff_freq" = 10000;
-          "method" = "pipewire";
-          "source" = "auto";
-          "stereo" = true;
-          "bar_delimiter" = 0;
-          "noise_reduction" = 0.77;
-          "input_delay" = 0;
-          "hide_on_silence" = false;
-          "format-icons" = [
-            "▁"
-            "▂"
-            "▃"
-            "▄"
-            "▅"
-            "▆"
-            "▇"
-            "█"
-          ];
-        };
         "clock" = {
           "timezone" = "Europe/Dublin";
           "tooltip-format" = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
@@ -274,19 +258,35 @@
             border-radius: 1rem;
           }
 
-          #custom-music,
+          
+
+
+
+
+          #custom-launcher {
+            color: @text;
+            border-radius: 1rem 0px 0px 1rem;
+            margin-left: 6px;
+ 
+          }
+
+          #custom-launcher:hover {
+            color: @sky;
+            border-radius: 1rem 0px 0px 1rem;
+          }
+
           #tray,
           #backlight,
           #clock,
           #battery,
           #pulseaudio,
-          #custom-launcher,
-          #cava,
           #cpu,
           #custom-weather,
+          #custom-music,
           #memory,
           #temperature,
           #network,
+          #custom-launcher,
           #memory {
             background-color: @surface0;
             padding: 0.5rem 0.75rem;
@@ -331,28 +331,18 @@
             color: @yellow;
           }
 
-          #backlight, #battery {
-              border-radius: 0;
-          }
-
           #pulseaudio {
             color: @maroon;
             border-radius: 1rem 0px 0px 1rem;
             margin-left: 1rem;
           }
-
-          #custom-music {
-            color: @mauve;
-            border-radius: 1rem 1rem 1rem 1rem;
-            padding-left: 1rem;
-            
-          }
-
+          
           #custom-notification {
       	border-radius: 1rem 0px 0px 1rem;
       	color: @flamingo;
-      	font-size: 20px
+      	font-size: 20px;
           }
+          
           #custom-lock {
               border-radius: 0rem 0px 0px 0rem;
               color: @lavender;
@@ -371,30 +361,37 @@
 
           #memory {
       	color: @green;
-      	border-radius: 0px 0rem 0rem 0px;
+      	border-radius: 0px 1rem 1rem 0px;
+      	margin-right: 1rem
           }
 
           #temperature {
       	color: @blue;
-        border-radius: 0px 1rem 1rem 0px;
-        margin-right: 1rem;
         }
 
           #cpu {
       	color: @yellow;
           }
 
-
-          #custom-launcher {
-      	color: @subtext1;
-      	border-radius: 1rem 0px 0px 1rem;
-        margin-left: 6px;
+          #custom-music.Playing {
+              background: @surface0;
+              color: @mauve;
+              border-radius: 1rem;
+              font-size: 17px;
           }
-
-          #cava {
-      	color: @text;
-      	border-radius: 0px 1rem 1rem 0px;
+          
+          #custom-music.Paused,
+          #custom-music.Stopped {
+              background: @surface0;
+              color: @subtext0;
+              border-radius: 1rem;
           }
     '';
+  };
+
+  home.file = {
+    ".config/waybar/scripts" = {
+      source = ../scripts;
+    };
   };
 }

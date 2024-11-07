@@ -60,8 +60,8 @@
     # ------------ MPV ------------ #
     ./modules/mpv.nix
 
-    # --------- NEOVIM --------- # 
-    # ./modules/neovim/neovim.nix
+    # --------- NIXVIM --------- # 
+    ./modules/nixvim.nix
 
     # ---------- OBS-STUDIO ------------ #
     ./modules/obs-studio.nix

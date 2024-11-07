@@ -94,6 +94,18 @@
                       env = XDG_SESSION_TYPE,wayland
                       env = XDG_SESSION_DESKTOP,Hyprland
                       env = QT_QPA_PLATFORM,wayland;xcb
+                      env = GDK_SCALE,2
+
+                      ################
+                      ### XWAYLAND ###
+                      ################
+
+                      xwayland {
+                        force_zero_scaling = true
+                      }
+
+
+
 
 
                       #####################

@@ -9,7 +9,12 @@
 {
   environment.systemPackages =
     (with pkgs; [
+      jq
       rclone
+      wttrbar
+      g4music
+      feh
+      pyenv
       obs-studio
       pandoc
       shellcheck
@@ -116,7 +121,7 @@
 
       (with pkgs-unstable; [
         zed-editor
-        emacs
+        emacs-nox
 
       ]);
 

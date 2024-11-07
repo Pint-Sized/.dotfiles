@@ -21,15 +21,15 @@
   };
   environment = {
     variables = {
-      EDITOR = "nvim";
-      SYSTEMD_EDITOR = "nvim";
-      VISUAL = "nvim";
+      EDITOR = "micro";
+      SYSTEMD_EDITOR = "micro";
+      VISUAL = "micro";
       XCURSOR_SIZE = 16;
       NIXPKGS_ALLOW_UNFREE = 1;
     };
     sessionVariables = {
       WLR_NO_HARDWARE_CURSORS = "1";
-      NIX_OZONE = "1";
+      # NIX_OZONE = "1";
       NIX_OZONE_WL = "1";
       MOZ_ENABLE_WAYLAND = "1";
       STEAM_EXTRA_COMPAT_TOOLS_PATHS = "/home/user/.steam/root/compatibilitytoold.d";
