@@ -40,6 +40,14 @@
       fishPlugins.sponge
       fishPlugins.puffer
       fishPlugins.autopair
+      vimPlugins.telescope-nvim
+      vimPlugins.nvim-lspconfig
+      vimPlugins.nvim-cmp
+      vimPlugins.fzf-lua
+      vimPlugins.alpha-nvim
+      vimPlugins.lspsaga-nvim
+      vimPlugins.bufferline-nvim
+      vimPlugins.nvim-treesitter
       wl-clipboard
       pyprland
       cliphist
