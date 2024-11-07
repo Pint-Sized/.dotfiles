@@ -35,7 +35,7 @@
                       # See https://wiki.hyprland.org/Configuring/Keywords/
 
                       # Set programs that you use
-                      $terminal = foot
+                      $terminal = kitty
                       $fileManager = nautilus
                       $browser = io.gitlab.librewolf-community
 
@@ -311,7 +311,7 @@
                       # special
                       bindr = $mainMod, N, exec, ulauncher-toggle
                       bind = $mainMod, B, exec, swaync-client -t
-                      bind = $mainMod, O, exec, pkill waybar; waybar
+                      # bind = $mainMod, O, exec, pkill waybar; waybar
                       bindr = $mainMod, L, exec, pkill wlogout || wlogout
                       bindr = $mainMod, P, exec, pkill waypaper || waypaper
                       bindr = $mainMod, I, exec, [float; move 72.5% 5%] pkill pavucontrol || pavucontrol

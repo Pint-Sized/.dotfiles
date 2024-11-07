@@ -1,5 +1,20 @@
-{ config, pkgs, pkgs-unstable, lib, catppuccin, ... }:
+{
+  config,
+  pkgs,
+  catppuccin,
+  lib,
+  nixvim,
+  ...
+}:
 
 {
-	
+  programs.nixvim = {
+    enable = true;
+    colorschemes.catppuccin.enable = true;
+    plugins = {
+      lualine = {
+        enable = true;
+      };
+    };
+  };
 }

@@ -26,7 +26,7 @@
       foot
       lm_sensors
       remnote
-      neovim
+      neovim-unwrapped
       home-manager
       wineWowPackages.waylandFull
       bottles

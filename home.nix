@@ -3,6 +3,8 @@
   pkgs,
   catppuccin,
   lib,
+  unstable-pkgs,
+  nixvim,
   ...
 }:
 
