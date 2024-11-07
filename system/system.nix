@@ -21,9 +21,9 @@
   };
   environment = {
     variables = {
-      EDITOR = "micro";
-      SYSTEMD_EDITOR = "micro";
-      VISUAL = "micro";
+      EDITOR = "nvim";
+      SYSTEMD_EDITOR = "nvim";
+      VISUAL = "nvim";
       XCURSOR_SIZE = 16;
       NIXPKGS_ALLOW_UNFREE = 1;
     };

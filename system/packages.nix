@@ -14,7 +14,6 @@
       nil
       rclone
       wttrbar
-      g4music
       feh
       pyenv
       obs-studio
@@ -25,7 +24,6 @@
       mpv
       libsForQt5.qt5ct
       kdePackages.qt6ct
-      foot
       lm_sensors
       remnote
       neovim-unwrapped
@@ -36,18 +34,8 @@
       polychromatic
       fzf
       python3
-      fishPlugins.done
-      fishPlugins.sponge
-      fishPlugins.puffer
-      fishPlugins.autopair
-      vimPlugins.telescope-nvim
-      vimPlugins.nvim-lspconfig
-      vimPlugins.nvim-cmp
-      vimPlugins.fzf-lua
-      vimPlugins.alpha-nvim
-      vimPlugins.lspsaga-nvim
-      vimPlugins.bufferline-nvim
-      vimPlugins.nvim-treesitter
+      
+     
       wl-clipboard
       pyprland
       cliphist
@@ -68,6 +56,7 @@
       cava
       brightnessctl
       pavucontrol
+      figlet
       playerctl
       wlogout
       zathura
@@ -97,7 +86,6 @@
       zip
       cmake
       tk
-      hyprshot
       lxqt.lxqt-policykit
       ripgrep
       fd
@@ -105,7 +93,6 @@
       udisks
       coreutils
       clang
-      micro
       btop
       onlyoffice-bin_latest
       loupe
@@ -125,14 +112,30 @@
       yazi
       evince
       discord
+
+      # fish plugins
+      fishPlugins.done
+      fishPlugins.sponge
+      fishPlugins.puffer
+      fishPlugins.autopair
+
+      # neovim plugins
+      vimPlugins.telescope-nvim
+      vimPlugins.telescope-file-browser-nvim
+      vimPlugins.nvim-lspconfig
+      vimPlugins.nvim-cmp
+      vimPlugins.fzf-lua
+      vimPlugins.alpha-nvim
+      vimPlugins.lspsaga-nvim
+      vimPlugins.bufferline-nvim
+      vimPlugins.nvim-treesitter
+      vimPlugins.startup-nvim
     ])
 
     ++
 
       (with pkgs-unstable; [
         zed-editor
-        emacs
-
       ]);
 
   programs = {

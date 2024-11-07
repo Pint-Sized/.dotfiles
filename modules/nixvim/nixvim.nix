@@ -14,6 +14,6 @@
   };
 
   imports = [
-  	./packages.nix
+  	./plugins.nix
   ];
 }

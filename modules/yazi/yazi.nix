@@ -20,6 +20,9 @@
       preview = {
         wrap = "no";
       };
+      plugins = {
+        full-border = ./plugins/full-border.lua;     
+      };
     };
   };
 }
