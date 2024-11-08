@@ -11,19 +11,41 @@
 {
   programs.nixvim = {
     plugins = {
-      telescope = {
+     # telescope
+     telescope = {
         enable = true;
         extensions = {
-          file-browser = {
-            enable = true;
-          };
+          file-browser.enable = true;
+	  undo.enable = true;
+	  media-files.enable = true;
+	  manix.enable = true;
+	  ui-select.enable = true;
         };
       };
 
-      lsp = {
-        enable = true;
-        # inlayHints = false;
+
+      diffview.enable = true;
+      oil.enable = true;
+      lsp.enable = true;
+      lspsaga.enable = true;
+      bufferline.enable = true;
+      neogit.enable = true;
+      fzf-lua.enable = true;
+      nui.enable = true;
+      notify.enable = true;
+      noice.enable = true;
+      web-devicons.enable = true;
+
+      neotest = {
+	enable = true;
+	adapters = {
+	  plenary = {
+		enable = true;
+	  };
+	};
       };
+
+
 
       cmp = {
         autoEnableSources = true;
@@ -34,9 +56,6 @@
         ];
       };
 
-      fzf-lua = {
-        enable = true;
-      };
 
         startup = {
           enable = true;
@@ -129,14 +148,6 @@
             "body"
           ];
         };
-
-      lspsaga = {
-        enable = true;
-      };
-
-      bufferline = {
-      enable = true;
-      };
 
       treesitter = {
         enable = true;

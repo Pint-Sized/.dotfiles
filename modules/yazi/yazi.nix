@@ -10,128 +10,101 @@
   # ----- YAZI ----- #
   programs.yazi = {
     enable = true;
-    settings = {
-      manager = {
-        show_hidden = true;
-        sort_by = "alphabetical";
-        linemode = "owner";
-        show_symlink = true;
-      };
-      preview = {
-        wrap = "no";
-      };
-      plugins = {
-        full-border = ./plugins/full-border.lua;    
-	yatline = ./plugins/yatline.lua;
-	yatline-githead = ./plugins/yatline-githead.lua;
-	fg = ./plugins/fg.lua;
-	smart-filter = ./plugins/smart-filter.lua;
-	git = ./plugins/git.lua;
-      };
-    };
-  };
+ };
+
+
+
 
   home.file = {
-    ".config/yazi/keymap.toml" = {
+    ".config/yazi/yazi.toml" = {
 	text = ''
-	  "$schema" = "https://yazi-rs.github.io/schemas/keymap.json"
+	  "$schema" = "https://yazi-rs.github.io/schemas/yazi.json"
 
 [manager]
+ratio = [1, 4, 3]
+sort_by = "natural"
+sort_dir_first = true
 
-prepend_keymap = [
-  { on = [
-    "<C-s>",
-  ], run = '''shell "$SHELL" --block --confirm''', desc = "Open shell here" },
-  { on = [
-    "c",
-    "a",
-  ], run = "plugin compress", desc = "Archive selected files" },
-  { on = "<C-u>", run = "seek -5", desc = "Seek up 5 units in the preview" },
-  { on = "<C-d>", run = "seek 5", desc = "Seek down 5 units in the preview" },
-  { on = "K", run = "arrow -50%", desc = "Move cursor up half page" },
-  { on = "J", run = "arrow 50%", desc = "Move cursor down half page" },
-  { on = "<A-k>", run = "arrow -5", desc = "Move cursor up half page" },
-  { on = "<A-j>", run = "arrow 5", desc = "Move cursor down half page" },
-  { on = [
-    "f",
-    "g",
-  ], run = "plugin fg", desc = "find file by content (fuzzy match)" },
-  { on = [
-    "f",
-    "G",
-  ], run = "plugin fg --args='rg'", desc = "find file by content (ripgrep match)" },
-  { on = [
-    "f",
-    "n",
-  ], run = "plugin fg --args='fzf'", desc = "find file by filename" },
-  { on = [
-    "f",
-    "f",
-  ], run = "filter --smart", desc = "Filter files" },
-  { on = [
-    "f",
-    "F",
-  ], run = "plugin smart-filter", desc = "Smart Filter" },
-  { on = [
-    "s",
-  ], run = "plugin searchjump", desc = "searchjump mode" },
-  { on = "S", run = "search fd", desc = "Search files by name using fd" },
-  { on = [
-    "T",
-  ], run = "plugin --sync hide-preview", desc = "Hide or show the preview" },
-  { on = [
-    "<C-y>",
-  ], run = '''shell 'for path in "$@"; do echo "file://$path"; done | wl-copy -t text/uri-list' --confirm''', desc = "Copy to clipboard" },
-  { on = "A", run = "create --dir", desc = "Create a dir" },
+[opener]
+folder = [
+  { run = 'hyprctl dispatch exec "[float; size 60% 60%; center 1] nemo" "$@"', orphan = true, desc = "nemo", for = "linux" },
+  { run = '''fish -c "nvim "$1""''', block = true, desc = "neovim", for = "linux" },
+  { run = 'kitty --detach nvim "$@"', orphan = true, desc = "neovim (detached)", for = "linux" },
+  { run = '''fish -c "lazygit -p "$1""''', block = true, desc = "lazygit", for = "linux" },
+  { run = 'codium  "$@"', orphan = true, desc = "vscodium", for = "linux" },
+  { run = 'kitty "$@"', orphan = true, desc = "kitty", for = "linux" },
+  { run = 'xdg-open "$@"', orphan = true, desc = "xdg-open", for = "linux" },
 ]
 
-append_keymap = [
-  { on = [
-    "e",
-  ], run = "open", desc = "Open the selected files" },
-  { on = [
-    "E",
-  ], run = "open --interactive", desc = "Open the selected files interactively" },
-  { on = [
-    "g",
-    "n",
-  ], run = "cd ~/.config/nvim/", desc = "Go to the nvim directory" },
-  { on = [
-    "g",
-    "v",
-  ], run = "cd ~/videos/", desc = "Go to the videos directory" },
-  { on = [
-    "g",
-    "p",
-  ], run = "cd ~/pictures/", desc = "Go to the pictures directory" },
-  { on = [
-    "g",
-    "s",
-  ], run = "cd ~/pictures/screenshots/", desc = "Go to the screenshots directory" },
-  { on = [
-    "g",
-    "D",
-  ], run = "cd ~/documents/", desc = "Go to the docs directory" },
-  { on = [
-    "g",
-    "o",
-  ], run = "cd ~/documents/obsidian-vaults", desc = "Go to the obsidian directory" },
-  { on = [
-    "g",
-    "e",
-  ], run = "cd ~/dev/", desc = "Go to the dev directory" },
+text = [
+  { run = '$EDITOR "$@"', block = true, desc = "$EDITOR", for = "linux" },
+  { run = 'nvim "$@"', block = true, desc = "neovim", for = "linux" },
+  { run = 'kitty --detach nvim "$@"', block = true, desc = "neovim (detached)", for = "linux" },
+  { run = 'codium  "$@"', orphan = true, desc = "vscodium", for = "linux" },
+  { run = 'xdg-open "$@"', orphan = true, desc = "xdg-open", for = "linux" },
 ]
 
-[input]
-
-prepend_keymap = [{ on = ["<Esc>"], run = "close", desc = "Cancel input" }]
-
-[completion]
-prepend_keymap = [
-  { on = "<C-k>", run = "arrow -1", desc = "Move cursor up" },
-  { on = "<C-j>", run = "arrow 1", desc = "Move cursor down" },
+document = [
+  { run = 'xdg-open "$@"', orphan = true, desc = "xdg-open", for = "linux" },
+  { run = 'zathura "$@"', orphan = true, desc = "zathura", for = "linux" },
+  { run = 'libreoffice "$@"', orphan = true, desc = "libreoffice", for = "linux" },
 ]
+
+image = [
+  { run = 'xdg-open "$@"', orphan = true, desc = "xdg-open", for = "linux" },
+  { run = 'qimgv "$@"', orphan = true, desc = "qimgv", for = "linux" },
+  { run = 'krita "$@"', orphan = true, desc = "krita", for = "linux" },
+  { run = 'satty --filename "$@"', orphan = true, desc = "satty", for = "linux" },
+]
+video = [
+  { run = 'xdg-open "$@"', orphan = true, desc = "xdg-open", for = "linux" },
+  { run = 'mpv "$@"', orphan = true, desc = "mpv", for = "linux" },
+]
+audio = [
+  { run = 'xdg-open "$@"', orphan = true, desc = "xdg-open", for = "linux" },
+  { run = 'mpv "$@"', orphan = true, desc = "mpv", for = "linux" },
+]
+fallback = [
+  { run = 'xdg-open "$@"', orphan = true, desc = "xdg-open", for = "linux" },
+]
+
+[open]
+rules = [
+  { name = "*/", use = "folder" },
+
+  { mime = "text/*", use = "text" },
+  { mime = "image/*", use = "image" },
+  { mime = "video/*", use = "video" },
+  { mime = "application/octet-stream", use = "video" },
+  { mime = "audio/*", use = "audio" },
+  { mime = "inode/x-empty", use = "text" },
+  { mime = "application/json", use = "text" },
+
+  { mime = "application/zip", use = "archive" },
+  { mime = "application/gzip", use = "archive" },
+  { mime = "application/x-bzip", use = "archive" },
+  { mime = "application/x-bzip2", use = "archive" },
+  { mime = "application/x-tar", use = "archive" },
+  { mime = "application/x-7z-compressed", use = "archive" },
+  { mime = "application/x-rar", use = "archive" },
+  { mime = "application/pdf", use = "document" },
+  { mime = "application/epub+zip", use = "document" },
+  { mime = "application/x-mobipocket-ebook", use = "document" },
+
+  { mime = "*", use = "fallback" },
+]
+
+[[plugin.prepend_fetchers]]
+id = "git"
+name = "*"
+run = "git"
+
+[[plugin.prepend_fetchers]]
+id = "git"
+name = "*/"
+run = "git"
 	'';
     };
   };
 }
+

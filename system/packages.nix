@@ -9,17 +9,21 @@
 {
   environment.systemPackages =
     (with pkgs; [
+      manix
       jq
       thunderbird
       nil
       rclone
       wttrbar
       feh
+      teams-for-linux
       pyenv
       obs-studio
       pandoc
       shellcheck
       celluloid
+      which
+
       imv
       mpv
       libsForQt5.qt5ct
@@ -119,23 +123,35 @@
       fishPlugins.puffer
       fishPlugins.autopair
 
-      # neovim plugins
-      vimPlugins.telescope-nvim
-      vimPlugins.telescope-file-browser-nvim
-      vimPlugins.nvim-lspconfig
-      vimPlugins.nvim-cmp
-      vimPlugins.fzf-lua
-      vimPlugins.alpha-nvim
-      vimPlugins.lspsaga-nvim
-      vimPlugins.bufferline-nvim
-      vimPlugins.nvim-treesitter
-      vimPlugins.startup-nvim
+
     ])
 
     ++
 
       (with pkgs-unstable; [
-        zed-editor
+        zed-editor      # neovim plugins
+      vimPlugins.telescope-nvim
+      vimPlugins.telescope-file-browser-nvim
+      vimPlugins.nvim-lspconfig
+      vimPlugins.nvim-cmp
+      vimPlugins.fzf-lua
+      vimPlugins.lspsaga-nvim
+      vimPlugins.bufferline-nvim
+      vimPlugins.nvim-treesitter
+      vimPlugins.startup-nvim
+      vimPlugins.neogit
+      vimPlugins.diffview-nvim
+      vimPlugins.neotest
+      vimPlugins.neotest-plenary
+      vimPlugins.oil-nvim
+      vimPlugins.telescope-undo-nvim
+      vimPlugins.telescope-media-files-nvim
+      vimPlugins.telescope-manix
+      vimPlugins.telescope-ui-select-nvim
+      vimPlugins.nui-nvim
+      vimPlugins.nvim-notify
+      vimPlugins.noice-nvim
+      vimPlugins.nvim-web-devicons
       ]);
 
   programs = {
