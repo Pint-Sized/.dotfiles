@@ -27,7 +27,6 @@
       lm_sensors
       remnote
       wineWowPackages.waylandFull
-      bottles
       openrazer-daemon
       polychromatic
       fzf
@@ -122,7 +121,7 @@
         neovim-unwrapped
         home-manager
         wttrbar
-        
+
         # neovim plugins
         vimPlugins.telescope-nvim
         vimPlugins.telescope-file-browser-nvim
@@ -146,7 +145,7 @@
         vimPlugins.nvim-notify
         vimPlugins.noice-nvim
         vimPlugins.nvim-web-devicons
-	      vimPlugins.nvim-autopairs
+        vimPlugins.nvim-autopairs
         vimPlugins.nvim-cursorline
         vimPlugins.vim-illuminate
         vimPlugins.indent-blankline-nvim
@@ -165,17 +164,17 @@
         vimPlugins.lspkind-nvim
         vimPlugins.lspkind-nvim
         black
-vscode-langservers-extracted
-lua-language-server
-nil
-typescript-language-server
-marksman
-pyright
-gopls
-terraform-ls
-ansible-language-server
-helm_ls
-yaml-language-server
+        vscode-langservers-extracted
+        lua-language-server
+        nil
+        typescript-language-server
+        marksman
+        pyright
+        gopls
+        terraform-ls
+        ansible-language-server
+        helm-ls
+        yaml-language-server
 
         isort
         nixfmt-rfc-style

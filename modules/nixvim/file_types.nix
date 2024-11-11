@@ -1,4 +1,11 @@
-{ config, pkgs, catppuccin, lib, nixvim, ... }:
+{
+  config,
+  pkgs,
+  catppuccin,
+  lib,
+  nixvim,
+  ...
+}:
 
 {
 

@@ -13,7 +13,7 @@
     colorschemes.catppuccin.enable = true;
   };
 
-  imports = [ 
+  imports = [
     ./auto_cmds.nix
     ./file_types.nix
     ./keymaps.nix

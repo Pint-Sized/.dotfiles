@@ -56,7 +56,7 @@
     ./modules/kitty.nix
 
     # ----------- MICRO ---------- #
-    ./modules/micro.nix
+    # ./modules/micro.nix
 
     # ------------ MPV ------------ #
     ./modules/mpv.nix

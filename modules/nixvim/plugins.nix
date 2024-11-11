@@ -27,13 +27,13 @@
     # Git
 
     # LSP and formatting
-#    ./plugins/lsp/conform.nix
-#    ./plugins/lsp/fidget.nix
-#    ./plugins/lsp/lsp.nix
+    #    ./plugins/lsp/conform.nix
+    #    ./plugins/lsp/fidget.nix
+    #    ./plugins/lsp/lsp.nix
 
     # Snippets
     ./plugins/snippets/luasnip.nix
-    
+
     # Themes
     ./plugins/themes/catppuccin.nix
 
@@ -41,7 +41,7 @@
     ./plugins/ui/bufferline.nix
     ./plugins/ui/lualine.nix
     ./plugins/ui/noice.nix
-    ./plugins/ui/notify.nix 
+    ./plugins/ui/notify.nix
     ./plugins/ui/nui.nix
     ./plugins/ui/startup.nix
 

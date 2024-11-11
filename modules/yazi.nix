@@ -1,4 +1,11 @@
-{ config, lib, pkgs, pkgs-unstable, catppuccin, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  pkgs-unstable,
+  catppuccin,
+  ...
+}:
 
 {
   programs.yazi = {
