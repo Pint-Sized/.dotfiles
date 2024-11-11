@@ -36,7 +36,14 @@
     };
   };
 
-  fonts.packages = with pkgs; [ (nerdfonts.override { fonts = [ "0xProto" "NerdFontsSymbolsOnly" ]; }) ];
+  fonts.packages = with pkgs; [
+    (nerdfonts.override {
+      fonts = [
+        "0xProto"
+        "NerdFontsSymbolsOnly"
+      ];
+    })
+  ];
   fonts.fontconfig = {
     defaultFonts = {
       serif = [ "0xProto Nerd Font" ];
@@ -81,7 +88,7 @@
   };
 
   i18n = {
-    defaultLocale = "en_GB.UTF-8";
+    defaultLocale = "en_IE.UTF-8";
     extraLocaleSettings = {
       LC_ADDRESS = "en_IE.UTF-8";
       LC_IDENTIFICATION = "en_IE.UTF-8";
@@ -92,6 +99,12 @@
       LC_PAPER = "en_IE.UTF-8";
       LC_TELEPHONE = "en_IE.UTF-8";
       LC_TIME = "en_IE.UTF-8";
+      LC_ALL = "en_IE.UTF-8";
+      LC_CTYPE = "en_IE.UTF-8";
+      LC_COLLATE = "en_IE.UTF-8";
+      LC_MESSAGES = "en_IE.UTF-8";
+      LANGUAGE = "en_IE.UTF-8";
+
     };
   };
 

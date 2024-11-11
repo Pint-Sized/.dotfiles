@@ -2,8 +2,9 @@
   inputs,
   config,
   pkgs,
-  lib,
   pkgs-unstable,
+  lib,
+  nix-flatpak,
   ...
 }:
 {
@@ -14,7 +15,6 @@
       thunderbird
       nil
       rclone
-      wttrbar
       feh
       teams-for-linux
       pyenv
@@ -23,23 +23,18 @@
       shellcheck
       celluloid
       which
-
       imv
       mpv
       libsForQt5.qt5ct
       kdePackages.qt6ct
       lm_sensors
       remnote
-      neovim-unwrapped
-      home-manager
       wineWowPackages.waylandFull
       bottles
       openrazer-daemon
       polychromatic
       fzf
       python3
-      
-     
       wl-clipboard
       pyprland
       cliphist
@@ -116,43 +111,78 @@
       yazi
       evince
       discord
-
       # fish plugins
+      fishPlugins.autopair
       fishPlugins.done
       fishPlugins.sponge
       fishPlugins.puffer
-      fishPlugins.autopair
-
 
     ])
 
     ++
 
       (with pkgs-unstable; [
-        zed-editor      # neovim plugins
-      vimPlugins.telescope-nvim
-      vimPlugins.telescope-file-browser-nvim
-      vimPlugins.nvim-lspconfig
-      vimPlugins.nvim-cmp
-      vimPlugins.fzf-lua
-      vimPlugins.lspsaga-nvim
-      vimPlugins.bufferline-nvim
-      vimPlugins.nvim-treesitter
-      vimPlugins.startup-nvim
-      vimPlugins.neogit
-      vimPlugins.diffview-nvim
-      vimPlugins.neotest
-      vimPlugins.neotest-plenary
-      vimPlugins.oil-nvim
-      vimPlugins.telescope-undo-nvim
-      vimPlugins.telescope-media-files-nvim
-      vimPlugins.telescope-manix
-      vimPlugins.telescope-ui-select-nvim
-      vimPlugins.nui-nvim
-      vimPlugins.nvim-notify
-      vimPlugins.noice-nvim
-      vimPlugins.nvim-web-devicons
+        zed-editor
+        neovim-unwrapped
+        home-manager
+        wttrbar
+        
+        # neovim plugins
+        vimPlugins.telescope-nvim
+        vimPlugins.telescope-file-browser-nvim
+        vimPlugins.nvim-lspconfig
+        vimPlugins.nvim-cmp
+        vimPlugins.fzf-lua
+        vimPlugins.lspsaga-nvim
+        vimPlugins.bufferline-nvim
+        vimPlugins.nvim-treesitter
+        vimPlugins.startup-nvim
+        vimPlugins.neogit
+        vimPlugins.diffview-nvim
+        vimPlugins.neotest
+        vimPlugins.neotest-plenary
+        vimPlugins.oil-nvim
+        vimPlugins.telescope-undo-nvim
+        vimPlugins.telescope-media-files-nvim
+        vimPlugins.telescope-manix
+        vimPlugins.telescope-ui-select-nvim
+        vimPlugins.nui-nvim
+        vimPlugins.nvim-notify
+        vimPlugins.noice-nvim
+        vimPlugins.nvim-web-devicons
+	      vimPlugins.nvim-autopairs
+        vimPlugins.nvim-cursorline
+        vimPlugins.vim-illuminate
+        vimPlugins.indent-blankline-nvim
+        vimPlugins.nvim-navic
+        vimPlugins.neo-tree-nvim
+        vimPlugins.todo-comments-nvim
+        vimPlugins.nvim-snippets
+        vimPlugins.lualine-nvim
+        vimPlugins.markdown-preview-nvim
+        vimPlugins.mini-nvim
+        vimPlugins.toggleterm-nvim
+        vimPlugins.which-key-nvim
       ]);
+
+  services.flatpak = {
+    enable = true;
+    update = {
+      auto = {
+        enable = true;
+        onCalendar = "weekly";
+      };
+      onActivation = false;
+    };
+    uninstallUnmanaged = true;
+    packages = [
+      "com.github.tchx84.Flatseal"
+      "io.gitlab.librewolf-community"
+      "com.valvesoftware.Steam"
+      "io.github.flattool.Warehouse"
+      "com.rtosta.zapzap"
+    ];
+  };
 
   programs = {
 
@@ -165,6 +195,16 @@
       xwayland = {
         enable = true;
       };
+    };
+
+    gamescope = {
+      enable = true;
+
+    };
+
+    steam = {
+      enable = true;
+      gamescopeSession.enable = true;
     };
 
     gamemode = {

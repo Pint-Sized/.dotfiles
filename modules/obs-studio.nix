@@ -1,11 +1,17 @@
-{ pkgs, config, lib, catppuccin, ... }:
+{
+  pkgs,
+  config,
+  lib,
+  catppuccin,
+  ...
+}:
 
 {
-	programs.obs-studio = {
-		enable = true;
-		catppuccin = {
-			enable = true;
-			flavor = "mocha";
-		};
-	};
+  programs.obs-studio = {
+    enable = true;
+    catppuccin = {
+      enable = true;
+      flavor = "mocha";
+    };
+  };
 }

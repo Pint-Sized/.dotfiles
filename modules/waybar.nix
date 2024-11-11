@@ -23,7 +23,7 @@
 
         "margin-left" = 6;
         "margin-right" = 6;
-        "margin-top" = 0;
+        "margin-top" = 2;
         "margin-bottom" = 0;
         "exclusive" = true;
         "passthrough" = false;
@@ -33,6 +33,7 @@
           "custom/launcher"
           "hyprland/workspaces"
           "custom/music"
+          "cava"
         ];
         "modules-center" = [
           "clock"
@@ -104,23 +105,38 @@
 
         "custom/music" = {
           "format" = "{icon}{}";
-              "format-icons" = {
-                  "Playing" = "󰝚 ";
-                  "Paused" = "󰝛 ";
-                  "Stopped" = " ";
-              };
-              "escape" = true;
-              "tooltip" = true;
-              "exec" = "~/.config/waybar/scripts/caway -b 10 -f 60 -e";
-              "return-type" = "json";
-              "on-click" = "playerctl play-pause";
-              "on-scroll-up" = "playerctl previous";
-              "on-scroll-down" = "playerctl next";
-              "on-click-right" = "g4music";
-              "max-length" = 24;
+          "format-icons" = {
+            "Playing" = "󰝚 ";
+            "Paused" = "󰝛 ";
+            "Stopped" = " ";
+          };
+          "escape" = true;
+          "tooltip" = true;
+          "exec" = "~/.config/waybar/scripts/caway -b 10 -f 60 -e";
+          "return-type" = "json";
+          "on-click" = "playerctl play-pause";
+          "on-scroll-up" = "playerctl previous";
+          "on-scroll-down" = "playerctl next";
+          "on-click-right" = "g4music";
+          "max-length" = 24;
         };
 
-
+        "cava" = {
+	          "cava_config" = ".config/cava/config";
+	          "framerate" = 30;
+	          "autosens" = 1;
+	          "bars" = 10;
+          	"lower_cutoff_freq" = 50;
+          	"higher_cutoff_freq" = 10000;
+          	"method" = "pulse";
+          	"source" = "auto";
+          	"bar_delimiter" = 0;
+          	"noise_reduction" = 0.77;
+          	"input_delay" = 0;
+            "hide_on_silence" = false;
+          	"format-icons" = [ "▁" "▂" "▃" "▄" "▅" "▆" "▇" "█" ];
+          	"on-click-right" = "mode";
+        };
 
         "pulseaudio" = {
           # "scroll-step" = 1;
@@ -179,7 +195,7 @@
           "format-linked" = "󰈀 {ifname} (No IP)";
           "format-disconnected" = " Disc.";
           "tooltip-format-disconnected" = "Disconnected";
-          "on-click" = "foot nvim ~/.dotfiles/system/wifi.nix";
+          "on-click" = "kitty nvim ~/.dotfiles/system/wifi.nix";
           "interval" = 2;
         };
         "memory" = {
@@ -267,7 +283,7 @@
             color: @text;
             border-radius: 1rem 0px 0px 1rem;
             margin-left: 6px;
- 
+
           }
 
           #custom-launcher:hover {
@@ -283,6 +299,8 @@
           #cpu,
           #custom-weather,
           #custom-music,
+          #music,
+          #cava,
           #memory,
           #temperature,
           #network,
@@ -376,7 +394,7 @@
           #custom-music.Playing {
               background: @surface0;
               color: @mauve;
-              border-radius: 1rem;
+              border-radius: 1rem 0px 0px 1rem;
               font-size: 17px;
           }
           
@@ -384,8 +402,14 @@
           #custom-music.Stopped {
               background: @surface0;
               color: @subtext0;
-              border-radius: 1rem;
+              border-radius: 1rem 0px 0px 1rem;
           }
+
+          #cava {
+            color: @text;
+            border-radius: 0px 1rem 1rem 0px;
+          }
+
     '';
   };
 

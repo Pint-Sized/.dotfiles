@@ -46,9 +46,8 @@
     # ------------- HYPRLAND ---------- #
     ./modules/hyprland.nix
 
-
-	  # ------------ HYPRLOCK ---------- #
-	  ./modules/hyprlock.nix
+    # ------------ HYPRLOCK ---------- #
+    ./modules/hyprlock.nix
 
     # ---------- IMV ----------- #
     ./modules/imv.nix
@@ -74,8 +73,8 @@
     # ---------- QT ----------- #
     ./modules/qt.nix
 
-	  # ---------- SWAYNC ------------ #
-	  ./modules/swaync.nix
+    # ---------- SWAYNC ------------ #
+    ./modules/swaync.nix
 
     # ---------- WAYBAR ----------- #
     ./modules/waybar.nix
@@ -84,7 +83,7 @@
     ./modules/wlogout.nix
 
     # --------- YAZI ------------ #
-    ./modules/yazi/yazi.nix
+    ./modules/yazi.nix
 
     # --------- ZATHURA ---------- #
     ./modules/zathura.nix

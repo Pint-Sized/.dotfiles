@@ -3,20 +3,21 @@
   description = "NixOS config flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     nur.url = "github:nix-community/NUR/2b457ac396f54d0e184f658d852080a6bb6ce80b";
     home-manager = {
-      url = "github:nix-community/home-manager/release-24.05";
+      url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     catppuccin.url = "github:catppuccin/nix";
     nixvim = {
       url = "github:nix-community/nixvim/main";
-      # inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-flatpak.url = "github:gmodena/nix-flatpak";
   };
-  
+
   outputs =
     {
       self,
@@ -26,6 +27,7 @@
       nur,
       nixpkgs-unstable,
       nixvim,
+      nix-flatpak,
       ...
     }:
     let
@@ -33,7 +35,8 @@
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
       pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
-    in {
+    in
+    {
       nixosConfigurations = {
         sisyphus = lib.nixosSystem {
           inherit system;
@@ -42,9 +45,13 @@
             catppuccin.nixosModules.catppuccin
             nixvim.nixosModules.nixvim
             nur.nixosModules.nur
-            ({config, ...}: { 
-            environment.systemPackages = [config.nur.repos.nltch.spotify-adblock];
-            })
+            (
+              { config, ... }:
+              {
+                environment.systemPackages = [ config.nur.repos.nltch.spotify-adblock ];
+              }
+            )
+            nix-flatpak.nixosModules.nix-flatpak
           ];
           specialArgs = {
             inherit pkgs-unstable;

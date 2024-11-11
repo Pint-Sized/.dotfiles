@@ -9,165 +9,47 @@
 }:
 
 {
-  programs.nixvim = {
-    plugins = {
-     # telescope
-     telescope = {
-        enable = true;
-        extensions = {
-          file-browser.enable = true;
-	  undo.enable = true;
-	  media-files.enable = true;
-	  manix.enable = true;
-	  ui-select.enable = true;
-        };
-      };
+  imports = [
+    # Completions
+    ./plugins/cmp/autopairs.nix
+    ./plugins/cmp/cmp.nix
 
+    # Editor plugins
+    ./plugins/editor/illuminate.nix
+    ./plugins/editor/indent-blankline.nix
+    ./plugins/editor/navic.nix
+    ./plugins/editor/neo-tree.nix
+    ./plugins/editor/todo-comments.nix
+    ./plugins/editor/treesitter.nix
 
-      diffview.enable = true;
-      oil.enable = true;
-      lsp.enable = true;
-      lspsaga.enable = true;
-      bufferline.enable = true;
-      neogit.enable = true;
-      fzf-lua.enable = true;
-      nui.enable = true;
-      notify.enable = true;
-      noice.enable = true;
-      web-devicons.enable = true;
+    # Git
 
-      neotest = {
-	enable = true;
-	adapters = {
-	  plenary = {
-		enable = true;
-	  };
-	};
-      };
+    # LSP and formatting
+#    ./plugins/lsp/conform.nix
+#    ./plugins/lsp/fidget.nix
+#    ./plugins/lsp/lsp.nix
 
+    # Snippets
+    ./plugins/snippets/luasnip.nix
+    
+    # Themes
+    ./plugins/themes/catppuccin.nix
 
+    # UI plugins
+    ./plugins/ui/bufferline.nix
+    ./plugins/ui/lualine.nix
+    ./plugins/ui/noice.nix
+    ./plugins/ui/notify.nix 
+    ./plugins/ui/nui.nix
+    ./plugins/ui/startup.nix
 
-      cmp = {
-        autoEnableSources = true;
-        settings.sources = [
-          { name = "nvim_lsp"; }
-          { name = "path"; }
-          { name = "buffer"; }
-        ];
-      };
-
-
-        startup = {
-          enable = true;
-
-          colors = {
-            background = "#ffffff";
-            foldedSection = "#ffffff";
-          };
-
-          sections = {
-            header = {
-              type = "text";
-              oldfilesDirectory = false;
-              align = "center";
-              foldSection = false;
-              title = "Header";
-              margin = 5;
-              content = [
-                ""
-                ""
-                ""
-                ""
-                ""
-              	""
-                ""
-                ""
-                " ███╗   ██╗██╗██╗  ██╗██╗   ██╗██╗███╗   ███╗"
-                " ████╗  ██║██║╚██╗██╔╝██║   ██║██║████╗ ████║"
-                " ██╔██╗ ██║██║ ╚███╔╝ ██║   ██║██║██╔████╔██║"
-                " ██║╚██╗██║██║ ██╔██╗ ╚██╗ ██╔╝██║██║╚██╔╝██║"
-                " ██║ ╚████║██║██╔╝ ██╗ ╚████╔╝ ██║██║ ╚═╝ ██║"
-                " ╚═╝  ╚═══╝╚═╝╚═╝  ╚═╝  ╚═══╝  ╚═╝╚═╝     ╚═╝"
-              ];
-              highlight = "Statement";
-              defaultColor = "";
-              oldfilesAmount = 0;
-            };
-
-            body = {
-              type = "mapping";
-              oldfilesDirectory = false;
-              align = "center";
-              foldSection = false;
-              title = "Menu";
-              margin = 5;
-              content = [
-                [
-                  " Find File"
-                  "Telescope find_files"
-                  "ff"
-                ]
-                [
-                  "󰍉 Find Word"
-                  "Telescope live_grep"
-                  "fr"
-                ]
-                [
-                  " Recent Files"
-                  "Telescope oldfiles"
-                  "fg"
-                ]
-                [
-                  " File Browser"
-                  "Telescope file_browser"
-                  "fe"
-                ]
-                [
-                  " Copilot Chat"
-                  "CopilotChat"
-                  "ct"
-                ]
-                [
-                  "󰧑 SecondBrain"
-                  "edit ~/projects/personal/SecondBrain"
-                  "sb"
-                ]
-              ];
-              highlight = "string";
-              defaultColor = "";
-              oldfilesAmount = 0;
-            };
-          };
-
-          options = {
-            paddings = [1 3];
-          };
-
-          parts = [
-            "header"
-            "body"
-          ];
-        };
-
-      treesitter = {
-        enable = true;
-
-        grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
-          bash
-          json
-          lua
-          make
-          markdown
-          nix
-          regex
-          toml
-          vim
-          vimdoc
-          xml
-          yaml
-        ];
-      };
-    };
-  };
-
+    # Utils
+    ./plugins/utils/fzf-lua.nix
+    ./plugins/utils/markdown-preview.nix
+    ./plugins/utils/neotest.nix
+    ./plugins/utils/telescope.nix
+    ./plugins/utils/toggleterm.nix
+    ./plugins/utils/web-devicons.nix
+    ./plugins/utils/whichkey.nix
+  ];
 }

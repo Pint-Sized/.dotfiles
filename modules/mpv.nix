@@ -1,12 +1,18 @@
-{ pkgs, config, lib, catppuccin, ... }:
+{
+  pkgs,
+  config,
+  lib,
+  catppuccin,
+  ...
+}:
 
 {
-	programs.mpv = {
-		enable = true;
-		catppuccin = {
-			enable = true;
-			accent = "mauve";
-			flavor = "mocha";
-		};
-	};
+  programs.mpv = {
+    enable = true;
+    catppuccin = {
+      enable = true;
+      accent = "mauve";
+      flavor = "mocha";
+    };
+  };
 }

@@ -9,16 +9,23 @@
 {
   hardware = {
 
-    opengl = {
+    graphics = {
       enable = true;
-      driSupport32Bit = true;
+      enable32Bit = true;
     };
+
     openrazer = {
       enable = true;
     };
     bluetooth = {
       enable = true;
       powerOnBoot = true;
+    };
+    nvidia = {
+      modesetting.enable = true;
+      open = false;
+      nvidiaSettings = true;
+      package = config.boot.kernelPackages.nvidiaPackages.beta;
     };
   };
 }

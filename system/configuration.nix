@@ -4,7 +4,7 @@
   pkgs,
   lib,
   catppuccin,
-  pkgs-unstable,
+  flatpak-nix,
   ...
 }:
 {

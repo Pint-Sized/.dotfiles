@@ -11,7 +11,7 @@
 
     xserver = {
       enable = true;
-      videoDrivers = [ "intel" ];
+      videoDrivers = [ "nvidia" ];
     };
 
     displayManager = {
@@ -27,10 +27,6 @@
           fontSize = "9";
         };
       };
-    };
-
-    flatpak = {
-      enable = true;
     };
 
     xserver = {

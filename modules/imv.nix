@@ -1,11 +1,17 @@
-{ config, pkgs, lib, catppuccin, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  catppuccin,
+  ...
+}:
 
 {
-	programs.imv = {
-		enable = true;
-		catppuccin = {
-			enable = true;
-			flavor = "mocha";
-		};
-	};
+  programs.imv = {
+    enable = true;
+    catppuccin = {
+      enable = true;
+      flavor = "mocha";
+    };
+  };
 }
