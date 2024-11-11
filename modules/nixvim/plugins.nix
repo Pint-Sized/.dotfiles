@@ -13,6 +13,8 @@
     # Completions
     ./plugins/cmp/autopairs.nix
     ./plugins/cmp/cmp.nix
+    ./plugins/cmp/lspkind.nix
+    ./plugins/cmp/schemastore.nix
 
     # Editor plugins
     ./plugins/editor/illuminate.nix

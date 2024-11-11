@@ -1,7 +1,5 @@
-{ config, pkgs, catppuccin, lib, nixvim, ... }:
-
 {
-  programs.nixvim.globals.mapleader = " ";
+  programs.nixvim.globals.mapleader = ";";
 
   programs.nixvim = {
     keymaps = [

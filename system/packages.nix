@@ -11,16 +11,13 @@
   environment.systemPackages =
     (with pkgs; [
       manix
-      jq
       thunderbird
-      nil
       rclone
       feh
       teams-for-linux
       pyenv
       obs-studio
       pandoc
-      shellcheck
       celluloid
       which
       imv
@@ -72,7 +69,6 @@
       hyprlock
       xdg-desktop-portal-hyprland
       gnome.nautilus
-      nixfmt-rfc-style
       wdisplays
       monitor
       lutris
@@ -163,6 +159,35 @@
         vimPlugins.mini-nvim
         vimPlugins.toggleterm-nvim
         vimPlugins.which-key-nvim
+        vimPlugins.lspkind-nvim
+        vimPlugins.lspkind-nvim
+        vimPlugins.lspkind-nvim
+        vimPlugins.lspkind-nvim
+        vimPlugins.lspkind-nvim
+        black
+vscode-langservers-extracted
+lua-language-server
+nil
+typescript-language-server
+marksman
+pyright
+gopls
+terraform-ls
+ansible-language-server
+helm_ls
+yaml-language-server
+
+        isort
+        nixfmt-rfc-style
+        alejandra
+        jq
+        prettierd
+        stylua
+        shellcheck
+        shfmt
+        shellharden
+        bicep
+        yamlfmt
       ]);
 
   services.flatpak = {
