@@ -34,9 +34,6 @@
     # Snippets
     ./plugins/snippets/luasnip.nix
 
-    # Themes
-    ./plugins/themes/catppuccin.nix
-
     # UI plugins
     ./plugins/ui/bufferline.nix
     ./plugins/ui/lualine.nix

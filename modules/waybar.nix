@@ -10,11 +10,6 @@
   # --------- WAYBAR ----------- #
   programs.waybar = {
     enable = true;
-    catppuccin = {
-      enable = true;
-      flavor = "mocha";
-      mode = "createLink";
-    };
     settings = [
       {
         "layer" = "top";
