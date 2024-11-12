@@ -14,6 +14,10 @@
       followCurrentFile = {
         enabled = true;
       };
+      filteredItems = {
+        hideDotfiles = false;
+        hideGitignored = true;
+      };
     };
 
     defaultComponentConfigs = {

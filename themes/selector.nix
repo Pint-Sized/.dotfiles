@@ -2,6 +2,6 @@
 
 {
  imports = [
-   ./catppuccin-mocha-mauve.nix
+  # ./catppuccin-mocha-mauve.nix
  ]; 
 }

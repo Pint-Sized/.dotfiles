@@ -12,6 +12,10 @@
     (with pkgs; [
       manix
       thunderbird
+      python312Packages.simpleeval
+      python312Packages.pint
+      python312Packages.parsedatetime
+      python312Packages.pytz
       rclone
       feh
       teams-for-linux
