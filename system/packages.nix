@@ -22,6 +22,7 @@
       pyenv
       obs-studio
       pandoc
+      base16-schemes
       celluloid
       which
       imv
