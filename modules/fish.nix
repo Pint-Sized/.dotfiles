@@ -35,7 +35,7 @@
       z = "zeditor $argv; exit";
       nr = "sudo nixos-rebuild switch --flake ~/.dotfiles";
       hr = "home-manager switch --flake ~/.dotfiles";
-      fr = "nix flake update --flake ~/.dotfiles; home-manager switch --flake ~/.dotfiles; sudo nixos-rebuild switch --flake ~/.dotfiles";
+      fr = "sudo nix flake update --flake ~/.dotfiles; sudo nixos-rebuild switch --flake ~/.dotfiles; home-manager switch --flake ~/.dotfiles;";
       y = {
         description = "Yazi changes directory on exit";
         body = ''

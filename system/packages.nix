@@ -91,7 +91,6 @@
       onlyoffice-bin_latest
       loupe
       kdePackages.gwenview
-      kitty
       util-linux
       ungoogled-chromium
       appeditor
@@ -121,6 +120,8 @@
         neovim-unwrapped
         home-manager
         wttrbar
+        kitty
+        neovide
 
         # neovim plugins
         vimPlugins.telescope-nvim
@@ -248,6 +249,9 @@
         enable = true;
         enableSSHSupport = true;
       };
+    };
+    tmux = {
+      enable = true;
     };
   };
 }

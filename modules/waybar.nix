@@ -242,7 +242,7 @@
 
           * {
             font-family: "0xProto Nerd Font";
-            font-size: 16px;
+            font-size: 18px;
             min-height: 0;
             padding: 0;
             margin: 0;

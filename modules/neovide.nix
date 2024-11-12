@@ -1,0 +1,26 @@
+{ pkgs, pkgs-unstable, config, lib, catppuccin, ... }:
+
+{
+  programs.neovide = {
+    enable = true;
+    settings = {
+      fork = false;
+      frame = "full";
+      idle = true;
+      maximized = false;
+      no-multigrid = false;
+      srgb = false;
+      tabs = true;
+      theme = "auto";
+      mouse-cursor-icon = "arrow";
+      title-hidden = true;
+      vsync = true;
+      wsl = false;
+
+      font = {
+        normal = [ "0xProto Nerd Font" ]; # Will use the bundled Fira Code Nerd Font by default
+        size = 11.0;
+      };
+    };
+  };
+}
