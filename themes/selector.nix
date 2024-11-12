@@ -1,7 +1,7 @@
-{ catppuccin, lib, config, pkgs, pkgs-unstable, nixvim,  }:
+{ catppuccin, lib, config, pkgs, pkgs-unstable, nixvim, ... }:
 
 {
- import = [
+ imports = [
    ./catppuccin-mocha-mauve.nix
  ]; 
 }

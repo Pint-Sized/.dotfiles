@@ -29,28 +29,28 @@
     accent = "mauve";
     flavor = "mocha";
   };
-    gtk.catppuccin = {
-      enable = true;
-      accent = "mauve";
-      flavor = "mocha";
-      icon = {
+    gtk = {
+      catppuccin = {
         enable = true;
         accent = "mauve";
         flavor = "mocha";
+        icon = {
+          enable = true;
+          accent = "mauve";
+          flavor = "mocha";
+        };
       };
-      size = "standard";
-      tweaks = [ "rimless" ];
-    };
-    cursorTheme = {
-      size = 16;
-      name = "catppuccin-mocha-mauve-cursors";
-      packages = pkgs.catppuccin-cursors.mochaMauve;
+      cursorTheme = {
+        size = 10;
+        name = "catppuccin-mocha-mauve-cursors";
+        package = pkgs.catppuccin-cursors.mochaMauve;
+      };
     };
     home.pointerCursor = {
       name = "catppuccin-mocha-mauve-cursors";
       x11 = {
         enable = true;
-        defaultCursor  "catppuccin-mocha-mauve-cursors";
+        defaultCursor = "catppuccin-mocha-mauve-cursors";
       };
     };
     wayland.windowManager.hyprland.catppuccin.enable = false;
@@ -174,6 +174,6 @@
   };
   programs.nixvim.colorschemes.catppuccin = {
     enable = true;
-    flavour = "mocha"
+    flavour = "mocha";
   };
 }

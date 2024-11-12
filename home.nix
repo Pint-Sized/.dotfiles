@@ -16,9 +16,6 @@
     # ------- BTOP ------- #
     ./modules/btop.nix
 
-    # ------- CATPPUCCIN ------- #
-    ./modules/catppuccin.nix
-
     # -------- CAVA ------------ #
     ./modules/cava.nix
 
@@ -27,9 +24,6 @@
 
     # ----------- FISH ------------- #
     ./modules/fish.nix
-
-    # --------- FOOT -------------- #
-    ./modules/foot.nix
 
     # ------------ FZF ------------- # 
     ./modules/fzf.nix
@@ -54,9 +48,6 @@
 
     # ----------- KITTY  ------------- #
     ./modules/kitty.nix
-
-    # ----------- MICRO ---------- #
-    # ./modules/micro.nix
 
     # ------------ MPV ------------ #
     ./modules/mpv.nix

@@ -7,7 +7,7 @@
 }:
 
 {
-   --------- QT ----------- #
+ # --------- QT ----------- #
    qt = {
      enable = true;
      platformTheme.name = "kvantum";

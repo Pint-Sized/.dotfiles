@@ -25,6 +25,7 @@
                                   # monitor=,preferred,auto,auto
 
                                   monitor = DP-1, 1920x1080@240,0x0,1
+                                  monitor = eDP-1, 1920x1080,0x0,1
 
                                   ###################
                                   ### MY PROGRAMS ###

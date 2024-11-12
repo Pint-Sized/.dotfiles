@@ -19,7 +19,6 @@
         "margin-left" = 6;
         "margin-right" = 6;
         "margin-top" = 2;
-        "margin-bottom" = 0;
         "exclusive" = true;
         "passthrough" = false;
         "reload_style_on_change" = true;
@@ -36,14 +35,13 @@
         ];
         "modules-right" = [
           "pulseaudio"
-          "battery"
-          "network"
-          # "backlight"
+          "backlight"
           "temperature"
+          "battery"
           "cpu"
           "memory"
           "custom/notification"
-          "custom/lock"
+          "network"
           "custom/power"
         ];
         "hyprland/workspaces" = {
@@ -79,6 +77,7 @@
             "critical" = 15;
           };
           "format" = "{icon}{capacity}%";
+          "on-click-right" = "kitty nvim ~/.dotfiles/system/power.nix";
           "format-charging" = "󰂄{capacity}%";
           "format-plugged" = "";
           "format-alt" = "{icon}{time}";
@@ -192,12 +191,12 @@
             "󰤢"
             "󰤥"
           ];
-          "format-wifi" = "󰖩 Wifi";
+          "format-wifi" = "󰤥";
           "rotate" = 0;
-          "format-ethernet" = "󰈀 Eth.";
+          "format-ethernet" = "󰈀";
           "tooltip-format" = "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>";
           "format-linked" = "󰈀 {ifname} (No IP)";
-          "format-disconnected" = " Disc.";
+          "format-disconnected" = "";
           "tooltip-format-disconnected" = "Disconnected";
           "on-click" = "kitty nvim ~/.dotfiles/system/wifi.nix";
           "interval" = 2;
@@ -206,6 +205,7 @@
           "interval" = 3;
           "format" = " {percentage}%";
           "tooltip-format" = "{used:0.2f}GiB used out of {total:0.2f}GiB";
+          "on-click" = "kitty btop";
         };
         "cpu" = {
           "interval" = 3;
@@ -213,7 +213,7 @@
         };
         "temperature" = {
           "hwmon-path" = "/sys/class/hwmon/hwmon6/temp1_input";
-          "format" = " {temperatureC}°C";
+          "format" = "{temperatureC}°C";
           "tooltip" = false;
           "interval" = 5;
         };
@@ -242,7 +242,7 @@
 
           * {
             font-family: "0xProto Nerd Font";
-            font-size: 17px;
+            font-size: 16px;
             min-height: 0;
             padding: 0;
             margin: 0;
@@ -343,7 +343,7 @@
           }
 
           #battery.warning:not(.charging) {
-            color: @peach;
+            color: @yellow;
           }
 
           #battery.critical:not(.charging) {
@@ -351,7 +351,7 @@
           }
 
           #backlight {
-            color: @yellow;
+            color: @peach;
           }
 
           #pulseaudio {
@@ -363,7 +363,6 @@
           #custom-notification {
       	border-radius: 1rem 0px 0px 1rem;
       	color: @flamingo;
-      	font-size: 20px;
           }
           
           #custom-lock {
@@ -378,21 +377,21 @@
 
           #network {
       	border-radius: 0rem 0px 0px 0rem;
-      	color: @peach;
+      	color: @lavender;
           }
 
           #memory {
-      	color: @green;
+      	color: @pink;
       	border-radius: 0px 1rem 1rem 0px;
       	margin-right: 1rem
           }
 
           #temperature {
-      	color: @blue;
+      	color: @yellow;
         }
 
           #cpu {
-      	color: @yellow;
+      	color: @lavender;
           }
 
           #custom-music.Playing {
@@ -413,7 +412,6 @@
             color: @text;
             border-radius: 0px 1rem 1rem 0px;
           }
-
     '';
   };
 
