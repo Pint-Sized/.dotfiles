@@ -19,5 +19,6 @@
     ./keymaps.nix
     ./plugins.nix
     ./settings.nix
+    ./neovide.nix
   ];
 }
