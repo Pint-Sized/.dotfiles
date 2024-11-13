@@ -242,7 +242,7 @@
 
           * {
             font-family: "0xProto Nerd Font";
-            font-size: 16px;
+            font-size: 17px;
             min-height: 0;
             padding: 0;
             margin: 0;
@@ -343,7 +343,7 @@
           }
 
           #battery.warning:not(.charging) {
-            color: @yellow;
+            color: @green;
           }
 
           #battery.critical:not(.charging) {

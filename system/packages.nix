@@ -14,6 +14,7 @@
       thunderbird
       rclone
       feh
+      neovide
       teams-for-linux
       pyenv
       obs-studio
