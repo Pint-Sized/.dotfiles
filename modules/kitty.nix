@@ -12,7 +12,7 @@
     enable = true;
     font = {
       size = 11;
-      name = "0x Proto Nerd Font";
+      name = "0xProto Nerd Font";
     };
     shellIntegration.enableFishIntegration = true;
     settings = {

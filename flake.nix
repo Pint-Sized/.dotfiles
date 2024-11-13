@@ -16,6 +16,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-flatpak.url = "github:gmodena/nix-flatpak";
+    stylix.url = "github:danth/stylix";
   };
 
   outputs =
@@ -28,6 +29,7 @@
       nixpkgs-unstable,
       nixvim,
       nix-flatpak,
+      stylix,
       ...
     }:
     let
@@ -45,6 +47,7 @@
             catppuccin.nixosModules.catppuccin
             nixvim.nixosModules.nixvim
             nur.nixosModules.nur
+            stylix.nixosModules.stylix
             (
               { config, ... }:
               {
@@ -65,6 +68,7 @@
             ./home.nix
             catppuccin.homeManagerModules.catppuccin
             nixvim.homeManagerModules.nixvim
+            stylix.homeManagerModules.stylix
           ];
         };
       };

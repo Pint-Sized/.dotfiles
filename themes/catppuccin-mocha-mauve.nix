@@ -46,13 +46,6 @@
         package = pkgs.catppuccin-cursors.mochaMauve;
       };
     };
-    home.pointerCursor = {
-      name = "catppuccin-mocha-mauve-cursors";
-      x11 = {
-        enable = true;
-        defaultCursor = "catppuccin-mocha-mauve-cursors";
-      };
-    };
     wayland.windowManager.hyprland.catppuccin.enable = false;
 
   home.file = {

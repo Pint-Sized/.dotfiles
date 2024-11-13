@@ -52,6 +52,9 @@
     # ------------ MPV ------------ #
     ./modules/mpv.nix
 
+    # --------- NEOVIDE ------------ #
+    ./modules/neovide.nix
+
     # --------- NIXVIM --------- # 
     ./modules/nixvim/nixvim.nix
 

@@ -12,6 +12,10 @@
     (with pkgs; [
       manix
       thunderbird
+      python312Packages.simpleeval
+      python312Packages.pint
+      python312Packages.parsedatetime
+      python312Packages.pytz
       rclone
       feh
       neovide
@@ -19,6 +23,7 @@
       pyenv
       obs-studio
       pandoc
+      base16-schemes
       celluloid
       which
       imv
@@ -92,7 +97,6 @@
       onlyoffice-bin_latest
       loupe
       kdePackages.gwenview
-      kitty
       util-linux
       ungoogled-chromium
       appeditor
@@ -122,6 +126,8 @@
         neovim-unwrapped
         home-manager
         wttrbar
+        kitty
+        neovide
 
         # neovim plugins
         vimPlugins.telescope-nvim
@@ -249,6 +255,9 @@
         enable = true;
         enableSSHSupport = true;
       };
+    };
+    tmux = {
+      enable = true;
     };
   };
 }
