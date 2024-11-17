@@ -41,6 +41,7 @@
     ./plugins/ui/notify.nix
     ./plugins/ui/nui.nix
     ./plugins/ui/startup.nix
+    ./plugins/ui/colorizer.nix
 
     # Utils
     ./plugins/utils/fzf-lua.nix

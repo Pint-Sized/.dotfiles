@@ -27,7 +27,7 @@
           "custom/launcher"
           "hyprland/workspaces"
           "custom/music"
-          "cava"
+          #"cava"
         ];
         "modules-center" = [
           "clock"
@@ -115,31 +115,31 @@
           "max-length" = 24;
         };
 
-        "cava" = {
-          "cava_config" = ".config/cava/config";
-          "framerate" = 30;
-          "autosens" = 1;
-          "bars" = 10;
-          "lower_cutoff_freq" = 50;
-          "higher_cutoff_freq" = 10000;
-          "method" = "pulse";
-          "source" = "auto";
-          "bar_delimiter" = 0;
-          "noise_reduction" = 0.77;
-          "input_delay" = 0;
-          "hide_on_silence" = false;
-          "format-icons" = [
-            "▁"
-            "▂"
-            "▃"
-            "▄"
-            "▅"
-            "▆"
-            "▇"
-            "█"
-          ];
-          "on-click-right" = "mode";
-        };
+        #      "cava" = {
+        #       "cava_config" = "~/.config/cava/config";
+        #        "framerate" = 30;
+        #        "autosens" = 1;
+        #        "bars" = 10;
+        #        "lower_cutoff_freq" = 50;
+        #        "higher_cutoff_freq" = 10000;
+        #       "method" = "pulse";
+        #       "source" = "auto";
+        #      "bar_delimiter" = 0;
+        #     "noise_reduction" = 0.77;
+        #    "input_delay" = 0;
+        #   "hide_on_silence" = false;
+        #  "format-icons" = [
+        #        "▁"
+        #       "▂"
+        #      "▃"
+        #     "▄"
+        #    "▅"
+        #   "▆"
+        #  "▇"
+        # "█"
+        #   ];
+        #    "on-click-right" = "mode";
+        #  };
 
         "pulseaudio" = {
           # "scroll-step" = 1;
@@ -238,15 +238,10 @@
       }
     ];
     style = ''
-          @import "catppuccin.css";
-
+          @import "theme.css";
           * {
             font-family: "0xProto Nerd Font";
-<<<<<<< HEAD
-            font-size: 17px;
-=======
-            font-size: 18px;
->>>>>>> 44f0f451fbe4f2b926f4bb7df893061ce1a8d01d
+            font-size: 14px;
             min-height: 0;
             padding: 0;
             margin: 0;
@@ -254,48 +249,43 @@
 
           #waybar {
             background: transparent;
-            color: @text;
+            color: @base05;
             margin: 5px 5px;
+            opacity: 0.9;
           }
 
           #workspaces {
             border-radius: 0px 1rem 1rem 0px;
             margin: 5px;
-            background-color: @surface0;
+            background-color: @base02;
             margin-left: 0rem;
             margin-right: 1rem;
           }
 
           #workspaces button {
-            color: @lavender;
+            color: @base07;
             border-radius: 1rem;
             padding: 0.4rem;
           }
 
           #workspaces button.active {
-            color: @sky;
+            color: @base0C;
             border-radius: 1rem;
           }
 
           #workspaces button:hover {
-            color: @sapphire;
+            color: @base0C;
             border-radius: 1rem;
           }
-
-          
-
-
-
-
           #custom-launcher {
-            color: @text;
+            color: @base05;
             border-radius: 1rem 0px 0px 1rem;
             margin-left: 6px;
 
           }
 
           #custom-launcher:hover {
-            color: @sky;
+            color: @base0C;
             border-radius: 1rem 0px 0px 1rem;
           }
 
@@ -314,7 +304,7 @@
           #network,
           #custom-launcher,
           #memory {
-            background-color: @surface0;
+            background-color: @base02;
             padding: 0.5rem 0.75rem;
             margin: 5px 0;
           }
@@ -323,97 +313,96 @@
           #custom-notification,
           #custom-lock,
           #custom-power {
-            background-color: @surface0;
+            background-color: @base02;
             padding: 0.5rem 1rem;
             margin: 5px 0;
           }
 
           #clock {
-            color: @lavender;
+            color: @base07;
             border-radius: 1rem 0px 0px 1rem;
           }
 
           #custom-weather {
-      	color: @flamingo;
+      	color: @base0F;
       	border-radius: 0px 1rem 1rem 0px;
           }
 
           #battery {
-            color: @green;
+            color: @base0B;
           }
 
           #battery.charging {
-            color: @green;
+            color: @base0B;
           }
 
           #battery.warning:not(.charging) {
-            color: @green;
+            color: @base0A;
           }
 
           #battery.critical:not(.charging) {
-            color: @red;
+            color: @base08;
           }
 
           #backlight {
-            color: @peach;
+            color: @base09;
           }
 
           #pulseaudio {
-            color: @maroon;
+            color: @base08;
             border-radius: 1rem 0px 0px 1rem;
             margin-left: 1rem;
           }
-          
+
           #custom-notification {
       	border-radius: 1rem 0px 0px 1rem;
-      	color: @flamingo;
+      	color: @base0F;
           }
-          
+
           #custom-lock {
               border-radius: 0rem 0px 0px 0rem;
-              color: @lavender;
+              color: @base07;
           }
 
           #custom-power {
               border-radius: 0px 1rem 1rem 0px;
-              color: @red;
+              color: @base08;
           }
 
           #network {
       	border-radius: 0rem 0px 0px 0rem;
-      	color: @lavender;
+      	color: @base07;
           }
 
           #memory {
-      	color: @pink;
+      	color: @base0E;
       	border-radius: 0px 1rem 1rem 0px;
-      	margin-right: 1rem
+      	margin-right: 1rem;
           }
 
           #temperature {
-      	color: @yellow;
+      	color: @base0A;
         }
 
           #cpu {
-      	color: @lavender;
+      	color: @base07;
           }
 
           #custom-music.Playing {
-              background: @surface0;
-              color: @mauve;
-              border-radius: 1rem 0px 0px 1rem;
-              font-size: 17px;
+              background: @base02;
+              color: @base0E;
+              border-radius: 1rem;
           }
-          
+
           #custom-music.Paused,
           #custom-music.Stopped {
-              background: @surface0;
+              background: @base02;
               color: @subtext0;
-              border-radius: 1rem 0px 0px 1rem;
+              border-radius: 1rem;
           }
 
           #cava {
-            color: @text;
+            color: @base05;
             border-radius: 0px 1rem 1rem 0px;
           }
     '';

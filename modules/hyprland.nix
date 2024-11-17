@@ -14,7 +14,6 @@
       enable = true;
     };
 
-    plugins = [ ];
     extraConfig = ''
                                   source=~/.config/hypr/theme.conf
                                   ################
@@ -51,7 +50,6 @@
                          		      exec-once = sleep 4
             					            exec-once = hyprctl setcursor 16	
                                   exec-once = swww-daemon &
-                                  exec-once = swww img ~/Wallpapers/LOTRblue.jpg &
                                   exec-once = sleep 1
                                   exec-once = waybar &
                                   exec-once = udiskie &
@@ -86,8 +84,8 @@
 
                                   # See https://wiki.hyprland.org/Configuring/Environment-variables/
 
-                                  env = XCURSOR_SIZE,16
-                                  env = HYPRCURSOR_SIZE,16
+                                  env = XCURSOR_SIZE,24
+                                  env = HYPRCURSOR_SIZE,24
                                   env = QT_QPA_PLATFORM,wayland;xcb
                                   env = XDG_CURRENT_DESKTOP,Hyprland
                                   env = XDG_SESSION_TYPE,wayland
@@ -132,8 +130,8 @@
                                       no_focus_fallback = true
 
                                       # https://wiki.hyprland.org/Configuring/Variables/#variable-types for info about colors
-                                      col.active_border = $mauve
-                                      col.inactive_border = $surface0
+                                      col.active_border = $base0E
+                                      col.inactive_border = $base02
 
                                       # Set to true enable resizing windows by clicking and dragging on borders and gaps
                                       resize_on_border = false

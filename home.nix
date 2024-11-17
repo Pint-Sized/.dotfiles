@@ -16,9 +16,6 @@
     # ------- BTOP ------- #
     ./modules/btop.nix
 
-    # -------- CAVA ------------ #
-    ./modules/cava.nix
-
     # ------- FASTFETCH -------- #
     ./modules/fastfetch.nix
 

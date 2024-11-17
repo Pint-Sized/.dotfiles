@@ -311,8 +311,6 @@
         "owner": "nix-community",
         "repo": "home-manager",
         "rev": "60bb110917844d354f3c18e05450606a435d2d10",
-<<<<<<< HEAD
-=======
         "type": "github"
       },
       "original": {
@@ -334,7 +332,6 @@
         "owner": "nix-community",
         "repo": "home-manager",
         "rev": "c2cd2a52e02f1dfa1c88f95abeb89298d46023be",
->>>>>>> 44f0f451fbe4f2b926f4bb7df893061ce1a8d01d
         "type": "github"
       },
       "original": {

@@ -7,10 +7,10 @@
 }:
 
 {
- # --------- QT ----------- #
-   qt = {
-     enable = true;
-     platformTheme.name = "kvantum";
-     style.name = "kvantum";
-   };
+  # --------- QT ----------- #
+  qt = {
+    enable = true;
+    platformTheme.name = "kvantum";
+    style.name = "kvantum";
+  };
 }

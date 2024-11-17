@@ -1,4 +1,11 @@
-{ pkgs, pkgs-unstable, config, lib, catppuccin, ... }:
+{
+  pkgs,
+  pkgs-unstable,
+  config,
+  lib,
+  catppuccin,
+  ...
+}:
 
 {
   programs.neovide = {

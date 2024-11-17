@@ -10,7 +10,6 @@
 {
   programs.nixvim = {
     enable = true;
-    colorschemes.catppuccin.enable = true;
   };
 
   imports = [
@@ -19,6 +18,5 @@
     ./keymaps.nix
     ./plugins.nix
     ./settings.nix
-    ./neovide.nix
   ];
 }
