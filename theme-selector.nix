@@ -1,0 +1,34 @@
+{
+  catppuccin,
+  lib,
+  config,
+  pkgs,
+  pkgs-unstable,
+  nixvim,
+  stylix,
+  ...
+}:
+
+{
+  imports = [
+    #./themes/catppuccin-mocha-mauve.nix
+    #./themes/dracula.nix
+    #./themes/gruvbox-material-dark-soft.nix
+    #./themes/nord.nix
+    #./themes/uwunicorn.nix
+    #./themes/black-metal-venom.nix
+    #./themes/greenscreen.nix
+    #./themes/xcode-dusk.nix
+    #./themes/google-light.nix
+    #./themes/3024.nix
+    #./themes/tokyo-night-moon.nix
+     ./themes/spaceduck.nix
+    #./themes/snazzy.nix
+    #./themes/rose-pine.nix
+    #./themes/pasque.nix
+    #./themes/pinky.nix
+    #./themes/phd.nix
+    #./themes/horizon-terminal-dark.nix
+    #./themes/eighties.nix
+  ];
+}
