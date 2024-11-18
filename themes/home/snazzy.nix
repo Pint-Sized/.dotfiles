@@ -71,7 +71,7 @@
       '';
     };
   };
- 
+
   home.file = {
     ".config/waybar/theme.css" = {
       enable = true;

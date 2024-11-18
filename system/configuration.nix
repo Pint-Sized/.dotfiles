@@ -17,6 +17,7 @@
     ./system.nix
     ./wifi.nix
     ./power.nix
+    ../system-theme-selector.nix
   ];
 
   system.stateVersion = "23.05"; # Did you read the comment?

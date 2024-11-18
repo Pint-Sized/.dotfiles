@@ -19,13 +19,6 @@
         enable = true;
         wayland.enable = true;
         package = pkgs.kdePackages.sddm;
-        catppuccin = {
-          enable = true;
-          background = "/Wallpapers/LOTRblue.jpg";
-          flavor = "mocha";
-          font = "0xProto Nerd Font";
-          fontSize = "9";
-        };
       };
     };
 

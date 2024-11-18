@@ -13,7 +13,9 @@
     xwayland = {
       enable = true;
     };
-
+    plugins = [
+      pkgs.hyprlandPlugins.borders-plus-plus
+    ];
     extraConfig = ''
                                   source=~/.config/hypr/theme.conf
                                   ################
@@ -106,8 +108,25 @@
                                   }
 
 
+                                  ###############
+                                  ### PLUGINS ###
+                                  ###############
+                                  plugin {
+                                    borders-plus-plus {
+                                      add_borders = 1 # 0 - 9
 
+                                      # you can add up to 9 borders
+                                      col.border_1 = $base00
+                                      col.border_2 = $base0E
 
+                                      # -1 means "default" as in the one defined in general:border_size
+                                      border_size_1 = 6
+                                      border_size_2 = -1
+
+                                      # makes outer edges match rounding of the parent. Turn on / off to better understand. Default = on.
+                                      natural_rounding = on
+                                    }
+                                  }
 
                                   #####################
                                   ### LOOK AND FEEL ###
@@ -120,7 +139,7 @@
                                       gaps_in = 2
                                       gaps_out = 6
 
-                                      border_size = 1
+                                      border_size = 2
 
 
                                       resize_on_border = on

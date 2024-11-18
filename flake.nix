@@ -1,5 +1,4 @@
 {
-
   description = "NixOS config flake";
 
   inputs = {
@@ -48,13 +47,14 @@
             nixvim.nixosModules.nixvim
             nur.nixosModules.nur
             stylix.nixosModules.stylix
+            nix-flatpak.nixosModules.nix-flatpak
+            # dodgy spotify NUR repository 
             (
               { config, ... }:
               {
                 environment.systemPackages = [ config.nur.repos.nltch.spotify-adblock ];
               }
             )
-            nix-flatpak.nixosModules.nix-flatpak
           ];
           specialArgs = {
             inherit pkgs-unstable;

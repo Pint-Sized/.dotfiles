@@ -52,19 +52,7 @@
     };
   };
 
-  catppuccin = {
-    enable = true;
-    accent = "mauve";
-    flavor = "mocha";
-  };
-
   boot = {
-    plymouth = {
-      catppuccin = {
-        enable = true;
-        flavor = "mocha";
-      };
-    };
     loader = {
       timeout = 3;
       systemd-boot.enable = false;
@@ -75,10 +63,6 @@
         devices = [ "nodev" ];
         efiSupport = true;
         # useOSProber = true;
-        catppuccin = {
-          enable = true;
-          flavor = "mocha";
-        };
       };
     };
   };
@@ -108,13 +92,7 @@
     };
   };
 
-  console = {
-    catppuccin = {
-      enable = true;
-      flavor = "mocha";
-    };
-    keyMap = "us";
-  };
+  console.keyMap = "us";
 
   nix = {
     settings = {
