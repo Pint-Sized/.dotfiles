@@ -119,7 +119,7 @@
                                       col.border_2 = $base0E
 
                                       # -1 means "default" as in the one defined in general:border_size
-                                      border_size_1 = 6
+                                      border_size_1 = 8
                                       border_size_2 = -1
 
                                       # makes outer edges match rounding of the parent. Turn on / off to better understand. Default = on.
@@ -138,7 +138,7 @@
                                       gaps_in = 2
                                       gaps_out = 6
 
-                                      border_size = 2
+                                      border_size = 3
 
 
                                       resize_on_border = on
@@ -164,7 +164,7 @@
 
                                   # https://wiki.hyprland.org/Configuring/Variables/#decoration
                                   decoration {
-                                      rounding = 10
+                                      rounding = 4 
 
                                       # Change transparency of focused and unfocused windows
                                       active_opacity = 0.8

@@ -10,7 +10,7 @@
 {
   stylix = {
     enable = true;
-    image = ../wallpapers/evening-sky.png;
+    image = ../../wallpapers/evening-sky.png;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/spaceduck.yaml";
     cursor = {
       name = "catppuccin-mocha-mauve-cursors";
@@ -46,6 +46,15 @@
 
   programs.fish.functions = {
     fish_greeting = "pokeget ducklett --hide-name | fastfetch --file-raw -";
+  };
+  
+  home.file = {
+    ".dotfiles/fastfetch/theme" = {
+      executable = true;
+      text = ''
+        echo SpaceDuck
+      '';
+    };
   };
 
   home.file = {

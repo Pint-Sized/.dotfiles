@@ -10,7 +10,7 @@
 {
   stylix = {
     enable = true;
-    image = ../wallpapers/evening-sky.png;
+    image = ../../wallpapers/evening-sky.png;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/google-light.yaml";
     cursor = {
       name = "catppuccin-mocha-mauve-cursors";

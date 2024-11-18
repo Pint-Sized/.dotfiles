@@ -21,44 +21,49 @@
         { type = "title"; }
         "separator"
         {
-          key = " Distro    ";
+          key = " Distro      ";
           type = "os";
         }
         {
-          key = " Cpu       ";
-          type = "cpu";
-        }
-        {
-          key = " Host      ";
+          key = " Host        ";
           type = "host";
         }
         {
-          key = " WM        ";
+          key = " WM          ";
           type = "wm";
         }
         {
-          key = " Locale    ";
+          key = " Locale      ";
           type = "locale";
         }
         {
-          key = " Terminal  ";
+          key = " Terminal    ";
           type = "terminal";
         }
         {
-          key = "󰈺 Shell     ";
+          key = "󰈺 Shell       ";
           type = "shell";
         }
         {
-          key = "󱊣 Battery   ";
+          key = "Stylix Theme  ";
+          type = "command";
+          text = "~/.dotfiles/modules/fastfetch/theme";
+        }
+        {
+          key = "󱊣 Battery     ";
           type = "battery";
         }
+        {
+          key = "Media         ";
+          type = "media";
+        }
+        
         "break"
         {
           type = "colors";
           paddingLeft = 6;
           symbol = "circle";
         }
-
       ];
 
     };
