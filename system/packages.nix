@@ -22,7 +22,6 @@
       pyenv
       obs-studio
       pandoc
-      base16-schemes
       celluloid
       which
       imv
@@ -103,7 +102,7 @@
       kdePackages.qt6ct
       glib
       nodejs_22
-      gnome.gnome-calculator
+      gnome-calculator
       rustup
       gnumake
       libgcc
@@ -126,7 +125,7 @@
         home-manager
         wttrbar
         kitty
-        neovide
+        base16-schemes
 
         # neovim plugins
         vimPlugins.telescope-nvim

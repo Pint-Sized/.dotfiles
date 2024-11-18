@@ -16,10 +16,10 @@
     #./themes/catppuccin-mocha-mauve.nix # the goat
     #./themes/dracula.nix # classic
     #./themes/eighties.nix # classy greys
-     ./themes/google-dark.nix
+    #./themes/google-dark.nix
     #./themes/google-light.nix # light mode with accents
     #./themes/greenscreen.nix
-    #./themes/gruvbox-material-dark-soft.nix
+     ./themes/gruvbox-material-dark-soft.nix
     #./themes/horizon-terminal-dark.nix
     #./themes/nord.nix
     #./themes/pasque.nix
