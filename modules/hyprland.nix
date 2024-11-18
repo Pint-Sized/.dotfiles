@@ -86,7 +86,6 @@
 
                                   # See https://wiki.hyprland.org/Configuring/Environment-variables/
 
-                                  env = XCURSOR_SIZE,24
                                   env = HYPRCURSOR_SIZE,24
                                   env = QT_QPA_PLATFORM,wayland;xcb
                                   env = XDG_CURRENT_DESKTOP,Hyprland

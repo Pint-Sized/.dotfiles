@@ -10,7 +10,7 @@
 {
   stylix = {
     enable = true;
-    image = ../wallpapers/evening-sky.png;
+    image = ../../wallpapers/gruvbox/village.jpg;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-dark-soft.yaml";
     cursor = {
       name = "catppuccin-mocha-green-cursors";
