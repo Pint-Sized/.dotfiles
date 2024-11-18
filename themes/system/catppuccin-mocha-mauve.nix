@@ -6,7 +6,7 @@
     accent = "mauve";
     flavor = "mocha";
   };
-  displayManager.sddm.catppuccin = {
+  services.displayManager.sddm.catppuccin = {
     enable = true;
     background = "~/.dotfiles/wallpapers/gruvbox/village.jpg";
     flavor = "mocha";
@@ -37,5 +37,6 @@
       plymouth.enable = false;
       grub.enable = false;
     };
+    cursor.size = 16;
   };
 }
