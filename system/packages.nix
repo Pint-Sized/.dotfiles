@@ -45,7 +45,7 @@
       ulauncher
       nixd
       wev
-      rustdesk-flutter
+      #rustdesk-flutter
       ntfs3g
       chezmoi
       yarn
@@ -54,7 +54,7 @@
       mpc-cli
       fastfetch
       pokeget-rs
-      cava
+      #cava
       brightnessctl
       pavucontrol
       figlet
@@ -144,7 +144,7 @@
     ++
 
       (with pkgs-unstable; [
-        zed-editor
+        #zed-editor
         neovim-unwrapped
         home-manager
         wttrbar
