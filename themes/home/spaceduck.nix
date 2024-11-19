@@ -4,6 +4,7 @@
   pkgs,
   pkgs-unstable,
   lib,
+  catppuccin,
   ...
 }:
 
@@ -12,11 +13,11 @@
     enable = true;
     image = ../../wallpapers/evening-sky.png;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/spaceduck.yaml";
-    cursor = {
-      name = "catppuccin-mocha-mauve-cursors";
-      package = pkgs.catppuccin-cursors.mochaMauve;
-      size = 16;
-    };
+  cursor = {
+    name = "Bibata-Modern-Classic";
+    package =  pkgs.bibata-cursors;
+    size = 16;
+  };
     fonts = {
       serif = {
         package = pkgs.nerdfonts;
@@ -37,6 +38,7 @@
     targets = {
       hyprland.enable = false;
       waybar.enable = false;
+      hyprlock.enable = false;
     };
   };
   programs.nixvim.colorschemes.base16 = {

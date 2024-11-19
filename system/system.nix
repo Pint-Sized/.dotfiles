@@ -52,6 +52,9 @@
   };
 
   boot = {
+    plymouth = {
+      enable = true;
+    };
     loader = {
       timeout = 3;
       systemd-boot.enable = false;

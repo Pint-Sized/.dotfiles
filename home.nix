@@ -11,76 +11,73 @@
 {
   imports = [
     # ------- BAT ------- #
-    ./modules/bat.nix
+     ./modules/bat.nix
 
     # ------- BTOP ------- #
-    ./modules/btop.nix
+     ./modules/btop.nix
 
     # ------- FASTFETCH -------- #
-    ./modules/fastfetch/fastfetch.nix
+     ./modules/fastfetch/fastfetch.nix
 
     # ----------- FISH ------------- #
-    ./modules/fish.nix
+     ./modules/fish.nix
 
     # ------------ FZF ------------- # 
-    ./modules/fzf.nix
+     ./modules/fzf.nix
 
     # ---------- GIT --------------# 
-    ./modules/git.nix
+     ./modules/git.nix
 
     # ---------- GTK ------------- #
-    ./modules/gtk.nix
+     ./modules/gtk.nix
 
     # -------------- HOME-SETTINGS ------ #
-    ./modules/home-settings.nix
+     ./modules/home-settings.nix
 
     # ------------- HYPRLAND ---------- #
-    ./modules/hyprland.nix
+     ./modules/hyprland.nix
 
     # ------------ HYPRLOCK ---------- #
-    ./modules/hyprlock.nix
+     ./modules/hyprlock.nix
 
     # ---------- IMV ----------- #
-    ./modules/imv.nix
+     ./modules/imv.nix
 
     # ----------- KITTY  ------------- #
-    ./modules/kitty.nix
+     ./modules/kitty.nix
 
     # ------------ MPV ------------ #
-    ./modules/mpv.nix
-
-    # --------- NEOVIDE ------------ #
-    ./modules/neovide.nix
+     ./modules/mpv.nix
 
     # --------- NIXVIM --------- # 
-    ./modules/nixvim/nixvim.nix
+     ./modules/nixvim/nixvim.nix
 
     # ---------- OBS-STUDIO ------------ #
-    ./modules/obs-studio.nix
+     ./modules/obs-studio.nix
 
     # -------- PYPRLAND ------------- # 
-    ./modules/pyprland.nix
+     ./modules/pyprland.nix
 
     # ---------- QT ----------- #
-    ./modules/qt.nix
+     ./modules/qt.nix
 
     # ---------- SWAYNC ------------ #
-    ./modules/swaync.nix
+     ./modules/swaync.nix
 
     # ------- THEMES ----------- # 
-    ./home-theme-selector.nix
+     ./home-theme-selector.nix
 
     # ---------- WAYBAR ----------- #
-    ./modules/waybar.nix
+     ./modules/waybar.nix
 
     # -------- WLOGOUT -------- #
-    ./modules/wlogout.nix
+     ./modules/wlogout.nix
 
     # --------- YAZI ------------ #
-    ./modules/yazi.nix
+     ./modules/yazi.nix
 
     # --------- ZATHURA ---------- #
-    ./modules/zathura.nix
+     ./modules/zathura.nix
   ];
 
   programs.home-manager.enable = true; # allows home-manager to manage itself

@@ -94,7 +94,6 @@
       coreutils
       clang
       btop
-      onlyoffice-bin_latest
       loupe
       kdePackages.gwenview
       util-linux
@@ -234,6 +233,7 @@
       "com.valvesoftware.Steam"
       "io.github.flattool.Warehouse"
       "com.rtosta.zapzap"
+      "org.onlyoffice.desktopeditors"
     ];
   };
 
