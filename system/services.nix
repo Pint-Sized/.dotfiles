@@ -12,17 +12,15 @@
     xserver = {
       enable = true;
       videoDrivers = [ "nvidia" ];
-    };
-
-    displayManager = {
-      sddm = {
-        enable = true;
-        wayland.enable = true;
-        package = pkgs.kdePackages.sddm;
+      displayManager = {
+        gdm = {
+          enable = true;
+          wayland = true;
+          banner = ''
+            hello  
+          '';
+        };
       };
-    };
-
-    xserver = {
       libinput = {
         mouse = {
           accelProfile = "flat";

@@ -17,7 +17,7 @@
     ./modules/btop.nix
 
     # ------- FASTFETCH -------- #
-    ./modules/fastfetch.nix
+    ./modules/fastfetch/fastfetch.nix
 
     # ----------- FISH ------------- #
     ./modules/fish.nix

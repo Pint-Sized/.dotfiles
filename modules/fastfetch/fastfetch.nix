@@ -21,40 +21,40 @@
         { type = "title"; }
         "separator"
         {
-          key = " Distro      ";
+          key = " Distro        ";
           type = "os";
         }
         {
-          key = " Host        ";
+          key = " Host          ";
           type = "host";
         }
         {
-          key = " WM          ";
+          key = " WM            ";
           type = "wm";
         }
         {
-          key = " Locale      ";
+          key = " Locale        ";
           type = "locale";
         }
         {
-          key = " Terminal    ";
+          key = " Terminal      ";
           type = "terminal";
         }
         {
-          key = "󰈺 Shell       ";
+          key = "󰈺 Shell         ";
           type = "shell";
         }
         {
-          key = "Stylix Theme  ";
+          key = " Stylix Theme  ";
           type = "command";
           text = "~/.dotfiles/modules/fastfetch/theme";
         }
         {
-          key = "󱊣 Battery     ";
+          key = "󰁹 Battery       ";
           type = "battery";
         }
         {
-          key = "Media         ";
+          key = " Media         ";
           type = "media";
         }
         

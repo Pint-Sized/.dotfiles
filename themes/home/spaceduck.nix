@@ -49,7 +49,7 @@
   };
   
   home.file = {
-    ".dotfiles/fastfetch/theme" = {
+    ".dotfiles/modules/fastfetch/theme" = {
       executable = true;
       text = ''
         echo SpaceDuck
