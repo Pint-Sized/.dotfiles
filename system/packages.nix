@@ -16,6 +16,7 @@
       python312Packages.pint
       python312Packages.parsedatetime
       python312Packages.pytz
+      htop
       rclone
       feh
       teams-for-linux
@@ -115,6 +116,28 @@
       fishPlugins.done
       fishPlugins.sponge
       fishPlugins.puffer
+
+      # testing
+      newsboat
+      speedread
+      simplehttp2server
+      doing
+      neomutt
+      gh-screensaver
+      eza
+      tre
+      lsd
+      hub
+      cmatrix
+      pipes-rs
+      hyperfine
+      tokei
+      tldr
+      gitui
+      pueue
+      onefetch
+      bc
+      redshift
 
     ])
 

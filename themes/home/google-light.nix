@@ -47,7 +47,14 @@
   programs.fish.functions = {
     fish_greeting = "pokeget minccino --hide-name | fastfetch --file-raw -";
   };
-
+  home.file = {
+    ".dotfiles/modules/fastfetch/theme" = {
+      executable = true;
+      text = ''
+        echo "Google Light"
+      '';
+    };
+  };
   home.file = {
     ".config/hypr/theme.conf" = {
       enable = true;

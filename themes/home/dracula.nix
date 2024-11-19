@@ -44,7 +44,14 @@
   programs.fish.functions = {
     fish_greeting = "pokeget houndoom --hide-name | fastfetch --file-raw -";
   };
-
+  home.file = {
+    ".dotfiles/modules/fastfetch/theme" = {
+      executable = true;
+      text = ''
+        echo Dracula
+      '';
+    };
+  };
   home.file = {
     ".config/hypr/theme.conf" = {
       enable = true;

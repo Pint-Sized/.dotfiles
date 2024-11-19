@@ -44,7 +44,14 @@
   programs.fish.functions = {
     fish_greeting = "pokeget roselia --hide-name | fastfetch --file-raw -";
   };
-
+  home.file = {
+    ".dotfiles/modules/fastfetch/theme" = {
+      executable = true;
+      text = ''
+        echo "Gruvbox Material Dark Soft"
+      '';
+    };
+  };
   home.file = {
     ".config/hypr/theme.conf" = {
       enable = true;

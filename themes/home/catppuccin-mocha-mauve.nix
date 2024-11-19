@@ -57,7 +57,14 @@
   programs.fish.functions = {
     fish_greeting = "pokeget nidoran-m --hide-name | fastfetch --file-raw -";
   };
-
+  home.file = {
+    ".dotfiles/modules/fastfetch/theme" = {
+      executable = true;
+      text = ''
+        echo "Catppuccin Mocha Mauve"
+      '';
+    };
+  };
   programs.hyprlock.catppuccin = {
     enable = true;
     accent = "mauve";

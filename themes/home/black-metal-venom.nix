@@ -47,7 +47,16 @@
   programs.fish.functions = {
     fish_greeting = "pokeget duskull --hide-name | fastfetch --file-raw -";
   };
-
+ 
+ home.file = {
+    ".dotfiles/modules/fastfetch/theme" = {
+      executable = true;
+      text = ''
+        echo "Black Metal Venom"
+      '';
+    };
+ };
+  
   home.file = {
     ".config/hypr/theme.conf" = {
       enable = true;

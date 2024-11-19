@@ -50,7 +50,7 @@
           text = "~/.dotfiles/modules/fastfetch/theme";
         }
         {
-          key = "󰁹 Battery       ";
+          key = "󰂎 Battery       ";
           type = "battery";
         }
         {
