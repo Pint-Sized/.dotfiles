@@ -19,7 +19,6 @@
       htop
       rclone
       feh
-      teams-for-linux
       pyenv
       obs-studio
       pandoc
@@ -97,7 +96,6 @@
       loupe
       kdePackages.gwenview
       util-linux
-      ungoogled-chromium
       appeditor
       gparted
       kdePackages.qt6ct
@@ -232,8 +230,8 @@
       "io.gitlab.librewolf-community"
       "com.valvesoftware.Steam"
       "io.github.flattool.Warehouse"
-      "com.rtosta.zapzap"
       "org.onlyoffice.desktopeditors"
+      "org.chromium.Chromium"
     ];
   };
 

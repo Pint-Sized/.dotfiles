@@ -11,7 +11,7 @@
 
     xserver = {
       enable = true;
-      videoDrivers = [ "nvidia" ];
+      videoDrivers = [ "intel" ];
       displayManager = {
         gdm = {
           enable = true;
