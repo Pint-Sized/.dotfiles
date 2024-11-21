@@ -66,8 +66,8 @@
                                   ####################
                                   exec-once=[workspace 12 silent] spotify --enable-features=UseOzonePlatform --ozone-platform=wayland
                                   exec-once=[workspace 11 silent] thunderbird
-                                  exec-once=[workspace 10 silent] com.rtosta.zapzap                       
-                    		          exec-once=[workspace 9 silent] teams-for-linux --enable-features=UseOzonePlatform --ozone-platform=wayland 
+                                  exec-once=[workspace 10 silent]  flatpak 'run' '--command=/app/bin/chromium' 'org.chromium.Chromium' '--profile-directory=Default' '--app-id=hnpfjngllnobngcgfapefoaidbinmjnm'                      
+                    		          exec-once=[workspace 9 silent]  flatpak 'run' '--command=/app/bin/chromium' 'org.chromium.Chromium' '--profile-directory=Default' '--app-id=cifhbcnohmdccbgoicgdjpfamggdegmo'
                                   exec-once=[workspace 8 silent]  flatpak 'run' '--command=/app/bin/chromium' 'org.chromium.Chromium' '--profile-directory=Default' '--app-id=abdndmcckigaeepaljhpcngbfdkbiggb' 
                                   exec-once=[workspace 7 silent] imv ~/School/School-TimetableV2.png
 

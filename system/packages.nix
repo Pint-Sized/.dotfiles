@@ -31,6 +31,7 @@
       kdePackages.qt6ct
       lm_sensors
       remnote
+      nchat
       wineWowPackages.waylandFull
       openrazer-daemon
       polychromatic
