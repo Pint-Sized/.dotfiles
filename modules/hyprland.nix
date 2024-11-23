@@ -60,6 +60,7 @@
                         		      exec-once = ulauncher --no-window-shadow
                   				        exec-once = pypr
       					                  exec-once = pushd ~/.chevron; python3 -m http.server 9999; popd;
+                                  exec-once = ~/.dotfiles/scripts/auto-pull
                   				
                                   ####################
                                   ### START-UP APPS###
