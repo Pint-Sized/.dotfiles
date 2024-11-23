@@ -1,4 +1,13 @@
-{ inputs, config, pkgs, pkgs-unstalbe, lib, nix-flatpak, stylix, ... }:
+{
+  inputs,
+  config,
+  pkgs,
+  pkgs-unstalbe,
+  lib,
+  nix-flatpak,
+  stylix,
+  ...
+}:
 {
   stylix = {
     enable = true;

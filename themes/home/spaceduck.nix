@@ -13,11 +13,11 @@
     enable = true;
     image = ../../wallpapers/evening-sky.png;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/spaceduck.yaml";
-  cursor = {
-    name = "Bibata-Modern-Classic";
-    package =  pkgs.bibata-cursors;
-    size = 16;
-  };
+    cursor = {
+      name = "Bibata-Modern-Classic";
+      package = pkgs.bibata-cursors;
+      size = 16;
+    };
     fonts = {
       serif = {
         package = pkgs.nerdfonts;
@@ -49,7 +49,7 @@
   programs.fish.functions = {
     fish_greeting = "pokeget ducklett --hide-name | fastfetch --file-raw -";
   };
-  
+
   home.file = {
     ".dotfiles/modules/fastfetch/theme" = {
       executable = true;
