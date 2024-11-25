@@ -10,13 +10,11 @@
 {
   environment.systemPackages =
     (with pkgs; [
-      manix
       thunderbird
       python312Packages.simpleeval
       python312Packages.pint
       python312Packages.parsedatetime
       python312Packages.pytz
-      htop
       rclone
       feh
       pyenv
@@ -51,10 +49,8 @@
       readline
       sqlite
       zlib
-
       nixd
       wev
-      #rustdesk-flutter
       ntfs3g
       chezmoi
       yarn
@@ -63,7 +59,6 @@
       mpc-cli
       fastfetch
       pokeget-rs
-      #cava
       brightnessctl
       pavucontrol
       figlet
@@ -145,7 +140,6 @@
         wttrbar
         kitty
         base16-schemes
-
         # neovim plugins
         vimPlugins.telescope-nvim
         vimPlugins.telescope-file-browser-nvim
@@ -187,6 +181,7 @@
         vimPlugins.lspkind-nvim
         vimPlugins.lspkind-nvim
         vimPlugins.lspkind-nvim
+        
         black
         vscode-langservers-extracted
         lua-language-server
@@ -199,7 +194,6 @@
         ansible-language-server
         helm-ls
         yaml-language-server
-
         isort
         nixfmt-rfc-style
         alejandra
