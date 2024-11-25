@@ -61,6 +61,7 @@
               end
         '';
       };
+      gc = "git add *; git commit -m $argv; git push github main";
     };
   };
 }
