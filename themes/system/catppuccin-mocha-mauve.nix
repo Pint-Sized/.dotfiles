@@ -1,4 +1,14 @@
-{ inputs, config, pkgs, pkgs-unstable, lib, catppuccin, nix-flatpak, stylix, ... }:
+{
+  inputs,
+  config,
+  pkgs,
+  pkgs-unstable,
+  lib,
+  catppuccin,
+  nix-flatpak,
+  stylix,
+  ...
+}:
 
 {
   catppuccin = {
@@ -17,7 +27,7 @@
     enable = true;
     flavor = "mocha";
   };
-    
+
   boot.loader.grub.catppuccin = {
     enable = true;
     flavor = "mocha";

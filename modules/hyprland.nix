@@ -60,6 +60,7 @@
                         		      exec-once = ulauncher --no-window-shadow
                   				        exec-once = pypr
       					                  exec-once = pushd ~/.chevron; python3 -m http.server 9999; popd;
+                                  exec-once = ~/.dotfiles/scripts/auto-pull
                   				
                                   ####################
                                   ### START-UP APPS###
@@ -68,7 +69,7 @@
                                   exec-once=[workspace 11 silent] thunderbird
                                   exec-once=[workspace 10 silent]  flatpak 'run' '--command=/app/bin/chromium' 'org.chromium.Chromium' '--profile-directory=Default' '--app-id=hnpfjngllnobngcgfapefoaidbinmjnm'                      
                     		          exec-once=[workspace 9 silent]  flatpak 'run' '--command=/app/bin/chromium' 'org.chromium.Chromium' '--profile-directory=Default' '--app-id=cifhbcnohmdccbgoicgdjpfamggdegmo'
-                                  exec-once=[workspace 8 silent]  flatpak 'run' '--command=/app/bin/chromium' 'org.chromium.Chromium' '--profile-directory=Default' '--app-id=abdndmcckigaeepaljhpcngbfdkbiggb' 
+                                  exec-once=[workspace 8 silent]  flatpak 'run' '--command=/app/bin/chromium' 'org.chromium.Chromium' '--profile-directory=Default' '--app-id=abdndmcckigaeepaljhpcngbfdkbiggb'
                                   exec-once=[workspace 7 silent] imv ~/School/School-TimetableV2.png
 
                                   ##############

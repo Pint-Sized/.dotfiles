@@ -31,7 +31,6 @@
       kdePackages.qt6ct
       lm_sensors
       remnote
-      nchat
       wineWowPackages.waylandFull
       openrazer-daemon
       polychromatic
@@ -43,6 +42,16 @@
       go
       xdg-utils
       ulauncher
+      ccache
+      file
+      gperf
+      python312Packages.help2man
+      ncurses
+      openssl
+      readline
+      sqlite
+      zlib
+
       nixd
       wev
       #rustdesk-flutter
@@ -85,6 +94,8 @@
       unzip
       zip
       cmake
+      rubyPackages_3_3.sqlite3
+      sqlite-interactive
       tk
       lxqt.lxqt-policykit
       ripgrep
@@ -116,26 +127,12 @@
       fishPlugins.puffer
 
       # testing
-      newsboat
       speedread
-      simplehttp2server
-      doing
       neomutt
-      gh-screensaver
-      eza
-      tre
-      lsd
-      hub
-      cmatrix
-      pipes-rs
-      hyperfine
       tokei
       tldr
-      gitui
       pueue
       onefetch
-      bc
-      redshift
 
     ])
 
@@ -214,6 +211,7 @@
         shellharden
         bicep
         yamlfmt
+        nchat
       ]);
 
   services.flatpak = {

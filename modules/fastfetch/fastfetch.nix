@@ -57,7 +57,7 @@
           key = " Media         ";
           type = "media";
         }
-        
+
         "break"
         {
           type = "colors";
