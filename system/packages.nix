@@ -134,7 +134,6 @@
     ++
 
       (with pkgs-unstable; [
-        #zed-editor
         neovim-unwrapped
         home-manager
         wttrbar
@@ -206,6 +205,7 @@
         bicep
         yamlfmt
         nchat
+        zed-editor
       ]);
 
   services.flatpak = {
