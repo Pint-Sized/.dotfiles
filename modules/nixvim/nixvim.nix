@@ -11,7 +11,6 @@
   programs.nixvim = {
     enable = true;
   };
-
   imports = [
     ./auto_cmds.nix
     ./file_types.nix
