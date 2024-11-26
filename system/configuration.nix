@@ -15,7 +15,7 @@
     ./packages.nix
     ./services.nix
     ./system.nix
-    ./wifi.nix
+    ./networking.nix
     ./power.nix
     ../system-theme-selector.nix
   ];

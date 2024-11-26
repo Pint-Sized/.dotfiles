@@ -32,9 +32,9 @@
       c = "clear";
       n = "nvim $argv";
       z = "zeditor $argv; exit";
-      nr = "sudo nixos-rebuild switch --flake ~/.dotfiles";
+      nr = "sudo cp /etc/nixos/hardware-configuration.nix ~/.dotfiles/system/;sudo nixos-rebuild switch --flake ~/.dotfiles";
       hr = "home-manager switch --flake ~/.dotfiles;hyprctl reload;";
-      fr = "sudo nix flake update --flake ~/.dotfiles; sudo nixos-rebuild switch --flake ~/.dotfiles; home-manager switch --flake ~/.dotfiles;";
+      fr = "sudo cp /etc/nixos/hardware-configuration.nix ~/.dotfiles/system/;sudo nix flake update --flake ~/.dotfiles; sudo nixos-rebuild switch --flake ~/.dotfiles; home-manager switch --flake ~/.dotfiles;";
       y = {
         description = "Yazi changes directory on exit";
         body = ''

@@ -6,7 +6,6 @@
   catppuccin,
   ...
 }:
-
 {
   users.users.fionnbennett = {
     shell = pkgs.fish;
@@ -28,13 +27,12 @@
     };
     sessionVariables = {
       WLR_NO_HARDWARE_CURSORS = "1";
-      # NIX_OZONE = "1";
+      NIX_OZONE = "1";
       NIX_OZONE_WL = "1";
       MOZ_ENABLE_WAYLAND = "1";
       STEAM_EXTRA_COMPAT_TOOLS_PATHS = "/home/user/.steam/root/compatibilitytoold.d";
     };
   };
-
   fonts.packages = with pkgs; [
     (nerdfonts.override {
       fonts = [
@@ -50,7 +48,6 @@
       monospace = [ "0xProto Nerd Font" ];
     };
   };
-
   boot = {
     plymouth = {
       enable = true;
@@ -68,11 +65,9 @@
       };
     };
   };
-
   time = {
     timeZone = "Europe/Dublin";
   };
-
   i18n = {
     defaultLocale = "en_IE.UTF-8";
     extraLocaleSettings = {
@@ -93,9 +88,7 @@
 
     };
   };
-
   console.keyMap = "us";
-
   nix = {
     settings = {
       experimental-features = [
@@ -104,31 +97,17 @@
       ];
     };
   };
-
-  nixpkgs = {
-    config = {
-      allowUnfree = true;
-      allowUnsupportedSystem = true;
-    };
-  };
-
   xdg = {
     portal = {
       enable = true;
       extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
     };
   };
-
   virtualisation = {
     libvirtd = {
       enable = true;
     };
   };
-
-  networking = {
-    hostName = "sisyphus";
-  };
-
   security = {
     rtkit = {
       enable = true;
