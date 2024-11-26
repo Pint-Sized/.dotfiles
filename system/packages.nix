@@ -182,6 +182,7 @@
         vimPlugins.lspkind-nvim
         
         black
+        mailspring
         vscode-langservers-extracted
         lua-language-server
         nil
