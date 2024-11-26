@@ -207,6 +207,7 @@
         yamlfmt
         nchat
         zed-editor
+        nushell
       ]);
 
   services.flatpak = {

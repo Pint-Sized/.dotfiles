@@ -15,10 +15,10 @@
     #./themes/system/phd.nix
     #./themes/system/pinky.nix
     #./themes/system/snazzy.nix
-     ./themes/system/rose-pine.nix
+    #./themes/system/rose-pine.nix
     #./themes/system/spaceduck.nix
     #./themes/system/tokyo-night-moon.nix
-    #./themes/system/uwunicorn.nix
+     ./themes/system/uwunicorn.nix
     #./themes/system/xcode-dusk.nix
   ];
 }

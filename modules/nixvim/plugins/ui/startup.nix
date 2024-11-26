@@ -63,17 +63,17 @@
           ]
           [
             " File Browser"
-            "Telescope file_browser"
+            "Yazi"
             "fe"
           ]
           [
-            " Copilot Chat"
-            "CopilotChat"
+            " Keybinds"
+            "Telescope keymaps"
             "ct"
           ]
           [
-            "󰧑 SecondBrain"
-            "edit ~/projects/personal/SecondBrain"
+            " Neotree"
+            "Neotree"
             "sb"
           ]
         ];
