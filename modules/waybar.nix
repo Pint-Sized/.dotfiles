@@ -198,7 +198,7 @@
           "format-linked" = "󰈀 {ifname} (No IP)";
           "format-disconnected" = "";
           "tooltip-format-disconnected" = "Disconnected";
-          "on-click" = "kitty nvim ~/.dotfiles/system/wifi.nix";
+          "on-click" = "kitty nvim ~/.dotfiles/system/networking.nix";
           "interval" = 2;
         };
         "memory" = {

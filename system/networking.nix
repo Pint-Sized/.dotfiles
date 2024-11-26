@@ -9,7 +9,7 @@
 
   # ----------- WIFI ---------- # 
   networking = {
-    hostname = "sisyphus";
+    hostName = "sisyphus";
     wireless = {
       enable = true;
       # networks.<"SSID">.psk = <"password">;
