@@ -17,13 +17,16 @@
       pkgs.hyprlandPlugins.borders-plus-plus
     ];
     extraConfig = ''
+
 source=~/.config/hypr/theme.conf
+
 ################
 ### MONITORS ###
 ################
 
 monitor = DP-1, 1920x1080@240,0x0,1
 monitor = eDP-1, 1920x1080,0x0,1
+
 
 ###################
 ### MY PROGRAMS ###
@@ -32,6 +35,7 @@ monitor = eDP-1, 1920x1080,0x0,1
 $terminal = kitty                            
 $fileManager = nautilus
 $browser = io.gitlab.librewolf-community
+
 
 #################
 ### AUTOSTART ###
@@ -50,6 +54,7 @@ exec-once = pypr
 exec-once = pushd ~/.chevron; python3 -m http.server 9999; popd;
 exec-once = ~/.dotfiles/scripts/auto-pull			                                  
 
+
 ####################
 ### START-UP APPS###
 ####################
@@ -61,6 +66,7 @@ exec-once=[workspace 9 silent]  flatpak 'run' '--command=/app/bin/chromium' 'org
 exec-once=[workspace 8 silent]  flatpak 'run' '--command=/app/bin/chromium' 'org.chromium.Chromium' '--profile-directory=Default' '--app-id=abdndmcckigaeepaljhpcngbfdkbiggb'
 exec-once=[workspace 7 silent] imv ~/School/School-TimetableV2.png
 
+
 ##############
 ### CURSOR ###
 ##############
@@ -69,6 +75,7 @@ cursor {
   no_hardware_cursors = true
   no_warps = true
 }
+
 
 #############################
 ### ENVIRONMENT VARIABLES ###
@@ -86,6 +93,7 @@ env = GBM_BACKEND,nvidia-drm
 env = __GLX_VENDOR_LIBRARY_NAME,nvidia
 env = NVD_BACKEND,direct
 
+
 ################
 ### XWAYLAND ###
 ################
@@ -93,6 +101,7 @@ env = NVD_BACKEND,direct
 xwayland {
   force_zero_scaling = false
 }
+
 
 ###############
 ### PLUGINS ###
@@ -186,6 +195,7 @@ misc {
   font_family = "0xProto Nerd Font"
 }
 
+
 #############
 ### INPUT ###
 #############
@@ -209,28 +219,39 @@ gestures {
   workspace_swipe = false
 }
 
+
 ####################
 ### KEYBINDINGSS ###
 ####################
 
-$mainMod = SUPER # Sets "Windows" key as main modifier
+$mainMod = SUPER 
 
 bind = $mainMod, Q, exec, $terminal
 bind = $mainMod, C, killactive
 bind = $mainMod, E, exec, $fileManager
 bind = $mainMod, V, togglefloating,
-bind = $mainMod, R, exec, $menu
 bind = $mainMod, J, togglesplit, # dwindle
 bind = $mainMod, W, exec, $browser
 bind = $mainMod, X, fullscreen, 0
 
-# Move focus with mainMod + arrow keys
 bind = $mainMod, left, movefocus, l
 bind = $mainMod, right, movefocus, r
 bind = $mainMod, up, movefocus, u
 bind = $mainMod, down, movefocus, d
 
-# Switch workspaces with mainMod + [0-9]
+bind = $mainMod SHIFT, left, swapwindow, l
+bind = $mainMod SHIFT, right, swapwindow, r
+bind = $mainMod SHIFT, up, swapwindow, u
+bind = $mainMod SHIFT, down, swapwindow, d
+
+binde = $mainMod ctrl, left, resizeactive, -10 0
+binde = $mainMod ctrl, right, resizeactive, 10 0
+binde = $mainMod ctrl, up, resizeactive, 0 -10
+binde = $mainMod ctrl, down, resizeactive, 0 10
+
+bindm = $mainMod, mouse:272, movewindow
+bindm = $mainMod, mouse:273, resizewindow
+
 bind = $mainMod, 1, workspace, 1
 bind = $mainMod, 2, workspace, 2
 bind = $mainMod, 3, workspace, 3
@@ -244,7 +265,6 @@ bind = $mainMod, 0, workspace, 10
 bind = $mainMod, code:20, workspace, 11
 bind = $mainMod, code:21, workspace, 12
 
-# Move active window to a workspace with mainMod + SHIFT + [0-9]
 bind = $mainMod SHIFT, 1, movetoworkspace, 1
 bind = $mainMod SHIFT, 2, movetoworkspace, 2
 bind = $mainMod SHIFT, 3, movetoworkspace, 3
@@ -258,39 +278,22 @@ bind = $mainMod SHIFT, 0, movetoworkspace, 10
 bind = $mainMod SHIFT, code:20, movetoworkspace, 11
 bind = $mainMod SHIFT, code:21, movetoworkspace, 12
 
-# Example special workspace (scratchpad)
 bind = $mainMod, S, togglespecialworkspace, magic
 bind = $mainMod SHIFT, S, movetoworkspace, special:magic
 
-# Scroll through existing workspaces with mainMod + scroll
-bind = $mainMod, mouse_down, workspace, e+1
-bind = $mainMod, mouse_up, workspace, e-1
-
-# Move/resize windows with mainMod + LMB/RMB and dragging
-bindm = $mainMod, mouse:272, movewindow
-bindm = $mainMod, mouse:273, resizewindow
-
-# special
 bindr = $mainMod, N, exec, ulauncher-toggle
 bind = $mainMod, B, exec, swaync-client -t
-# bind = $mainMod, O, exec, pkill waybar; waybar
 bindr = $mainMod, L, exec, pkill wlogout || wlogout
-bindr = $mainMod, P, exec, pkill waypaper || waypaper
+bind = $mainMod, P, exec, waypaper
 bindr = $mainMod, I, exec, [float; move 72.5% 5%] pkill pavucontrol || pavucontrol
 # bind = , v, pass, ^discord$
-bind = $mainMod ctrl, right, resizeactive, 10 0
-bind = $mainMod ctrl, left, resizeactive, -10 0
-bind = $mainMod ctrl, up, resizeactive, 0 -10
-bind = $mainMod ctrl, down, resizeactive, 0 10
-bind = $mainMod SHIFT, right, swapwindow, r
-bind = $mainMod SHIFT, left, swapwindow, l
-bind = $mainMod SHIFT, up, swapwindow, u
-bind = $mainMod SHIFT, down, swapwindow, d
 bind = $mainMod, O, exec, remnote --enable-features=UseOzonePlatform --ozone-platform=wayland
-bind = $mainMod, R, exec, emacs --enable-features=UseOzonePlatform --ozone-platform-wayland
+
+
 ##############################
 ### WINDOWS AND WORKSPACES ###
 ##############################
+
 windowrule = float, ^(pavucontrol)$
 windowrulev2 = suppressevent maximize, class:.* # You'll probably like this.
 

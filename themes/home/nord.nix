@@ -93,7 +93,7 @@
         @define-color base09 #D08770;
         @define-color base0A #EBCB8B;
         @define-color base0B #A3BE8C;
-        @define-color base0C #88C0D0;
+        @define-color base0C #D8DEE9;
         @define-color base0D #81A1C1;
         @define-color base0E #B48EAD;
         @define-color base0F #5E81AC;
