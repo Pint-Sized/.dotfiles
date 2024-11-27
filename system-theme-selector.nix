@@ -10,8 +10,8 @@
     #./themes/system/greenscreen.nix
     #./themes/system/gruvbox-material-dark-soft.nix
     #./themes/system/horizon-terminal-dark.nix
-     ./themes/system/nord.nix
-    #./themes/system/pasque.nix
+    #./themes/system/nord.nix
+     ./themes/system/pasque.nix
     #./themes/system/phd.nix
     #./themes/system/pinky.nix
     #./themes/system/snazzy.nix

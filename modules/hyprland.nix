@@ -289,14 +289,26 @@ bindr = $mainMod, I, exec, [float; move 72.5% 5%] pkill pavucontrol || pavucontr
 # bind = , v, pass, ^discord$
 bind = $mainMod, O, exec, remnote --enable-features=UseOzonePlatform --ozone-platform=wayland
 
+bind = $mainMod, T, exec, kitty nvim ~/.dotfiles/home-theme-selector.nix; kitty nvim ~/.dotfiles/system-theme-selector.nix; kitty sudo nixos-rebuild switch --flake ~/.dotfiles/; kitty home-manager switch --flake ~/.dotfiles; hyprctl reload; pkill waybar; waybar &
+
+bind =, XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+binde =, XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
+binde =, XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
+bind =, XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
+binde =, XF86MonBrightnessDown, exec, brightnessctl set 5%-
+binde =, XF86MonBrightnessUp, exec, brightnessctl set +5%
+bind =, XF86Display, exec, kitty nvim ~/.dotfiles/home-theme-selector.nix; kitty nvim ~/.dotfiles/system-theme-selector.nix; kitty sudo nixos-rebuild switch --flake ~/.dotfiles; kitty home-manager switch --flake ~/.dotfiles
+bind =, XF86WLAN, exec, kitty nvim ~/.dotfiles/system/networking.nix; kitty sudo nixos-rebuild switch --flake ~/.dotfiles/
+bind =, XF86Tools, exec, kitty nvim ~/.dotfiles/
+bind =, XF86Bluetooth, exec, blueman-manager
+bind =, XF86Keyboard, exec, polychromatic-controller
+bind =, XF86Favorites, exec, kitty nvim ~/.dotfiles/system/packages.nix; kitty sudo nixos-rebuild switch --flake ~/.dotfiles/
 
 ##############################
 ### WINDOWS AND WORKSPACES ###
 ##############################
 
-windowrule = float, ^(pavucontrol)$
-windowrulev2 = suppressevent maximize, class:.* # You'll probably like this.
-
+windowrulev2 = suppressevent maximize, class:.* 
     '';
   };
 }
