@@ -37,6 +37,7 @@
     targets = {
       hyprland.enable = false;
       waybar.enable = false;
+      hyprlock.enable = false;
     };
   };
   programs.nixvim.colorschemes.nord.enable = true;
