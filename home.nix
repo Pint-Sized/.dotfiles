@@ -10,9 +10,6 @@
 
 {
   imports = [
-    # ----- AVIZO ----- # 
-    ./modules/avizo.nix
-
     # ------- BAT ------- #
     ./modules/bat.nix
 
@@ -72,6 +69,8 @@
 
     # ---------- WAYBAR ----------- #
     ./modules/waybar.nix
+    # --------- WOB ---------- #
+    ./modules/wob.nix
 
     # -------- WLOGOUT -------- #
     ./modules/wlogout.nix

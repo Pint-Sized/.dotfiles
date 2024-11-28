@@ -18,6 +18,7 @@
       rclone
       feh
       pyenv
+      wob
       pandoc
       celluloid
       which
