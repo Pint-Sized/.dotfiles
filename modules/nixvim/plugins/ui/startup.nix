@@ -67,13 +67,13 @@
             "fe"
           ]
           [
-            " Keybinds"
-            "Telescope keymaps"
+            "󱁿 Dotfiles"
+            "Neotree ~/.dotfiles/ reveal"
             "ct"
           ]
           [
-            " Neotree"
-            "Neotree"
+            " Settings"
+            "Neotree ~/.dotfiles/modules/nixvim/ reveal"
             "sb"
           ]
         ];

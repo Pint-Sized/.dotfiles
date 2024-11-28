@@ -285,7 +285,7 @@ bindr = $mainMod, N, exec, ulauncher-toggle
 bind = $mainMod, B, exec, swaync-client -t
 bindr = $mainMod, L, exec, pkill wlogout || wlogout
 bind = $mainMod, P, exec, waypaper
-bindr = $mainMod, I, exec, [float; move 72.5% 5%] pkill pavucontrol || pavucontrol
+bind = $mainMod, I, exec, kitty nvim
 # bind = , v, pass, ^discord$
 bind = $mainMod, O, exec, remnote --enable-features=UseOzonePlatform --ozone-platform=wayland
 

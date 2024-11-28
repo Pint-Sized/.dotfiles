@@ -72,15 +72,11 @@
       wget
       waybar
       libnotify
-      hyprpaper
-      vscode
       protonup
-      hyprlock
       xdg-desktop-portal-hyprland
       gnome.nautilus
       wdisplays
       monitor
-      lutris
       swww
       liquidctl
       deluge
@@ -101,7 +97,6 @@
       clang
       btop
       loupe
-      kdePackages.gwenview
       util-linux
       appeditor
       gparted
@@ -223,7 +218,6 @@
     packages = [
       "com.github.tchx84.Flatseal"
       "io.gitlab.librewolf-community"
-      "com.valvesoftware.Steam"
       "io.github.flattool.Warehouse"
       "org.onlyoffice.desktopeditors"
       "org.chromium.Chromium"
@@ -243,20 +237,6 @@
       };
     };
 
-    gamescope = {
-      enable = true;
-
-    };
-
-    steam = {
-      enable = true;
-      gamescopeSession.enable = true;
-    };
-
-    gamemode = {
-      enable = true;
-    };
-
     fish = {
       enable = true;
     };
@@ -271,10 +251,9 @@
         enableSSHSupport = true;
       };
     };
-    tmux = {
-      enable = true;
-    };
   };
+  
+  # ------ NIXPKGS SETTINGS ------ #
   nixpkgs = {
     config = {
       allowUnfree = true;

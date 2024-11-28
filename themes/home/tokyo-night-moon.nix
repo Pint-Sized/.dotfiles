@@ -11,7 +11,7 @@
   stylix = {
     enable = true;
     image = ../../wallpapers/evening-sky.png;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-moon.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-dark.yaml";
     cursor = {
       name = "catppuccin-mocha-mauve-cursors";
       package = pkgs.catppuccin-cursors.mochaMauve;
@@ -42,7 +42,7 @@
   };
   programs.nixvim.colorschemes.base16 = {
     enable = true;
-    colorscheme = "tokyo-night-terminal-dark";
+    colorscheme = "tokyo-night-dark";
   };
 
   programs.fish.functions = {
@@ -52,7 +52,7 @@
     ".dotfiles/modules/fastfetch/theme" = {
       executable = true;
       text = ''
-        echo "Tokyo Night Moon"
+        echo "Tokyo Night Dark"
       '';
     };
   };
