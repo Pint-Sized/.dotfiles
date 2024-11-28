@@ -120,6 +120,7 @@
       tldr
       pueue
       onefetch
+      avizo
 
     ])
 
@@ -217,6 +218,7 @@
       "io.github.flattool.Warehouse"
       "org.onlyoffice.desktopeditors"
       "org.chromium.Chromium"
+     #"io.github.zen_browser.zen"
     ];
   };
 

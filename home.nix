@@ -10,6 +10,9 @@
 
 {
   imports = [
+    # ----- AVIZO ----- # 
+    ./modules/avizo.nix
+
     # ------- BAT ------- #
     ./modules/bat.nix
 
