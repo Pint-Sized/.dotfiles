@@ -18,7 +18,6 @@
       rclone
       feh
       pyenv
-      obs-studio
       pandoc
       celluloid
       which
@@ -29,13 +28,11 @@
       kdePackages.qt6ct
       lm_sensors
       remnote
-      wineWowPackages.waylandFull
       openrazer-daemon
       polychromatic
       fzf
       python3
       wl-clipboard
-      pyprland
       cliphist
       go
       xdg-utils
@@ -52,7 +49,6 @@
       nixd
       wev
       ntfs3g
-      chezmoi
       yarn
       volctl
       waypaper
@@ -110,6 +106,7 @@
       yazi
       evince
       discord
+      
       # fish plugins
       fishPlugins.autopair
       fishPlugins.done
@@ -134,6 +131,7 @@
         wttrbar
         kitty
         base16-schemes
+        
         # neovim plugins
         vimPlugins.telescope-nvim
         vimPlugins.telescope-file-browser-nvim
@@ -177,7 +175,6 @@
         vimPlugins.lspkind-nvim
         
         black
-        mailspring
         vscode-langservers-extracted
         lua-language-server
         nil
@@ -200,7 +197,6 @@
         shellharden
         bicep
         yamlfmt
-        nchat
         zed-editor
         nushell
       ]);
