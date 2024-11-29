@@ -61,9 +61,9 @@ exec-once = ~/.dotfiles/scripts/auto-pull
 
 exec-once=[workspace 12 silent] spotify --enable-features=UseOzonePlatform --ozone-platform=wayland
 exec-once=[workspace 11 silent] thunderbird
-exec-once=[workspace 10 silent]  flatpak 'run' '--command=/app/bin/chromium' 'org.chromium.Chromium' '--profile-directory=Default' '--app-id=hnpfjngllnobngcgfapefoaidbinmjnm'                      
-exec-once=[workspace 9 silent]  flatpak 'run' '--command=/app/bin/chromium' 'org.chromium.Chromium' '--profile-directory=Default' '--app-id=cifhbcnohmdccbgoicgdjpfamggdegmo'
-exec-once=[workspace 8 silent]  flatpak 'run' '--command=/app/bin/chromium' 'org.chromium.Chromium' '--profile-directory=Default' '--app-id=abdndmcckigaeepaljhpcngbfdkbiggb'
+exec-once=[workspace 10 silent] firefoxpwa site launch 01JDVV366HVCE7Q22V5BMN7RZQ # teams
+exec-once=[workspace 9 silent] firefoxpwa site launch 01JDVR0KM0JNNSQX68CQCPKH8N # whatsapp
+exec-once=[workspace 8 silent] firefoxpwa site launch 01JDVTWK3HJE4AYJWMB1TD01JM # snapchat
 exec-once=[workspace 7 silent] imv ~/School/School-TimetableV2.png
 
 

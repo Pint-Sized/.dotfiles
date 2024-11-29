@@ -18,7 +18,6 @@
       rclone
       feh
       firefox
-      firefoxpwa
       pyenv
       wob
       pandoc
@@ -179,6 +178,7 @@
         vimPlugins.lspkind-nvim
         
         black
+        firefoxpwa
         vscode-langservers-extracted
         lua-language-server
         nil
@@ -217,11 +217,8 @@
     uninstallUnmanaged = true;
     packages = [
       "com.github.tchx84.Flatseal"
-      "io.gitlab.librewolf-community"
       "io.github.flattool.Warehouse"
       "org.onlyoffice.desktopeditors"
-      "org.chromium.Chromium"
-     #"io.github.zen_browser.zen"
     ];
   };
 
