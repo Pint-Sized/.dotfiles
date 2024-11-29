@@ -17,6 +17,8 @@
       python312Packages.pytz
       rclone
       feh
+      firefox
+      firefoxpwa
       pyenv
       wob
       pandoc
