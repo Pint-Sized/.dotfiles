@@ -13,8 +13,8 @@
     image = ../../wallpapers/evening-sky.png;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/rose-pine.yaml";
     cursor = {
-      name = "catppuccin-mocha-mauve-cursors";
-      package = pkgs.catppuccin-cursors.mochaMauve;
+      name = "Bibata-Modern-Classic";
+      package = pkgs.bibata-cursors;
       size = 16;
     };
     fonts = {

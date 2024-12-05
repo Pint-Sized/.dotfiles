@@ -17,8 +17,6 @@
       python312Packages.pytz
       rclone
       feh
-      firefox
-      pyenv
       wob
       pandoc
       celluloid
@@ -89,6 +87,7 @@
       lxqt.lxqt-policykit
       ripgrep
       fd
+      librewolf
       usbutils
       udisks
       coreutils
@@ -106,8 +105,9 @@
       gnumake
       libgcc
       yazi
-      evince
       discord
+      tldr
+      onefetch
       
       # fish plugins
       fishPlugins.autopair
@@ -117,12 +117,6 @@
 
       # testing
       speedread
-      neomutt
-      tokei
-      tldr
-      pueue
-      onefetch
-      avizo
 
     ])
 
@@ -178,7 +172,6 @@
         vimPlugins.lspkind-nvim
         
         black
-        firefoxpwa
         vscode-langservers-extracted
         lua-language-server
         nil
@@ -202,7 +195,6 @@
         bicep
         yamlfmt
         zed-editor
-        nushell
       ]);
 
   services.flatpak = {

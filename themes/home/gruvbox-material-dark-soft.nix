@@ -13,8 +13,8 @@
     image = ../../wallpapers/gruvbox/village.jpg;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-dark-soft.yaml";
     cursor = {
-      name = "catppuccin-mocha-green-cursors";
-      package = pkgs.catppuccin-cursors.mochaGreen;
+      name = "Bibata-Modern-Classic";
+      package = pkgs.bibata-cursors;
       size = 16;
     };
     fonts = {

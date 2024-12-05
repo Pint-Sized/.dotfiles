@@ -11,7 +11,7 @@
   stylix = {
     enable = true;
     image = ../../wallpapers/evening-sky.png;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/uwunicorn.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/google-dark.yaml";
     cursor = {
       name = "catppuccin-mocha-mauve-cursors";
       package = pkgs.catppuccin-cursors.mochaMauve;
@@ -42,11 +42,11 @@
   };
   programs.nixvim.colorschemes.base16 = {
     enable = true;
-    colorscheme = "uwunicorn";
+    colorscheme = "google-dark";
   };
 
   programs.fish.functions = {
-    fish_greeting = "pokeget purrloin --hide-name | fastfetch --file-raw -";
+    fish_greeting = "pokeget pichu --hide-name | fastfetch --file-raw -";
   };
   home.file = {
     ".dotfiles/modules/fastfetch/theme" = {
@@ -73,8 +73,8 @@
         $base0A = rgb(FBA922)
         $base0B = rgb(198844)
         $base0C = rgb(3971ED)
-        $base0D = rgb(3971ED)
-        $base0E = rgb(A36AC7)
+        $base0D = rgb(A36AC7)
+        $base0E = rgb(3971ED)
         $base0F = rbg(3971ED)
       '';
     };

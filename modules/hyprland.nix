@@ -34,7 +34,7 @@ monitor = eDP-1, 1920x1080,0x0,1
 
 $terminal = kitty                            
 $fileManager = nautilus
-$browser = io.gitlab.librewolf-community
+$browser = librewolf
 
 
 #################
