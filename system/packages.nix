@@ -195,6 +195,7 @@
         bicep
         yamlfmt
         zed-editor
+        vscodium
       ]);
 
   services.flatpak = {

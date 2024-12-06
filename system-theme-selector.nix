@@ -2,7 +2,7 @@
   imports = [
     #./themes/system/3024.nix
     #./themes/system/black-metal-venom.nix
-    #./themes/system/catppuccin-mocha-mauve.nix
+     ./themes/system/catppuccin-mocha-mauve.nix
     #./themes/system/dracula.nix
     #./themes/system/eighties.nix
     #./themes/system/google-dark.nix
@@ -10,12 +10,12 @@
     #./themes/system/greenscreen.nix
     #./themes/system/gruvbox-material-dark-soft.nix
     #./themes/system/horizon-terminal-dark.nix
-     ./themes/system/nord.nix
+    #./themes/system/nord.nix
     #./themes/system/pasque.nix
     #./themes/system/phd.nix
     #./themes/system/pinky.nix
-    #./themes/system/snazzy.nix
     #./themes/system/rose-pine.nix
+    #./themes/system/snazzy.nix
     #./themes/system/spaceduck.nix
     #./themes/system/tokyo-night-moon.nix
     #./themes/system/uwunicorn.nix
