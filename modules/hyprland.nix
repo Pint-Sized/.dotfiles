@@ -303,6 +303,7 @@ bind =, XF86Tools, exec, kitty nvim ~/.dotfiles/
 bind =, XF86Bluetooth, exec, blueman-manager
 bind =, XF86Keyboard, exec, polychromatic-controller
 bind =, XF86Favorites, exec, kitty nvim ~/.dotfiles/system/packages.nix; kitty sudo nixos-rebuild switch --flake ~/.dotfiles/
+bind = $mainMod, R, exec, pkill waybar; waybar; pkill .ulauncher-wrap; ulauncher --no-window-shadow; hyprctl reload
 
 ##############################
 ### WINDOWS AND WORKSPACES ###
