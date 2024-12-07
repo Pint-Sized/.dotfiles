@@ -108,6 +108,11 @@
       discord
       tldr
       onefetch
+      carbon-now-cli
+      nodePackages_latest.fkill-cli
+      undollar
+      wego
+      has
       
       # fish plugins
       fishPlugins.autopair
@@ -212,14 +217,11 @@
       "com.github.tchx84.Flatseal"
       "io.github.flattool.Warehouse"
       "org.onlyoffice.desktopeditors"
+      "com.google.Chrome"
     ];
   };
 
   programs = {
-
-    virt-manager = {
-      enable = true;
-    };
 
     hyprland = {
       enable = true;
