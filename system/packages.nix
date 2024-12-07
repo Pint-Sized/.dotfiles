@@ -113,6 +113,7 @@
       undollar
       wego
       has
+      libreoffice-qt6-fresh
       
       # fish plugins
       fishPlugins.autopair
