@@ -293,7 +293,7 @@ bind = $mainMod, I, exec, kitty nvim
 # bind = , v, pass, ^discord$
 bind = $mainMod, O, exec, remnote --enable-features=UseOzonePlatform --ozone-platform=wayland
 
-bind = $mainMod, T, exec, kitty nvim ~/.dotfiles/home-theme-selector.nix; kitty nvim ~/.dotfiles/system-theme-selector.nix; kitty sudo nixos-rebuild switch --flake ~/.dotfiles/; kitty home-manager switch --flake ~/.dotfiles; hyprctl reload; pkill waybar; waybar &
+bind = $mainMod, T, exec, kitty ~/.dotfiles/scripts/theme-switcher
 
 bind =, XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
 binde =, XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
