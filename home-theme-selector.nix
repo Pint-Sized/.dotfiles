@@ -1,19 +1,9 @@
 {
-  catppuccin,
-  lib,
-  config,
-  pkgs,
-  nixvim,
-  stylix,
-  ...
-}:
-
-{
   imports = [
     #./themes/home/3024.nix # dusky oranges
     #./themes/home/black-metal-venom.nix # blacked out
-     ./themes/home/catppuccin-mocha-mauve.nix # the goat
-    #./themes/home/dracula.nix # classic
+    #./themes/home/catppuccin-mocha-mauve.nix # the goat
+     ./themes/home/dracula.nix # classic
     #./themes/home/eighties.nix # classy greys
     #./themes/home/google-dark.nix
     #./themes/home/google-light.nix # light mode with accents

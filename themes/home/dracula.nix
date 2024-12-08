@@ -43,7 +43,7 @@
   programs.nixvim.colorschemes.dracula-nvim.enable = true;
 
   programs.fish.functions = {
-    fish_greeting = "pokeget houndoom --hide-name | fastfetch --file-raw -";
+    fish_greeting = "pokeget noibat --hide-name | fastfetch --file-raw -";
   };
   home.file = {
     ".dotfiles/modules/fastfetch/theme" = {
@@ -71,8 +71,8 @@
         $base0B = rgb(50fa7b)
         $base0C = rgb(8be9fd)
         $base0D = rgb(80bfff)
-        $base0E = rgb(ff79c6)
-        $base0F = rbg(bd93f9)
+        $base0E = rgb(bd93f9)
+        $base0F = rgb(ff79c6)
       '';
     };
   };
