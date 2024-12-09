@@ -19,6 +19,10 @@
       url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -32,6 +36,7 @@
       nixvim,
       nix-flatpak,
       stylix,
+      spicetify-nix,
       ...
     }:
     let
@@ -72,6 +77,7 @@
             catppuccin.homeManagerModules.catppuccin
             nixvim.homeManagerModules.nixvim
             stylix.homeManagerModules.stylix
+            spicetify-nix.homeManagerModules.default
           ];
         };
       };

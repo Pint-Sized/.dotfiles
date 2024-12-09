@@ -47,13 +47,14 @@ exec-once = swww-daemon &
 exec-once = sleep 1
 exec-once = waybar &
 exec-once = udiskie &
-exec-once = lxqt-policykit-agent
 exec-once = wl-paste --watch cliphist store
 exec-once = ulauncher --no-window-shadow
 exec-once = pypr
 exec-once = pushd ~/.chevron; python3 -m http.server 9999; popd;
-exec-once = ~/.dotfiles/scripts/auto-pull			                                  
-
+exec-once = ~/.dotfiles/scripts/auto-pull
+exec-once = systemctl --user start hyprpolkitagent
+exec-once = pkexec swayosd-libinput-backend
+exec-once = swayosd-server
 
 ####################
 ### START-UP APPS###
@@ -296,12 +297,12 @@ bind = $mainMod, O, exec, remnote --enable-features=UseOzonePlatform --ozone-pla
 bind = $mainMod, T, exec, kitty ~/.dotfiles/scripts/theme-switcher
 
 bind =, XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
-binde =, XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
-binde =, XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
+binde =, XF86AudioLowerVolume, exec, swayosd-client --output-volume -5
+binde =, XF86AudioRaiseVolume, exec, swayosd-client --output-volume +5
 bind =, XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
-binde =, XF86MonBrightnessDown, exec, brightnessctl set 5%-
-binde =, XF86MonBrightnessUp, exec, brightnessctl set +5%
-bind =, XF86Display, exec, kitty nvim ~/.dotfiles/home-theme-selector.nix; kitty nvim ~/.dotfiles/system-theme-selector.nix; kitty sudo nixos-rebuild switch --flake ~/.dotfiles; kitty home-manager switch --flake ~/.dotfiles
+binde =, XF86MonBrightnessDown, exec, swayosd-client --brightness -5
+binde =, XF86MonBrightnessUp, exec, swayosd-client --brightness +5
+bind =, XF86Display, exec, kitty ~/.dotfiles/scripts/theme-switcher
 bind =, XF86WLAN, exec, kitty nvim ~/.dotfiles/system/networking.nix; kitty sudo nixos-rebuild switch --flake ~/.dotfiles/
 bind =, XF86Tools, exec, kitty nvim ~/.dotfiles/
 bind =, XF86Bluetooth, exec, blueman-manager

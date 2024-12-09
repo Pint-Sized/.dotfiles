@@ -5,6 +5,7 @@
   lib,
   unstable-pkgs,
   nixvim,
+  spicetify-nix,
   ...
 }:
 
@@ -60,6 +61,9 @@
 
     # ---------- QT ----------- #
     ./modules/qt.nix
+
+    # ------- SPICETIFY --------- # 
+    ./modules/spicetify.nix
 
     # --------- SWAYNC --------- #
     ./modules/swaync.nix

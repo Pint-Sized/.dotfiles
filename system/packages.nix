@@ -124,6 +124,8 @@
 
       # testing
       speedread
+      aerc
+      swayosd
 
     ])
 
@@ -203,6 +205,7 @@
         yamlfmt
         zed-editor
         vscodium
+        hyprpolkitagent
       ]);
 
   services.flatpak = {
@@ -220,6 +223,7 @@
       "io.github.flattool.Warehouse"
       "org.onlyoffice.desktopeditors"
       "com.google.Chrome"
+      "io.github.hrkfdn.ncspot"
     ];
   };
 
