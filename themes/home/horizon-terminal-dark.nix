@@ -28,7 +28,7 @@
       };
       monospace = {
         package = pkgs.nerdfonts;
-        name = "0xProto Nerd Font";
+        name = "0xProto Nerd Font Mono";
       };
       sizes = {
         terminal = 11;
@@ -73,8 +73,8 @@
         $base0A = rgb(FAC29A)
         $base0B = rgb(29D398)
         $base0C = rgb(59E1E3)
-        $base0D = rgb(26BBD9)
-        $base0E = rgb(EE64AC)
+        $base0D = rgb(EE64AC)
+        $base0E = rgb(26BBD9)
         $base0F = rbg(F09383)
       '';
     };
