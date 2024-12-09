@@ -24,6 +24,7 @@
       imv
       mpv
       hyprlandPlugins.borders-plus-plus
+      dua
       libsForQt5.qt5ct
       kdePackages.qt6ct
       lm_sensors

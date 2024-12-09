@@ -1,0 +1,8 @@
+pkill waybar
+waybar
+pkill .ulauncher-wrap
+ulauncher --no-window-shadow
+hyprctl reload
+pkill .swaync-client-
+pkill .swaync-wrapped
+swaync
