@@ -15,6 +15,7 @@
       python312Packages.pint
       python312Packages.parsedatetime
       python312Packages.pytz
+      spotify
       rclone
       feh
       wob
