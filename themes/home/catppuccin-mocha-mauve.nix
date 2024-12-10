@@ -111,7 +111,7 @@
              font-family: "0xProto Nerd Font";
              font-size: 14pt;
              color: #cdd6f4; /* text */
-             background-color: rgba(60, 56, 54, 0.5);
+             background-color: rgba(24, 24, 37, 0.5);
          }
 
          button {
@@ -119,13 +119,13 @@
              background-position: center;
              background-size: 25%;
              border: none;
-             background-color: rgba(60, 56, 54, 0);
+             background-color: rgba(24, 24, 37, 0);
              margin: 5px;
              transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
          }
 
          button:hover {
-             background-color: rgba(60, 56, 54, 0.1);
+             background-color: rgba(24, 24, 37, 0.1);
          }
 
          button:focus {
