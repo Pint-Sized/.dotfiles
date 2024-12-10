@@ -294,11 +294,11 @@ bind = $mainMod, O, exec, remnote --enable-features=UseOzonePlatform --ozone-pla
 bind = $mainMod, T, exec, kitty ~/.dotfiles/scripts/theme-switcher
 
 bind =, XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
-binde =, XF86AudioLowerVolume, exec, swayosd-client lower
-binde =, XF86AudioRaiseVolume, exec, swayosd-client raise
+binde =, XF86AudioLowerVolume, exec, swayosd-client --output-volume lower
+binde =, XF86AudioRaiseVolume, exec, swayosd-client --output-volume raise
 bind =, XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
-binde =, XF86MonBrightnessDown, exec, swayosd-client lower
-binde =, XF86MonBrightnessUp, exec, swayosd-client raise
+binde =, XF86MonBrightnessDown, exec, swayosd-client --brightness lower
+binde =, XF86MonBrightnessUp, exec, swayosd-client --brightness raise
 bind =, XF86Display, exec, kitty ~/.dotfiles/scripts/theme-switcher
 bind =, XF86WLAN, exec, kitty nvim ~/.dotfiles/system/networking.nix; kitty sudo nixos-rebuild switch --flake ~/.dotfiles/
 bind =, XF86Tools, exec, kitty nvim ~/.dotfiles/
