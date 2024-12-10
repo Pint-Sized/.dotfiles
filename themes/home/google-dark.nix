@@ -107,7 +107,7 @@
     window {
              font-family: "0xProto Nerd Font";
              font-size: 14pt;
-             color: #ddc7a1; /* text */
+             color: #c5c8c6; /* text */
              background-color: rgba(60, 56, 54, 0.5);
          }
 
@@ -126,8 +126,8 @@
          }
 
          button:focus {
-             background-color: #a9b665;
-             color: #32302f;
+             background-color: #A36AC7;
+             color: #1d1f21;
          }
 
          #lock {

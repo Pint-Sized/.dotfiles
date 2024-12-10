@@ -11,9 +11,6 @@
 
 {
   imports = [
-    # ------- BASH ------- #
-    ./modules/bash.nix
-
     # ------- BAT ------- #
     ./modules/bat.nix
 

@@ -15,7 +15,6 @@
       python312Packages.pint
       python312Packages.parsedatetime
       python312Packages.pytz
-      spotify
       rclone
       feh
       wob
@@ -224,7 +223,6 @@
       "io.github.flattool.Warehouse"
       "org.onlyoffice.desktopeditors"
       "com.google.Chrome"
-      "io.github.hrkfdn.ncspot"
     ];
   };
 

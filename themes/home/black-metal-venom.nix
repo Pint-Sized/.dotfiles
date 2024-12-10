@@ -108,8 +108,8 @@
     window {
              font-family: "0xProto Nerd Font";
              font-size: 14pt;
-             color: #ddc7a1; /* text */
-             background-color: rgba(60, 56, 54, 0.5);
+             color: #c1c1c1; /* text */
+             background-color: rgba(18, 18, 18, 0.5);
          }
 
          button {
@@ -117,18 +117,18 @@
              background-position: center;
              background-size: 25%;
              border: none;
-             background-color: rgba(60, 56, 54, 0);
+             background-color: rgba(18, 18, 18, 0);
              margin: 5px;
              transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
          }
 
          button:hover {
-             background-color: rgba(60, 56, 54, 0.1);
+             background-color: rgba(18, 18, 18, 0.1);
          }
 
          button:focus {
-             background-color: #a9b665;
-             color: #32302f;
+             background-color: #79241f;
+             color: #000000;
          }
 
          #lock {
