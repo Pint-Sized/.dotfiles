@@ -66,7 +66,7 @@
     ./modules/qt.nix
 
     # ------- SPICETIFY --------- # 
-    ./modules/spicetify.nix
+    #./modules/spicetify.nix
 
     # --------- SWAYNC --------- #
     ./modules/swaync.nix
