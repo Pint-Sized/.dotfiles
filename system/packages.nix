@@ -206,6 +206,7 @@
         zed-editor
         vscodium
         hyprpolkitagent
+        zapzap
       ]);
 
   services.flatpak = {
@@ -223,6 +224,7 @@
       "io.github.flattool.Warehouse"
       "org.onlyoffice.desktopeditors"
       "com.google.Chrome"
+      "com.github.IsmaelMartinez.teams_for_linux"
     ];
   };
 

@@ -63,12 +63,9 @@ exec-once = swayosd-server
 exec-once=[workspace 12 silent] spotify --enable-features=UseOzonePlatform --ozone-platform=wayland
 exec-once=[workspace 11 silent] thunderbird
 exec-once = sleep 1
-exec-once=[workspace 10 silent] flatpak 'run' '--command=/app/bin/chrome' 'com.google.Chrome' '--profile-directory=Default' '--app-id=cifhbcnohmdccbgoicgdjpfamggdegmo'
-exec-once = sleep 1
-exec-once=[workspace 9 silent] flatpak 'run' '--command=/app/bin/chrome' 'com.google.Chrome' '--profile-directory=Default' '--app-id=hnpfjngllnobngcgfapefoaidbinmjnm'
-exec-once = sleep 1
-exec-once=[workspace 8 silent] flatpak 'run' '--command=/app/bin/chrome' 'com.google.Chrome' '--profile-directory=Default' '--app-id=abdndmcckigaeepaljhpcngbfdkbiggb'
-exec-once = sleep 1
+exec-once=[workspace 10 silent] com.github.IsmaelMartinez.teams_for_linux 
+exec-once=[workspace 9 silent] zapzap
+exec-once=[workspace 8 silent] 
 exec-once=[workspace 7 silent] imv ~/School/School-TimetableV2.png
 
 
@@ -221,7 +218,7 @@ input {
 }
 
 gestures {
-  workspace_swipe = false
+  workspace_swipe = true
 }
 
 
@@ -297,11 +294,11 @@ bind = $mainMod, O, exec, remnote --enable-features=UseOzonePlatform --ozone-pla
 bind = $mainMod, T, exec, kitty ~/.dotfiles/scripts/theme-switcher
 
 bind =, XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
-binde =, XF86AudioLowerVolume, exec, swayosd-client --output-volume -5
-binde =, XF86AudioRaiseVolume, exec, swayosd-client --output-volume +5
+binde =, XF86AudioLowerVolume, exec, swayosd-client lower
+binde =, XF86AudioRaiseVolume, exec, swayosd-client raise
 bind =, XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
-binde =, XF86MonBrightnessDown, exec, swayosd-client --brightness -5
-binde =, XF86MonBrightnessUp, exec, swayosd-client --brightness +5
+binde =, XF86MonBrightnessDown, exec, swayosd-client lower
+binde =, XF86MonBrightnessUp, exec, swayosd-client raise
 bind =, XF86Display, exec, kitty ~/.dotfiles/scripts/theme-switcher
 bind =, XF86WLAN, exec, kitty nvim ~/.dotfiles/system/networking.nix; kitty sudo nixos-rebuild switch --flake ~/.dotfiles/
 bind =, XF86Tools, exec, kitty nvim ~/.dotfiles/

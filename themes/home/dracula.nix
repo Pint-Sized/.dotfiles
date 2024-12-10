@@ -28,7 +28,7 @@
       };
       monospace = {
         package = pkgs.nerdfonts;
-        name = "0xProto Nerd Font";
+        name = "0xProto Nerd Font Mono";
       };
       sizes = {
         terminal = 11;
