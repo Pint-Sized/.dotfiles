@@ -134,11 +134,6 @@ general {
 
   border_size = 3
 
-
-  resize_on_border = on
-  extend_border_grab_area = 50
-  hover_icon_on_border = on
-
   no_focus_fallback = true
 
   col.active_border = $base0E
