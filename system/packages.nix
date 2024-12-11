@@ -110,7 +110,6 @@
       discord
       tldr
       onefetch
-      carbon-now-cli
       nodePackages_latest.fkill-cli
       undollar
       wego
