@@ -241,7 +241,7 @@
           @import "theme.css";
           * {
             font-family: "0xProto Nerd Font";
-            font-size: 14px;
+            font-size: 13px;
             min-height: 0;
             padding: 0;
             margin: 0;

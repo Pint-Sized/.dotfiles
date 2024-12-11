@@ -31,7 +31,7 @@
         name = "0xProto Nerd Font Mono";
       };
       sizes = {
-        terminal = 11;
+        terminal = 10;
       };
     };
     targets = {
