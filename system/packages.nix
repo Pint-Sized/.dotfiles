@@ -16,6 +16,7 @@
       python312Packages.parsedatetime
       python312Packages.pytz
       rclone
+      playwright-test
       feh
       wob
       pandoc
