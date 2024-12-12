@@ -3,8 +3,8 @@
     #./themes/system/3024.nix
     #./themes/system/black-metal-venom.nix
     #./themes/system/catppuccin-mocha-mauve.nix
-    #./themes/system/dracula.nix
-     ./themes/system/eighties.nix
+     ./themes/system/dracula.nix
+    #./themes/system/eighties.nix
     #./themes/system/google-dark.nix
     #./themes/system/google-light.nix
     #./themes/system/greenscreen.nix
