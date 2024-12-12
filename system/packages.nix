@@ -23,6 +23,7 @@
       celluloid
       which
       imv
+      kdePackages.gwenview
       mpv
       hyprlandPlugins.borders-plus-plus
       dua
