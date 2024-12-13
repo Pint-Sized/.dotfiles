@@ -7,7 +7,7 @@
 }:
 {
 
-  # ----------- WIFI ---------- # 
+  # ----------- WIFI ---------- #
   networking = {
     hostName = "sisyphus";
     wireless = {

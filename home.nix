@@ -5,7 +5,6 @@
   lib,
   unstable-pkgs,
   nixvim,
-  spicetify-nix,
   ...
 }:
 
@@ -26,10 +25,10 @@
     # ----------- FISH ------------- #
     ./modules/fish.nix
 
-    # ------------ FZF ------------- # 
+    # ------------ FZF ------------- #
     ./modules/fzf.nix
 
-    # ---------- GIT --------------# 
+    # ---------- GIT --------------#
     ./modules/git.nix
 
     # ---------- GTK ------------- #
@@ -53,25 +52,22 @@
     # ------------ MPV ------------ #
     ./modules/mpv.nix
 
-    # --------- NIXVIM --------- # 
+    # --------- NIXVIM --------- #
     ./modules/nixvim/nixvim.nix
 
     # ---------- OBS-STUDIO ------------ #
     ./modules/obs-studio.nix
 
-    # -------- PYPRLAND ------------- # 
+    # -------- PYPRLAND ------------- #
     ./modules/pyprland.nix
 
     # ---------- QT ----------- #
     ./modules/qt.nix
 
-    # ------- SPICETIFY --------- # 
-    #./modules/spicetify.nix
-
     # --------- SWAYNC --------- #
     ./modules/swaync.nix
 
-    # ------- THEMES ----------- # 
+    # ------- THEMES ----------- #
     ./home-theme-selector.nix
 
     # ---------- WAYBAR ----------- #

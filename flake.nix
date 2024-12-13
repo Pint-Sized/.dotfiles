@@ -56,7 +56,7 @@
             nur.nixosModules.nur
             stylix.nixosModules.stylix
             nix-flatpak.nixosModules.nix-flatpak
-            # dodgy spotify NUR repository 
+            # dodgy spotify NUR repository
             (
               { config, ... }:
               {

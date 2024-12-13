@@ -18,7 +18,7 @@
     #./themes/home/snazzy.nix
     #./themes/home/spaceduck.nix
     #./themes/home/tokyo-night-moon.nix
-     ./themes/home/uwunicorn.nix
+    ./themes/home/uwunicorn.nix
     #./themes/home/xcode-dusk.nix
   ];
 }

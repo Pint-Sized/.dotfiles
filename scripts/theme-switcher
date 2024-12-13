@@ -1,1 +1,5 @@
-sudo clear; nvim ~/.dotfiles/home-theme-selector.nix; nvim ~/.dotfiles/system-theme-selector.nix; sudo nixos-rebuild switch --flake ~/.dotfiles; home-manager switch --flake ~/.dotfiles
+sudo clear
+nvim ~/.dotfiles/home-theme-selector.nix
+nvim ~/.dotfiles/system-theme-selector.nix
+sudo nixos-rebuild switch --flake ~/.dotfiles
+home-manager switch --flake ~/.dotfiles

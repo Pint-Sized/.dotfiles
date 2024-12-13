@@ -1,0 +1,3 @@
+sudo clear
+nvim ~/.dotfiles/system/networking.nix
+sudo nixos-rebuild switch --flake ~/.dotfiles

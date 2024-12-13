@@ -11,10 +11,6 @@
   environment.systemPackages =
     (with pkgs; [
       thunderbird
-      python312Packages.simpleeval
-      python312Packages.pint
-      python312Packages.parsedatetime
-      python312Packages.pytz
       rclone
       playwright-test
       feh
@@ -116,7 +112,8 @@
       wego
       has
       libreoffice-qt6-fresh
-      
+      swayosd
+
       # fish plugins
       fishPlugins.autopair
       fishPlugins.done
@@ -125,9 +122,6 @@
 
       # testing
       speedread
-      aerc
-      swayosd
-
     ])
 
     ++
@@ -138,7 +132,7 @@
         wttrbar
         kitty
         base16-schemes
-        
+
         # neovim plugins
         vimPlugins.telescope-nvim
         vimPlugins.telescope-file-browser-nvim
@@ -180,7 +174,7 @@
         vimPlugins.lspkind-nvim
         vimPlugins.lspkind-nvim
         vimPlugins.lspkind-nvim
-        
+
         black
         vscode-langservers-extracted
         lua-language-server
@@ -253,7 +247,7 @@
       };
     };
   };
-  
+
   # ------ NIXPKGS SETTINGS ------ #
   nixpkgs = {
     config = {
