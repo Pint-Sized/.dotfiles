@@ -149,19 +149,22 @@ general {
 decoration {
   rounding = 4 
 
-  active_opacity = 1
-  inactive_opacity = 1
+  active_opacity = 0.8
+  inactive_opacity = 0.8
   fullscreen_opacity = 1
 
-  #blur {
-    #enabled = true
-    #size = 3
-    #passes = 3
-    #noise = 0
-    #new_optimizations = true
-    #xray = true
-    #vibrancy = 0.1696
-  #}
+  blur {
+    enabled = true
+    size = 5
+    passes = 2
+    noise = 0
+    new_optimizations = true
+    ignore_opacity = true;
+    contrast = 1.17
+    special = true
+    popups = true
+    xray = true
+  }
 }
 
 animations {
