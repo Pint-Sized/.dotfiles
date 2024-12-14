@@ -3,7 +3,6 @@
   config,
   pkgs,
   pkgs-unstable,
-  catppuccin,
   lib,
   ...
 }:
