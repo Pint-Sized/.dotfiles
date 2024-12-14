@@ -13,7 +13,6 @@
       thunderbird
       rclone
       playwright-test
-      feh
       wob
       pandoc
       celluloid

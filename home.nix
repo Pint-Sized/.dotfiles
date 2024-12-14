@@ -49,6 +49,9 @@
     # ----------- KITTY  ------------- #
     ./modules/kitty.nix
 
+    # --------- LIBREWOLF ----------- # 
+    ./modules/librewolf.nix
+
     # ------------ MPV ------------ #
     ./modules/mpv.nix
 
