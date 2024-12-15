@@ -71,7 +71,7 @@
     ./modules/swaync.nix
 
     # ------- THEMES ----------- #
-    ./home-theme-selector.nix
+    ./themes/home-theme-selector.nix
 
     # ---------- WAYBAR ----------- #
     ./modules/waybar.nix
