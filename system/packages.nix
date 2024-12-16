@@ -29,6 +29,7 @@
       openrazer-daemon
       polychromatic
       fzf
+      wtype
       python3
       wl-clipboard
       cliphist
@@ -135,10 +136,8 @@
         # neovim plugins
         vimPlugins.telescope-nvim
         vimPlugins.telescope-file-browser-nvim
-        vimPlugins.nvim-lspconfig
         vimPlugins.nvim-cmp
         vimPlugins.fzf-lua
-        vimPlugins.lspsaga-nvim
         vimPlugins.bufferline-nvim
         vimPlugins.nvim-treesitter
         vimPlugins.startup-nvim
@@ -168,30 +167,8 @@
         vimPlugins.mini-nvim
         vimPlugins.toggleterm-nvim
         vimPlugins.which-key-nvim
-        vimPlugins.lspkind-nvim
-        vimPlugins.lspkind-nvim
-        vimPlugins.lspkind-nvim
-        vimPlugins.lspkind-nvim
-        vimPlugins.lspkind-nvim
 
         black
-        vscode-langservers-extracted
-        lua-language-server
-        nil
-        typescript-language-server
-        marksman
-        pyright
-        gopls
-        terraform-ls
-        ansible-language-server
-        helm-ls
-        yaml-language-server
-        isort
-        nixfmt-rfc-style
-        alejandra
-        jq
-        prettierd
-        stylua
         shellcheck
         shfmt
         shellharden
@@ -201,6 +178,7 @@
         vscodium
         hyprpolkitagent
         zapzap
+        ts_query_ls
       ]);
 
   services.flatpak = {

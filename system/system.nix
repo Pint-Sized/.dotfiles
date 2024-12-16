@@ -45,7 +45,7 @@
     defaultFonts = {
       serif = [ "0xProto Nerd Font" ];
       sansSerif = [ "0xProto Nerd Font" ];
-      monospace = [ "0xProto Nerd Font" ];
+      monospace = [ "0xProto Nerd Font Mono" ];
     };
   };
   boot = {
