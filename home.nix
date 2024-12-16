@@ -65,8 +65,12 @@
     # ------- THEMES ----------- #
     ./themes/home-theme-selector.nix
 
+    # --------- ULAUNCHER --------- #
+    ./modules/ulauncher.nix
+
     # ---------- WAYBAR ----------- #
     ./modules/waybar.nix
+
     # --------- WOB ---------- #
     ./modules/wob.nix
 

@@ -166,4 +166,34 @@
          }
 
   '';
+  home.file = {
+    ".config/ulauncher/user-themes/theme/colours.css" = {
+      text = ''
+        @define-color background #1e1e2e;
+        @define-color current_line_background #181825;
+        @define-color foreground #585b70;
+        @define-color foreground_lessimportant #cdd6f4;
+        @define-color accent #fab387;
+        @define-color highlight #fab387;
+      '';
+    };
+  };
+  home.file = {
+    ".config/ulauncher/user-themes/theme/manifest.json" = {
+      text = ''
+              {
+          "manifest_version": "1",
+          "name": "stylix-theme",
+          "display_name": "Stylix Theme",
+          "extend_theme": "dark",
+          "css_file": "theme.css",
+          "css_file_gtk_3.20+": "theme-gtk-3.20.css",
+          "matched_text_hl_colors": {
+            "when_selected": "#cba6f7",
+            "when_not_selected": "#cba6f7"
+          }
+        }
+      '';
+    };
+  };
 }

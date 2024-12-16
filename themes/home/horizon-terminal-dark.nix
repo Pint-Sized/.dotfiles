@@ -4,8 +4,7 @@
   stylix = {
     enable = true;
     image = ../../wallpapers/evening-sky.png;
-    base16Scheme =
-      "${pkgs.base16-schemes}/share/themes/horizon-terminal-dark.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/horizon-terminal-dark.yaml";
     cursor = {
       name = "Bibata-Modern-Classic";
       package = pkgs.bibata-cursors;
@@ -165,4 +164,34 @@
          }
 
   '';
+  home.file = {
+    ".config/ulauncher/user-themes/theme/colours.css" = {
+      text = ''
+        @define-color background #1C1E26;
+        @define-color current_line_background #232530;
+        @define-color foreground #9DA0A2;
+        @define-color foreground_lessimportant #9DA0A2;
+        @define-color accent #FAB795;
+        @define-color highlight #FAB795;
+      '';
+    };
+  };
+  home.file = {
+    ".config/ulauncher/user-themes/theme/manifest.json" = {
+      text = ''
+              {
+          "manifest_version": "1",
+          "name": "stylix-theme",
+          "display_name": "Stylix Theme",
+          "extend_theme": "dark",
+          "css_file": "theme.css",
+          "css_file_gtk_3.20+": "theme-gtk-3.20.css",
+          "matched_text_hl_colors": {
+            "when_selected": "#EE64AC",
+            "when_not_selected": "#EE64AC"
+          }
+        }
+      '';
+    };
+  };
 }

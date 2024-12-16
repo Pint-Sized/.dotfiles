@@ -1,6 +1,6 @@
 {
   home.file = {
-    "~/.config/ulauncher/user-themes/theme/theme.css" = {
+    ".config/ulauncher/user-themes/theme/theme.css" = {
       text = ''
         @import "colours.css";
         /**
@@ -88,7 +88,7 @@
     };
   };
   home.file = {
-    "~/.config/ulauncher/user-themes/theme/theme-gtk-3.20.css" = {
+    ".config/ulauncher/user-themes/theme/theme-gtk-3.20.css" = {
       text = ''
         @import "colours.css";
         @import url("theme.css");
@@ -104,7 +104,7 @@
     };
   };
   home.file = {
-    "~/.config/ulauncher/user-themes/theme/generated.css" = {
+    ".config/ulauncher/user-themes/theme/generated.css" = {
       text = ''
         @import url("/home/fionnbennett/.cache/ulauncher_cache/themes/dark/generated.css");
 
