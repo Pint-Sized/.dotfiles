@@ -1,11 +1,4 @@
-{
-  inputs,
-  config,
-  pkgs,
-  pkgs-unstable,
-  lib,
-  ...
-}:
+{ inputs, config, pkgs, pkgs-unstable, lib, ... }:
 
 {
   programs.nixvim.plugins.treesitter = {

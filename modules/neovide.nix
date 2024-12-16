@@ -16,7 +16,9 @@
       wsl = false;
 
       font = {
-        normal = [ "0xProto Nerd Font" ]; # Will use the bundled Fira Code Nerd Font by default
+        normal = [
+          "0xProto Nerd Font"
+        ]; # Will use the bundled Fira Code Nerd Font by default
         size = 11.0;
       };
     };

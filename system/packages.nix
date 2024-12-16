@@ -1,185 +1,177 @@
-{
-  inputs,
-  config,
-  pkgs,
-  pkgs-unstable,
-  lib,
-  nix-flatpak,
-  ...
-}:
-{
-  environment.systemPackages =
-    (with pkgs; [
-      thunderbird
-      rclone
-      playwright-test
-      wob
-      pandoc
-      celluloid
-      which
-      imv
-      kdePackages.gwenview
-      mpv
-      hyprlandPlugins.borders-plus-plus
-      dua
-      libsForQt5.qt5ct
-      kdePackages.qt6ct
-      lm_sensors
-      remnote
-      openrazer-daemon
-      polychromatic
-      fzf
-      wtype
-      python3
-      wl-clipboard
-      cliphist
-      go
-      xdg-utils
-      ulauncher
-      ccache
-      file
-      gperf
-      python312Packages.help2man
-      ncurses
-      openssl
-      readline
-      sqlite
-      zlib
-      nixd
-      wev
-      ntfs3g
-      yarn
-      volctl
-      waypaper
-      mpc-cli
-      fastfetch
-      pokeget-rs
-      brightnessctl
-      pavucontrol
-      figlet
-      playerctl
-      wlogout
-      zathura
-      bat
-      brightnessctl
-      swaynotificationcenter
-      git
-      wget
-      waybar
-      libnotify
-      protonup
-      xdg-desktop-portal-hyprland
-      gnome.nautilus
-      wdisplays
-      monitor
-      swww
-      liquidctl
-      deluge
-      lm_sensors
-      kdePackages.ark
-      unzip
-      zip
-      cmake
-      rubyPackages_3_3.sqlite3
-      sqlite-interactive
-      tk
-      lxqt.lxqt-policykit
-      ripgrep
-      fd
-      librewolf
-      usbutils
-      udisks
-      coreutils
-      clang
-      btop
-      loupe
-      util-linux
-      appeditor
-      gparted
-      kdePackages.qt6ct
-      glib
-      nodejs_22
-      gnome-calculator
-      rustup
-      gnumake
-      libgcc
-      yazi
-      discord
-      tldr
-      onefetch
-      nodePackages_latest.fkill-cli
-      undollar
-      wego
-      has
-      libreoffice-qt6-fresh
-      swayosd
+{ inputs, config, pkgs, pkgs-unstable, lib, nix-flatpak, ... }: {
+  environment.systemPackages = (with pkgs; [
+    thunderbird
+    rclone
+    playwright-test
+    wob
+    pandoc
+    celluloid
+    which
+    imv
+    kdePackages.gwenview
+    mpv
+    nautilus-open-any-terminal
+    sushi
+    hyprlandPlugins.borders-plus-plus
+    dua
+    libsForQt5.qt5ct
+    kdePackages.qt6ct
+    lm_sensors
+    remnote
+    openrazer-daemon
+    polychromatic
+    fzf
+    python3
+    wl-clipboard
+    cliphist
+    go
+    xdg-utils
+    ulauncher
+    ccache
+    file
+    gperf
+    python312Packages.help2man
+    ncurses
+    openssl
+    readline
+    sqlite
+    zlib
+    nixd
+    wev
+    ntfs3g
+    yarn
+    volctl
+    waypaper
+    mpc-cli
+    fastfetch
+    pokeget-rs
+    brightnessctl
+    pavucontrol
+    figlet
+    playerctl
+    wlogout
+    zathura
+    bat
+    brightnessctl
+    swaynotificationcenter
+    git
+    wget
+    waybar
+    libnotify
+    protonup
+    xdg-desktop-portal-hyprland
+    gnome.nautilus
+    wdisplays
+    monitor
+    swww
+    liquidctl
+    deluge
+    lm_sensors
+    kdePackages.ark
+    unzip
+    zip
+    cmake
+    rubyPackages_3_3.sqlite3
+    sqlite-interactive
+    tk
+    lxqt.lxqt-policykit
+    ripgrep
+    fd
+    librewolf
+    usbutils
+    udisks
+    coreutils
+    clang
+    btop
+    loupe
+    util-linux
+    appeditor
+    gparted
+    kdePackages.qt6ct
+    glib
+    nodejs_22
+    gnome-calculator
+    rustup
+    gnumake
+    libgcc
+    yazi
+    discord
+    tldr
+    onefetch
+    nodePackages_latest.fkill-cli
+    undollar
+    wego
+    has
+    libreoffice-qt6-fresh
+    swayosd
 
-      # fish plugins
-      fishPlugins.autopair
-      fishPlugins.done
-      fishPlugins.sponge
-      fishPlugins.puffer
+    # fish plugins
+    fishPlugins.autopair
+    fishPlugins.done
+    fishPlugins.sponge
+    fishPlugins.puffer
 
-      # testing
-      speedread
-    ])
+    # testing
+    speedread
+  ])
 
     ++
 
-      (with pkgs-unstable; [
-        neovim-unwrapped
-        home-manager
-        wttrbar
-        kitty
-        base16-schemes
+    (with pkgs-unstable; [
+      neovim-unwrapped
+      home-manager
+      wttrbar
+      kitty
+      base16-schemes
 
-        # neovim plugins
-        vimPlugins.telescope-nvim
-        vimPlugins.telescope-file-browser-nvim
-        vimPlugins.nvim-cmp
-        vimPlugins.fzf-lua
-        vimPlugins.bufferline-nvim
-        vimPlugins.nvim-treesitter
-        vimPlugins.startup-nvim
-        vimPlugins.neogit
-        vimPlugins.diffview-nvim
-        vimPlugins.neotest
-        vimPlugins.neotest-plenary
-        vimPlugins.oil-nvim
-        vimPlugins.telescope-undo-nvim
-        vimPlugins.telescope-media-files-nvim
-        vimPlugins.telescope-manix
-        vimPlugins.telescope-ui-select-nvim
-        vimPlugins.nui-nvim
-        vimPlugins.nvim-notify
-        vimPlugins.noice-nvim
-        vimPlugins.nvim-web-devicons
-        vimPlugins.nvim-autopairs
-        vimPlugins.nvim-cursorline
-        vimPlugins.vim-illuminate
-        vimPlugins.indent-blankline-nvim
-        vimPlugins.nvim-navic
-        vimPlugins.neo-tree-nvim
-        vimPlugins.todo-comments-nvim
-        vimPlugins.nvim-snippets
-        vimPlugins.lualine-nvim
-        vimPlugins.markdown-preview-nvim
-        vimPlugins.mini-nvim
-        vimPlugins.toggleterm-nvim
-        vimPlugins.which-key-nvim
+      # neovim plugins
+      vimPlugins.telescope-nvim
+      vimPlugins.telescope-file-browser-nvim
+      vimPlugins.nvim-cmp
+      vimPlugins.fzf-lua
+      vimPlugins.bufferline-nvim
+      vimPlugins.nvim-treesitter
+      vimPlugins.startup-nvim
+      vimPlugins.neogit
+      vimPlugins.diffview-nvim
+      vimPlugins.neotest
+      vimPlugins.neotest-plenary
+      vimPlugins.oil-nvim
+      vimPlugins.telescope-undo-nvim
+      vimPlugins.telescope-media-files-nvim
+      vimPlugins.telescope-manix
+      vimPlugins.telescope-ui-select-nvim
+      vimPlugins.nui-nvim
+      vimPlugins.nvim-notify
+      vimPlugins.noice-nvim
+      vimPlugins.nvim-web-devicons
+      vimPlugins.nvim-autopairs
+      vimPlugins.nvim-cursorline
+      vimPlugins.vim-illuminate
+      vimPlugins.indent-blankline-nvim
+      vimPlugins.nvim-navic
+      vimPlugins.neo-tree-nvim
+      vimPlugins.todo-comments-nvim
+      vimPlugins.nvim-snippets
+      vimPlugins.lualine-nvim
+      vimPlugins.markdown-preview-nvim
+      vimPlugins.mini-nvim
+      vimPlugins.toggleterm-nvim
+      vimPlugins.which-key-nvim
 
-        black
-        shellcheck
-        shfmt
-        shellharden
-        bicep
-        yamlfmt
-        zed-editor
-        vscodium
-        hyprpolkitagent
-        zapzap
-        ts_query_ls
-      ]);
+      black
+      shellcheck
+      shfmt
+      shellharden
+      bicep
+      yamlfmt
+      zed-editor
+      vscodium
+      hyprpolkitagent
+      zapzap
+      ts_query_ls
+      nixfmt
+    ]);
 
   services.flatpak = {
     enable = true;
@@ -204,18 +196,12 @@
 
     hyprland = {
       enable = true;
-      xwayland = {
-        enable = true;
-      };
+      xwayland = { enable = true; };
     };
 
-    fish = {
-      enable = true;
-    };
+    fish = { enable = true; };
 
-    mtr = {
-      enable = true;
-    };
+    mtr = { enable = true; };
 
     gnupg = {
       agent = {
@@ -226,9 +212,5 @@
   };
 
   # ------ NIXPKGS SETTINGS ------ #
-  nixpkgs = {
-    config = {
-      allowUnfree = true;
-    };
-  };
+  nixpkgs = { config = { allowUnfree = true; }; };
 }

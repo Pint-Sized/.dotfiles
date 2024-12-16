@@ -1,11 +1,4 @@
-{
-  stylix,
-  config,
-  pkgs,
-  pkgs-unstable,
-  lib,
-  ...
-}:
+{ stylix, config, pkgs, pkgs-unstable, lib, ... }:
 
 {
   stylix = {
@@ -30,9 +23,7 @@
         package = pkgs.nerdfonts;
         name = "0xProto Nerd Font Mono";
       };
-      sizes = {
-        terminal = 10;
-      };
+      sizes = { terminal = 10; };
     };
     targets = {
       hyprland.enable = false;
@@ -166,11 +157,23 @@
          }
 
          #hibernate {
-     	background-image: image(url("./images/sleep.png"));
+            background-image: image(url("./images/sleep.png"));
          }
          #hibernate:focus {
-     	background-image: image(url("./images/sleep-hover.png"));
+            background-image: image(url("./images/sleep-hover.png"));
          }
-
   '';
+
+  home.file = {
+    "~/.config/ulauncher/user-themes/theme/colours.css" = {
+      text = ''
+        @define-color background #32302f;
+        @define-color current_line_background #3c3836;
+        @define-color foreground #d4be98;
+        @define-color foreground_lessimportant #ddc7a1;
+        @define-color accent #e78a4e;
+        @define-color highlight #e78a4e;
+      '';
+    };
+  };
 }

@@ -1,15 +1,7 @@
-{
-  config,
-  pkgs,
-  lib,
-  nixvim,
-  ...
-}:
+{ config, pkgs, lib, nixvim, ... }:
 
 {
-  programs.nixvim = {
-    enable = true;
-  };
+  programs.nixvim = { enable = true; };
   imports = [
     ./auto_cmds.nix
     ./file_types.nix

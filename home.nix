@@ -1,12 +1,4 @@
-{
-  config,
-  pkgs,
-  catppuccin,
-  lib,
-  unstable-pkgs,
-  nixvim,
-  ...
-}:
+{ config, pkgs, catppuccin, lib, unstable-pkgs, nixvim, ... }:
 
 {
   imports = [

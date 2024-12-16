@@ -1,17 +1,11 @@
-{
-  stylix,
-  config,
-  pkgs,
-  pkgs-unstable,
-  lib,
-  ...
-}:
+{ stylix, config, pkgs, pkgs-unstable, lib, ... }:
 
 {
   stylix = {
     enable = true;
     image = ../../wallpapers/gruvbox/village.jpg;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-dark-soft.yaml";
+    base16Scheme =
+      "${pkgs.base16-schemes}/share/themes/gruvbox-material-dark-soft.yaml";
     cursor = {
       name = "Bibata-Modern-Classic";
       package = pkgs.bibata-cursors;
@@ -30,9 +24,7 @@
         package = pkgs.nerdfonts;
         name = "0xProto Nerd Font Mono";
       };
-      sizes = {
-        terminal = 10;
-      };
+      sizes = { terminal = 10; };
     };
     targets = {
       hyprland.enable = false;

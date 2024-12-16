@@ -1,10 +1,4 @@
-{
-  config,
-  pkgs,
-  lib,
-  nixvim,
-  ...
-}:
+{ config, pkgs, lib, nixvim, ... }:
 
 {
 

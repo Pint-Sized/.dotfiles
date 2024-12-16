@@ -1,14 +1,4 @@
-{
-  inputs,
-  config,
-  pkgs,
-  pkgs-unstable,
-  lib,
-  nix-flatpak,
-  stylix,
-  ...
-}:
-{
+{ inputs, config, pkgs, pkgs-unstable, lib, nix-flatpak, stylix, ... }: {
   stylix = {
     enable = true;
     autoEnable = true;

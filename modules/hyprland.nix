@@ -1,18 +1,11 @@
-{
-  pkgs,
-  ...
-}:
+{ pkgs, ... }:
 
 {
   # --------- HYPRLAND -------- #
   wayland.windowManager.hyprland = {
     enable = true;
-    xwayland = {
-      enable = true;
-    };
-    plugins = [
-      pkgs.hyprlandPlugins.borders-plus-plus
-    ];
+    xwayland = { enable = true; };
+    plugins = [ pkgs.hyprlandPlugins.borders-plus-plus ];
     extraConfig = ''
 
       source=~/.config/hypr/theme.conf
@@ -301,15 +294,15 @@
       bindr = $mainMod, L, exec, pkill wlogout || wlogout
       bind = $mainMod, P, exec, waypaper
       bind = $mainMod, I, exec, kitty nvim
-      # bind = , v, pass, ^discord$
+      bindn = , v, pass, ^discord$
       bind = $mainMod, O, exec, remnote --enable-features=UseOzonePlatform --ozone-platform=wayland
 
       bind = $mainMod, T, exec, kitty ~/.dotfiles/scripts/theme-switcher
 
-      bind =, XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+      bind =, XF86AudioMute, exec, swayosd-client --output-volume mute-toggle
       binde =, XF86AudioLowerVolume, exec, swayosd-client --output-volume lower
       binde =, XF86AudioRaiseVolume, exec, swayosd-client --output-volume raise
-      bind =, XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
+      bind =, XF86AudioMicMute, exec, swayosd-client --input-volume mute-toggle
       binde =, XF86MonBrightnessDown, exec, swayosd-client --brightness lower
       binde =, XF86MonBrightnessUp, exec, swayosd-client --brightness raise
       bind =, XF86Display, exec, kitty ~/.dotfiles/scripts/theme-switcher
@@ -319,6 +312,8 @@
       bind =, XF86Keyboard, exec, polychromatic-controller
       bind =, XF86Favorites, exec, kitty ~/.dotfiles/scripts/package-rebuild
       bind = $mainMod, R, exec, ~/.dotfiles/scripts/reloader
+
+      bindn =, Caps_Lock, exec, swayosd-client --caps-lock
 
       ##############################
       ### WINDOWS AND WORKSPACES ###

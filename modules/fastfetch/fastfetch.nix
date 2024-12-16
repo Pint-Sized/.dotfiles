@@ -1,18 +1,10 @@
-{
-  pkgs,
-  lib,
-  config,
-  catppuccin,
-  ...
-}:
+{ pkgs, lib, config, catppuccin, ... }:
 
 {
   programs.fastfetch = {
     enable = true;
     settings = {
-      logo = {
-        type = "small";
-      };
+      logo = { type = "small"; };
       display = {
         separator = "->   ";
         color = "cyan";

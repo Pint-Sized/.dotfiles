@@ -1,5 +1,1 @@
-{
-  programs.firefox = {
-    enable = false;
-  };
-}
+{ programs.firefox = { enable = false; }; }

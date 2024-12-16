@@ -1,10 +1,4 @@
-{
-  inputs,
-  config,
-  pkgs,
-  lib,
-  ...
-}:
+{ inputs, config, pkgs, lib, ... }:
 
 {
   hardware = {
@@ -14,9 +8,7 @@
       enable32Bit = true;
     };
 
-    openrazer = {
-      enable = true;
-    };
+    openrazer = { enable = true; };
     bluetooth = {
       enable = true;
       powerOnBoot = true;

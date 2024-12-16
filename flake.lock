@@ -461,17 +461,17 @@
         "home-manager": "home-manager_2",
         "nix-darwin": "nix-darwin",
         "nixpkgs": [
-          "nixpkgs"
+          "nixpkgs-unstable"
         ],
         "nuschtosSearch": "nuschtosSearch",
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1734346149,
-        "narHash": "sha256-CfPBVGZmWRwBrOXANvIf45tNPxKOamesk6VqdM5NZcs=",
+        "lastModified": 1734346666,
+        "narHash": "sha256-en0654KcOVZj0J3LVUzd/sbNkDSUZTWP2fHlnyfaXnc=",
         "owner": "nix-community",
         "repo": "nixvim",
-        "rev": "c179d47d3d03075cd48d19d20b983d0445a5c8a1",
+        "rev": "76e9d89d96502a4ee8e1cd74a5b50077cf204134",
         "type": "github"
       },
       "original": {

@@ -1,11 +1,4 @@
-{
-  stylix,
-  config,
-  pkgs,
-  pkgs-unstable,
-  lib,
-  ...
-}:
+{ stylix, config, pkgs, pkgs-unstable, lib, ... }:
 
 {
   stylix = {
@@ -30,9 +23,7 @@
         package = pkgs.nerdfonts;
         name = "0xProto Nerd Font Mono";
       };
-      sizes = {
-        terminal = 10;
-      };
+      sizes = { terminal = 10; };
     };
     targets = {
       hyprland.enable = false;

@@ -8,9 +8,7 @@
         vim.fn.sign_define("diagnosticsignhint", { text = "󰌵", texthl = "diagnostichint", linehl = "", numhl = "" })
         vim.fn.sign_define("diagnosticsigninfo", { text = " ", texthl = "diagnosticinfo", linehl = "", numhl = "" })
       '';
-    clipboard = {
-      providers.wl-copy.enable = true;
-    };
+    clipboard = { providers.wl-copy.enable = true; };
 
     opts = {
       number = true;
