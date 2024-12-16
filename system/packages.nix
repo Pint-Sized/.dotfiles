@@ -37,7 +37,6 @@
     kdePackages.ark
     kdePackages.gwenview
     kdePackages.qt6ct
-    kdePackages.qt6ct
     libgcc
     libnotify
     libreoffice-qt6-fresh
@@ -45,17 +44,12 @@
     libsForQt5.qt5ct
     liquidctl
     lm_sensors
-    lm_sensors
-    loupe
     lxqt.lxqt-policykit
-    monitor
     mpc-cli
     mpv
-    nautilus-open-any-terminal
     ncurses
     nixd
     nodejs_22
-    nodePackages_latest.fkill-cli
     ntfs3g
     onefetch
     openrazer-daemon
@@ -63,22 +57,17 @@
     pandoc
     pavucontrol
     playerctl
-    playwright-test
     pokeget-rs
     polychromatic
-    protonup
     python3
-    python312Packages.help2man
     rclone
     readline
     remnote
     ripgrep
     rubyPackages_3_3.sqlite3
     rustup
-    speedread
     sqlite
     sqlite-interactive
-    sushi
     swaynotificationcenter
     swayosd
     swww
@@ -94,7 +83,6 @@
     waybar
     waypaper
     wdisplays
-    wego
     wev
     wget
     which
@@ -115,16 +103,11 @@
 
   (with pkgs-unstable; [
     base16-schemes
-    bicep
-    black
     home-manager
     hyprpolkitagent
     kitty
     neovim-unwrapped
     nixfmt-rfc-style
-    shellcheck
-    shellharden
-    shfmt
     ts_query_ls
     vimPlugins.bufferline-nvim
     vimPlugins.diffview-nvim
@@ -159,9 +142,7 @@
     vimPlugins.toggleterm-nvim
     vimPlugins.vim-illuminate
     vimPlugins.which-key-nvim
-    vscodium
     wttrbar
-    yamlfmt
     zapzap
     zed-editor
   ]);
@@ -186,15 +167,14 @@
   };
 
   programs = {
-
     hyprland = {
       enable = true;
       xwayland = { enable = true; };
     };
+    
+    fish.enable = true;
 
-    fish = { enable = true; };
-
-    mtr = { enable = true; };
+    mtr.enable = true;
 
     gnupg = {
       agent = {
@@ -205,5 +185,5 @@
   };
 
   # ------ NIXPKGS SETTINGS ------ #
-  nixpkgs = { config = { allowUnfree = true; }; };
+  nixpkgs.config.allowUnfree = true;
 }
