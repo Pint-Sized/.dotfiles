@@ -1,12 +1,4 @@
 {
-  config,
-  pkgs,
-  catppuccin,
-  lib,
-  ...
-}:
-
-{
   # ------- KITTY ------- #
   programs.kitty = {
     enable = true;

@@ -1,12 +1,4 @@
 {
-  config,
-  pkgs,
-  catppuccin,
-  lib,
-  ...
-}:
-
-{
   programs.git = {
     enable = true;
     userName = "Pint Sized";

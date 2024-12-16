@@ -1,12 +1,4 @@
 {
-  config,
-  pkgs,
-  catppuccin,
-  lib,
-  ...
-}:
-
-{
   # --------- QT ----------- #
   qt = {
     enable = true;

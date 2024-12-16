@@ -1,12 +1,4 @@
 {
-  config,
-  pkgs,
-  catppuccin,
-  lib,
-  ...
-}:
-
-{
   home.file = {
     ".config/hypr/pyprland.toml" = {
       text = ''

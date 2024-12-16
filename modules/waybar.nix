@@ -1,12 +1,4 @@
 {
-  config,
-  pkgs,
-  catppuccin,
-  lib,
-  ...
-}:
-
-{
   # --------- WAYBAR ----------- #
   programs.waybar = {
     enable = true;
@@ -199,7 +191,7 @@
           "format-linked" = "󰈀 {ifname} (No IP)";
           "format-disconnected" = "";
           "tooltip-format-disconnected" = "Disconnected";
-          "on-click" = "kitty nvim ~/.dotfiles/system/networking.nix";
+          "on-click" = "kitty ~/.dotfiles/scripts/wifi-rebuild";
           "interval" = 2;
         };
         "memory" = {

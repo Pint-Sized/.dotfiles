@@ -1,13 +1,4 @@
 {
-  pkgs,
-  pkgs-unstable,
-  config,
-  lib,
-  catppuccin,
-  ...
-}:
-
-{
   programs.neovide = {
     enable = true;
     settings = {

@@ -1,12 +1,4 @@
 {
-  config,
-  pkgs,
-  catppuccin,
-  lib,
-  ...
-}:
-
-{
   # ------ HYPRLOCK ------- #
   programs.hyprlock = {
     enable = true;

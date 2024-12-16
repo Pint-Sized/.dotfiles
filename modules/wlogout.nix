@@ -1,12 +1,4 @@
 {
-  config,
-  pkgs,
-  catppuccin,
-  lib,
-  ...
-}:
-
-{
   # --------- WLOGOUT --------- #
   programs.wlogout = {
     enable = true;

@@ -1,5 +1,6 @@
 sudo clear
-nvim ~/.dotfiles/home-theme-selector.nix
-nvim ~/.dotfiles/system-theme-selector.nix
+nvim ~/.dotfiles/themes/home-theme-selector.nix
+nvim ~/.dotfiles/themes/system-theme-selector.nix
 sudo nixos-rebuild switch --flake ~/.dotfiles
 home-manager switch --flake ~/.dotfiles
+~/.dotfiles/scripts/reloader

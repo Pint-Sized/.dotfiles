@@ -1,13 +1,4 @@
 {
-  config,
-  lib,
-  pkgs,
-  pkgs-unstable,
-  catppuccin,
-  ...
-}:
-
-{
   programs.yazi = {
     enable = true;
     enableFishIntegration = true;
