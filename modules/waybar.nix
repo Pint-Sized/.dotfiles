@@ -69,7 +69,7 @@
         };
         "escape" = true;
         "tooltip" = true;
-        "exec" = "~/.config/waybar/scripts/caway -b 10 -f 60 -e";
+        "exec" = "~/.dotfiles/scripts/caway -b 10 -f 60 -e";
         "return-type" = "json";
         "on-click" = "playerctl play-pause";
         "on-scroll-up" = "playerctl previous";
