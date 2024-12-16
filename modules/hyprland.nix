@@ -72,6 +72,7 @@
       cursor {
         no_hardware_cursors = true
         no_warps = true
+        inactive_timeout = 10
       }
 
 
@@ -126,7 +127,7 @@
 
       general {
         gaps_in = 2
-        gaps_out = 6
+        gaps_out = 0,6,6,6
 
         border_size = 3
 
@@ -137,9 +138,13 @@
 
         resize_on_border = false
 
-        allow_tearing = false
+        allow_tearing = true
 
         layout = dwindle
+
+        snap {
+          enabled = true
+        }
       }
 
       decoration {
@@ -151,15 +156,18 @@
 
         blur {
           enabled = true
-          size = 5
-          passes = 2
+          size = 8
+          passes = 1
           noise = 0
           new_optimizations = true
           ignore_opacity = true;
           contrast = 1.17
-          special = false
           popups = false
           xray = true
+        }
+
+        shadow {
+          enabled = false
         }
       }
 
@@ -179,6 +187,9 @@
       dwindle {
         pseudotile = true
         preserve_split = true
+        force_split = 2
+        smart_resizing = false
+
       }
 
       master {
@@ -186,9 +197,15 @@
       }
 
       misc {
-        force_default_wallpaper = -1 # Set to 0 or 1 to disable the anime mascot wallpapers
-        disable_hyprland_logo = true # If true disables the random hyprland logo / anime girl background. :(
+        force_default_wallpaper = -1 
+        disable_hyprland_logo = true 
         font_family = "0xProto Nerd Font"
+        animate_manual_resizes = true
+        close_special_on_empty = false
+        new_window_takes_over_fullscreen = 2
+        initial_workspace_tracking = 2
+        middle_click_paste = false
+        vfr = true
       }
 
 
@@ -213,6 +230,8 @@
 
       gestures {
         workspace_swipe = true
+        workspace_swipe_invert = false
+        workspace_swipe_forever = true
       }
 
 
