@@ -32,9 +32,6 @@
     # ------------- HYPRLAND ---------- #
     ./modules/hyprland.nix
 
-    # ------------ HYPRLOCK ---------- #
-    ./modules/hyprlock.nix
-
     # ---------- IMV ----------- #
     ./modules/imv.nix
 

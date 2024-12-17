@@ -1,4 +1,6 @@
 { inputs, config, pkgs, pkgs-unstable, lib, nix-flatpak, ... }: {
+
+  # -------- STABLE ------- #
   environment.systemPackages = (with pkgs; [
     appeditor
     bat
@@ -10,6 +12,7 @@
     cliphist
     cmake
     coreutils
+    cpu-x
     deluge
     discord
     dua
@@ -17,10 +20,7 @@
     fd
     figlet
     file
-    fishPlugins.autopair
-    fishPlugins.done
-    fishPlugins.puffer
-    fishPlugins.sponge
+    firefoxpwa
     fzf
     git
     glib
@@ -31,11 +31,8 @@
     gparted
     gperf
     has
-    hyprlandPlugins.borders-plus-plus
     imv
     jq
-    kdePackages.ark
-    kdePackages.gwenview
     kdePackages.qt6ct
     libgcc
     libnotify
@@ -44,11 +41,9 @@
     libsForQt5.qt5ct
     liquidctl
     lm_sensors
-    lxqt.lxqt-policykit
     mpc-cli
     mpv
     ncurses
-    nixd
     nodejs_22
     ntfs3g
     onefetch
@@ -66,6 +61,7 @@
     ripgrep
     rubyPackages_3_3.sqlite3
     rustup
+    shotwell
     sqlite
     sqlite-interactive
     swaynotificationcenter
@@ -77,6 +73,7 @@
     ulauncher
     undollar
     unzip
+    upscayl
     usbutils
     util-linux
     volctl
@@ -100,7 +97,8 @@
   ])
 
   ++
-
+  
+  # ----- UNSTABLE ----- #
   (with pkgs-unstable; [
     base16-schemes
     home-manager
@@ -109,42 +107,65 @@
     neovim-unwrapped
     nixfmt-rfc-style
     ts_query_ls
-    vimPlugins.bufferline-nvim
-    vimPlugins.diffview-nvim
-    vimPlugins.fzf-lua
-    vimPlugins.indent-blankline-nvim
-    vimPlugins.lualine-nvim
-    vimPlugins.markdown-preview-nvim
-    vimPlugins.mini-nvim
-    vimPlugins.neo-tree-nvim
-    vimPlugins.neogit
-    vimPlugins.neotest
-    vimPlugins.neotest-plenary
-    vimPlugins.noice-nvim
-    vimPlugins.nui-nvim
-    vimPlugins.nvim-autopairs
-    vimPlugins.nvim-cmp
-    vimPlugins.nvim-cursorline
-    vimPlugins.nvim-navic
-    vimPlugins.nvim-notify
-    vimPlugins.nvim-snippets
-    vimPlugins.nvim-treesitter
-    vimPlugins.nvim-web-devicons
-    vimPlugins.oil-nvim
-    vimPlugins.startup-nvim
-    vimPlugins.telescope-file-browser-nvim
-    vimPlugins.telescope-manix
-    vimPlugins.telescope-media-files-nvim
-    vimPlugins.telescope-nvim
-    vimPlugins.telescope-ui-select-nvim
-    vimPlugins.telescope-undo-nvim
-    vimPlugins.todo-comments-nvim
-    vimPlugins.toggleterm-nvim
-    vimPlugins.vim-illuminate
-    vimPlugins.which-key-nvim
     wttrbar
     zapzap
     zed-editor
+  ])
+
+  ++
+
+  # -------- HYPRLAND PLUGINS ---------- # 
+  (with pkgs-unstable.hyprlandPlugins; [
+    borders-plus-plus
+  ])
+
+  ++
+
+  # --------- FISH PLUGINS --------- #
+  (with pkgs-unstable.fishPlugins; [
+    autopair
+    done
+    puffer
+    sponge
+  ])
+
+  ++
+
+  # --------- VIM PLUGINS --------- #
+  (with pkgs-unstable.vimPlugins; [
+    bufferline-nvim
+    diffview-nvim
+    fzf-lua
+    indent-blankline-nvim
+    lualine-nvim
+    markdown-preview-nvim
+    mini-nvim
+    neo-tree-nvim
+    neogit
+    neotest
+    neotest-plenary
+    noice-nvim
+    nui-nvim
+    nvim-autopairs
+    nvim-cmp
+    nvim-cursorline
+    nvim-navic
+    nvim-notify
+    nvim-snippets
+    nvim-treesitter
+    nvim-web-devicons
+    oil-nvim
+    startup-nvim
+    telescope-file-browser-nvim
+    telescope-manix
+    telescope-media-files-nvim
+    telescope-nvim
+    telescope-ui-select-nvim
+    telescope-undo-nvim
+    todo-comments-nvim
+    toggleterm-nvim
+    vim-illuminate
+    which-key-nvim
   ]);
 
   services.flatpak = {
@@ -161,15 +182,14 @@
       "com.github.tchx84.Flatseal"
       "io.github.flattool.Warehouse"
       "org.onlyoffice.desktopeditors"
-      "com.google.Chrome"
-      "com.github.IsmaelMartinez.teams_for_linux"
+      "net.codelogistics.webapps"
     ];
   };
 
   programs = {
     hyprland = {
       enable = true;
-      xwayland = { enable = true; };
+      xwayland.enable = true;
     };
     
     fish.enable = true;

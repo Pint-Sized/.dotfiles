@@ -1,1 +1,9 @@
-{ programs.firefox = { enable = false; }; }
+{ pkgs, ... }:
+
+{ 
+  programs.firefox = { 
+    enable = true;
+    package = pkgs.librewolf;
+    nativeMessagingHosts = [ pkgs.firefoxpwa ];
+  }; 
+}

@@ -149,8 +149,8 @@
 
         blur {
           enabled = true
-          size = 8
-          passes = 1
+          size = 5
+          passes = 2
           noise = 0
           new_optimizations = true
           ignore_opacity = true;

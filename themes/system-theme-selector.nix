@@ -8,7 +8,7 @@
     #./system/google-dark.nix
     #./system/google-light.nix
     #./system/greenscreen.nix
-    ./system/gruvbox-material-dark-soft.nix
+    #./system/gruvbox-material-dark-soft.nix
     #./system/horizon-terminal-dark.nix
     #./system/nord.nix
     #./system/pasque.nix
@@ -16,7 +16,7 @@
     #./system/pinky.nix
     #./system/rose-pine.nix
     #./system/snazzy.nix
-    #./system/spaceduck.nix
+    ./system/spaceduck.nix
     #./system/tokyo-night-moon.nix
     #./system/uwunicorn.nix
     #./system/xcode-dusk.nix
