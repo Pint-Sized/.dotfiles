@@ -106,7 +106,7 @@
           col.border_1 = $base00
           col.border_2 = $base0E
 
-          border_size_1 = 8
+          border_size_1 = 10
           border_size_2 = -1
 
           natural_rounding = on

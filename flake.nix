@@ -40,6 +40,7 @@
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
       pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
+      spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
     in {
       nixosConfigurations = {
         sisyphus = lib.nixosSystem {
@@ -52,10 +53,10 @@
             stylix.nixosModules.stylix
             nix-flatpak.nixosModules.nix-flatpak
             # dodgy spotify NUR repository
-            ({ config, ... }: {
-              environment.systemPackages =
-                [ config.nur.repos.nltch.spotify-adblock ];
-            })
+            #({ config, ... }: {
+              #environment.systemPackages =
+                #[ config.nur.repos.nltch.spotify-adblock ];
+            #})
           ];
           specialArgs = { inherit pkgs-unstable; };
         };

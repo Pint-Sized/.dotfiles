@@ -106,6 +106,7 @@
     kitty
     neovim-unwrapped
     nixfmt-rfc-style
+    spotify
     ts_query_ls
     wttrbar
     zapzap
@@ -171,11 +172,7 @@
   services.flatpak = {
     enable = true;
     update = {
-      auto = {
-        enable = true;
-        onCalendar = "weekly";
-      };
-      onActivation = false;
+      onActivation = true;
     };
     uninstallUnmanaged = true;
     packages = [
@@ -184,6 +181,27 @@
       "org.onlyoffice.desktopeditors"
       "net.codelogistics.webapps"
     ];
+    overrides = {
+      global = {
+        Context.sockets = [
+          "wayland" 
+          "!x11" 
+          "!fallback-x11"
+        ];
+        Environment = {
+          XCURSOR_SIZE = "16";
+          MOZ_ENABLE_WAYLAND = "1";
+          NIX_OZONE_WL = "1";
+          NIX_OZONE = "1";
+        };
+        Context = {
+          filesystems = [
+            "/usr/share/icons:ro"
+            "~/.icons:ro"
+          ];
+        };
+      };
+    };
   };
 
   programs = {
