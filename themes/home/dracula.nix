@@ -156,10 +156,10 @@
          }
 
          #hibernate {
-     	background-image: image(url("./images/sleep.png"));
+          background-image: image(url("./images/sleep.png"));
          }
          #hibernate:focus {
-     	background-image: image(url("./images/sleep-hover.png"));
+     	    background-image: image(url("./images/sleep-hover.png"));
          }
   '';
   home.file = {
@@ -192,5 +192,4 @@
       '';
     };
   };
-
 }

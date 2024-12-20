@@ -198,7 +198,7 @@
         animate_manual_resizes = true
         close_special_on_empty = false
         new_window_takes_over_fullscreen = 2
-        initial_workspace_tracking = 2
+        #initial_workspace_tracking = 2
         middle_click_paste = false
         vfr = true
       }
