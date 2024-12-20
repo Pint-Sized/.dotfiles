@@ -16,10 +16,14 @@
     };
   };
 
-  programs.nixvim.keymaps = [{
-    mode = "n";
-    key = "<leader>mp";
-    action = "<cmd>MarkdownPreview<cr>";
-    options = { desc = "Toggle Markdown Preview"; };
-  }];
+  programs.nixvim.keymaps = [
+    {
+      mode = "n";
+      key = "<leader>mp";
+      action = "<cmd>MarkdownPreview<cr>";
+      options = {
+        desc = "Toggle Markdown Preview";
+      };
+    }
+  ];
 }

@@ -1,6 +1,6 @@
 {
   # ------ ZATHURA ---- #
-  programs.zathura = { 
+  programs.zathura = {
     enable = true;
     options = {
       guioptions = "none";

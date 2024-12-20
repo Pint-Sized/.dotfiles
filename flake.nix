@@ -33,14 +33,13 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, catppuccin, nur, nixpkgs-unstable
-    , nixvim, nix-flatpak, stylix, spicetify-nix, ... }:
+  outputs = { self, nixpkgs, home-manager, catppuccin, nur, nixpkgs-unstable, nixvim, nix-flatpak, stylix, spicetify-nix, ... }:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
       pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
-      spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
+      spicePkgs = spicetify-nix.legacyPackages.${pkgs.system};
     in {
       nixosConfigurations = {
         sisyphus = lib.nixosSystem {
@@ -71,6 +70,9 @@
             stylix.homeManagerModules.stylix
             spicetify-nix.homeManagerModules.default
           ];
+          extraSpecialArgs = {
+            inherit spicePkgs;
+          };
         };
       };
     };

@@ -1,4 +1,12 @@
-{ config, pkgs, catppuccin, lib, unstable-pkgs, nixvim, ... }:
+{
+  config,
+  pkgs,
+  catppuccin,
+  lib,
+  unstable-pkgs,
+  nixvim,
+  ...
+}:
 
 {
   imports = [
@@ -38,7 +46,7 @@
     # ----------- KITTY  ------------- #
     ./modules/kitty.nix
 
-    # --------- LIBREWOLF ----------- # 
+    # --------- LIBREWOLF ----------- #
     ./modules/librewolf.nix
 
     # ------------ MPV ------------ #
@@ -55,7 +63,7 @@
 
     # ---------- QT ----------- #
     ./modules/qt.nix
-    
+
     # ------- SPICETIFY ------ #
     ./modules/spicetify.nix
 

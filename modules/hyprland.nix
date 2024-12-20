@@ -4,7 +4,9 @@
   # --------- HYPRLAND -------- #
   wayland.windowManager.hyprland = {
     enable = true;
-    xwayland = { enable = true; };
+    xwayland = {
+      enable = true;
+    };
     plugins = [ pkgs.hyprlandPlugins.borders-plus-plus ];
     extraConfig = ''
 

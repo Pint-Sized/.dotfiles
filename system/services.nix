@@ -1,4 +1,10 @@
-{ inputs, config, pkgs, lib, ... }:
+{
+  inputs,
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 {
   services = {
@@ -15,12 +21,18 @@
           '';
         };
       };
-      libinput = { mouse = { accelProfile = "flat"; }; };
+      libinput = {
+        mouse = {
+          accelProfile = "flat";
+        };
+      };
       layout = "us";
       xkbVariant = "";
     };
 
-    udisks2 = { enable = true; };
+    udisks2 = {
+      enable = true;
+    };
 
     pipewire = {
       enable = true;
@@ -28,16 +40,28 @@
         enable = true;
         support32Bit = true;
       };
-      pulse = { enable = true; };
-      jack = { enable = true; };
+      pulse = {
+        enable = true;
+      };
+      jack = {
+        enable = true;
+      };
     };
 
-    gvfs = { enable = true; };
+    gvfs = {
+      enable = true;
+    };
 
-    devmon = { enable = true; };
+    devmon = {
+      enable = true;
+    };
 
-    openssh = { enable = true; };
-    blueman = { enable = true; };
+    openssh = {
+      enable = true;
+    };
+    blueman = {
+      enable = true;
+    };
     emacs = {
       enable = true;
       package = pkgs.emacs;

@@ -5,7 +5,9 @@
       separator = "  ";
       highlight = true;
       depthLimit = 5;
-      lsp = { autoAttach = true; };
+      lsp = {
+        autoAttach = true;
+      };
       icons = {
         Array = "󱃵  ";
         Boolean = "  ";

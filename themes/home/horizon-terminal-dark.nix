@@ -4,8 +4,7 @@
   stylix = {
     enable = true;
     image = ../../wallpapers/evening-sky.png;
-    base16Scheme =
-      "${pkgs.base16-schemes}/share/themes/horizon-terminal-dark.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/horizon-terminal-dark.yaml";
     cursor = {
       name = "Bibata-Modern-Classic";
       package = pkgs.bibata-cursors;
@@ -24,7 +23,9 @@
         package = pkgs.nerdfonts;
         name = "0xProto Nerd Font Mono";
       };
-      sizes = { terminal = 10; };
+      sizes = {
+        terminal = 10;
+      };
     };
     targets = {
       hyprland.enable = false;

@@ -1,4 +1,11 @@
-{ pkgs, pkgs-unstable, lib, config, nixvim, ... }:
+{
+  pkgs,
+  pkgs-unstable,
+  lib,
+  config,
+  nixvim,
+  ...
+}:
 
 {
   imports = [

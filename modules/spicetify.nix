@@ -1,19 +1,13 @@
-{ spicetify-nix, spicePkgs, nur, pkgs, pkgs-unstable, ... }:
-
+{ pkgs, spicePkgs, lib, ... }:
 {
+  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [ "spotify" ];
+
   programs.spicetify = {
     enable = true;
     enabledExtensions = with spicePkgs.extensions; [
       adblock
-      shuffle
-      fullAppDisplay
-      powerBar
-      goToSong
-      history
-      betterGenres
-      playNext
-      volumePercentage
-      beautifulLyrics
+      hidePodcasts
+      shuffle # shuffle+ (special characters are sanitized out of extension names)
     ];
   };
 }

@@ -1,9 +1,21 @@
-{ inputs, config, pkgs, lib, catppuccin, ... }: {
+{
+  inputs,
+  config,
+  pkgs,
+  lib,
+  catppuccin,
+  ...
+}:
+{
   users.users.fionnbennett = {
     shell = pkgs.fish;
     isNormalUser = true;
     description = "Fionn Bennett";
-    extraGroups = [ "networkmanager" "wheel" "openrazer" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "openrazer"
+    ];
     packages = with pkgs; [ ];
   };
   environment = {
@@ -18,12 +30,17 @@
       NIX_OZONE = "1";
       NIX_OZONE_WL = "1";
       MOZ_ENABLE_WAYLAND = "1";
-      STEAM_EXTRA_COMPAT_TOOLS_PATHS =
-        "/home/user/.steam/root/compatibilitytoold.d";
+      STEAM_EXTRA_COMPAT_TOOLS_PATHS = "/home/user/.steam/root/compatibilitytoold.d";
     };
   };
-  fonts.packages = with pkgs;
-    [ (nerdfonts.override { fonts = [ "0xProto" "NerdFontsSymbolsOnly" ]; }) ];
+  fonts.packages = with pkgs; [
+    (nerdfonts.override {
+      fonts = [
+        "0xProto"
+        "NerdFontsSymbolsOnly"
+      ];
+    })
+  ];
   fonts.fontconfig = {
     defaultFonts = {
       serif = [ "0xProto Nerd Font" ];
@@ -32,7 +49,9 @@
     };
   };
   boot = {
-    plymouth = { enable = true; };
+    plymouth = {
+      enable = true;
+    };
     loader = {
       timeout = 3;
       systemd-boot.enable = false;
@@ -46,7 +65,9 @@
       };
     };
   };
-  time = { timeZone = "Europe/Dublin"; };
+  time = {
+    timeZone = "Europe/Dublin";
+  };
   i18n = {
     defaultLocale = "en_IE.UTF-8";
     extraLocaleSettings = {
@@ -68,13 +89,28 @@
     };
   };
   console.keyMap = "us";
-  nix = { settings = { experimental-features = [ "nix-command" "flakes" ]; }; };
+  nix = {
+    settings = {
+      experimental-features = [
+        "nix-command"
+        "flakes"
+      ];
+    };
+  };
   xdg = {
     portal = {
       enable = true;
       extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
     };
   };
-  virtualisation = { libvirtd = { enable = true; }; };
-  security = { rtkit = { enable = true; }; };
+  virtualisation = {
+    libvirtd = {
+      enable = true;
+    };
+  };
+  security = {
+    rtkit = {
+      enable = true;
+    };
+  };
 }

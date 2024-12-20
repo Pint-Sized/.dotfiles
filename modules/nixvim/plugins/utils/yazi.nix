@@ -1,1 +1,5 @@
-{ programs.nixvim.plugins.yazi = { enable = true; }; }
+{
+  programs.nixvim.plugins.yazi = {
+    enable = true;
+  };
+}

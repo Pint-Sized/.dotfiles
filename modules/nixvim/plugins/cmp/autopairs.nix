@@ -1,5 +1,14 @@
-{ config, lib, pkgs, nixvim, unstable-pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  nixvim,
+  unstable-pkgs,
+  ...
+}:
 
 {
-  programs.nixvim.plugins.nvim-autopairs = { enable = true; };
+  programs.nixvim.plugins.nvim-autopairs = {
+    enable = true;
+  };
 }

@@ -1,1 +1,5 @@
-{ programs.nixvim.plugins.illuminate = { enable = true; }; }
+{
+  programs.nixvim.plugins.illuminate = {
+    enable = true;
+  };
+}

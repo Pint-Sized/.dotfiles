@@ -4,14 +4,24 @@
     settings = {
       options = {
         globalstatus = true;
-        extensions = [ "fzf" "neo-tree" ];
-        disabledFiletypes = { statusline = [ "startup" "alpha" ]; };
+        extensions = [
+          "fzf"
+          "neo-tree"
+        ];
+        disabledFiletypes = {
+          statusline = [
+            "startup"
+            "alpha"
+          ];
+        };
       };
       sections = {
-        lualine_a = [{
-          __unkeyed-1 = "mode";
-          icon = "";
-        }];
+        lualine_a = [
+          {
+            __unkeyed-1 = "mode";
+            icon = "";
+          }
+        ];
         lualine_b = [
           {
             __unkeyed-1 = "branch";
@@ -68,8 +78,8 @@
             '';
           }
         ];
-        lualine_y = [{ __unkeyed-1 = "progress"; }];
-        lualine_z = [{ __unkeyed-1 = "location"; }];
+        lualine_y = [ { __unkeyed-1 = "progress"; } ];
+        lualine_z = [ { __unkeyed-1 = "location"; } ];
       };
     };
   };

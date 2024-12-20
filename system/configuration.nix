@@ -1,4 +1,13 @@
-{ inputs, config, pkgs, lib, catppuccin, flatpak-nix, ... }: {
+{
+  inputs,
+  config,
+  pkgs,
+  lib,
+  catppuccin,
+  flatpak-nix,
+  ...
+}:
+{
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
