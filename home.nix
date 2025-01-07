@@ -64,6 +64,9 @@
     # ---------- QT ----------- #
     ./modules/qt.nix
 
+    # --------- ROFI ----------- #
+    ./modules/rofi.nix
+
     # ------- SPICETIFY ------ #
     ./modules/spicetify.nix
 

@@ -70,6 +70,7 @@
       readline
       remnote
       ripgrep
+      rofi-wayland
       rubyPackages_3_3.sqlite3
       rustup
       shotwell
@@ -81,7 +82,6 @@
       tk
       tldr
       udisks
-      ulauncher
       undollar
       unzip
       upscayl

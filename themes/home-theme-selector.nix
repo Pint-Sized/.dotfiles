@@ -55,5 +55,8 @@
       waybar.enable = false;
       hyprlock.enable = false;
     };
+    iconTheme = {
+      enable = true;
+    };
   };
 }
