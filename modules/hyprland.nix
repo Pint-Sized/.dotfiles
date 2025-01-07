@@ -295,7 +295,7 @@
       bind = $mainMod, B, exec, swaync-client -t
       bindr = $mainMod, L, exec, pkill wlogout || wlogout
       bind = $mainMod, P, exec, waypaper
-      bind = $mainMod, I, exec, kitty nvim
+      bind = $mainMod, I, exec, code --enable-features=UseOzonePlatform --ozone-platform=wayland
       bindn = , v, pass, ^discord$
       bind = $mainMod, O, exec, remnote --enable-features=UseOzonePlatform --ozone-platform=wayland
 

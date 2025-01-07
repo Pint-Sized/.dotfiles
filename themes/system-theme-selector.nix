@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 {
   imports = [
     #./system/3024.nix

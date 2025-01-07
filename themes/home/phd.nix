@@ -1,38 +1,6 @@
 { pkgs, ... }:
 
 {
-  stylix = {
-    enable = true;
-    image = ../../wallpapers/evening-sky.png;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/phd.yaml";
-    cursor = {
-      name = "Bibata-Modern-Classic";
-      package = pkgs.bibata-cursors;
-      size = 16;
-    };
-    fonts = {
-      serif = {
-        package = pkgs.nerdfonts;
-        name = "0xProto Nerd Font";
-      };
-      sansSerif = {
-        package = pkgs.nerdfonts;
-        name = "0xProto Nerd Font";
-      };
-      monospace = {
-        package = pkgs.nerdfonts;
-        name = "0xProto Nerd Font Mono";
-      };
-      sizes = {
-        terminal = 10;
-      };
-    };
-    targets = {
-      hyprland.enable = false;
-      waybar.enable = false;
-      hyprlock.enable = false;
-    };
-  };
   programs.nixvim.colorschemes.base16 = {
     enable = true;
     colorscheme = "phd";

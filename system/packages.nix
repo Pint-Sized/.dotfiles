@@ -14,6 +14,7 @@
     (with pkgs; [
       appeditor
       bat
+      base16-schemes
       brightnessctl
       btop
       ccache
@@ -87,6 +88,7 @@
       usbutils
       util-linux
       volctl
+      vscode
       waybar
       waypaper
       wdisplays
@@ -110,7 +112,6 @@
 
       # ----- UNSTABLE ----- #
       (with pkgs-unstable; [
-        base16-schemes
         home-manager
         hyprpolkitagent
         kitty
