@@ -7,5 +7,8 @@
       pkgs.rofi-calc
     ];
     location = "center";
+    extraConfig = {
+      anchor = "center";
+    };
   };
 }

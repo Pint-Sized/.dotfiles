@@ -1,7 +1,7 @@
 { pkgs, pkgs-unstable, ... }:
 
 {
-  plugins.conform-nvim = {
+  programs.nixvim.plugins.conform-nvim = {
     enable = true;
     settings = {
 

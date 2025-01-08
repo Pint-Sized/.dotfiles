@@ -1,7 +1,7 @@
 { lib, pkgs, pkgs-unstable, ... }:
 
 {
-  plugins = {
+  programs.nixvim.plugins = {
     lsp-format = {
       enable = true;
     };
@@ -88,7 +88,7 @@
       };
     };
   };
-  extraConfigLua = ''
+  programs.nixvim.extraConfigLua = ''
     local _border = "rounded"
 
     vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(

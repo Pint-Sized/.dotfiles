@@ -1,9 +1,9 @@
 { lib, config, ... }:
 {
-  plugins.trouble = {
+  programs.nixvim.plugins.trouble = {
     enable = true;
   };
-  keymaps = lib.mkIf config.plugins.trouble.enable [
+  programs.nixvim.keymaps = [
     {
       mode = "n";
       key = "<leader>xQ";

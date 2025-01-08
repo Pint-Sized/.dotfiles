@@ -66,6 +66,8 @@
       pokeget-rs
       polychromatic
       python3
+      python312Packages.libcst
+      python312Packages.python-lsp-server
       rclone
       readline
       remnote
@@ -112,13 +114,24 @@
 
       # ----- UNSTABLE ----- #
       (with pkgs-unstable; [
+        black
+        gopls
+        hclfmt
         home-manager
         hyprpolkitagent
         kitty
+        lua
+        markdown-oxide
         neovim-unwrapped
+        nixd
         nixfmt-rfc-style
+        prettierd
+        pyright
+        stylua
         ts_query_ls
         wttrbar
+        yamllint
+        yamlfmt
         zapzap
         zed-editor
       ])
@@ -145,10 +158,12 @@
       # --------- VIM PLUGINS --------- #
       (with pkgs-unstable.vimPlugins; [
         bufferline-nvim
+        conform-nvim
         diffview-nvim
         fzf-lua
         indent-blankline-nvim
         lualine-nvim
+        lspsaga-nvim
         markdown-preview-nvim
         mini-nvim
         neo-tree-nvim
@@ -156,10 +171,12 @@
         neotest
         neotest-plenary
         noice-nvim
+        none-ls-nvim
         nui-nvim
         nvim-autopairs
         nvim-cmp
         nvim-cursorline
+        nvim-lspconfig
         nvim-navic
         nvim-notify
         nvim-snippets
@@ -175,6 +192,7 @@
         telescope-undo-nvim
         todo-comments-nvim
         toggleterm-nvim
+        trouble-nvim
         vim-illuminate
         which-key-nvim
       ]);
