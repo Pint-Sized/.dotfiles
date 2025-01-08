@@ -26,7 +26,7 @@
   
   stylix = {
     enable = true;
-    image = ../../wallpapers/evening-sky.png;
+    image = ../wallpapers/evening-sky.png;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/uwunicorn.yaml";
     cursor = {
       name = "Bibata-Modern-Classic";
@@ -54,9 +54,6 @@
       hyprland.enable = false;
       waybar.enable = false;
       hyprlock.enable = false;
-    };
-    iconTheme = {
-      enable = true;
     };
   };
 }

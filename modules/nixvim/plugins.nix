@@ -23,6 +23,13 @@
     ./plugins/editor/todo-comments.nix
     ./plugins/editor/treesitter.nix
 
+    #LSP
+    ./plugins/lsp/conform.nix
+    ./plugins/lsp/lsp.nix
+    ./plugins/lsp/lspsaga.nix
+    ./plugins/lsp/none-ls.nix
+    ./plugins/lsp/trouble.nix
+
     # Snippets
     ./plugins/snippets/luasnip.nix
 
