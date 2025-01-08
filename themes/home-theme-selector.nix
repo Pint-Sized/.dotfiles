@@ -54,7 +54,6 @@
       hyprland.enable = false;
       waybar.enable = false;
       hyprlock.enable = false;
-      ghostty.enable = false;
     };
   };
 }

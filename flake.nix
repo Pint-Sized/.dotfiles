@@ -23,7 +23,7 @@
     nix-flatpak.url = "github:gmodena/nix-flatpak";
 
     stylix = {
-      url = "github:danth/stylix";
+      url = "github:danth/stylix/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

@@ -1,10 +1,6 @@
 {
-  inputs,
-  config,
   pkgs,
   pkgs-unstable,
-  lib,
-  nix-flatpak,
   ...
 }:
 {
@@ -22,6 +18,7 @@
       clang
       cliphist
       cmake
+      cool-retro-term
       coreutils
       cpu-x
       deluge
@@ -209,6 +206,7 @@
       "org.onlyoffice.desktopeditors"
       "net.codelogistics.webapps"
       "at.vintagestory.VintageStory"
+      "org.contourterminal.Contour"
     ];
     overrides = {
       global = {
@@ -247,5 +245,10 @@
   };
 
   # ------ NIXPKGS SETTINGS ------ #
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs = {
+    config = {
+      allowUnfree = true;
+      allowBroken = true;
+    };
+  };
 }
