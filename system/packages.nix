@@ -11,6 +11,7 @@
       appeditor
       bat
       base16-schemes
+      black
       brightnessctl
       btop
       ccache
@@ -105,13 +106,17 @@
       zip
       zlib
       thunderbird
+
+      # testing
+      walker
+      fuzzel
+
     ])
 
     ++
 
       # ----- UNSTABLE ----- #
       (with pkgs-unstable; [
-        black
         gopls
         hclfmt
         home-manager
@@ -126,6 +131,7 @@
         pyright
         stylua
         ts_query_ls
+        ulauncher
         wttrbar
         yamllint
         yamlfmt

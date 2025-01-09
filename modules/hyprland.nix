@@ -34,18 +34,19 @@
       #################
                           
       exec-once = sleep 4
-      exec-once = hyprctl setcursor 16	
+      exec-once = hyprctl setcursor 16 &
       exec-once = swww-daemon &
       exec-once = sleep 2
+      exec-once = ulauncher --no-window-shadow &
       exec-once = waybar &
       exec-once = udiskie &
-      exec-once = wl-paste --watch cliphist store
-      exec-once = pypr
-      exec-once = pushd ~/.chevron; python3 -m http.server 9999; popd;
-      exec-once = ~/.dotfiles/scripts/auto-pull
-      exec-once = systemctl --user start hyprpolkitagent
-      exec-once = pkexec swayosd-libinput-backend
-      exec-once = swayosd-server
+      exec-once = wl-paste --watch cliphist store &
+      exec-once = pypr &
+      exec-once = pushd ~/.chevron; python3 -m http.server 9999; popd; &
+      exec-once = ~/.dotfiles/scripts/auto-pull &
+      exec-once = systemctl --user start hyprpolkitagent &
+      exec-once = pkexec swayosd-libinput-backend &
+      exec-once = swayosd-server &
 
       ####################
       ### START-UP APPS###
@@ -290,7 +291,7 @@
       bind = $mainMod, S, togglespecialworkspace, magic
       bind = $mainMod SHIFT, S, movetoworkspace, special:magic
 
-      bindr = $mainMod, N, exec, rofi -show drun
+      bindr = $mainMod, N, exec, ulauncher-toggle
       bind = $mainMod, B, exec, swaync-client -t
       bindr = $mainMod, L, exec, pkill wlogout || wlogout
       bind = $mainMod, P, exec, waypaper

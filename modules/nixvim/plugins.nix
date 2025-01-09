@@ -1,13 +1,4 @@
 {
-  pkgs,
-  pkgs-unstable,
-  lib,
-  config,
-  nixvim,
-  ...
-}:
-
-{
   imports = [
     # Completions
     ./plugins/cmp/autopairs.nix

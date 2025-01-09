@@ -8,4 +8,5 @@
     ];
     location = "center";
   };
+  programs.fuzzel.enable = true;
 }

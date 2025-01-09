@@ -1,6 +1,8 @@
 { pkgs, ... }:
 
 {
+  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/uwunicorn.yaml";
+
   programs.nixvim.colorschemes.base16 = {
     enable = true;
     colorscheme = "uwunicorn";

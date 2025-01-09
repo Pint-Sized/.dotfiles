@@ -1,10 +1,85 @@
 { pkgs, ... }:
 
 {
-  programs.nixvim.colorschemes.dracula-nvim.enable = true;
+  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/dracula.yaml";
 
-  programs.fish.functions = {
-    fish_greeting = "pokeget noibat --hide-name | fastfetch --file-raw -";
+  programs = {
+    nixvim.colorschemes.base16 = {
+      enable = true;
+      colorscheme = "dracula";
+    };
+    fish.functions = {
+      fish_greeting = "pokeget noibat --hide-name | fastfetch --file-raw -";
+    };
+    wlogout.style = ''
+       window {
+              font-family: "0xProto Nerd Font";
+              font-size: 14pt;
+              color: #f8f8f2; /* text */
+              background-color: rgba(54, 52, 71, 0.5);
+          }
+
+          button {
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: 25%;
+              border: none;
+              background-color: rgba(54, 52, 71, 0);
+              margin: 5px;
+              transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+          }
+
+          button:hover {
+              background-color: rgba(54, 52, 71, 0.1);
+          }
+
+          button:focus {
+              background-color: #bd93f9;
+              color: #282a36;
+          }
+
+          #lock {
+              background-image: image(url("./images/lock.png"));
+          }
+          #lock:focus {
+              background-image: image(url("./images/lock-hover.png"));
+          }
+
+          #logout {
+              background-image: image(url("./images/logout.png"));
+          }
+          #logout:focus {
+              background-image: image(url("./images/logout-hover.png"));
+          }
+
+          #suspend {
+              background-image: image(url("./images/sleep.png"));
+          }
+          #suspend:focus {
+              background-image: image(url("./images/sleep-hover.png"));
+          }
+
+          #shutdown {
+              background-image: image(url("./images/power.png"));
+          }
+          #shutdown:focus {
+              background-image: image(url("./images/power-hover.png"));
+          }
+
+          #reboot {
+              background-image: image(url("./images/restart.png"));
+          }
+          #reboot:focus {
+              background-image: image(url("./images/restart-hover.png"));
+          }
+
+          #hibernate {
+           background-image: image(url("./images/sleep.png"));
+          }
+          #hibernate:focus {
+      	    background-image: image(url("./images/sleep-hover.png"));
+          }
+    '';
   };
   home.file = {
     ".dotfiles/modules/fastfetch/theme" = {
@@ -13,8 +88,6 @@
         echo Dracula
       '';
     };
-  };
-  home.file = {
     ".config/hypr/theme.conf" = {
       enable = true;
       text = ''
@@ -36,9 +109,6 @@
         $base0F = rgb(ff79c6)
       '';
     };
-  };
-
-  home.file = {
     ".config/waybar/theme.css" = {
       enable = true;
       text = ''
@@ -60,77 +130,6 @@
         @define-color base0F #bd93f9;
       '';
     };
-  };
-  programs.wlogout.style = ''
-    window {
-             font-family: "0xProto Nerd Font";
-             font-size: 14pt;
-             color: #f8f8f2; /* text */
-             background-color: rgba(54, 52, 71, 0.5);
-         }
-
-         button {
-             background-repeat: no-repeat;
-             background-position: center;
-             background-size: 25%;
-             border: none;
-             background-color: rgba(54, 52, 71, 0);
-             margin: 5px;
-             transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
-         }
-
-         button:hover {
-             background-color: rgba(54, 52, 71, 0.1);
-         }
-
-         button:focus {
-             background-color: #bd93f9;
-             color: #282a36;
-         }
-
-         #lock {
-             background-image: image(url("./images/lock.png"));
-         }
-         #lock:focus {
-             background-image: image(url("./images/lock-hover.png"));
-         }
-
-         #logout {
-             background-image: image(url("./images/logout.png"));
-         }
-         #logout:focus {
-             background-image: image(url("./images/logout-hover.png"));
-         }
-
-         #suspend {
-             background-image: image(url("./images/sleep.png"));
-         }
-         #suspend:focus {
-             background-image: image(url("./images/sleep-hover.png"));
-         }
-
-         #shutdown {
-             background-image: image(url("./images/power.png"));
-         }
-         #shutdown:focus {
-             background-image: image(url("./images/power-hover.png"));
-         }
-
-         #reboot {
-             background-image: image(url("./images/restart.png"));
-         }
-         #reboot:focus {
-             background-image: image(url("./images/restart-hover.png"));
-         }
-
-         #hibernate {
-          background-image: image(url("./images/sleep.png"));
-         }
-         #hibernate:focus {
-     	    background-image: image(url("./images/sleep-hover.png"));
-         }
-  '';
-  home.file = {
     ".config/ulauncher/user-themes/theme/colours.css" = {
       text = ''
         @define-color background #282a36;
@@ -141,8 +140,6 @@
         @define-color highlight #ffb86c;
       '';
     };
-  };
-  home.file = {
     ".config/ulauncher/user-themes/theme/manifest.json" = {
       text = ''
               {

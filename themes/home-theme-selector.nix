@@ -10,7 +10,7 @@
     #./home/google-dark.nix
     #./home/google-light.nix # light mode with accents
     #./home/greenscreen.nix
-    #./home/gruvbox-material-dark-soft.nix
+    ./home/gruvbox-material-dark-soft.nix
     #./home/horizon-terminal-dark.nix
     #./home/nord.nix
     #./home/pasque.nix
@@ -20,14 +20,13 @@
     #./home/snazzy.nix
     #./home/spaceduck.nix
     #./home/tokyo-night-moon.nix
-    ./home/uwunicorn.nix
+    #./home/uwunicorn.nix
     #./home/xcode-dusk.nix
   ];
-  
+
   stylix = {
     enable = true;
     image = ../wallpapers/evening-sky.png;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/uwunicorn.yaml";
     cursor = {
       name = "Bibata-Modern-Classic";
       package = pkgs.bibata-cursors;
@@ -54,6 +53,7 @@
       hyprland.enable = false;
       waybar.enable = false;
       hyprlock.enable = false;
+      gtk.flatpakSupport.enable = true;
     };
   };
 }

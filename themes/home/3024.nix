@@ -1,71 +1,18 @@
 { pkgs, ... }:
 
 {
-  programs.nixvim.colorschemes.base16 = {
-    enable = true;
-    colorscheme = "3024";
-  };
+  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/3024.yaml";
 
-  programs.fish.functions = {
-    fish_greeting = "pokeget pidove --hide-name | fastfetch --file-raw -";
-  };
-  home.file = {
-    ".dotfiles/modules/fastfetch/theme" = {
-      executable = true;
-      text = ''
-        echo 3024
-      '';
-    };
-  };
-  home.file = {
-    ".config/hypr/theme.conf" = {
+  programs = {
+    nixvim.colorschemes.base16 = {
       enable = true;
-      text = ''
-        $base00 = rgb(090300)
-        $base01 = rgb(3a3432)
-        $base02 = rgb(4a4543)
-        $base03 = rgb(5c5855)
-        $base04 = rgb(807d7c)
-        $base05 = rgb(a5a2a2)
-        $base06 = rgb(d6d5d4)
-        $base07 = rgb(f7f7f7)
-        $base08 = rgb(db2d20)
-        $base09 = rgb(e8bbd0)
-        $base0A = rgb(fded02)
-        $base0B = rgb(01a252)
-        $base0C = rgb(b5e4f4)
-        $base0D = rgb(01a0e4)
-        $base0E = rgb(a16a94)
-        $base0F = rbg(cdab53)
-      '';
+      colorscheme = "3024";
     };
-  };
-
-  home.file = {
-    ".config/waybar/theme.css" = {
-      enable = true;
-      text = ''
-        @define-color base00 #090300;
-        @define-color base01 #3a3432;
-        @define-color base02 #4a4543;
-        @define-color base03 #5c5855;
-        @define-color base04 #807d7c;
-        @define-color base05 #a5a2a2; 
-        @define-color base06 #d6d5d4;
-        @define-color base07 #f7f7f7;
-        @define-color base08 #db2d20;
-        @define-color base09 #e8bbd0;
-        @define-color base0A #fded02;
-        @define-color base0B #01a252;
-        @define-color base0C #b5e4f4;
-        @define-color base0D #01a0e4;
-        @define-color base0E #a16a94;
-        @define-color base0F #cdab53;
-      '';
+    fish.functions = {
+      fish_greeting = "pokeget pidove --hide-name | fastfetch --file-raw -";
     };
-  };
-  programs.wlogout.style = ''
-    window {
+    wlogout.style = ''
+      window {
              font-family: "0xProto Nerd Font";
              font-size: 14pt;
              color: #a5a2a2; /* text */
@@ -127,14 +74,62 @@
          }
 
          #hibernate {
-     	background-image: image(url("./images/sleep.png"));
+            background-image: image(url("./images/sleep.png"));
          }
          #hibernate:focus {
-     	background-image: image(url("./images/sleep-hover.png"));
+            background-image: image(url("./images/sleep-hover.png"));
          }
-
-  '';
+    '';
+  };
   home.file = {
+    ".dotfiles/modules/fastfetch/theme" = {
+      executable = true;
+      text = ''
+        echo 3024
+      '';
+    };
+    ".config/hypr/theme.conf" = {
+      enable = true;
+      text = ''
+        $base00 = rgb(090300)
+        $base01 = rgb(3a3432)
+        $base02 = rgb(4a4543)
+        $base03 = rgb(5c5855)
+        $base04 = rgb(807d7c)
+        $base05 = rgb(a5a2a2)
+        $base06 = rgb(d6d5d4)
+        $base07 = rgb(f7f7f7)
+        $base08 = rgb(db2d20)
+        $base09 = rgb(e8bbd0)
+        $base0A = rgb(fded02)
+        $base0B = rgb(01a252)
+        $base0C = rgb(b5e4f4)
+        $base0D = rgb(01a0e4)
+        $base0E = rgb(a16a94)
+        $base0F = rbg(cdab53)
+      '';
+    };
+    ".config/waybar/theme.css" = {
+      enable = true;
+      text = ''
+        @define-color base00 #090300;
+        @define-color base01 #3a3432;
+        @define-color base02 #4a4543;
+        @define-color base03 #5c5855;
+        @define-color base04 #807d7c;
+        @define-color base05 #a5a2a2; 
+        @define-color base06 #d6d5d4;
+        @define-color base07 #f7f7f7;
+        @define-color base08 #db2d20;
+        @define-color base09 #e8bbd0;
+        @define-color base0A #fded02;
+        @define-color base0B #01a252;
+        @define-color base0C #b5e4f4;
+        @define-color base0D #01a0e4;
+        @define-color base0E #a16a94;
+        @define-color base0F #cdab53;
+      '';
+    };
     ".config/ulauncher/user-themes/theme/colours.css" = {
       text = ''
         @define-color background #090300;
@@ -145,8 +140,6 @@
         @define-color highlight #e8bbd0;
       '';
     };
-  };
-  home.file = {
     ".config/ulauncher/user-themes/theme/manifest.json" = {
       text = ''
               {
