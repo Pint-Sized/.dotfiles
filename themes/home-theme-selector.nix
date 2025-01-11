@@ -10,7 +10,7 @@
     #./home/google-dark.nix
     #./home/google-light.nix # light mode with accents
     #./home/greenscreen.nix
-    ./home/gruvbox-material-dark-soft.nix
+    #./home/gruvbox-material-dark-soft.nix
     #./home/horizon-terminal-dark.nix
     #./home/nord.nix
     #./home/pasque.nix
@@ -20,7 +20,7 @@
     #./home/snazzy.nix
     #./home/spaceduck.nix
     #./home/tokyo-night-moon.nix
-    #./home/uwunicorn.nix
+    ./home/uwunicorn.nix
     #./home/xcode-dusk.nix
   ];
 

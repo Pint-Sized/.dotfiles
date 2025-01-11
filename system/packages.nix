@@ -1,10 +1,6 @@
-{
-  pkgs,
-  pkgs-unstable,
-  ...
-}:
-{
+{ pkgs, pkgs-unstable, ... }:
 
+{
   # -------- STABLE ------- #
   environment.systemPackages =
     (with pkgs; [
@@ -84,11 +80,9 @@
       udisks
       undollar
       unzip
-      upscayl
       usbutils
       util-linux
       volctl
-      vscode
       waybar
       waypaper
       wdisplays
@@ -106,10 +100,6 @@
       zip
       zlib
       thunderbird
-
-      # testing
-      walker
-      fuzzel
 
     ])
 
@@ -137,13 +127,6 @@
         yamlfmt
         zapzap
         zed-editor
-      ])
-
-    ++
-
-      # -------- HYPRLAND PLUGINS ---------- #
-      (with pkgs-unstable.hyprlandPlugins; [
-        #borders-plus-plus
       ])
 
     ++

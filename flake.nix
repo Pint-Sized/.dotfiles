@@ -7,7 +7,7 @@
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
     nur.url = "github:nix-community/NUR/2b457ac396f54d0e184f658d852080a6bb6ce80b";
-    
+
     home-manager = {
       url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -33,14 +33,28 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, catppuccin, nur, nixpkgs-unstable, nixvim, nix-flatpak, stylix, spicetify-nix, ... }:
+  outputs =
+    {
+      self,
+      nixpkgs,
+      home-manager,
+      catppuccin,
+      nur,
+      nixpkgs-unstable,
+      nixvim,
+      nix-flatpak,
+      stylix,
+      spicetify-nix,
+      ...
+    }:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
       pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
       spicePkgs = spicetify-nix.legacyPackages.${pkgs.system};
-    in {
+    in
+    {
       nixosConfigurations = {
         sisyphus = lib.nixosSystem {
           inherit system;
@@ -53,8 +67,8 @@
             nix-flatpak.nixosModules.nix-flatpak
             # dodgy spotify NUR repository
             #({ config, ... }: {
-              #environment.systemPackages =
-                #[ config.nur.repos.nltch.spotify-adblock ];
+            #environment.systemPackages =
+            #[ config.nur.repos.nltch.spotify-adblock ];
             #})
           ];
           specialArgs = { inherit pkgs-unstable; };
@@ -72,6 +86,7 @@
           ];
           extraSpecialArgs = {
             inherit spicePkgs;
+            inherit pkgs-unstable;
           };
         };
       };

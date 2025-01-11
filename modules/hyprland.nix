@@ -7,7 +7,12 @@
     xwayland = {
       enable = true;
     };
-    plugins = [ pkgs.hyprlandPlugins.borders-plus-plus ];
+    plugins = with pkgs.hyprlandPlugins; [
+      borders-plus-plus
+      hyprwinwrap
+      hyprfocus
+      hyprsplit
+    ];
     extraConfig = ''
 
       source=~/.config/hypr/theme.conf
@@ -104,14 +109,42 @@
       plugin {
         borders-plus-plus {
           add_borders = 1 # 0 - 9
-
           col.border_1 = $base00
           col.border_2 = $base0E
-
           border_size_1 = 10
           border_size_2 = -1
-
           natural_rounding = on
+        }
+        
+        hyprwinwrap {
+          class = kitty-bg
+        }    
+        
+        hyprfocus {
+          enabled = yes
+          animate_floating = yes
+          animate_workspacechange = yes
+          focus_animation = shrink
+          bezier = bezIn, 0.5,0.0,1.0,0.5
+          bezier = bezOut, 0.0,0.5,0.5,1.0
+          bezier = overshot, 0.05, 0.9, 0.1, 1.05
+          bezier = smoothOut, 0.36, 0, 0.66, -0.56
+          bezier = smoothIn, 0.25, 1, 0.5, 1
+          bezier = realsmooth, 0.28,0.29,.69,1.08
+          flash {
+            flash_opacity = 0.95
+            in_bezier = realsmooth
+            in_speed = 0.5
+            out_bezier = realsmooth
+            out_speed = 3
+          }
+          shrink {
+            shrink_percentage = 0.99
+            in_bezier = realsmooth
+            in_speed = 1
+            out_bezier = realsmooth
+            out_speed = 2
+          }
         }
       }
 
@@ -157,7 +190,7 @@
           new_optimizations = true
           ignore_opacity = true;
           contrast = 1.17
-          popups = false
+          popups = true;
           xray = true
         }
 

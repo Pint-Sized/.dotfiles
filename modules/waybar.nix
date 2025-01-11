@@ -22,7 +22,7 @@
           #"cava"
         ];
         "modules-center" = [
-          "clock"
+          "clock#clock1"
           "custom/weather"
         ];
         "modules-right" = [
@@ -221,7 +221,7 @@
           "on-click" = "ulauncher-toggle";
           "tooltip" = false;
         };
-        "clock" = {
+        "clock#clock1" = {
           "timezone" = "Europe/Dublin";
           "tooltip-format" = ''
             <big>{:%Y %B}</big>
@@ -237,10 +237,26 @@
           "return-type" = "json";
         };
       }
+      {
+        "exclusive" = false;
+        "layer" = "bottom";
+        "reload_style_on_change" = true;
+        "position" = "top";
+        "margin-top" = 100;
+        "passthrough" = true;
+
+        "modules-center" = [
+          "clock#clock2"
+        ];
+        "clock#clock2" = {
+          "timezone" = "Europe/Dublin";
+          "format" = "{:%I:%M %p}";
+        };
+      }
     ];
     style = ''
-          @import "theme.css";
-          * {
+        @import "theme.css";
+        * {
             font-family: "0xProto Nerd Font";
             font-size: 13px;
             min-height: 0;
@@ -278,11 +294,11 @@
             color: @base0C;
             border-radius: 1rem;
           }
+          
           #custom-launcher {
             color: @base05;
             border-radius: 1rem 0px 0px 1rem;
             margin-left: 6px;
-
           }
 
           #custom-launcher:hover {
@@ -292,7 +308,7 @@
 
           #tray,
           #backlight,
-          #clock,
+          #clock.clock1,
           #battery,
           #pulseaudio,
           #cpu,
@@ -319,20 +335,20 @@
             margin: 5px 0;
           }
 
-          #clock {
+          #clock.clock1 {
             color: @base07;
             border-radius: 1rem 0px 0px 1rem;
           }
 
           #custom-weather {
-      	color: @base0F;
-      	border-radius: 0px 1rem 1rem 0px;
+            color: @base0F;
+        	  border-radius: 0px 1rem 1rem 0px;
           }
 
           #battery {
             color: @base0B;
           }
-
+          
           #battery.charging {
             color: @base0B;
           }
@@ -356,55 +372,60 @@
           }
 
           #custom-notification {
-      	border-radius: 1rem 0px 0px 1rem;
-      	color: @base0F;
+      	    border-radius: 1rem 0px 0px 1rem;
+      	    color: @base0F;
           }
 
           #custom-lock {
-              border-radius: 0rem 0px 0px 0rem;
-              color: @base07;
+            border-radius: 0rem 0px 0px 0rem;
+            color: @base07;
           }
 
           #custom-power {
-              border-radius: 0px 1rem 1rem 0px;
-              color: @base08;
+            border-radius: 0px 1rem 1rem 0px;
+            color: @base08;
           }
 
           #network {
-      	border-radius: 0rem 0px 0px 0rem;
-      	color: @base07;
+      	    border-radius: 0rem 0px 0px 0rem;
+      	    color: @base07;
           }
 
           #memory {
-      	color: @base0E;
-      	border-radius: 0px 1rem 1rem 0px;
-      	margin-right: 1rem;
+      	    color: @base0E;
+      	    border-radius: 0px 1rem 1rem 0px;
+      	    margin-right: 1rem;
           }
 
           #temperature {
-      	color: @base0A;
-        }
+      	    color: @base0A;
+          }
 
           #cpu {
-      	color: @base07;
+        	  color: @base07;
           }
 
           #custom-music.Playing {
-              background: @base02;
-              color: @base0E;
-              border-radius: 1rem;
+            background: @base02;
+            color: @base0E;
+            border-radius: 1rem;
           }
 
           #custom-music.Paused,
           #custom-music.Stopped {
-              background: @base02;
-              color: @subtext0;
-              border-radius: 1rem;
+            background: @base02;
+            color: @subtext0;
+            border-radius: 1rem;
           }
 
           #cava {
             color: @base05;
             border-radius: 0px 1rem 1rem 0px;
+          }
+
+          #clock.clock2 {
+            color: @base05;
+            font-size: 80px;
           }
     '';
   };
