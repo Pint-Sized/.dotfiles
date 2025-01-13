@@ -242,15 +242,15 @@
         "layer" = "bottom";
         "reload_style_on_change" = true;
         "position" = "top";
-        "margin-top" = 100;
+        "margin-top" = 150;
         "passthrough" = true;
 
         "modules-center" = [
-          "clock#day"
+          "custom/day"
         ];
-        "clock#day" = {
-          "timezone" = "Europe/Dublin";
-          "format" = "{:%A}";
+        "custom/day" = {
+          "exec" = "date +'%^A'";
+          "format" = "{}";
         };
       }
       {
@@ -258,7 +258,7 @@
         "layer" = "bottom";
         "reload_style_on_change" = true;
         "position" = "top";
-        "margin-top" = 100;
+        "margin-top" = 240;
         "passthrough" = true;
 
         "modules-center" = [
@@ -266,7 +266,7 @@
         ];
         "clock#date" = {
           "timezone" = "Europe/Dublin";
-          "format" = "{:%d %B %Y}";
+          "format" = "{:%d %B, %Y}";
         };
       }
       {
@@ -274,7 +274,7 @@
         "layer" = "bottom";
         "reload_style_on_change" = true;
         "position" = "top";
-        "margin-top" = 100;
+        "margin-top" = 275;
         "passthrough" = true;
 
         "modules-center" = [
@@ -282,7 +282,7 @@
         ];
         "clock#time" = {
           "timezone" = "Europe/Dublin";
-          "format" = "{:- %I:%M %p -}";
+          "format" = "- {:%I:%M %p} -";
         };
       }
     ];
@@ -455,15 +455,22 @@
             border-radius: 0px 1rem 1rem 0px;
           }
 
-          #clock.day {
-            color: @base05;
+          #custom-day {
+            font-family: "anurati";
             font-size: 80px;
+            color: @base07;
+            letter-spacing: 50px;
           }
 
-          #clock.date,
+          #clock.date {
+            color: @base07;
+            font-size: 20px;
+            font-weight: bold;
+          }
           #clock.time {
-            color: @base05;
-            font-size: 40px;
+            color: @base07;
+            font-size: 15px;
+            font-weight: bold;
           }
     '';
   };
