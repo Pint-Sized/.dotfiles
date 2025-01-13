@@ -246,11 +246,43 @@
         "passthrough" = true;
 
         "modules-center" = [
-          "clock#clock2"
+          "clock#day"
         ];
-        "clock#clock2" = {
+        "clock#day" = {
           "timezone" = "Europe/Dublin";
-          "format" = "{:%I:%M %p}";
+          "format" = "{:%A}";
+        };
+      }
+      {
+        "exclusive" = false;
+        "layer" = "bottom";
+        "reload_style_on_change" = true;
+        "position" = "top";
+        "margin-top" = 100;
+        "passthrough" = true;
+
+        "modules-center" = [
+          "clock#date"
+        ];
+        "clock#date" = {
+          "timezone" = "Europe/Dublin";
+          "format" = "{:%d %B %Y}";
+        };
+      }
+      {
+        "exclusive" = false;
+        "layer" = "bottom";
+        "reload_style_on_change" = true;
+        "position" = "top";
+        "margin-top" = 100;
+        "passthrough" = true;
+
+        "modules-center" = [
+          "clock#time"
+        ];
+        "clock#time" = {
+          "timezone" = "Europe/Dublin";
+          "format" = "{:- %I:%M %p -}";
         };
       }
     ];
@@ -423,9 +455,15 @@
             border-radius: 0px 1rem 1rem 0px;
           }
 
-          #clock.clock2 {
+          #clock.day {
             color: @base05;
             font-size: 80px;
+          }
+
+          #clock.date,
+          #clock.time {
+            color: @base05;
+            font-size: 40px;
           }
     '';
   };
