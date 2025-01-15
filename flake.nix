@@ -22,10 +22,10 @@
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    firefox-gnome-theme = {
-      url = "github:rafaelmardojai/firefox-gnome-theme";
-      flake = false;
-    };
+    #firefox-gnome-theme = {
+    #url = "github:rafaelmardojai/firefox-gnome-theme";
+    #flake = false;
+    #};
   };
 
   outputs =
@@ -38,7 +38,7 @@
       nix-flatpak,
       stylix,
       spicetify-nix,
-      firefox-gnome-theme,
+      #firefox-gnome-theme,
       ...
     }:
     let
@@ -75,7 +75,7 @@
           extraSpecialArgs = {
             inherit spicePkgs;
             inherit pkgs-unstable;
-            inherit firefox-gnome-theme;
+            #inherit firefox-gnome-theme;
           };
         };
       };

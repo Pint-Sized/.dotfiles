@@ -229,7 +229,7 @@
           "format" = "{:%a, %d %b, %I:%M %p}";
           "on-click" = "pkill waybar; waybar";
         };
-        "custom/weather" = {
+        "custom/weather#main" = {
           "format" = "{}°";
           "tooltip" = true;
           "interval" = 3600;
@@ -283,6 +283,63 @@
         "clock#time" = {
           "timezone" = "Europe/Dublin";
           "format" = "- {:%I:%M %p} -";
+        };
+      }
+      {
+        "exclusive" = false;
+        "layer" = "bottom";
+        "reload_style_on_change" = true;
+        "position" = "top";
+        "margin-top" = 275;
+        "passthrough" = true;
+
+        "modules-center" = [
+          "custom-weather#icon"
+        ];
+        "custom/weather#icon" = {
+          "format" = "{}°";
+          "tooltip" = true;
+          "interval" = 3600;
+          "exec" = "wttrbar --location New+Ross";
+          "return-type" = "json";
+        };
+      }
+      {
+        "exclusive" = false;
+        "layer" = "bottom";
+        "reload_style_on_change" = true;
+        "position" = "top";
+        "margin-top" = 275;
+        "passthrough" = true;
+
+        "modules-center" = [
+          "custom/weather#location"
+        ];
+        "custom/weather#location" = {
+          "format" = "{}°";
+          "tooltip" = true;
+          "interval" = 3600;
+          "exec" = "wttrbar --location New+Ross";
+          "return-type" = "json";
+        };
+      }
+      {
+        "exclusive" = false;
+        "layer" = "bottom";
+        "reload_style_on_change" = true;
+        "position" = "top";
+        "margin-top" = 275;
+        "passthrough" = true;
+
+        "modules-center" = [
+          "custom/weather#temperature"
+        ];
+        "custom/weather#temperature" = {
+          "format" = "{}°";
+          "tooltip" = true;
+          "interval" = 3600;
+          "exec" = "wttrbar --location New+Ross";
+          "return-type" = "json";
         };
       }
     ];
@@ -344,7 +401,7 @@
           #battery,
           #pulseaudio,
           #cpu,
-          #custom-weather,
+          #custom-weather.main,
           #custom-music,
           #music,
           #cava,
@@ -372,7 +429,7 @@
             border-radius: 1rem 0px 0px 1rem;
           }
 
-          #custom-weather {
+          #custom-weather.main {
             color: @base0F;
         	  border-radius: 0px 1rem 1rem 0px;
           }

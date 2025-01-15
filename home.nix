@@ -28,9 +28,6 @@
     # ---------- GIT --------------#
     ./modules/git.nix
 
-    # ------- GNOME-TEXT-EDITOR ------- #
-    ./modules/gnome-text-editor.nix
-
     # ---------- GTK ------------- #
     ./modules/gtk.nix
 
