@@ -19,9 +19,6 @@
     # ------- FASTFETCH -------- #
     ./modules/fastfetch/fastfetch.nix
 
-    # ---------- FIREFOX ---------- #
-    ./modules/firefox.nix
-
     # ----------- FISH ------------- #
     ./modules/fish.nix
 

@@ -5,7 +5,7 @@
     #./home/3024.nix # dusky oranges
     #./home/black-metal-venom.nix # blacked out
     #./home/catppuccin-mocha-mauve.nix # the goat
-    ./home/darkviolet.nix
+    #./home/darkviolet.nix
     #./home/dracula.nix # classic
     #./home/eighties.nix # classy greys
     #./home/google-dark.nix
@@ -21,7 +21,7 @@
     #./home/snazzy.nix
     #./home/spaceduck.nix
     #./home/tokyo-night-moon.nix
-    #./home/uwunicorn.nix
+    ./home/uwunicorn.nix
     #./home/xcode-dusk.nix
   ];
 
