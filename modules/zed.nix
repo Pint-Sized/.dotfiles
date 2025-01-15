@@ -1,0 +1,5 @@
+{
+  programs.zed = {
+    enable = true;
+  };
+}

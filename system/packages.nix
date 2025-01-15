@@ -101,6 +101,8 @@
       zlib
       thunderbird
 
+      #testing
+      gnome-text-editor
     ])
 
     ++

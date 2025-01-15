@@ -28,6 +28,9 @@
     # ---------- GIT --------------#
     ./modules/git.nix
 
+    # ------- GNOME-TEXT-EDITOR ------- #
+    ./modules/gnome-text-editor.nix
+
     # ---------- GTK ------------- #
     ./modules/gtk.nix
 
@@ -90,6 +93,9 @@
 
     # --------- ZATHURA ---------- #
     ./modules/zathura.nix
+
+    # --------- ZED --------- #
+    ./modules/zed.nix
   ];
 
   programs.home-manager.enable = true; # allows home-manager to manage itself
