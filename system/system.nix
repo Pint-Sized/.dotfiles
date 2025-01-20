@@ -1,11 +1,4 @@
-{
-  inputs,
-  config,
-  pkgs,
-  lib,
-  catppuccin,
-  ...
-}:
+{ pkgs, ... }:
 {
   users.users.fionnbennett = {
     shell = pkgs.fish;
@@ -16,7 +9,6 @@
       "wheel"
       "openrazer"
     ];
-    packages = with pkgs; [ ];
   };
   environment = {
     variables = {

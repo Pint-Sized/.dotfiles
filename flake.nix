@@ -42,7 +42,7 @@
       ...
     }:
     let
-      lib = nixpkgs.lib;
+      inherit (nixpkgs.lib) lib;
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
       pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
@@ -50,10 +50,23 @@
     in
     {
       nixosConfigurations = {
-        sisyphus = lib.nixosSystem {
+        desktop = lib.nixosSystem {
           inherit system;
           modules = [
             ./system/configuration.nix
+            ./hosts/desktop/default.nix
+            catppuccin.nixosModules.catppuccin
+            nixvim.nixosModules.nixvim
+            stylix.nixosModules.stylix
+            nix-flatpak.nixosModules.nix-flatpak
+          ];
+          specialArgs = { inherit pkgs-unstable; };
+        };
+        laptop = lib.nixosSystem {
+          inherit system;
+          modules = [
+            ./system/configuration.nix
+            ./hosts/laptop/default.nix
             catppuccin.nixosModules.catppuccin
             nixvim.nixosModules.nixvim
             stylix.nixosModules.stylix

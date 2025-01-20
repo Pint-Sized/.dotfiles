@@ -1,15 +1,5 @@
 {
-  inputs,
-  config,
-  pkgs,
-  lib,
-  catppuccin,
-  flatpak-nix,
-  ...
-}:
-{
   imports = [
-    # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ./hardware.nix
     ./packages.nix
@@ -19,7 +9,5 @@
     ./power.nix
     ../themes/system-theme-selector.nix
   ];
-
-  system.stateVersion = "23.05"; # Did you read the comment?
-
+  system.stateVersion = "23.05";
 }

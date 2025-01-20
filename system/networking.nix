@@ -1,13 +1,4 @@
 {
-  inputs,
-  config,
-  pkgs,
-  lib,
-  ...
-}:
-{
-
-  # ----------- WIFI ---------- #
   networking = {
     hostName = "sisyphus";
     wireless = {

@@ -1,23 +1,14 @@
 {
-  inputs,
-  config,
-  pkgs,
-  lib,
-  ...
-}:
-
-{
   services = {
 
     xserver = {
       enable = true;
-      videoDrivers = [ "nvidia" ];
       displayManager = {
         gdm = {
           enable = true;
           wayland = true;
           banner = ''
-            hello  
+            0858244115 - fionnbennett06@gmail.com  
           '';
         };
       };
@@ -32,6 +23,30 @@
 
     udisks2 = {
       enable = true;
+    };
+
+    flatpak = {
+      enable = true;
+      update = {
+        onActivation = true;
+      };
+      uninstallUnmanaged = true;
+      overrides = {
+        global = {
+          Environment = {
+            XCURSOR_SIZE = "16";
+            MOZ_ENABLE_WAYLAND = "1";
+            NIX_OZONE_WL = "1";
+            NIX_OZONE = "1";
+          };
+          Context = {
+            filesystems = [
+              "/usr/share/icons:ro"
+              "~/.icons:ro"
+            ];
+          };
+        };
+      };
     };
 
     pipewire = {
@@ -57,9 +72,6 @@
     };
 
     openssh = {
-      enable = true;
-    };
-    blueman = {
       enable = true;
     };
   };

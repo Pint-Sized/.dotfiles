@@ -8,16 +8,13 @@
       bat
       base16-schemes
       black
-      brightnessctl
       btop
       ccache
       celluloid
       clang
       cliphist
       cmake
-      cool-retro-term
       coreutils
-      cpu-x
       deluge
       discord
       dua
@@ -44,21 +41,17 @@
       libreoffice-qt6-fresh
       librewolf
       libsForQt5.qt5ct
-      liquidctl
-      lm_sensors
       mpc-cli
       mpv
       ncurses
       nodejs_22
       ntfs3g
       onefetch
-      openrazer-daemon
       openssl
       pandoc
       pavucontrol
       playerctl
       pokeget-rs
-      polychromatic
       python3
       python312Packages.libcst
       python312Packages.python-lsp-server
@@ -66,7 +59,6 @@
       readline
       remnote
       ripgrep
-      rofi-wayland
       rubyPackages_3_3.sqlite3
       rustup
       shotwell
@@ -182,37 +174,10 @@
         which-key-nvim
       ]);
 
-  services.flatpak = {
-    enable = true;
-    update = {
-      onActivation = true;
-    };
-    uninstallUnmanaged = true;
-    packages = [
-      "com.github.tchx84.Flatseal"
-      "io.github.flattool.Warehouse"
-      "org.onlyoffice.desktopeditors"
-      "net.codelogistics.webapps"
-      "at.vintagestory.VintageStory"
-      "org.contourterminal.Contour"
-    ];
-    overrides = {
-      global = {
-        Environment = {
-          XCURSOR_SIZE = "16";
-          MOZ_ENABLE_WAYLAND = "1";
-          NIX_OZONE_WL = "1";
-          NIX_OZONE = "1";
-        };
-        Context = {
-          filesystems = [
-            "/usr/share/icons:ro"
-            "~/.icons:ro"
-          ];
-        };
-      };
-    };
-  };
+  services.flatpak.packages = [
+    "com.github.tchx84.Flatseal"
+    "io.github.flattool.Warehouse"
+  ];
 
   programs = {
     hyprland = {
