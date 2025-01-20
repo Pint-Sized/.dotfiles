@@ -1,9 +1,8 @@
 {
   services = {
-    xserver.videoDrivers = [ "intel" ];
-  };
-
-  blueman = {
-    enable = true;
+    xserver.videoDrivers = [ "modesetting" ];
+    blueman = {
+      enable = true;
+    };
   };
 }
