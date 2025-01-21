@@ -133,7 +133,7 @@
     ".config/ulauncher/user-themes/theme/colours.css" = {
       text = ''
         @define-color background #271C3A;
-        @define-color current_line_background #100323
+        @define-color current_line_background #100323;
         @define-color foreground #BEBCBF;
         @define-color foreground_lessimportant #DEDCDF;
         @define-color accent #918889;
