@@ -285,63 +285,63 @@
           "format" = "- {:%I:%M %p} -";
         };
       }
-      {
-        "exclusive" = false;
-        "layer" = "bottom";
-        "reload_style_on_change" = true;
-        "position" = "top";
-        "margin-top" = 275;
-        "passthrough" = true;
+      #{
+      #"exclusive" = false;
+      #"layer" = "bottom";
+      #"reload_style_on_change" = true;
+      #"position" = "top";
+      #"margin-top" = 275;
+      #"passthrough" = true;
 
-        "modules-center" = [
-          "custom-weather#icon"
-        ];
-        "custom/weather#icon" = {
-          "format" = "{}°";
-          "tooltip" = true;
-          "interval" = 3600;
-          "exec" = "wttrbar --location New+Ross";
-          "return-type" = "json";
-        };
-      }
-      {
-        "exclusive" = false;
-        "layer" = "bottom";
-        "reload_style_on_change" = true;
-        "position" = "top";
-        "margin-top" = 275;
-        "passthrough" = true;
+      #"modules-center" = [
+      #"custom-weather#icon"
+      #];
+      #"custom/weather#icon" = {
+      #"format" = "{}°";
+      #"tooltip" = true;
+      #"interval" = 3600;
+      #"exec" = "wttrbar --location New+Ross";
+      #"return-type" = "json";
+      #};
+      #}
+      #{
+      #"exclusive" = false;
+      #"layer" = "bottom";
+      #"reload_style_on_change" = true;
+      #"position" = "top";
+      #"margin-top" = 275;
+      #"passthrough" = true;
 
-        "modules-center" = [
-          "custom/weather#location"
-        ];
-        "custom/weather#location" = {
-          "format" = "{}°";
-          "tooltip" = true;
-          "interval" = 3600;
-          "exec" = "wttrbar --location New+Ross";
-          "return-type" = "json";
-        };
-      }
-      {
-        "exclusive" = false;
-        "layer" = "bottom";
-        "reload_style_on_change" = true;
-        "position" = "top";
-        "margin-top" = 275;
-        "passthrough" = true;
+      #"modules-center" = [
+      #"custom/weather#location"
+      #];
+      #"custom/weather#location" = {
+      #"format" = "{}°";
+      #"tooltip" = true;
+      #"interval" = 3600;
+      #"exec" = "wttrbar --location New+Ross";
+      #"return-type" = "json";
+      #};
+      #}
+      #{
+      #"exclusive" = false;
+      #"layer" = "bottom";
+      #"reload_style_on_change" = true;
+      #"position" = "top";
+      #"margin-top" = 275;
+      #"passthrough" = true;
 
-        "modules-center" = [
-          "custom/weather#temperature"
-        ];
-        "custom/weather#temperature" = {
-          "format" = "{}°";
-          "tooltip" = true;
-          "interval" = 3600;
-          "exec" = "wttrbar --location New+Ross";
-          "return-type" = "json";
-        };
-      }
+      #"modules-center" = [
+      #"custom/weather#temperature"
+      #];
+      #"custom/weather#temperature" = {
+      #"format" = "{}°";
+      #"tooltip" = true;
+      #"interval" = 3600;
+      #"exec" = "wttrbar --location New+Ross";
+      #"return-type" = "json";
+      #};
+      #}
     ];
     style = ''
         @import "theme.css";
