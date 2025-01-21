@@ -41,6 +41,7 @@
       libreoffice-qt6-fresh
       librewolf
       libsForQt5.qt5ct
+      monitor
       mpc-cli
       mpv
       ncurses
@@ -111,7 +112,6 @@
         prettierd
         pyright
         stylua
-        ts_query_ls
         ulauncher
         wttrbar
         yamllint
@@ -133,7 +133,7 @@
     ++
 
       # --------- VIM PLUGINS --------- #
-      (with pkgs-unstable.vimPlugins; [
+      (with pkgs.vimPlugins; [
         bufferline-nvim
         conform-nvim
         diffview-nvim
@@ -184,6 +184,8 @@
       enable = true;
       xwayland.enable = true;
     };
+
+    coolercontrol.enable = true;
 
     fish.enable = true;
 

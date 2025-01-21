@@ -10,8 +10,8 @@
     };
     catppuccin.url = "github:catppuccin/nix";
     nixvim = {
-      url = "github:nix-community/nixvim/main";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
+      url = "github:nix-community/nixvim/nixos-24.11";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     stylix = {
@@ -22,10 +22,6 @@
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    #firefox-gnome-theme = {
-    #url = "github:rafaelmardojai/firefox-gnome-theme";
-    #flake = false;
-    #};
   };
 
   outputs =
@@ -38,7 +34,6 @@
       nix-flatpak,
       stylix,
       spicetify-nix,
-      #firefox-gnome-theme,
       ...
     }:
     let

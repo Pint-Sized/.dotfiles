@@ -1,14 +1,4 @@
 {
-  config,
-  pkgs,
-  catppuccin,
-  lib,
-  unstable-pkgs,
-  nixvim,
-  ...
-}:
-
-{
   imports = [
     # ------- BAT ------- #
     ./modules/bat.nix
