@@ -48,6 +48,7 @@
       nodejs_22
       ntfs3g
       onefetch
+      openrgb-with-all-plugins
       openssl
       pandoc
       pavucontrol

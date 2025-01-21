@@ -25,6 +25,8 @@
       enable = true;
     };
 
+    hardware.openrgb.enable = true;
+
     flatpak = {
       enable = true;
       update = {
