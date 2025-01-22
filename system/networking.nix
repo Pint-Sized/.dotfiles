@@ -1,6 +1,5 @@
 {
   networking = {
-    hostName = "sisyphus";
     wireless = {
       enable = true;
       networks = {
