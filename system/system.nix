@@ -55,11 +55,6 @@
         efiSupport = true;
         configurationLimit = 15;
       };
-      grub2-theme = {
-        enable = true;
-        theme = "stylish";
-        footer = true;
-      };
     };
   };
   time = {
