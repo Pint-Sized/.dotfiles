@@ -4,7 +4,7 @@
     #./system/black-metal-venom.nix
     #./system/catppuccin-mocha-mauve.nix
     #./system/darkviolet.nix
-    #./system/dracula.nix
+    ./system/dracula.nix
     #./system/eighties.nix
     #./system/google-dark.nix
     #./system/google-light.nix
@@ -12,7 +12,7 @@
     #./system/gruvbox-material-dark-soft.nix
     #./system/horizon-terminal-dark.nix
     #./system/nord.nix
-    ./system/pasque.nix
+    #./system/pasque.nix
     #./system/phd.nix
     #./system/pinky.nix
     #./system/rose-pine.nix
@@ -22,4 +22,12 @@
     #./system/uwunicorn.nix
     #./system/xcode-dusk.nix
   ];
+
+  stylix = {
+    image = ../wallpapers/evening-sky.png;
+    targets = {
+      grub.useImage = true;
+      nixos-icons.enable = true;
+    };
+  };
 }

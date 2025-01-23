@@ -19,11 +19,10 @@
           "custom/launcher"
           "hyprland/workspaces"
           "custom/music"
-          #"cava"
         ];
         "modules-center" = [
           "clock#clock1"
-          "custom/weather"
+          "custom/weather#main"
         ];
         "modules-right" = [
           "pulseaudio"
@@ -107,34 +106,7 @@
           "max-length" = 24;
         };
 
-        #      "cava" = {
-        #       "cava_config" = "~/.config/cava/config";
-        #        "framerate" = 30;
-        #        "autosens" = 1;
-        #        "bars" = 10;
-        #        "lower_cutoff_freq" = 50;
-        #        "higher_cutoff_freq" = 10000;
-        #       "method" = "pulse";
-        #       "source" = "auto";
-        #      "bar_delimiter" = 0;
-        #     "noise_reduction" = 0.77;
-        #    "input_delay" = 0;
-        #   "hide_on_silence" = false;
-        #  "format-icons" = [
-        #        "▁"
-        #       "▂"
-        #      "▃"
-        #     "▄"
-        #    "▅"
-        #   "▆"
-        #  "▇"
-        # "█"
-        #   ];
-        #    "on-click-right" = "mode";
-        #  };
-
         "pulseaudio" = {
-          # "scroll-step" = 1;
           "format" = "{icon} {volume}%";
           "format-muted" = " ";
           "format-icons" = {

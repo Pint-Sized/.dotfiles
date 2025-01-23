@@ -9,6 +9,8 @@
       base16-schemes
       black
       btop
+      cava
+      cavalier
       ccache
       celluloid
       clang
@@ -64,6 +66,7 @@
       rubyPackages_3_3.sqlite3
       rustup
       shotwell
+      spotify
       sqlite
       sqlite-interactive
       swaynotificationcenter

@@ -1,4 +1,4 @@
-{ pkgs, spicePkgs, lib, ... }:
+{ spicePkgs, lib, ... }:
 {
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [ "spotify" ];
 

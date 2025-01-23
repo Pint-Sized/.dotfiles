@@ -26,10 +26,11 @@
       c = "clear";
       n = "nvim $argv";
       z = "zeditor $argv; exit";
-      nr = "sudo cp /etc/nixos/hardware-configuration.nix ~/.dotfiles/system/;sudo nixos-rebuild switch --flake ~/.dotfiles";
+      nrd = "sudo nixos-rebuild switch --flake ~/.dotfiles/#desktop";
+      nrl = "sudo nixos-rebuild switch --flake ~/.dotfiles/#laptop";
       hr = "home-manager switch --flake ~/.dotfiles;hyprctl reload;";
-      fr = "sudo cp /etc/nixos/hardware-configuration.nix ~/.dotfiles/system/;sudo nix flake update --flake ~/.dotfiles; sudo nixos-rebuild switch --flake ~/.dotfiles; home-manager switch --flake ~/.dotfiles;";
-      nix-clean = "sudo nix-collect-garbage --delete-older-than 7d; nix-store --gc; nix-channel --update; nix-env --delete-generations old; nix-env -u --always --verbose";
+      frd = "sudo nix flake update --flake ~/.dotfiles; sudo nixos-rebuild switch --flake ~/.dotfiles#desktop; home-manager switch --flake ~/.dotfiles;";
+      frl = "sudo nix flake update --flake ~/.dotfiles; sudo nixos-rebuild switch --flake ~/.dotfiles/#laptop; home-manager switch --flake ~/.dotfiles;";
       y = {
         description = "Yazi changes directory on exit";
         body = ''
