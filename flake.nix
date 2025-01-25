@@ -22,6 +22,7 @@
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
   };
 
   outputs =
@@ -34,6 +35,7 @@
       nix-flatpak,
       stylix,
       spicetify-nix,
+      nixos-hardware,
       ...
     }:
     let
@@ -49,7 +51,7 @@
           inherit system;
           modules = [
             ./system/configuration.nix
-            ./hosts/desktop/default.nix
+            ./hosts/desktop/configuration.nix
             catppuccin.nixosModules.catppuccin
             nixvim.nixosModules.nixvim
             stylix.nixosModules.stylix
@@ -61,7 +63,8 @@
           inherit system;
           modules = [
             ./system/configuration.nix
-            ./hosts/laptop/default.nix
+            ./hosts/laptop/configuration.nix
+            nixos-hardware.nixosModules.lenovo-thinkpad-t480
             catppuccin.nixosModules.catppuccin
             nixvim.nixosModules.nixvim
             stylix.nixosModules.stylix
@@ -83,7 +86,6 @@
           extraSpecialArgs = {
             inherit spicePkgs;
             inherit pkgs-unstable;
-            #inherit firefox-gnome-theme;
           };
         };
       };
