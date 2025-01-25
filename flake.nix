@@ -23,6 +23,15 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+    nix-mineral = {
+      url = "github:cynicsketch/nix-mineral";
+      flake = false;
+    };
+    nur = {
+      url = "github:nix-community/NUR";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    #chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
   };
 
   outputs =
@@ -36,6 +45,7 @@
       stylix,
       spicetify-nix,
       nixos-hardware,
+      #chaotic,
       ...
     }:
     let
@@ -56,6 +66,9 @@
             nixvim.nixosModules.nixvim
             stylix.nixosModules.stylix
             nix-flatpak.nixosModules.nix-flatpak
+            #chaotic.nixosModules.nyx-cache
+            #chaotic.nixosModules.nyx-overlay
+            #chaotic.nixosModules.nyx-registry
           ];
           specialArgs = { inherit pkgs-unstable; };
         };

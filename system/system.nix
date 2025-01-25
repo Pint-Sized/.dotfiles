@@ -1,4 +1,5 @@
 { pkgs, ... }:
+
 {
   users.users.fionnbennett = {
     shell = pkgs.fish;
