@@ -348,7 +348,7 @@
       bind =, XF86Favorites, exec, kitty ~/.dotfiles/scripts/package-rebuild
       bind = $mainMod, R, exec, ~/.dotfiles/scripts/reloader
 
-      bindn =, Caps_Lock, exec, swayosd-client --caps-lock
+      bindn =, Caps_Lock, exec, ~/.dotfiles/scripts/swayosd-caps
 
       ##############################
       ### WINDOWS AND WORKSPACES ###
