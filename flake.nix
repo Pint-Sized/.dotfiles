@@ -22,10 +22,6 @@
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    grub2-themes = {
-      url = "github:vinceliuice/grub2-themes";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs =
@@ -38,7 +34,6 @@
       nix-flatpak,
       stylix,
       spicetify-nix,
-      grub2-themes,
       ...
     }:
     let
@@ -59,7 +54,6 @@
             nixvim.nixosModules.nixvim
             stylix.nixosModules.stylix
             nix-flatpak.nixosModules.nix-flatpak
-            grub2-themes.nixosModules.default
           ];
           specialArgs = { inherit pkgs-unstable; };
         };
