@@ -32,6 +32,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     #chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
+    hyprpicker = {
+      url = "github:hyprwm/hyprpicker";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
