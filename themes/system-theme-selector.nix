@@ -22,12 +22,4 @@
     #./system/uwunicorn.nix
     #./system/xcode-dusk.nix
   ];
-
-  stylix = {
-    image = ../wallpapers/evening-sky.png;
-    targets = {
-      grub.useImage = true;
-      nixos-icons.enable = true;
-    };
-  };
 }

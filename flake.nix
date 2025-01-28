@@ -36,6 +36,10 @@
       url = "github:hyprwm/hyprpicker";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -49,6 +53,7 @@
       stylix,
       spicetify-nix,
       nixos-hardware,
+      sops-nix,
       #chaotic,
       ...
     }:
@@ -70,6 +75,7 @@
             nixvim.nixosModules.nixvim
             stylix.nixosModules.stylix
             nix-flatpak.nixosModules.nix-flatpak
+            sops-nix.nixosModules.sops
             #chaotic.nixosModules.nyx-cache
             #chaotic.nixosModules.nyx-overlay
             #chaotic.nixosModules.nyx-registry
@@ -86,6 +92,11 @@
             nixvim.nixosModules.nixvim
             stylix.nixosModules.stylix
             nix-flatpak.nixosModules.nix-flatpak
+            sops-nix.nixosModules.sops
+            #chaotic.nixosModules.nyx-cache
+            #chaotic.nixosModules.nyx-overlay
+            #chaotic.nixosModules.nyx-registry
+
           ];
           specialArgs = { inherit pkgs-unstable; };
         };

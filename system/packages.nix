@@ -4,6 +4,7 @@
   # -------- STABLE ------- #
   environment.systemPackages =
     (with pkgs; [
+      age
       appeditor
       bat
       base16-schemes
@@ -47,6 +48,7 @@
       mpc-cli
       mpv
       ncurses
+      nixos-generators
       nodejs_22
       ntfs3g
       onefetch
