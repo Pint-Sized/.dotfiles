@@ -1,4 +1,10 @@
-{ pkgs, pkgs-unstable, ... }:
+{
+  inputs,
+  pkgs,
+  pkgs-unstable,
+  system,
+  ...
+}:
 
 {
   # -------- STABLE ------- #
@@ -37,6 +43,7 @@
       gperf
       has
       imv
+      inputs.nix-software-center.packages.${system}.nix-software-center
       jq
       kdePackages.qt6ct
       libgcc

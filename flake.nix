@@ -40,10 +40,12 @@
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-software-center.url = "github:snowfallorg/nix-software-center";
   };
 
   outputs =
     {
+      inputs,
       nixpkgs,
       home-manager,
       catppuccin,
@@ -80,7 +82,10 @@
             #chaotic.nixosModules.nyx-overlay
             #chaotic.nixosModules.nyx-registry
           ];
-          specialArgs = { inherit pkgs-unstable; };
+          specialArgs = {
+            inherit pkgs-unstable;
+            inherit inputs;
+          };
         };
         laptop = lib.nixosSystem {
           inherit system;
@@ -98,7 +103,10 @@
             #chaotic.nixosModules.nyx-registry
 
           ];
-          specialArgs = { inherit pkgs-unstable; };
+          specialArgs = {
+            inherit pkgs-unstable;
+            inherit inputs;
+          };
         };
       };
       homeConfigurations = {
