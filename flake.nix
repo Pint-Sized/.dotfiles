@@ -41,11 +41,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-software-center.url = "github:snowfallorg/nix-software-center";
+    nixos-conf-editor.url = "github:snowfallorg/nixos-conf-editor";
+    musnix.url = "github:musnix/musnix";
   };
 
   outputs =
     {
-      inputs,
       nixpkgs,
       home-manager,
       catppuccin,
@@ -57,6 +58,9 @@
       nixos-hardware,
       sops-nix,
       #chaotic,
+      nix-software-center,
+      nixos-conf-editor,
+      musnix,
       ...
     }:
     let
@@ -78,13 +82,15 @@
             stylix.nixosModules.stylix
             nix-flatpak.nixosModules.nix-flatpak
             sops-nix.nixosModules.sops
+            musnix.nixosModules.musnix
             #chaotic.nixosModules.nyx-cache
             #chaotic.nixosModules.nyx-overlay
             #chaotic.nixosModules.nyx-registry
           ];
           specialArgs = {
             inherit pkgs-unstable;
-            inherit inputs;
+            inherit nix-software-center;
+            inherit nixos-conf-editor;
           };
         };
         laptop = lib.nixosSystem {
@@ -98,6 +104,7 @@
             stylix.nixosModules.stylix
             nix-flatpak.nixosModules.nix-flatpak
             sops-nix.nixosModules.sops
+            musnix.nixosModules.musnix
             #chaotic.nixosModules.nyx-cache
             #chaotic.nixosModules.nyx-overlay
             #chaotic.nixosModules.nyx-registry
@@ -105,7 +112,8 @@
           ];
           specialArgs = {
             inherit pkgs-unstable;
-            inherit inputs;
+            inherit nix-software-center;
+            inherit nixos-conf-editor;
           };
         };
       };

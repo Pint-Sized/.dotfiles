@@ -1,6 +1,7 @@
 {
   imports = [
     ./hardware.nix
+    ./musnix.nix
     ./packages.nix
     ./services.nix
     ./system.nix

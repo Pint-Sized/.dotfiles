@@ -1,15 +1,16 @@
 {
-  inputs,
   pkgs,
   pkgs-unstable,
-  system,
+  nix-software-center,
+  nixos-conf-editor,
   ...
 }:
-
 {
   # -------- STABLE ------- #
   environment.systemPackages =
     (with pkgs; [
+      nix-software-center.packages.${system}.nix-software-center
+      nixos-conf-editor.packages.${system}.nixos-conf-editor
       age
       appeditor
       bat
@@ -43,7 +44,6 @@
       gperf
       has
       imv
-      inputs.nix-software-center.packages.${system}.nix-software-center
       jq
       kdePackages.qt6ct
       libgcc
