@@ -14,4 +14,6 @@
   services.flatpak.packages = [
     "at.vintagestory.VintageStory"
   ];
+
+  programs.coolercontrol.enable = true;
 }

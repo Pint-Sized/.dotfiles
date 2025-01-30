@@ -26,6 +26,7 @@
       deluge
       discord
       dua
+      eog
       fastfetch
       fd
       figlet
@@ -49,6 +50,7 @@
       libreoffice-qt6-fresh
       librewolf
       libsForQt5.qt5ct
+      mangohud
       monitor
       mpc-cli
       mpv
@@ -199,8 +201,6 @@
       xwayland.enable = true;
     };
 
-    coolercontrol.enable = true;
-
     fish.enable = true;
 
     mtr.enable = true;
@@ -210,6 +210,11 @@
         enable = true;
         enableSSHSupport = true;
       };
+    };
+
+    nh = {
+      enable = true;
+      flake = "~/.dotfiles";
     };
   };
 

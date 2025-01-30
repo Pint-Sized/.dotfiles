@@ -22,4 +22,8 @@
     #./system/uwunicorn.nix
     #./system/xcode-dusk.nix
   ];
+
+  stylix.targets = {
+    nixos-icons.enable = true;
+  };
 }

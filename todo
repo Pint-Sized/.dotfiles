@@ -1,21 +1,8 @@
 lightdm
 gdm
-targets.nixos-icons.enable
 plymouth logo
 regreet
-cavalier
-cava
-eye of gnome viewer
-gtk extra css
 kitty 255
-mangohud
-micro
 nixcord
 screenlocker (hyprland, swaylock, etc...)
-waybar config through stylix???
-wezterm
-wpaperd
-xrecourses stylix 
 fix catppuccin
-nh
-

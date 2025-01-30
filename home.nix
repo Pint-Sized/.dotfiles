@@ -39,6 +39,9 @@
     # --------- LIBREWOLF ----------- #
     ./modules/librewolf.nix
 
+    # -------- MANGOHUD -------- #
+    ./modules/mangohud.nix
+
     # ------------ MPV ------------ #
     ./modules/mpv.nix
 
