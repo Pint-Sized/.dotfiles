@@ -9,8 +9,6 @@
   # -------- STABLE ------- #
   environment.systemPackages =
     (with pkgs; [
-      nix-software-center.packages.${system}.nix-software-center
-      nixos-conf-editor.packages.${system}.nixos-conf-editor
       age
       appeditor
       bat
@@ -55,6 +53,9 @@
       mpc-cli
       mpv
       ncurses
+      nix-du
+      nixos-conf-editor.packages.${system}.nixos-conf-editor
+      nix-software-center.packages.${system}.nix-software-center
       nixos-generators
       nodejs_22
       ntfs3g
