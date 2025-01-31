@@ -6,6 +6,8 @@
       liquidctl
       openrazer-daemon
       polychromatic
+      openrgb-with-all-plugins
+
     ])
     ++ (with pkgs-unstable; [
       lm_sensors
