@@ -26,6 +26,8 @@
       discord
       dua
       eog
+      exiftool
+      mediainfo
       fastfetch
       fd
       figlet

@@ -19,5 +19,10 @@ edit = [
 	{ run = '$EDITOR "$@"', block = true, for = "unix" },
 ]
 open = [
-	{ run = 'xdg-open "$@"', orphan = true, desc = "Open" },
+  { run = 'xdg-open "$@"', orphan = true, desc = "Open" },
+]
+
+[plugin]
+prepend_previewers = [
+  { mime = "audio/*",   run = "exifaudio"}
 ]
