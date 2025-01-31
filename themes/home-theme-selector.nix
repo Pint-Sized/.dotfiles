@@ -55,8 +55,8 @@
       waybar.enable = false;
       hyprlock.enable = false;
       gtk.flatpakSupport.enable = true;
-      eog.enable = true;
-      xrecourses.enable = true;
+      #eog.enable = true;
+      #xrecourses.enable = true;
     };
   };
 }
