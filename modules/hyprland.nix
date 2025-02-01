@@ -324,7 +324,7 @@
       bind = $mainMod, S, togglespecialworkspace, magic
       bind = $mainMod SHIFT, S, movetoworkspace, special:magic
 
-      bindr = $mainMod, N, exec, ulauncher-toggle
+      bind = $mainMod, N, exec, ulauncher-toggle
       bind = $mainMod, B, exec, swaync-client -t
       bindr = $mainMod, L, exec, pkill wlogout || wlogout
       bind = $mainMod, P, exec, waypaper
@@ -333,6 +333,9 @@
       bind = $mainMod, O, exec, remnote --enable-features=UseOzonePlatform --ozone-platform=wayland
 
       bind = $mainMod, T, exec, kitty ~/.dotfiles/scripts/theme-switcher
+      bind = $mainMod, R, exec, ~/.dotfiles/scripts/reloader
+      bindn =, Caps_Lock, exec, ~/.dotfiles/scripts/swayosd-caps
+      bindr = $mainMod, U, exec, hyprctl keyword animations:enabled false; hyprctl keyword decoration:blur:enabled false; hyprctl keyword decoration:active_opacity 1; hyprctl keyword decoration:inactive_opacity 1; || hyprctl keyword animations:enabled true; hyprctl keyword decoration:blur:enabled true; hyprctl keyword decoration:active_opacity 0.8; hyprctl keyword decoration:inactive_opacity 0.8
 
       bind =, XF86AudioMute, exec, swayosd-client --output-volume mute-toggle
       binde =, XF86AudioLowerVolume, exec, swayosd-client --output-volume lower
@@ -346,9 +349,7 @@
       bind =, XF86Bluetooth, exec, blueman-manager
       bind =, XF86Keyboard, exec, polychromatic-controller
       bind =, XF86Favorites, exec, kitty ~/.dotfiles/scripts/package-rebuild
-      bind = $mainMod, R, exec, ~/.dotfiles/scripts/reloader
 
-      bindn =, Caps_Lock, exec, ~/.dotfiles/scripts/swayosd-caps
 
       ##############################
       ### WINDOWS AND WORKSPACES ###

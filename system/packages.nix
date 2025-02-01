@@ -212,10 +212,10 @@
       };
     };
 
-    nh = {
-      enable = true;
-      flake = "~/.dotfiles";
-    };
+    #nh = {
+    #enable = true;
+    #flake = "~/.dotfiles";
+    #};
   };
 
   # ------ NIXPKGS SETTINGS ------ #
