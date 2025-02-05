@@ -358,4 +358,15 @@
       windowrulev2 = suppressevent maximize, class:.* 
     '';
   };
+  home.file = {
+    ".config/hypr/pyprland.toml" = {
+      text = ''
+        [pyprland]
+        plugins = [
+          "scratchpads",
+          "shortcuts_menu",
+        ]
+      '';
+    };
+  };
 }

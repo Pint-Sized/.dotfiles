@@ -51,9 +51,6 @@
     # ---------- OBS-STUDIO ------------ #
     ./modules/obs-studio.nix
 
-    # -------- PYPRLAND ------------- #
-    ./modules/pyprland.nix
-
     # ---------- QT ----------- #
     ./modules/qt.nix
 
