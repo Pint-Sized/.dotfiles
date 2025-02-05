@@ -53,18 +53,6 @@
       exec-once = pkexec swayosd-libinput-backend &
       exec-once = swayosd-server &
 
-      ####################
-      ### START-UP APPS###
-      ####################
-
-      exec-once=[workspace 12 silent] spotify --enable-features=UseOzonePlatform --ozone-platform=wayland
-      exec-once=[workspace 11 silent] thunderbird
-      exec-once=[workspace 10 silent] com.github.IsmaelMartinez.teams_for_linux
-      exec-once=[workspace 9 silent] zapzap
-      exec-once=[workspace 8 silent] flatpak 'run' '--command=/app/bin/chrome' 'com.google.Chrome' '--profile-directory=Default' '--app-id=abdndmcckigaeepaljhpcngbfdkbiggb'
-      exec-once=[workspace 7 silent] imv ~/School/School-TimetableV2.png
-
-
       ##############
       ### CURSOR ###
       ##############
@@ -350,6 +338,15 @@
       bind =, XF86Keyboard, exec, polychromatic-controller
       bind =, XF86Favorites, exec, kitty ~/.dotfiles/scripts/package-rebuild
 
+      bind = $mainMod TAB, 1, pypr toggle term
+      bind = $mainMod TAB, 2, pypr toggle volume
+      bind = $mainMod TAB, 3, pypr toggle spotify
+      bind = $mainMod TAB, 4, pypr toggle whatsapp
+      bind = $mainMod TAB, 5, pypr toggle discord
+      bind = $mainMod TAB, 6, pypr toggle email
+      bind = $mainMod TAB, 7, pypr toggle timetable
+      bind = $mainMod TAB, 8, pypr toggle teams
+
 
       ##############################
       ### WINDOWS AND WORKSPACES ###
@@ -366,6 +363,71 @@
           "scratchpads",
           "shortcuts_menu",
         ]
+
+        [scratchpads.term]
+        animation = "fromTop"
+        command = "kitty --class kitty-dropterm"
+        class = "kitty-dropterm"
+        size = "80% 85%"
+        max_size = "1920px 100%"
+        margin = 50
+
+        [scratchpads.volume]
+        animation = "fromRight"
+        command = "pavucontrol"
+        class = "org.pulseaudio.pavucontrol"
+        size = "80% 85%"
+        unfocus = "hide"
+        lazy = true
+
+        [scratchpads.spotify]
+        animation = "fromTop"
+        command = "spotify"
+        class = "Spotify"
+        size = "80% 85%"
+        unfocus = "hide"
+        lazy = true
+
+        [scratchpads.whatsapp]
+        animation = "fromTop"
+        command = "zapzap"
+        class = "com.rtosta.zapzap"
+        size = "80% 85%"
+        unfocus = "hide"
+        lazy = true
+
+        [scratchpads.discord]
+        animation = "fromTop"
+        command = "webcord"
+        class = "WebCord"
+        size = "80% 85%"
+        unfocus = "hide"
+        lazy = true
+
+        [scratchpads.email]
+        animation = "fromTop"
+        command = "thunderbird"
+        class = "thunderbird"
+        size = "80% 85%"
+        unfocus = "hide"
+        lazy = true
+
+
+        [scratchpads.timetable]
+        animation = "fromTop"
+        command = "imv ~/School/School-TimetableV2.png"
+        class = "imv"
+        size = "80% 85%"
+        unfocus = "hide"
+        lazy = true
+
+        [scratchpads.teams]
+        animation = "fromTop"
+        command = "teams-for-linux"
+        class = "teams-for-linux"
+        size = "80% 85%"
+        unfocus = "hide"
+        lazy = true
       '';
     };
   };

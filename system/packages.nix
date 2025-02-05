@@ -24,7 +24,7 @@
       cmake
       coreutils
       deluge
-      discord
+      webcord-vencord
       dua
       eog
       exiftool
@@ -86,6 +86,7 @@
       swaynotificationcenter
       swayosd
       swww
+      teams-for-linux
       tk
       tldr
       udisks
