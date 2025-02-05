@@ -1,8 +1,8 @@
 {
   pkgs,
   pkgs-unstable,
-  nix-software-center,
-  nixos-conf-editor,
+  #nix-software-center,
+  #nixos-conf-editor,
   ...
 }:
 {
@@ -13,6 +13,7 @@
       bat
       base16-schemes
       black
+      bottom
       btop
       cava
       cavalier
@@ -212,11 +213,6 @@
         enableSSHSupport = true;
       };
     };
-
-    #nh = {
-    #enable = true;
-    #flake = "~/.dotfiles";
-    #};
   };
 
   # ------ NIXPKGS SETTINGS ------ #

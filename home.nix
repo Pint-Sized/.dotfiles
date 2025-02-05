@@ -54,11 +54,11 @@
     # ---------- QT ----------- #
     ./modules/qt.nix
 
-    # --------- ROFI ----------- #
-    ./modules/rofi.nix
-
     # ------- SPICETIFY ------ #
     ./modules/spicetify.nix
+
+    # --------- SWAYODS -------- #
+    ./modules/swayosd.nix
 
     # --------- SWAYNC --------- #
     ./modules/swaync.nix
@@ -71,9 +71,6 @@
 
     # ---------- WAYBAR ----------- #
     ./modules/waybar.nix
-
-    # --------- WOB ---------- #
-    ./modules/wob.nix
 
     # -------- WLOGOUT -------- #
     ./modules/wlogout.nix
