@@ -338,14 +338,14 @@
       bind =, XF86Keyboard, exec, polychromatic-controller
       bind =, XF86Favorites, exec, kitty ~/.dotfiles/scripts/package-rebuild
 
-      bind = $mainMod, TAB, 1, exec, pypr toggle term
-      bind = $mainMod, TAB, 2, exec, pypr toggle volume
-      bind = $mainMod, TAB, 3, exec, pypr toggle spotify
-      bind = $mainMod, TAB, 4, exec, pypr toggle whatsapp
-      bind = $mainMod, TAB, 5, exec, pypr toggle discord
-      bind = $mainMod, TAB, 6, exec, pypr toggle email
-      bind = $mainMod, TAB, 7, exec, pypr toggle timetable
-      bind = $mainMod, TAB, 8, exec, pypr toggle teams
+      bind = $mainMod, TAB 1, exec, pypr toggle term
+      bind = $mainMod, TAB 2, exec, pypr toggle volume
+      bind = $mainMod, TAB 3, exec, pypr toggle spotify
+      bind = $mainMod, TAB 4, exec, pypr toggle whatsapp
+      bind = $mainMod, TAB 5, exec, pypr toggle discord
+      bind = $mainMod, TAB 6, exec, pypr toggle email
+      bind = $mainMod, TAB 7, exec, pypr toggle timetable
+      bind = $mainMod, TAB 8, exec, pypr toggle teams
 
 
       ##############################
