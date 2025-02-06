@@ -377,6 +377,7 @@
         size = "80% 85%"
         max_size = "1920px 100%"
         margin = 50
+        hide_delay = 0.0
 
         [scratchpads.volume]
         animation = "fromRight"
@@ -384,7 +385,7 @@
         class = "org.pulseaudio.pavucontrol"
         size = "80% 85%"
         unfocus = "hide"
-        lazy = true
+        hide_delay = 0.0
 
         [scratchpads.spotify]
         animation = "fromTop"
@@ -392,7 +393,7 @@
         class = "Spotify"
         size = "80% 85%"
         unfocus = "hide"
-        lazy = true
+        hide_delay = 0.0
 
         [scratchpads.whatsapp]
         animation = "fromTop"
@@ -400,7 +401,7 @@
         class = "com.rtosta.zapzap"
         size = "80% 85%"
         unfocus = "hide"
-        lazy = true
+        hide_delay = 0.0
 
         [scratchpads.discord]
         animation = "fromTop"
@@ -408,7 +409,7 @@
         class = "WebCord"
         size = "80% 85%"
         unfocus = "hide"
-        lazy = true
+        hide_delay = 0.0
 
         [scratchpads.email]
         animation = "fromTop"
@@ -416,7 +417,7 @@
         class = "thunderbird"
         size = "80% 85%"
         unfocus = "hide"
-        lazy = true
+        hide_delay = 0.0
 
 
         [scratchpads.timetable]
@@ -425,7 +426,7 @@
         class = "imv"
         size = "80% 85%"
         unfocus = "hide"
-        lazy = true
+        hide_delay = 0.0
 
         [scratchpads.teams]
         animation = "fromTop"
@@ -433,7 +434,7 @@
         class = "teams-for-linux"
         size = "80% 85%"
         unfocus = "hide"
-        lazy = true
+        hide_delay = 0.0
       '';
     };
   };
