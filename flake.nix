@@ -1,9 +1,8 @@
 {
-  description = "NixOS config flake";
-
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-master.url = "github:/nixos/nixpkgs/master";
     home-manager = {
       url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -40,9 +39,22 @@
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nix-software-center.url = "github:snowfallorg/nix-software-center";
-    nixos-conf-editor.url = "github:snowfallorg/nixos-conf-editor";
-    musnix.url = "github:musnix/musnix";
+    nix-software-center = {
+      url = "github:snowfallorg/nix-software-center";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    nixos-conf-editor = {
+      url = "github:snowfallorg/nixos-conf-editor";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    musnix = {
+      url = "github:musnix/musnix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    nvidia-patch = {
+      url = "github:icewind1991/nvidia-patch-nixos";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -61,6 +73,7 @@
       nix-software-center,
       nixos-conf-editor,
       musnix,
+      nvidia-patch,
       ...
     }:
     let

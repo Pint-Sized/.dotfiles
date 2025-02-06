@@ -289,12 +289,6 @@
       bind = $mainMod, 4, workspace, 4
       bind = $mainMod, 5, workspace, 5
       bind = $mainMod, 6, workspace, 6
-      bind = $mainMod, 7, workspace, 7
-      bind = $mainMod, 8, workspace, 8
-      bind = $mainMod, 9, workspace, 9
-      bind = $mainMod, 0, workspace, 10
-      bind = $mainMod, code:20, workspace, 11
-      bind = $mainMod, code:21, workspace, 12
 
       bind = $mainMod SHIFT, 1, movetoworkspace, 1
       bind = $mainMod SHIFT, 2, movetoworkspace, 2
@@ -302,12 +296,12 @@
       bind = $mainMod SHIFT, 4, movetoworkspace, 4
       bind = $mainMod SHIFT, 5, movetoworkspace, 5
       bind = $mainMod SHIFT, 6, movetoworkspace, 6
-      bind = $mainMod SHIFT, 7, movetoworkspace, 7
-      bind = $mainMod SHIFT, 8, movetoworkspace, 8
-      bind = $mainMod SHIFT, 9, movetoworkspace, 9
-      bind = $mainMod SHIFT, 0, movetoworkspace, 10
-      bind = $mainMod SHIFT, code:20, movetoworkspace, 11
-      bind = $mainMod SHIFT, code:21, movetoworkspace, 12
+
+      bind = $mainMod, 7, exec, pypr toggle timetable
+      bind = $mainMod, 9, exec, pypr toggle discord
+      bind = $mainMod, 0, exec, pypr toggle whatsapp
+      bind = $mainMod, code:20, exec, pypr toggle email
+      bind = $mainMod, code:21, exec, pypr toggle spotify
 
       bind = $mainMod, S, togglespecialworkspace, magic
       bind = $mainMod SHIFT, S, movetoworkspace, special:magic
@@ -338,14 +332,6 @@
       bind =, XF86Keyboard, exec, polychromatic-controller
       bind =, XF86Favorites, exec, kitty ~/.dotfiles/scripts/package-rebuild
 
-      binds = Super_L&Control_R, 1, exec, pypr toggle term
-      binds = Super_L&Control_R, 2, exec, pypr toggle volume
-      binds = Super_L&Control_R, 3, exec, pypr toggle spotify
-      binds = Super_L&Control_R, 4, exec, pypr toggle whatsapp
-      binds = Super_L&Control_R, 5, exec, pypr toggle discord
-      binds = Super_L&Control_R, 6, exec, pypr toggle email
-      binds = Super_L&Control_R, 7, exec, pypr toggle timetable
-      binds = Super_L&Control_R, 8, exec, pypr toggle teams
 
 
       ##############################
@@ -374,16 +360,15 @@
         animation = "fromTop"
         command = "kitty --class kitty-dropterm"
         class = "kitty-dropterm"
-        size = "80% 85%"
-        max_size = "1920px 100%"
-        margin = 50
+        size = "90% 90%"
+        unfocus = "hide"
         hide_delay = 0.0
 
         [scratchpads.volume]
-        animation = "fromRight"
+        animation = "fromTop"
         command = "pavucontrol"
         class = "org.pulseaudio.pavucontrol"
-        size = "80% 85%"
+        size = "90% 90%"
         unfocus = "hide"
         hide_delay = 0.0
 
@@ -391,7 +376,7 @@
         animation = "fromTop"
         command = "spotify"
         class = "Spotify"
-        size = "80% 85%"
+        size = "90% 90%"
         unfocus = "hide"
         hide_delay = 0.0
 
@@ -399,7 +384,7 @@
         animation = "fromTop"
         command = "zapzap"
         class = "com.rtosta.zapzap"
-        size = "80% 85%"
+        size = "90% 90%"
         unfocus = "hide"
         hide_delay = 0.0
 
@@ -407,7 +392,7 @@
         animation = "fromTop"
         command = "webcord"
         class = "WebCord"
-        size = "80% 85%"
+        size = "90% 90%"
         unfocus = "hide"
         hide_delay = 0.0
 
@@ -415,7 +400,7 @@
         animation = "fromTop"
         command = "thunderbird"
         class = "thunderbird"
-        size = "80% 85%"
+        size = "90% 90%"
         unfocus = "hide"
         hide_delay = 0.0
 
@@ -424,7 +409,7 @@
         animation = "fromTop"
         command = "imv ~/School/School-TimetableV2.png"
         class = "imv"
-        size = "80% 85%"
+        size = "90% 90%"
         unfocus = "hide"
         hide_delay = 0.0
 
@@ -432,7 +417,7 @@
         animation = "fromTop"
         command = "teams-for-linux"
         class = "teams-for-linux"
-        size = "80% 85%"
+        size = "90% 90%"
         unfocus = "hide"
         hide_delay = 0.0
       '';
