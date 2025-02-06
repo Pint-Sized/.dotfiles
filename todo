@@ -1,8 +1,13 @@
-lightdm
-gdm
-plymouth logo
-regreet
-kitty 255
-nixcord
 screenlocker (hyprland, swaylock, etc...)
 fix catppuccin
+hypr-dynamic-cursors tilt
+hyprchroma
+hyprwinwrap bottom cava wallpaper - https://www.reddit.com/r/unixporn/comments/1dl70sq/hyprland_migrated_to_wayland_thoughts/
+hyprpaper
+hyprlock
+hypridle
+hyprcursor
+steal ashell widgets
+maybe convert waybar to ags/eww
+hyprpanel
+hyprland autoname workspaces

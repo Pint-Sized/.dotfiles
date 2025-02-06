@@ -338,14 +338,14 @@
       bind =, XF86Keyboard, exec, polychromatic-controller
       bind =, XF86Favorites, exec, kitty ~/.dotfiles/scripts/package-rebuild
 
-      bind = $mainMod, TAB 1, exec, pypr toggle term
-      bind = $mainMod, TAB 2, exec, pypr toggle volume
-      bind = $mainMod, TAB 3, exec, pypr toggle spotify
-      bind = $mainMod, TAB 4, exec, pypr toggle whatsapp
-      bind = $mainMod, TAB 5, exec, pypr toggle discord
-      bind = $mainMod, TAB 6, exec, pypr toggle email
-      bind = $mainMod, TAB 7, exec, pypr toggle timetable
-      bind = $mainMod, TAB 8, exec, pypr toggle teams
+      binds = Super_L&Control_R, 1, exec, pypr toggle term
+      binds = Super_L&Control_R, 2, exec, pypr toggle volume
+      binds = Super_L&Control_R, 3, exec, pypr toggle spotify
+      binds = Super_L&Control_R, 4, exec, pypr toggle whatsapp
+      binds = Super_L&Control_R, 5, exec, pypr toggle discord
+      binds = Super_L&Control_R, 6, exec, pypr toggle email
+      binds = Super_L&Control_R, 7, exec, pypr toggle timetable
+      binds = Super_L&Control_R, 8, exec, pypr toggle teams
 
 
       ##############################
@@ -362,6 +362,12 @@
         plugins = [
           "scratchpads",
           "shortcuts_menu",
+          "fetch_client_menu",
+          "magnify",
+          "monitors",
+          "shift_monitors",
+          "toggle_dpms",
+
         ]
 
         [scratchpads.term]

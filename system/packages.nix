@@ -44,6 +44,7 @@
       gparted
       gperf
       has
+      hyprpicker
       imv
       jq
       kdePackages.qt6ct
