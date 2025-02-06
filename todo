@@ -8,6 +8,5 @@ hyprlock
 hypridle
 hyprcursor
 steal ashell widgets
-maybe convert waybar to ags/eww
-hyprpanel
 hyprland autoname workspaces
+waybar brightnes slider

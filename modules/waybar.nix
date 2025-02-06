@@ -1,13 +1,10 @@
 {
-  # --------- WAYBAR ----------- #
   programs.waybar = {
     enable = true;
     settings = [
       {
         "layer" = "top";
         "position" = "top";
-        # "width": 1280;
-
         "margin-left" = 6;
         "margin-right" = 6;
         "margin-top" = 2;
@@ -68,7 +65,7 @@
             "critical" = 15;
           };
           "format" = "{icon}{capacity}%";
-          "on-click-right" = "kitty nvim ~/.dotfiles/system/power.nix";
+          "on-click-right" = "kitty nvim ~/.dotfiles/hosts/laptop/battery.nix";
           "format-charging" = "󰂄{capacity}%";
           "format-plugged" = "";
           "format-alt" = "{icon}{time}";
