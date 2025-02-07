@@ -44,6 +44,7 @@
       gparted
       gperf
       has
+      hyprlock
       hyprpicker
       imv
       jq
