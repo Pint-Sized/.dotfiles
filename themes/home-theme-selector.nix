@@ -8,12 +8,12 @@
     #./home/darkviolet.nix
     #./home/dracula.nix # classic
     #./home/eighties.nix # classy greys
-    ./home/google-dark.nix
+    #./home/google-dark.nix
     #./home/google-light.nix # light mode with accents
     #./home/greenscreen.nix
     #./home/gruvbox-material-dark-soft.nix
     #./home/horizon-terminal-dark.nix
-    #./home/nord.nix
+    ./home/nord.nix
     #./home/pasque.nix
     #./home/pinky.nix
     #./home/phd.nix

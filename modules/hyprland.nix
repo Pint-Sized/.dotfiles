@@ -364,6 +364,7 @@
         size = "90% 90%"
         unfocus = "hide"
         hide_delay = 0.0
+        lazy = false
 
         [scratchpads.volume]
         animation = "fromTop"
@@ -372,6 +373,7 @@
         size = "90% 90%"
         unfocus = "hide"
         hide_delay = 0.0
+        lazy = false
 
         [scratchpads.spotify]
         animation = "fromTop"
@@ -380,6 +382,7 @@
         size = "90% 90%"
         unfocus = "hide"
         hide_delay = 0.0
+        lazy = false
 
         [scratchpads.whatsapp]
         animation = "fromTop"
@@ -388,6 +391,7 @@
         size = "90% 90%"
         unfocus = "hide"
         hide_delay = 0.0
+        lazy = false
 
         [scratchpads.discord]
         animation = "fromTop"
@@ -396,6 +400,7 @@
         size = "90% 90%"
         unfocus = "hide"
         hide_delay = 0.0
+        lazy = false
 
         [scratchpads.email]
         animation = "fromTop"
@@ -404,6 +409,7 @@
         size = "90% 90%"
         unfocus = "hide"
         hide_delay = 0.0
+        lazy = false
 
 
         [scratchpads.timetable]
@@ -413,6 +419,7 @@
         size = "90% 90%"
         unfocus = "hide"
         hide_delay = 0.0
+        lazy = false
 
         [scratchpads.teams]
         animation = "fromTop"
@@ -421,6 +428,7 @@
         size = "90% 90%"
         unfocus = "hide"
         hide_delay = 0.0
+        lazy = false
       '';
     };
   };
