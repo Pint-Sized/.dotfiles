@@ -21,7 +21,6 @@
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     nix-mineral = {
       url = "github:cynicsketch/nix-mineral";
       flake = false;
@@ -67,7 +66,6 @@
       nix-flatpak,
       stylix,
       spicetify-nix,
-      nixos-hardware,
       sops-nix,
       #chaotic,
       nix-software-center,
@@ -111,7 +109,7 @@
           modules = [
             ./system/configuration.nix
             ./hosts/laptop/configuration.nix
-            nixos-hardware.nixosModules.lenovo-thinkpad-t480
+            <nixos-hardware/lenovo/thinkpad/t480>
             catppuccin.nixosModules.catppuccin
             nixvim.nixosModules.nixvim
             stylix.nixosModules.stylix
