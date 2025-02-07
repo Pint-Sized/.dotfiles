@@ -298,7 +298,6 @@
       bind = $mainMod SHIFT, 6, movetoworkspace, 6
 
       bind = $mainMod, 7, exec, pypr toggle timetable
-      bind = $mainMod, 8, exec, pypr toggle yazi
       bind = $mainMod, 9, exec, pypr toggle discord
       bind = $mainMod, 0, exec, pypr toggle whatsapp
       bind = $mainMod, code:20, exec, pypr toggle email
@@ -354,17 +353,7 @@
           "monitors",
           "shift_monitors",
           "toggle_dpms",
-
         ]
-
-        [scratchpads.yazi]
-        animation = "fromTop"
-        command = "kitty yazi"
-        class = "kitty"
-        size = "90% 90%"
-        unfocus = "hide"
-        hide_delay = 0.0
-        lazy = false
 
         [scratchpads.volume]
         animation = "fromTop"
