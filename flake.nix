@@ -29,7 +29,6 @@
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    #chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     hyprpicker = {
       url = "github:hyprwm/hyprpicker";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -44,10 +43,6 @@
     };
     nixos-conf-editor = {
       url = "github:snowfallorg/nixos-conf-editor";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    musnix = {
-      url = "github:musnix/musnix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nvidia-patch = {
@@ -67,11 +62,8 @@
       stylix,
       spicetify-nix,
       sops-nix,
-      #chaotic,
       nix-software-center,
       nixos-conf-editor,
-      musnix,
-      nvidia-patch,
       ...
     }:
     let
@@ -93,10 +85,6 @@
             stylix.nixosModules.stylix
             nix-flatpak.nixosModules.nix-flatpak
             sops-nix.nixosModules.sops
-            musnix.nixosModules.musnix
-            #chaotic.nixosModules.nyx-cache
-            #chaotic.nixosModules.nyx-overlay
-            #chaotic.nixosModules.nyx-registry
           ];
           specialArgs = {
             inherit pkgs-unstable;
@@ -115,10 +103,6 @@
             stylix.nixosModules.stylix
             nix-flatpak.nixosModules.nix-flatpak
             sops-nix.nixosModules.sops
-            musnix.nixosModules.musnix
-            #chaotic.nixosModules.nyx-cache
-            #chaotic.nixosModules.nyx-overlay
-            #chaotic.nixosModules.nyx-registry
 
           ];
           specialArgs = {
