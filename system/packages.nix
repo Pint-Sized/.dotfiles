@@ -195,9 +195,7 @@
       ]);
 
   services.flatpak.packages = [
-    "com.github.tchx84.Flatseal"
-    "io.github.flattool.Warehouse"
-    "com.mudeprolinux.whakarere"
+    "com.rtosta.zapzap"
   ];
 
   programs = {
