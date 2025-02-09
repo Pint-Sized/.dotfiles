@@ -54,7 +54,7 @@
       libreoffice-qt6-fresh
       librewolf
       libsForQt5.qt5ct
-      mangohud
+      #mangohud
       monitor
       mpc-cli
       mpv
