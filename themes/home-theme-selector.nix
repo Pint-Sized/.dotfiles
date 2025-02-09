@@ -4,9 +4,9 @@
   imports = [
     #./home/3024.nix # dusky oranges
     #./home/black-metal-venom.nix # blacked out
-    ./home/catppuccin-mocha-mauve.nix # the goat
+    #./home/catppuccin-mocha-mauve.nix # the goat
     #./home/darkviolet.nix
-    #./home/dracula.nix # classic
+    ./home/dracula.nix # classic
     #./home/eighties.nix # classy greys
     #./home/google-dark.nix
     #./home/google-light.nix # light mode with accents

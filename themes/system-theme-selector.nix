@@ -2,9 +2,9 @@
   imports = [
     #./system/3024.nix
     #./system/black-metal-venom.nix
-    ./system/catppuccin-mocha-mauve.nix
+    #./system/catppuccin-mocha-mauve.nix
     #./system/darkviolet.nix
-    #./system/dracula.nix
+    ./system/dracula.nix
     #./system/eighties.nix
     #./system/google-dark.nix
     #./system/google-light.nix
