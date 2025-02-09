@@ -82,7 +82,7 @@
     '';
   };
   home.file = {
-    ".dotfiles/modules/fastfetch/theme" = {
+    ".config/fastfetch/theme" = {
       executable = true;
       text = ''
         echo Nord
@@ -132,8 +132,8 @@
     };
     ".config/ulauncher/user-themes/theme/colours.css" = {
       text = ''
-        @define-color background #2E3440;
-        @define-color current_line_background #3B4252;
+        @define-color background #3B4252;
+        @define-color current_line_background #2E3440;
         @define-color foreground #D8DEE9;
         @define-color foreground_lessimportant #E5E9F0;
         @define-color accent #D08770;

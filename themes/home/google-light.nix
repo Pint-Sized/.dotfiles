@@ -83,7 +83,7 @@
   };
 
   home.file = {
-    ".dotfiles/modules/fastfetch/theme" = {
+    ".config/fastfetch/theme" = {
       executable = true;
       text = ''
         echo "Google Light"
@@ -133,8 +133,8 @@
     };
     ".config/ulauncher/user-themes/theme/colours.css" = {
       text = ''
-        @define-color background #ffffff;
-        @define-color current_line_background #e0e0e0;
+        @define-color background #e0e0e0;
+        @define-color current_line_background #ffffff;
         @define-color foreground #969896;
         @define-color foreground_lessimportant #373b41;
         @define-color accent #F96A38;

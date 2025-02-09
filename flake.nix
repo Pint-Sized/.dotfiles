@@ -7,7 +7,7 @@
       url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    catppuccin.url = "github:catppuccin/nix";
+    catppuccin.url = "github:catppuccin/nix/main";
     nixvim = {
       url = "github:nix-community/nixvim/nixos-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -97,7 +97,6 @@
           modules = [
             ./system/configuration.nix
             ./hosts/laptop/configuration.nix
-            <nixos-hardware/lenovo/thinkpad/t480>
             catppuccin.nixosModules.catppuccin
             nixvim.nixosModules.nixvim
             stylix.nixosModules.stylix

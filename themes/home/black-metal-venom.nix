@@ -83,7 +83,7 @@
   };
 
   home.file = {
-    ".dotfiles/modules/fastfetch/theme" = {
+    ".config/fastfetch/theme" = {
       executable = true;
       text = ''
         echo "Black Metal Venom"
@@ -133,8 +133,8 @@
     };
     ".config/ulauncher/user-themes/theme/colours.css" = {
       text = ''
-        @define-color background #000000;
-        @define-color current_line_background #121212;
+        @define-color background #121212;
+        @define-color current_line_background #000000;
         @define-color foreground #999999;
         @define-color foreground_lessimportant #c1c1c1;
         @define-color accent #5f8787;

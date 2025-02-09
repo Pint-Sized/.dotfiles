@@ -1,12 +1,4 @@
 {
-  pkgs,
-  lib,
-  config,
-  catppuccin,
-  ...
-}:
-
-{
   programs.fastfetch = {
     enable = true;
     settings = {
@@ -47,7 +39,7 @@
         {
           key = " Stylix Theme  ";
           type = "command";
-          text = "~/.dotfiles/modules/fastfetch/theme";
+          text = "~/.config/fastfetch/theme";
         }
         {
           key = "󰂎 Battery       ";

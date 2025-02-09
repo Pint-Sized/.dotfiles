@@ -10,7 +10,7 @@
     ./modules/cava.nix
 
     # ------- FASTFETCH -------- #
-    ./modules/fastfetch/fastfetch.nix
+    ./modules/fastfetch.nix
 
     # ----------- FISH ------------- #
     ./modules/fish.nix

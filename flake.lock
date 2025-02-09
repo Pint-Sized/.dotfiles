@@ -71,15 +71,16 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1737579274,
-        "narHash": "sha256-8kBIYfn8TI9jbffhDNS12SdbQHb9ITXflwcgIJBeGqw=",
+        "lastModified": 1739094937,
+        "narHash": "sha256-LemSQ5AZHwl4ZVlirdpAytDWgS96OZsct7Akx/REdGA=",
         "owner": "catppuccin",
         "repo": "nix",
-        "rev": "06f0ea19334bcc8112e6d671fd53e61f9e3ad63a",
+        "rev": "aee0cec463e62702751adaeb9f4fc00f2f72879b",
         "type": "github"
       },
       "original": {
         "owner": "catppuccin",
+        "ref": "main",
         "repo": "nix",
         "type": "github"
       }
@@ -598,26 +599,6 @@
         "type": "github"
       }
     },
-    "musnix": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1735772949,
-        "narHash": "sha256-lvee0rhKTpJEDl1SC4F3Kvz88snOU8OMTJBsPH1pVBo=",
-        "owner": "musnix",
-        "repo": "musnix",
-        "rev": "86ef22cbdd7551ef325bce88143be9f37da64c26",
-        "type": "github"
-      },
-      "original": {
-        "owner": "musnix",
-        "repo": "musnix",
-        "type": "github"
-      }
-    },
     "nix-darwin": {
       "inputs": {
         "nixpkgs": [
@@ -905,7 +886,6 @@
         "catppuccin": "catppuccin",
         "home-manager": "home-manager",
         "hyprpicker": "hyprpicker",
-        "musnix": "musnix",
         "nix-flatpak": "nix-flatpak",
         "nix-mineral": "nix-mineral",
         "nix-software-center": "nix-software-center",

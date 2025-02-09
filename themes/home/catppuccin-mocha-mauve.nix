@@ -1,6 +1,23 @@
-{ pkgs, ... }:
-
 {
+  stylix.base16Scheme = {
+    base00 = "1e1e2e";
+    base01 = "181825";
+    base02 = "313244";
+    base03 = "45475a";
+    base04 = "585b70";
+    base05 = "cdd6f4";
+    base06 = "f5e0dc";
+    base07 = "b4befe";
+    base08 = "f38ba8";
+    base09 = "fab387";
+    base0A = "f9e2af";
+    base0B = "a6e3a1";
+    base0C = "94e2d5";
+    base0D = "89b4fa";
+    base0E = "cba6f7";
+    base0F = "f2cdcd";
+  };
+
   programs = {
     nixvim.colorschemes.base16 = {
       enable = true;
@@ -81,7 +98,7 @@
     '';
   };
   home.file = {
-    ".dotfiles/modules/fastfetch/theme" = {
+    ".config/fastfetch/theme" = {
       executable = true;
       text = ''
         echo "Catppuccin Mocha"
@@ -131,8 +148,8 @@
     };
     ".config/ulauncher/user-themes/theme/colours.css" = {
       text = ''
-        @define-color background #1e1e2e;
-        @define-color current_line_background #181825;
+        @define-color background #181825;
+        @define-color current_line_background #1e1e2e;
         @define-color foreground #585b70;
         @define-color foreground_lessimportant #cdd6f4;
         @define-color accent #fab387;

@@ -82,7 +82,7 @@
     '';
   };
   home.file = {
-    ".dotfiles/modules/fastfetch/theme" = {
+    ".config/fastfetch/theme" = {
       executable = true;
       text = ''
         echo "Horizon Terminal Dark"
@@ -132,8 +132,8 @@
     };
     ".config/ulauncher/user-themes/theme/colours.css" = {
       text = ''
-        @define-color background #1C1E26;
-        @define-color current_line_background #232530;
+        @define-color background #232530;
+        @define-color current_line_background #1C1E26;
         @define-color foreground #9DA0A2;
         @define-color foreground_lessimportant #9DA0A2;
         @define-color accent #FAB795;

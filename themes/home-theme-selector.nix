@@ -4,7 +4,7 @@
   imports = [
     #./home/3024.nix # dusky oranges
     #./home/black-metal-venom.nix # blacked out
-    #./home/catppuccin-mocha-mauve.nix # the goat
+    ./home/catppuccin-mocha-mauve.nix # the goat
     #./home/darkviolet.nix
     #./home/dracula.nix # classic
     #./home/eighties.nix # classy greys
@@ -13,7 +13,7 @@
     #./home/greenscreen.nix
     #./home/gruvbox-material-dark-soft.nix
     #./home/horizon-terminal-dark.nix
-    ./home/nord.nix
+    #./home/nord.nix
     #./home/pasque.nix
     #./home/pinky.nix
     #./home/phd.nix

@@ -82,7 +82,7 @@
     '';
   };
   home.file = {
-    ".dotfiles/modules/fastfetch/theme" = {
+    ".config/fastfetch/theme" = {
       executable = true;
       text = ''
         echo 3024
@@ -132,8 +132,8 @@
     };
     ".config/ulauncher/user-themes/theme/colours.css" = {
       text = ''
-        @define-color background #090300;
-        @define-color current_line_background #3a3432;
+        @define-color background #3a3432;
+        @define-color current_line_background #090300;
         @define-color foreground #807d7c;
         @define-color foreground_lessimportant #a5a2a2;
         @define-color accent #e8bbd0;

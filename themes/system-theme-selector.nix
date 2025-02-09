@@ -2,7 +2,7 @@
   imports = [
     #./system/3024.nix
     #./system/black-metal-venom.nix
-    #./system/catppuccin-mocha-mauve.nix
+    ./system/catppuccin-mocha-mauve.nix
     #./system/darkviolet.nix
     #./system/dracula.nix
     #./system/eighties.nix
@@ -11,7 +11,7 @@
     #./system/greenscreen.nix
     #./system/gruvbox-material-dark-soft.nix
     #./system/horizon-terminal-dark.nix
-    ./system/nord.nix
+    #./system/nord.nix
     #./system/pasque.nix
     #./system/phd.nix
     #./system/pinky.nix

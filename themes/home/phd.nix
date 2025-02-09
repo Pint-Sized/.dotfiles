@@ -82,7 +82,7 @@
     '';
   };
   home.file = {
-    ".dotfiles/modules/fastfetch/theme" = {
+    ".config/fastfetch/theme" = {
       executable = true;
       text = ''
         echo PHD
@@ -132,8 +132,8 @@
     };
     ".config/ulauncher/user-themes/theme/colours.css" = {
       text = ''
-        @define-color background #061229;
-        @define-color current_line_background #2a3448;
+        @define-color background #2a3448;
+        @define-color current_line_background #061229;
         @define-color foreground #9a99a3;
         @define-color foreground_lessimportant #b8bbc2;
         @define-color accent #f0a000;

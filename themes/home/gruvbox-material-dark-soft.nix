@@ -82,7 +82,7 @@
     '';
   };
   home.file = {
-    ".dotfiles/modules/fastfetch/theme" = {
+    ".config/fastfetch/theme" = {
       executable = true;
       text = ''
         echo "Gruvbox Material Dark Soft"
@@ -132,8 +132,8 @@
     };
     ".config/ulauncher/user-themes/theme/colours.css" = {
       text = ''
-        @define-color background #32302f;
-        @define-color current_line_background #3c3836;
+        @define-color background #3c3836;
+        @define-color current_line_background #32302f;
         @define-color foreground #bdae93;
         @define-color foreground_lessimportant #ddc7a1;
         @define-color accent #e78a4e;

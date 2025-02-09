@@ -3,23 +3,91 @@
 {
   stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/uwunicorn.yaml";
 
-  programs.nixvim.colorschemes.base16 = {
-    enable = true;
-    colorscheme = "uwunicorn";
-  };
+  programs = {
+    nixvim.colorschemes.base16 = {
+      enable = true;
+      colorscheme = "uwunicorn";
+    };
+    fish.functions = {
+      fish_greeting = "pokeget purrloin --hide-name | fastfetch --file-raw -";
+    };
+    wlogout.style = ''
+      window {
+               font-family: "0xProto Nerd Font";
+               font-size: 14pt;
+               color: #eed5d9; /* text */
+               background-color: rgba(47, 42, 63, 0.5);
+           }
 
-  programs.fish.functions = {
-    fish_greeting = "pokeget purrloin --hide-name | fastfetch --file-raw -";
+           button {
+               background-repeat: no-repeat;
+               background-position: center;
+               background-size: 25%;
+               border: none;
+               background-color: rgba(47, 42, 63, 0);
+               margin: 5px;
+               transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+           }
+
+           button:hover {
+               background-color: rgba(47, 42, 63, 0.1);
+           }
+
+           button:focus {
+               background-color: #c965bf;
+               color: #241b26;
+           }
+
+           #lock {
+               background-image: image(url("./images/lock.png"));
+           }
+           #lock:focus {
+               background-image: image(url("./images/lock-hover.png"));
+           }
+
+           #logout {
+               background-image: image(url("./images/logout.png"));
+           }
+           #logout:focus {
+               background-image: image(url("./images/logout-hover.png"));
+           }
+
+           #suspend {
+               background-image: image(url("./images/sleep.png"));
+           }
+           #suspend:focus {
+               background-image: image(url("./images/sleep-hover.png"));
+           }
+
+           #shutdown {
+               background-image: image(url("./images/power.png"));
+           }
+           #shutdown:focus {
+               background-image: image(url("./images/power-hover.png"));
+           }
+
+           #reboot {
+               background-image: image(url("./images/restart.png"));
+           }
+           #reboot:focus {
+               background-image: image(url("./images/restart-hover.png"));
+           }
+
+           #hibernate {
+              background-image: image(url("./images/sleep.png"));
+           }
+           #hibernate:focus {
+              background-image: image(url("./images/sleep-hover.png"));
+           }
+    '';
   };
   home.file = {
-    ".dotfiles/modules/fastfetch/theme" = {
+    ".config/fastfetch/theme" = {
       executable = true;
       text = ''
         echo "uwunicorn"
       '';
     };
-  };
-  home.file = {
     ".config/hypr/theme.conf" = {
       enable = true;
       text = ''
@@ -41,9 +109,6 @@
         $base0F = rbg(a3a079)
       '';
     };
-  };
-
-  home.file = {
     ".config/waybar/theme.css" = {
       enable = true;
       text = ''
@@ -65,90 +130,16 @@
         @define-color base0F #a3a079;
       '';
     };
-  };
-  programs.wlogout.style = ''
-    window {
-             font-family: "0xProto Nerd Font";
-             font-size: 14pt;
-             color: #eed5d9; /* text */
-             background-color: rgba(47, 42, 63, 0.5);
-         }
-
-         button {
-             background-repeat: no-repeat;
-             background-position: center;
-             background-size: 25%;
-             border: none;
-             background-color: rgba(47, 42, 63, 0);
-             margin: 5px;
-             transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
-         }
-
-         button:hover {
-             background-color: rgba(47, 42, 63, 0.1);
-         }
-
-         button:focus {
-             background-color: #c965bf;
-             color: #241b26;
-         }
-
-         #lock {
-             background-image: image(url("./images/lock.png"));
-         }
-         #lock:focus {
-             background-image: image(url("./images/lock-hover.png"));
-         }
-
-         #logout {
-             background-image: image(url("./images/logout.png"));
-         }
-         #logout:focus {
-             background-image: image(url("./images/logout-hover.png"));
-         }
-
-         #suspend {
-             background-image: image(url("./images/sleep.png"));
-         }
-         #suspend:focus {
-             background-image: image(url("./images/sleep-hover.png"));
-         }
-
-         #shutdown {
-             background-image: image(url("./images/power.png"));
-         }
-         #shutdown:focus {
-             background-image: image(url("./images/power-hover.png"));
-         }
-
-         #reboot {
-             background-image: image(url("./images/restart.png"));
-         }
-         #reboot:focus {
-             background-image: image(url("./images/restart-hover.png"));
-         }
-
-         #hibernate {
-            background-image: image(url("./images/sleep.png"));
-         }
-         #hibernate:focus {
-            background-image: image(url("./images/sleep-hover.png"));
-         }
-  '';
-
-  home.file = {
     ".config/ulauncher/user-themes/theme/colours.css" = {
       text = ''
-        @define-color background #241b26;
-        @define-color current_line_background #2f2a3f;
+        @define-color background #2f2a3f;
+        @define-color current_line_background #241b26;
         @define-color foreground #7e5f83;
         @define-color foreground_lessimportant #eed5d9;
         @define-color accent #de5b44;
         @define-color highlight #de5b44;
       '';
     };
-  };
-  home.file = {
     ".config/ulauncher/user-themes/theme/manifest.json" = {
       text = ''
               {

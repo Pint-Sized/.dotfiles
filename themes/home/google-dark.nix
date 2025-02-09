@@ -82,7 +82,7 @@
     '';
   };
   home.file = {
-    ".dotfiles/modules/fastfetch/theme" = {
+    ".config/fastfetch/theme" = {
       executable = true;
       text = ''
         echo "Google Dark"
@@ -132,8 +132,8 @@
     };
     ".config/ulauncher/user-themes/theme/colours.css" = {
       text = ''
-        @define-color background #1d1f21;
-        @define-color current_line_background #282a2e;
+        @define-color background #282a2e;
+        @define-color current_line_background #1d1f21;
         @define-color foreground #b4b7b4;
         @define-color foreground_lessimportant #c5c8c6;
         @define-color accent #F96A38;

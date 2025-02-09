@@ -82,7 +82,7 @@
     '';
   };
   home.file = {
-    ".dotfiles/modules/fastfetch/theme" = {
+    ".config/fastfetch/theme" = {
       executable = true;
       text = ''
         echo Greenscreen
@@ -132,8 +132,8 @@
     };
     ".config/ulauncher/user-themes/theme/colours.css" = {
       text = ''
-        @define-color background #001100;
-        @define-color current_line_background #003300;
+        @define-color background #003300;
+        @define-color current_line_background #001100;
         @define-color foreground #009900;
         @define-color foreground_lessimportant #00bb00;
         @define-color accent #009900;

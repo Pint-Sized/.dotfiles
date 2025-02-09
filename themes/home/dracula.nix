@@ -82,7 +82,7 @@
     '';
   };
   home.file = {
-    ".dotfiles/modules/fastfetch/theme" = {
+    ".config/fastfetch/theme" = {
       executable = true;
       text = ''
         echo Dracula
@@ -132,8 +132,8 @@
     };
     ".config/ulauncher/user-themes/theme/colours.css" = {
       text = ''
-        @define-color background #282a36;
-        @define-color current_line_background #363447;
+        @define-color background #363447;
+        @define-color current_line_background #282a36;
         @define-color foreground #9ea8c7;
         @define-color foreground_lessimportant #f8f8f2;
         @define-color accent #ffb86c;

@@ -82,7 +82,7 @@
     '';
   };
   home.file = {
-    ".dotfiles/modules/fastfetch/theme" = {
+    ".config/fastfetch/theme" = {
       executable = true;
       text = ''
         echo Eighties
@@ -132,7 +132,7 @@
     };
     ".config/ulauncher/user-themes/theme/colours.css" = {
       text = ''
-        @define-color background #2d2d2d;
+        @define-color background #393939;
         @define-color current_line_background #2d2d2d;
         @define-color foreground #a09f93;
         @define-color foreground_lessimportant #a09f93;

@@ -3,23 +3,92 @@
 {
   stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/darkviolet.yaml";
 
-  programs.nixvim.colorschemes.base16 = {
-    enable = true;
-    colorscheme = "darkviolet";
+  programs = {
+    nixvim.colorschemes.base16 = {
+      enable = true;
+      colorscheme = "darkviolet";
+    };
+    fish.functions = {
+      fish_greeting = "pokeget purrloin --hide-name | fastfetch --file-raw -";
+    };
+    wlogout.style = ''
+      window {
+               font-family: "0xProto Nerd Font";
+               font-size: 14pt;
+               color: #b08ae6; /* text */
+               background-color: rgba(47, 42, 63, 0.5);
+           }
+
+           button {
+               background-repeat: no-repeat;
+               background-position: center;
+               background-size: 25%;
+               border: none;
+               background-color: rgba(47, 42, 63, 0);
+               margin: 5px;
+               transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+           }
+
+           button:hover {
+               background-color: rgba(47, 42, 63, 0.1);
+           }
+
+           button:focus {
+               background-color: #4595e6;
+               color: #000000;
+           }
+
+           #lock {
+               background-image: image(url("./images/lock.png"));
+           }
+           #lock:focus {
+               background-image: image(url("./images/lock-hover.png"));
+           }
+
+           #logout {
+               background-image: image(url("./images/logout.png"));
+           }
+           #logout:focus {
+               background-image: image(url("./images/logout-hover.png"));
+           }
+
+           #suspend {
+               background-image: image(url("./images/sleep.png"));
+           }
+           #suspend:focus {
+               background-image: image(url("./images/sleep-hover.png"));
+           }
+
+           #shutdown {
+               background-image: image(url("./images/power.png"));
+           }
+           #shutdown:focus {
+               background-image: image(url("./images/power-hover.png"));
+           }
+
+           #reboot {
+               background-image: image(url("./images/restart.png"));
+           }
+           #reboot:focus {
+               background-image: image(url("./images/restart-hover.png"));
+           }
+
+           #hibernate {
+              background-image: image(url("./images/sleep.png"));
+           }
+           #hibernate:focus {
+              background-image: image(url("./images/sleep-hover.png"));
+           }
+    '';
   };
 
-  programs.fish.functions = {
-    fish_greeting = "pokeget purrloin --hide-name | fastfetch --file-raw -";
-  };
   home.file = {
-    ".dotfiles/modules/fastfetch/theme" = {
+    ".config/fastfetch/theme" = {
       executable = true;
       text = ''
         echo "darkviolet"
       '';
     };
-  };
-  home.file = {
     ".config/hypr/theme.conf" = {
       enable = true;
       text = ''
@@ -41,9 +110,6 @@
         $base0F = rbg(a886bf)
       '';
     };
-  };
-
-  home.file = {
     ".config/waybar/theme.css" = {
       enable = true;
       text = ''
@@ -65,90 +131,16 @@
         @define-color base0F #a886bf;
       '';
     };
-  };
-  programs.wlogout.style = ''
-    window {
-             font-family: "0xProto Nerd Font";
-             font-size: 14pt;
-             color: #b08ae6; /* text */
-             background-color: rgba(47, 42, 63, 0.5);
-         }
-
-         button {
-             background-repeat: no-repeat;
-             background-position: center;
-             background-size: 25%;
-             border: none;
-             background-color: rgba(47, 42, 63, 0);
-             margin: 5px;
-             transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
-         }
-
-         button:hover {
-             background-color: rgba(47, 42, 63, 0.1);
-         }
-
-         button:focus {
-             background-color: #4595e6;
-             color: #000000;
-         }
-
-         #lock {
-             background-image: image(url("./images/lock.png"));
-         }
-         #lock:focus {
-             background-image: image(url("./images/lock-hover.png"));
-         }
-
-         #logout {
-             background-image: image(url("./images/logout.png"));
-         }
-         #logout:focus {
-             background-image: image(url("./images/logout-hover.png"));
-         }
-
-         #suspend {
-             background-image: image(url("./images/sleep.png"));
-         }
-         #suspend:focus {
-             background-image: image(url("./images/sleep-hover.png"));
-         }
-
-         #shutdown {
-             background-image: image(url("./images/power.png"));
-         }
-         #shutdown:focus {
-             background-image: image(url("./images/power-hover.png"));
-         }
-
-         #reboot {
-             background-image: image(url("./images/restart.png"));
-         }
-         #reboot:focus {
-             background-image: image(url("./images/restart-hover.png"));
-         }
-
-         #hibernate {
-            background-image: image(url("./images/sleep.png"));
-         }
-         #hibernate:focus {
-            background-image: image(url("./images/sleep-hover.png"));
-         }
-  '';
-
-  home.file = {
     ".config/ulauncher/user-themes/theme/colours.css" = {
       text = ''
-        @define-color background #000000;
-        @define-color current_line_background #231a40;
+        @define-color background #231a40;
+        @define-color current_line_background #000000;
         @define-color foreground #7b43bf;
         @define-color foreground_lessimportant #b08ae6;
         @define-color accent #bb66cc;
         @define-color highlight #bb66cc;
       '';
     };
-  };
-  home.file = {
     ".config/ulauncher/user-themes/theme/manifest.json" = {
       text = ''
               {
