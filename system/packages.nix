@@ -195,7 +195,7 @@
       ]);
 
   services.flatpak.packages = [
-    "com.rtosta.zapzap"
+    "com.ktechpit.whatsie"
   ];
 
   programs = {
