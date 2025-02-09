@@ -78,7 +78,7 @@
         desktop = lib.nixosSystem {
           inherit system;
           modules = [
-            ./system/configuration.nix
+            ./configuration.nix
             ./hosts/desktop/configuration.nix
             catppuccin.nixosModules.catppuccin
             nixvim.nixosModules.nixvim
