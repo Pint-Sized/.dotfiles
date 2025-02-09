@@ -137,7 +137,6 @@
         wttrbar
         yamllint
         yamlfmt
-        zapzap
         zed-editor
       ])
 
@@ -198,6 +197,7 @@
   services.flatpak.packages = [
     "com.github.tchx84.Flatseal"
     "io.github.flattool.Warehouse"
+    "com.mudeprolinux.whakarere"
   ];
 
   programs = {
