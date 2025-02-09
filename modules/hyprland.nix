@@ -355,18 +355,9 @@
           "toggle_dpms",
         ]
 
-        [scratchpads.volume]
-        animation = "fromTop"
-        command = "pavucontrol"
-        class = "org.pulseaudio.pavucontrol"
-        size = "90% 90%"
-        unfocus = "hide"
-        hide_delay = 0.0
-        lazy = false
-
         [scratchpads.spotify]
         animation = "fromTop"
-        command = "spotify"
+        command = "spotify --force-device-scale-factor=1.5 %U"
         class = "Spotify"
         size = "90% 90%"
         unfocus = "hide"
@@ -384,7 +375,7 @@
 
         [scratchpads.discord]
         animation = "fromTop"
-        command = "webcord"
+        command = "webcord --force-device-scale-factor=1.5 %U"
         class = "WebCord"
         size = "90% 90%"
         unfocus = "hide"
@@ -405,15 +396,6 @@
         animation = "fromTop"
         command = "imv ~/School/School-TimetableV2.png"
         class = "imv"
-        size = "90% 90%"
-        unfocus = "hide"
-        hide_delay = 0.0
-        lazy = false
-
-        [scratchpads.teams]
-        animation = "fromTop"
-        command = "teams-for-linux"
-        class = "teams-for-linux"
         size = "90% 90%"
         unfocus = "hide"
         hide_delay = 0.0
