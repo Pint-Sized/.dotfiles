@@ -303,6 +303,7 @@
       bind = $mainMod, 0, exec, pypr toggle whatsapp
       bind = $mainMod, code:20, exec, pypr toggle email
       bind = $mainMod, code:21, exec, pypr toggle spotify
+      bind = $mainMod, M, exec, pypr toggle calculator
 
       bind = $mainMod, S, togglespecialworkspace, magic
       bind = $mainMod SHIFT, S, movetoworkspace, special:magic
@@ -368,7 +369,7 @@
         [scratchpads.foot]
         animation = "fromTop"
         command = "foot"
-        class = ""
+        class = "foot"
         size = "90% 90%"
         unfocus = "hide"
         hide_delay = 0.0
@@ -406,6 +407,15 @@
         animation = "fromTop"
         command = "imv ~/School/School-TimetableV2.png"
         class = "imv"
+        size = "90% 90%"
+        unfocus = "hide"
+        hide_delay = 0.0
+        lazy = false
+
+        [scratchpads.calculator]
+        animation = "fromTop"
+        command = "gnome-calculator"
+        class = "org.gnome.Calculator"
         size = "90% 90%"
         unfocus = "hide"
         hide_delay = 0.0
