@@ -4,7 +4,7 @@
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-master.url = "github:/nixos/nixpkgs/master";
     home-manager = {
-      url = "github:nix-community/home-manager/release-24.11";
+      url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     catppuccin.url = "github:catppuccin/nix/main";
@@ -46,10 +46,7 @@
       url = "github:icewind1991/nvidia-patch-nixos";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixcord = {
-      url = "github:kaylorben/nixcord";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    #nixcord.url = "github:kaylorben/nixcord";
   };
 
   outputs =
@@ -65,14 +62,17 @@
       sops-nix,
       nix-software-center,
       nixos-conf-editor,
-      nixcord,
+      #nixcord,
       ...
     }:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
-      pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
+      pkgs-unstable = import nixpkgs-unstable {
+        inherit system;
+        config.allowUnfree = true;
+      };
       spicePkgs = spicetify-nix.legacyPackages.${pkgs.system};
     in
     {
@@ -122,7 +122,7 @@
             nixvim.homeManagerModules.nixvim
             stylix.homeManagerModules.stylix
             spicetify-nix.homeManagerModules.default
-            nixcord.homeManagerModules.nixcord
+            #nixcord.homeManagerModules.nixcord
           ];
           extraSpecialArgs = {
             inherit spicePkgs;
@@ -131,5 +131,4 @@
         };
       };
     };
-
 }

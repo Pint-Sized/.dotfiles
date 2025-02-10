@@ -16,6 +16,7 @@
       bottom
       btop
       cava
+      cavalier
       ccache
       celluloid
       clang
@@ -23,7 +24,6 @@
       cmake
       coreutils
       deluge
-      discord
       dua
       eog
       exiftool
@@ -33,10 +33,12 @@
       figlet
       file
       firefoxpwa
+      foot
       fzf
       git
       glib
       gnome-calculator
+      gwenview
       nautilus
       gnumake
       go
@@ -54,7 +56,6 @@
       librewolf
       libsForQt5.qt5ct
       #mangohud
-      monitor
       mpc-cli
       mpv
       ncurses
@@ -120,6 +121,7 @@
 
       # ----- UNSTABLE ----- #
       (with pkgs-unstable; [
+        discord
         gopls
         hclfmt
         home-manager
@@ -134,6 +136,7 @@
         pyright
         stylua
         ulauncher
+        vencord
         wttrbar
         yamllint
         yamlfmt

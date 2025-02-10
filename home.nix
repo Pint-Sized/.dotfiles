@@ -15,6 +15,9 @@
     # ----------- FISH ------------- #
     ./modules/fish.nix
 
+    # ---------- FOOT ------------ #
+    ./modules/foot
+
     # ------------ FZF ------------- #
     ./modules/fzf.nix
 
@@ -43,10 +46,13 @@
     ./modules/librewolf.nix
 
     # -------- MANGOHUD -------- #
-    ./modules/mangohud.nix
+    #./modules/mangohud.nix
 
     # ------------ MPV ------------ #
     ./modules/mpv.nix
+
+    # -------- NIXCORD ------- #
+    #./modules/nixcord.nix
 
     # --------- NIXVIM --------- #
     ./modules/nixvim/nixvim.nix
@@ -87,7 +93,13 @@
     # --------- ZED --------- #
     ./modules/zed.nix
   ];
-
+  nixpkgs.config = {
+    allowUnfree = true;
+    allowUnfreePredicate = true;
+  };
   programs.home-manager.enable = true; # allows home-manager to manage itself
-  home.stateVersion = "24.05"; # do not change without consulting manual
+  home = {
+    enableNixpkgsReleaseCheck = false;
+    stateVersion = "24.05"; # do not change without consulting manual
+  };
 }

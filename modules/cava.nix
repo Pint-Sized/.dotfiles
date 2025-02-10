@@ -6,5 +6,6 @@
         general.framerate = 60;
       };
     };
+    cavalier.enable = false;
   };
 }
