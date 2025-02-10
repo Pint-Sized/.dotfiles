@@ -55,6 +55,8 @@
       waybar.enable = false;
       hyprlock.enable = false;
       gtk.flatpakSupport.enable = true;
+      nixcord.enable = true;
+      cavalier.enable = false;
       #eog.enable = true;
       #xrecourses.enable = true;
     };

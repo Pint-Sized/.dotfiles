@@ -366,8 +366,8 @@
 
         [scratchpads.whatsapp]
         animation = "fromTop"
-        command = "zapzap"
-        class = "com.rtosta.zapzap"
+        command = "whatsie"
+        class = "com.ktechpit.whatsie"
         size = "90% 90%"
         unfocus = "hide"
         hide_delay = 0.0
@@ -375,8 +375,8 @@
 
         [scratchpads.discord]
         animation = "fromTop"
-        command = "webcord --force-device-scale-factor=1.5 %U"
-        class = "WebCord"
+        command = "dissent"
+        class = "so.libdb.dissent"
         size = "90% 90%"
         unfocus = "hide"
         hide_delay = 0.0

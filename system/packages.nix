@@ -16,7 +16,6 @@
       bottom
       btop
       cava
-      cavalier
       ccache
       celluloid
       clang
@@ -24,7 +23,7 @@
       cmake
       coreutils
       deluge
-      webcord-vencord
+      discord
       dua
       eog
       exiftool
@@ -102,6 +101,7 @@
       wdisplays
       wev
       wget
+      whatsie
       which
       wl-clipboard
       wlogout
@@ -195,7 +195,6 @@
       ]);
 
   services.flatpak.packages = [
-    "com.ktechpit.whatsie"
   ];
 
   programs = {

@@ -13,10 +13,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-flatpak.url = "github:gmodena/nix-flatpak";
-    stylix = {
-      url = "github:danth/stylix/release-24.11";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    stylix.url = "github:danth/stylix/master";
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -49,6 +46,10 @@
       url = "github:icewind1991/nvidia-patch-nixos";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixcord = {
+      url = "github:kaylorben/nixcord";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -64,6 +65,7 @@
       sops-nix,
       nix-software-center,
       nixos-conf-editor,
+      nixcord,
       ...
     }:
     let
@@ -95,7 +97,7 @@
         laptop = lib.nixosSystem {
           inherit system;
           modules = [
-            ./system/configuration.nix
+            ./configuration.nix
             ./hosts/laptop/configuration.nix
             catppuccin.nixosModules.catppuccin
             nixvim.nixosModules.nixvim
@@ -120,6 +122,7 @@
             nixvim.homeManagerModules.nixvim
             stylix.homeManagerModules.stylix
             spicetify-nix.homeManagerModules.default
+            nixcord.homeManagerModules.nixcord
           ];
           extraSpecialArgs = {
             inherit spicePkgs;
