@@ -60,7 +60,7 @@
             monitor =
             path = ~/.dotfiles/wallpapers/wynnie-profile-pic.jpeg
             border_size = 2
-            border_color = $base0E
+            border_color = $base02
             size = 130
             rounding = -1
             rotate = 0

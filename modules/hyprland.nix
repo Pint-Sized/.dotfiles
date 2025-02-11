@@ -368,8 +368,8 @@
 
         [scratchpads.foot]
         animation = "fromTop"
-        command = "foot"
-        class = "foot"
+        command = "kitty"
+        class = "kitty"
         size = "90% 90%"
         unfocus = "hide"
         hide_delay = 0.0

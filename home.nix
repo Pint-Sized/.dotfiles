@@ -16,7 +16,7 @@
     ./modules/fish.nix
 
     # ---------- FOOT ------------ #
-    ./modules/foot
+    ./modules/foot.nix
 
     # ------------ FZF ------------- #
     ./modules/fzf.nix

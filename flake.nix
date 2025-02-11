@@ -66,7 +66,7 @@
       ...
     }:
     let
-      lib = nixpkgs.lib;
+      inherit (nixpkgs.lib) lib;
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
       pkgs-unstable = import nixpkgs-unstable {
