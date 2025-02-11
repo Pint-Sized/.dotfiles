@@ -1,10 +1,15 @@
-{ pkgs, ... }:
+{
+  pkgs,
+  systemSettings,
+  userSettings,
+  ...
+}:
 
 {
-  users.users.fionnbennett = {
+  users.users.${userSettings.username} = {
     shell = pkgs.fish;
     isNormalUser = true;
-    description = "Fionn Bennett";
+    description = userSettings.name;
     extraGroups = [
       "networkmanager"
       "wheel"
@@ -36,9 +41,9 @@
   ];
   fonts.fontconfig = {
     defaultFonts = {
-      serif = [ "0xProto Nerd Font" ];
-      sansSerif = [ "0xProto Nerd Font" ];
-      monospace = [ "0xProto Nerd Font Mono" ];
+      serif = [ userSettings.fontSerif ];
+      sansSerif = [ userSettings.fontSerif ];
+      monospace = [ userSettings.fontMono ];
     };
   };
   boot = {
@@ -59,26 +64,25 @@
     };
   };
   time = {
-    timeZone = "Europe/Dublin";
+    timeZone = systemSettings.timezone;
   };
   i18n = {
-    defaultLocale = "en_IE.UTF-8";
+    defaultLocale = systemSettings.locale;
     extraLocaleSettings = {
-      LC_ADDRESS = "en_IE.UTF-8";
-      LC_IDENTIFICATION = "en_IE.UTF-8";
-      LC_MEASUREMENT = "en_IE.UTF-8";
-      LC_MONETARY = "en_IE.UTF-8";
-      LC_NAME = "en_IE.UTF-8";
-      LC_NUMERIC = "en_IE.UTF-8";
-      LC_PAPER = "en_IE.UTF-8";
-      LC_TELEPHONE = "en_IE.UTF-8";
-      LC_TIME = "en_IE.UTF-8";
-      LC_ALL = "en_IE.UTF-8";
-      LC_CTYPE = "en_IE.UTF-8";
-      LC_COLLATE = "en_IE.UTF-8";
-      LC_MESSAGES = "en_IE.UTF-8";
-      LANGUAGE = "en_IE.UTF-8";
-
+      LC_ADDRESS = systemSettings.locale;
+      LC_IDENTIFICATION = systemSettings.locale;
+      LC_MEASUREMENT = systemSettings.locale;
+      LC_MONETARY = systemSettings.locale;
+      LC_NAME = systemSettings.locale;
+      LC_NUMERIC = systemSettings.locale;
+      LC_PAPER = systemSettings.locale;
+      LC_TELEPHONE = systemSettings.locale;
+      LC_TIME = systemSettings.locale;
+      LC_ALL = systemSettings.locale;
+      LC_CTYPE = systemSettings.locale;
+      LC_COLLATE = systemSettings.locale;
+      LC_MESSAGES = systemSettings.locale;
+      LANGUAGE = systemSettings.locale;
     };
   };
   console.keyMap = "us";

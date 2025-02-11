@@ -85,6 +85,7 @@
       spotify
       sqlite
       sqlite-interactive
+      statix
       swaynotificationcenter
       swayosd
       swww

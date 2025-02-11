@@ -1,3 +1,5 @@
+{ userSettings, ... }:
+
 {
   imports = [
     # ------- BAT ------- #
@@ -72,8 +74,9 @@
     # --------- SWAYNC --------- #
     ./modules/swaync.nix
 
-    # ------- THEMES ----------- #
-    ./themes/home-theme-selector.nix
+    # ------- STYLIX ----------- #
+    ./themes/home/stylix.nix
+    ./themes/home/${userSettings.theme}
 
     # --------- ULAUNCHER --------- #
     ./modules/ulauncher.nix

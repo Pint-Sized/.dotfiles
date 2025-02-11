@@ -66,7 +66,23 @@
       ...
     }:
     let
-      inherit (nixpkgs.lib) lib;
+      systemSettings = {
+        system = "x86_64-linux";
+        hostname = "sisyphus";
+        timezone = "Europe/Dublin";
+        locale = "en_IE.UTF-8";
+      };
+
+      userSettings = {
+        username = "fionnbennett";
+        name = "Fionn Bennett";
+        email = "fionnbennett06@gmail.com";
+        theme = "black-metal-venom.nix";
+        fontSerif = "0xProto Nerd Font";
+        fontMono = "0xProto Nerd Font Mono";
+      };
+
+      lib = nixpkgs.lib;
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
       pkgs-unstable = import nixpkgs-unstable {
@@ -92,6 +108,8 @@
             inherit pkgs-unstable;
             inherit nix-software-center;
             inherit nixos-conf-editor;
+            inherit systemSettings;
+            inherit userSettings;
           };
         };
         laptop = lib.nixosSystem {
@@ -110,6 +128,8 @@
             inherit pkgs-unstable;
             inherit nix-software-center;
             inherit nixos-conf-editor;
+            inherit systemSettings;
+            inherit userSettings;
           };
         };
       };
@@ -127,6 +147,8 @@
           extraSpecialArgs = {
             inherit spicePkgs;
             inherit pkgs-unstable;
+            inherit systemSettings;
+            inherit userSettings;
           };
         };
       };
