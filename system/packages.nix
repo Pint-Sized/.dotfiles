@@ -133,6 +133,7 @@
         kitty
         lua
         markdown-oxide
+        nchat
         neovim-unwrapped
         nixd
         nixfmt-rfc-style
