@@ -1,26 +1,26 @@
-{ pkgs, ... }:
+{ userSettings, pkgs, ... }:
 
 {
   stylix = {
     enable = true;
-    image = ../wallpapers/evening-sky.png;
+    image = ../../wallpapers/evening-sky.png;
     cursor = {
-      name = "Bibata-Modern-Classic";
+      name = userSettings.cursorName;
       package = pkgs.bibata-cursors;
       size = 16;
     };
     fonts = {
       serif = {
+        name = userSettings.fontSerif;
         package = pkgs.nerdfonts;
-        name = "0xProto Nerd Font";
       };
       sansSerif = {
+        name = userSettings.fontSerif;
         package = pkgs.nerdfonts;
-        name = "0xProto Nerd Font";
       };
       monospace = {
+        name = userSettings.fontMono;
         package = pkgs.nerdfonts;
-        name = "0xProto Nerd Font Mono";
       };
       sizes = {
         terminal = 10;

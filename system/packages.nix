@@ -9,6 +9,7 @@
   # -------- STABLE ------- #
   environment.systemPackages =
     (with pkgs; [
+      aerc
       appeditor
       bat
       base16-schemes
@@ -46,6 +47,7 @@
       gperf
       has
       hyprlock
+      hyprpaper
       hyprpicker
       imv
       jq
@@ -56,6 +58,7 @@
       librewolf
       libsForQt5.qt5ct
       #mangohud
+      meson
       mpc-cli
       mpv
       ncurses

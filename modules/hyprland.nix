@@ -7,11 +7,12 @@
     xwayland = {
       enable = true;
     };
-    plugins = with pkgs.hyprlandPlugins; [
-      borders-plus-plus
-      hyprwinwrap
-      hyprfocus
-      hyprsplit
+    plugins = [
+      pkgs.hyprlandPlugins.borders-plus-plus
+      pkgs.hyprlandPlugins.hyprwinwrap
+      pkgs.hyprlandPlugins.hyprfocus
+      pkgs.hyprlandPlugins.hyprsplit
+      pkgs.hyprlandPlugins.hypr-dynamic-cursors
     ];
     extraConfig = ''
 
@@ -132,6 +133,16 @@
             in_speed = 1
             out_bezier = realsmooth
             out_speed = 2
+          }
+        }
+
+        hypr-dynamic-cursors {
+          enabled = true
+          mode = tilt
+          threshold = 2
+          tilt {
+            limit = 5000
+            function = negative_quadratic
           }
         }
       }

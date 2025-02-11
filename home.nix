@@ -2,6 +2,9 @@
 
 {
   imports = [
+    # ------ AERC ------ #
+    ./modules/aerc.nix
+
     # ------- BAT ------- #
     ./modules/bat.nix
 

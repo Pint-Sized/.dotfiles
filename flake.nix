@@ -77,9 +77,12 @@
         username = "fionnbennett";
         name = "Fionn Bennett";
         email = "fionnbennett06@gmail.com";
-        theme = "black-metal-venom.nix";
+        theme = "uwunicorn.nix";
+        fontPkg = "pkgs.nerdfonts";
         fontSerif = "0xProto Nerd Font";
         fontMono = "0xProto Nerd Font Mono";
+        cursorPkg = "pkgs.bibata-cursors";
+        cursorName = "Bibata-Modern-Classic";
       };
 
       lib = nixpkgs.lib;
