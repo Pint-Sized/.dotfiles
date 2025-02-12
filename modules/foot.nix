@@ -1,3 +1,10 @@
 {
-  programs.foot.enable = true;
+  programs.foot = {
+    enable = true;
+    settings = {
+      colors = {
+        alpha = 0;
+      };
+    };
+  };
 }

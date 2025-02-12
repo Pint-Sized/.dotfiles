@@ -23,8 +23,8 @@
     };
     undervolt = {
       enable = true;
-      coreOffset = -125;
-      gpuOffset = -75;
+      coreOffset = -100;
+      gpuOffset = -50;
     };
   };
 }

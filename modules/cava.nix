@@ -8,4 +8,5 @@
     };
     cavalier.enable = false;
   };
+  stylix.targets.cava.rainbow.enable = true;
 }

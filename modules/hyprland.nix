@@ -134,6 +134,9 @@
             function = "negative_quadratic";
           };
         };
+        hyprwinwrap = {
+          class = "foot";
+        };
       };
 
       #####################
@@ -329,9 +332,9 @@
       ##############################
       windowrulev2 = [
         "suppressevent maximize, class:.*"
-        #"plugin:chromakey,fullscreen:0"
+        "opacity 0.1 ,class:^(foot)$"
+        #"opacity 0.3, class:foot, title:foot"
       ];
-      #chromakey_background = "7,8,17";
     };
   };
 

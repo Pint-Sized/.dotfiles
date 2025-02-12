@@ -32,6 +32,7 @@
       hyprlock.enable = false;
       gtk.flatpakSupport.enable = true;
       cavalier.enable = false;
+      foot.enable = false;
       #eog.enable = true;
       #xrecourses.enable = true;
     };
