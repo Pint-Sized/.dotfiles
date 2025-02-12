@@ -47,6 +47,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     #nixcord.url = "github:kaylorben/nixcord";
+    #hypr-darkwindow = {
+    #url = "github:alexhulbert/Hyprchroma/main";
+    #inputs.nixpkgs.follows = "nixpkgs";
+    #};
   };
 
   outputs =
@@ -63,6 +67,7 @@
       nix-software-center,
       nixos-conf-editor,
       #nixcord,
+      #hypr-darkwindow,
       ...
     }:
     let
@@ -152,6 +157,7 @@
             inherit pkgs-unstable;
             inherit systemSettings;
             inherit userSettings;
+            #inherit hypr-darkwindow;
           };
         };
       };

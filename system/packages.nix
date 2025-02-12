@@ -14,7 +14,6 @@
       bat
       base16-schemes
       black
-      bottom
       btop
       cava
       cavalier
@@ -57,7 +56,6 @@
       libreoffice-qt6-fresh
       librewolf
       libsForQt5.qt5ct
-      #mangohud
       meson
       mpc-cli
       mpv
@@ -70,7 +68,6 @@
       ntfs3g
       onefetch
       openssl
-      pandoc
       pavucontrol
       playerctl
       pokeget-rs
@@ -84,16 +81,14 @@
       ripgrep
       rubyPackages_3_3.sqlite3
       rustup
-      shotwell
       spotify
       sqlite
-      sqlite-interactive
       statix
       swaynotificationcenter
       swayosd
       swww
       teams-for-linux
-      tk
+      #tk
       tldr
       udisks
       undollar
@@ -105,15 +100,13 @@
       waypaper
       wdisplays
       wev
-      wget
+      #wget
       whatsie
       which
       wl-clipboard
       wlogout
-      wob
       xdg-desktop-portal-hyprland
-      xdg-utils
-      yarn
+      #xdg-utils
       yazi
       zathura
       zip
@@ -130,6 +123,7 @@
         hclfmt
         home-manager
         hyprpolkitagent
+        hyprsysteminfo
         kitty
         lua
         markdown-oxide
