@@ -51,6 +51,9 @@
     #url = "github:alexhulbert/Hyprchroma/main";
     #inputs.nixpkgs.follows = "nixpkgs";
     #};
+    hypr-dynamic-cursors = {
+      url = "github:VirtCode/hypr-dynamic-cursors";
+    };
   };
 
   outputs =
@@ -68,6 +71,7 @@
       nixos-conf-editor,
       #nixcord,
       #hypr-darkwindow,
+      hypr-dynamic-cursors,
       ...
     }:
     let
@@ -157,6 +161,7 @@
             inherit pkgs-unstable;
             inherit systemSettings;
             inherit userSettings;
+            inherit hypr-dynamic-cursors;
             #inherit hypr-darkwindow;
           };
         };

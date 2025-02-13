@@ -1,18 +1,26 @@
-{ pkgs, ... }:
+{
+  pkgs,
+  hypr-dynamic-cursors,
+  ...
+}:
 
 {
+  import = [
+
+  ];
   # --------- HYPRLAND -------- #
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland = {
       enable = true;
     };
+    systemd.variables = [ "--all" ];
     plugins = [
       pkgs.hyprlandPlugins.borders-plus-plus
       pkgs.hyprlandPlugins.hyprwinwrap
       pkgs.hyprlandPlugins.hyprfocus
       pkgs.hyprlandPlugins.hyprsplit
-      pkgs.hyprlandPlugins.hypr-dynamic-cursors
+      hypr-dynamic-cursors.packages.${pkgs.system}.hypr-dynamic-cursors
       #hypr-darkwindow.packages.${pkgs.system}.Hypr-DarkWindow
     ];
 
@@ -39,6 +47,7 @@
       #################
       exec-once = [
         "sleep 4"
+        "dbus-update-activation-environment --system --all"
         "hyprctl setcursor 16"
         "swww-daemon &"
         "sleep 2"
@@ -132,6 +141,9 @@
           tilt = {
             limit = 5000;
             function = "negative_quadratic";
+          };
+          shake = {
+            enabled = false;
           };
         };
         hyprwinwrap = {

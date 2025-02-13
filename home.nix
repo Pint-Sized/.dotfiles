@@ -36,7 +36,7 @@
     ./modules/home-settings.nix
 
     # ------------- HYPRLAND ---------- #
-    ./modules/hyprland.nix
+    ./modules/hyprland/hyprland.nix
 
     #---------- HYPRLOCK --------- #
     ./modules/hyprlock.nix
