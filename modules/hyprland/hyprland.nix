@@ -5,9 +5,6 @@
 }:
 
 {
-  import = [
-
-  ];
   # --------- HYPRLAND -------- #
   wayland.windowManager.hyprland = {
     enable = true;

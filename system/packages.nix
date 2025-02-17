@@ -112,6 +112,13 @@
       zip
       zlib
       thunderbird
+
+      # ----- TESTING ----- #
+      emblem
+      foliate
+      calligraphy
+      iotas
+      newsflash
     ])
 
     ++
@@ -123,7 +130,6 @@
         hclfmt
         home-manager
         hyprpolkitagent
-        hyprsysteminfo
         kitty
         lua
         markdown-oxide
@@ -197,6 +203,8 @@
       ]);
 
   services.flatpak.packages = [
+    "so.libdb.dissent"
+    "io.github.giantpinkrobots.flatsweep"
   ];
 
   programs = {
