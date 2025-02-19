@@ -1,8 +1,18 @@
 {
   programs.nixcord = {
     enable = true;
+    quickCss = "
+      :root {
+        --font: '0xProto Nerd Font';
+      }
+
+      ::placeholder, body, button, input, select, textarea {
+        font-family: var(--font), sans-serif;
+      }
+    ";
     discord.vencord.unstable = true;
     config = {
+      useQuickCss = true;
       frameless = true;
       plugins = {
         alwaysAnimate.enable = true;

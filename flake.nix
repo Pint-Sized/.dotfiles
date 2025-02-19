@@ -18,10 +18,6 @@
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nix-mineral = {
-      url = "github:cynicsketch/nix-mineral";
-      flake = false;
-    };
     nur = {
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -30,30 +26,7 @@
       url = "github:hyprwm/hyprpicker";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    sops-nix = {
-      url = "github:Mic92/sops-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    nix-software-center = {
-      url = "github:snowfallorg/nix-software-center";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    nixos-conf-editor = {
-      url = "github:snowfallorg/nixos-conf-editor";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    nvidia-patch = {
-      url = "github:icewind1991/nvidia-patch-nixos";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    #nixcord.url = "github:kaylorben/nixcord";
-    #hypr-darkwindow = {
-    #url = "github:alexhulbert/Hyprchroma/main";
-    #inputs.nixpkgs.follows = "nixpkgs";
-    #};
-    hypr-dynamic-cursors = {
-      url = "github:VirtCode/hypr-dynamic-cursors";
-    };
+    nixcord.url = "github:kaylorben/nixcord";
   };
 
   outputs =
@@ -66,12 +39,7 @@
       nix-flatpak,
       stylix,
       spicetify-nix,
-      sops-nix,
-      nix-software-center,
-      nixos-conf-editor,
-      #nixcord,
-      #hypr-darkwindow,
-      hypr-dynamic-cursors,
+      nixcord,
       ...
     }:
     let
@@ -114,12 +82,9 @@
             nixvim.nixosModules.nixvim
             stylix.nixosModules.stylix
             nix-flatpak.nixosModules.nix-flatpak
-            sops-nix.nixosModules.sops
           ];
           specialArgs = {
             inherit pkgs-unstable;
-            inherit nix-software-center;
-            inherit nixos-conf-editor;
             inherit systemSettings;
             inherit userSettings;
           };
@@ -133,13 +98,10 @@
             nixvim.nixosModules.nixvim
             stylix.nixosModules.stylix
             nix-flatpak.nixosModules.nix-flatpak
-            sops-nix.nixosModules.sops
 
           ];
           specialArgs = {
             inherit pkgs-unstable;
-            inherit nix-software-center;
-            inherit nixos-conf-editor;
             inherit systemSettings;
             inherit userSettings;
           };
@@ -154,15 +116,13 @@
             nixvim.homeManagerModules.nixvim
             stylix.homeManagerModules.stylix
             spicetify-nix.homeManagerModules.default
-            #nixcord.homeManagerModules.nixcord
+            nixcord.homeManagerModules.nixcord
           ];
           extraSpecialArgs = {
             inherit spicePkgs;
             inherit pkgs-unstable;
             inherit systemSettings;
             inherit userSettings;
-            inherit hypr-dynamic-cursors;
-            #inherit hypr-darkwindow;
           };
         };
       };

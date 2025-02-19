@@ -1,8 +1,6 @@
 {
   pkgs,
   pkgs-unstable,
-  #nix-software-center,
-  #nixos-conf-editor,
   ...
 }:
 {
@@ -39,7 +37,6 @@
       glib
       gnome-calculator
       gwenview
-      nautilus
       gnumake
       go
       gparted
@@ -59,10 +56,9 @@
       meson
       mpc-cli
       mpv
+      nautilus
       ncurses
       nix-du
-      #nixos-conf-editor.packages.${system}.nixos-conf-editor
-      #nix-software-center.packages.${system}.nix-software-center
       nixos-generators
       nodejs_22
       ntfs3g
@@ -71,6 +67,7 @@
       pavucontrol
       playerctl
       pokeget-rs
+      protonup
       pyprland
       python3
       python312Packages.libcst
@@ -95,6 +92,7 @@
       unzip
       usbutils
       util-linux
+      vencord
       volctl
       waybar
       waypaper
@@ -141,7 +139,6 @@
         pyright
         stylua
         ulauncher
-        vencord
         wttrbar
         yamllint
         yamlfmt

@@ -50,14 +50,11 @@
     # --------- LIBREWOLF ----------- #
     ./modules/librewolf.nix
 
-    # -------- MANGOHUD -------- #
-    #./modules/mangohud.nix
-
     # ------------ MPV ------------ #
     ./modules/mpv.nix
 
     # -------- NIXCORD ------- #
-    #./modules/nixcord.nix
+    ./modules/nixcord.nix
 
     # --------- NIXVIM --------- #
     ./modules/nixvim/nixvim.nix

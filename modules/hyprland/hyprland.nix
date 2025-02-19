@@ -1,6 +1,5 @@
 {
   pkgs,
-  hypr-dynamic-cursors,
   ...
 }:
 
@@ -17,7 +16,6 @@
       pkgs.hyprlandPlugins.hyprwinwrap
       pkgs.hyprlandPlugins.hyprfocus
       pkgs.hyprlandPlugins.hyprsplit
-      hypr-dynamic-cursors.packages.${pkgs.system}.hypr-dynamic-cursors
       #hypr-darkwindow.packages.${pkgs.system}.Hypr-DarkWindow
     ];
 
@@ -129,18 +127,6 @@
             in_speed = 1;
             out_bezier = "realsmooth";
             out_speed = 2;
-          };
-        };
-        hypr-dynamic-cursors = {
-          enabled = true;
-          mode = "tilt";
-          threshold = 2;
-          tilt = {
-            limit = 5000;
-            function = "negative_quadratic";
-          };
-          shake = {
-            enabled = false;
           };
         };
         hyprwinwrap = {

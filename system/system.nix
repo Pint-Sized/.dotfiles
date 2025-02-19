@@ -28,7 +28,7 @@
       NIX_OZONE = "1";
       NIX_OZONE_WL = "1";
       MOZ_ENABLE_WAYLAND = "1";
-      STEAM_EXTRA_COMPAT_TOOLS_PATHS = "/home/user/.steam/root/compatibilitytoold.d";
+      STEAM_EXTRA_COMPAT_TOOLS_PATHS = "\${HOME}/.steam/root/compatibilitytools.d";
     };
   };
   fonts.packages = with pkgs; [
