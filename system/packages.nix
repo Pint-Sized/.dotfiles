@@ -99,13 +99,13 @@
       wdisplays
       wev
       #wget
-      whatsie
       which
       wl-clipboard
       wlogout
       xdg-desktop-portal-hyprland
       #xdg-utils
       yazi
+      zapzap
       zathura
       zip
       zlib
@@ -200,7 +200,7 @@
       ]);
 
   services.flatpak.packages = [
-    "so.libdb.dissent"
+    #"com.rtosta.zapzap"
     "io.github.giantpinkrobots.flatsweep"
   ];
 
