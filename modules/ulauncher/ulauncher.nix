@@ -134,5 +134,5 @@
       '';
     };
   };
-  xdg.configFile."~/.config/ulauncher/screenshot-icon.png".source = ./screenshot-icon.png;
+  home.file.".config/ulauncher/screenshot-icon.png".source = ./screenshot-icon.png;
 }

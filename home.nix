@@ -79,13 +79,13 @@
     ./themes/home/${userSettings.theme}
 
     # --------- ULAUNCHER --------- #
-    ./modules/ulauncher.nix
+    ./modules/ulauncher/ulauncher.nix
 
     # ---------- WAYBAR ----------- #
     ./modules/waybar.nix
 
     # -------- WLOGOUT -------- #
-    ./modules/wlogout.nix
+    ./modules/wlogout/wlogout.nix
 
     # --------- YAZI ------------ #
     ./modules/yazi/yazi.nix

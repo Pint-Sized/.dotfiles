@@ -39,45 +39,45 @@
          }
 
          #lock {
-             background-image: image(url("./images/lock.png"));
+             background-image: image(url("./icons/lock.png"));
          }
          #lock:focus {
-             background-image: image(url("./images/lock-hover.png"));
+             background-image: image(url("./icons/lock-hover.png"));
          }
 
          #logout {
-             background-image: image(url("./images/logout.png"));
+             background-image: image(url("./icons/logout.png"));
          }
          #logout:focus {
-             background-image: image(url("./images/logout-hover.png"));
+             background-image: image(url("./icons/logout-hover.png"));
          }
 
          #suspend {
-             background-image: image(url("./images/sleep.png"));
+             background-image: image(url("./icons/sleep.png"));
          }
          #suspend:focus {
-             background-image: image(url("./images/sleep-hover.png"));
+             background-image: image(url("./icons/sleep-hover.png"));
          }
 
          #shutdown {
-             background-image: image(url("./images/power.png"));
+             background-image: image(url("./icons/power.png"));
          }
          #shutdown:focus {
-             background-image: image(url("./images/power-hover.png"));
+             background-image: image(url("./icons/power-hover.png"));
          }
 
          #reboot {
-             background-image: image(url("./images/restart.png"));
+             background-image: image(url("./icons/restart.png"));
          }
          #reboot:focus {
-             background-image: image(url("./images/restart-hover.png"));
+             background-image: image(url("./icons/restart-hover.png"));
          }
 
          #hibernate {
-            background-image: image(url("./images/sleep.png"));
+            background-image: image(url("./icons/sleep.png"));
          }
          #hibernate:focus {
-            background-image: image(url("./images/sleep-hover.png"));
+            background-image: image(url("./icons/sleep-hover.png"));
          }
     '';
   };
