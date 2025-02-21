@@ -1,3 +1,3 @@
 {
-  home.file."anurati-free0font".target = ./anurati-free-font;
+  home.file."anurati-free0font".source = ./anurati-free-font;
 }
