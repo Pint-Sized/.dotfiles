@@ -71,6 +71,9 @@
     # ------- SPICETIFY ------ #
     ./modules/spicetify.nix
 
+    # ---- STEAM ---- #
+    ./modules/steam.nix
+
     # --------- SWAYODS -------- #
     ./modules/swayosd.nix
 

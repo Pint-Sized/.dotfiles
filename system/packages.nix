@@ -7,6 +7,7 @@
   # -------- STABLE ------- #
   environment.systemPackages =
     (with pkgs; [
+      adwsteamgtk
       aerc
       appeditor
       bat
