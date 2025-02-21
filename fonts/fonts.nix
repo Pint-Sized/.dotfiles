@@ -1,3 +1,3 @@
 {
-  home.file."anurati-free0font".source = ./anurati-free-font;
+  home.file.".local/share/fonts/Anurati-Regular.otf".source = ./Anurati-Regular.otf;
 }
