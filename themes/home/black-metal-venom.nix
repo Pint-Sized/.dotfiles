@@ -12,6 +12,7 @@
       fish_greeting = "pokeget duskull --hide-name | fastfetch --file-raw -";
     };
     wlogout.style = ''
+      @import "icons.css";
       window {
           font-family: "0xProto Nerd Font";
           font-size: 14pt;
@@ -36,48 +37,6 @@
       button:focus {
           background-color: #79241f;
           color: #000000;
-      }
-
-      #lock {
-          background-image: image(url("./images/lock.png"));
-      }
-      #lock:focus {
-          background-image: image(url("./images/lock-hover.png"));
-      }
-
-      #logout {
-          background-image: image(url("./images/logout.png"));
-      }
-      #logout:focus {
-          background-image: image(url("./images/logout-hover.png"));
-      }
-
-      #suspend {
-          background-image: image(url("./images/sleep.png"));
-      }
-      #suspend:focus {
-          background-image: image(url("./images/sleep-hover.png"));
-      }
-
-      #shutdown {
-          background-image: image(url("./images/power.png"));
-      }
-      #shutdown:focus {
-          background-image: image(url("./images/power-hover.png"));
-      }
-
-      #reboot {
-          background-image: image(url("./images/restart.png"));
-      }
-      #reboot:focus {
-          background-image: image(url("./images/restart-hover.png"));
-      }
-
-      #hibernate {
-         background-image: image(url("./images/sleep.png"));
-      }
-      #hibernate:focus {
-         background-image: image(url("./images/sleep-hover.png"));
       }
     '';
   };

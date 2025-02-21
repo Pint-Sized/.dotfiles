@@ -20,6 +20,9 @@
     # ----------- FISH ------------- #
     ./modules/fish.nix
 
+    # ---- FONTS ---- #
+    ./fonts/fonts.nix
+
     # ---------- FOOT ------------ #
     ./modules/foot.nix
 

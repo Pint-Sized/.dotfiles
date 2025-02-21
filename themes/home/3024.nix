@@ -12,73 +12,32 @@
       fish_greeting = "pokeget pidove --hide-name | fastfetch --file-raw -";
     };
     wlogout.style = ''
+      @import "icons.css";
       window {
-             font-family: "0xProto Nerd Font";
-             font-size: 14pt;
-             color: #a5a2a2; /* text */
-             background-color: rgba(58, 52, 50, 0.5);
-         }
+          font-family: "0xProto Nerd Font";
+          font-size: 14pt;
+          color: #a5a2a2; /* text */
+          background-color: rgba(58, 52, 50, 0.5);
+      }
 
-         button {
-             background-repeat: no-repeat;
-             background-position: center;
-             background-size: 25%;
-             border: none;
-             background-color: rgba(58, 52, 50, 0);
-             margin: 5px;
-             transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
-         }
+      button {
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 25%;
+          border: none;
+          background-color: rgba(58, 52, 50, 0);
+          margin: 5px;
+          transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+      }
 
-         button:hover {
-             background-color: rgba(58, 52, 50, 0.1);
-         }
+      button:hover {
+          background-color: rgba(58, 52, 50, 0.1);
+      }
 
-         button:focus {
-             background-color: #a16a94;
-             color: #090300;
-         }
-
-         #lock {
-             background-image: image(url("./icons/lock.png"));
-         }
-         #lock:focus {
-             background-image: image(url("./icons/lock-hover.png"));
-         }
-
-         #logout {
-             background-image: image(url("./icons/logout.png"));
-         }
-         #logout:focus {
-             background-image: image(url("./icons/logout-hover.png"));
-         }
-
-         #suspend {
-             background-image: image(url("./icons/sleep.png"));
-         }
-         #suspend:focus {
-             background-image: image(url("./icons/sleep-hover.png"));
-         }
-
-         #shutdown {
-             background-image: image(url("./icons/power.png"));
-         }
-         #shutdown:focus {
-             background-image: image(url("./icons/power-hover.png"));
-         }
-
-         #reboot {
-             background-image: image(url("./icons/restart.png"));
-         }
-         #reboot:focus {
-             background-image: image(url("./icons/restart-hover.png"));
-         }
-
-         #hibernate {
-            background-image: image(url("./icons/sleep.png"));
-         }
-         #hibernate:focus {
-            background-image: image(url("./icons/sleep-hover.png"));
-         }
+      button:focus {
+          background-color: #a16a94;
+          color: #090300;
+      }
     '';
   };
   home.file = {

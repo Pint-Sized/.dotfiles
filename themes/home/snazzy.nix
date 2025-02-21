@@ -12,73 +12,32 @@
       fish_greeting = "pokeget purrloin --hide-name | fastfetch --file-raw -";
     };
     programs.wlogout.style = ''
+      @import "icons.css";
       window {
-               font-family: "0xProto Nerd Font";
-               font-size: 14pt;
-               color: #e2e4e5; /* text */
-               background-color: rgba(52, 53, 62, 0.5);
-           }
+          font-family: "0xProto Nerd Font";
+          font-size: 14pt;
+          color: #e2e4e5; /* text */
+          background-color: rgba(52, 53, 62, 0.5);
+      }
 
-           button {
-               background-repeat: no-repeat;
-               background-position: center;
-               background-size: 25%;
-               border: none;
-               background-color: rgba(52, 53, 62, 0);
-               margin: 5px;
-               transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
-           }
+      button {
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 25%;
+          border: none;
+          background-color: rgba(52, 53, 62, 0);
+          margin: 5px;
+          transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+      }
 
-           button:hover {
-               background-color: rgba(52, 53, 62, 0.1);
-           }
+      button:hover {
+          background-color: rgba(52, 53, 62, 0.1);
+      }
 
-           button:focus {
-               background-color: #ff6ac1;
-               color: #282a36;
-           }
-
-           #lock {
-               background-image: image(url("./images/lock.png"));
-           }
-           #lock:focus {
-               background-image: image(url("./images/lock-hover.png"));
-           }
-
-           #logout {
-               background-image: image(url("./images/logout.png"));
-           }
-           #logout:focus {
-               background-image: image(url("./images/logout-hover.png"));
-           }
-
-           #suspend {
-               background-image: image(url("./images/sleep.png"));
-           }
-           #suspend:focus {
-               background-image: image(url("./images/sleep-hover.png"));
-           }
-
-           #shutdown {
-               background-image: image(url("./images/power.png"));
-           }
-           #shutdown:focus {
-               background-image: image(url("./images/power-hover.png"));
-           }
-
-           #reboot {
-               background-image: image(url("./images/restart.png"));
-           }
-           #reboot:focus {
-               background-image: image(url("./images/restart-hover.png"));
-           }
-
-           #hibernate {
-       	background-image: image(url("./images/sleep.png"));
-           }
-           #hibernate:focus {
-       	background-image: image(url("./images/sleep-hover.png"));
-           }
+      button:focus {
+          background-color: #ff6ac1;
+          color: #282a36;
+      }
     '';
   };
   home.file = {
