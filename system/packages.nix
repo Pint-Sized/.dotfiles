@@ -45,6 +45,7 @@
       hyprlock
       hyprpaper
       hyprpicker
+      hyprshot
       imv
       jq
       kdePackages.qt6ct

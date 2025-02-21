@@ -3,15 +3,7 @@
     ".config/hypr/pyprland.toml" = {
       text = ''
         [pyprland]
-        plugins = [
-          "scratchpads",
-          "shortcuts_menu",
-          "fetch_client_menu",
-          "magnify",
-          "monitors",
-          "shift_monitors",
-          "toggle_dpms",
-        ]
+        plugins = [ "scratchpads" ]
 
         [scratchpads.spotify]
         animation = "fromTop"
@@ -22,7 +14,7 @@
         hide_delay = 0.0
         lazy = false
 
-        [scratchpads.foot]
+        [scratchpads.terminal]
         animation = "fromTop"
         command = "kitty"
         class = "kitty"
@@ -35,15 +27,6 @@
         animation = "fromTop"
         command = "zapzap"
         class = "com.rtosta.zapzap"
-        size = "90% 90%"
-        unfocus = "hide"
-        hide_delay = 0.0
-        lazy = false
-
-        [scratchpads.discord]
-        animation = "fromTop"
-        command = "discord"
-        class = "discord"
         size = "90% 90%"
         unfocus = "hide"
         hide_delay = 0.0

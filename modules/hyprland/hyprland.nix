@@ -3,7 +3,7 @@
     enable = true;
     xwayland.enable = true;
   };
-  import = [
+  imports = [
     ./binds.nix
     ./input.nix
     ./general.nix

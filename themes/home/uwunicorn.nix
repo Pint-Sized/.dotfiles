@@ -132,8 +132,8 @@
     };
     ".config/ulauncher/user-themes/theme/colours.css" = {
       text = ''
-        @define-color background #2f2a3f;
-        @define-color current_line_background #241b26;
+        @define-color background #241b26;
+        @define-color current_line_background #2f2a3f;
         @define-color foreground #7e5f83;
         @define-color foreground_lessimportant #eed5d9;
         @define-color accent #de5b44;

@@ -42,7 +42,7 @@
       "$mainMod SHIFT, 6, movetoworkspace, 6"
 
       "$mainMod, 7, exec, pypr toggle timetable"
-      "$mainMod, 8, exec, pypr toggle foot"
+      "$mainMod, 8, exec, pypr toggle terminal"
       "$mainMod, 9, exec, pypr toggle discord"
       "$mainMod, 0, exec, pypr toggle whatsapp"
       "$mainMod, code:20, exec, pypr toggle email"
@@ -51,6 +51,7 @@
 
       "$mainMod, S, togglespecialworkspace, magic"
       "$mainMod SHIFT, S, movetoworkspace, special:magic"
+      "$mainMod SHIFT, P, exec, hyprshot -m region"
 
       "$mainMod, N, exec, ulauncher-toggle"
       "$mainMod, B, exec, swaync-client -t"

@@ -54,7 +54,7 @@
         username = "fionnbennett";
         name = "Fionn Bennett";
         email = "fionnbennett06@gmail.com";
-        theme = "uwunicorn.nix";
+        theme = "dracula.nix";
         fontPkg = "pkgs.nerdfonts";
         fontSerif = "0xProto Nerd Font";
         fontMono = "0xProto Nerd Font Mono";
