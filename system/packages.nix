@@ -1,13 +1,13 @@
 {
   pkgs,
   pkgs-unstable,
+  inputs,
   ...
 }:
 {
   # -------- STABLE ------- #
   environment.systemPackages =
     (with pkgs; [
-      adwsteamgtk
       aerc
       appeditor
       bat
@@ -144,7 +144,6 @@
         wttrbar
         yamllint
         yamlfmt
-        zed-editor
       ])
 
     ++

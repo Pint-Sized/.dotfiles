@@ -1,6 +1,7 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
+
 {
-  wayland.windowManager.hyprland = {
+  wayland.windowManager.hyprland = with config.lib.stylix.colors; {
     plugins = [
       pkgs.hyprlandPlugins.borders-plus-plus
       pkgs.hyprlandPlugins.hyprwinwrap
@@ -10,8 +11,8 @@
     settings.plugin = {
       borders-plus-plus = {
         add_borders = 1;
-        "col.border_1" = "$base00";
-        "col.border_2" = "$base0E";
+        "col.border_1" = "rgb(${base00-hex})";
+        "col.border_2" = "rgb(${base0E-hex})";
         border_size_1 = 10;
         border_size_2 = -1;
         natural_rounding = "on";
@@ -43,9 +44,6 @@
           out_bezier = "realsmooth";
           out_speed = 2;
         };
-      };
-      hyprwinwrap = {
-        class = "foot";
       };
     };
   };

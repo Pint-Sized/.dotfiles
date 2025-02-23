@@ -30,7 +30,7 @@
   };
 
   outputs =
-    {
+    inputs@{
       nixpkgs,
       home-manager,
       catppuccin,
@@ -54,7 +54,7 @@
         username = "fionnbennett";
         name = "Fionn Bennett";
         email = "fionnbennett06@gmail.com";
-        theme = "dracula.nix";
+        theme = "uwunicorn.nix";
         fontPkg = "pkgs.nerdfonts";
         fontSerif = "0xProto Nerd Font";
         fontMono = "0xProto Nerd Font Mono";
@@ -84,6 +84,7 @@
             nix-flatpak.nixosModules.nix-flatpak
           ];
           specialArgs = {
+            inherit inputs;
             inherit pkgs-unstable;
             inherit systemSettings;
             inherit userSettings;
@@ -101,6 +102,7 @@
 
           ];
           specialArgs = {
+            inherit inputs;
             inherit pkgs-unstable;
             inherit systemSettings;
             inherit userSettings;
@@ -120,6 +122,7 @@
           ];
           extraSpecialArgs = {
             inherit spicePkgs;
+            inherit inputs;
             inherit pkgs-unstable;
             inherit systemSettings;
             inherit userSettings;

@@ -72,7 +72,7 @@
     ./modules/spicetify.nix
 
     # ---- STEAM ---- #
-    ./modules/steam.nix
+    #./modules/steam.nix
 
     # --------- SWAYODS -------- #
     ./modules/swayosd.nix
@@ -98,9 +98,6 @@
 
     # --------- ZATHURA ---------- #
     ./modules/zathura.nix
-
-    # --------- ZED --------- #
-    ./modules/zed.nix
   ];
   nixpkgs.config = {
     allowUnfree = true;

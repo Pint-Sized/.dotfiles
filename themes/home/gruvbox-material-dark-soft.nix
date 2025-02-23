@@ -11,108 +11,13 @@
     fish.functions = {
       fish_greeting = "pokeget roselia --hide-name | fastfetch --file-raw -";
     };
-    wlogout.style = ''
-      @import "icons.css";
-      window {
-          font-family: "0xProto Nerd Font";
-          font-size: 14pt;
-          color: #ddc7a1; /* text */
-          background-color: rgba(60, 56, 54, 0.5);
-      }
-
-      button {
-          background-repeat: no-repeat;
-          background-position: center;
-          background-size: 25%;
-          border: none;
-          background-color: rgba(60, 56, 54, 0);
-          margin: 5px;
-          transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
-      }
-
-      button:hover {
-          background-color: rgba(60, 56, 54, 0.1);
-      }
-
-      button:focus {
-          background-color: #a9b665;
-          color: #32302f;
-      }
-    '';
   };
+
   home.file = {
     ".config/fastfetch/theme" = {
       executable = true;
       text = ''
         echo "Gruvbox Material Dark Soft"
-      '';
-    };
-    ".config/hypr/theme.conf" = {
-      enable = true;
-      text = ''
-        $base00 = rgb(32302f)
-        $base01 = rgb(3c3836)
-        $base02 = rgb(5a524c)
-        $base03 = rgb(7c6f64)
-        $base04 = rgb(bdae93)
-        $base05 = rgb(ddc7a1)
-        $base06 = rgb(ebdbb2)
-        $base07 = rgb(fbf1c7)
-        $base08 = rgb(ea6962)
-        $base09 = rgb(e78a4e)
-        $base0A = rgb(d8a657)
-        $base0B = rgb(d3869b)
-        $base0C = rgb(89b482)
-        $base0D = rgb(7daea3)
-        $base0E = rgb(a9b665)
-        $base0F = rbg(bd6f3e)
-      '';
-    };
-    ".config/waybar/theme.css" = {
-      enable = true;
-      text = ''
-        @define-color base00 #32302f;
-        @define-color base01 #3c3836;
-        @define-color base02 #5a524c;
-        @define-color base03 #7c6f64;
-        @define-color base04 #bdae93;
-        @define-color base05 #ddc7a1; 
-        @define-color base06 #ebdbb2;
-        @define-color base07 #fbf1c7;
-        @define-color base08 #ea6962;
-        @define-color base09 #e78a4e;
-        @define-color base0A #d8a657;
-        @define-color base0B #a9b665;
-        @define-color base0C #89b482;
-        @define-color base0D #7daea3;
-        @define-color base0E #d3869b;
-        @define-color base0F #bd6f3e;
-      '';
-    };
-    ".config/ulauncher/user-themes/theme/colours.css" = {
-      text = ''
-        @define-color background #3c3836;
-        @define-color current_line_background #32302f;
-        @define-color foreground #bdae93;
-        @define-color foreground_lessimportant #ddc7a1;
-        @define-color accent #e78a4e;
-        @define-color highlight #e78a4e;
-      '';
-    };
-    ".config/ulauncher/user-themes/theme/manifest.json" = {
-      text = ''
-              {
-          "manifest_version": "1",
-          "name": "stylix-theme",
-          "display_name": "Stylix Theme",
-          "extend_theme": "dark",
-          "css_file": "theme.css",
-          "css_file_gtk_3.20+": "theme-gtk-3.20.css",
-          "matched_text_hl_colors": {
-            "when_selected": "#d3869b",
-            "when_not_selected": "#d3869b"
-          }
-        }
       '';
     };
   };

@@ -14,15 +14,6 @@
         hide_delay = 0.0
         lazy = false
 
-        [scratchpads.terminal]
-        animation = "fromTop"
-        command = "kitty"
-        class = "kitty"
-        size = "90% 90%"
-        unfocus = "hide"
-        hide_delay = 0.0
-        lazy = false
-
         [scratchpads.whatsapp]
         animation = "fromTop"
         command = "zapzap"
@@ -55,6 +46,15 @@
         animation = "fromTop"
         command = "gnome-calculator"
         class = "org.gnome.Calculator"
+        size = "90% 90%"
+        unfocus = "hide"
+        hide_delay = 0.0
+        lazy = false
+
+        [scratchpads.pavucontrol]
+        animation = "fromTop"
+        command = "pavucontrol --tab 3"
+        class = "org.pulseaudio.pavucontrol"
         size = "90% 90%"
         unfocus = "hide"
         hide_delay = 0.0

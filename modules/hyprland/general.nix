@@ -1,14 +1,15 @@
+{ config, ... }:
+
 {
-  wayland.windowManager.hyprland = {
+  wayland.windowManager.hyprland = with config.lib.stylix.colors; {
     settings = {
-      source = "~/.config/hypr/theme.conf";
       general = {
         gaps_in = 2;
         gaps_out = "0,6,6,6";
         border_size = 3;
         no_focus_fallback = true;
-        "col.active_border" = "$base0E";
-        "col.inactive_border" = "$base02";
+        "col.active_border" = "rgb(${base0E-hex})";
+        "col.inactive_border" = "rgb(${base02-hex})";
         resize_on_border = false;
         allow_tearing = true;
         layout = "dwindle";

@@ -1,9 +1,34 @@
-{ config, ... }:
-
 {
-  xdg.configFile."AdwSteamGtk/custom.css".text = with config.lib.stylix.scheme; ''
-    :root
+  pkgs,
+  lib,
+  config,
+  ...
+}:
+{
+  home.packages = [ pkgs.adwsteamgtk ];
+
+  home.activation =
+    let
+      applySteamTheme = pkgs.writeShellScript "applySteamTheme" ''
+        # This file gets copied with read-only permission from the nix store
+        # if it is present, it causes an error when the theme is applied. Delete it.
+        custom="$HOME/.cache/AdwSteamInstaller/extracted/custom/custom.css"
+        if [[ -f "$custom" ]]; then
+          rm -f "$custom"
+        fi
+        ${lib.getExe pkgs.adwsteamgtk} -i
+      '';
+    in
     {
+      updateSteamTheme = config.lib.dag.entryAfter [ "writeBoundary" "dconfSettings" ] ''
+        run ${applySteamTheme}
+      '';
+    };
+
+  dconf.settings."io/github/Foldex/AdwSteamGtk".prefs-install-custom-css = true;
+
+  xdg.configFile."AdwSteamGtk/custom.css".text = with config.lib.stylix.colors; ''
+    :root {
       /* The main accent color and the matching text value */
       --adw-accent-bg-rbg: ${base0D-rgb-r}, ${base0D-rgb-g}, ${base0D-rgb-b};
       --adw-accent-fg-rbg: ${base00-rgb-r}, ${base00-rgb-g}, ${base00-rgb-b};
@@ -81,6 +106,6 @@
       /* Miscellaneous */
       --adw-shade-rgb: 0, 0, 0;
       --adw-shade-a: 0.36;
-      }
+    }
   '';
 }

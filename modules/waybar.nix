@@ -1,3 +1,5 @@
+{ config, ... }:
+
 {
   programs.waybar = {
     enable = true;
@@ -254,66 +256,8 @@
           "format" = "- {:%I:%M %p} -";
         };
       }
-      #{
-      #"exclusive" = false;
-      #"layer" = "bottom";
-      #"reload_style_on_change" = true;
-      #"position" = "top";
-      #"margin-top" = 275;
-      #"passthrough" = true;
-
-      #"modules-center" = [
-      #"custom-weather#icon"
-      #];
-      #"custom/weather#icon" = {
-      #"format" = "{}°";
-      #"tooltip" = true;
-      #"interval" = 3600;
-      #"exec" = "wttrbar --location New+Ross";
-      #"return-type" = "json";
-      #};
-      #}
-      #{
-      #"exclusive" = false;
-      #"layer" = "bottom";
-      #"reload_style_on_change" = true;
-      #"position" = "top";
-      #"margin-top" = 275;
-      #"passthrough" = true;
-
-      #"modules-center" = [
-      #"custom/weather#location"
-      #];
-      #"custom/weather#location" = {
-      #"format" = "{}°";
-      #"tooltip" = true;
-      #"interval" = 3600;
-      #"exec" = "wttrbar --location New+Ross";
-      #"return-type" = "json";
-      #};
-      #}
-      #{
-      #"exclusive" = false;
-      #"layer" = "bottom";
-      #"reload_style_on_change" = true;
-      #"position" = "top";
-      #"margin-top" = 275;
-      #"passthrough" = true;
-
-      #"modules-center" = [
-      #"custom/weather#temperature"
-      #];
-      #"custom/weather#temperature" = {
-      #"format" = "{}°";
-      #"tooltip" = true;
-      #"interval" = 3600;
-      #"exec" = "wttrbar --location New+Ross";
-      #"return-type" = "json";
-      #};
-      #}
     ];
-    style = ''
-        @import "theme.css";
+    style = with config.lib.stylix.colors; ''
         * {
             font-family: "0xProto Nerd Font";
             font-size: 13px;
@@ -324,7 +268,7 @@
 
           #waybar {
             background: transparent;
-            color: @base05;
+            color: #${base05-hex};
             margin: 5px 5px;
             opacity: 0.9;
           }
@@ -332,35 +276,35 @@
           #workspaces {
             border-radius: 0px 1rem 1rem 0px;
             margin: 5px;
-            background-color: @base02;
+            background-color: #${base02-hex};
             margin-left: 0rem;
             margin-right: 1rem;
           }
 
           #workspaces button {
-            color: @base07;
+            color: #${base07-hex};
             border-radius: 1rem;
             padding: 0.4rem;
           }
 
           #workspaces button.active {
-            color: @base0C;
+            color: #${base0C-hex};
             border-radius: 1rem;
           }
 
           #workspaces button:hover {
-            color: @base0C;
+            color: #${base0C-hex};
             border-radius: 1rem;
           }
           
           #custom-launcher {
-            color: @base05;
+            color: #${base05-hex};
             border-radius: 1rem 0px 0px 1rem;
             margin-left: 6px;
           }
 
           #custom-launcher:hover {
-            color: @base0C;
+            color: #${base0C-hex};
             border-radius: 1rem 0px 0px 1rem;
           }
 
@@ -379,7 +323,7 @@
           #network,
           #custom-launcher,
           #memory {
-            background-color: @base02;
+            background-color: #${base02-hex};
             padding: 0.5rem 0.75rem;
             margin: 5px 0;
           }
@@ -388,113 +332,113 @@
           #custom-notification,
           #custom-lock,
           #custom-power {
-            background-color: @base02;
+            background-color: #${base02-hex};
             padding: 0.5rem 1rem;
             margin: 5px 0;
           }
 
           #clock.clock1 {
-            color: @base07;
+            color: #${base07-hex};
             border-radius: 1rem 0px 0px 1rem;
           }
 
           #custom-weather.main {
-            color: @base0F;
+            color: #${base0F-hex};
         	  border-radius: 0px 1rem 1rem 0px;
           }
 
           #battery {
-            color: @base0B;
+            color: #${base0B-hex};
           }
           
           #battery.charging {
-            color: @base0B;
+            color: #${base0B-hex};
           }
 
           #battery.warning:not(.charging) {
-            color: @base0A;
+            color: #${base0A-hex};
           }
 
           #battery.critical:not(.charging) {
-            color: @base08;
+            color: #${base08-hex};
           }
 
           #backlight {
-            color: @base09;
+            color: #${base09-hex};
           }
 
           #pulseaudio {
-            color: @base08;
+            color: #${base08-hex};
             border-radius: 1rem 0px 0px 1rem;
             margin-left: 1rem;
           }
 
           #custom-notification {
       	    border-radius: 1rem 0px 0px 1rem;
-      	    color: @base0F;
+      	    color: #${base0F-hex};
           }
 
           #custom-lock {
             border-radius: 0rem 0px 0px 0rem;
-            color: @base07;
+            color: #${base07-hex};
           }
 
           #custom-power {
             border-radius: 0px 1rem 1rem 0px;
-            color: @base08;
+            color: #${base08-hex};
           }
 
           #network {
       	    border-radius: 0rem 0px 0px 0rem;
-      	    color: @base07;
+      	    color: #${base07-hex};
           }
 
           #memory {
-      	    color: @base0E;
+      	    color: #${base0E-hex};
       	    border-radius: 0px 1rem 1rem 0px;
       	    margin-right: 1rem;
           }
 
           #temperature {
-      	    color: @base0A;
+      	    color: #${base0A-hex};
           }
 
           #cpu {
-        	  color: @base07;
+        	  color: #${base07-hex};
           }
 
           #custom-music.Playing {
-            background: @base02;
-            color: @base0E;
+            background: #${base02-hex};
+            color: #${base0E-hex};
             border-radius: 1rem;
           }
 
           #custom-music.Paused,
           #custom-music.Stopped {
-            background: @base02;
-            color: @subtext0;
+            background: #${base02-hex};
+            color: #${base05-hex};
             border-radius: 1rem;
           }
 
           #cava {
-            color: @base05;
+            color: #${base05-hex};
             border-radius: 0px 1rem 1rem 0px;
           }
 
           #custom-day {
             font-family: "anurati";
             font-size: 80px;
-            color: @base07;
+            color: #${base07-hex};
             letter-spacing: 50px;
           }
 
           #clock.date {
-            color: @base07;
+            color: #${base07-hex};
             font-size: 20px;
             font-weight: bold;
           }
           #clock.time {
-            color: @base07;
+            color: #${base07-hex};
             font-size: 15px;
             font-weight: bold;
           }

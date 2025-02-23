@@ -11,108 +11,13 @@
     fish.functions = {
       fish_greeting = "pokeget purrloin --hide-name | fastfetch --file-raw -";
     };
-    wlogout.style = ''
-      @import "icons.css";
-      window {
-          font-family: "0xProto Nerd Font";
-          font-size: 14pt;
-          color: #b8bbc2; /* text */
-          background-color: rgba(42, 52, 72, 0.5);
-      }
-
-      button {
-          background-repeat: no-repeat;
-          background-position: center;
-          background-size: 25%;
-          border: none;
-          background-color: rgba(42, 52, 72, 0);
-          margin: 5px;
-          transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
-      }
-
-      button:hover {
-          background-color: rgba(42, 52, 72, 0.1);
-      }
-
-      button:focus {
-          background-color: #9989cc;
-          color: #061229;
-      }
-    '';
   };
+
   home.file = {
     ".config/fastfetch/theme" = {
       executable = true;
       text = ''
         echo PHD
-      '';
-    };
-    ".config/hypr/theme.conf" = {
-      enable = true;
-      text = ''
-        $base00 = rgb(061229)
-        $base01 = rgb(2a3448)
-        $base02 = rgb(4d5666)
-        $base03 = rgb(717885)
-        $base04 = rgb(9a99a3)
-        $base05 = rgb(b8bbc2)
-        $base06 = rgb(dbdde0)
-        $base07 = rgb(ffffff)
-        $base08 = rgb(d07346)
-        $base09 = rgb(f0a000)
-        $base0A = rgb(fbd461)
-        $base0B = rgb(99bf52)
-        $base0C = rgb(72b9bf)
-        $base0D = rgb(5299bf)
-        $base0E = rgb(9989cc)
-        $base0F = rbg(b08060)
-      '';
-    };
-    ".config/waybar/theme.css" = {
-      enable = true;
-      text = ''
-        @define-color base00 #061229;
-        @define-color base01 #2a3448;
-        @define-color base02 #4d5666;
-        @define-color base03 #717885;
-        @define-color base04 #9a99a3;
-        @define-color base05 #b8bbc2; 
-        @define-color base06 #dbdde0;
-        @define-color base07 #ffffff;
-        @define-color base08 #d07346;
-        @define-color base09 #f0a000;
-        @define-color base0A #fbd461;
-        @define-color base0B #99bf52;
-        @define-color base0C #72b9bf;
-        @define-color base0D #5299bf;
-        @define-color base0E #9989cc;
-        @define-color base0F #b08060;
-      '';
-    };
-    ".config/ulauncher/user-themes/theme/colours.css" = {
-      text = ''
-        @define-color background #2a3448;
-        @define-color current_line_background #061229;
-        @define-color foreground #9a99a3;
-        @define-color foreground_lessimportant #b8bbc2;
-        @define-color accent #f0a000;
-        @define-color highlight #f0a000;
-      '';
-    };
-    ".config/ulauncher/user-themes/theme/manifest.json" = {
-      text = ''
-              {
-          "manifest_version": "1",
-          "name": "stylix-theme",
-          "display_name": "Stylix Theme",
-          "extend_theme": "dark",
-          "css_file": "theme.css",
-          "css_file_gtk_3.20+": "theme-gtk-3.20.css",
-          "matched_text_hl_colors": {
-            "when_selected": "#9989cc",
-            "when_not_selected": "#9989cc"
-          }
-        }
       '';
     };
   };

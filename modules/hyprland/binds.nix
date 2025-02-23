@@ -1,10 +1,13 @@
 {
   wayland.windowManager.hyprland.settings = {
     "$mainMod" = "SUPER";
+    "$terminal" = "kitty";
+    "$filemanager" = "nautilus";
+    "$browser" = "librewolf";
     bind = [
       "$mainMod, Q, exec, $terminal"
       "$mainMod, C, killactive"
-      "$mainMod, E, exec, $fileManager"
+      "$mainMod, E, exec, $filemanager"
       "$mainMod, V, togglefloating,"
       "$mainMod, J, togglesplit, # dwindle"
       "$mainMod, W, exec, $browser"
@@ -42,8 +45,7 @@
       "$mainMod SHIFT, 6, movetoworkspace, 6"
 
       "$mainMod, 7, exec, pypr toggle timetable"
-      "$mainMod, 8, exec, pypr toggle terminal"
-      "$mainMod, 9, exec, pypr toggle discord"
+      "$mainMod, 8, exec, pypr toggle pavucontrol"
       "$mainMod, 0, exec, pypr toggle whatsapp"
       "$mainMod, code:20, exec, pypr toggle email"
       "$mainMod, code:21, exec, pypr toggle spotify"
@@ -56,7 +58,7 @@
       "$mainMod, N, exec, ulauncher-toggle"
       "$mainMod, B, exec, swaync-client -t"
       "$mainMod, P, exec, waypaper"
-      "$mainMod, I, exec, kitty -e y"
+      "$mainMod, Y, exec, kitty --detach fish -C y"
       "$mainMod, O, exec, remnote --enable-features=UseOzonePlatform --ozone-platform=wayland"
 
       "$mainMod, T, exec, kitty ~/.dotfiles/scripts/theme-switcher"

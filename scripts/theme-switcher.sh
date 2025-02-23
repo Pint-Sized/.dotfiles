@@ -1,3 +1,4 @@
+#!/run/current-system/sw/bin/bash
 sudo clear
 nvim ~/.dotfiles/themes/home-theme-selector.nix
 nvim ~/.dotfiles/themes/system-theme-selector.nix

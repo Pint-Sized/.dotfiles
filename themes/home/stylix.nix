@@ -33,9 +33,6 @@
       gtk.flatpakSupport.enable = true;
       cavalier.enable = false;
       foot.enable = false;
-      #nixcord.enable = false;
-      #eog.enable = true;
-      #xrecourses.enable = true;
     };
   };
 }

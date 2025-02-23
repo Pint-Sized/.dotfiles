@@ -1,5 +1,33 @@
+{ config, ... }:
+
 {
   home.file = {
+    ".config/ulauncher/user-themes/theme/colours.css" = {
+      text = with config.lib.stylix.colors; ''
+        @define-color background #${base00-hex};
+        @define-color current_line_background #${base01-hex};
+        @define-color foreground #${base04-hex};
+        @define-color foreground_lessimportant #${base05-hex};
+        @define-color accent #${base09-hex};
+        @define-color highlight #${base09-hex};
+      '';
+    };
+    ".config/ulauncher/user-themes/theme/manifest.json" = {
+      text = with config.lib.stylix.colors; ''
+              {
+          "manifest_version": "1",
+          "name": "stylix-theme",
+          "display_name": "Stylix Theme",
+          "extend_theme": "dark",
+          "css_file": "theme.css",
+          "css_file_gtk_3.20+": "theme-gtk-3.20.css",
+          "matched_text_hl_colors": {
+            "when_selected": "#${base0E-hex}",
+            "when_not_selected": "#${base0E-hex}"
+          }
+        }
+      '';
+    };
     ".config/ulauncher/user-themes/theme/theme.css" = {
       text = ''
         @import "colours.css";

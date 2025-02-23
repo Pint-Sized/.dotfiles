@@ -11,34 +11,6 @@
     fish.functions = {
       fish_greeting = "pokeget duskull --hide-name | fastfetch --file-raw -";
     };
-    wlogout.style = ''
-      @import "icons.css";
-      window {
-          font-family: "0xProto Nerd Font";
-          font-size: 14pt;
-          color: #c1c1c1; /* text */
-          background-color: rgba(18, 18, 18, 0.5);
-      }
-
-      button {
-          background-repeat: no-repeat;
-          background-position: center;
-          background-size: 25%;
-          border: none;
-          background-color: rgba(18, 18, 18, 0);
-          margin: 5px;
-          transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
-      }
-
-      button:hover {
-          background-color: rgba(18, 18, 18, 0.1);
-      }
-
-      button:focus {
-          background-color: #79241f;
-          color: #000000;
-      }
-    '';
   };
 
   home.file = {
@@ -46,74 +18,6 @@
       executable = true;
       text = ''
         echo "Black Metal Venom"
-      '';
-    };
-    ".config/hypr/theme.conf" = {
-      enable = true;
-      text = ''
-        $base00 = rgb(000000)
-        $base01 = rgb(121212)
-        $base02 = rgb(222222)
-        $base03 = rgb(333333)
-        $base04 = rgb(999999)
-        $base05 = rgb(c1c1c1)
-        $base06 = rgb(999999)
-        $base07 = rgb(c1c1c1)
-        $base08 = rgb(5f8787)
-        $base09 = rgb(aaaaaa)
-        $base0A = rgb(79241f)
-        $base0B = rgb(f8f7f2)
-        $base0C = rgb(aaaaaa)
-        $base0D = rgb(888888)
-        $base0E = rgb(999999)
-        $base0F = rbg(444444)
-      '';
-    };
-    ".config/waybar/theme.css" = {
-      enable = true;
-      text = ''
-        @define-color base00 #000000;
-        @define-color base01 #121212;
-        @define-color base02 #222222;
-        @define-color base03 #333333;
-        @define-color base04 #999999;
-        @define-color base05 #c1c1c1; 
-        @define-color base06 #999999;
-        @define-color base07 #c1c1c1;
-        @define-color base08 #5f8787;
-        @define-color base09 #aaaaaa;
-        @define-color base0A #999999;
-        @define-color base0B #f8f7f2;
-        @define-color base0C #aaaaaa;
-        @define-color base0D #888888;
-        @define-color base0E #79241f;
-        @define-color base0F #444444;
-      '';
-    };
-    ".config/ulauncher/user-themes/theme/colours.css" = {
-      text = ''
-        @define-color background #121212;
-        @define-color current_line_background #000000;
-        @define-color foreground #999999;
-        @define-color foreground_lessimportant #c1c1c1;
-        @define-color accent #5f8787;
-        @define-color highlight #5f8787;
-      '';
-    };
-    ".config/ulauncher/user-themes/theme/manifest.json" = {
-      text = ''
-              {
-          "manifest_version": "1",
-          "name": "stylix-theme",
-          "display_name": "Stylix Theme",
-          "extend_theme": "dark",
-          "css_file": "theme.css",
-          "css_file_gtk_3.20+": "theme-gtk-3.20.css",
-          "matched_text_hl_colors": {
-            "when_selected": "#79241f",
-            "when_not_selected": "#79241f"
-          }
-        }
       '';
     };
   };
