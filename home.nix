@@ -82,7 +82,7 @@
 
     # ------- STYLIX ----------- #
     ./themes/home/stylix.nix
-    ./themes/home/${userSettings.theme}
+    ./themes/home/${userSettings.theme}.nix
 
     # --------- ULAUNCHER --------- #
     ./modules/ulauncher/ulauncher.nix

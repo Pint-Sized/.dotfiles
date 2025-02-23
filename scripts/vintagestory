@@ -1,0 +1,1 @@
+gamemoderun flatpak run --branch=stable --arch=x86_64 --command=vintagestory at.vintagestory.VintageStory

@@ -54,7 +54,7 @@
         username = "fionnbennett";
         name = "Fionn Bennett";
         email = "fionnbennett06@gmail.com";
-        theme = "uwunicorn.nix";
+        theme = "dracula";
         fontPkg = "pkgs.nerdfonts";
         fontSerif = "0xProto Nerd Font";
         fontMono = "0xProto Nerd Font Mono";
@@ -62,12 +62,18 @@
         cursorName = "Bibata-Modern-Classic";
       };
 
-      lib = nixpkgs.lib;
+      inherit (nixpkgs) lib;
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
       pkgs-unstable = import nixpkgs-unstable {
         inherit system;
-        config.allowUnfree = true;
+        config = {
+          allowUnfree = true;
+          permittedInsecurePackages = [
+            "dotnet-runtime-7.0.20"
+            "dotnet-runtime-wrapped-7.0.20"
+          ];
+        };
       };
       spicePkgs = spicetify-nix.legacyPackages.${pkgs.system};
     in

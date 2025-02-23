@@ -1,7 +1,6 @@
 {
   pkgs,
   pkgs-unstable,
-  inputs,
   ...
 }:
 {
@@ -14,6 +13,7 @@
       base16-schemes
       black
       btop
+      calligraphy
       cava
       cavalier
       ccache
@@ -24,12 +24,12 @@
       coreutils
       deluge
       dua
+      emblem
       eog
       exiftool
       mediainfo
       fastfetch
       fd
-      figlet
       file
       firefoxpwa
       foot
@@ -87,7 +87,6 @@
       swayosd
       swww
       teams-for-linux
-      #tk
       tldr
       udisks
       undollar
@@ -100,12 +99,10 @@
       waypaper
       wdisplays
       wev
-      #wget
       which
       wl-clipboard
       wlogout
       xdg-desktop-portal-hyprland
-      #xdg-utils
       yazi
       zapzap
       zathura
@@ -114,11 +111,21 @@
       thunderbird
 
       # ----- TESTING ----- #
-      emblem
-      foliate
-      calligraphy
       iotas
       newsflash
+      kalker
+      discordo
+      colorls
+      lsd
+      hollywood
+      ternimal
+      smenu
+      pmenu
+      television
+      eureka-ideas
+      jot
+      noteshrink
+      tui-journal
     ])
 
     ++

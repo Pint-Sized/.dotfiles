@@ -10,20 +10,14 @@
       cartridges
     ])
     ++ (with pkgs-unstable; [
+      adwsteamgtk
       lm_sensors
+      vintagestory
     ]);
 
   services.flatpak = {
     packages = [
-      "at.vintagestory.VintageStory"
-      #"com.valvesoftware.Steam"
     ];
-    #overrides = {
-    #"com.valvesoftware.Steam".Context = {
-    #filesystems = [
-    #"/home/$USER"
-    #];
-    #};
   };
 
   programs = {
