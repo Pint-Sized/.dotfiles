@@ -14,5 +14,6 @@
     "systemctl --user start hyprpolkitagent &"
     "pkexec swayosd-libinput-backend &"
     "swayosd-server &"
+    "foot cava"
   ];
 }

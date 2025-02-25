@@ -85,8 +85,6 @@
       };
       windowrulev2 = [
         "suppressevent maximize, class:.*"
-        "opacity 0.1 ,class:^(foot)$"
-        #"opacity 0.3, class:foot, title:foot"
       ];
     };
     systemd.variables = [ "--all" ];

@@ -10,8 +10,6 @@
         command = "spotify --force-device-scale-factor=1.5 %U"
         class = "Spotify"
         size = "90% 90%"
-        unfocus = "hide"
-        hide_delay = 0.0
         lazy = false
 
         [scratchpads.whatsapp]
@@ -19,8 +17,6 @@
         command = "zapzap"
         class = "com.rtosta.zapzap"
         size = "90% 90%"
-        unfocus = "hide"
-        hide_delay = 0.0
         lazy = false
 
         [scratchpads.email]
@@ -28,8 +24,6 @@
         command = "thunderbird"
         class = "thunderbird"
         size = "90% 90%"
-        unfocus = "hide"
-        hide_delay = 0.0
         lazy = false
 
 
@@ -38,8 +32,6 @@
         command = "imv ~/School/School-TimetableV2.png"
         class = "imv"
         size = "90% 90%"
-        unfocus = "hide"
-        hide_delay = 0.0
         lazy = false
 
         [scratchpads.calculator]
@@ -47,8 +39,6 @@
         command = "gnome-calculator"
         class = "org.gnome.Calculator"
         size = "90% 90%"
-        unfocus = "hide"
-        hide_delay = 0.0
         lazy = false
 
         [scratchpads.pavucontrol]
@@ -56,8 +46,6 @@
         command = "pavucontrol --tab 3"
         class = "org.pulseaudio.pavucontrol"
         size = "90% 90%"
-        unfocus = "hide"
-        hide_delay = 0.0
         lazy = false
       '';
     };

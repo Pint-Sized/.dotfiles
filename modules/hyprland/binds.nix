@@ -50,6 +50,9 @@
       "$mainMod, code:20, exec, pypr toggle email"
       "$mainMod, code:21, exec, pypr toggle spotify"
       "$mainMod, M, exec, pypr toggle calculator"
+      "$mainMod, L, exec, pkill wlogout || wlogout"
+      "$mainMod, U, exec, ~/.dotfiles/scripts/hypr-powersaver-on"
+      "$mainMod, I, exec, ~/.dotfiles/scripts/hypr-powersaver-off"
 
       "$mainMod, S, togglespecialworkspace, magic"
       "$mainMod SHIFT, S, movetoworkspace, special:magic"
@@ -61,7 +64,6 @@
       "$mainMod, Y, exec, kitty --detach fish -C y"
       "$mainMod, O, exec, remnote --enable-features=UseOzonePlatform --ozone-platform=wayland"
 
-      "$mainMod, T, exec, kitty ~/.dotfiles/scripts/theme-switcher"
       "$mainMod, R, exec, ~/.dotfiles/scripts/reloader"
 
       ",XF86AudioMicMute, exec, swayosd-client --input-volume mute-toggle"
@@ -71,7 +73,6 @@
       ",XF86Bluetooth, exec, blueman-manager"
       ",XF86Keyboard, exec, polychromatic-controller"
       ",XF86Favorites, exec, kitty ~/.dotfiles/scripts/package-rebuild"
-
       ", XF86AudioMute, exec, swayosd-client --output-volume mute-toggle"
     ];
 
@@ -94,11 +95,6 @@
     bindn = [
       ", v, pass, ^discord$"
       ", Caps_Lock, exec, ~/.dotfiles/scripts/swayosd-caps"
-    ];
-
-    bindr = [
-      "$mainMod, L, exec, pkill wlogout || wlogout"
-      "$mainMod, U, exec, hyprctl keyword animations:enabled false; hyprctl keyword decoration:blur:enabled false; hyprctl keyword decoration:active_opacity 1; hyprctl keyword decoration:inactive_opacity 1; || hyprctl keyword animations:enabled true; hyprctl keyword decoration:blur:enabled true; hyprctl keyword decoration:active_opacity 0.8; hyprctl keyword decoration:inactive_opacity 0.8"
     ];
   };
 }

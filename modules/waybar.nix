@@ -26,7 +26,7 @@
         "modules-right" = [
           "pulseaudio"
           "backlight"
-          "temperature"
+          "custom/gpu"
           "battery"
           "cpu"
           "memory"
@@ -178,14 +178,14 @@
           "on-click" = "kitty btop";
         };
         "cpu" = {
-          "interval" = 3;
+          "interval" = 1;
           "format" = " {usage}%";
         };
-        "temperature" = {
-          "hwmon-path" = "/sys/class/hwmon/hwmon6/temp1_input";
-          "format" = "{temperatureC}°C";
-          "tooltip" = false;
-          "interval" = 5;
+        "custom/gpu" = {
+          "exec" = "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits";
+          "format" = "󰹙 {}%";
+          "return-type" = "";
+          "interval" = 3;
         };
         "custom/launcher" = {
           "format" = "";
@@ -276,7 +276,7 @@
           #workspaces {
             border-radius: 0px 1rem 1rem 0px;
             margin: 5px;
-            background-color: #${base02-hex};
+            background-color: rgba(${base02-rgb-r}, ${base02-rgb-g}, ${base02-rgb-b}, 0.8);
             margin-left: 0rem;
             margin-right: 1rem;
           }
@@ -319,11 +319,11 @@
           #music,
           #cava,
           #memory,
-          #temperature,
+          #custom-gpu,
           #network,
           #custom-launcher,
           #memory {
-            background-color: #${base02-hex};
+            background-color: rgba(${base02-rgb-r}, ${base02-rgb-g}, ${base02-rgb-b}, 0.8);
             padding: 0.5rem 0.75rem;
             margin: 5px 0;
           }
@@ -332,7 +332,7 @@
           #custom-notification,
           #custom-lock,
           #custom-power {
-            background-color: #${base02-hex};
+            background-color: rgba(${base02-rgb-r}, ${base02-rgb-g}, ${base02-rgb-b}, 0.8);
             padding: 0.5rem 1rem;
             margin: 5px 0;
           }
@@ -399,7 +399,7 @@
       	    margin-right: 1rem;
           }
 
-          #temperature {
+          #custom-gpu {
       	    color: #${base0A-hex};
           }
 
@@ -408,14 +408,16 @@
           }
 
           #custom-music.Playing {
-            background: #${base02-hex};
+            background: rgba(${base02-rgb-r}, ${base02-rgb-g}, ${base02-rgb-b}, 0.8);
+
             color: #${base0E-hex};
             border-radius: 1rem;
           }
 
           #custom-music.Paused,
           #custom-music.Stopped {
-            background: #${base02-hex};
+            background: rgba(${base02-rgb-r}, ${base02-rgb-g}, ${base02-rgb-b}, 0.8);
+
             color: #${base05-hex};
             border-radius: 1rem;
           }

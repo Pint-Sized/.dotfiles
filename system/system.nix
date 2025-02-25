@@ -38,6 +38,8 @@
         "NerdFontsSymbolsOnly"
       ];
     })
+    corefonts
+    vistafonts
   ];
   fonts.fontconfig = {
     defaultFonts = {

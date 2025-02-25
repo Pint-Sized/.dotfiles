@@ -49,12 +49,14 @@
       hyprshot
       imv
       jq
+      kalker
       kdePackages.qt6ct
       libgcc
       libnotify
       libreoffice-qt6-fresh
       librewolf
       libsForQt5.qt5ct
+      lsd
       meson
       mpc-cli
       mpv
@@ -113,12 +115,6 @@
       # ----- TESTING ----- #
       iotas
       newsflash
-      kalker
-      discordo
-      colorls
-      lsd
-      hollywood
-      ternimal
       smenu
       pmenu
       television

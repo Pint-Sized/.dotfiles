@@ -6,7 +6,6 @@
       pkgs.hyprlandPlugins.borders-plus-plus
       pkgs.hyprlandPlugins.hyprwinwrap
       pkgs.hyprlandPlugins.hyprfocus
-      pkgs.hyprlandPlugins.hyprsplit
     ];
     settings.plugin = {
       borders-plus-plus = {
@@ -45,6 +44,7 @@
           out_speed = 2;
         };
       };
+      hyprwinwrap.class = "foot";
     };
   };
 }

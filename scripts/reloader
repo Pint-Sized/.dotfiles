@@ -7,3 +7,5 @@ hyprctl reload
 pkill .swaync-client-
 pkill .swaync-wrapped
 swaync
+pkill cava
+foot cava
