@@ -1,6 +1,7 @@
 { userSettings, ... }:
 
 {
+  # imports home-manager modules
   imports = [
     # ------ AERC ------ #
     ./modules/aerc.nix
@@ -51,7 +52,7 @@
     ./modules/kitty.nix
 
     # --------- LIBREWOLF ----------- #
-    ./modules/librewolf.nix
+    ./modules/librewolf/librewolf.nix
 
     # ------------ MPV ------------ #
     ./modules/mpv.nix
@@ -74,7 +75,7 @@
     # ---- STEAM ---- #
     #./modules/steam.nix
 
-    # --------- SWAYODS -------- #
+    # --------- SWAYOSD -------- #
     ./modules/swayosd.nix
 
     # --------- SWAYNC --------- #

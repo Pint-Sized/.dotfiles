@@ -5,3 +5,5 @@ try satty screenshot tool
 go through ever forest wallpapers
 add system version of new themes
 gamescope
+
+script that runs when rebuilding that imports colours into unzipped darkreader sourcefiles, zips it into a .xpi, and adds it to firefox after deleting the existing .xpi file

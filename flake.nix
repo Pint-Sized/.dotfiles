@@ -1,21 +1,21 @@
 {
+  # imported ...... into the flake, such as packages stream and other modules which can later be referenced in other code
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
-    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixpkgs-master.url = "github:/nixos/nixpkgs/master";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11"; # stable packages
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable"; # unstablepackages
+    nixpkgs-master.url = "github:/nixos/nixpkgs/master"; # bleeding-edge packages
     home-manager = {
-      url = "github:nix-community/home-manager/master";
-      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:nix-community/home-manager/master"; # home-manager, manages app configs and files in the home directory
+      inputs.nixpkgs.follows = "nixpkgs"; # has home-manager only use package versions from the nix stable packages repo
     };
-    catppuccin.url = "github:catppuccin/nix/main";
     nixvim = {
-      url = "github:nix-community/nixvim/nixos-24.11";
+      url = "github:nix-community/nixvim/nixos-24.11"; # allows home-manager to decleratively manage neovim using a nix launguage wrapper
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nix-flatpak.url = "github:gmodena/nix-flatpak";
-    stylix.url = "github:danth/stylix/master";
+    nix-flatpak.url = "github:gmodena/nix-flatpak"; # allows for the declerative installation and configuration  of flatpaks (alternative app packaging method)
+    stylix.url = "github:danth/stylix/master"; # allows for the stylix of all enabled applications using a base16 colourscheme
     spicetify-nix = {
-      url = "github:Gerg-L/spicetify-nix";
+      url = "github:Gerg-L/spicetify-nix"; # allows for the declerative configuration of spicetify using a nix language wrapper
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nur = {
