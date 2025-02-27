@@ -33,7 +33,6 @@
     inputs@{
       nixpkgs,
       home-manager,
-      catppuccin,
       nixpkgs-unstable,
       nixvim,
       nix-flatpak,
@@ -84,7 +83,6 @@
           modules = [
             ./configuration.nix
             ./hosts/desktop/configuration.nix
-            catppuccin.nixosModules.catppuccin
             nixvim.nixosModules.nixvim
             stylix.nixosModules.stylix
             nix-flatpak.nixosModules.nix-flatpak
@@ -101,7 +99,6 @@
           modules = [
             ./configuration.nix
             ./hosts/laptop/configuration.nix
-            catppuccin.nixosModules.catppuccin
             nixvim.nixosModules.nixvim
             stylix.nixosModules.stylix
             nix-flatpak.nixosModules.nix-flatpak
@@ -120,7 +117,6 @@
           inherit pkgs;
           modules = [
             ./home.nix
-            catppuccin.homeManagerModules.catppuccin
             nixvim.homeManagerModules.nixvim
             stylix.homeManagerModules.stylix
             spicetify-nix.homeManagerModules.default
