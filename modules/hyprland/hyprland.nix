@@ -1,7 +1,10 @@
+{ pkgs-unstable, ... }:
+
 {
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
+    package = pkgs-unstable.hyprland;
   };
   imports = [
     ./binds.nix

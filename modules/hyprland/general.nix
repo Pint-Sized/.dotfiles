@@ -1,8 +1,7 @@
-{ config, pkgs-unstable, ... }:
+{ config, ... }:
 
 {
   wayland.windowManager.hyprland = with config.lib.stylix.colors; {
-    package = pkgs-unstable.hyprland;
     settings = {
       general = {
         gaps_in = 2;

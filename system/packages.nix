@@ -43,10 +43,6 @@
       gparted
       gperf
       has
-      hyprlock
-      hyprpaper
-      hyprpicker
-      hyprshot
       imv
       jq
       kalker
@@ -104,7 +100,6 @@
       which
       wl-clipboard
       wlogout
-      xdg-desktop-portal-hyprland
       yazi
       zapzap
       zathura
@@ -123,6 +118,10 @@
         home-manager
         hyprland
         hyprpolkitagent
+        hyprlock
+        hyprpaper
+        hyprpicker
+        hyprshot
         kitty
         librewolf
         lua
@@ -138,6 +137,7 @@
         wttrbar
         yamllint
         yamlfmt
+        xdg-desktop-portal-hyprland
       ])
 
     ++

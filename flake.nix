@@ -30,6 +30,7 @@
       nixpkgs,
       home-manager,
       nixpkgs-unstable,
+      nixpkgs-master,
       nixvim,
       nix-flatpak,
       stylix,
@@ -70,6 +71,16 @@
           ];
         };
       };
+      pkgs-master = import nixpkgs-master {
+        inherit system;
+        config = {
+          allowUnfree = true;
+          permittedInsecurePackages = [
+            "dotnet-runtime-7.0.20"
+            "dotnet-runtime-wrapped-7.0.20"
+          ];
+        };
+      };
       spicePkgs = spicetify-nix.legacyPackages.${pkgs.system};
     in
     {
@@ -86,6 +97,7 @@
           specialArgs = {
             inherit inputs;
             inherit pkgs-unstable;
+            inherit pkgs-master;
             inherit systemSettings;
             inherit userSettings;
           };
@@ -103,6 +115,7 @@
           specialArgs = {
             inherit inputs;
             inherit pkgs-unstable;
+            inherit pkgs-master;
             inherit systemSettings;
             inherit userSettings;
           };
@@ -122,6 +135,7 @@
             inherit spicePkgs;
             inherit inputs;
             inherit pkgs-unstable;
+            inherit pkgs-master;
             inherit systemSettings;
             inherit userSettings;
           };
