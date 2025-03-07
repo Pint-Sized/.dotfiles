@@ -22,10 +22,6 @@
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    hyprpicker = {
-      url = "github:hyprwm/hyprpicker";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     nixcord.url = "github:kaylorben/nixcord";
   };
 
