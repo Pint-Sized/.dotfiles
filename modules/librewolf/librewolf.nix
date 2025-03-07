@@ -1,4 +1,8 @@
-{ pkgs, config, ... }:
+{
+  pkgs-unstable,
+  config,
+  ...
+}:
 
 {
   programs = {
@@ -15,8 +19,8 @@
     };
     firefox = {
       enable = true;
-      package = pkgs.librewolf;
-      nativeMessagingHosts = [ pkgs.firefoxpwa ];
+      package = pkgs-unstable.librewolf;
+      nativeMessagingHosts = [ pkgs-unstable.firefoxpwa ];
     };
   };
   stylix.targets.librewolf = {

@@ -54,7 +54,6 @@
       libgcc
       libnotify
       libreoffice-qt6-fresh
-      librewolf
       libsForQt5.qt5ct
       lsd
       meson
@@ -124,6 +123,7 @@
         home-manager
         hyprpolkitagent
         kitty
+        librewolf
         lua
         markdown-oxide
         nchat
