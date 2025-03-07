@@ -1,6 +1,6 @@
 {
   pkgs-unstable,
-  pkgs-master,
+  pkgs,
   config,
   ...
 }:
@@ -10,7 +10,7 @@
     plugins = [
       pkgs-unstable.hyprlandPlugins.borders-plus-plus
       pkgs-unstable.hyprlandPlugins.hyprwinwrap
-      pkgs-master.hyprlandPlugins.hyprfocus
+      pkgs.hyprlandPlugins.hyprfocus
     ];
     settings.plugin = {
       borders-plus-plus = {
