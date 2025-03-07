@@ -62,6 +62,7 @@
       mpv
       nautilus
       ncurses
+      newsflash
       nix-du
       nixos-generators
       nodejs_22
@@ -111,17 +112,6 @@
       zip
       zlib
       thunderbird
-
-      # ----- TESTING ----- #
-      iotas
-      newsflash
-      smenu
-      pmenu
-      television
-      eureka-ideas
-      jot
-      noteshrink
-      tui-journal
     ])
 
     ++
