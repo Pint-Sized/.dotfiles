@@ -3,15 +3,15 @@
 
     xserver = {
       enable = true;
-      displayManager = {
-        gdm = {
-          enable = true;
-          wayland = true;
-          banner = ''
-            0858244115 - fionnbennett06@gmail.com  
-          '';
-        };
-      };
+      #displayManager = {
+      #gdm = {
+      #enable = true;
+      #wayland = true;
+      #banner = ''
+      #0858244115 - fionnbennett06@gmail.com
+      #'';
+      #};
+      #};
       libinput = {
         mouse = {
           accelProfile = "flat";

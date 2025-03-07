@@ -121,6 +121,7 @@
         gopls
         hclfmt
         home-manager
+        hyprland
         hyprpolkitagent
         kitty
         librewolf
@@ -201,6 +202,7 @@
   programs = {
     hyprland = {
       enable = true;
+      package = pkgs-unstable.hyprland;
       xwayland.enable = true;
     };
 
