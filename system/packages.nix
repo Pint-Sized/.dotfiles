@@ -62,6 +62,7 @@
       nixos-generators
       nodejs_22
       ntfs3g
+      nwg-displays
       onefetch
       openssl
       pavucontrol
