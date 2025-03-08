@@ -7,7 +7,8 @@
 {
   programs = {
     librewolf = {
-      enable = false;
+      enable = true;
+      package = pkgs-unstable.librewolf;
       profiles."8b2kzims.default" = {
         settings = {
           "toolkit.legacyUserProfileCustomizations.stylesheets" = true; # Enable customChrome.cs
