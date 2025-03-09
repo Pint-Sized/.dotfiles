@@ -1,1 +1,3 @@
-{ programs.nixvim.plugins.fzf-lua.enable = true; }
+{
+  programs.nixvim.plugins.fzf-lua.enable = true;
+}

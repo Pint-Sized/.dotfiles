@@ -110,7 +110,6 @@
             nixvim.nixosModules.nixvim
             stylix.nixosModules.stylix
             nix-flatpak.nixosModules.nix-flatpak
-
           ];
           specialArgs = {
             inherit inputs;

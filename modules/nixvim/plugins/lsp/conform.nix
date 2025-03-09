@@ -1,5 +1,3 @@
-{ pkgs, pkgs-unstable, ... }:
-
 {
   programs.nixvim.plugins.conform-nvim = {
     enable = true;

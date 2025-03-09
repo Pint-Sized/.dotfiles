@@ -1,5 +1,3 @@
-{ lib, pkgs, pkgs-unstable, ... }:
-
 {
   programs.nixvim.plugins = {
     lsp-format = {

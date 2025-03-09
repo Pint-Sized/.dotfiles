@@ -1,5 +1,3 @@
-{ pkgs, pkgs-unstable, ... }:
-
 {
   programs.nixvim.plugins.lspsaga = {
     enable = true;

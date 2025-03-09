@@ -1,29 +1,31 @@
+{ config, ... }:
+
 {
-  programs.nixvim.plugins.todo-comments = {
+  programs.nixvim.plugins.todo-comments = with config.lib.stylix.colors; {
     enable = true;
     settings = {
       colors = {
         error = [
           "DiagnosticError"
           "ErrorMsg"
-          "#ED8796"
+          "#${base0E-hex}"
         ];
         warning = [
           "DiagnosticWarn"
           "WarningMsg"
-          "#EED49F"
+          "#${base0A-hex}"
         ];
         info = [
           "DiagnosticInfo"
-          "#EED49F"
+          "#${base0A-hex}"
         ];
         default = [
           "Identifier"
-          "#F5A97F"
+          "#${base09-hex}"
         ];
         test = [
           "Identifier"
-          "#8AADF4"
+          "#${base0B-hex}"
         ];
       };
     };

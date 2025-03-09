@@ -1,4 +1,5 @@
-{ pkgs, pkgs-unstable, ... }:
+{ pkgs, ... }:
+
 {
   programs.nixvim.plugins.none-ls = {
     enable = true;

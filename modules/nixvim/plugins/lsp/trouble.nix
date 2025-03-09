@@ -1,4 +1,3 @@
-{ lib, config, ... }:
 {
   programs.nixvim.plugins.trouble = {
     enable = true;
