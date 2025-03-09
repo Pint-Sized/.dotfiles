@@ -25,7 +25,7 @@
     firefoxGnomeTheme.enable = true;
   };
 
-  home.file."~/.dotfiles/modules/librewolf/darkreader/src/config/color-schemes.drconf".text =
+  home.file.".dotfiles/modules/librewolf/darkreader/src/config/color-schemes.drconf".text =
     with config.lib.stylix.colors; ''
       Default
 
