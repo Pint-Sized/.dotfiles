@@ -43,6 +43,7 @@
       gparted
       gperf
       has
+      hyprland
       imv
       jq
       kalker
@@ -107,6 +108,7 @@
       zip
       zlib
       thunderbird
+      xdg-desktop-portal-hyprland
     ])
 
     ++
@@ -117,7 +119,6 @@
         gopls
         hclfmt
         home-manager
-        hyprland
         hyprpolkitagent
         hyprlock
         hyprpaper
@@ -138,7 +139,6 @@
         wttrbar
         yamllint
         yamlfmt
-        xdg-desktop-portal-hyprland
       ])
 
     ++
@@ -203,7 +203,7 @@
   programs = {
     hyprland = {
       enable = true;
-      package = pkgs-unstable.hyprland;
+      package = pkgs.hyprland;
       xwayland.enable = true;
     };
 
