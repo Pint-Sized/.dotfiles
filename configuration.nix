@@ -1,5 +1,3 @@
-{ userSettings, ... }:
-
 {
   imports = [
     ./system/hardware.nix
@@ -8,7 +6,7 @@
     ./system/system.nix
     ./system/networking.nix
     ./themes/system/stylix.nix
-    ./themes/system/${userSettings.theme}.nix
+    ./themes/system.nix
   ];
   system.stateVersion = "23.05";
 }
