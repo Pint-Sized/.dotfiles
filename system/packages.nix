@@ -13,6 +13,7 @@
       bat
       base16-schemes
       black
+      bonsai
       btop
       calligraphy
       cava
