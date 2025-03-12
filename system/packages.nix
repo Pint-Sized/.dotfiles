@@ -43,7 +43,6 @@
       gparted
       gperf
       has
-      hyprland
       imv
       jq
       kalker
@@ -120,6 +119,7 @@
         hclfmt
         home-manager
         hyprpolkitagent
+        hyprland
         hyprlock
         hyprpaper
         hyprpicker
