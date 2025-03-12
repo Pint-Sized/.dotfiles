@@ -1,7 +1,10 @@
 { pkgs, ... }:
 
 {
-  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/solarized-dark.yaml";
+  stylix = {
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/solarized-dark.yaml";
+    targets.cava.rainbow.enable = true;
+  };
 
   programs = {
     nixvim.colorschemes.base16 = {
