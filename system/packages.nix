@@ -9,6 +9,7 @@
     (with pkgs; [
       aerc
       appeditor
+      asciiquarium-transparent
       bat
       base16-schemes
       black
@@ -21,6 +22,7 @@
       clang
       cliphist
       cmake
+      cmatrix
       coreutils
       deluge
       dua
@@ -66,6 +68,7 @@
       onefetch
       openssl
       pavucontrol
+      pipes-rs
       playerctl
       pokeget-rs
       protonup
