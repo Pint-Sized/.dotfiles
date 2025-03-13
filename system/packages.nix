@@ -53,7 +53,6 @@
       libnotify
       libreoffice-qt6-fresh
       libsForQt5.qt5ct
-      lsd
       meson
       mpv
       nautilus
@@ -130,6 +129,7 @@
         neovim-unwrapped
         nixd
         nixfmt-rfc-style
+        nix-output-monitor
         prettierd
         pyright
         stylua

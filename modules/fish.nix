@@ -26,8 +26,8 @@
       c = "clear";
       n = "nvim $argv";
       z = "zeditor $argv; exit";
-      nrd = "sudo nixos-rebuild switch --flake ~/.dotfiles/#desktop";
-      nrl = "sudo nixos-rebuild switch --flake ~/.dotfiles/#laptop";
+      nrd = "sudo nixos-rebuild switch --flake ~/.dotfiles/#desktop ";
+      nrl = "sudo nixos-rebuild switch --flake ~/.dotfiles/#laptop ";
       hr = "home-manager switch --flake ~/.dotfiles;hyprctl reload;";
       frd = "sudo nix flake update --flake ~/.dotfiles; sudo nixos-rebuild switch --flake ~/.dotfiles#desktop; home-manager switch --flake ~/.dotfiles;";
       frl = "sudo nix flake update --flake ~/.dotfiles; sudo nixos-rebuild switch --flake ~/.dotfiles/#laptop; home-manager switch --flake ~/.dotfiles;";
