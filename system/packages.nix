@@ -142,7 +142,7 @@
     ++
 
       (with pkgs-master; [
-        #nchat-whatsapp
+        nchat
       ])
 
     ++
