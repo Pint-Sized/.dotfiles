@@ -29,14 +29,10 @@
           passes = 2;
           noise = 0;
           new_optimizations = true;
-          ignore_opacity = true;
           contrast = 1.17;
-          popups = true;
           xray = true;
         };
-        shadow = {
-          enabled = false;
-        };
+        shadow.enabled = false;
       };
 
       animations = {
