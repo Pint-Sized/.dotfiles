@@ -45,7 +45,7 @@
       progress,
       progressbar,
       trough {
-        border: 1px solid @base0D;
+        border: 1px solid @base0E;
       }
 
       trough {
@@ -54,7 +54,7 @@
 
       .notification.low,
       .notification.normal {
-        border: 1px solid @base0D;
+        border: 1px solid @base0E;
       }
 
       .notification.low progress,
@@ -85,7 +85,7 @@
       .notification-action {
         color: @base05;
         background: @base01;
-        border: 1px solid @base0D;
+        border: 1px solid @base0E;
       }
 
       .notification-action:hover {
@@ -115,7 +115,7 @@
 
       .notification-content {
         background: @base00;
-        border: 1px solid @base0D;
+        border: 1px solid @base0E;
       }
 
       .floating-notifications.background .notification-row .notification-background {
@@ -148,7 +148,7 @@
 
       .control-center {
         background: @base00;
-        border: 1px solid @base0D;
+        border: 1px solid @base0E;
         color: @base05;
       }
 
@@ -174,7 +174,7 @@
 
       .widget-title > button {
         background: @base01;
-        border: 1px solid @base0D;
+        border: 1px solid @base0E;
         color: @base05;
       }
 
@@ -188,7 +188,7 @@
 
       .widget-dnd > switch {
         background: @base01;
-        border: 1px solid @base0D;
+        border: 1px solid @base0E;
       }
 
       .widget-dnd > switch:hover {
@@ -209,7 +209,7 @@
 
       .widget-mpris .widget-mpris-player {
         background: @base01;
-        border: 1px solid @base0D;
+        border: 1px solid @base0E;
       }
 
       .widget-mpris .widget-mpris-player button:hover {
@@ -217,12 +217,12 @@
       }
 
       .widget-mpris .widget-mpris-player > box > button {
-        border: 1px solid @base0D;
+        border: 1px solid @base0E;
       }
 
       .widget-mpris .widget-mpris-player > box > button:hover {
         background: @base01;
-        border: 1px solid @base0D;
+        border: 1px solid @base0E;
       }
     '';
   };
