@@ -43,7 +43,7 @@
     ./modules/hyprland/hyprland.nix
 
     #---------- HYPRLOCK --------- #
-    ./modules/hyprlock.nix
+    #./modules/hyprlock.nix
 
     # ---------- IMV ----------- #
     ./modules/imv.nix

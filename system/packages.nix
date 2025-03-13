@@ -1,6 +1,7 @@
 {
   pkgs,
   pkgs-unstable,
+  pkgs-master,
   ...
 }:
 {
@@ -17,7 +18,6 @@
       btop
       calligraphy
       cava
-      cavalier
       ccache
       celluloid
       clang
@@ -28,7 +28,6 @@
       deluge
       dua
       emblem
-      eog
       exiftool
       mediainfo
       fastfetch
@@ -40,15 +39,15 @@
       git
       glib
       gnome-calculator
-      gwenview
       gnumake
       go
       gparted
       gperf
       has
+      hyprland
       imv
       jq
-      kalker
+      kalker # calculator
       kdePackages.qt6ct
       libgcc
       libnotify
@@ -56,7 +55,6 @@
       libsForQt5.qt5ct
       lsd
       meson
-      mpc-cli
       mpv
       nautilus
       ncurses
@@ -123,16 +121,12 @@
         hclfmt
         home-manager
         hyprpolkitagent
-        hyprland
-        hyprlock
-        hyprpaper
         hyprpicker
         hyprshot
         kitty
         librewolf
         lua
         markdown-oxide
-        nchat
         neovim-unwrapped
         nixd
         nixfmt-rfc-style
@@ -143,6 +137,12 @@
         wttrbar
         yamllint
         yamlfmt
+      ])
+
+    ++
+
+      (with pkgs-master; [
+        #nchat-whatsapp
       ])
 
     ++
@@ -227,7 +227,7 @@
   nixpkgs = {
     config = {
       allowUnfree = true;
-      allowBroken = true;
+      allowBroken = false;
     };
   };
 }
