@@ -45,6 +45,7 @@
       gperf
       has
       hyprland
+      hyprlock
       imv
       jq
       kalker # calculator
