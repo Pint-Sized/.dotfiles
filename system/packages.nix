@@ -75,6 +75,7 @@
       python3
       python312Packages.libcst
       python312Packages.python-lsp-server
+      qemu
       rclone
       readline
       remnote

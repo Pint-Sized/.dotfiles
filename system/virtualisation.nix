@@ -19,5 +19,10 @@
         };
       };
     };
+    spiceUSBRedirection.enable = true;
   };
+  programs = {
+    virt-manager.enable = true;
+  };
+  user.groups.libvirtd.members = [ "$userSettings.username" ];
 }

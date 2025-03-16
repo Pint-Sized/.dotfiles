@@ -88,6 +88,9 @@
     # --------- ULAUNCHER --------- #
     ./modules/ulauncher/ulauncher.nix
 
+    # ----- VIRTUALISATION ----- #
+    ./modules/virtualisation.nix
+
     # ---------- WAYBAR ----------- #
     ./modules/waybar.nix
 
