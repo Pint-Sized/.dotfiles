@@ -135,6 +135,7 @@
         pyright
         stylua
         ulauncher
+        wineWowPackages.waylandFull
         wttrbar
         yamllint
         yamlfmt
@@ -203,6 +204,7 @@
   services.flatpak.packages = [
     #"com.rtosta.zapzap"
     "io.github.giantpinkrobots.flatsweep"
+    "com.usebottles.bottles"
   ];
 
   programs = {

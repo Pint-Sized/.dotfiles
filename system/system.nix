@@ -14,6 +14,7 @@
       "networkmanager"
       "wheel"
       "openrazer"
+      "libvirtd"
     ];
   };
   environment = {
@@ -94,11 +95,6 @@
         "nix-command"
         "flakes"
       ];
-    };
-  };
-  virtualisation = {
-    libvirtd = {
-      enable = true;
     };
   };
   security = {
