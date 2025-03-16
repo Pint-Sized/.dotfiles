@@ -39,7 +39,6 @@
       cavalier.enable = false;
       foot.enable = false;
       xresources.enable = true;
-      nchat.enable = true;
     };
   };
   home.file.".dotfiles/themes/colours".text = with config.lib.stylix.colors; ''
