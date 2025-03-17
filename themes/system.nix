@@ -6,7 +6,11 @@
     autoEnable = true;
     enableReleaseChecks = false;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/${userSettings.theme}.yaml";
-    cursor.size = 16;
+    cursor = {
+      package = pkgs.bibata-cursors;
+      name = "${userSettings.cursorName}";
+      size = 16;
+    };
     targets.nixos-icons.enable = true;
   };
 }
