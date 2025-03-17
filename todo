@@ -1,2 +1,3 @@
 hypridle
 script that runs when rebuilding that imports colours into unzipped darkreader sourcefiles, zips it into a .xpi, and adds it to firefox after deleting the existing .xpi file
+finish setting up winapps

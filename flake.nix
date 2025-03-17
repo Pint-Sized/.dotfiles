@@ -23,6 +23,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixcord.url = "github:kaylorben/nixcord";
+    winapps = {
+      url = "github:winapps-org/winapps";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -36,6 +40,7 @@
       stylix,
       spicetify-nix,
       nixcord,
+      winapps,
       ...
     }:
     let
@@ -100,6 +105,7 @@
             inherit pkgs-master;
             inherit systemSettings;
             inherit userSettings;
+            inherit winapps;
           };
         };
         laptop = lib.nixosSystem {
@@ -117,6 +123,7 @@
             inherit pkgs-master;
             inherit systemSettings;
             inherit userSettings;
+            inherit winapps;
           };
         };
       };
@@ -137,6 +144,7 @@
             inherit pkgs-master;
             inherit systemSettings;
             inherit userSettings;
+            inherit winapps;
           };
         };
       };

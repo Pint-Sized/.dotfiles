@@ -2,6 +2,8 @@
   pkgs,
   pkgs-unstable,
   pkgs-master,
+  systemSettings,
+  winapps,
   ...
 }:
 {
@@ -156,6 +158,13 @@
         done
         puffer
         sponge
+      ])
+
+    ++
+
+      (with winapps.packages."${systemSettings.system}"; [
+        winapps
+        winapps-launcher
       ])
 
     ++

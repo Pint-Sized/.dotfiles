@@ -4,8 +4,8 @@
   virtualisation = {
     libvirtd = {
       enable = true;
-      quemu = {
-        package = pkgs.quemu_kvm;
+      qemu = {
+        package = pkgs.qemu_kvm;
         runAsRoot = true;
         swtpm.enable = true;
         ovmf = {
@@ -24,5 +24,5 @@
   programs = {
     virt-manager.enable = true;
   };
-  user.groups.libvirtd.members = [ "$userSettings.username" ];
+  users.groups.libvirtd.members = [ "$userSettings.username" ];
 }
