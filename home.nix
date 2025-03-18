@@ -75,9 +75,6 @@
     # ---- STEAM ---- #
     #./modules/steam.nix
 
-    # --------- SWAYOSD -------- #
-    ./modules/swayosd.nix
-
     # --------- SWAYNC --------- #
     ./modules/swaync.nix
 
@@ -96,6 +93,9 @@
 
     # -------- WLOGOUT -------- #
     ./modules/wlogout/wlogout.nix
+
+    # ----- WOB ----- #
+    ./modules/wob.nix
 
     # --------- YAZI ------------ #
     ./modules/yazi/yazi.nix

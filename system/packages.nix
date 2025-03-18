@@ -106,6 +106,7 @@
       which
       wl-clipboard
       wlogout
+      wob
       yazi
       zapzap
       zathura
