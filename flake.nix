@@ -23,6 +23,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixcord.url = "github:kaylorben/nixcord";
+    microvm = {
+      url = "github:astro/microvm.nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     winapps = {
       url = "github:winapps-org/winapps";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -40,6 +44,7 @@
       stylix,
       spicetify-nix,
       nixcord,
+      microvm,
       winapps,
       ...
     }:
@@ -98,6 +103,7 @@
             nixvim.nixosModules.nixvim
             stylix.nixosModules.stylix
             nix-flatpak.nixosModules.nix-flatpak
+            microvm.nixosModules.microvm
           ];
           specialArgs = {
             inherit inputs;
@@ -105,6 +111,7 @@
             inherit pkgs-master;
             inherit systemSettings;
             inherit userSettings;
+            inherit microvm;
             inherit winapps;
           };
         };
@@ -116,6 +123,7 @@
             nixvim.nixosModules.nixvim
             stylix.nixosModules.stylix
             nix-flatpak.nixosModules.nix-flatpak
+            microvm.nixosModules.microvm
           ];
           specialArgs = {
             inherit inputs;
@@ -123,6 +131,7 @@
             inherit pkgs-master;
             inherit systemSettings;
             inherit userSettings;
+            inherit microvm;
             inherit winapps;
           };
         };
