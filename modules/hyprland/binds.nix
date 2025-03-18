@@ -60,6 +60,7 @@
 
       "$mainMod, N, exec, ulauncher-toggle"
       "$mainMod, B, exec, swaync-client -t"
+      "$mainMod SHIFT, B, exec, swaync-client -C"
       "$mainMod, P, exec, waypaper"
       "$mainMod, Y, exec, kitty --detach fish -C y"
       "$mainMod, O, exec, remnote --enable-features=UseOzonePlatform --ozone-platform=wayland"
@@ -94,7 +95,7 @@
 
     bindn = [
       ", v, pass, ^discord$"
-      ", Caps_Lock, exec, ~/.dotfiles/scripts/swayosd-caps"
+      ", Caps_Lock, exec, sleep 0.1; swayosd-client --caps-lock"
     ];
   };
 }
