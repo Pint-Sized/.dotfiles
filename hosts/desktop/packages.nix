@@ -6,6 +6,7 @@
       liquidctl
       openrazer-daemon
       polychromatic
+      protonup
       openrgb-with-all-plugins
       cartridges
     ])

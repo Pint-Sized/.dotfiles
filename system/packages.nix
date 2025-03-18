@@ -12,18 +12,15 @@
     (with pkgs; [
       aerc
       appeditor
-      asciiquarium-transparent
       bat
       base16-schemes
       black
-      bonsai
       btop
       calligraphy
       cava
       ccache
       celluloid
       clang
-      cliphist
       cmake
       cmatrix
       coreutils
@@ -58,21 +55,15 @@
       libsForQt5.qt5ct
       meson
       mpv
-      nautilus
       ncurses
-      newsflash
       nix-du
       nixos-generators
       nodejs_22
       ntfs3g
-      nwg-displays
-      onefetch
       openssl
       pavucontrol
-      pipes-rs
       playerctl
       pokeget-rs
-      protonup
       pyprland
       python3
       python312Packages.libcst
@@ -112,7 +103,6 @@
       zathura
       zip
       zlib
-      thunderbird
       xdg-desktop-portal-hyprland
     ])
 
@@ -139,7 +129,6 @@
         pyright
         stylua
         ulauncher
-        wineWowPackages.waylandFull
         wttrbar
         yamllint
         yamlfmt
@@ -213,7 +202,6 @@
       ]);
 
   services.flatpak.packages = [
-    #"com.rtosta.zapzap"
     "io.github.giantpinkrobots.flatsweep"
     "com.usebottles.bottles"
   ];
@@ -241,7 +229,6 @@
   nixpkgs = {
     config = {
       allowUnfree = true;
-      allowBroken = false;
     };
   };
 }
