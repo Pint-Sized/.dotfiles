@@ -6,5 +6,6 @@
     ./packages.nix
     ./power.nix
     ./services.nix
+    ./virtualisation.nix
   ];
 }

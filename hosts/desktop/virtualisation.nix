@@ -25,4 +25,10 @@
     virt-manager.enable = true;
   };
   users.groups.libvirtd.members = [ "$userSettings.username" ];
+
+  #microvm = {
+  #hypervisor = "qemu";
+  #vcpu = 6;
+  #mem = 12288;
+  #};
 }
