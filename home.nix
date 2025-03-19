@@ -91,6 +91,9 @@
     # ----- VIRTUALISATION ----- #
     ./modules/virtualisation.nix
 
+    # ----- WINAPPS ----- #
+    ./modules/winapps/winapps.nix
+
     # ---------- WAYBAR ----------- #
     ./modules/waybar.nix
 
