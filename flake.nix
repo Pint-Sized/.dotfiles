@@ -10,7 +10,7 @@
     };
     nixvim = {
       url = "github:nix-community/nixvim/nixos-24.11"; # allows home-manager to decleratively manage neovim using a nix launguage wrapper
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
     nix-flatpak.url = "github:gmodena/nix-flatpak"; # allows for the declerative installation and configuration  of flatpaks (alternative app packaging method)
     stylix.url = "github:danth/stylix/master"; # allows for the stylix of all enabled applications using a base16 colourscheme

@@ -6,6 +6,7 @@
       enable = true;
       package = pkgs-unstable.librewolf;
       profiles."8b2kzims.default" = {
+        #profiles."default" = {
         settings = {
           "toolkit.legacyUserProfileCustomizations.stylesheets" = true; # Enable customChrome.cs
           "browser.uidensity" = 0; # Set UI density to normal
