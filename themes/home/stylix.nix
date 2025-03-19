@@ -8,7 +8,7 @@
 {
   stylix = {
     enable = true;
-    image = ../../wallpapers/evening-sky.png;
+    #image = ../../wallpapers/evening-sky.png;
     cursor = {
       name = userSettings.cursorName;
       package = pkgs.bibata-cursors;

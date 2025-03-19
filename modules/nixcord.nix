@@ -10,7 +10,7 @@
         font-family: var(--font), sans-serif;
       }
     ";
-    discord.vencord.unstable = true;
+    #discord.vencord.unstable = true;
     config = {
       useQuickCss = true;
       frameless = true;

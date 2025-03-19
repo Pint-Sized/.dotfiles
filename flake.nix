@@ -22,7 +22,10 @@
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixcord.url = "github:kaylorben/nixcord";
+    nixcord = {
+      url = "github:kaylorben/nixcord";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
     #microvm = {
     #url = "github:astro/microvm.nix";
     #inputs.nixpkgs.follows = "nixpkgs";
