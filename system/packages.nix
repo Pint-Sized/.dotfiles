@@ -11,7 +11,6 @@
   environment.systemPackages =
     (with pkgs; [
       aerc
-      apostrophe
       appeditor
       bat
       base16-schemes
@@ -47,6 +46,7 @@
       hyprland
       hyprlock
       imv
+      iotas
       jq
       kalker # calculator
       kdePackages.qt6ct

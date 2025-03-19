@@ -15,5 +15,6 @@
     "pkexec swayosd-libinput-backend &"
     "swayosd-server &"
     "foot cava"
+    "hypridle"
   ];
 }
