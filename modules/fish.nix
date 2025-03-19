@@ -57,7 +57,7 @@
               end
         '';
       };
-      gc = "git add *; git commit -m '$argv'; git push github main";
+      gc = "git add *; git commit -m $argv; git push github main";
       nix-template = "nix flake init -t github:nix-community/templates#$argv";
     };
   };
