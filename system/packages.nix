@@ -56,6 +56,8 @@
       libsForQt5.qt5ct
       meson
       mpv
+      nautilus
+      nautilus-open-any-terminal
       ncurses
       nix-du
       nixos-generators
