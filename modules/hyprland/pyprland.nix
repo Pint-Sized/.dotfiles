@@ -47,6 +47,13 @@
         class = "org.pulseaudio.pavucontrol"
         size = "90% 90%"
         lazy = false
+
+        [scratchpads.discord]
+        animation = "fromTop"
+        command = "discord --force-device-scale-factor=1.5"
+        class = "discord"
+        size = "90% 90%"
+        lazy = false
       '';
     };
   };

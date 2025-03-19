@@ -11,6 +11,7 @@
   environment.systemPackages =
     (with pkgs; [
       aerc
+      apostrophe
       appeditor
       bat
       base16-schemes
@@ -82,6 +83,7 @@
       swayosd
       swww
       teams-for-linux
+      thunderbird
       tldr
       udisks
       undollar

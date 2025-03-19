@@ -58,7 +58,7 @@
     #./modules/mpv.nix
 
     # -------- NIXCORD ------- #
-    #./modules/nixcord.nix
+    ./modules/nixcord.nix
 
     # --------- NIXVIM --------- #
     ./modules/nixvim/nixvim.nix

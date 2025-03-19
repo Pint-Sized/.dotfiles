@@ -1,7 +1,9 @@
+{ config, userSettings, ... }:
+
 {
   programs.hyprlock = {
     enable = true;
-    extraConfig = ''
+    extraConfig = with config.lib.stylix.colors; ''
       # BACKGROUND
       background {
           monitor =
@@ -15,7 +17,6 @@
       general {
           grace = 0
           disable_loading_bar = false
-          ignore_empty_input = true
           immediate_render = true
       }
 
@@ -24,9 +25,9 @@
       label {
           monitor =
           text = cmd[update:1000] echo -e "$(date +"%A")"
-          color = rgba(216, 222, 233, 0.70)
+          color = rgba(${base07-rgb-r}, ${base07-rgb-g}, ${base07-rgb-b}, 0.70)
           font_size = 90
-          font_family = 0xProto Nerd Font
+          font_family = ${userSettings.fontSerif}
           position = 0, 350
           halign = center
           valign = center
@@ -36,9 +37,9 @@
       label {
           monitor =
           text = cmd[update:1000] echo -e "$(date +"%d %B")"
-          color = rgba(216, 222, 233, 0.70)
+          color = rgba(${base07-rgb-r}, ${base07-rgb-g}, ${base07-rgb-b}, 0.70)
           font_size = 40
-          font_family = 0xProto Nerd Font
+          font_family = ${userSettings.fontSerif}
           position = 0, 250
           halign = center
           valign = center
@@ -48,9 +49,9 @@
       label {
           monitor =
           text = cmd[update:1000] echo "<span>$(date +"- %I:%M -")</span>"
-          color = rgba(216, 222, 233, 0.70)
+          color = rgba(${base07-rgb-r}, ${base07-rgb-g}, ${base07-rgb-b}, 0.70)
           font_size = 20
-          font_family = 0xProto Nerd Font
+          font_family = ${userSettings.fontSerif}
           position = 0, 190
           halign = center
           valign = center
@@ -61,7 +62,7 @@
           monitor =
           path = ~/.dotfiles/wallpapers/wynnie-profile-pic.jpeg
           border_size = 2
-          border_color = rgba(255, 255, 255, .65)
+          border_color = rgba(${base02-rgb-r}, ${base02-rgb-g}, ${base02-rgb-b}, 0.65)
           size = 130
           rounding = -1
           rotate = 0
@@ -76,10 +77,10 @@
       shape {
           monitor =
           size = 300, 60
-          color = rgba(255, 255, 255, .1)
+          color = rgba(${base01-rgb-r}, ${base01-rgb-g}, ${base01-rgb-b}, 0.1)
           rounding = -1
-          border_size = 0
-          border_color = rgba(255, 255, 255, 0)
+          border_size = 1
+          border_color = rgba(${base02-rgb-r}, ${base02-rgb-g}, ${base02-rgb-b}, 0)
           rotate = 0
           xray = false # if true, make a "hole" in the background (rectangle of specified size, no rotation)
           position = 0, -130
@@ -91,7 +92,7 @@
       label {
           monitor =
           text =   $USER
-          color = rgba(216, 222, 233, 0.80)
+          color = rgba(${base05-rgb-r}, ${base05-rgb-g}, ${base05-rgb-b}, 0.80)
           outline_thickness = 2
           dots_size = 0.2 # Scale of input-field height, 0.2 - 0.8
           dots_spacing = 0.2 # Scale of dots' absolute size, 0.0 - 1.0
@@ -111,12 +112,12 @@
           dots_size = 0.2 # Scale of input-field height, 0.2 - 0.8
           dots_spacing = 0.2 # Scale of dots' absolute size, 0.0 - 1.0
           dots_center = true
-          outer_color = rgba(255, 255, 255, 0)
-          inner_color = rgba(255, 255, 255, 0.1)
-          font_color = rgb(200, 200, 200)
+          outer_color = rgba(${base02-rgb-r}, ${base02-rgb-g}, ${base02-rgb-b}, 0)
+          inner_color = rgba(${base01-rgb-r}, ${base01-rgb-g}, ${base01-rgb-b}, 0.1)
+          font_color = rgb(${base05-rgb-r}, ${base05-rgb-g}, ${base05-rgb-b})
           fade_on_empty = false
           font_family = 0xProto Nerd Font
-          placeholder_text = <i><span foreground="##ffffff99"> Enter Pass</span></i>
+          placeholder_text = <i><span foreground="##${base05-hex}"> Enter Pass</span></i>
           hide_input = false
           position = 0, -210
           halign = center
@@ -127,7 +128,7 @@
       label {
           monitor =
           text = 󰐥  󰜉  󰤄
-          color = rgba(255, 255, 255, 0.6)
+          color = rgba(${base07-rgb-r}, ${base07-rgb-g}, ${base07-rgb-b}, 0.6)
           font_size = 50
           position = 0, 100
           halign = center
