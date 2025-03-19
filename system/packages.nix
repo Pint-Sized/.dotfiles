@@ -157,50 +157,6 @@
       (with winapps.packages."${systemSettings.system}"; [
         winapps
         winapps-launcher
-      ])
-
-    ++
-
-      # --------- VIM PLUGINS --------- #
-      (with pkgs.vimPlugins; [
-        bufferline-nvim
-        conform-nvim
-        diffview-nvim
-        fzf-lua
-        indent-blankline-nvim
-        lualine-nvim
-        lspsaga-nvim
-        markdown-preview-nvim
-        mini-nvim
-        neo-tree-nvim
-        neogit
-        neotest
-        neotest-plenary
-        noice-nvim
-        none-ls-nvim
-        nui-nvim
-        nvim-autopairs
-        nvim-cmp
-        nvim-cursorline
-        nvim-lspconfig
-        nvim-navic
-        nvim-notify
-        nvim-snippets
-        nvim-treesitter
-        nvim-web-devicons
-        oil-nvim
-        startup-nvim
-        telescope-file-browser-nvim
-        telescope-manix
-        telescope-media-files-nvim
-        telescope-nvim
-        telescope-ui-select-nvim
-        telescope-undo-nvim
-        todo-comments-nvim
-        toggleterm-nvim
-        trouble-nvim
-        vim-illuminate
-        which-key-nvim
       ]);
 
   services.flatpak.packages = [
