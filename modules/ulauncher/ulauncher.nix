@@ -131,6 +131,5 @@
         }
       '';
     };
-    ".config/ulauncher/screenshot-icon.png".source = ./screenshot-icon.png;
   };
 }
