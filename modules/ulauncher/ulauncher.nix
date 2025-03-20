@@ -1,7 +1,10 @@
 { config, ... }:
 
 {
-  home.file = {
+  imports = [
+    ./extensions/extensions.nix
+  ];
+  home.file = with config.lib.stylix.colors; {
     ".config/ulauncher/user-themes/theme/colours.css" = {
       text = with config.lib.stylix.colors; ''
         @define-color background #${base00-hex};
@@ -13,7 +16,7 @@
       '';
     };
     ".config/ulauncher/user-themes/theme/manifest.json" = {
-      text = with config.lib.stylix.colors; ''
+      text = ''
               {
           "manifest_version": "1",
           "name": "stylix-theme",
@@ -161,6 +164,6 @@
         ]
       '';
     };
+    ".config/ulauncher/screenshot-icon.png".source = ./screenshot-icon.png;
   };
-  home.file.".config/ulauncher/screenshot-icon.png".source = ./screenshot-icon.png;
 }
