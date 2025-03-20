@@ -31,6 +31,9 @@
         yamlls = {
           enable = true;
         };
+        jsonls = {
+          enable = true;
+        };
       };
       keymaps = {
         silent = true;

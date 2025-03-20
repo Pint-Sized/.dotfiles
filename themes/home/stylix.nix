@@ -39,6 +39,9 @@
       cavalier.enable = false;
       foot.enable = false;
       xresources.enable = true;
+      firefox.profileNames = [
+        "8b2kzims.default"
+      ];
     };
   };
   home.file.".dotfiles/themes/colours".text = with config.lib.stylix.colors; ''
