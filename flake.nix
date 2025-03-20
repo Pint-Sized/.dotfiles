@@ -14,8 +14,7 @@
     };
     nix-flatpak.url = "github:gmodena/nix-flatpak"; # allows for the declerative installation and configuration  of flatpaks (alternative app packaging method)
     stylix = {
-      url = "github:danth/stylix/release-24.11"; # allows for the stylix of all enabled applications using a base16 colourscheme
-      #inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:danth/stylix/master"; # allows for the stylix of all enabled applications using a base16 colourscheme
     };
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix"; # allows for the declerative configuration of spicetify using a nix language wrapper

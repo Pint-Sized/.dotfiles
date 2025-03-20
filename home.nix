@@ -55,7 +55,7 @@
     ./modules/librewolf/librewolf.nix
 
     # ------------ MPV ------------ #
-    ./modules/mpv.nix
+    #./modules/mpv.nix
 
     # -------- NIXCORD ------- #
     #./modules/nixcord.nix

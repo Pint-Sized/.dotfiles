@@ -36,7 +36,6 @@
       waybar.enable = false;
       hyprlock.enable = true;
       gtk.flatpakSupport.enable = true;
-      cavalier.enable = false;
       foot.enable = false;
       xresources.enable = true;
       firefox.profileNames = [
