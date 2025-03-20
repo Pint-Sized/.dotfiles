@@ -131,39 +131,6 @@
         }
       '';
     };
-    ".config/ulauncher/scripts.json" = {
-      text = ''
-        [
-          {
-            "name": "Hyprshot Monitor",
-            "description": "Screenshots entire monitor",
-            "icon": "~/.config/ulauncher/screenshot-icon.png",
-            "script": "hyprshot -m output -o ~/Screenshots",
-            "default_arguments": [
-              "~/.config/ulauncher/scripts.json"
-            ]
-          },
-          {
-            "name": "Hyprshot Window",
-            "description": "Screenshots a given window",
-            "icon": "~/.config/ulauncher/screenshot-icon.png",
-            "script": "hyprshot -m window -o ~/Screenshots",
-            "default_arguments": [
-              "~/.config/ulauncher/scripts.json"
-            ]
-          },
-          {
-            "name": "Hyprshot Region",
-            "description": "Screenshots a selected area",
-            "icon": "~/.config/ulauncher/screenshot-icon.png",
-            "script": "hyprshot -m region -o ~/Screenshots",
-            "default_arguments": [
-              "~/.config/ulauncher/scripts.json"
-            ]
-          }
-        ]
-      '';
-    };
     ".config/ulauncher/screenshot-icon.png".source = ./screenshot-icon.png;
   };
 }
