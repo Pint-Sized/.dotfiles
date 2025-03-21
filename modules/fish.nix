@@ -25,7 +25,7 @@
     functions = {
       c = "clear";
       n = "nvim $argv";
-      z = "zeditor $argv; exit";
+      fb = "bash -c '$argv &'";
       nrd = "sudo nixos-rebuild switch --flake ~/.dotfiles/#desktop ";
       nrl = "sudo nixos-rebuild switch --flake ~/.dotfiles/#laptop ";
       hr = "home-manager switch --flake ~/.dotfiles;hyprctl reload;";

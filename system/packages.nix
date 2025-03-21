@@ -59,6 +59,7 @@
       nautilus
       nautilus-open-any-terminal
       ncurses
+      newsflash
       nix-du
       nixos-generators
       nodejs_22
