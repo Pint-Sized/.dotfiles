@@ -105,7 +105,7 @@
     "tslib": "2.8.1",
     "typescript": "5.7.3",
     "typescript-eslint": "8.24.1",
-    "web-ext": "8.4.0",
+    "web-ext": "8.5.0",
     "ws": "8.18.1",
     "yazl": "3.3.1"
   },
