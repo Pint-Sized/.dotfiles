@@ -7,7 +7,7 @@
     bind = [
       "$mainMod, Q, exec, $terminal"
       "$mainMod, C, killactive"
-      "$mainMod, E, exec, $filemanager"
+      "$mainMod, Y, exec, $filemanager"
       "$mainMod, V, togglefloating,"
       "$mainMod, J, togglesplit, # dwindle"
       "$mainMod, W, exec, $browser"
@@ -62,7 +62,7 @@
       "$mainMod, B, exec, swaync-client -t"
       "$mainMod SHIFT, B, exec, swaync-client -C"
       "$mainMod, P, exec, waypaper"
-      "$mainMod, Y, exec, kitty --detach fish -C y"
+      "$mainMod, E, exec, kitty --detach fish -C y"
       "$mainMod, O, exec, remnote --enable-features=UseOzonePlatform --ozone-platform=wayland"
 
       "$mainMod, R, exec, ~/.dotfiles/scripts/reloader"
