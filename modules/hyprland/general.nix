@@ -76,6 +76,7 @@
 
       cursor = {
         no_hardware_cursors = true;
+        enable_hyprcursor = true;
         no_warps = true;
         inactive_timeout = 10;
       };

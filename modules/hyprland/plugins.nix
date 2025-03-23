@@ -10,6 +10,7 @@
       pkgs.hyprlandPlugins.borders-plus-plus
       pkgs.hyprlandPlugins.hyprwinwrap
       pkgs.hyprlandPlugins.hyprfocus
+      pkgs.hyprlandPlugins.hypr-dynamic-cursors
     ];
     settings.plugin = {
       borders-plus-plus = {
@@ -47,6 +48,16 @@
           out_bezier = "realsmooth";
           out_speed = 2;
         };
+      };
+      dynamic-cursors = {
+        enabled = true;
+        mode = "tilt";
+        threshold = 2;
+        tilt = {
+          limit = 4000;
+          function = "negative_quadratic";
+        };
+        shake.enabled = false;
       };
       hyprwinwrap.class = "foot";
     };
