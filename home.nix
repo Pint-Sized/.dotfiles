@@ -54,7 +54,10 @@
     # --------- LIBREWOLF ----------- #
     ./modules/librewolf/librewolf.nix
 
-    # ------------ MPV ------------ #
+    # ----- MY-APPLICATIONS ----- #
+    ./applications/microsoft-office/word.nix
+
+    # ----- MPV ----- #
     #./modules/mpv.nix
 
     # -------- NIXCORD ------- #

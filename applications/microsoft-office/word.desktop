@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Microsoft Word
+Exec=flatpak run --command=bottles-cli com.usebottles.bottles run -b "Office 2016" -p "Microsoft Word"
+Comment=Document Editor
+GenericName=Document Editor
+Terminal=false
+Type=Application
+Categories=Office
+StartupNotify=true
