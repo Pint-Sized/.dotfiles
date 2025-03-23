@@ -5,6 +5,6 @@
     ./powerpoint.nix
     ./publisher.nix
     ./word.nix
-    ./icons/icons.nix
+    #./icons/icons.nix
   ];
 }
