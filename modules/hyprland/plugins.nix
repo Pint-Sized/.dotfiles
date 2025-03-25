@@ -10,7 +10,7 @@
     plugins = [
       pkgs-unstable.hyprlandPlugins.borders-plus-plus
       pkgs-unstable.hyprlandPlugins.hyprwinwrap
-      pkgs.hyprlandPlugins.hyprfocus
+      #pkgs.hyprlandPlugins.hyprfocus
       pkgs-unstable.hyprlandPlugins.hypr-dynamic-cursors
     ];
     settings.plugin = {

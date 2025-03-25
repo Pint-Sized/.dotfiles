@@ -95,6 +95,7 @@
       util-linux
       vencord
       volctl
+      vscodium
       waybar
       waypaper
       wdisplays

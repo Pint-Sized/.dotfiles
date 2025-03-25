@@ -94,6 +94,9 @@
     # ----- VIRTUALISATION ----- #
     ./modules/virtualisation.nix
 
+    # ----- VSCODIUM ----- #
+    ./modules/vscodium.nix
+
     # ----- WINAPPS ----- #
     ./modules/winapps/winapps.nix
 
