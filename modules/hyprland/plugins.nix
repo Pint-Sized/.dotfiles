@@ -1,5 +1,6 @@
 {
   pkgs,
+  pkgs-unstable,
   config,
   ...
 }:
@@ -7,10 +8,10 @@
 {
   wayland.windowManager.hyprland = with config.lib.stylix.colors; {
     plugins = [
-      pkgs.hyprlandPlugins.borders-plus-plus
-      pkgs.hyprlandPlugins.hyprwinwrap
+      pkgs-unstable.hyprlandPlugins.borders-plus-plus
+      pkgs-unstable.hyprlandPlugins.hyprwinwrap
       pkgs.hyprlandPlugins.hyprfocus
-      pkgs.hyprlandPlugins.hypr-dynamic-cursors
+      pkgs-unstable.hyprlandPlugins.hypr-dynamic-cursors
     ];
     settings.plugin = {
       borders-plus-plus = {
