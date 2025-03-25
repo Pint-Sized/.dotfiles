@@ -12,6 +12,7 @@
     (with pkgs; [
       aerc
       appeditor
+      autokey
       bat
       base16-schemes
       black
@@ -69,9 +70,9 @@
       playerctl
       pokeget-rs
       pyprland
+      python
       python3
-      python312Packages.libcst
-      python312Packages.python-lsp-server
+      python312
       qemu
       rclone
       readline
@@ -142,6 +143,21 @@
 
     ++
 
+      (with pkgs.python312Packages; [
+        libcst
+        python-lsp-server
+        numpy
+        numpy_1
+        numpy_2
+        numpyro
+        numpy-stl
+        numpy-groupies
+        pip
+        pandas
+      ])
+
+    ++
+
       (with pkgs-master; [
         nchat
       ])
@@ -191,6 +207,9 @@
   nixpkgs = {
     config = {
       allowUnfree = true;
+      permittedInsecurePackages = [
+        "python-2.7.18.8"
+      ];
     };
   };
 }
