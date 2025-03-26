@@ -41,7 +41,6 @@
       stylix,
       spicetify-nix,
       nixcord,
-      #microvm,
       ...
     }:
     let
@@ -56,7 +55,7 @@
         username = "fionnbennett";
         name = "Fionn Bennett";
         email = "fionnbennett06@gmail.com";
-        theme = "nord";
+        theme = "gruvbox-material-dark-soft";
         fontPkg = "pkgs.nerdfonts";
         fontSerif = "0xProto Nerd Font";
         fontMono = "0xProto Nerd Font Mono";
@@ -99,7 +98,6 @@
             nixvim.nixosModules.nixvim
             stylix.nixosModules.stylix
             nix-flatpak.nixosModules.nix-flatpak
-            #microvm.nixosModules.microvm
           ];
           specialArgs = {
             inherit inputs;
@@ -107,7 +105,6 @@
             inherit pkgs-master;
             inherit systemSettings;
             inherit userSettings;
-            #inherit microvm;
           };
         };
         laptop = lib.nixosSystem {
@@ -118,7 +115,6 @@
             nixvim.nixosModules.nixvim
             stylix.nixosModules.stylix
             nix-flatpak.nixosModules.nix-flatpak
-            #microvm.nixosModules.microvm
           ];
           specialArgs = {
             inherit inputs;
@@ -126,7 +122,6 @@
             inherit pkgs-master;
             inherit systemSettings;
             inherit userSettings;
-            #inherit microvm;
           };
         };
       };
