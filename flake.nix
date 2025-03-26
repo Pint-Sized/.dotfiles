@@ -28,14 +28,6 @@
       url = "github:kaylorben/nixcord";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
-    #microvm = {
-    #url = "github:astro/microvm.nix";
-    #inputs.nixpkgs.follows = "nixpkgs";
-    #};
-    winapps = {
-      url = "github:winapps-org/winapps";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs =
@@ -50,7 +42,6 @@
       spicetify-nix,
       nixcord,
       #microvm,
-      winapps,
       ...
     }:
     let
@@ -117,7 +108,6 @@
             inherit systemSettings;
             inherit userSettings;
             #inherit microvm;
-            inherit winapps;
           };
         };
         laptop = lib.nixosSystem {
@@ -137,7 +127,6 @@
             inherit systemSettings;
             inherit userSettings;
             #inherit microvm;
-            inherit winapps;
           };
         };
       };
@@ -158,7 +147,6 @@
             inherit pkgs-master;
             inherit systemSettings;
             inherit userSettings;
-            inherit winapps;
           };
         };
       };
