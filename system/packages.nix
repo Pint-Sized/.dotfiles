@@ -64,6 +64,7 @@
       nixos-generators
       nodejs_22
       ntfs3g
+      onefetch
       openssl
       pavucontrol
       playerctl

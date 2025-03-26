@@ -97,9 +97,6 @@
     # ----- VSCODIUM ----- #
     ./modules/vscodium.nix
 
-    # ----- WINAPPS ----- #
-    ./modules/winapps/winapps.nix
-
     # ---------- WAYBAR ----------- #
     ./modules/waybar.nix
 
