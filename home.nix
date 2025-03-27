@@ -95,7 +95,7 @@
     ./modules/virtualisation.nix
 
     # ----- VSCODIUM ----- #
-    ./modules/vscodium.nix
+    #./modules/vscodium.nix
 
     # ---------- WAYBAR ----------- #
     ./modules/waybar.nix
