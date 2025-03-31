@@ -111,6 +111,9 @@
       zip
       zlib
       xdg-desktop-portal-hyprland
+
+      # ---- TESTING ---- #
+      kando
     ])
 
     ++
@@ -175,6 +178,7 @@
   services.flatpak.packages = [
     "io.github.giantpinkrobots.flatsweep"
     "com.usebottles.bottles"
+    "net.nokyan.Resources"
   ];
 
   programs = {
