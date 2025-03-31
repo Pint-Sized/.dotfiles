@@ -38,6 +38,7 @@
       gtk.flatpakSupport.enable = true;
       foot.enable = false;
       xresources.enable = true;
+      gnome-text-editor.enable = true;
       firefox.profileNames = [
         "8b2kzims.default"
       ];

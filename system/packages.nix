@@ -2,7 +2,6 @@
   pkgs,
   pkgs-unstable,
   pkgs-master,
-  systemSettings,
   ...
 }:
 {
@@ -38,6 +37,7 @@
       git
       glib
       gnome-calculator
+      gnome-text-editor
       gnumake
       go
       gparted
