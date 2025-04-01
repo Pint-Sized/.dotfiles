@@ -14,6 +14,7 @@
       black
       btop
       calligraphy
+      cartridges
       cava
       ccache
       celluloid
@@ -35,7 +36,7 @@
       git
       glib
       gnome-calculator
-      gnome-text-editor
+      gnome-weather
       gnumake
       go
       gparted
@@ -177,6 +178,18 @@
     "io.github.giantpinkrobots.flatsweep"
     "com.usebottles.bottles"
     "net.nokyan.Resources"
+    "io.github.hamza_algohary.Coulomb"
+    "io.frama.tractor.carburetor"
+    "de.haeckerfelix.Fragments"
+    "com.tomjwatson.Emote"
+    "io.missioncenter.MissionCenter"
+    "it.mijorus.whisper"
+    "dev.bragefuglseth.Keypunch"
+    "in.srev.guiscrcpy"
+    "io.github.input_leap.input-leap"
+    "eu.nokun.MirrorHall"
+    "io.github.limo_app.limo"
+    "io.github.cosmic_utils.Examine"
   ];
 
   programs = {
