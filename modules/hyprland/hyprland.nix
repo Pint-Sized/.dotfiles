@@ -11,8 +11,8 @@
     ./input.nix
     ./general.nix
     ./plugins.nix
-    ./programs.nix
     ./pyprland.nix
+    ./startup.nix
     ./variables.nix
   ];
 }

@@ -6,7 +6,6 @@
     "swww-daemon &"
     "sleep 2"
     "ulauncher --no-window-shadow &"
-    "waybar &"
     "udiskie &"
     "wl-paste --watch clihist store &"
     "pypr &"
