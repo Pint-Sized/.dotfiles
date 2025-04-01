@@ -17,8 +17,10 @@
         add_borders = 1;
         "col.border_1" = "rgb(${base00-hex})";
         "col.border_2" = "rgb(${base0E-hex})";
+        #"col.border_3" = "rgb(${base00-hex})";
         border_size_1 = 10;
         border_size_2 = -1;
+        #border_size_3 = 10;
         natural_rounding = "on";
       };
       hyprfocus = {

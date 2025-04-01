@@ -75,6 +75,8 @@
       ",XF86Keyboard, exec, polychromatic-controller"
       ",XF86Favorites, exec, kitty ~/.dotfiles/scripts/package-rebuild"
       ", XF86AudioMute, exec, swayosd-client --output-volume mute-toggle"
+
+      "$mainMod, semicolon, exec, emote"
     ];
 
     binde = [
