@@ -3,6 +3,9 @@
 {
   programs.waybar = {
     enable = true;
+    systemd = {
+      enable = true;
+    };
     settings = [
       {
         "layer" = "top";

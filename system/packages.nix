@@ -8,9 +8,7 @@
   # -------- STABLE ------- #
   environment.systemPackages =
     (with pkgs; [
-      aerc
       appeditor
-      autokey
       bat
       base16-schemes
       black
