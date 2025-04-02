@@ -8,6 +8,7 @@
   # -------- STABLE ------- #
   environment.systemPackages =
     (with pkgs; [
+      android-tools
       appeditor
       bat
       base16-schemes
@@ -82,6 +83,7 @@
       ripgrep
       rubyPackages_3_3.sqlite3
       rustup
+      scrcpy
       spotify
       sqlite
       statix
@@ -186,7 +188,6 @@
     "in.srev.guiscrcpy"
     "eu.nokun.MirrorHall"
     "io.github.limo_app.limo"
-    "io.github.cosmic_utils.Examine"
   ];
 
   programs = {
