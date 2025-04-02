@@ -1,6 +1,5 @@
 {
-  programs.nvim.plugins.markdown-preview = {
+  programs.nixvim.plugins.markdown-preview = {
     enable = true;
-    autoLoad = true;
   };
 }

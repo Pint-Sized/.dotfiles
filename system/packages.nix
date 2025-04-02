@@ -14,8 +14,6 @@
       base16-schemes
       black
       btop
-      calligraphy
-      cartridges
       cava
       ccache
       celluloid
@@ -23,9 +21,7 @@
       cmake
       cmatrix
       coreutils
-      deluge
       dua
-      emblem
       emote
       exiftool
       mediainfo
@@ -39,7 +35,6 @@
       git
       glib
       gnome-calculator
-      gnome-weather
       gnumake
       go
       gparted
@@ -49,7 +44,6 @@
       hyprlock
       imv
       input-leap
-      iotas
       jq
       kalker # calculator
       kdePackages.qt6ct
@@ -60,14 +54,11 @@
       meson
       mpv
       nautilus
-      nautilus-open-any-terminal
       ncurses
-      newsflash
       nix-du
       nixos-generators
       nodejs_22
       ntfs3g
-      onefetch
       openssl
       pavucontrol
       playerctl
@@ -76,7 +67,6 @@
       python
       python3
       python312
-      qemu
       rclone
       readline
       remnote
@@ -94,15 +84,12 @@
       thunderbird
       tldr
       udisks
-      undollar
       unzip
       usbutils
       util-linux
       vencord
       volctl
-      vscodium
       waybar
-      waypaper
       wdisplays
       wev
       which
@@ -115,9 +102,6 @@
       zip
       zlib
       xdg-desktop-portal-hyprland
-
-      # ---- TESTING ---- #
-      kando
     ])
 
     ++

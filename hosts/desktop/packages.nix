@@ -3,6 +3,7 @@
 {
   environment.systemPackages =
     (with pkgs; [
+      cartridges
       liquidctl
       openrazer-daemon
       polychromatic
