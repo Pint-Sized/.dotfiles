@@ -21,6 +21,13 @@
     ./plugins/lsp/none-ls.nix
     ./plugins/lsp/trouble.nix
 
+    # Markdown
+    ./plugins/markdown/markdown-preview.nix
+    ./plugins/markdown/render-markdown.nix
+
+    #Org-Mode
+    ./plugins/org-mode/neorg.nix
+
     # Snippets
     ./plugins/snippets/luasnip.nix
 
