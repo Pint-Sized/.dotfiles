@@ -63,6 +63,7 @@ in
       nixos-generators
       nodejs_22
       ntfs3g
+      oneshot
       onlyoffice-desktopeditors
       openshot-qt
       openssl
