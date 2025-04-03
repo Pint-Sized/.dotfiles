@@ -32,12 +32,13 @@
           contrast = 1.17;
           xray = true;
         };
-        #drop_shadow = true;
-        #shadow_ingore_window = true;
-        #shadow_range = 50;
-        #shadow_render_power = 4;
-        #"col.shadow" = 123;
-        #"col.shadow_inactive" = 123;
+        shadow = {
+          enabled = false;
+          ignore_window = true;
+          range = 50;
+          render_power = 4;
+          color = "0xee${base00-hex}";
+        };
       };
 
       animations = {
