@@ -31,7 +31,7 @@
     };
     hypr-darkwindow = {
       url = "github:alexhulbert/Hyprchroma";
-      #inputs.hyprland.follows = "hyprland";
+      inputs.hyprland.follows = "hyprland";
     };
   };
 

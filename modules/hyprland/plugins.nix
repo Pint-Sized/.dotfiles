@@ -1,18 +1,18 @@
 {
-  pkgs,
+  pkgs-unstable,
   config,
-  hypr-darkwindow,
+  #hypr-darkwindow,
   ...
 }:
 
 {
   wayland.windowManager.hyprland = with config.lib.stylix.colors; {
     plugins = [
-      pkgs.hyprlandPlugins.borders-plus-plus
-      pkgs.hyprlandPlugins.hyprwinwrap
-      pkgs.hyprlandPlugins.hyprfocus
-      pkgs.hyprlandPlugins.hypr-dynamic-cursors
-      hypr-darkwindow.packages.${pkgs.system}.Hypr-DarkWindow
+      pkgs-unstable.hyprlandPlugins.borders-plus-plus
+      pkgs-unstable.hyprlandPlugins.hyprwinwrap
+      #pkgs-unstable.hyprlandPlugins.hyprfocus
+      pkgs-unstable.hyprlandPlugins.hypr-dynamic-cursors
+      #hypr-darkwindow.packages.${pkgs.system}.Hypr-DarkWindow
     ];
     settings.plugin = {
       borders-plus-plus = {

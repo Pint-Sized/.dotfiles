@@ -64,6 +64,7 @@ in
       nodejs_22
       ntfs3g
       onlyoffice-desktopeditors
+      openshot-qt
       openssl
       pavucontrol
       playerctl
