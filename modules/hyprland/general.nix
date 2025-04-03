@@ -4,8 +4,8 @@
   wayland.windowManager.hyprland = with config.lib.stylix.colors; {
     settings = {
       general = {
-        gaps_in = 2;
-        gaps_out = "0,6,6,6";
+        gaps_in = 3;
+        gaps_out = "0,10,10,10";
         border_size = 3;
         no_focus_fallback = true;
         "col.active_border" = "rgb(${base0E-hex})";
@@ -32,7 +32,15 @@
           contrast = 1.17;
           xray = true;
         };
-        shadow.enabled = false;
+        #drop_shadow = true;
+        #shadow_ingore_window = true;
+        #shadow_range = 50;
+        #shadow_render_power = 4;
+        #col.shadow = 0 x99161925;
+        #col.shadow_inactive = 0 x55161925;
+        #blurls = rofi;
+        #blurls = wofi;
+        #blurls = launcher;
       };
 
       animations = {
