@@ -1,5 +1,6 @@
 {
   pkgs,
+  inputs,
   pkgs-unstable,
   pkgs-master,
   ...
@@ -40,7 +41,6 @@
       gparted
       gperf
       has
-      hyprland
       hyprlock
       imv
       input-leap
@@ -179,7 +179,9 @@
   programs = {
     hyprland = {
       enable = true;
-      package = pkgs.hyprland;
+      package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+      portalPackage =
+        inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
       xwayland.enable = true;
     };
 

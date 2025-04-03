@@ -8,9 +8,13 @@
       url = "github:nix-community/home-manager/master"; # home-manager, manages app configs and files in the home directory
       inputs.nixpkgs.follows = "nixpkgs"; # has home-manager only use package versions from the nix stable packages repo
     };
-    nixvim = {
-      url = "github:nix-community/nixvim/nixos-24.11"; # allows home-manager to decleratively manage neovim using a nix launguage wrapper
+    hyprland = {
+      url = "github:hyprwm/Hyprland";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+    nixvim = {
+      url = "github:nix-community/nixvim/main"; # allows home-manager to decleratively manage neovim using a nix launguage wrapper
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
     nix-flatpak.url = "github:gmodena/nix-flatpak"; # allows for the declerative installation and configuration  of flatpaks (alternative app packaging method)
     stylix = {
@@ -30,7 +34,7 @@
     };
     hypr-darkwindow = {
       url = "github:alexhulbert/Hyprchroma";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.hyprland.follows = "hyprland";
     };
   };
 
@@ -46,6 +50,7 @@
       spicetify-nix,
       nixcord,
       hypr-darkwindow,
+      hyprland,
       ...
     }:
     let
@@ -111,6 +116,7 @@
             inherit systemSettings;
             inherit userSettings;
             inherit hypr-darkwindow;
+            inherit hyprland;
           };
         };
         laptop = lib.nixosSystem {
@@ -129,6 +135,7 @@
             inherit systemSettings;
             inherit userSettings;
             inherit hypr-darkwindow;
+            inherit hyprland;
           };
         };
       };
@@ -150,6 +157,7 @@
             inherit systemSettings;
             inherit userSettings;
             inherit hypr-darkwindow;
+            inherit hyprland;
           };
         };
       };

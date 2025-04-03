@@ -24,6 +24,7 @@
     # Markdown
     ./plugins/markdown/markdown-preview.nix
     ./plugins/markdown/render-markdown.nix
+    ./plugins/markdown/bullets.nix
 
     #Org-Mode
     ./plugins/org-mode/neorg.nix

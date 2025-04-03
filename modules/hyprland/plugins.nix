@@ -12,7 +12,7 @@
       pkgs.hyprlandPlugins.hyprwinwrap
       pkgs.hyprlandPlugins.hyprfocus
       pkgs.hyprlandPlugins.hypr-dynamic-cursors
-      #hypr-darkwindow.packages.${pkgs.system}.Hypr-DarkWindow
+      hypr-darkwindow.packages.${pkgs.system}.Hypr-DarkWindow
     ];
     settings.plugin = {
       borders-plus-plus = {

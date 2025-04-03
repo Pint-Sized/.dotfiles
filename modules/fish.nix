@@ -26,11 +26,11 @@
       c = "clear";
       n = "nvim $argv";
       fb = "bash -c $argv &";
-      nrd = "sudo nixos-rebuild switch --flake ~/.dotfiles/#desktop; ~/.dotfiles/scripts/reloader";
-      nrl = "sudo nixos-rebuild switch --flake ~/.dotfiles/#laptop; ~/.dotfiles/scripts/reloader ";
-      hr = "home-manager switch --flake ~/.dotfiles;hyprctl reload; ~/.dotfiles/scripts/reloader";
-      frd = "sudo nix flake update --flake ~/.dotfiles; sudo nixos-rebuild switch --flake ~/.dotfiles#desktop; home-manager switch --flake ~/.dotfiles; ~/.dotfiles/scripts/reloader";
-      frl = "sudo nix flake update --flake ~/.dotfiles; sudo nixos-rebuild switch --flake ~/.dotfiles/#laptop; home-manager switch --flake ~/.dotfiles; ~/.dotfiles/scripts/reloader";
+      nrd = "sudo nixos-rebuild switch --flake ~/.dotfiles/#desktop";
+      nrl = "sudo nixos-rebuild switch --flake ~/.dotfiles/#laptop";
+      hr = "home-manager switch --flake ~/.dotfiles;hyprctl reload";
+      frd = "sudo nix flake update --flake ~/.dotfiles; sudo nixos-rebuild switch --flake ~/.dotfiles#desktop; home-manager switch --flake ~/.dotfiles";
+      frl = "sudo nix flake update --flake ~/.dotfiles; sudo nixos-rebuild switch --flake ~/.dotfiles/#laptop; home-manager switch --flake ~/.dotfiles";
       y = {
         description = "Yazi changes directory on exit";
         body = ''
