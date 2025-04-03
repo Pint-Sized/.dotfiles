@@ -5,6 +5,9 @@
   pkgs-master,
   ...
 }:
+let
+  pkgs-hyprland = inputs.hyprland.inputs.nixpkgs.legacyPackages.${pkgs.stdenv.hostPlatform.system};
+in
 {
   # -------- STABLE ------- #
   environment.systemPackages =
@@ -51,6 +54,7 @@
       libnotify
       libreoffice-qt6-fresh
       libsForQt5.qt5ct
+      mesa
       meson
       mpv
       nautilus
@@ -103,7 +107,6 @@
       zathura
       zip
       zlib
-      xdg-desktop-portal-hyprland
     ])
 
     ++
@@ -179,9 +182,8 @@
   programs = {
     hyprland = {
       enable = true;
-      #package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-      #portalPackage =
-      #inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+      package = inputs.hyprland.packages.${pkgs.system}.hyprland;
+      portalPackage = pkgs-hyprland.xdg-desktop-portal-hyprland;
       xwayland.enable = true;
     };
 

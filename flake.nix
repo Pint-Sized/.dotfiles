@@ -8,10 +8,7 @@
       url = "github:nix-community/home-manager/master"; # home-manager, manages app configs and files in the home directory
       inputs.nixpkgs.follows = "nixpkgs"; # has home-manager only use package versions from the nix stable packages repo
     };
-    hyprland = {
-      url = "github:hyprwm/Hyprland";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    hyprland.url = "github:hyprwm/Hyprland?ref=v0.48.1";
     nixvim = {
       url = "github:nix-community/nixvim/main"; # allows home-manager to decleratively manage neovim using a nix launguage wrapper
       inputs.nixpkgs.follows = "nixpkgs-unstable";
@@ -34,7 +31,7 @@
     };
     hypr-darkwindow = {
       url = "github:alexhulbert/Hyprchroma";
-      inputs.hyprland.follows = "hyprland";
+      #inputs.hyprland.follows = "hyprland";
     };
   };
 
