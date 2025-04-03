@@ -32,17 +32,12 @@
           contrast = 1.17;
           xray = true;
         };
-        drop_shadow = true;
-        shadow_ingore_window = true;
-        shadow_range = 50;
-        shadow_render_power = 4;
-        "col.shadow" = 123;
-        "col.shadow_inactive" = 123;
-        blurls = [
-          "waybar"
-          "cava"
-          "foot"
-        ];
+        #drop_shadow = true;
+        #shadow_ingore_window = true;
+        #shadow_range = 50;
+        #shadow_render_power = 4;
+        #"col.shadow" = 123;
+        #"col.shadow_inactive" = 123;
       };
 
       animations = {
