@@ -62,7 +62,7 @@
         username = "fionnbennett";
         name = "Fionn Bennett";
         email = "fionnbennett06@gmail.com";
-        theme = "spaceduck";
+        theme = "dracula";
         fontPkg = "pkgs.nerdfonts";
         fontSerif = "0xProto Nerd Font";
         fontMono = "0xProto Nerd Font Mono";
