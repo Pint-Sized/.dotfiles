@@ -59,6 +59,7 @@
       nixos-generators
       nodejs_22
       ntfs3g
+      onlyoffice-desktopeditors
       openssl
       pavucontrol
       playerctl

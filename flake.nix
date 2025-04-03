@@ -28,6 +28,10 @@
       url = "github:kaylorben/nixcord";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
+    hypr-darkwindow = {
+      url = "github:alexhulbert/Hyprchroma";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -41,6 +45,7 @@
       stylix,
       spicetify-nix,
       nixcord,
+      hypr-darkwindow,
       ...
     }:
     let
@@ -105,6 +110,7 @@
             inherit pkgs-master;
             inherit systemSettings;
             inherit userSettings;
+            inherit hypr-darkwindow;
           };
         };
         laptop = lib.nixosSystem {
@@ -122,6 +128,7 @@
             inherit pkgs-master;
             inherit systemSettings;
             inherit userSettings;
+            inherit hypr-darkwindow;
           };
         };
       };
@@ -142,6 +149,7 @@
             inherit pkgs-master;
             inherit systemSettings;
             inherit userSettings;
+            inherit hypr-darkwindow;
           };
         };
       };

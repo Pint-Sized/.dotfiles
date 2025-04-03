@@ -1,6 +1,7 @@
 {
   pkgs,
   config,
+  hypr-darkwindow,
   ...
 }:
 
@@ -11,16 +12,15 @@
       pkgs.hyprlandPlugins.hyprwinwrap
       pkgs.hyprlandPlugins.hyprfocus
       pkgs.hyprlandPlugins.hypr-dynamic-cursors
+      #hypr-darkwindow.packages.${pkgs.system}.Hypr-DarkWindow
     ];
     settings.plugin = {
       borders-plus-plus = {
         add_borders = 1;
         "col.border_1" = "rgb(${base00-hex})";
         "col.border_2" = "rgb(${base0E-hex})";
-        #"col.border_3" = "rgb(${base00-hex})";
         border_size_1 = 10;
         border_size_2 = -1;
-        #border_size_3 = 10;
         natural_rounding = "on";
       };
       hyprfocus = {
