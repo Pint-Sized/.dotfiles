@@ -49,6 +49,7 @@ in
       input-leap
       jq
       kalker # calculator
+      kdePackages.kdenlive
       kdePackages.qt6ct
       libgcc
       libnotify
@@ -63,9 +64,7 @@ in
       nixos-generators
       nodejs_22
       ntfs3g
-      oneshot
       onlyoffice-desktopeditors
-      openshot-qt
       openssl
       pavucontrol
       playerctl
