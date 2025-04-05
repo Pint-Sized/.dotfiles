@@ -19,14 +19,14 @@
       };
 
       decoration = {
-        rounding = 4;
+        rounding = 10;
         active_opacity = 0.8;
         inactive_opacity = 0.8;
         fullscreen_opacity = 1;
         blur = {
           enabled = true;
           size = 5;
-          passes = 3;
+          passes = 2;
           noise = 0;
           new_optimizations = true;
           contrast = 1.17;
