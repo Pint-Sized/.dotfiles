@@ -8,7 +8,6 @@
 {
   stylix = {
     enable = true;
-    #image = ../../wallpapers/evening-sky.png;
     cursor = {
       name = userSettings.cursorName;
       package = pkgs.bibata-cursors;
@@ -42,6 +41,7 @@
       firefox.profileNames = [
         "8b2kzims.default"
       ];
+      zathura.enable = false;
     };
   };
   home.file.".dotfiles/themes/colours".text = with config.lib.stylix.colors; ''
