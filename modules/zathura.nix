@@ -25,7 +25,8 @@
       completion-fg = "#${base0D-hex}";
       completion-highlight-fg = "#${base07-hex}";
       completion-highlight-bg = "#${base0D-hex}";
-      recolor-lightcolor = "#${base00-hex}";
+      recolor = true;
+      recolor-lightcolor = "#${base01-hex}";
       recolor-darkcolor = "#${base06-hex}";
     };
   };
