@@ -30,7 +30,19 @@
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
     hypr-darkwindow = {
-      url = "github:alexhulbert/Hyprchroma";
+      url = "github:skissue/hyprchroma";
+      inputs.hyprland.follows = "hyprland";
+    };
+    hyprland-plugins = {
+      url = "github:hyprwm/hyprland-plugins";
+      inputs.hyprland.follows = "hyprland";
+    };
+    hyprfocus = {
+      url = "github:pyt0xic/hyprfocus";
+      inputs.hyprland.follows = "hyprland";
+    };
+    hypr-dynamic-cursors = {
+      url = "github:VirtCode/hypr-dynamic-cursors";
       inputs.hyprland.follows = "hyprland";
     };
   };
@@ -48,6 +60,9 @@
       nixcord,
       hypr-darkwindow,
       hyprland,
+      hyprland-plugins,
+      hyprfocus,
+      hypr-dynamic-cursors,
       ...
     }:
     let
@@ -114,6 +129,9 @@
             inherit userSettings;
             inherit hypr-darkwindow;
             inherit hyprland;
+            inherit hyprland-plugins;
+            inherit hyprfocus;
+            inherit hypr-dynamic-cursors;
           };
         };
         laptop = lib.nixosSystem {
@@ -133,6 +151,9 @@
             inherit userSettings;
             inherit hypr-darkwindow;
             inherit hyprland;
+            inherit hyprland-plugins;
+            inherit hyprfocus;
+            inherit hypr-dynamic-cursors;
           };
         };
       };
@@ -155,6 +176,9 @@
             inherit userSettings;
             inherit hypr-darkwindow;
             inherit hyprland;
+            inherit hyprland-plugins;
+            inherit hyprfocus;
+            inherit hypr-dynamic-cursors;
           };
         };
       };
