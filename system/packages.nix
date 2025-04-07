@@ -51,6 +51,7 @@ in
       kalker # calculator
       kdePackages.kdenlive
       kdePackages.qt6ct
+      librewolf
       libgcc
       libnotify
       libreoffice-qt6-fresh
@@ -122,7 +123,6 @@ in
         hyprpicker
         hyprshot
         kitty
-        librewolf
         lua
         markdown-oxide
         neovim-unwrapped

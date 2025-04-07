@@ -1,10 +1,10 @@
-{ pkgs-unstable, config, ... }:
+{ pkgs, config, ... }:
 
 {
   programs = {
     librewolf = {
       enable = true;
-      package = pkgs-unstable.librewolf;
+      package = pkgs.librewolf;
       profiles."8b2kzims.default" = {
         #profiles."default" = {
         settings = {
@@ -17,8 +17,8 @@
     };
     firefox = {
       enable = true;
-      package = pkgs-unstable.librewolf;
-      nativeMessagingHosts = [ pkgs-unstable.firefoxpwa ];
+      package = pkgs.librewolf;
+      nativeMessagingHosts = [ pkgs.firefoxpwa ];
       profiles."8b2kzims.default" = {
         settings = {
           "toolkit.legacyUserProfileCustomizations.stylesheets" = true;

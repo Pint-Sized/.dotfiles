@@ -53,6 +53,7 @@
     plymouth = {
       enable = true;
     };
+    kernelPackages = pkgs.linuxPackages_latest;
     loader = {
       timeout = 3;
       systemd-boot.enable = false;
