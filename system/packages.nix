@@ -109,6 +109,22 @@ in
       zathura
       zip
       zlib
+
+      #testing
+      discordo
+      chess-tui
+      rpg-cli
+      doctoc
+      glow
+      mdcat
+      mdp
+      haskellPackages.patat
+      presenterm
+      sc-im
+      slides
+      wiki-tui
+      drawing
+      tuifimanager
     ])
 
     ++
