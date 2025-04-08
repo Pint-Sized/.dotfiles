@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, userSettings, ... }:
 
 {
   # ------- KITTY ------- #
@@ -13,7 +13,7 @@
   home.file = {
     ".config/kitty/kitty-cava.conf" = {
       text = with config.lib.stylix.colors; ''
-        font_family 0xProto Nerd Font Mono
+        font_family ${userSettings.fontMono}
         font_size 10
         shell_integration no-rc
         background_opacity 0

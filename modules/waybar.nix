@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, userSettings, ... }:
 
 {
   programs.waybar = {
@@ -262,7 +262,7 @@
     ];
     style = with config.lib.stylix.colors; ''
         * {
-            font-family: "0xProto Nerd Font";
+            font-family: "${userSettings.fontMono}";
             font-size: 13px;
             min-height: 0;
             padding: 0;

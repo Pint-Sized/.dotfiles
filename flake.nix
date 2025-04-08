@@ -79,8 +79,8 @@
         email = "fionnbennett06@gmail.com";
         theme = "dracula";
         fontPkg = "pkgs.nerdfonts";
-        fontSerif = "0xProto Nerd Font";
-        fontMono = "0xProto Nerd Font Mono";
+        fontSerif = "MartianMono NF";
+        fontMono = "MartianMono NF";
         cursorPkg = "pkgs.bibata-cursors";
         cursorName = "Bibata-Modern-Classic";
       };

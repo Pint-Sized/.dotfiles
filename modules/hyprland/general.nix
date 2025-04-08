@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, userSettings, ... }:
 
 {
   wayland.windowManager.hyprland = with config.lib.stylix.colors; {
@@ -68,7 +68,7 @@
       misc = {
         force_default_wallpaper = -1;
         disable_hyprland_logo = true;
-        font_family = "0xProto Nerd Font";
+        font_family = "${userSettings.fontSerif}";
         animate_manual_resizes = true;
         close_special_on_empty = true;
         new_window_takes_over_fullscreen = 2;

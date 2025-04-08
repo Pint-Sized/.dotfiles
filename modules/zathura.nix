@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, userSettings, ... }:
 
 {
   # ------ ZATHURA ---- #
@@ -6,7 +6,7 @@
     enable = true;
     options = {
       guioptions = "none";
-      font = "0xProto Nerd Font";
+      font = "${userSettings.fontSerif}";
       default-bg = "#${base00-hex}";
       default-fg = "#${base01-hex}";
       statusbar-fg = "#${base04-hex}";
