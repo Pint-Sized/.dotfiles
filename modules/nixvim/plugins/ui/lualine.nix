@@ -15,11 +15,15 @@
           ];
         };
       };
-      sections = {
+      section = {
         lualine_a = [
           {
             __unkeyed-1 = "mode";
-            icon = "";
+            icon = "";
+            separator = {
+              left = " ";
+              right = "";
+            };
           }
         ];
         lualine_b = [

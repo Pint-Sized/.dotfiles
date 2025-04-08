@@ -14,6 +14,7 @@
 
     opts = {
       number = true;
+      laststatus = 0;
       relativenumber = false;
       clipboard = "unnamedplus";
       tabstop = 2;

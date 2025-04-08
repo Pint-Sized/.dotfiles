@@ -15,5 +15,7 @@
     "swayosd-server &"
     "foot cava"
     "hypridle"
+    "pkill waybar"
+    "waybar &"
   ];
 }
