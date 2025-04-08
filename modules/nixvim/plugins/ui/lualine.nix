@@ -15,7 +15,7 @@
           ];
         };
       };
-      section = {
+      sections = {
         lualine_a = [
           {
             __unkeyed-1 = "mode";
@@ -27,33 +27,6 @@
           }
         ];
         lualine_b = [
-          {
-            __unkeyed-1 = "branch";
-            icon = "";
-          }
-          {
-            __unkeyed-1 = "diff";
-            symbols = {
-              added = " ";
-              modified = " ";
-              removed = " ";
-            };
-          }
-        ];
-        lualine_c = [
-          {
-            __unkeyed-1 = "diagnostics";
-            sources = [ "nvim_lsp" ];
-            symbols = {
-              error = " ";
-              warn = " ";
-              info = " ";
-              hint = "󰝶 ";
-            };
-          }
-          { __unkeyed-1 = "navic"; }
-        ];
-        lualine_x = [
           {
             __unkeyed-1 = "filetype";
             icon_only = true;
@@ -67,23 +40,36 @@
             __unkeyed-1 = "filename";
             path = 1;
           }
+        ];
+        lualine_x = [
           {
-            __unkeyed-1.__raw = ''
-              function()
-                local icon = " "
-                local status = require("copilot.api").status.data
-                return icon .. (status.message or " ")
-              end,
-
-              cond = function()
-               local ok, clients = pcall(vim.lsp.get_clients, { name = "copilot", bufnr = 0 })
-               return ok and #clients > 0
-              end,
-            '';
+            __unkeyed-1 = "branch";
+            icon = "";
+          }
+          {
+            __unkeyed-1 = "diff";
+            symbols = {
+              added = " ";
+              modified = " ";
+              removed = " ";
+            };
           }
         ];
-        lualine_y = [ { __unkeyed-1 = "progress"; } ];
-        lualine_z = [ { __unkeyed-1 = "location"; } ];
+        lualine_y = [
+          {
+            __unkeyed-1 = "progress";
+            separator.left = " ";
+          }
+        ];
+        lualine_z = [
+          {
+            __unkeyed-1 = "location";
+            separator = {
+              left = " ";
+              right = "";
+            };
+          }
+        ];
       };
     };
   };

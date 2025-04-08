@@ -12,7 +12,7 @@
     plugins = [
       hyprland-plugins.packages.${pkgs.system}.borders-plus-plus
       hyprland-plugins.packages.${pkgs.system}.hyprwinwrap
-      hyprfocus.packages.${pkgs.system}.hyprfocus
+      #hyprfocus.packages.${pkgs.system}.hyprfocus
       #hypr-dynamic-cursors.packages.${pkgs.system}.hypr-dynamic-cursors
     ];
     settings.plugin = {
