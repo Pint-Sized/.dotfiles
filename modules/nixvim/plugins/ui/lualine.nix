@@ -15,46 +15,26 @@
           ];
         };
       };
-      sections = {
+      tabline = {
         lualine_a = [
           {
             __unkeyed-1 = "mode";
-            icon = "";
             separator = {
-              left = " ";
-              right = "";
+              left = " ";
+              right = "";
             };
           }
         ];
-        lualine_b = [
-          {
-            __unkeyed-1 = "filetype";
-            icon_only = true;
-            separator = "";
-            padding = {
-              left = 1;
-              right = 0;
-            };
-          }
+        lualine_b = [ { } ];
+        lualine_c = [
           {
             __unkeyed-1 = "filename";
             path = 1;
-          }
-        ];
-        lualine_x = [
-          {
-            __unkeyed-1 = "branch";
-            icon = "";
-          }
-          {
-            __unkeyed-1 = "diff";
-            symbols = {
-              added = " ";
-              modified = " ";
-              removed = " ";
+            separator = {
             };
           }
         ];
+        lualine_x = [ { } ];
         lualine_y = [
           {
             __unkeyed-1 = "progress";

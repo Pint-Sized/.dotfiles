@@ -19,7 +19,7 @@
       clipboard = "unnamedplus";
       tabstop = 2;
       softtabstop = 2;
-      showtabline = 0;
+      showtabline = 1;
       expandtab = true;
       smartindent = true;
       shiftwidth = 2;

@@ -1,5 +1,6 @@
 {
   pkgs,
+  pkgs-unstable,
   config,
   hyprland-plugins,
   hypr-dynamic-cursors,
@@ -13,6 +14,8 @@
       hyprland-plugins.packages.${pkgs.system}.borders-plus-plus
       hyprland-plugins.packages.${pkgs.system}.hyprwinwrap
       #hyprfocus.packages.${pkgs.system}.hyprfocus
+      #pkgs.hyprlandPlugins.hyprfocus
+      pkgs-unstable.hyprlandPlugins.hypr-dynamic-cursors
       #hypr-dynamic-cursors.packages.${pkgs.system}.hypr-dynamic-cursors
     ];
     settings.plugin = {
