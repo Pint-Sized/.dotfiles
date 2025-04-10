@@ -1,37 +1,8 @@
+{ config, ... }:
+
 {
-  programs.nixvim.plugins.lualine = {
+  programs.nixvim.plugins.lualine = with config.lib.stylix.colors; {
     enable = true;
-    mode_map = {
-      n = "N";
-      no = "O·P";
-      nov = "O·P";
-      noV = "O·P";
-      niI = "N·I";
-      niR = "N·R";
-      niV = "N";
-      nt = "N·T";
-      v = "V";
-      vs = "V";
-      V = "V·L";
-      Vs = "V·L";
-      s = "S";
-      S = "S·L";
-      i = "I";
-      ic = "I·C";
-      ix = "I·X";
-      R = "R";
-      Rc = "R·C";
-      Rx = "R·X";
-      Rv = "V·R";
-      Rvc = "RVC";
-      Rvx = "RVX";
-      c = "C";
-      cv = "EX";
-      ce = "EX";
-      r = "R";
-      rm = "M";
-      t = "T";
-    };
     settings = {
       options = {
         globalstatus = true;
@@ -50,41 +21,48 @@
         lualine_a = [
           {
             __unkeyed-1.__raw = ''
-              "mode",
-              icons_enabled = true,
+              'mode',
               separator = {
                 left = " ",
-                right = "",
               },
-              fmt = function()
-                return mode_map[vim.api.nvim_get_mode().mode] or vim.api.nvim_get_mode().mode
+              fmt = function(str) 
+                return str:sub(1,1) 
               end
             '';
           }
         ];
-        lualine_b = [ { } ];
-        lualine_c = [
+        lualine_b = [
           {
             __unkeyed-1 = "filename";
-            path = 1;
-            separator = {
+            color = {
+              fg = "#${base05-hex}";
             };
           }
         ];
-        lualine_x = [ { } ];
-        lualine_y = [
+        lualine_c = [ { } ];
+        lualine_x = [
           {
-            __unkeyed-1 = "progress";
-            separator.left = " ";
+            __unkeyed-1 = "filetype";
+            separator.left = "";
+            colored = false;
+            icon_only = true;
+            icon = {
+              align = "center";
+            };
+            color = {
+              fg = "#${base05-hex}";
+              bg = "#${base08-hex}";
+            };
+          }
+          {
+            __unkeyed-1 = "filetype";
           }
         ];
+        lualine_y = [ { } ];
         lualine_z = [
           {
             __unkeyed-1 = "location";
-            separator = {
-              left = " ";
-              right = "";
-            };
+            separator.right = " ";
           }
         ];
       };
