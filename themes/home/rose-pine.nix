@@ -7,10 +7,6 @@
   };
 
   programs = {
-    nixvim.colorschemes.base16 = {
-      enable = true;
-      colorscheme = "rose-pine";
-    };
     fish.functions = {
       fish_greeting = "pokeget purrloin --hide-name | fastfetch --file-raw -";
     };

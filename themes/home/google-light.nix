@@ -7,10 +7,6 @@
   };
 
   programs = {
-    nixvim.colorschemes.base16 = {
-      enable = true;
-      colorscheme = "google-light";
-    };
     fish.functions = {
       fish_greeting = "pokeget minccino --hide-name | fastfetch --file-raw -";
     };

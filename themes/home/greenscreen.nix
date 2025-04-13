@@ -7,10 +7,6 @@
   };
 
   programs = {
-    nixvim.colorschemes.base16 = {
-      enable = true;
-      colorscheme = "greenscreen";
-    };
     fish.functions = {
       fish_greeting = "pokeget axew --hide-name | fastfetch --file-raw -";
     };

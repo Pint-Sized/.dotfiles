@@ -7,10 +7,6 @@
   };
 
   programs = {
-    nixvim.colorschemes.base16 = {
-      enable = true;
-      colorscheme = "spaceduck";
-    };
     fish.functions = {
       fish_greeting = "pokeget ducklett --hide-name | fastfetch --file-raw -";
     };

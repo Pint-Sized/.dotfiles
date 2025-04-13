@@ -61,6 +61,7 @@ in
       mpv
       nautilus
       ncurses
+      neovide
       nix-du
       nixos-generators
       nodejs_22

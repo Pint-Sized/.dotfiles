@@ -7,10 +7,6 @@
   };
 
   programs = {
-    nixvim.colorschemes.base16 = {
-      enable = true;
-      colorscheme = "xcode-dusk";
-    };
     fish.functions = {
       fish_greeting = "pokeget shuppet --hide-name | fastfetch --file-raw -";
     };

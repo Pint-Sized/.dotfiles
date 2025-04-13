@@ -7,10 +7,6 @@
   };
 
   programs = {
-    nixvim.colorschemes.base16 = {
-      enable = true;
-      colorscheme = "dracula";
-    };
     fish.functions = {
       fish_greeting = "pokeget noibat --hide-name | fastfetch --file-raw -";
     };

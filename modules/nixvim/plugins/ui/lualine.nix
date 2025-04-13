@@ -5,7 +5,7 @@
     enable = true;
     settings = {
       options = {
-        globalstatus = true;
+        globalstatus = false;
         extensions = [
           "fzf"
           "neo-tree"
@@ -23,7 +23,7 @@
             __unkeyed-1.__raw = ''
               'mode',
               separator = {
-                left = " ",
+                left = "",
               },
               fmt = function(str) 
                 return str:sub(1,1) 
@@ -34,9 +34,14 @@
         lualine_b = [
           {
             __unkeyed-1 = "filename";
+            symbols = {
+              modified = "";
+              readonly = "󰷧";
+              unnamed = "[No Name]";
+              newfile = "󰎔";
+            };
             color = {
               fg = "#${base05-hex}";
-              bg = "";
             };
           }
         ];
@@ -60,15 +65,34 @@
             icon = "";
             color = {
               fg = "#${base05-hex}";
-              bg = "#${base02-hex}";
+              bg = "#${base01-hex}";
+            };
+            padding = {
+              left = 1;
+              right = 1;
             };
           }
         ];
-        lualine_y = [ { } ];
+        lualine_y = [
+          {
+            __unkeyed-1 = "filetype";
+            icon_only = true;
+            colored = false;
+            separator = {
+              left = "";
+              right = "";
+            };
+            color = {
+              bg = "#${base00-hex}";
+              fg = "#${base00-hex}";
+            };
+            padding = 0;
+          }
+        ];
         lualine_z = [
           {
             __unkeyed-1 = "progress";
-            separator.left = "  ";
+            separator.left = "";
             color = {
               fg = "#${base01-hex}";
               bg = "#${base08-hex}";
@@ -76,11 +100,25 @@
           }
           {
             __unkeyed-1 = "location";
-            separator.right = " ";
             color = {
               fg = "#${base05-hex}";
-              bg = "#${base02-hex}";
+              bg = "#${base01-hex}";
             };
+            padding = 0;
+          }
+          {
+            __unkeyed-1 = "filetype";
+            icon_only = true;
+            colored = false;
+            separator = {
+              left = "";
+              right = "";
+            };
+            color = {
+              bg = "#${base00-hex}";
+              fg = "#${base00-hex}";
+            };
+            padding = 0;
           }
         ];
       };

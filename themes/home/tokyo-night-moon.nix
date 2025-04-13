@@ -7,10 +7,6 @@
   };
 
   programs = {
-    nixvim.colorschemes.base16 = {
-      enable = true;
-      colorscheme = "tokyo-night-dark";
-    };
     fish.functions = {
       fish_greeting = "pokeget lunatone --hide-name | fastfetch --file-raw -";
     };

@@ -7,10 +7,6 @@
   };
 
   programs = {
-    nixvim.colorschemes.base16 = {
-      enable = true;
-      colorscheme = "nord";
-    };
     fish.functions = {
       fish_greeting = "pokeget oddish --hide-name | fastfetch --file-raw -";
     };

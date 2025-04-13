@@ -7,10 +7,6 @@
   };
 
   programs = {
-    nixvim.colorschemes.base16 = {
-      enable = true;
-      colorscheme = "gruvbox-material-dark-soft";
-    };
     fish.functions = {
       fish_greeting = "pokeget roselia --hide-name | fastfetch --file-raw -";
     };

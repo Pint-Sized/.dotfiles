@@ -7,10 +7,6 @@
   };
 
   programs = {
-    nixvim.colorschemes.base16 = {
-      enable = true;
-      colorscheme = "3024";
-    };
     fish.functions = {
       fish_greeting = "pokeget pidove --hide-name | fastfetch --file-raw -";
     };
