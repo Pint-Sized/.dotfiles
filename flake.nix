@@ -19,7 +19,6 @@
     };
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix"; # allows for the declerative configuration of spicetify using a nix language wrapper
-      inputs.nixpkgs.follows = "nixpkgs";
     };
     nur = {
       url = "github:nix-community/NUR";

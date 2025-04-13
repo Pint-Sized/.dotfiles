@@ -24,11 +24,17 @@
       "$mainMod SHIFT, down, swapwindow, d"
 
       "$mainMod, 1, workspace, 1"
+      "bind = $mainMod, 1 , exec, hyprctl monitors -j | jq -r '.[] | select(.focused == true) | .specialWorkspace.name' | sed 's/special://' | xargs -I [] hyprctl dispatch togglespecialworkspace []"
       "$mainMod, 2, workspace, 2"
+      "bind = $mainMod, 2 , exec, hyprctl monitors -j | jq -r '.[] | select(.focused == true) | .specialWorkspace.name' | sed 's/special://' | xargs -I [] hyprctl dispatch togglespecialworkspace []"
       "$mainMod, 3, workspace, 3"
+      "bind = $mainMod, 3 , exec, hyprctl monitors -j | jq -r '.[] | select(.focused == true) | .specialWorkspace.name' | sed 's/special://' | xargs -I [] hyprctl dispatch togglespecialworkspace []"
       "$mainMod, 4, workspace, 4"
+      "bind = $mainMod, 4 , exec, hyprctl monitors -j | jq -r '.[] | select(.focused == true) | .specialWorkspace.name' | sed 's/special://' | xargs -I [] hyprctl dispatch togglespecialworkspace []"
       "$mainMod, 5, workspace, 5"
+      "bind = $mainMod, 5 , exec, hyprctl monitors -j | jq -r '.[] | select(.focused == true) | .specialWorkspace.name' | sed 's/special://' | xargs -I [] hyprctl dispatch togglespecialworkspace []"
       "$mainMod, 6, workspace, 6"
+      "bind = $mainMod, 6 , exec, hyprctl monitors -j | jq -r '.[] | select(.focused == true) | .specialWorkspace.name' | sed 's/special://' | xargs -I [] hyprctl dispatch togglespecialworkspace []"
 
       "$mainMod, 1, exec, pypr hide '*'"
       "$mainMod, 2, exec, pypr hide '*'"
