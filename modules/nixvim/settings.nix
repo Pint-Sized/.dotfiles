@@ -12,6 +12,7 @@
       {
         command = "set laststatus=0";
         event = [
+          "VimEnter"
           "BufEnter"
           "BufWinEnter"
         ];
