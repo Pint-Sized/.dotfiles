@@ -5,7 +5,6 @@
     (with pkgs; [
       cartridges
       liquidctl
-      openrazer-daemon
       polychromatic
       protonup
       openrgb-with-all-plugins

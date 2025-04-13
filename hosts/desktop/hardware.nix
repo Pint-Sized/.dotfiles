@@ -6,10 +6,7 @@
       modesetting.enable = true;
       open = false;
       nvidiaSettings = true;
-      package = config.boot.kernelPackages.nvidiaPackages.beta;
-    };
-    openrazer = {
-      enable = true;
+      package = config.boot.kernelPackages.nvidiaPackages.stable;
     };
   };
 }
