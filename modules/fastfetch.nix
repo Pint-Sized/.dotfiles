@@ -6,55 +6,54 @@
         type = "small";
       };
       display = {
-        separator = "->   ";
+        separator = "";
         color = "cyan";
       };
       modules = [
-        { type = "title"; }
-        "separator"
+        "break"
         {
-          key = " Distro        ";
+          key = "os     ";
           type = "os";
         }
         {
-          key = " Host          ";
-          type = "host";
+          key = "ker    ";
+          type = "kernel";
         }
         {
-          key = " WM            ";
+          key = "wm     ";
           type = "wm";
         }
         {
-          key = " Locale        ";
-          type = "locale";
-        }
-        {
-          key = " Terminal      ";
-          type = "terminal";
-        }
-        {
-          key = "󰈺 Shell         ";
+          key = "sh     ";
           type = "shell";
         }
         {
-          key = " Stylix Theme  ";
+          key = "cpu    ";
+          type = "cpu";
+        }
+        {
+          key = "gpu    ";
+          type = "gpu";
+        }
+        {
+          key = "ram    ";
+          type = "memory";
+        }
+        {
+          key = "theme  ";
           type = "command";
           text = "~/.config/fastfetch/theme";
         }
         {
-          key = "󰂎 Battery       ";
+          key = "bat    ";
           type = "battery";
-        }
-        {
-          key = " Media         ";
-          type = "media";
         }
 
         "break"
         {
           type = "colors";
           paddingLeft = 6;
-          symbol = "circle";
+          symbol = "square";
         }
       ];
 
