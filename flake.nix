@@ -76,10 +76,10 @@
         username = "fionnbennett";
         name = "Fionn Bennett";
         email = "fionnbennett06@gmail.com";
-        theme = "dracula";
+        theme = "catppuccin-mocha";
         fontPkg = "pkgs.nerdfonts";
-        fontSerif = "MartianMono NF";
-        fontMono = "MartianMono NF";
+        fontSerif = "0xProto Nerd Font";
+        fontMono = "0xProto Nerd Font Mono";
         cursorPkg = "pkgs.bibata-cursors";
         cursorName = "Bibata-Modern-Classic";
       };
