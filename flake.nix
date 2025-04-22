@@ -5,7 +5,7 @@
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable"; # unstablepackages
     nixpkgs-master.url = "github:/nixos/nixpkgs/master"; # bleeding-edge packages
     home-manager = {
-      url = "github:nix-community/home-manager/master"; # home-manager, manages app configs and files in the home directory
+      url = "github:nix-community/home-manager/release-24.11"; # home-manager, manages app configs and files in the home directory
       inputs.nixpkgs.follows = "nixpkgs"; # has home-manager only use package versions from the nix stable packages repo
     };
     hyprland.url = "github:hyprwm/Hyprland?ref=v0.48.1";
@@ -15,7 +15,7 @@
     };
     nix-flatpak.url = "github:gmodena/nix-flatpak"; # allows for the declerative installation and configuration  of flatpaks (alternative app packaging method)
     stylix = {
-      url = "github:danth/stylix/master"; # allows for the stylix of all enabled applications using a base16 colourscheme
+      url = "github:danth/stylix/release-24.11"; # allows for the stylix of all enabled applications using a base16 colourscheme
     };
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix"; # allows for the declerative configuration of spicetify using a nix language wrapper
@@ -76,10 +76,10 @@
         username = "fionnbennett";
         name = "Fionn Bennett";
         email = "fionnbennett06@gmail.com";
-        theme = "catppuccin-mocha";
+        theme = "dracula";
         fontPkg = "pkgs.nerdfonts";
-        fontSerif = "0xProto Nerd Font";
-        fontMono = "0xProto Nerd Font Mono";
+        fontSerif = "CaskaydiaCove Nerd Font";
+        fontMono = "CaskaydiaCove Nerd Font";
         cursorPkg = "pkgs.bibata-cursors";
         cursorName = "Bibata-Modern-Classic";
       };

@@ -126,6 +126,7 @@ in
       wiki-tui
       drawing
       tuifimanager
+      google-fonts
     ])
 
     ++
@@ -195,6 +196,7 @@ in
     "in.srev.guiscrcpy"
     "eu.nokun.MirrorHall"
     "io.github.limo_app.limo"
+    "io.github.ungoogled_software.ungoogled_chromium"
   ];
 
   programs = {

@@ -58,7 +58,6 @@
           type = "battery";
           keyColor = "38;2;${base07-rgb-r};${base07-rgb-g};${base07-rgb-b}";
         }
-
         "break"
         {
           type = "colors";

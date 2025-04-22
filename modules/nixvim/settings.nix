@@ -21,6 +21,8 @@
 
     opts = {
       number = false;
+      textwidth = 0;
+      wrapmargin = 0;
       laststatus = 0;
       relativenumber = false;
       clipboard = "unnamedplus";
