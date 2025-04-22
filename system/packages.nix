@@ -197,6 +197,7 @@ in
     "eu.nokun.MirrorHall"
     "io.github.limo_app.limo"
     "io.github.ungoogled_software.ungoogled_chromium"
+    "com.valvesoftware.Steam"
   ];
 
   programs = {

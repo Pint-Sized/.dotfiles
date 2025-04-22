@@ -11,7 +11,6 @@
       cartridges
     ])
     ++ (with pkgs-unstable; [
-      adwsteamgtk
       lm_sensors
       vintagestory
     ]);
@@ -25,16 +24,9 @@
     coolercontrol = {
       enable = true;
     };
-    steam = {
-      enable = true;
-      gamescopeSession = {
-        enable = true;
-      };
-    };
     gamemode = {
       enable = true;
     };
-
     gamescope = {
       enable = true;
       capSysNice = true;

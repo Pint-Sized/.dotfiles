@@ -77,7 +77,7 @@
 
     # ---- STEAM ---- #
     #./modules/steam.nix
-    ./applications/steam/steam.nix
+    #./applications/steam/steam.nix
 
     # ----- SWAYOSD ----- #
     ./modules/swayosd/swayosd.nix

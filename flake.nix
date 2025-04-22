@@ -1,45 +1,59 @@
 {
-  # imported ...... into the flake, such as packages stream and other modules which can later be referenced in other code
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11"; # stable packages
-    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable"; # unstablepackages
-    nixpkgs-master.url = "github:/nixos/nixpkgs/master"; # bleeding-edge packages
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-master.url = "github:/nixos/nixpkgs/master";
+
     home-manager = {
-      url = "github:nix-community/home-manager/release-24.11"; # home-manager, manages app configs and files in the home directory
-      inputs.nixpkgs.follows = "nixpkgs"; # has home-manager only use package versions from the nix stable packages repo
+      url = "github:nix-community/home-manager/0b491b460f52e87e23eb17bbf59c6ae64b7664c1";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
-    hyprland.url = "github:hyprwm/Hyprland?ref=v0.48.1";
+
+    hyprland = {
+      url = "github:hyprwm/Hyprland?ref=v0.48.1";
+    };
+
     nixvim = {
-      url = "github:nix-community/nixvim/main"; # allows home-manager to decleratively manage neovim using a nix launguage wrapper
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
+      url = "github:nix-community/nixvim/main";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
-    nix-flatpak.url = "github:gmodena/nix-flatpak"; # allows for the declerative installation and configuration  of flatpaks (alternative app packaging method)
+
+    nix-flatpak.url = "github:gmodena/nix-flatpak";
+
     stylix = {
-      url = "github:danth/stylix/release-24.11"; # allows for the stylix of all enabled applications using a base16 colourscheme
+      url = "github:danth/stylix/master";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
+
     spicetify-nix = {
-      url = "github:Gerg-L/spicetify-nix"; # allows for the declerative configuration of spicetify using a nix language wrapper
+      url = "github:Gerg-L/spicetify-nix";
     };
+
     nur = {
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
     nixcord = {
       url = "github:kaylorben/nixcord";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
+
     hypr-darkwindow = {
       url = "github:skissue/hyprchroma";
       inputs.hyprland.follows = "hyprland";
     };
+
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
     };
+
     hyprfocus = {
       url = "github:pyt0xic/hyprfocus";
       inputs.hyprland.follows = "hyprland";
     };
+
     hypr-dynamic-cursors = {
       url = "github:VirtCode/hypr-dynamic-cursors";
       inputs.hyprland.follows = "hyprland";
