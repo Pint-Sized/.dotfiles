@@ -8,6 +8,7 @@
 {
   stylix = {
     enable = true;
+    image = ./black.jpg;
     cursor = {
       name = userSettings.cursorName;
       package = pkgs.bibata-cursors;

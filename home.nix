@@ -1,7 +1,11 @@
-{ userSettings, ... }:
+{
+  userSettings,
+  inputs,
+  pkgs,
+  ...
+}:
 
 {
-  # imports home-manager modules
   imports = [
     # ------ AERC ------ #
     ./modules/aerc.nix
@@ -58,7 +62,7 @@
     ./applications/microsoft-office/office.nix
 
     # ----- MPV ----- #
-    #./modules/mpv.nix
+    ./modules/mpv.nix
 
     # -------- NIXCORD ------- #
     #./modules/nixcord.nix
@@ -77,7 +81,6 @@
 
     # ---- STEAM ---- #
     #./modules/steam.nix
-    #./applications/steam/steam.nix
 
     # ----- SWAYOSD ----- #
     ./modules/swayosd/swayosd.nix
@@ -96,7 +99,7 @@
     ./modules/virtualisation.nix
 
     # ----- VSCODIUM ----- #
-    #./modules/vscodium.nix
+    ./modules/vscodium.nix
 
     # ---------- WAYBAR ----------- #
     ./modules/waybar.nix
@@ -119,4 +122,11 @@
     enableNixpkgsReleaseCheck = false;
     stateVersion = "24.05"; # do not change without consulting manual
   };
+  #xdg.portal = {
+  #enable = true;
+  #xdgOpenUsePortal = true;
+  #extraPortals = [
+  #inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland
+  #];
+  #};
 }

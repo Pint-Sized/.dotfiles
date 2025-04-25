@@ -5,28 +5,31 @@
     nixpkgs-master.url = "github:/nixos/nixpkgs/master";
 
     home-manager = {
-      url = "github:nix-community/home-manager/master";
+      url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprland = {
-      url = "github:hyprwm/Hyprland?ref=v0.48.1";
-    };
+    #hyprland = {
+    #url = "github:hyprwm/Hyprland?ref=v0.45.2";
+    #};
 
     nixvim = {
       url = "github:nix-community/nixvim/main";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nix-flatpak.url = "github:gmodena/nix-flatpak";
+    nix-flatpak = {
+      url = "github:gmodena/nix-flatpak";
+    };
 
     stylix = {
-      url = "github:danth/stylix/master";
+      url = "github:danth/stylix/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     nur = {
@@ -36,27 +39,32 @@
 
     nixcord = {
       url = "github:kaylorben/nixcord";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     hypr-darkwindow = {
       url = "github:skissue/hyprchroma";
-      inputs.hyprland.follows = "hyprland";
+      #inputs.hyprland.follows = "hyprland";
     };
 
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
-      inputs.hyprland.follows = "hyprland";
+      #inputs.hyprland.follows = "hyprland";
     };
 
     hyprfocus = {
       url = "github:pyt0xic/hyprfocus";
-      inputs.hyprland.follows = "hyprland";
+      #inputs.hyprland.follows = "hyprland";
     };
 
     hypr-dynamic-cursors = {
       url = "github:VirtCode/hypr-dynamic-cursors";
-      inputs.hyprland.follows = "hyprland";
+      #inputs.hyprland.follows = "hyprland";
+    };
+
+    pyprland = {
+      url = "github:hyprland-community/pyprland";
+      #inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
@@ -72,10 +80,11 @@
       spicetify-nix,
       nixcord,
       hypr-darkwindow,
-      hyprland,
+      #hyprland,
       hyprland-plugins,
       hyprfocus,
       hypr-dynamic-cursors,
+      pyprland,
       ...
     }:
     let
@@ -141,10 +150,11 @@
             inherit systemSettings;
             inherit userSettings;
             inherit hypr-darkwindow;
-            inherit hyprland;
+            #inherit hyprland;
             inherit hyprland-plugins;
             inherit hyprfocus;
             inherit hypr-dynamic-cursors;
+            inherit pyprland;
           };
         };
         laptop = lib.nixosSystem {
@@ -163,10 +173,11 @@
             inherit systemSettings;
             inherit userSettings;
             inherit hypr-darkwindow;
-            inherit hyprland;
+            #inherit hyprland;
             inherit hyprland-plugins;
             inherit hyprfocus;
             inherit hypr-dynamic-cursors;
+            inherit pyprland;
           };
         };
       };
@@ -188,7 +199,7 @@
             inherit systemSettings;
             inherit userSettings;
             inherit hypr-darkwindow;
-            inherit hyprland;
+            #inherit hyprland;
             inherit hyprland-plugins;
             inherit hyprfocus;
             inherit hypr-dynamic-cursors;

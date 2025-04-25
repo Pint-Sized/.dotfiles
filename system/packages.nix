@@ -3,11 +3,13 @@
   inputs,
   pkgs-unstable,
   pkgs-master,
+  systemSettings,
+  pyprland,
   ...
 }:
-let
-  pkgs-hyprland = inputs.hyprland.inputs.nixpkgs.legacyPackages.${pkgs.stdenv.hostPlatform.system};
-in
+#let
+#pkgs-hyprland = inputs.hyprland.inputs.nixpkgs.legacyPackages.${pkgs.stdenv.hostPlatform.system};
+#in
 {
   # -------- STABLE ------- #
   environment.systemPackages =
@@ -71,7 +73,6 @@ in
       pavucontrol
       playerctl
       pokeget-rs
-      pyprland
       python
       python3
       python312
@@ -187,6 +188,12 @@ in
         sponge
       ]);
 
+  #++
+
+  #(with pyprland.packages."${systemSettings.system}"; [
+  #pyprland
+  #]);
+
   services.flatpak.packages = [
     "io.github.giantpinkrobots.flatsweep"
     "com.usebottles.bottles"
@@ -203,8 +210,8 @@ in
   programs = {
     hyprland = {
       enable = true;
-      package = inputs.hyprland.packages.${pkgs.system}.hyprland;
-      portalPackage = pkgs-hyprland.xdg-desktop-portal-hyprland;
+      #package = inputs.hyprland.packages.${pkgs.system}.hyprland;
+      #portalPackage = pkgs-hyprland.xdg-desktop-portal-hyprland;
       xwayland.enable = true;
     };
 
