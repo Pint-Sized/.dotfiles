@@ -9,9 +9,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    #hyprland = {
-    #url = "github:hyprwm/Hyprland?ref=v0.45.2";
-    #};
+    hyprland = {
+      url = "github:hyprwm/Hyprland?ref=v0.48.1";
+    };
 
     nixvim = {
       url = "github:nix-community/nixvim/main";
@@ -42,29 +42,19 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hypr-darkwindow = {
-      url = "github:skissue/hyprchroma";
-      #inputs.hyprland.follows = "hyprland";
-    };
-
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
-      #inputs.hyprland.follows = "hyprland";
-    };
-
-    hyprfocus = {
-      url = "github:pyt0xic/hyprfocus";
-      #inputs.hyprland.follows = "hyprland";
+      inputs.hyprland.follows = "hyprland";
     };
 
     hypr-dynamic-cursors = {
       url = "github:VirtCode/hypr-dynamic-cursors";
-      #inputs.hyprland.follows = "hyprland";
+      inputs.hyprland.follows = "hyprland";
     };
 
     pyprland = {
       url = "github:hyprland-community/pyprland";
-      #inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
@@ -79,10 +69,8 @@
       stylix,
       spicetify-nix,
       nixcord,
-      hypr-darkwindow,
-      #hyprland,
+      hyprland,
       hyprland-plugins,
-      hyprfocus,
       hypr-dynamic-cursors,
       pyprland,
       ...
@@ -149,10 +137,8 @@
             inherit pkgs-master;
             inherit systemSettings;
             inherit userSettings;
-            inherit hypr-darkwindow;
-            #inherit hyprland;
+            inherit hyprland;
             inherit hyprland-plugins;
-            inherit hyprfocus;
             inherit hypr-dynamic-cursors;
             inherit pyprland;
           };
@@ -172,10 +158,8 @@
             inherit pkgs-master;
             inherit systemSettings;
             inherit userSettings;
-            inherit hypr-darkwindow;
-            #inherit hyprland;
+            inherit hyprland;
             inherit hyprland-plugins;
-            inherit hyprfocus;
             inherit hypr-dynamic-cursors;
             inherit pyprland;
           };
@@ -198,10 +182,8 @@
             inherit pkgs-master;
             inherit systemSettings;
             inherit userSettings;
-            inherit hypr-darkwindow;
-            #inherit hyprland;
+            inherit hyprland;
             inherit hyprland-plugins;
-            inherit hyprfocus;
             inherit hypr-dynamic-cursors;
           };
         };
