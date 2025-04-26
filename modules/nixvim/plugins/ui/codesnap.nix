@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, userSettings, ... }:
 
 {
   programs.nixvim.plugins.codesnap = with config.lib.stylix.colors; {
@@ -10,7 +10,6 @@
       has_breadcrumbs = false;
       has_line_number = false;
       mac_window_bar = true;
-      save_path = "~/Images/Code-Snippets";
       title = "CodeSnap.nvim";
       watermark = "";
     };
