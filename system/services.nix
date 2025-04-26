@@ -1,5 +1,11 @@
 {
   services = {
+    
+    libinput = {
+      mouse = {
+        accelProfile = "flat";
+      };
+    };
 
     xserver = {
       enable = true;
@@ -12,13 +18,10 @@
           '';
         };
       };
-      libinput = {
-        mouse = {
-          accelProfile = "flat";
-        };
+      xkb = {
+        variant = "";
+        layout = "us";
       };
-      layout = "us";
-      xkbVariant = "";
     };
 
     udisks2 = {
@@ -45,6 +48,7 @@
             filesystems = [
               "/usr/share/icons:ro"
               "~/.icons:ro"
+              "~/.themes:ro"
             ];
           };
         };

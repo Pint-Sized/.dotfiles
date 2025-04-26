@@ -186,13 +186,13 @@
         done
         puffer
         sponge
+      ])
+
+    ++
+
+      (with pyprland.packages."${systemSettings.system}"; [
+        pyprland
       ]);
-
-  #++
-
-  #(with pyprland.packages."${systemSettings.system}"; [
-  #pyprland
-  #]);
 
   services.flatpak.packages = [
     "io.github.giantpinkrobots.flatsweep"
