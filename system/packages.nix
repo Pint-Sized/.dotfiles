@@ -20,6 +20,7 @@
       base16-schemes
       black
       btop
+      calligraphy
       cava
       ccache
       celluloid
@@ -128,6 +129,7 @@
       drawing
       tuifimanager
       google-fonts
+      charm-freeze
     ])
 
     ++
