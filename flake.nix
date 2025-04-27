@@ -14,7 +14,6 @@
     };
 
     nixvim = {
-      #url = "github:nix-community/nixvim/nixos-24.11";
       url = "github:nix-community/nixvim/main";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
@@ -43,19 +42,14 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprland-plugins = {
-      url = "github:hyprwm/hyprland-plugins";
-      inputs.hyprland.follows = "hyprland";
-    };
-
-    hypr-dynamic-cursors = {
-      url = "github:VirtCode/hypr-dynamic-cursors";
-      inputs.hyprland.follows = "hyprland";
-    };
-
     pyprland = {
       url = "github:hyprland-community/pyprland";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    hyprland-plugins = {
+      url = "github:hyprwm/hyprland-plugins?ref=v0.48.0";
+      inputs.hyprland.follows = "hyprland";
     };
   };
 
@@ -71,9 +65,8 @@
       spicetify-nix,
       nixcord,
       hyprland,
-      hyprland-plugins,
-      hypr-dynamic-cursors,
       pyprland,
+      hyprland-plugins,
       ...
     }:
     let
@@ -120,6 +113,7 @@
         };
       };
       spicePkgs = spicetify-nix.legacyPackages.${pkgs.system};
+      hyprPlugins = hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system};
     in
     {
       nixosConfigurations = {
@@ -139,8 +133,6 @@
             inherit systemSettings;
             inherit userSettings;
             inherit hyprland;
-            inherit hyprland-plugins;
-            inherit hypr-dynamic-cursors;
             inherit pyprland;
           };
         };
@@ -160,8 +152,6 @@
             inherit systemSettings;
             inherit userSettings;
             inherit hyprland;
-            inherit hyprland-plugins;
-            inherit hypr-dynamic-cursors;
             inherit pyprland;
           };
         };
@@ -184,8 +174,7 @@
             inherit systemSettings;
             inherit userSettings;
             inherit hyprland;
-            inherit hyprland-plugins;
-            inherit hypr-dynamic-cursors;
+            inherit hyprPlugins;
           };
         };
       };

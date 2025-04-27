@@ -1,17 +1,21 @@
 {
-  pkgs,
   pkgs-unstable,
   config,
+  hyprPlugins,
   ...
 }:
 
 {
   wayland.windowManager.hyprland = with config.lib.stylix.colors; {
     plugins = [
-      pkgs-unstable.hyprlandPlugins.hyprwinwrap
-      pkgs-unstable.hyprlandPlugins.borders-plus-plus
-      pkgs.hyprlandPlugins.hyprfocus
-      pkgs-unstable.hyprlandPlugins.hypr-dynamic-cursors
+      hyprPlugins.hyprwinwrap
+      hyprPlugins.borders-plus-plus
+      hyprPlugins.csgo-vulkan-fix
+      hyprPlugins.hyprbars
+      hyprPlugins.hyprexpo
+      hyprPlugins.hyprtrails
+      hyprPlugins.xtra-dispatchers
+      #pkgs-unstable.hyprlandPlugins.hypr-dynamic-cursors
     ];
     settings.plugin = {
       borders-plus-plus = {

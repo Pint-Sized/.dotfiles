@@ -1,228 +1,226 @@
 {
-  programs = {
-    nixvim = {
-      plugins.telescope = {
-        enable = true;
-        extensions = {
-          file-browser = {
-            enable = true;
+  programs.nixvim = {
+    plugins.telescope = {
+      enable = true;
+      extensions = {
+        file-browser = {
+          enable = true;
+        };
+        fzf-native = {
+          enable = true;
+        };
+      };
+      settings = {
+        defaults = {
+          layout_config = {
+            horizontal = {
+              prompt_position = "bottom";
+            };
           };
-          fzf-native = {
-            enable = true;
+          sorting_strategy = "descending";
+        };
+      };
+      keymaps = {
+        "<leader><space>" = {
+          action = "find_files";
+          options = {
+            desc = "Find project files";
           };
         };
-        settings = {
-          defaults = {
-            layout_config = {
-              horizontal = {
-                prompt_position = "bottom";
-              };
-            };
-            sorting_strategy = "descending";
+        "<leader>/" = {
+          action = "live_grep";
+          options = {
+            desc = "Grep (root dir)";
           };
         };
-        keymaps = {
-          "<leader><space>" = {
-            action = "find_files";
-            options = {
-              desc = "Find project files";
-            };
+        "<leader>:" = {
+          action = "command_history";
+          options = {
+            desc = "Command History";
           };
-          "<leader>/" = {
-            action = "live_grep";
-            options = {
-              desc = "Grep (root dir)";
-            };
+        };
+        "<leader>b" = {
+          action = "buffers";
+          options = {
+            desc = "+buffer";
           };
-          "<leader>:" = {
-            action = "command_history";
-            options = {
-              desc = "Command History";
-            };
+        };
+        "<leader>ff" = {
+          action = "find_files";
+          options = {
+            desc = "Find project files";
           };
-          "<leader>b" = {
-            action = "buffers";
-            options = {
-              desc = "+buffer";
-            };
+        };
+        "<leader>fr" = {
+          action = "live_grep";
+          options = {
+            desc = "Find text";
           };
-          "<leader>ff" = {
-            action = "find_files";
-            options = {
-              desc = "Find project files";
-            };
+        };
+        "<leader>fR" = {
+          action = "resume";
+          options = {
+            desc = "Resume";
           };
-          "<leader>fr" = {
-            action = "live_grep";
-            options = {
-              desc = "Find text";
-            };
+        };
+        "<leader>fg" = {
+          action = "oldfiles";
+          options = {
+            desc = "Recent";
           };
-          "<leader>fR" = {
-            action = "resume";
-            options = {
-              desc = "Resume";
-            };
+        };
+        "<leader>fb" = {
+          action = "buffers";
+          options = {
+            desc = "Buffers";
           };
-          "<leader>fg" = {
-            action = "oldfiles";
-            options = {
-              desc = "Recent";
-            };
+        };
+        "<C-p>" = {
+          action = "git_files";
+          options = {
+            desc = "Search git files";
           };
-          "<leader>fb" = {
-            action = "buffers";
-            options = {
-              desc = "Buffers";
-            };
+        };
+        "<leader>gc" = {
+          action = "git_commits";
+          options = {
+            desc = "Commits";
           };
-          "<C-p>" = {
-            action = "git_files";
-            options = {
-              desc = "Search git files";
-            };
+        };
+        "<leader>gs" = {
+          action = "git_status";
+          options = {
+            desc = "Status";
           };
-          "<leader>gc" = {
-            action = "git_commits";
-            options = {
-              desc = "Commits";
-            };
+        };
+        "<leader>sa" = {
+          action = "autocommands";
+          options = {
+            desc = "Auto Commands";
           };
-          "<leader>gs" = {
-            action = "git_status";
-            options = {
-              desc = "Status";
-            };
+        };
+        "<leader>sb" = {
+          action = "current_buffer_fuzzy_find";
+          options = {
+            desc = "Buffer";
           };
-          "<leader>sa" = {
-            action = "autocommands";
-            options = {
-              desc = "Auto Commands";
-            };
+        };
+        "<leader>sc" = {
+          action = "command_history";
+          options = {
+            desc = "Command History";
           };
-          "<leader>sb" = {
-            action = "current_buffer_fuzzy_find";
-            options = {
-              desc = "Buffer";
-            };
+        };
+        "<leader>sC" = {
+          action = "commands";
+          options = {
+            desc = "Commands";
           };
-          "<leader>sc" = {
-            action = "command_history";
-            options = {
-              desc = "Command History";
-            };
+        };
+        "<leader>sD" = {
+          action = "diagnostics";
+          options = {
+            desc = "Workspace diagnostics";
           };
-          "<leader>sC" = {
-            action = "commands";
-            options = {
-              desc = "Commands";
-            };
+        };
+        "<leader>sh" = {
+          action = "help_tags";
+          options = {
+            desc = "Help pages";
           };
-          "<leader>sD" = {
-            action = "diagnostics";
-            options = {
-              desc = "Workspace diagnostics";
-            };
+        };
+        "<leader>sH" = {
+          action = "highlights";
+          options = {
+            desc = "Search Highlight Groups";
           };
-          "<leader>sh" = {
-            action = "help_tags";
-            options = {
-              desc = "Help pages";
-            };
+        };
+        "<leader>sk" = {
+          action = "keymaps";
+          options = {
+            desc = "Keymaps";
           };
-          "<leader>sH" = {
-            action = "highlights";
-            options = {
-              desc = "Search Highlight Groups";
-            };
+        };
+        "<leader>sM" = {
+          action = "man_pages";
+          options = {
+            desc = "Man pages";
           };
-          "<leader>sk" = {
-            action = "keymaps";
-            options = {
-              desc = "Keymaps";
-            };
+        };
+        "<leader>sm" = {
+          action = "marks";
+          options = {
+            desc = "Jump to Mark";
           };
-          "<leader>sM" = {
-            action = "man_pages";
-            options = {
-              desc = "Man pages";
-            };
+        };
+        "<leader>so" = {
+          action = "vim_options";
+          options = {
+            desc = "Options";
           };
-          "<leader>sm" = {
-            action = "marks";
-            options = {
-              desc = "Jump to Mark";
-            };
+        };
+        "<leader>sR" = {
+          action = "resume";
+          options = {
+            desc = "Resume";
           };
-          "<leader>so" = {
-            action = "vim_options";
-            options = {
-              desc = "Options";
-            };
-          };
-          "<leader>sR" = {
-            action = "resume";
-            options = {
-              desc = "Resume";
-            };
-          };
-          "<leader>uC" = {
-            action = "colorscheme";
-            options = {
-              desc = "Colorscheme preview";
-            };
+        };
+        "<leader>uC" = {
+          action = "colorscheme";
+          options = {
+            desc = "Colorscheme preview";
           };
         };
       };
-      keymaps = [
-        {
-          mode = "n";
-          key = "<leader>sd";
-          action = "<cmd>Telescope diagnostics bufnr=0<cr>";
-          options = {
-            desc = "Document diagnostics";
-          };
-        }
-        {
-          mode = "n";
-          key = "<leader>fe";
-          action = "<cmd>Telescope file_browser<cr>";
-          options = {
-            desc = "File browser";
-          };
-        }
-        {
-          mode = "n";
-          key = "<leader>fE";
-          action = "<cmd>Telescope file_browser path=%:p:h select_buffer=true<cr>";
-          options = {
-            desc = "File browser";
-          };
-        }
-      ];
-      extraConfigLua = ''
-        require("telescope").setup{
-          pickers = {
-            colorscheme = {
-              enable_preview = true
-            }
-          }
-        }
-        require("telescope").setup{
-          pickers = {
-            find_files = {
-              hidden = true
-            }
-          }
-        }
-        require("telescope").setup{
-          defaults = {
-            vimgrep_arguments = {
-              '--hidden',
-            },  
-          }
-        }
-      '';
     };
+    keymaps = [
+      {
+        mode = "n";
+        key = "<leader>sd";
+        action = "<cmd>Telescope diagnostics bufnr=0<cr>";
+        options = {
+          desc = "Document diagnostics";
+        };
+      }
+      {
+        mode = "n";
+        key = "<leader>fe";
+        action = "<cmd>Telescope file_browser<cr>";
+        options = {
+          desc = "File browser";
+        };
+      }
+      {
+        mode = "n";
+        key = "<leader>fE";
+        action = "<cmd>Telescope file_browser path=%:p:h select_buffer=true<cr>";
+        options = {
+          desc = "File browser";
+        };
+      }
+    ];
+    extraConfigLua = ''
+      require("telescope").setup{
+        pickers = {
+          colorscheme = {
+            enable_preview = true
+          }
+        }
+      }
+      require("telescope").setup{
+        pickers = {
+          find_files = {
+            hidden = true
+          }
+        }
+      }
+      require("telescope").setup{
+        defaults = {
+          vimgrep_arguments = {
+            '--hidden',
+          },  
+        }
+      }
+    '';
   };
 }

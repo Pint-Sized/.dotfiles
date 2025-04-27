@@ -7,9 +7,7 @@
   pyprland,
   ...
 }:
-#let
-#pkgs-hyprland = inputs.hyprland.inputs.nixpkgs.legacyPackages.${pkgs.stdenv.hostPlatform.system};
-#in
+
 {
   # -------- STABLE ------- #
   environment.systemPackages =
@@ -115,6 +113,8 @@
 
       #testing
       discordo
+      gnome-font-viewer
+      glow
       chess-tui
       rpg-cli
       doctoc
@@ -192,9 +192,7 @@
 
     ++
 
-      (with pyprland.packages."${systemSettings.system}"; [
-        pyprland
-      ]);
+      [ pyprland.packages."${systemSettings.system}".pyprland ];
 
   services.flatpak.packages = [
     "io.github.giantpinkrobots.flatsweep"
@@ -212,8 +210,9 @@
   programs = {
     hyprland = {
       enable = true;
-      #package = inputs.hyprland.packages.${pkgs.system}.hyprland;
-      #portalPackage = pkgs-hyprland.xdg-desktop-portal-hyprland;
+      package = inputs.hyprland.packages.${pkgs.system}.hyprland;
+      portalPackage =
+        inputs.hyprland.inputs.nixpkgs.legacyPackages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
       xwayland.enable = true;
     };
 
