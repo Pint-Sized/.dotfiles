@@ -4,7 +4,6 @@
   pkgs-unstable,
   pkgs-master,
   systemSettings,
-  pyprland,
   ...
 }:
 
@@ -188,11 +187,7 @@
         done
         puffer
         sponge
-      ])
-
-    ++
-
-      [ pyprland.packages."${systemSettings.system}".pyprland ];
+      ]);
 
   services.flatpak.packages = [
     "io.github.giantpinkrobots.flatsweep"
@@ -210,9 +205,9 @@
   programs = {
     hyprland = {
       enable = true;
-      package = inputs.hyprland.packages.${pkgs.system}.hyprland;
-      portalPackage =
-        inputs.hyprland.inputs.nixpkgs.legacyPackages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+      #package = inputs.hyprland.packages.${pkgs.system}.hyprland;
+      #portalPackage =
+      #inputs.hyprland.inputs.nixpkgs.legacyPackages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
       xwayland.enable = true;
     };
 

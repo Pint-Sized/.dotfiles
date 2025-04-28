@@ -1,23 +1,18 @@
 {
   config,
-  hyprland-plugins,
   pkgs,
   ...
 }:
-let
-  hyprPlugins = hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system};
-in
 {
   wayland.windowManager.hyprland = with config.lib.stylix.colors; {
     plugins = [
-      hyprPlugins.hyprwinwrap
-      hyprPlugins.borders-plus-plus
-      hyprPlugins.csgo-vulkan-fix
-      hyprPlugins.hyprbars
-      hyprPlugins.hyprexpo
-      hyprPlugins.hyprtrails
-      hyprPlugins.xtra-dispatchers
-      #pkgs-unstable.hyprlandPlugins.hypr-dynamic-cursors
+      pkgs.hyprlandPlugins.hyprwinwrap
+      pkgs.hyprlandPlugins.borders-plus-plus
+      #pkgs.hyprlandPlugins.csgo-vulkan-fix
+      #pkgs.hyprlandPlugins.hyprbars
+      #pkgs.hyprlandPlugins.hyprexpo
+      #pkgs.hyprlandPlugins.hyprtrails
+      pkgs.hyprlandPlugins.hypr-dynamic-cursors
     ];
     settings.plugin = {
       borders-plus-plus = {

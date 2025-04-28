@@ -24,17 +24,18 @@
     };
 
     # ----- HYPRLAND ----- #
-    hyprland = {
-      url = "github:hyprwm/Hyprland?ref=v0.48.1";
-    };
-    hyprland-plugins = {
-      url = "github:hyprwm/hyprland-plugins?ref=v0.48.0";
-      inputs.hyprland.follows = "hyprland";
-    };
-    pyprland = {
-      url = "github:hyprland-community/pyprland";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    #hyprland = {
+    #url = "github:hyprwm/Hyprland?ref=v0.48.1";
+    #inputs.nixpkgs.follows = "nixpkgs";
+    #};
+    #hyprland-plugins = {
+    #url = "github:hyprwm/hyprland-plugins?ref=v0.48.0";
+    #inputs.hyprland.follows = "hyprland";
+    #};
+    #pyprland = {
+    #url = "github:hyprland-community/pyprland";
+    #inputs.nixpkgs.follows = "nixpkgs";
+    #};
 
     # ----- NIXVIM ----- #
     nixvim = {
@@ -72,9 +73,9 @@
       stylix,
       spicetify-nix,
       nixcord,
-      hyprland,
-      pyprland,
-      hyprland-plugins,
+      #hyprland,
+      #pyprland,
+      #hyprland-plugins,
       ...
     }:
     let
@@ -142,8 +143,8 @@
             inherit pkgs-master;
             inherit systemSettings;
             inherit userSettings;
-            inherit hyprland;
-            inherit pyprland;
+            #inherit hyprland;
+            #inherit pyprland;
           };
         };
         laptop = lib.nixosSystem {
@@ -161,8 +162,8 @@
             inherit pkgs-master;
             inherit systemSettings;
             inherit userSettings;
-            inherit hyprland;
-            inherit pyprland;
+            #inherit hyprland;
+            #inherit pyprland;
           };
         };
       };
@@ -182,8 +183,8 @@
             inherit pkgs-master;
             inherit systemSettings;
             inherit userSettings;
-            inherit hyprland;
-            inherit hyprland-plugins;
+            #inherit hyprland;
+            #inherit hyprland-plugins;
           };
         };
       };
