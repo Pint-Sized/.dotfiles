@@ -1,10 +1,12 @@
 {
-  pkgs-unstable,
   config,
-  hyprPlugins,
+  hyprland-plugins,
+  pkgs,
   ...
 }:
-
+let
+  hyprPlugins = hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system};
+in
 {
   wayland.windowManager.hyprland = with config.lib.stylix.colors; {
     plugins = [

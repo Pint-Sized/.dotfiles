@@ -1,56 +1,64 @@
 {
   inputs = {
+    # ----- NIX PACKAGES ----- #
     nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-master.url = "github:/nixos/nixpkgs/master";
 
-    home-manager = {
-      url = "github:nix-community/home-manager/release-24.11";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    hyprland = {
-      url = "github:hyprwm/Hyprland?ref=v0.48.1";
-    };
-
-    nixvim = {
-      url = "github:nix-community/nixvim/main";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
-    };
-
-    nix-flatpak = {
-      url = "github:gmodena/nix-flatpak";
-    };
-
-    stylix = {
-      url = "github:danth/stylix/release-24.11";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    spicetify-nix = {
-      url = "github:Gerg-L/spicetify-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
+    # ----- NIX-USER-REPOSITORY ----- #
     nur = {
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixcord = {
-      url = "github:kaylorben/nixcord";
+    # ----- HOME-MANAGER ----- #
+    home-manager = {
+      url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # ----- STYLIX ----- #
+    stylix = {
+      url = "github:danth/stylix/release-24.11";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # ----- HYPRLAND ----- #
+    hyprland = {
+      url = "github:hyprwm/Hyprland?ref=v0.48.1";
+    };
+    hyprland-plugins = {
+      url = "github:hyprwm/hyprland-plugins?ref=v0.48.0";
+      inputs.hyprland.follows = "hyprland";
+    };
     pyprland = {
       url = "github:hyprland-community/pyprland";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprland-plugins = {
-      url = "github:hyprwm/hyprland-plugins?ref=v0.48.0";
-      inputs.hyprland.follows = "hyprland";
+    # ----- NIXVIM ----- #
+    nixvim = {
+      url = "github:nix-community/nixvim/main";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
+
+    # ------ NIX DECLERATIVE FLATPAKS ----- #
+    nix-flatpak = {
+      url = "github:gmodena/nix-flatpak";
+    };
+
+    # ----- SPICETIFY ------ #
+    spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # ----- NIXCORD ----- #
+    nixcord = {
+      url = "github:kaylorben/nixcord";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
   outputs =
@@ -90,8 +98,11 @@
       };
 
       inherit (nixpkgs) lib;
+
       system = "x86_64-linux";
+
       pkgs = nixpkgs.legacyPackages.${system};
+
       pkgs-unstable = import nixpkgs-unstable {
         inherit system;
         config = {
@@ -102,6 +113,7 @@
           ];
         };
       };
+
       pkgs-master = import nixpkgs-master {
         inherit system;
         config = {
@@ -112,8 +124,6 @@
           ];
         };
       };
-      spicePkgs = spicetify-nix.legacyPackages.${pkgs.system};
-      hyprPlugins = hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system};
     in
     {
       nixosConfigurations = {
@@ -167,14 +177,13 @@
             nixcord.homeModules.nixcord
           ];
           extraSpecialArgs = {
-            inherit spicePkgs;
             inherit inputs;
             inherit pkgs-unstable;
             inherit pkgs-master;
             inherit systemSettings;
             inherit userSettings;
             inherit hyprland;
-            inherit hyprPlugins;
+            inherit hyprland-plugins;
           };
         };
       };
