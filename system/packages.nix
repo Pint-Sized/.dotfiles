@@ -71,6 +71,7 @@
       pavucontrol
       playerctl
       pokeget-rs
+      pyprland
       python
       python3
       python312
