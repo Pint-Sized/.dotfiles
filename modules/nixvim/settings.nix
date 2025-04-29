@@ -8,17 +8,6 @@
       vim.wo.fillchars='eob: '
     '';
 
-    autoCmd = [
-      {
-        command = "set laststatus=0";
-        event = [
-          "VimEnter"
-          "BufEnter"
-          "BufWinEnter"
-        ];
-      }
-    ];
-
     opts = {
       number = false;
       textwidth = 0;
