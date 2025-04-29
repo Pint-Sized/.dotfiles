@@ -18,9 +18,7 @@
       borders-plus-plus = {
         add_borders = 1;
         "col.border_1" = "rgb(${base00-hex})";
-        "col.border_2" = "rgb(${base0E-hex})";
         border_size_1 = 10;
-        border_size_2 = -1;
         natural_rounding = "on";
       };
       hyprfocus = {
