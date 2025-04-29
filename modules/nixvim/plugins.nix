@@ -36,6 +36,7 @@
     #./plugins/ui/bufferline.nix
     ./plugins/ui/codesnap.nix
     ./plugins/ui/lualine.nix
+    ./plugins/ui/neoscroll.nix
     ./plugins/ui/noice.nix
     ./plugins/ui/notify.nix
     ./plugins/ui/nui.nix
