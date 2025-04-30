@@ -1,9 +1,7 @@
 {
   pkgs,
-  inputs,
   pkgs-unstable,
   pkgs-master,
-  systemSettings,
   ...
 }:
 
@@ -19,7 +17,6 @@
       calligraphy
       cava
       celluloid
-      cmatrix
       emote
       mediainfo
       fastfetch
@@ -43,7 +40,6 @@
       nix-du
       nixos-generators
       ntfs3g
-      onlyoffice-desktopeditors
       pavucontrol
       playerctl
       pokeget-rs
@@ -60,6 +56,7 @@
       swww
       teams-for-linux
       thunderbird
+      tuifimanager
       tldr
       udisks
       unzip
@@ -71,16 +68,13 @@
       wdisplays
       wev
       which
+      wiki-tui
       wl-clipboard
       wlogout
       yazi
       zapzap
       zathura
       zip
-
-      #testing
-      wiki-tui
-      tuifimanager
     ])
 
     ++
@@ -129,9 +123,14 @@
       # --------- FISH PLUGINS --------- #
       (with pkgs-unstable.fishPlugins; [
         autopair
+        colored-man-pages
         done
+        hydro
         puffer
+        replay
         sponge
+        transient-fish
+        virtualfish
       ]);
 
   services.flatpak.packages = [
