@@ -127,10 +127,8 @@
         done
         hydro
         puffer
-        replay
         sponge
         transient-fish
-        virtualfish
       ]);
 
   services.flatpak.packages = [
