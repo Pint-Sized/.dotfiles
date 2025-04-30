@@ -23,20 +23,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # ----- HYPRLAND ----- #
-    #hyprland = {
-    #url = "github:hyprwm/Hyprland?ref=v0.48.1";
-    #inputs.nixpkgs.follows = "nixpkgs";
-    #};
-    #hyprland-plugins = {
-    #url = "github:hyprwm/hyprland-plugins?ref=v0.48.0";
-    #inputs.hyprland.follows = "hyprland";
-    #};
-    #pyprland = {
-    #url = "github:hyprland-community/pyprland";
-    #inputs.nixpkgs.follows = "nixpkgs";
-    #};
-
     # ----- NIXVIM ----- #
     nixvim = {
       url = "github:nix-community/nixvim/main";

@@ -8,7 +8,8 @@
     plugins = [
       pkgs.hyprlandPlugins.hyprwinwrap
       pkgs.hyprlandPlugins.borders-plus-plus
-      #pkgs.hyprlandPlugins.csgo-vulkan-fix
+      pkgs.hyprlandPlugins.hyprfocus
+      pkgs.hyprlandPlugins.csgo-vulkan-fix
       pkgs.hyprlandPlugins.hyprexpo
       pkgs.hyprlandPlugins.hypr-dynamic-cursors
     ];
