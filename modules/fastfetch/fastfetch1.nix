@@ -5,67 +5,73 @@
     enable = true;
     settings = {
       logo = {
-        type = "small";
+        type = "none";
+        padding.top = 2;
       };
       display = {
+        disableLinewrap = false;
         separator = "";
+        key.width = 25;
+        constants = [
+          "\u001b[48;2;43;43;69m"
+          "\u001b[48;2;56;59;78m"
+          "\u001b[90m│                                                            │\u001b[60D\u001b[39m"
+        ];
       };
       modules = [
         "break"
         {
-          key = "os     ";
-          type = "os";
-          keyColor = "38;2;${base0E-rgb-r};${base0E-rgb-g};${base0E-rgb-b}";
+          type = "custom";
+          key = " ╭──────────────╮";
+          format = "╭────────────────────────────────────────────────────────────╮";
         }
         {
-          key = "ker    ";
+          key = " {#90}{$1}│ {#93}OS           {#90}│";
+          type = "os";
+          #keyColor = "38;2;${base0E-rgb-r};${base0E-rgb-g};${base0E-rgb-b}";
+        }
+        {
+          key = " │ Kernel        │";
           type = "kernel";
           keyColor = "38;2;${base0B-rgb-r};${base0B-rgb-g};${base0B-rgb-b}";
         }
         {
-          key = "wm     ";
+          key = " │ WM           │";
           type = "wm";
           keyColor = "38;2;${base08-rgb-r};${base08-rgb-g};${base08-rgb-b}";
         }
         {
-          key = "sh     ";
+          key = " │ Shell        │";
           type = "shell";
           keyColor = "38;2;${base07-rgb-r};${base07-rgb-g};${base07-rgb-b}";
         }
         {
-          key = "cpu    ";
+          key = " │ CPU          │";
           type = "cpu";
           keyColor = "38;2;${base0E-rgb-r};${base0E-rgb-g};${base0E-rgb-b}";
         }
         {
-          key = "gpu    ";
+          key = " │ GPU          │";
           type = "gpu";
           keyColor = "38;2;${base0B-rgb-r};${base0B-rgb-g};${base0B-rgb-b}";
         }
         {
-          key = "ram    ";
+          key = " │ Memory       │";
           type = "memory";
           keyColor = "38;2;${base08-rgb-r};${base08-rgb-g};${base08-rgb-b}";
         }
         {
-          key = "col    ";
+          key = " │ Color Scheme │";
           type = "command";
           text = "~/.config/fastfetch/theme";
           keyColor = "38;2;${base07-rgb-r};${base07-rgb-g};${base07-rgb-b}";
         }
         {
-          key = "bat    ";
+          key = " │ Battery      │";
           type = "battery";
           keyColor = "38;2;${base0E-rgb-r};${base0E-rgb-g};${base0E-rgb-b}";
         }
-        "break"
-        {
-          type = "colors";
-          paddingLeft = 6;
-          symbol = "circle";
-        }
       ];
-
     };
   };
 }
