@@ -1,7 +1,6 @@
 {
-  # ------- BTOP -------- #
   programs.btop = {
-    enable = false;
+    enable = true;
     settings = {
       proc_sorting = "memory";
     };

@@ -83,11 +83,6 @@
           "format": "{$2}{$3}{size-used} / {size-used} ({size-percentage}{$2})",
         },
         {
-          "type": "battery",
-          "key": "{#90}{$1}│ {#91}Battery     {#90}│",
-          "format": "{$2}{$3}{capacity} {status} ({model-name}{$2})",
-        },
-        {
           "type": "poweradapter",
           "key": "{#90}{$1}│ {#91}Power       {#90}│",
           "format": "{$2}{$3}{name}",

@@ -29,7 +29,6 @@
       gparted
       hyprlock
       imv
-      kalker # calculator
       kdePackages.qt6ct
       librewolf
       libreoffice-qt6-fresh
@@ -56,7 +55,6 @@
       swww
       teams-for-linux
       thunderbird
-      tuifimanager
       tldr
       udisks
       unzip
@@ -68,7 +66,6 @@
       wdisplays
       wev
       which
-      wiki-tui
       wl-clipboard
       wlogout
       yazi
@@ -84,9 +81,7 @@
         discord
         gopls
         hclfmt
-        home-manager
         hyprpolkitagent
-        hyprpicker
         hyprshot
         kitty
         lua
