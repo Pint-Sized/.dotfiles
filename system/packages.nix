@@ -2,6 +2,7 @@
   pkgs,
   pkgs-unstable,
   pkgs-master,
+  userSettings,
   ...
 }:
 
@@ -17,6 +18,7 @@
       calligraphy
       cava
       celluloid
+      comma
       emote
       mediainfo
       fastfetch
@@ -38,6 +40,7 @@
       neovide
       nix-du
       nixos-generators
+      nix-unit
       ntfs3g
       pavucontrol
       playerctl
@@ -99,18 +102,16 @@
         yamlfmt
       ])
 
+    ++ (with pkgs-master; [
+      nchat
+    ])
+
     ++
 
       (with pkgs.python312Packages; [
         libcst
         python-lsp-server
         pip
-      ])
-
-    ++
-
-      (with pkgs-master; [
-        nchat
       ])
 
     ++
@@ -138,6 +139,13 @@
     hyprland = {
       enable = true;
       xwayland.enable = true;
+    };
+
+    nh = {
+      enable = true;
+      clean.enable = true;
+      clean.extraArgs = "--keep-since 4d --keep 3";
+      flake = "/home/${userSettings.username}/.dotfiles";
     };
 
     fish.enable = true;
