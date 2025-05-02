@@ -75,6 +75,9 @@
       zapzap
       zathura
       zip
+
+      # testing
+      discover-overlay
     ])
 
     ++
