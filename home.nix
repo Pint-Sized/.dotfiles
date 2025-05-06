@@ -14,6 +14,9 @@
     # -------- CAVA -------- #
     ./modules/cava.nix
 
+    # ------ DISCOVER-OVERLAY ----- #
+    ./modules/discover-overlay.nix
+
     # ------- FASTFETCH -------- #
     ./modules/fastfetch.nix
 

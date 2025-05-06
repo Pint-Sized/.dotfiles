@@ -57,6 +57,7 @@
       swayosd
       swww
       teams-for-linux
+      thonny
       thunderbird
       tldr
       udisks
@@ -78,6 +79,7 @@
 
       # testing
       discover-overlay
+      overlayed
     ])
 
     ++

@@ -52,10 +52,12 @@
 
       "$mainMod, 7, exec, pypr toggle timetable"
       "$mainMod, 8, exec, pypr toggle pavucontrol"
+      #"$mainMod, 9, exec, pypr toggle discord"
       "$mainMod, 0, exec, pypr toggle whatsapp"
       "$mainMod, code:20, exec, pypr toggle email"
       "$mainMod, code:21, exec, pypr toggle spotify"
       "$mainMod, M, exec, pypr toggle calculator"
+
       "$mainMod, L, exec, pkill wlogout || wlogout"
       "$mainMod, U, exec, ~/.dotfiles/scripts/hypr-powersaver-on"
       "$mainMod, I, exec, ~/.dotfiles/scripts/hypr-powersaver-off"
