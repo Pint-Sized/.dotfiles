@@ -24,12 +24,11 @@
     functions = {
       c = "clear";
       n = "nvim $argv";
-      fb = "bash -c $argv &";
-      nrd = "sudo nixos-rebuild switch --flake ~/.dotfiles/#desktop";
-      nrl = "sudo nixos-rebuild switch --flake ~/.dotfiles/#laptop";
-      hr = "home-manager switch --flake ~/.dotfiles;hyprctl reload";
-      frd = "sudo nix flake update --flake ~/.dotfiles; sudo nixos-rebuild switch --flake ~/.dotfiles#desktop; home-manager switch --flake ~/.dotfiles";
-      frl = "sudo nix flake update --flake ~/.dotfiles; sudo nixos-rebuild switch --flake ~/.dotfiles/#laptop; home-manager switch --flake ~/.dotfiles";
+      nrd = "nh os switch ~/.dotfiles -H desktop";
+      nrl = "nh os switch ~/.dotfiles -H laptop";
+      hr = "nh home switch ~/.dotfiles;hyprctl reload";
+      frd = "nh os switch ~/.dotfiles -H desktop -u; nh home switch ~/.dotfiles; hyprctl reload";
+      frl = "nh os switch ~/.dotfiles -H laptop -u; nh home switch ~/.dotfiles; hyprctl reload";
       y = {
         description = "Yazi changes directory on exit";
         body = ''
@@ -48,7 +47,6 @@
               if test $status = 0
                   switch $argv[(count $argv)]
                       case '-*'
-
                       case '*'
                           cd $argv[(count $argv)]
                           return
@@ -56,7 +54,7 @@
               end
         '';
       };
-      gc = "git add *; git commit -m $argv; git push github main";
+      gc = "git commit -m $argv; git push github main";
       nix-template = "nix flake init -t github:nix-community/templates#$argv";
       fetch = "fish";
     };

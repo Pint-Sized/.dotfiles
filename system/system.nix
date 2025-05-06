@@ -109,4 +109,6 @@
     enable = true;
     xdgOpenUsePortal = true;
   };
+
+  documentation.man.generateCaches = false;
 }

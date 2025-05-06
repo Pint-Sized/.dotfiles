@@ -17,6 +17,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # ----- NIX-INDEX ----- #
+    nix-index-database = {
+      url = "github:nix-community/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # ----- STYLIX ----- #
     stylix = {
       url = "github:danth/stylix/release-24.11";
@@ -54,6 +60,7 @@
       home-manager,
       nixpkgs-unstable,
       nixpkgs-master,
+      nix-index-database,
       nixvim,
       nix-flatpak,
       stylix,
@@ -122,6 +129,8 @@
             nixvim.nixosModules.nixvim
             stylix.nixosModules.stylix
             nix-flatpak.nixosModules.nix-flatpak
+            nix-index-database.nixosModules.nix-index
+            { programs.nix-index-database.comma.enable = true; }
           ];
           specialArgs = {
             inherit inputs;
@@ -129,8 +138,6 @@
             inherit pkgs-master;
             inherit systemSettings;
             inherit userSettings;
-            #inherit hyprland;
-            #inherit pyprland;
           };
         };
         laptop = lib.nixosSystem {
@@ -141,6 +148,8 @@
             nixvim.nixosModules.nixvim
             stylix.nixosModules.stylix
             nix-flatpak.nixosModules.nix-flatpak
+            nix-index-database.nixosModules.nix-index
+            { programs.nix-index-database.comma.enable = true; }
           ];
           specialArgs = {
             inherit inputs;
@@ -148,8 +157,6 @@
             inherit pkgs-master;
             inherit systemSettings;
             inherit userSettings;
-            #inherit hyprland;
-            #inherit pyprland;
           };
         };
       };

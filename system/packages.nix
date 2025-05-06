@@ -18,7 +18,6 @@
       calligraphy
       cava
       celluloid
-      comma
       emote
       mediainfo
       fastfetch
@@ -57,7 +56,6 @@
       swayosd
       swww
       teams-for-linux
-      thonny
       thunderbird
       tldr
       udisks
@@ -80,6 +78,7 @@
       # testing
       discover-overlay
       overlayed
+      comma
     ])
 
     ++
@@ -138,6 +137,7 @@
     "io.github.hamza_algohary.Coulomb"
     "io.frama.tractor.carburetor"
     "it.mijorus.whisper"
+    "org.thonny.Thonny"
   ];
 
   programs = {
@@ -163,6 +163,8 @@
         enableSSHSupport = true;
       };
     };
+
+    nix-index.enable = true;
   };
 
   # ------ NIXPKGS SETTINGS ------ #
