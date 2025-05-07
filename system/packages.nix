@@ -27,6 +27,7 @@
       fzf
       git
       gnome-calculator
+      gnome-software
       gparted
       hyprlock
       imv
