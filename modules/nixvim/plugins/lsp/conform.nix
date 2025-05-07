@@ -8,62 +8,45 @@
         timeoutMs = 500;
       };
       notify_on_error = true;
-
       formatters_by_ft = {
-        bash = [ "shellcheck" ];
+        bash = [ "shmt" ];
         liquidsoap = [ "liquidsoap-prettier" ];
         html = [
-          [
-            "prettierd"
-            "prettier"
-          ]
+          "prettierd"
+          "prettier"
         ];
         css = [
-          [
-            "prettierd"
-            "prettier"
-          ]
+          "prettierd"
+          "prettier"
         ];
         javascript = [
-          [
-            "prettierd"
-            "prettier"
-          ]
+          "prettierd"
+          "prettier"
         ];
         javascriptreact = [
-          [
-            "prettierd"
-            "prettier"
-          ]
+          "prettierd"
+          "prettier"
         ];
         typescript = [
-          [
-            "prettierd"
-            "prettier"
-          ]
+          "prettierd"
+          "prettier"
         ];
         typescriptreact = [
-          [
-            "prettierd"
-            "prettier"
-          ]
+          "prettierd"
+          "prettier"
         ];
         python = [ "black" ];
         lua = [ "stylua" ];
         nix = [ "nixfmt" ];
         markdown = [
-          [
-            "prettierd"
-            "prettier"
-          ]
+          "prettierd"
+          "prettier"
         ];
         yaml = [
           "yamllint"
           "yamlfmt"
         ];
-        terragrunt = [
-          "hcl"
-        ];
+        terragrunt = [ "hcl" ];
       };
     };
   };
