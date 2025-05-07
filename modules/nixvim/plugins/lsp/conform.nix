@@ -10,6 +10,7 @@
       notify_on_error = true;
 
       formatters_by_ft = {
+        bash = [ "shellcheck" ];
         liquidsoap = [ "liquidsoap-prettier" ];
         html = [
           [
