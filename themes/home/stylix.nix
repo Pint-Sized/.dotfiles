@@ -38,7 +38,6 @@
       gtk.flatpakSupport.enable = true;
       foot.enable = false;
       xresources.enable = true;
-      btop.enable = false;
       firefox.profileNames = [ "8b2kzims.default" ];
       zathura.enable = false;
       nixvim = {

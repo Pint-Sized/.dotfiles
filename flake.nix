@@ -130,7 +130,7 @@
             stylix.nixosModules.stylix
             nix-flatpak.nixosModules.nix-flatpak
             nix-index-database.nixosModules.nix-index
-            { programs.nix-index-database.comma.enable = true; }
+            #{ programs.nix-index-database.comma.enable = true; }
           ];
           specialArgs = {
             inherit inputs;

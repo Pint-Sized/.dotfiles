@@ -1,3 +1,5 @@
+{ userSettings, ... }:
+
 {
   wayland.windowManager.hyprland.settings.exec-once = [
     "sleep 4"
@@ -17,5 +19,8 @@
     "hypridle"
     "pkill waybar"
     "waybar &"
+    "sleep 10"
+    #"rclone mount fionnbennett123@gmail.com: /home/${userSettings.username}/Cloud/fionnbennett123@gmail.com"
+    #"rclone mount fionnbennett06@gmail.com: /home/${userSettings.username}/Cloud/fionnbennett06@gmail.com"
   ];
 }

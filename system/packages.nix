@@ -74,12 +74,12 @@
       yazi
       zapzap
       zathura
+      zed-editor
       zip
 
       # testing
       discover-overlay
       overlayed
-      comma
     ])
 
     ++
@@ -165,7 +165,10 @@
       };
     };
 
-    nix-index.enable = true;
+    nix-index-database = {
+      #enable = true;
+      comma.enable = true;
+    };
   };
 
   # ------ NIXPKGS SETTINGS ------ #
