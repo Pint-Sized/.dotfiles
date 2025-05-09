@@ -104,6 +104,9 @@
 
     # --------- ZATHURA ---------- #
     ./modules/zathura.nix
+
+    # ---- ZED ----- #
+    ./modules/zed.nix
   ];
   nixpkgs.config = {
     allowUnfree = true;

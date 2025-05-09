@@ -11,6 +11,7 @@
   environment.systemPackages =
     (with pkgs; [
       appeditor
+      ark
       bat
       base16-schemes
       black
@@ -26,15 +27,17 @@
       fragments
       fzf
       git
-      gnome-calculator
       gnome-software
       gparted
       hyprlock
       imv
+      kdePackages.kalk
+      kdePackages.kinfocenter
       kdePackages.qt6ct
       librewolf
       libreoffice-qt6-fresh
       libsForQt5.qt5ct
+      mission-center
       mpv
       nautilus
       neovide
@@ -51,6 +54,7 @@
       rclone
       remnote
       ripgrep
+      spacedrive
       spotify
       statix
       swaynotificationcenter
