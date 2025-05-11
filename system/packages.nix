@@ -31,6 +31,7 @@
       gparted
       hyprlock
       imv
+      jq
       kdePackages.kalk
       kdePackages.kinfocenter
       kdePackages.qt6ct

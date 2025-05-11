@@ -66,9 +66,6 @@
       stylix,
       spicetify-nix,
       nixcord,
-      #hyprland,
-      #pyprland,
-      #hyprland-plugins,
       ...
     }:
     let
@@ -130,7 +127,6 @@
             stylix.nixosModules.stylix
             nix-flatpak.nixosModules.nix-flatpak
             nix-index-database.nixosModules.nix-index
-            #{ programs.nix-index-database.comma.enable = true; }
           ];
           specialArgs = {
             inherit inputs;
@@ -176,8 +172,6 @@
             inherit pkgs-master;
             inherit systemSettings;
             inherit userSettings;
-            #inherit hyprland;
-            #inherit hyprland-plugins;
           };
         };
       };
