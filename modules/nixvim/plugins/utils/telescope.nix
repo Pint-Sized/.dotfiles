@@ -218,7 +218,7 @@
         defaults = {
           vimgrep_arguments = {
             '--hidden',
-          },  
+          },
         }
       }
     '';

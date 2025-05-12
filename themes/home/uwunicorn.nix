@@ -1,6 +1,4 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   stylix = {
     base16Scheme = "${pkgs.base16-schemes}/share/themes/uwunicorn.yaml";
     targets.cava.rainbow.enable = true;

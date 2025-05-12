@@ -3,9 +3,7 @@
   systemSettings,
   userSettings,
   ...
-}:
-
-{
+}: {
   users.users.${userSettings.username} = {
     shell = pkgs.fish;
     isNormalUser = true;
@@ -44,9 +42,9 @@
   ];
   fonts.fontconfig = {
     defaultFonts = {
-      serif = [ "${userSettings.fontSerif}" ];
-      sansSerif = [ "${userSettings.fontSerif}" ];
-      monospace = [ "${userSettings.fontMono}" ];
+      serif = ["${userSettings.fontSerif}"];
+      sansSerif = ["${userSettings.fontSerif}"];
+      monospace = ["${userSettings.fontMono}"];
     };
   };
   boot = {
@@ -61,7 +59,7 @@
       efi.efiSysMountPoint = "/boot";
       grub = {
         enable = true;
-        devices = [ "nodev" ];
+        devices = ["nodev"];
         efiSupport = true;
         configurationLimit = 15;
       };
@@ -96,8 +94,8 @@
         "nix-command"
         "flakes"
       ];
-      substituters = [ "https://hyprland.cachix.org" ];
-      trusted-public-keys = [ "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=" ];
+      substituters = ["https://hyprland.cachix.org"];
+      trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
     };
   };
   security = {

@@ -1,6 +1,8 @@
-{ pkgs, userSettings, ... }:
-
 {
+  pkgs,
+  userSettings,
+  ...
+}: {
   virtualisation = {
     waydroid.enable = true;
     libvirtd = {
@@ -26,5 +28,5 @@
     spiceUSBRedirection.enable = true;
   };
   programs.virt-manager.enable = true;
-  users.groups.libvirtd.members = [ "${userSettings.username}" ];
+  users.groups.libvirtd.members = ["${userSettings.username}"];
 }

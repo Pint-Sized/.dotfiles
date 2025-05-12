@@ -1,6 +1,4 @@
-{ userSettings, ... }:
-
-{
+{userSettings, ...}: {
   programs.nixcord = {
     enable = true;
     quickCss = "

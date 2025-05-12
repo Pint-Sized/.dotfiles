@@ -1,6 +1,8 @@
-{ pkgs, config, ... }:
-
 {
+  pkgs,
+  config,
+  ...
+}: {
   programs = {
     librewolf = {
       enable = true;
@@ -18,7 +20,7 @@
     firefox = {
       enable = true;
       package = pkgs.librewolf;
-      nativeMessagingHosts = [ pkgs.firefoxpwa ];
+      nativeMessagingHosts = [pkgs.firefoxpwa];
       profiles."8b2kzims.default" = {
         settings = {
           "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
@@ -30,196 +32,195 @@
     };
   };
   stylix.targets.librewolf = {
-    profileNames = [ "8b2kzims.default" ];
+    profileNames = ["8b2kzims.default"];
     firefoxGnomeTheme.enable = true;
   };
 
-  home.file.".dotfiles/modules/librewolf/darkreader/src/config/color-schemes.drconf".text =
-    with config.lib.stylix.colors; ''
-      Default
+  home.file.".dotfiles/modules/librewolf/darkreader/src/config/color-schemes.drconf".text = with config.lib.stylix.colors; ''
+    Default
 
-      DARK
-      background: #${base00-hex}
-      text: #${base05-hex}
+    DARK
+    background: #${base00-hex}
+    text: #${base05-hex}
 
-      LIGHT
-      background: #${base00-hex}
-      text: #${base05-hex}
+    LIGHT
+    background: #${base00-hex}
+    text: #${base05-hex}
 
-      ================================
+    ================================
 
-      Catppuccin
+    Catppuccin
 
-      DARK
-      background: #1e1e2e
-      text: #cdd6f4
+    DARK
+    background: #1e1e2e
+    text: #cdd6f4
 
-      LIGHT
-      background: #eff1f5
-      text: #4c4f69
+    LIGHT
+    background: #eff1f5
+    text: #4c4f69
 
-      ================================
+    ================================
 
-      Deep Ocean
+    Deep Ocean
 
-      DARK
-      background: #00222b
-      text: #a9b4b4
+    DARK
+    background: #00222b
+    text: #a9b4b4
 
-      LIGHT
-      background: #cac5b6
-      text: #cdd4d6
+    LIGHT
+    background: #cac5b6
+    text: #cdd4d6
 
-      ================================
+    ================================
 
-      Dracula
+    Dracula
 
-      DARK
-      background: #282b36
-      text: #e8e6e3
+    DARK
+    background: #282b36
+    text: #e8e6e3
 
-      ================================
+    ================================
 
-      Everforest
+    Everforest
 
-      DARK
-      background: #2b3339
-      text: #d1c4a9
+    DARK
+    background: #2b3339
+    text: #d1c4a9
 
-      LIGHT
-      background: #fdf9ed
-      text: #5b6971
+    LIGHT
+    background: #fdf9ed
+    text: #5b6971
 
-      ================================
+    ================================
 
-      Github Modern
+    Github Modern
 
-      DARK
-      background: #0d1117
-      text: #c9d1d9
+    DARK
+    background: #0d1117
+    text: #c9d1d9
 
-      LIGHT
-      background: #ffffff
-      text: #24292f
+    LIGHT
+    background: #ffffff
+    text: #24292f
 
-      ================================
+    ================================
 
-      Gruvbox
+    Gruvbox
 
-      DARK
-      background: #282828
-      text: #ebdbb2
+    DARK
+    background: #282828
+    text: #ebdbb2
 
-      LIGHT
-      background: #fbf1c7
-      text: #3c3836
+    LIGHT
+    background: #fbf1c7
+    text: #3c3836
 
-      ================================
+    ================================
 
-      Kanagawa
+    Kanagawa
 
-      DARK
-      background: #1f1f28
-      text: #dcd7ba
+    DARK
+    background: #1f1f28
+    text: #dcd7ba
 
-      LIGHT
-      background: #f4ecca
-      text: #1e4887
+    LIGHT
+    background: #f4ecca
+    text: #1e4887
 
-      ================================
+    ================================
 
-      Material You
+    Material You
 
-      DARK
-      background: #1f1b24
-      text: #e3e3e3
+    DARK
+    background: #1f1b24
+    text: #e3e3e3
 
-      LIGHT
-      background: #fefbff
-      text: #1f1b24
+    LIGHT
+    background: #fefbff
+    text: #1f1b24
 
-      ================================
+    ================================
 
-      Nord
+    Nord
 
-      DARK
-      background: #2e3440
-      text: #eceff4
+    DARK
+    background: #2e3440
+    text: #eceff4
 
-      LIGHT
-      background: #eceff4
-      text: #3b4252
+    LIGHT
+    background: #eceff4
+    text: #3b4252
 
-      ================================
+    ================================
 
-      One Dark
+    One Dark
 
-      DARK
-      background: #282c34
-      text: #abb2bf
+    DARK
+    background: #282c34
+    text: #abb2bf
 
-      LIGHT
-      background: #fafafa
-      text: #383a42
+    LIGHT
+    background: #fafafa
+    text: #383a42
 
-      ================================
+    ================================
 
-      Oxocarbon
+    Oxocarbon
 
-      DARK
-      background: #161616
-      text: #f2f4f8
+    DARK
+    background: #161616
+    text: #f2f4f8
 
-      LIGHT
-      background: #f2f4f8
-      text: #393939
+    LIGHT
+    background: #f2f4f8
+    text: #393939
 
-      ================================
+    ================================
 
-      Rosé Pine
+    Rosé Pine
 
-      DARK
-      background: #191724
-      text: #e0def4
+    DARK
+    background: #191724
+    text: #e0def4
 
-      LIGHT
-      background: #faf4ed
-      text: #575279
+    LIGHT
+    background: #faf4ed
+    text: #575279
 
-      ================================
+    ================================
 
-      Selenized
+    Selenized
 
-      DARK
-      background: #103c48
-      text: #adbcbc
+    DARK
+    background: #103c48
+    text: #adbcbc
 
-      LIGHT
-      background: #fbf3db
-      text: #53676d
+    LIGHT
+    background: #fbf3db
+    text: #53676d
 
-      ================================
+    ================================
 
-      Solarized
+    Solarized
 
-      DARK
-      background: #002b36
-      text: #93a1a1
+    DARK
+    background: #002b36
+    text: #93a1a1
 
-      LIGHT
-      background: #fdf6e3
-      text: #586e75
+    LIGHT
+    background: #fdf6e3
+    text: #586e75
 
-      ================================
+    ================================
 
-      Tokyo Night
+    Tokyo Night
 
-      DARK
-      background: #1a1b26
-      text: #a9b1d6
+    DARK
+    background: #1a1b26
+    text: #a9b1d6
 
-      LIGHT
-      background: #d5d6db
-      t
-    '';
+    LIGHT
+    background: #d5d6db
+    t
+  '';
 }

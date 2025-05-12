@@ -1,6 +1,4 @@
-{ userSettings, ... }:
-
-{
+{userSettings, ...}: {
   wayland.windowManager.hyprland.settings.exec-once = [
     "sleep 4"
     "dbus-update-activation-environment --system --all"

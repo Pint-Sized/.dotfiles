@@ -1,1 +1,1 @@
-{ programs.nixvim.plugins.colorizer.enable = true; }
+{programs.nixvim.plugins.colorizer.enable = true;}

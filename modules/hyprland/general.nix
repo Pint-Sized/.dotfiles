@@ -1,6 +1,8 @@
-{ config, userSettings, ... }:
-
 {
+  config,
+  userSettings,
+  ...
+}: {
   wayland.windowManager.hyprland = with config.lib.stylix.colors; {
     settings = {
       general = {
@@ -90,6 +92,6 @@
         "suppressevent maximize, class:.*"
       ];
     };
-    systemd.variables = [ "--all" ];
+    systemd.variables = ["--all"];
   };
 }

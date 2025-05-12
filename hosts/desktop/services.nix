@@ -1,5 +1,5 @@
 {
   services = {
-    xserver.videoDrivers = [ "nvidia" ];
+    xserver.videoDrivers = ["nvidia"];
   };
 }

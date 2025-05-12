@@ -3,9 +3,7 @@
   pkgs,
   config,
   ...
-}:
-
-{
+}: {
   stylix = {
     enable = true;
     image = ./black.jpg;
@@ -38,7 +36,7 @@
       gtk.flatpakSupport.enable = true;
       foot.enable = false;
       xresources.enable = true;
-      firefox.profileNames = [ "8b2kzims.default" ];
+      firefox.profileNames = ["8b2kzims.default"];
       zathura.enable = false;
       nixvim = {
         enable = true;

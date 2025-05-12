@@ -1,6 +1,4 @@
-{ userSettings, ... }:
-
-{
+{userSettings, ...}: {
   imports = [
     # ------ AERC ------ #
     ./modules/aerc.nix

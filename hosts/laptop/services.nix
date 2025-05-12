@@ -1,6 +1,6 @@
 {
   services = {
-    xserver.videoDrivers = [ "modesetting" ];
+    xserver.videoDrivers = ["modesetting"];
     blueman = {
       enable = true;
     };

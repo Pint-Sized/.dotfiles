@@ -1,6 +1,5 @@
 {
   services = {
-
     libinput = {
       mouse = {
         accelProfile = "flat";

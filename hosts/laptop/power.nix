@@ -35,7 +35,6 @@
 
         MEM_SLEEP_ON_AC = "s2idle";
         MEM_SLEEP_ON_BAT = "deep";
-
       };
     };
     undervolt = {

@@ -1,6 +1,8 @@
-{ config, userSettings, ... }:
-
 {
+  config,
+  userSettings,
+  ...
+}: {
   programs.nixvim.plugins.codesnap = with config.lib.stylix.colors; {
     enable = true;
     settings = {

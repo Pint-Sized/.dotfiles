@@ -4,9 +4,7 @@
   pkgs-master,
   userSettings,
   ...
-}:
-
-{
+}: {
   # -------- STABLE ------- #
   environment.systemPackages =
     (with pkgs; [
@@ -85,57 +83,52 @@
       # testing
       discover-overlay
       overlayed
+      quickgui
+      quickemu
     ])
-
     ++
-
-      # ----- UNSTABLE ----- #
-      (with pkgs-unstable; [
-        discord
-        gopls
-        hclfmt
-        hyprpolkitagent
-        hyprshot
-        kitty
-        lua
-        markdown-oxide
-        neovim-unwrapped
-        nixd
-        nixfmt-rfc-style
-        nix-output-monitor
-        prettierd
-        pyright
-        stylua
-        ulauncher
-        wttrbar
-        yamllint
-        yamlfmt
-      ])
-
+    # ----- UNSTABLE ----- #
+    (with pkgs-unstable; [
+      alejandra
+      discord
+      gopls
+      hclfmt
+      hyprpolkitagent
+      hyprshot
+      kitty
+      lua
+      markdown-oxide
+      neovim-unwrapped
+      nixd
+      nixfmt-rfc-style
+      nix-output-monitor
+      prettierd
+      pyright
+      stylua
+      ulauncher
+      wttrbar
+      yamllint
+      yamlfmt
+    ])
     ++ (with pkgs-master; [
       nchat
     ])
-
+    ++ (with pkgs.python312Packages; [
+      libcst
+      python-lsp-server
+      pip
+    ])
     ++
-
-      (with pkgs.python312Packages; [
-        libcst
-        python-lsp-server
-        pip
-      ])
-
-    ++
-
-      # --------- FISH PLUGINS --------- #
-      (with pkgs-unstable.fishPlugins; [
-        autopair
-        colored-man-pages
-        done
-        hydro
-        puffer
-        sponge
-        transient-fish
-      ]);
+    # --------- FISH PLUGINS --------- #
+    (with pkgs-unstable.fishPlugins; [
+      autopair
+      colored-man-pages
+      done
+      hydro
+      puffer
+      sponge
+      transient-fish
+    ]);
 
   services.flatpak.packages = [
     "io.github.giantpinkrobots.flatsweep"

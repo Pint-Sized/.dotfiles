@@ -1,6 +1,8 @@
-{ config, userSettings, ... }:
-
 {
+  config,
+  userSettings,
+  ...
+}: {
   programs.hyprlock = {
     enable = true;
     extraConfig = with config.lib.stylix.colors; ''
@@ -67,7 +69,7 @@
           rounding = -1
           rotate = 0
           reload_time = -1
-          reload_cmd = 
+          reload_cmd =
           position = 0, 40
           halign = center
           valign = center
@@ -98,7 +100,7 @@
           dots_spacing = 0.2 # Scale of dots' absolute size, 0.0 - 1.0
           dots_center = true
           font_size = 18
-          font_family = ${userSettings.fontSerif} 
+          font_family = ${userSettings.fontSerif}
           position = 0, -130
           halign = center
           valign = center
