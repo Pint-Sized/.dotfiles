@@ -8,8 +8,8 @@
       };
       notify_on_error = true;
       formatters_by_ft = {
-        bash = ["shmt"];
-        liquidsoap = ["liquidsoap-prettier"];
+        bash = [ "shmt" ];
+        liquidsoap = [ "liquidsoap-prettier" ];
         html = [
           "prettierd"
           "prettier"
@@ -34,9 +34,9 @@
           "prettierd"
           "prettier"
         ];
-        python = ["black"];
-        lua = ["stylua"];
-        nix = ["nixfmt"];
+        python = [ "black" ];
+        lua = [ "stylua" ];
+        nix = [ "alejandra" ];
         markdown = [
           "prettierd"
           "prettier"
@@ -45,7 +45,7 @@
           "yamllint"
           "yamlfmt"
         ];
-        terragrunt = ["hcl"];
+        terragrunt = [ "hcl" ];
       };
     };
   };

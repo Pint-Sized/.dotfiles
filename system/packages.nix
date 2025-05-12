@@ -25,23 +25,16 @@
       fragments
       fzf
       git
-      gnome-software
       gparted
-      hyprlock
       imv
       jq
-      kdePackages.kalk
-      kdePackages.kinfocenter
       kdePackages.qt6ct
       librewolf
       libreoffice-qt6-fresh
       libsForQt5.qt5ct
-      mission-center
       mpv
       nautilus
-      neovide
       nix-du
-      nixos-generators
       nix-unit
       ntfs3g
       pavucontrol
@@ -50,12 +43,8 @@
       pyprland
       python
       python3
-      rclone
-      remnote
       ripgrep
-      spacedrive
       spotify
-      statix
       swaynotificationcenter
       swayosd
       swww
@@ -68,7 +57,6 @@
       vencord
       volctl
       waybar
-      waypaper
       wdisplays
       wev
       which
@@ -85,6 +73,7 @@
       overlayed
       quickgui
       quickemu
+      statix
     ])
     ++
     # ----- UNSTABLE ----- #
@@ -152,9 +141,15 @@
       flake = "/home/${userSettings.username}/.dotfiles";
     };
 
-    fish.enable = true;
+    fish = {
+      enable = true;
+      package = pkgs.fish;
+    };
 
-    mtr.enable = true;
+    mtr = {
+      enable = true;
+      package = pkgs.mtr;
+    };
 
     gnupg = {
       agent = {
@@ -164,7 +159,6 @@
     };
 
     nix-index-database = {
-      #enable = true;
       comma.enable = true;
     };
   };
