@@ -1,7 +1,6 @@
 {
   pkgs,
   pkgs-unstable,
-  pkgs-master,
   userSettings,
   ...
 }: {
@@ -75,9 +74,8 @@
       quickemu
       statix
     ])
-    ++
     # ----- UNSTABLE ----- #
-    (with pkgs-unstable; [
+    ++ (with pkgs-unstable; [
       alejandra
       discord
       gopls
@@ -87,6 +85,7 @@
       kitty
       lua
       markdown-oxide
+      nchat
       neovim-unwrapped
       nixd
       nixfmt-rfc-style
@@ -99,17 +98,14 @@
       yamllint
       yamlfmt
     ])
-    ++ (with pkgs-master; [
-      nchat
-    ])
+    # ----- PYTHON-PACKAGES ----- #
     ++ (with pkgs.python312Packages; [
       libcst
       python-lsp-server
       pip
     ])
-    ++
     # --------- FISH PLUGINS --------- #
-    (with pkgs-unstable.fishPlugins; [
+    ++ (with pkgs-unstable.fishPlugins; [
       autopair
       colored-man-pages
       done

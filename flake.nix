@@ -37,7 +37,7 @@
 
     # ------ NIX DECLERATIVE FLATPAKS ----- #
     nix-flatpak = {
-      url = "github:gmodena/nix-flatpak";
+      url = "github:gmodena/nix-flatpak/latest";
     };
 
     # ----- SPICETIFY ------ #
