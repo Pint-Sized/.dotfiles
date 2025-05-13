@@ -5,6 +5,12 @@
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-master.url = "github:/nixos/nixpkgs/master";
 
+    # ----- NIXOS-HARDWARE ----- #
+    nixos-hardware = {
+      url = "github:NixOS/nixos-hardware/master";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # ----- NIX-USER-REPOSITORY ----- #
     nur = {
       url = "github:nix-community/NUR";
@@ -64,6 +70,7 @@
     stylix,
     spicetify-nix,
     nixcord,
+    nixos-hardware,
     ...
   }: let
     systemSettings = {
@@ -141,7 +148,7 @@
           stylix.nixosModules.stylix
           nix-flatpak.nixosModules.nix-flatpak
           nix-index-database.nixosModules.nix-index
-          {programs.nix-index-database.comma.enable = true;}
+          nixos-hardware.nixosModules.lenovo-thinkpad-t480
         ];
         specialArgs = {
           inherit inputs;
