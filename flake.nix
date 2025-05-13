@@ -83,7 +83,7 @@
       username = "fionnbennett";
       name = "Fionn Bennett";
       email = "fionnbennett06@gmail.com";
-      theme = "dracula";
+      theme = "uwunicorn";
       fontPkg = "pkgs.nerdfonts";
       fontSerif = "CaskaydiaCove Nerd Font";
       fontMono = "CaskaydiaCove Nerd Font";
