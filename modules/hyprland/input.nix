@@ -9,7 +9,6 @@
       };
       special_fallthrough = true;
     };
-
     gestures = {
       workspace_swipe = true;
       workspace_swipe_invert = false;

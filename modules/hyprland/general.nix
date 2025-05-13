@@ -75,12 +75,9 @@
         force_default_wallpaper = -1;
         disable_hyprland_logo = true;
         disable_splash_rendering = true;
-        mouse_moves_enables_dpms = true;
-        key_press_enables_dpms = true;
         font_family = "${userSettings.fontSerif}";
         animate_manual_resizes = true;
         animate_mouse_windowdragging = true;
-        render_ahead_of_time = true;
         close_special_on_empty = true;
         new_window_takes_over_fullscreen = 2;
         middle_click_paste = false;
@@ -96,20 +93,14 @@
         enable_hyprcursor = true;
         no_warps = true;
         inactive_timeout = 10;
-        no_break_fs_vrr = 2;
-        warp_back_after_non_mouse_input = true;
       };
       windowrulev2 = [
         "suppressevent maximize, class:.*"
       ];
-    };
-    xwayland = {
-      enabled = true;
-      force_zero_scaling = true;
-    };
-    ecosystem = {
-      mo_update_news = true;
-      no_donation_frag = true;
+      xwayland = {
+        enabled = true;
+        force_zero_scaling = true;
+      };
     };
     systemd.variables = ["--all"];
   };

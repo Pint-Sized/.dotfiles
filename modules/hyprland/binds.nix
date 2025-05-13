@@ -1,8 +1,5 @@
 {
   wayland.windowManager.hyprland.settings = {
-    binds = {
-      disable_keybind_grabbing = true;
-    };
     "$mainMod" = "SUPER";
     "$terminal" = "kitty";
     "$filemanager" = "nautilus";
