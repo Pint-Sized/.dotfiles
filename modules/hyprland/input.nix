@@ -7,6 +7,7 @@
       touchpad = {
         natural_scroll = false;
       };
+      special_fallthrough = true;
     };
 
     gestures = {

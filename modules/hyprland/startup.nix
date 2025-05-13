@@ -18,7 +18,5 @@
     "pkill waybar"
     "waybar &"
     "sleep 10"
-    #"rclone mount fionnbennett123@gmail.com: /home/${userSettings.username}/Cloud/fionnbennett123@gmail.com"
-    #"rclone mount fionnbennett06@gmail.com: /home/${userSettings.username}/Cloud/fionnbennett06@gmail.com"
   ];
 }
