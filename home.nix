@@ -33,6 +33,9 @@
     # ---------- GIT --------------#
     ./modules/git.nix
 
+    # ----- GITUI ------ #
+    ./modules/git.nix
+
     # ---------- GTK ------------- #
     ./modules/gtk.nix
 
