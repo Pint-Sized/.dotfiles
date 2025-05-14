@@ -37,11 +37,6 @@
       uninstallUnmanaged = true;
       overrides = {
         global = {
-          Context.sockets = [
-            "wayland"
-            "!x11"
-            "!fallback-x11"
-          ];
           Environment = {
             XCURSOR_SIZE = "16";
             MOZ_ENABLE_WAYLAND = "1";
