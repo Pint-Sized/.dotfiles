@@ -159,10 +159,29 @@
       };
     };
     homeConfigurations = {
-      fionnbennett = home-manager.lib.homeManagerConfiguration {
+      fionnbennett-desktop = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
           ./home.nix
+          ./modules/hyprland/variables-desktop.nix
+          nixvim.homeManagerModules.nixvim
+          stylix.homeManagerModules.stylix
+          spicetify-nix.homeManagerModules.default
+          nixcord.homeModules.nixcord
+        ];
+        extraSpecialArgs = {
+          inherit inputs;
+          inherit pkgs-unstable;
+          inherit pkgs-master;
+          inherit systemSettings;
+          inherit userSettings;
+        };
+      };
+      fionnbennett-laptop = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        modules = [
+          ./home.nix
+          ./modules/hyprland/variables-laptop.nix
           nixvim.homeManagerModules.nixvim
           stylix.homeManagerModules.stylix
           spicetify-nix.homeManagerModules.default

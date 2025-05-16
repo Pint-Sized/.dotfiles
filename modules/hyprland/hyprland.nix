@@ -10,6 +10,5 @@
     ./plugins.nix
     ./pyprland.nix
     ./startup.nix
-    ./variables.nix
   ];
 }
