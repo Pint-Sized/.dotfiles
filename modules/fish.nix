@@ -24,9 +24,10 @@
       n = "nvim $argv";
       nrd = "nh os switch ~/.dotfiles -H desktop";
       nrl = "nh os switch ~/.dotfiles -H laptop";
-      hr = "nh home switch ~/.dotfiles;hyprctl reload";
-      frd = "nh os switch ~/.dotfiles -H desktop -u; nh home switch ~/.dotfiles; hyprctl reload";
-      frl = "nh os switch ~/.dotfiles -H laptop -u; nh home switch ~/.dotfiles; hyprctl reload";
+      hrd = "nh home switch ~/.dotfiles -c fionnbennett-desktop;hyprctl reload";
+      hrl = "nh home switch ~/.dotfiles -c fionnbennett-laptop;hyprctl reload";
+      frd = "nh os switch ~/.dotfiles -H desktop -u; nh home switch ~/.dotfiles -c fionnbennett-desktop; hyprctl reload";
+      frl = "nh os switch ~/.dotfiles -H laptop -u; nh home switch ~/.dotfiles -c fionnbennett-laptop; hyprctl reload";
       y = {
         description = "Yazi changes directory on exit";
         body = ''

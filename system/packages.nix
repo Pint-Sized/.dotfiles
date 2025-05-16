@@ -73,6 +73,7 @@
       quickgui
       quickemu
       statix
+      gnome-calendar
     ])
     # ----- UNSTABLE ----- #
     ++ (with pkgs-unstable; [
