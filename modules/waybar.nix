@@ -11,7 +11,7 @@
         "position" = "top";
         "margin-left" = 6;
         "margin-right" = 6;
-        "margin-top" = 2;
+        "margin-top" = 1;
         "exclusive" = true;
         "passthrough" = false;
         "reload_style_on_change" = true;
@@ -262,7 +262,7 @@
     style = with config.lib.stylix.colors; ''
       * {
           font-family: "${userSettings.fontMono}";
-          font-size: 13px;
+          font-size: 12px;
           min-height: 0;
           padding: 0;
           margin: 0;
