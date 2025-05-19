@@ -85,8 +85,8 @@
       email = "fionnbennett06@gmail.com";
       theme = "uwunicorn";
       fontPkg = "pkgs.nerdfonts";
-      fontSerif = "CaskaydiaCove Nerd Font";
-      fontMono = "CaskaydiaCove Nerd Font";
+      fontSerif = "0xProto Nerd Font";
+      fontMono = "0xProto Nerd Font Mono";
       cursorPkg = "pkgs.bibata-cursors";
       cursorName = "Bibata-Modern-Classic";
     };
@@ -95,13 +95,25 @@
 
     system = "x86_64-linux";
 
-    pkgs = nixpkgs.legacyPackages.${system};
-
+    pkgs = import nixpkgs {
+      inherit system;
+      config = {
+        allowUnfree = true;
+        permittedInsecurePackages = [
+          "electron-33.4.11"
+          "python-2.7.18.8"
+          "dotnet-runtime-7.0.20"
+          "dotnet-runtime-wrapped-7.0.20"
+        ];
+      };
+    };
     pkgs-unstable = import nixpkgs-unstable {
       inherit system;
       config = {
         allowUnfree = true;
         permittedInsecurePackages = [
+          "electron-33.4.11"
+          "python-2.7.18.8"
           "dotnet-runtime-7.0.20"
           "dotnet-runtime-wrapped-7.0.20"
         ];
@@ -113,6 +125,8 @@
       config = {
         allowUnfree = true;
         permittedInsecurePackages = [
+          "electron-33.4.11"
+          "python-2.7.18.8"
           "dotnet-runtime-7.0.20"
           "dotnet-runtime-wrapped-7.0.20"
         ];
@@ -132,6 +146,7 @@
         ];
         specialArgs = {
           inherit inputs;
+          inherit pkgs;
           inherit pkgs-unstable;
           inherit pkgs-master;
           inherit systemSettings;
@@ -151,6 +166,7 @@
         ];
         specialArgs = {
           inherit inputs;
+          inherit pkgs;
           inherit pkgs-unstable;
           inherit pkgs-master;
           inherit systemSettings;
@@ -171,6 +187,7 @@
         ];
         extraSpecialArgs = {
           inherit inputs;
+          inherit pkgs;
           inherit pkgs-unstable;
           inherit pkgs-master;
           inherit systemSettings;
@@ -189,6 +206,7 @@
         ];
         extraSpecialArgs = {
           inherit inputs;
+          inherit pkgs;
           inherit pkgs-unstable;
           inherit pkgs-master;
           inherit systemSettings;
