@@ -47,7 +47,6 @@
       swaynotificationcenter
       swayosd
       swww
-      teams-for-linux
       thunderbird
       tldr
       udisks

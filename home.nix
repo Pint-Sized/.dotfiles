@@ -109,11 +109,18 @@
     # ---- ZED ----- #
     ./modules/zed.nix
   ];
+
   nixpkgs.config = {
     allowUnfree = true;
     allowUnfreePredicate = true;
   };
-  programs.home-manager.enable = true; # allows home-manager to manage itself
+
+  programs.home-manager = {
+    enable = true; # allows home-manager to manage itself
+    useGlobalPkgs = true;
+    useUserPackages = true;
+  };
+
   home = {
     enableNixpkgsReleaseCheck = false;
     stateVersion = "24.05"; # do not change without consulting manual
