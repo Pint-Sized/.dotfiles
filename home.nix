@@ -115,11 +115,7 @@
     allowUnfreePredicate = true;
   };
 
-  programs.home-manager = {
-    enable = true; # allows home-manager to manage itself
-    useGlobalPkgs = true;
-    useUserPackages = true;
-  };
+  programs.home-manager.enable = true; # allows home-manager to manage itself
 
   home = {
     enableNixpkgsReleaseCheck = false;
