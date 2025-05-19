@@ -121,11 +121,4 @@
     enableNixpkgsReleaseCheck = false;
     stateVersion = "24.05"; # do not change without consulting manual
   };
-  #xdg.portal = {
-  #enable = true;
-  #xdgOpenUsePortal = true;
-  #extraPortals = [
-  #inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland
-  #];
-  #};
 }
