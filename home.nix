@@ -37,7 +37,7 @@
     ./modules/git.nix
 
     # ----- GITUI ------ #
-    ./modules/git.nix
+    #./modules/gitui.nix
 
     # ---------- GTK ------------- #
     ./modules/gtk.nix
