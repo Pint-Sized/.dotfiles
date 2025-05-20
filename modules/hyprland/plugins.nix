@@ -20,7 +20,7 @@
         natural_rounding = "on";
       };
       hyprfocus = {
-        enabled = "yes";
+        enabled = "no";
         animate_floating = "yes";
         animate_workspacechange = "yes";
         focus_animation = "shrink";

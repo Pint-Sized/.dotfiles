@@ -83,7 +83,7 @@
       username = "fionnbennett";
       name = "Fionn Bennett";
       email = "fionnbennett06@gmail.com";
-      theme = "uwunicorn";
+      theme = "gruvbox-material-dark-soft";
       fontPkg = "pkgs.nerdfonts";
       fontSerif = "CaskaydiaCove Nerd Font";
       fontMono = "CaskaydiaCove Nerd Font";
