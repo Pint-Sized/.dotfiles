@@ -19,7 +19,8 @@
       emote
       mediainfo
       fastfetch
-      floorp
+      firefox
+      firefoxpwa
       foot
       fragments
       fzf
