@@ -72,7 +72,6 @@
       quickgui
       quickemu
       statix
-      gnome-calendar
     ])
     # ----- UNSTABLE ----- #
     ++ (with pkgs-unstable; [
@@ -129,31 +128,26 @@
       enable = true;
       xwayland.enable = true;
     };
-
     nh = {
       enable = true;
       clean.enable = true;
       clean.extraArgs = "--keep-since 4d --keep 3";
       flake = "/home/${userSettings.username}/.dotfiles";
     };
-
     fish = {
       enable = true;
       package = pkgs.fish;
     };
-
     mtr = {
       enable = true;
       package = pkgs.mtr;
     };
-
     gnupg = {
       agent = {
         enable = true;
         enableSSHSupport = true;
       };
     };
-
     nix-index-database = {
       comma.enable = true;
     };
