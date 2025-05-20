@@ -1,10 +1,8 @@
 {pkgs, ...}: {
   programs = {
-    firefox = {
+    floorp = {
       enable = true;
-      package = pkgs.librewolf;
-      nativeMessagingHosts = [pkgs.firefoxpwa];
-      profiles."default" = {
+      profiles."8b2kzims.default" = {
         settings = {
           "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
           "browser.uidensity" = 0; # Set UI density to normal
@@ -14,9 +12,9 @@
       };
     };
   };
-  stylix.targets.firefox = {
+  stylix.targets.floorp = {
     enable = true;
-    profileNames = ["default"];
+    profileNames = ["8b2kzims.default"];
     firefoxGnomeTheme.enable = true;
   };
 }

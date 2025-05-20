@@ -18,11 +18,11 @@
     # ------- FASTFETCH -------- #
     ./modules/fastfetch.nix
 
-    # --------- FIREFOX ----------- #
-    ./modules/firefox.nix
-
     # ----------- FISH ------------- #
     ./modules/fish.nix
+
+    # --------- FLOORP ----------- #
+    ./modules/floorp.nix
 
     # ---- FONTS ---- #
     ./fonts/fonts.nix
