@@ -56,6 +56,7 @@
       vencord
       volctl
       waybar
+      waypaper
       wdisplays
       wev
       which
