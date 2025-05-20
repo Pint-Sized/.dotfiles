@@ -22,12 +22,13 @@
     functions = {
       c = "clear";
       n = "nvim $argv";
-      nrd = "nh os switch ~/.dotfiles -H desktop";
-      nrl = "nh os switch ~/.dotfiles -H laptop";
+      ls = "ls -a $argv";
+      nrd = "sudo clear; nh os switch ~/.dotfiles -H desktop";
+      nrl = "sudo clear; nh os switch ~/.dotfiles -H laptop";
       hrd = "nh home switch ~/.dotfiles -c fionnbennett-desktop;hyprctl reload";
       hrl = "nh home switch ~/.dotfiles -c fionnbennett-laptop;hyprctl reload";
-      frd = "nh os switch ~/.dotfiles -H desktop -u; nh home switch ~/.dotfiles -c fionnbennett-desktop; hyprctl reload";
-      frl = "nh os switch ~/.dotfiles -H laptop -u; nh home switch ~/.dotfiles -c fionnbennett-laptop; hyprctl reload";
+      frd = "sudo clear; nh os switch ~/.dotfiles -H desktop -u; nh home switch ~/.dotfiles -c fionnbennett-desktop; hyprctl reload";
+      frl = "sudo clear; nh os switch ~/.dotfiles -H laptop -u; nh home switch ~/.dotfiles -c fionnbennett-laptop; hyprctl reload";
       y = {
         description = "Yazi changes directory on exit";
         body = ''
@@ -53,7 +54,7 @@
               end
         '';
       };
-      gc = "git add *;git commit -m $argv; git push github main";
+      gc = "git add *; git commit -m $argv; git push github main";
       nix-template = "nix flake init -t github:nix-community/templates#$argv";
       fetch = "fish";
       fbg = "bash -c $argv";

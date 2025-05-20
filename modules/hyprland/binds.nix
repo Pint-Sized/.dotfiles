@@ -3,7 +3,7 @@
     "$mainMod" = "SUPER";
     "$terminal" = "kitty";
     "$filemanager" = "nautilus";
-    "$browser" = "librewolf";
+    "$browser" = "firefox";
     bind = [
       "$mainMod, Q, exec, $terminal"
       "$mainMod, C, killactive"
@@ -52,7 +52,6 @@
 
       "$mainMod, 7, exec, pypr toggle timetable"
       "$mainMod, 8, exec, pypr toggle pavucontrol"
-      #"$mainMod, 9, exec, pypr toggle discord"
       "$mainMod, 0, exec, pypr toggle whatsapp"
       "$mainMod, code:20, exec, pypr toggle email"
       "$mainMod, code:21, exec, pypr toggle spotify"

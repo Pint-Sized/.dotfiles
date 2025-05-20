@@ -19,6 +19,7 @@
       emote
       mediainfo
       fastfetch
+      firefox
       firefoxpwa
       foot
       fragments
@@ -28,7 +29,6 @@
       imv
       jq
       kdePackages.qt6ct
-      librewolf
       libreoffice-qt6-fresh
       libsForQt5.qt5ct
       mpv
@@ -73,6 +73,8 @@
       quickgui
       quickemu
       statix
+      w3m-nox
+      tgpt
     ])
     # ----- UNSTABLE ----- #
     ++ (with pkgs-unstable; [
@@ -92,6 +94,7 @@
       nix-output-monitor
       prettierd
       pyright
+      basedpyright
       stylua
       wttrbar
       yamllint

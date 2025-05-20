@@ -23,7 +23,10 @@
           markdown_oxide = {
             enable = true;
           };
-          pyright = {
+          #pyright = {
+          #enable = true;
+          #};
+          basedpyright = {
             enable = true;
           };
           gopls = {

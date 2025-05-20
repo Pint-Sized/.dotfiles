@@ -18,6 +18,9 @@
     # ------- FASTFETCH -------- #
     ./modules/fastfetch.nix
 
+    # --------- FIREFOX ----------- #
+    ./modules/firefox.nix
+
     # ----------- FISH ------------- #
     ./modules/fish.nix
 
@@ -51,17 +54,11 @@
     # ----------- KITTY  ------------- #
     ./modules/kitty.nix
 
-    # --------- LIBREWOLF ----------- #
-    ./modules/librewolf/librewolf.nix
-
     # ----- MICROSOFT-OFFICE ----- #
     ./applications/microsoft-office/office.nix
 
     # ----- MPV ----- #
     ./modules/mpv.nix
-
-    # -------- NIXCORD ------- #
-    #./modules/nixcord.nix
 
     # --------- NIXVIM --------- #
     ./modules/nixvim/nixvim.nix
@@ -74,9 +71,6 @@
 
     # ------- SPICETIFY ------ #
     ./modules/spicetify.nix
-
-    # ---- STEAM ---- #
-    #./modules/steam.nix
 
     # ----- SWAYOSD ----- #
     ./modules/swayosd/swayosd.nix

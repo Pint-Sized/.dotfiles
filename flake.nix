@@ -85,8 +85,8 @@
       email = "fionnbennett06@gmail.com";
       theme = "uwunicorn";
       fontPkg = "pkgs.nerdfonts";
-      fontSerif = "0xProto Nerd Font";
-      fontMono = "0xProto Nerd Font Mono";
+      fontSerif = "CaskaydiaCove Nerd Font";
+      fontMono = "CaskaydiaCove Nerd Font";
       cursorPkg = "pkgs.bibata-cursors";
       cursorName = "Bibata-Modern-Classic";
     };
