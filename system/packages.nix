@@ -50,6 +50,7 @@
       thunderbird
       tldr
       udisks
+      ulauncher
       unzip
       usbutils
       vencord
@@ -92,7 +93,6 @@
       prettierd
       pyright
       stylua
-      ulauncher
       wttrbar
       yamllint
       yamlfmt
