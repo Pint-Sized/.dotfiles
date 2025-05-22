@@ -16,13 +16,13 @@
       calligraphy
       cava
       celluloid
-      #emote
+      emote
       mediainfo
       fastfetch
       firefox
       firefoxpwa
       foot
-      #fragments
+      fragments
       fzf
       git
       gparted
@@ -43,17 +43,17 @@
       python
       python3
       ripgrep
-      #spotify
+      spotify
       swaynotificationcenter
       swayosd
       swww
-      #thunderbird
+      thunderbird
       tldr
       udisks
       ulauncher
       unzip
       usbutils
-      #vencord
+      vencord
       volctl
       waybar
       waypaper
@@ -63,17 +63,17 @@
       wl-clipboard
       wlogout
       yazi
-      #zapzap
+      zapzap
       zathura
-      #zed-editor
+      zed-editor
       zip
 
       # testing
-      #discover-overlay
-      #overlayed
-      #quickgui
-      #quickemu
-      #statix
+      discover-overlay
+      overlayed
+      quickgui
+      quickemu
+      statix
       w3m-nox
       tgpt
     ])
@@ -120,10 +120,10 @@
 
   services.flatpak.packages = [
     "io.github.giantpinkrobots.flatsweep"
-    #"com.usebottles.bottles"
-    #"io.github.hamza_algohary.Coulomb"
-    #"io.frama.tractor.carburetor"
-    #"it.mijorus.whisper"
+    "com.usebottles.bottles"
+    "io.github.hamza_algohary.Coulomb"
+    "io.frama.tractor.carburetor"
+    "it.mijorus.whisper"
     "org.thonny.Thonny"
   ];
 
