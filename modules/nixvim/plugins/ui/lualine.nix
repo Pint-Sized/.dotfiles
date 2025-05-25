@@ -62,9 +62,6 @@
                   bg = "#${base00-hex}",
                   gui = "bold",
                 },
-                -- fmt = function(str)
-                  -- return str:gsub("(.*)%p.*$","%1")
-                -- end
               '';
             }
           ];
@@ -74,9 +71,7 @@
               __unkeyed-1 = "filetype";
               separator.left = "";
               colored = false;
-              icon = {
-                align = "left";
-              };
+              icon.align = "left";
               color = {
                 fg = "#${base01-hex}";
                 bg = "#${base0F-hex}";

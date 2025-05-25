@@ -51,11 +51,11 @@
         enabled = true;
         mode = "tilt";
         threshold = 2;
+        shake.enabled = false;
         tilt = {
           limit = 4000;
           function = "negative_quadratic";
         };
-        shake.enabled = false;
       };
       hyprwinwrap.class = "foot";
       hyprexpo = {

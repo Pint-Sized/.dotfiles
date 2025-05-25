@@ -8,24 +8,18 @@
         enable = true;
         settings = {
           autoEnableSources = true;
-          experimental = {
-            ghost_text = false;
-          };
+          experimental.ghost_text = false;
           performance = {
             debounce = 60;
             fetchingTimeout = 200;
             maxViewEntries = 30;
           };
-          snippet = {
-            expand = "luasnip";
-          };
-          formatting = {
-            fields = [
-              "kind"
-              "abbr"
-              "menu"
-            ];
-          };
+          snippet.expand = "luasnip";
+          formatting.fields = [
+            "kind"
+            "abbr"
+            "menu"
+          ];
           sources = [
             {name = "git";}
             {name = "nvim_lsp";}
@@ -44,7 +38,6 @@
               keywordLength = 3;
             }
           ];
-
           window = {
             completion = {
               border = "solid";
@@ -53,7 +46,6 @@
               border = "solid";
             };
           };
-
           mapping = {
             "<C-Tab>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
             "<C-j>" = "cmp.mapping.select_next_item()";
@@ -67,21 +59,11 @@
           };
         };
       };
-      cmp-nvim-lsp = {
-        enable = true;
-      };
-      cmp-buffer = {
-        enable = true;
-      };
-      cmp-path = {
-        enable = true;
-      };
-      cmp_luasnip = {
-        enable = true;
-      };
-      cmp-cmdline = {
-        enable = false;
-      };
+      cmp-nvim-lsp.enable = true;
+      cmp-buffer.enable = true;
+      cmp-path.enable = true;
+      cmp_luasnip.enable = true;
+      cmp-cmdline.enable = false;
     };
     extraConfigLua = ''
           luasnip = require("luasnip")
@@ -111,7 +93,7 @@
             Event = " ",
             Operator = " ",
             TypeParameter = " ",
-          } 
+          }
 
            local cmp = require'cmp'
 
@@ -123,7 +105,7 @@
        })
 
       -- Set configuration for specific filetype.
-       cmp.setup.filetype('gitcommit', {
+      cmp.setup.filetype('gitcommit', {
          sources = cmp.config.sources({
            { name = 'cmp_git' }, -- You can specify the `cmp_git` source if you were installed it.
          }, {
@@ -131,13 +113,14 @@
          })
        })
 
-       -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
-       cmp.setup.cmdline(':', {
+      -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
+      cmp.setup.cmdline(':', {
          sources = cmp.config.sources({
            { name = 'path' }
          }, {
            { name = 'cmdline' }
          }),
-       })  '';
+      })
+    '';
   };
 }

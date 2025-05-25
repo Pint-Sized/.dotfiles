@@ -156,8 +156,7 @@
             "󰤢"
             "󰤥"
           ];
-          #"format-wifi" = "󰤥";
-          "format-wifi" = "";
+          "format-wifi" = "󰤥";
           "rotate" = 0;
           "format-ethernet" = "󰈀";
           "tooltip-format" = ''

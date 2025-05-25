@@ -1,6 +1,7 @@
 {
   pkgs,
   pkgs-unstable,
+  userSettings,
   ...
 }: {
   environment.systemPackages =
@@ -8,28 +9,23 @@
       cartridges
       liquidctl
       polychromatic
+      protontricks
       protonup
       openrgb-with-all-plugins
-      cartridges
     ])
     ++ (with pkgs-unstable; [
       lm_sensors
       vintagestory
     ]);
 
-  services.flatpak = {
-    packages = [
-      "com.valvesoftware.Steam"
-    ];
-  };
+  #services.flatpak = {
+  #packages = [];
+  #};
 
   programs = {
-    coolercontrol = {
-      enable = true;
-    };
-    gamemode = {
-      enable = true;
-    };
+    coolercontrol.enable = true;
+    gamemode.enable = true;
+    steam.enable = true;
     gamescope = {
       enable = true;
       capSysNice = true;

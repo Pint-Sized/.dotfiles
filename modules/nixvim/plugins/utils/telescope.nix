@@ -3,35 +3,21 @@
     plugins.telescope = {
       enable = true;
       extensions = {
-        file-browser = {
-          enable = true;
-        };
-        fzf-native = {
-          enable = true;
-        };
+        file-browser.enable = true;
+        fzf-native.enable = true;
       };
-      settings = {
-        defaults = {
-          layout_config = {
-            horizontal = {
-              prompt_position = "bottom";
-            };
-          };
-          sorting_strategy = "descending";
-        };
+      settings.defaults = {
+        sorting_strategy = "descending";
+        layout_config.horizontal.prompt_position = "bottom";
       };
       keymaps = {
         "<leader><space>" = {
           action = "find_files";
-          options = {
-            desc = "Find project files";
-          };
+          options.desc = "Find project files";
         };
         "<leader>/" = {
           action = "live_grep";
-          options = {
-            desc = "Grep (root dir)";
-          };
+          options.desc = "Grep (root dir)";
         };
         "<leader>:" = {
           action = "command_history";

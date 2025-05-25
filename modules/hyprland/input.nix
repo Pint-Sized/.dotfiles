@@ -4,10 +4,8 @@
       kb_layout = "gb";
       follow_mouse = 2;
       sensitivity = 0;
-      touchpad = {
-        natural_scroll = false;
-      };
       special_fallthrough = true;
+      touchpad.natural_scroll = false;
     };
     gestures = {
       workspace_swipe = true;

@@ -2,9 +2,7 @@
   programs.nixvim = {
     plugins.lspsaga = {
       enable = true;
-      beacon = {
-        enable = true;
-      };
+      beacon.enable = true;
       ui = {
         border = "rounded"; # One of none, single, double, rounded, solid, shadow
         codeAction = "💡"; # Can be any symbol you want 💡
@@ -18,9 +16,7 @@
         diagnosticOnlyCurrent = false;
         showCodeAction = true;
       };
-      symbolInWinbar = {
-        enable = false; # Breadcrumbs
-      };
+      symbolInWinbar.enable = false; # Breadcrumbs
       codeAction = {
         extendGitSigns = false;
         showServerName = true;
@@ -39,18 +35,16 @@
         sign = false;
         virtualText = true;
       };
-      implement = {
-        enable = false;
-      };
+      implement.enable = false;
       rename = {
         autoSave = false;
         keys = {
           exec = "<CR>";
+          select = "x";
           quit = [
             "<C-k>"
             "<Esc>"
           ];
-          select = "x";
         };
       };
       outline = {
@@ -89,7 +83,6 @@
           silent = true;
         };
       }
-
       {
         mode = "n";
         key = "gI";
@@ -153,7 +146,6 @@
           silent = true;
         };
       }
-
       {
         mode = "n";
         key = "[d";
@@ -163,7 +155,6 @@
           silent = true;
         };
       }
-
       {
         mode = "n";
         key = "]d";

@@ -33,6 +33,7 @@
       libsForQt5.qt5ct
       mpv
       nautilus
+      nexusmods-app
       nix-du
       nix-unit
       ntfs3g
@@ -124,7 +125,6 @@
     "io.github.hamza_algohary.Coulomb"
     "io.frama.tractor.carburetor"
     "it.mijorus.whisper"
-    "org.thonny.Thonny"
   ];
 
   programs = {

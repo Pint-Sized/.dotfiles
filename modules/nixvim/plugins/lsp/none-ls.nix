@@ -3,14 +3,9 @@
     plugins.none-ls = {
       enable = false;
       enableLspFormat = true;
-      settings = {
-        updateInInsert = false;
-      };
+      settings.updateInInsert = false;
       sources = {
-        code_actions = {
-          # gitsigns.enable = true;
-          statix.enable = true;
-        };
+        code_actions.statix.enable = true;
         diagnostics = {
           statix.enable = true;
           yamllint.enable = true;
@@ -38,9 +33,7 @@
             '';
           };
           stylua.enable = true;
-          yamlfmt = {
-            enable = true;
-          };
+          yamlfmt.enable = true;
           hclfmt.enable = true;
         };
       };

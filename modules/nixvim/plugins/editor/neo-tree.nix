@@ -12,9 +12,7 @@
 
       filesystem = {
         bindToCwd = false;
-        followCurrentFile = {
-          enabled = true;
-        };
+        followCurrentFile.enabled = true;
         filteredItems = {
           hideDotfiles = false;
           hideGitignored = true;
@@ -49,9 +47,7 @@
         mode = ["n"];
         key = "<leader>e";
         action = "<cmd>Neotree toggle<cr>";
-        options = {
-          desc = "Open/Close Neotree";
-        };
+        options.desc = "Open/Close Neotree";
       }
     ];
   };

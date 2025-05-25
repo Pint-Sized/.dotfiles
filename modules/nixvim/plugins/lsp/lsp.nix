@@ -1,46 +1,21 @@
 {
   programs.nixvim = {
     plugins = {
-      lsp-format = {
-        enable = true;
-      };
+      lsp-format.enable = true;
       lsp = {
         enable = true;
         inlayHints = true;
         servers = {
-          bashls = {
-            enable = true;
-          };
-          html = {
-            enable = true;
-          };
-          lua_ls = {
-            enable = true;
-          };
-          nixd = {
-            enable = true;
-          };
-          markdown_oxide = {
-            enable = true;
-          };
-          #pyright = {
-          #enable = true;
-          #};
-          basedpyright = {
-            enable = true;
-          };
-          gopls = {
-            enable = true;
-          };
-          terraformls = {
-            enable = true;
-          };
-          yamlls = {
-            enable = true;
-          };
-          jsonls = {
-            enable = true;
-          };
+          bashls.enable = true;
+          html.enable = true;
+          lua_ls.enable = true;
+          nixd.enable = true;
+          markdown_oxide.enable = true;
+          basedpyright.enable = true;
+          gopls.enable = true;
+          terraformls.enable = true;
+          yamlls.enable = true;
+          jsonls.enable = true;
         };
         keymaps = {
           silent = true;

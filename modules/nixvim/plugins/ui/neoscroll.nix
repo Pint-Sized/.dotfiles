@@ -1,5 +1,3 @@
 {
-  programs.nixvim.plugins.neoscroll = {
-    enable = true;
-  };
+  programs.nixvim.plugins.neoscroll.enable = true;
 }
