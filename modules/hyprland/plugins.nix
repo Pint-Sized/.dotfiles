@@ -1,13 +1,15 @@
 {
   config,
   pkgs,
+  #hyprfocus,
   ...
 }: {
   wayland.windowManager.hyprland = with config.lib.stylix.colors; {
     plugins = [
       pkgs.hyprlandPlugins.hyprwinwrap
       pkgs.hyprlandPlugins.borders-plus-plus
-      pkgs.hyprlandPlugins.hyprfocus
+      #pkgs.hyprlandPlugins.hyprfocus
+      #yprfocus.packages.${pkgs.system}.hyprfocus
       pkgs.hyprlandPlugins.csgo-vulkan-fix
       pkgs.hyprlandPlugins.hyprexpo
       pkgs.hyprlandPlugins.hypr-dynamic-cursors
@@ -20,7 +22,7 @@
         natural_rounding = "on";
       };
       hyprfocus = {
-        enabled = "yes";
+        enabled = "no";
         animate_floating = "yes";
         animate_workspacechange = "yes";
         focus_animation = "shrink";

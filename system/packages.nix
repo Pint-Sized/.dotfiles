@@ -8,7 +8,7 @@
   environment.systemPackages =
     (with pkgs; [
       appeditor
-      ark
+      kdePackages.ark
       bat
       base16-schemes
       black
@@ -27,6 +27,7 @@
       git
       gparted
       imv
+      kitty
       jq
       kdePackages.qt6ct
       libreoffice-qt6-fresh
@@ -86,7 +87,6 @@
       hclfmt
       hyprpolkitagent
       hyprshot
-      kitty
       lua
       markdown-oxide
       nchat

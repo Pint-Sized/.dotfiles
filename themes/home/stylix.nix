@@ -15,15 +15,15 @@
     fonts = {
       serif = {
         name = userSettings.fontSerif;
-        package = pkgs.nerdfonts;
+        package = pkgs.nerd-fonts.${userSettings.fontPkg};
       };
       sansSerif = {
         name = userSettings.fontSerif;
-        package = pkgs.nerdfonts;
+        package = pkgs.nerd-fonts.${userSettings.fontPkg};
       };
       monospace = {
         name = userSettings.fontMono;
-        package = pkgs.nerdfonts;
+        package = pkgs.nerd-fonts.${userSettings.fontPkg};
       };
       sizes = {
         terminal = 10;

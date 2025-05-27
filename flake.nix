@@ -1,7 +1,7 @@
 {
   inputs = {
     # ----- NIX PACKAGES ----- #
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-master.url = "github:/nixos/nixpkgs/master";
 
@@ -18,7 +18,7 @@
 
     # ----- HOME-MANAGER ----- #
     home-manager = {
-      url = "github:nix-community/home-manager/release-24.11";
+      url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -30,7 +30,7 @@
 
     # ----- STYLIX ----- #
     stylix = {
-      url = "github:danth/stylix/release-24.11";
+      url = "github:danth/stylix/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -56,6 +56,10 @@
       url = "github:kaylorben/nixcord";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    hyprfocus = {
+      url = "github:daxisunder/hyprfocus";
+    };
   };
 
   outputs = inputs @ {
@@ -70,6 +74,7 @@
     spicetify-nix,
     nixcord,
     nixos-hardware,
+    hyprfocus,
     ...
   }: let
     systemSettings = {
@@ -84,9 +89,9 @@
       name = "Fionn Bennett";
       email = "fionnbennett06@gmail.com";
       theme = "gruvbox-material-dark-soft";
-      fontPkg = "pkgs.nerdfonts";
-      fontSerif = "CaskaydiaCove Nerd Font";
-      fontMono = "CaskaydiaCove Nerd Font";
+      fontPkg = "_0xproto";
+      fontSerif = "0xProto Nerd Font";
+      fontMono = "0xProto Nerd Font Mono";
       cursorPkg = "pkgs.bibata-cursors";
       cursorName = "Bibata-Modern-Classic";
     };
@@ -192,6 +197,7 @@
           inherit pkgs-master;
           inherit systemSettings;
           inherit userSettings;
+          inherit hyprfocus;
         };
       };
       fionnbennett-laptop = home-manager.lib.homeManagerConfiguration {
@@ -211,6 +217,7 @@
           inherit pkgs-master;
           inherit systemSettings;
           inherit userSettings;
+          inherit hyprfocus;
         };
       };
     };
