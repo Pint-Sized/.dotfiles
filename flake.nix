@@ -58,7 +58,8 @@
     };
 
     hyprfocus = {
-      url = "github:daxisunder/hyprfocus";
+      url = "github:the-pint-sized-powerhouse/hyprfocus";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
@@ -88,7 +89,7 @@
       username = "fionnbennett";
       name = "Fionn Bennett";
       email = "fionnbennett06@gmail.com";
-      theme = "gruvbox-material-dark-soft";
+      theme = "everforest";
       fontPkg = "_0xproto";
       fontSerif = "0xProto Nerd Font";
       fontMono = "0xProto Nerd Font Mono";

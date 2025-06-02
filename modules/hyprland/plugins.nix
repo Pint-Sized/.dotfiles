@@ -1,7 +1,7 @@
 {
   config,
   pkgs,
-  #hyprfocus,
+  hyprfocus,
   ...
 }: {
   wayland.windowManager.hyprland = with config.lib.stylix.colors; {
@@ -9,7 +9,7 @@
       pkgs.hyprlandPlugins.hyprwinwrap
       pkgs.hyprlandPlugins.borders-plus-plus
       #pkgs.hyprlandPlugins.hyprfocus
-      #yprfocus.packages.${pkgs.system}.hyprfocus
+      hyprfocus.packages.${pkgs.system}.hyprfocus
       pkgs.hyprlandPlugins.csgo-vulkan-fix
       pkgs.hyprlandPlugins.hyprexpo
       pkgs.hyprlandPlugins.hypr-dynamic-cursors
