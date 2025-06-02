@@ -187,7 +187,7 @@
           ./home.nix
           ./modules/hyprland/variables-desktop.nix
           nixvim.homeManagerModules.nixvim
-          stylix.homeManagerModules.stylix
+          stylix.homeModules.stylix
           spicetify-nix.homeManagerModules.default
           nixcord.homeModules.nixcord
         ];
@@ -207,7 +207,7 @@
           ./home.nix
           ./modules/hyprland/variables-laptop.nix
           nixvim.homeManagerModules.nixvim
-          stylix.homeManagerModules.stylix
+          stylix.homeModules.stylix
           spicetify-nix.homeManagerModules.default
           nixcord.homeModules.nixcord
         ];
