@@ -57,9 +57,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # ----- HYPRFOCUS ----- #
     hyprfocus = {
       url = "github:the-pint-sized-powerhouse/hyprfocus";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
