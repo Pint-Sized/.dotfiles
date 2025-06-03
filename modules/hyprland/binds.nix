@@ -12,6 +12,7 @@
       "$mainMod, J, togglesplit, # dwindle"
       "$mainMod, W, exec, $browser"
       "$mainMod, X, fullscreen, 0"
+      "$mainMod, K, wl-copy < ~/.dotfiles/scripts/tester"
 
       "$mainMod, left, movefocus, l"
       "$mainMod, right, movefocus, r"
