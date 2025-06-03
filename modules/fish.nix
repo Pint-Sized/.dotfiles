@@ -44,14 +44,14 @@
         description = "changes to newly created directory";
         body = ''
           command mkdir $argv
-              if test $status = 0
-                  switch $argv[(count $argv)]
-                      case '-*'
-                      case '*'
-                          cd $argv[(count $argv)]
-                          return
-                  end
+            if test $status = 0
+              switch $argv[(count $argv)]
+                case '-*'
+                case '*'
+                  cd $argv[(count $argv)]
+                  return
               end
+            end
         '';
       };
       gc = "git add *; git commit -m $argv; git push github main";
