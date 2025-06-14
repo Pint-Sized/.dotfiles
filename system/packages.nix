@@ -155,5 +155,12 @@
     nix-index-database = {
       comma.enable = true;
     };
+    # ----- temp ----- #
+    steam.enable = true;
+    gamemode.enable = true;
+    gamescope = {
+      enable = true;
+      capSysNice = true;
+    };
   };
 }

@@ -206,7 +206,7 @@
           "format" = "{}°";
           "tooltip" = true;
           "interval" = 3600;
-          "exec" = "wttrbar --location New+Ross";
+          "exec" = "wttrbar --location Beaumont+Dublin";
           "return-type" = "json";
         };
       }
