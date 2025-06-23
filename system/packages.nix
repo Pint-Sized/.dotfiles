@@ -41,6 +41,7 @@
       pavucontrol
       playerctl
       pokeget-rs
+      prismlauncher
       pyprland
       python
       python3
