@@ -41,7 +41,6 @@
       pavucontrol
       playerctl
       pokeget-rs
-      prismlauncher
       pyprland
       python
       python3
@@ -126,6 +125,7 @@
     "io.github.hamza_algohary.Coulomb"
     "io.frama.tractor.carburetor"
     "it.mijorus.whisper"
+    "org.prismlauncher.PrismLauncher"
   ];
 
   programs = {
