@@ -78,6 +78,7 @@
       statix
       w3m-nox
       tgpt
+      badlion-client
     ])
     # ----- UNSTABLE ----- #
     ++ (with pkgs-unstable; [
