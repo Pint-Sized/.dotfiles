@@ -90,9 +90,9 @@
       name = "Fionn Bennett";
       email = "fionnbennett06@gmail.com";
       theme = "everforest";
-      fontPkg = "_0xproto";
-      fontSerif = "0xProto Nerd Font";
-      fontMono = "0xProto Nerd Font Mono";
+      fontPkg = "CaskaydiaCove";
+      fontSerif = "CaskaydiaCove Nerd Font";
+      fontMono = "CaskaydiaCove Nerd Font Mono";
       cursorPkg = "pkgs.bibata-cursors";
       cursorName = "Bibata-Modern-Classic";
     };
