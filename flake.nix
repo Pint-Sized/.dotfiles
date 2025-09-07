@@ -59,7 +59,7 @@
 
     # ----- HYPRFOCUS ----- #
     hyprfocus = {
-      url = "github:the-pint-sized-powerhouse/hyprfocus";
+      url = "github:daxisunder/hyprfocus";
     };
   };
 
