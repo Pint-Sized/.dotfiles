@@ -198,7 +198,7 @@
           inherit pkgs-master;
           inherit systemSettings;
           inherit userSettings;
-          #inherit hyprfocus;
+          inherit hyprfocus;
         };
       };
       fionnbennett-laptop = home-manager.lib.homeManagerConfiguration {
