@@ -104,10 +104,10 @@
     ./modules/zed.nix
   ];
 
-  #nixpkgs.config = {
-  #allowUnfree = true;
-  #allowUnfreePredicate = true;
-  #};
+  nixpkgs.config = {
+    allowUnfree = true;
+    allowUnfreePredicate = true;
+  };
 
   programs.home-manager.enable = true; # allows home-manager to manage itself
 
