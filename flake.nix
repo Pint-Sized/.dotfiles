@@ -58,9 +58,9 @@
     };
 
     # ----- HYPRFOCUS ----- #
-    hyprfocus = {
-      url = "github:the-pint-sized-powerhouse/hyprfocus";
-    };
+    #hyprfocus = {
+    #url = "github:the-pint-sized-powerhouse/hyprfocus";
+    #};
   };
 
   outputs = inputs @ {
@@ -75,7 +75,7 @@
     spicetify-nix,
     nixcord,
     nixos-hardware,
-    hyprfocus,
+    #hyprfocus,
     ...
   }: let
     systemSettings = {
@@ -198,7 +198,7 @@
           inherit pkgs-master;
           inherit systemSettings;
           inherit userSettings;
-          inherit hyprfocus;
+          #inherit hyprfocus;
         };
       };
       fionnbennett-laptop = home-manager.lib.homeManagerConfiguration {
@@ -218,7 +218,7 @@
           inherit pkgs-master;
           inherit systemSettings;
           inherit userSettings;
-          inherit hyprfocus;
+          #inherit hyprfocus;
         };
       };
     };
