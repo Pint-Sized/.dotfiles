@@ -364,11 +364,11 @@
         "nix-filter": "nix-filter"
       },
       "locked": {
-        "lastModified": 1758666613,
-        "narHash": "sha256-uvkPypHcJKLyZSG9rlXqxvSjzMhu0HhThyvr1G3LZlY=",
+        "lastModified": 1758667945,
+        "narHash": "sha256-+Ddtq6GwiXPX9gEEz8OLCGTKUrVSzIP9KEJYMn5SXzk=",
         "owner": "the-pint-sized-powerhouse",
         "repo": "hyprfocus",
-        "rev": "1e510a8c593f036fbb29a6bdc2a633733a74bbc6",
+        "rev": "ff770fcc52709189c54fbbe357b429251e57e180",
         "type": "github"
       },
       "original": {
