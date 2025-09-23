@@ -364,15 +364,15 @@
         "nix-filter": "nix-filter"
       },
       "locked": {
-        "lastModified": 1758007696,
-        "narHash": "sha256-v8GWOTyPKwPnXJHrIPJFI364r+lH/agrs0A+ygzxiNw=",
-        "owner": "daxisunder",
+        "lastModified": 1758666613,
+        "narHash": "sha256-uvkPypHcJKLyZSG9rlXqxvSjzMhu0HhThyvr1G3LZlY=",
+        "owner": "the-pint-sized-powerhouse",
         "repo": "hyprfocus",
-        "rev": "ba5dccf8ac536f0df5fd77f2bea6ab1a6e710817",
+        "rev": "1e510a8c593f036fbb29a6bdc2a633733a74bbc6",
         "type": "github"
       },
       "original": {
-        "owner": "daxisunder",
+        "owner": "the-pint-sized-powerhouse",
         "repo": "hyprfocus",
         "type": "github"
       }
