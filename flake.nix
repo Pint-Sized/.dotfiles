@@ -30,7 +30,7 @@
 
     # ----- STYLIX ----- #
     stylix = {
-      url = "github:danth/stylix/release-25.05";
+      url = "github:nix-community/stylix/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -53,7 +53,7 @@
 
     # ----- NIXCORD ----- #
     nixcord = {
-      url = "github:kaylorben/nixcord";
+      url = "github:kaylorben/nixcord/main";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -90,9 +90,9 @@
       name = "Fionn Bennett";
       email = "fionnbennett06@gmail.com";
       theme = "everforest";
-      fontPkg = "CaskaydiaCove";
-      fontSerif = "CaskaydiaCove Nerd Font";
-      fontMono = "CaskaydiaCove Nerd Font Mono";
+      fontPkg = "nerd-fonts._0xproto";
+      fontSerif = "0xProto Nerd Font";
+      fontMono = "0xProto Nerd Font Mono";
       cursorPkg = "pkgs.bibata-cursors";
       cursorName = "Bibata-Modern-Classic";
     };
@@ -186,10 +186,10 @@
         modules = [
           ./home.nix
           ./modules/hyprland/variables-desktop.nix
-          nixvim.homeManagerModules.nixvim
+          nixvim.homeModules.nixvim
           stylix.homeModules.stylix
           spicetify-nix.homeManagerModules.default
-          nixcord.homeModules.nixcord
+          #nixcord.homeModules.nixcord
         ];
         extraSpecialArgs = {
           inherit inputs;
@@ -198,7 +198,7 @@
           inherit pkgs-master;
           inherit systemSettings;
           inherit userSettings;
-          inherit hyprfocus;
+          #inherit hyprfocus;
         };
       };
       fionnbennett-laptop = home-manager.lib.homeManagerConfiguration {
@@ -208,7 +208,7 @@
           ./modules/hyprland/variables-laptop.nix
           nixvim.homeManagerModules.nixvim
           stylix.homeModules.stylix
-          spicetify-nix.homeManagerModules.default
+          spicetify-nix.homeModules.default
           nixcord.homeModules.nixcord
         ];
         extraSpecialArgs = {

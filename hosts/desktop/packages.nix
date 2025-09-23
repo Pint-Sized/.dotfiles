@@ -12,10 +12,10 @@
       protontricks
       protonup
       openrgb-with-all-plugins
-      coolercontrol.coolercontrold
-      coolercontrol.coolercontrol-gui
-      coolercontrol.coolercontrol-ui-data
-      coolercontrol.coolercontrol-liqctld
+      #coolercontrol.coolercontrold
+      #coolercontrol.coolercontrol-gui
+      #coolercontrol.coolercontrol-ui-data
+      #coolercontrol.coolercontrol-liqctld
     ])
     ++ (with pkgs-unstable; [
       lm_sensors
@@ -27,7 +27,10 @@
   #};
 
   programs = {
-    #coolercontrol.enable = true;
+    coolercontrol = {
+      enable = true;
+      nvidiaSupport = true;
+    };
     gamemode.enable = true;
     steam.enable = true;
     gamescope = {

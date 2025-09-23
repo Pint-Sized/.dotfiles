@@ -14,16 +14,16 @@
     };
     fonts = {
       serif = {
-        name = userSettings.fontSerif;
-        package = pkgs.nerd-fonts.caskaydia-cove;
+        name = "0xProto Nerd Font";
+        package = pkgs.nerd-fonts._0xproto;
       };
       sansSerif = {
-        name = userSettings.fontSerif;
-        package = pkgs.nerd-fonts.caskaydia-cove;
+        name = "0xProto Nerd Font";
+        package = pkgs.nerd-fonts._0xproto;
       };
       monospace = {
-        name = userSettings.fontMono;
-        package = pkgs.nerd-fonts.caskaydia-cove;
+        name = "0xProto Nerd Font";
+        package = pkgs.nerd-fonts._0xproto;
       };
       sizes = {
         terminal = 10;
