@@ -16,6 +16,7 @@
       calligraphy
       cava
       celluloid
+      discover-overlay
       emote
       mediainfo
       fastfetch
@@ -34,7 +35,6 @@
       libsForQt5.qt5ct
       mpv
       nautilus
-      nexusmods-app
       nix-du
       nix-unit
       ntfs3g
@@ -69,16 +69,6 @@
       zathura
       zed-editor
       zip
-
-      # testing
-      discover-overlay
-      overlayed
-      quickgui
-      quickemu
-      statix
-      w3m-nox
-      tgpt
-      badlion-client
     ])
     # ----- UNSTABLE ----- #
     ++ (with pkgs-unstable; [
@@ -123,7 +113,6 @@
   services.flatpak.packages = [
     "io.github.giantpinkrobots.flatsweep"
     "com.usebottles.bottles"
-    "io.github.hamza_algohary.Coulomb"
     "io.frama.tractor.carburetor"
     "it.mijorus.whisper"
     "org.prismlauncher.PrismLauncher"
