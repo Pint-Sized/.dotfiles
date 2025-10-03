@@ -69,6 +69,8 @@
       zathura
       zed-editor
       zip
+
+      lazygit
     ])
     # ----- UNSTABLE ----- #
     ++ (with pkgs-unstable; [
