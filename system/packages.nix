@@ -70,9 +70,6 @@
       zathura
       zed-editor
       zip
-
-      lazygit
-      starship
     ])
     # ----- UNSTABLE ----- #
     ++ (with pkgs-unstable; [
