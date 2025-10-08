@@ -69,18 +69,21 @@
     # ---------- QT ----------- #
     ./modules/qt.nix
 
+    # ----- STARSHIP ----- #
+    ./modules/starship.nix
+
     # ------- SPICETIFY ------ #
     ./modules/spicetify.nix
+
+    # ------- STYLIX ----------- #
+    ./themes/home/stylix.nix
+    ./themes/home/${userSettings.theme}.nix
 
     # ----- SWAYOSD ----- #
     ./modules/swayosd/swayosd.nix
 
     # --------- SWAYNC --------- #
     ./modules/swaync.nix
-
-    # ------- STYLIX ----------- #
-    ./themes/home/stylix.nix
-    ./themes/home/${userSettings.theme}.nix
 
     # --------- ULAUNCHER --------- #
     ./modules/ulauncher/ulauncher.nix
