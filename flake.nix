@@ -89,7 +89,7 @@
       username = "fionnbennett";
       name = "Fionn Bennett";
       email = "fionnbennett06@gmail.com";
-      theme = "kanagawa";
+      theme = "dracula";
       fontPkg = "nerd-fonts._0xproto";
       fontSerif = "0xProto Nerd Font";
       fontMono = "0xProto Nerd Font Mono";
