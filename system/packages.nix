@@ -17,6 +17,7 @@
       cava
       celluloid
       discover-overlay
+      kdePackages.dolphin
       emote
       mediainfo
       fastfetch
