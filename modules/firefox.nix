@@ -4,7 +4,7 @@
       enable = true;
       profiles."8b2kzims.default" = {
         settings = {
-          "browser.startup.homepage" = "https://www.mojeek.com/?hp=minimal&qsba=1&qss=Brave,DuckDuckGo,Ecosia,Google";
+          #"browser.startup.homepage" = "";
           "widget.non-native-theme.scrollbar.style" = 3;
           "browser.tabs.closeWindowWithLastTab" = false;
           "rowser.dataFeatureRecommendations.enabled" = false;

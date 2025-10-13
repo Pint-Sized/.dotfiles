@@ -42,7 +42,6 @@
         enable = true;
         plugin = "base16-nvim";
       };
-      starship.enable = false;
     };
   };
   home.file.".dotfiles/themes/colours".text = with config.lib.stylix.colors; ''

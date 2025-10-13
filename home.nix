@@ -69,9 +69,6 @@
     # ---------- QT ----------- #
     ./modules/qt.nix
 
-    # ----- STARSHIP ----- #
-    ./modules/starship.nix
-
     # ------- SPICETIFY ------ #
     ./modules/spicetify.nix
 
