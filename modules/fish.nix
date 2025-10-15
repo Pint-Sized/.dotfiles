@@ -22,7 +22,7 @@
     functions = {
       c = "clear";
       n = "nvim $argv";
-      ls = "ls -a $argv";
+      ls = "lsd -a $argv";
       nrd = "sudo clear; cat ~/.dotfiles/splashes/systemRebuild; sudo nixos-rebuild switch --flake ~/.dotfiles/#desktop";
       nrl = "sudo clear; cat ~/.dotfiles/splashes/systemRebuild; sudo nixos-rebuild switch --flake ~/.dotfiles/#laptop";
       hrd = "clear; cat ~/.dotfiles/splashes/homeRebuild; home-manager switch --flake ~/.dotfiles/#fionnbennett-desktop";

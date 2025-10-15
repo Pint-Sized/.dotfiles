@@ -70,6 +70,9 @@
       zathura
       zed-editor
       zip
+
+      lsd
+      eza
     ])
     # ----- UNSTABLE ----- #
     ++ (with pkgs-unstable; [

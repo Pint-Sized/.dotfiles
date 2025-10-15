@@ -26,14 +26,7 @@
     ./plugins/markdown/render-markdown.nix
     ./plugins/markdown/bullets.nix
 
-    #Org-Mode
-    #./plugins/org-mode/neorg.nix
-
-    # Snippets
-    #./plugins/snippets/luasnip.nix
-
     # UI plugins
-    #./plugins/ui/bufferline.nix
     ./plugins/ui/codesnap.nix
     ./plugins/ui/lualine.nix
     ./plugins/ui/neoscroll.nix
