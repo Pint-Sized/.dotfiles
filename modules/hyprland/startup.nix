@@ -16,6 +16,6 @@
     "foot cava"
     "pkill waybar"
     "waybar &"
-    "sleep 10"
+    "npx http-server ~/.dotfiles/modules/firefox/chevron"
   ];
 }
