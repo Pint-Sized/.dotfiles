@@ -73,6 +73,7 @@
 
       lsd
       eza
+      nodejs_24
     ])
     # ----- UNSTABLE ----- #
     ++ (with pkgs-unstable; [

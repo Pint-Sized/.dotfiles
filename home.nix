@@ -19,7 +19,7 @@
     ./modules/fastfetch.nix
 
     # --------- FIREFOX ----------- #
-    ./modules/firefox.nix
+    ./modules/firefox/firefox.nix
 
     # ----------- FISH ------------- #
     ./modules/fish.nix
@@ -102,9 +102,6 @@
 
     # ---- ZED ----- #
     ./modules/zed.nix
-
-    # ----- ZEN-BROWSER ----- #
-    ./modules/zen-browser.nix
   ];
 
   nixpkgs.config = {
