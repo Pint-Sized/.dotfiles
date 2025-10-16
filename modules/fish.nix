@@ -27,8 +27,8 @@
       nrl = "sudo clear; cat ~/.dotfiles/splashes/systemRebuild; sudo nixos-rebuild switch --flake ~/.dotfiles/#laptop";
       hrd = "clear; cat ~/.dotfiles/splashes/homeRebuild; home-manager switch --flake ~/.dotfiles/#fionnbennett-desktop";
       hrl = "clear; cat ~/.dotfiles/splashes/homeRebuild; home-manager switch --flake ~/.dotfiles/#fionnbennett-laptop";
-      frd = "sudo clear; nix flake update --flake ~/.dotfiles; cat ~/.dotfiles/splashes/fullRebuild; sudo nixos-rebuild switch --flake ~/.dotfiles/#desktop; home-manager switch --flake ~/.dotfiles/#fionnbennett-desktop";
-      frl = "sudo clear; nix flake update --flake ~/.dotfiles; cat ~/.dotfiles/splashes/fullRebuild; sudo nixos-rebuild switch --flake ~/.dotfiles/#laptop; home-manager switch --flake ~/.dotfiles/#fionnbennett-laptop";
+      frd = "sudo clear; cat ~/.dotfiles/splashes/fullRebuild; nix flake update --flake ~/.dotfiles; sudo nixos-rebuild switch --flake ~/.dotfiles/#desktop; home-manager switch --flake ~/.dotfiles/#fionnbennett-desktop";
+      frl = "sudo clear; cat ~/.dotfiles/splashes/fullRebuild; nix flake update --flake ~/.dotfiles; sudo nixos-rebuild switch --flake ~/.dotfiles/#laptop; home-manager switch --flake ~/.dotfiles/#fionnbennett-laptop";
       y = {
         description = "Yazi changes directory on exit";
         body = ''

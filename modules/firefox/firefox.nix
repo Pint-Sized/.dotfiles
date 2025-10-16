@@ -4,7 +4,7 @@
       enable = true;
       profiles."8b2kzims.default" = {
         settings = {
-          #"browser.startup.homepage" = "";
+          "browser.startup.homepage" = "http://127.0.0.1:8080";
           "widget.non-native-theme.scrollbar.style" = 3;
           "browser.tabs.closeWindowWithLastTab" = false;
           "rowser.dataFeatureRecommendations.enabled" = false;
