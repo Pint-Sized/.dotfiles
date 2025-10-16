@@ -44,7 +44,7 @@
       };
     };
   };
-  home.file.".dotfiles/themes/colours".text = with config.lib.stylix.colors; ''
+  home.file.".colours".text = with config.lib.stylix.colors; ''
     base00  ->  #${base00-hex}  ->   rgb(${base00-rgb-r}, ${base00-rgb-g}, ${base00-rgb-b})
     base01  ->  #${base01-hex}  ->   rgb(${base01-rgb-r}, ${base01-rgb-g}, ${base01-rgb-b})
     base02  ->  #${base02-hex}  ->   rgb(${base02-rgb-r}, ${base02-rgb-g}, ${base02-rgb-b})

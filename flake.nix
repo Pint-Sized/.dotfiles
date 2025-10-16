@@ -61,6 +61,12 @@
     #hyprfocus = {
     #url = "github:the-pint-sized-powerhouse/hyprfocus";
     #};
+
+    # ----- ZEN-BROWSER ----- #
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs @ {
@@ -76,6 +82,7 @@
     nixcord,
     nixos-hardware,
     #hyprfocus,
+    zen-browser,
     ...
   }: let
     systemSettings = {
@@ -190,6 +197,7 @@
           stylix.homeModules.stylix
           spicetify-nix.homeManagerModules.default
           #nixcord.homeModules.nixcord
+          zen-browser.homeModules.twilight-official
         ];
         extraSpecialArgs = {
           inherit inputs;
@@ -210,6 +218,7 @@
           stylix.homeModules.stylix
           spicetify-nix.homeModules.default
           nixcord.homeModules.nixcord
+          zen-browser.homeModules.twilight-official
         ];
         extraSpecialArgs = {
           inherit inputs;

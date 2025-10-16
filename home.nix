@@ -102,6 +102,9 @@
 
     # ---- ZED ----- #
     ./modules/zed.nix
+
+    # ----- ZEN-BROWSER ----- #
+    ./modules/zen-browser.nix
   ];
 
   nixpkgs.config = {
