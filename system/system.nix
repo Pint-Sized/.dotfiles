@@ -2,7 +2,6 @@
   pkgs,
   systemSettings,
   userSettings,
-  lib,
   ...
 }: {
   users.users.${userSettings.username} = {
