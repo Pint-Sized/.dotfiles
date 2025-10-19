@@ -2,6 +2,8 @@
   pkgs,
   pkgs-unstable,
   userSettings,
+  zen-browser,
+  inputs,
   ...
 }: {
   # -------- STABLE ------- #
@@ -113,7 +115,10 @@
       puffer
       sponge
       transient-fish
-    ]);
+    ])
+    ++ [
+      inputs.zen-browser.packages.${pkgs.system}.default
+    ];
 
   services.flatpak.packages = [
     "io.github.giantpinkrobots.flatsweep"

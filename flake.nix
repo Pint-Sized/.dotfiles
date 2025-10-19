@@ -61,6 +61,12 @@
     #hyprfocus = {
     #url = "github:the-pint-sized-powerhouse/hyprfocus";
     #};
+
+    # ----- ZEN-BROWSER ----- #
+    zen-browser = {
+      url = "github:youwen5/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs @ {
@@ -76,6 +82,7 @@
     nixcord,
     nixos-hardware,
     #hyprfocus,
+    zen-browser,
     ...
   }: let
     systemSettings = {
@@ -199,6 +206,7 @@
           inherit systemSettings;
           inherit userSettings;
           #inherit hyprfocus;
+          inherit zen-browser;
         };
       };
       fionnbennett-laptop = home-manager.lib.homeManagerConfiguration {
@@ -219,6 +227,7 @@
           inherit systemSettings;
           inherit userSettings;
           #inherit hyprfocus;
+          inherit zen-browser;
         };
       };
     };
