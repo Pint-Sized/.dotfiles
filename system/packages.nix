@@ -2,7 +2,6 @@
   pkgs,
   pkgs-unstable,
   userSettings,
-  zen-browser,
   inputs,
   ...
 }: {
@@ -117,7 +116,7 @@
       transient-fish
     ])
     ++ [
-      inputs.zen-browser.packages.${pkgs.system}.default
+      #inputs.zen-browser.packages.${pkgs.system}.default
     ];
 
   services.flatpak.packages = [

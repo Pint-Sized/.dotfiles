@@ -18,7 +18,8 @@
 
     # ----- HOME-MANAGER ----- #
     home-manager = {
-      url = "github:nix-community/home-manager/release-25.05";
+      #url = "github:nix-community/home-manager/release-25.05";
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -30,8 +31,9 @@
 
     # ----- STYLIX ----- #
     stylix = {
-      url = "github:nix-community/stylix/release-25.05";
-      inputs.nixpkgs.follows = "nixpkgs";
+      #url = "github:nix-community/stylix/release-25.05";
+      url = "github:nix-community/stylix";
+      #inputs.nixpkgs.follows = "nixpkgs";
     };
 
     # ----- NIXVIM ----- #
@@ -64,7 +66,7 @@
 
     # ----- ZEN-BROWSER ----- #
     zen-browser = {
-      url = "github:youwen5/zen-browser-flake";
+      url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -197,6 +199,7 @@
           stylix.homeModules.stylix
           spicetify-nix.homeManagerModules.default
           #nixcord.homeModules.nixcord
+          zen-browser.homeModules.twilight-official
         ];
         extraSpecialArgs = {
           inherit inputs;
@@ -206,7 +209,6 @@
           inherit systemSettings;
           inherit userSettings;
           #inherit hyprfocus;
-          inherit zen-browser;
         };
       };
       fionnbennett-laptop = home-manager.lib.homeManagerConfiguration {
@@ -218,6 +220,7 @@
           stylix.homeModules.stylix
           spicetify-nix.homeModules.default
           nixcord.homeModules.nixcord
+          zen-browser.homeModules.twilight-official
         ];
         extraSpecialArgs = {
           inherit inputs;
@@ -227,7 +230,6 @@
           inherit systemSettings;
           inherit userSettings;
           #inherit hyprfocus;
-          inherit zen-browser;
         };
       };
     };

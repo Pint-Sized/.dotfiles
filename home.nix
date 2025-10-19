@@ -114,7 +114,7 @@
   programs.home-manager.enable = true; # allows home-manager to manage itself
 
   home = {
-    #enableNixpkgsReleaseCheck = false;
+    enableNixpkgsReleaseCheck = false;
     stateVersion = "24.05"; # do not change without consulting manual
   };
 }
