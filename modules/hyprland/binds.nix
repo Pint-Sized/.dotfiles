@@ -3,7 +3,7 @@
     "$mainMod" = "SUPER";
     "$terminal" = "kitty fish";
     "$filemanager" = "nautilus";
-    "$browser" = "zen";
+    "$browser" = "firefox";
     bind = [
       "$mainMod, Q, exec, $terminal"
       "$mainMod, C, killactive"

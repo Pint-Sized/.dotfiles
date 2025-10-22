@@ -6,7 +6,7 @@
 
   programs = {
     fish.functions = {
-      fish_greeting = "pokeget ducklett --hide-name | fastfetch --file-raw -";
+      fish_greeting = "pokeget purrloin --hide-name | fastfetch --file-raw -";
     };
   };
 

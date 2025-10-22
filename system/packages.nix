@@ -125,6 +125,8 @@
     "io.frama.tractor.carburetor"
     "it.mijorus.whisper"
     "org.prismlauncher.PrismLauncher"
+    "com.stremio.Stremio"
+    "app.zen_browser.zen"
   ];
 
   programs = {
