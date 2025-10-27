@@ -69,6 +69,10 @@
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nur-merrkry = {
+      # for wabbajack
+      url = "github:merrkry/nur-packages";
+    };
   };
 
   outputs = inputs @ {
@@ -98,7 +102,7 @@
       username = "fionnbennett";
       name = "Fionn Bennett";
       email = "fionnbennett06@gmail.com";
-      theme = "catppuccin-mocha";
+      theme = "gruvbox-material-dark-soft";
       fontPkg = "nerd-fonts._0xproto";
       fontSerif = "0xProto Nerd Font";
       fontMono = "0xProto Nerd Font Mono";

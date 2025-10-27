@@ -25,10 +25,10 @@
       ls = "lsd -a $argv";
       nrd = "sudo clear; cat ~/.dotfiles/splashes/systemRebuild; sudo nixos-rebuild switch --flake ~/.dotfiles/#desktop";
       nrl = "sudo clear; cat ~/.dotfiles/splashes/systemRebuild; sudo nixos-rebuild switch --flake ~/.dotfiles/#laptop";
-      hrd = "clear; cat ~/.dotfiles/splashes/homeRebuild; home-manager switch --flake ~/.dotfiles/#fionnbennett-desktop; ~/.dotfiles/scripts/zen-browser-themer";
-      hrl = "clear; cat ~/.dotfiles/splashes/homeRebuild; home-manager switch --flake ~/.dotfiles/#fionnbennett-laptop; ~/.dotfiles/scripts/zen-browser-themer";
-      frd = "sudo clear; cat ~/.dotfiles/splashes/fullRebuild; nix flake update --flake ~/.dotfiles; sudo nixos-rebuild switch --flake ~/.dotfiles/#desktop; home-manager switch --flake ~/.dotfiles/#fionnbennett-desktop; ~/.dotfiles/scripts/zen-browser-themer";
-      frl = "sudo clear; cat ~/.dotfiles/splashes/fullRebuild; nix flake update --flake ~/.dotfiles; sudo nixos-rebuild switch --flake ~/.dotfiles/#laptop; home-manager switch --flake ~/.dotfiles/#fionnbennett-laptop; ~/.dotfiles/scripts/zen-browser-themer";
+      hrd = "clear; cat ~/.dotfiles/splashes/homeRebuild; home-manager switch --flake ~/.dotfiles/#fionnbennett-desktop"; # ~/.dotfiles/scripts/zen-browser-themer";
+      hrl = "clear; cat ~/.dotfiles/splashes/homeRebuild; home-manager switch --flake ~/.dotfiles/#fionnbennett-laptop"; # ~/.dotfiles/scripts/zen-browser-themer";
+      frd = "sudo clear; cat ~/.dotfiles/splashes/fullRebuild; nix flake update --flake ~/.dotfiles; sudo nixos-rebuild switch --flake ~/.dotfiles/#desktop; home-manager switch --flake ~/.dotfiles/#fionnbennett-desktop"; # ~/.dotfiles/scripts/zen-browser-themer";
+      frl = "sudo clear; cat ~/.dotfiles/splashes/fullRebuild; nix flake update --flake ~/.dotfiles; sudo nixos-rebuild switch --flake ~/.dotfiles/#laptop; home-manager switch --flake ~/.dotfiles/#fionnbennett-laptop"; # ~/.dotfiles/scripts/zen-browser-themer";
       y = {
         description = "Yazi changes directory on exit";
         body = ''

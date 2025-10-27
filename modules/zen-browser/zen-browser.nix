@@ -1,10 +1,17 @@
 {
-  imports = [
-    ./userChrome.nix
-    ./userContent.nix
-  ];
+  #imports = [
+  #./userChrome.nix
+  #./userContent.nix
+  #];
   programs.zen-browser = {
     enable = true;
-    profiles."default" = {};
+    profiles = {
+      #"default" = {
+      #settings = {
+      #"toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+      #};
+      #};
+      "test1234" = {};
+    };
   };
 }

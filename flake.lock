@@ -438,6 +438,22 @@
         "type": "github"
       }
     },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1712449641,
+        "narHash": "sha256-U9DDWMexN6o5Td2DznEgguh8TRIUnIl9levmit43GcI=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "600b15aea1b36eeb43833a50b0e96579147099ff",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "nixvim": {
       "inputs": {
         "flake-parts": "flake-parts_2",
@@ -480,6 +496,24 @@
       "original": {
         "owner": "nix-community",
         "repo": "NUR",
+        "type": "github"
+      }
+    },
+    "nur-merrkry": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_2"
+      },
+      "locked": {
+        "lastModified": 1760255964,
+        "narHash": "sha256-icU75pDGmkKprcZ3gFapQA4n5eMERIhP4qCm+eLE2Dg=",
+        "owner": "merrkry",
+        "repo": "nur-packages",
+        "rev": "9cd22180013035c37d30f53ed4f56ed46ff8f4c5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "merrkry",
+        "repo": "nur-packages",
         "type": "github"
       }
     },
@@ -543,6 +577,7 @@
         "nixpkgs-unstable": "nixpkgs-unstable",
         "nixvim": "nixvim",
         "nur": "nur",
+        "nur-merrkry": "nur-merrkry",
         "spicetify-nix": "spicetify-nix",
         "stylix": "stylix",
         "zen-browser": "zen-browser"

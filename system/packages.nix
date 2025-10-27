@@ -75,6 +75,8 @@
       lsd
       eza
       nodejs_24
+      appimage-run
+      fuse
     ])
     # ----- UNSTABLE ----- #
     ++ (with pkgs-unstable; [
@@ -117,6 +119,7 @@
     ])
     ++ [
       #inputs.zen-browser.packages.${pkgs.system}.default
+      #inputs.nur-merrkry.packages.${pkgs.system}.default
     ];
 
   services.flatpak.packages = [
@@ -126,7 +129,6 @@
     "it.mijorus.whisper"
     "org.prismlauncher.PrismLauncher"
     "com.stremio.Stremio"
-    "app.zen_browser.zen"
   ];
 
   programs = {
