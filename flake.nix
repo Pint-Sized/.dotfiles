@@ -129,6 +129,7 @@
           "python-2.7.18.8"
           "dotnet-runtime-7.0.20"
           "dotnet-runtime-wrapped-7.0.20"
+          "mbedtls-2.28.10"
         ];
       };
     };
@@ -141,6 +142,7 @@
           "python-2.7.18.8"
           "dotnet-runtime-7.0.20"
           "dotnet-runtime-wrapped-7.0.20"
+          "mbedtls-2.28.10"
         ];
       };
     };
