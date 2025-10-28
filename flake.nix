@@ -73,6 +73,11 @@
       # for wabbajack
       url = "github:merrkry/nur-packages";
     };
+
+    musnix = {
+      url = "github:musnix/musnix.git";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs @ {
@@ -89,6 +94,7 @@
     nixos-hardware,
     #hyprfocus,
     zen-browser,
+    musnix,
     ...
   }: let
     systemSettings = {
@@ -162,6 +168,7 @@
           stylix.nixosModules.stylix
           nix-flatpak.nixosModules.nix-flatpak
           nix-index-database.nixosModules.nix-index
+          musnix.nixosModules.musnix
         ];
         specialArgs = {
           inherit inputs;
