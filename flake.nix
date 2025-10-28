@@ -75,7 +75,7 @@
     };
 
     musnix = {
-      url = "github:musnix/musnix.git";
+      url = "github:musnix/musnix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
