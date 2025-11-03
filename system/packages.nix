@@ -8,7 +8,6 @@
   # -------- STABLE ------- #
   environment.systemPackages =
     (with pkgs; [
-      appeditor
       kdePackages.ark
       bat
       base16-schemes
