@@ -76,6 +76,7 @@
       nodejs_24
       appimage-run
       fuse
+      lutris
     ])
     # ----- UNSTABLE ----- #
     ++ (with pkgs-unstable; [
@@ -105,6 +106,7 @@
       libcst
       python-lsp-server
       pip
+      psutil
     ])
     # --------- FISH PLUGINS --------- #
     ++ (with pkgs-unstable.fishPlugins; [

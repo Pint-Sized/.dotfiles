@@ -19,7 +19,7 @@
         "modules-left" = [
           "custom/launcher"
           "hyprland/workspaces"
-          "custom/music"
+          "mpris"
         ];
         "modules-center" = [
           "clock#clock1"
@@ -88,25 +88,26 @@
             "󰁹"
           ];
         };
-
-        "custom/music" = {
-          "format" = "{icon}{}";
-          "format-icons" = {
-            "Playing" = "󰝚 ";
-            "Paused" = "󰝛 ";
-            "Stopped" = " ";
+        "mpris" = {
+          "format" = "{status_icon} {dynamic}";
+          "interval" = 0.5;
+          "dynamic-len" = 50;
+          "status-icons" = {
+            "playing" = "󰝚 ";
+            "paused" = "󰝛 ";
+            "stopped" = " ";
           };
-          "escape" = true;
-          "tooltip" = true;
-          "exec" = "~/.dotfiles/scripts/caway -b 10 -f 60 -e";
-          "return-type" = "json";
+          "dynamic-order" = [
+            "title"
+            "artist"
+          ];
+          "dynamic-separator" = "  ";
+          "max-length" = 24;
           "on-click" = "playerctl play-pause";
           "on-scroll-up" = "playerctl previous";
           "on-scroll-down" = "playerctl next";
           "on-click-right" = "g4music";
-          "max-length" = 24;
         };
-
         "pulseaudio" = {
           "format" = "{icon} {volume}%";
           "format-muted" = " ";
@@ -317,7 +318,7 @@
         #pulseaudio,
         #cpu,
         #custom-weather.main,
-        #custom-music,
+        #mpris,
         #music,
         #cava,
         #memory,
@@ -409,15 +410,15 @@
       	  color: #${base07-hex};
         }
 
-        #custom-music.Playing {
+        #mpris.playing {
           background: rgba(${base02-rgb-r}, ${base02-rgb-g}, ${base02-rgb-b}, 0.8);
 
           color: #${base0E-hex};
           border-radius: 1rem;
         }
 
-        #custom-music.Paused,
-        #custom-music.Stopped {
+        #mpris.paused,
+        #MRPIS.Stopped {
           background: rgba(${base02-rgb-r}, ${base02-rgb-g}, ${base02-rgb-b}, 0.8);
 
           color: #${base05-hex};
