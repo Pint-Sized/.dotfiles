@@ -17,5 +17,6 @@
     "pkill waybar"
     "waybar &"
     "npx http-server ~/.dotfiles/modules/firefox/chevron"
+    "discover-overlay"
   ];
 }

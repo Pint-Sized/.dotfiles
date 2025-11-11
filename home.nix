@@ -15,6 +15,9 @@
     # -------- CAVA -------- #
     ./modules/cava.nix
 
+    # ----- CHROMIUM ----- #
+    ./modules/chromium.nix
+
     # ------- FASTFETCH -------- #
     ./modules/fastfetch.nix
 

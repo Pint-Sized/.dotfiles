@@ -77,6 +77,9 @@
       appimage-run
       fuse
       lutris
+
+      quickemu
+      quickgui
     ])
     # ----- UNSTABLE ----- #
     ++ (with pkgs-unstable; [
