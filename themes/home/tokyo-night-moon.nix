@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   stylix = {
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-dark.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-moon.yaml";
     targets.cava.rainbow.enable = true;
   };
 
@@ -14,7 +14,7 @@
     ".config/fastfetch/theme" = {
       executable = true;
       text = ''
-        echo "Tokyo Night Dark"
+        echo "Tokyo Night Moon"
       '';
     };
   };
