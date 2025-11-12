@@ -279,7 +279,7 @@
         #workspaces {
           border-radius: 0px 1rem 1rem 0px;
           margin: 5px;
-          background-color: rgba(${base02-rgb-r}, ${base02-rgb-g}, ${base02-rgb-b}, 0.8);
+          background-color: rgba(${base00-rgb-r}, ${base00-rgb-g}, ${base00-rgb-b}, 0.9);
           margin-left: 0rem;
           margin-right: 1rem;
         }
@@ -326,7 +326,7 @@
         #network,
         #custom-launcher,
         #memory {
-          background-color: rgba(${base02-rgb-r}, ${base02-rgb-g}, ${base02-rgb-b}, 0.8);
+          background-color: rgba(${base00-rgb-r}, ${base00-rgb-g}, ${base00-rgb-b}, 0.9);
           padding: 0.5rem 0.75rem;
           margin: 5px 0;
         }
@@ -335,7 +335,7 @@
         #custom-notification,
         #custom-lock,
         #custom-power {
-          background-color: rgba(${base02-rgb-r}, ${base02-rgb-g}, ${base02-rgb-b}, 0.8);
+          background-color: rgba(${base00-rgb-r}, ${base00-rgb-g}, ${base00-rgb-b}, 0.9);
           padding: 0.5rem 1rem;
           margin: 5px 0;
         }
@@ -411,15 +411,15 @@
         }
 
         #mpris.playing {
-          background: rgba(${base02-rgb-r}, ${base02-rgb-g}, ${base02-rgb-b}, 0.8);
+          background: rgba(${base00-rgb-r}, ${base00-rgb-g}, ${base00-rgb-b}, 0.9);
 
           color: #${base0E-hex};
           border-radius: 1rem;
         }
 
         #mpris.paused,
-        #MRPIS.Stopped {
-          background: rgba(${base02-rgb-r}, ${base02-rgb-g}, ${base02-rgb-b}, 0.8);
+        #mpris.stopped {
+          background: rgba(${base00-rgb-r}, ${base00-rgb-g}, ${base00-rgb-b}, 0.9);
 
           color: #${base05-hex};
           border-radius: 1rem;

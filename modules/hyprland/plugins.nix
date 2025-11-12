@@ -14,7 +14,7 @@
     settings.plugin = {
       borders-plus-plus = {
         add_borders = 1;
-        "col.border_1" = "rgb(${base00-hex})";
+        "col.border_1" = "rgba(${base00-rgb-r}, ${base00-rgb-g}, ${base00-rgb-b}, 0.825)";
         border_size_1 = 10;
         natural_rounding = "on";
       };

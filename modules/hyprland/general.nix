@@ -29,9 +29,9 @@
           size = 2;
           passes = 3;
           noise = 0;
-          new_optimizations = true;
+          new_optimizations = false;
           contrast = 1.5;
-          xray = true;
+          xray = false;
         };
         shadow = {
           enabled = false;

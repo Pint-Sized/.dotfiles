@@ -108,10 +108,10 @@
       username = "fionnbennett";
       name = "Fionn Bennett";
       email = "fionnbennett06@gmail.com";
-      theme = "gruvbox-material-dark-soft";
-      fontPkg = "nerd-fonts._0xproto";
-      fontSerif = "0xProto Nerd Font";
-      fontMono = "0xProto Nerd Font Mono";
+      theme = "tokyo-night-dark";
+      fontPkg = "nerd-fonts.caskaydia-cove";
+      fontSerif = "CaskaydiaCove NF";
+      fontMono = "CaskaydiaCove NF";
       cursorPkg = "pkgs.bibata-cursors";
       cursorName = "Bibata-Modern-Classic";
     };

@@ -4,11 +4,9 @@
   };
   stylix.targets.gtk.extraCss = ''
     window.background { border-radius: 0; }
-
     .ssd headerbar * {
       margin-top: -100px;
     }
-
     .ssd headerbar.titlebar,
     .ssd headerbar.titlebar button.titlebutton {
       border: none;

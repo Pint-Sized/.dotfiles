@@ -30,18 +30,17 @@
       STEAM_EXTRA_COMPAT_TOOLS_PATHS = "\${HOME}/.steam/root/compatibilitytools.d";
     };
   };
-  fonts.packages = with pkgs; [
-    corefonts
-    nerd-fonts.caskaydia-cove
-    vistafonts
-    nerd-fonts._0xproto
-    nerd-fonts.symbols-only
+  fonts.packages = [
+    pkgs.${userSettings.fontPkg}
+    pkgs.corefonts
+    pkgs.vistafonts
+    pkgs.nerd-fonts.symbols-only
   ];
 
   fonts.fontconfig.defaultFonts = {
-    serif = ["0xProto Nerd Font"];
-    sansSerif = ["0xProto Nerd Font"];
-    monospace = ["0xProto Nerd Font"];
+    serif = ["${userSettings.fontSerif}"];
+    sansSerif = ["${userSettings.fontSerif}"];
+    monospace = ["${userSettings.fontMono}"];
   };
   boot = {
     plymouth.enable = true;
