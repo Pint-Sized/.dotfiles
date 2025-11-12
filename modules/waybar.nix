@@ -224,6 +224,7 @@
         ];
         "custom/day" = {
           "exec" = "date +'%^A'";
+          #"exec" = "date +'%A'";
           "format" = "{}";
         };
       }
@@ -232,7 +233,7 @@
         "layer" = "bottom";
         "reload_style_on_change" = true;
         "position" = "top";
-        "margin-top" = 240;
+        "margin-top" = 220;
         "passthrough" = true;
 
         "modules-center" = [
@@ -248,7 +249,7 @@
         "layer" = "bottom";
         "reload_style_on_change" = true;
         "position" = "top";
-        "margin-top" = 275;
+        "margin-top" = 255;
         "passthrough" = true;
 
         "modules-center" = [
@@ -263,7 +264,7 @@
     style = with config.lib.stylix.colors; ''
       * {
           font-family: "${userSettings.fontMono}";
-          font-size: 12px;
+          font-size: 13px;
           min-height: 0;
           padding: 0;
           margin: 0;
@@ -432,9 +433,10 @@
 
         #custom-day {
           font-family: "anurati";
-          font-size: 80px;
+          font-size: 60px;
+          letter-spacing: 30px;
+          /*letter-spacing: 5px;*/
           color: #${base07-hex};
-          letter-spacing: 50px;
         }
 
         #clock.date {
