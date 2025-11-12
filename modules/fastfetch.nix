@@ -44,7 +44,7 @@
         {
           "type": "os",
           "key": "{#90}│ {#93}OS          {#90}│",
-          "format": "{$3}{pretty-name} {codename} {#2}[v{version}] {#2}[{arch}]",
+          "format": "{$3}{pretty-name}  {#2}[{arch}]",
         },
         {
           "type": "kernel",
@@ -105,6 +105,7 @@
           "type": "command",
           "key": "{#90}│ {#95}Theme       {#90}│",
           "text": ".config/fastfetch/theme",
+          "format": "{$3}{result}  {#2}[Base16-Scheme]"
         },
         {
           "type": "custom",

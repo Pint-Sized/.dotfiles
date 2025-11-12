@@ -14,7 +14,7 @@
     ".config/fastfetch/theme" = {
       executable = true;
       text = ''
-        echo "Tokyo Dark"
+        echo "TokyoDark"
       '';
     };
   };
