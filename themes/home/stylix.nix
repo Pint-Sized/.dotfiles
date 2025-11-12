@@ -14,19 +14,16 @@
     };
     fonts = {
       serif = {
-        name = "$userSettings.fontSerif";
-        package = pkgs.${userSettings.fontPkg};
+        name = "${userSettings.fontMono}";
       };
       sansSerif = {
-        name = "$userSettings.fontSerif";
-        package = pkgs.${userSettings.fontPkg};
+        name = "${userSettings.fontMono}";
       };
       monospace = {
-        name = "$userSettings.fontMono";
-        package = pkgs.${userSettings.fontPkg};
+        name = "${userSettings.fontMono}";
       };
       sizes = {
-        terminal = 10;
+        terminal = 11;
       };
     };
     targets = {

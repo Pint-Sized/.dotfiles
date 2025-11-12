@@ -34,6 +34,7 @@
       kdePackages.qt6ct
       libreoffice-qt6-fresh
       libsForQt5.qt5ct
+      lsd
       mpv
       nautilus
       nix-du
@@ -45,6 +46,7 @@
       pyprland
       python
       python3
+      quickgui
       ripgrep
       spotify
       swaynotificationcenter
@@ -70,16 +72,6 @@
       zathura
       zed-editor
       zip
-
-      lsd
-      eza
-      nodejs_24
-      appimage-run
-      fuse
-      lutris
-
-      quickemu
-      quickgui
     ])
     # ----- UNSTABLE ----- #
     ++ (with pkgs-unstable; [
@@ -120,11 +112,7 @@
       puffer
       sponge
       transient-fish
-    ])
-    ++ [
-      #inputs.zen-browser.packages.${pkgs.system}.default
-      #inputs.nur-merrkry.packages.${pkgs.system}.default
-    ];
+    ]);
 
   services.flatpak.packages = [
     "io.github.giantpinkrobots.flatsweep"

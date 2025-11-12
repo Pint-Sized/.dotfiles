@@ -59,23 +59,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # ----- HYPRFOCUS ----- #
-    #hyprfocus = {
-    #url = "github:the-pint-sized-powerhouse/hyprfocus";
-    #};
-
     # ----- ZEN-BROWSER ----- #
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    nur-merrkry = {
-      # for wabbajack
-      url = "github:merrkry/nur-packages";
-    };
-
-    musnix = {
-      url = "github:musnix/musnix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -92,9 +78,7 @@
     spicetify-nix,
     nixcord,
     nixos-hardware,
-    #hyprfocus,
     zen-browser,
-    musnix,
     ...
   }: let
     systemSettings = {
@@ -108,7 +92,7 @@
       username = "fionnbennett";
       name = "Fionn Bennett";
       email = "fionnbennett06@gmail.com";
-      theme = "tokyo-night-dark";
+      theme = "tokyo-night-moon";
       fontPkg = "nerd-fonts.caskaydia-cove";
       fontSerif = "CaskaydiaCove NF";
       fontMono = "CaskaydiaCove NF";
@@ -170,7 +154,6 @@
           stylix.nixosModules.stylix
           nix-flatpak.nixosModules.nix-flatpak
           nix-index-database.nixosModules.nix-index
-          musnix.nixosModules.musnix
         ];
         specialArgs = {
           inherit inputs;
@@ -211,7 +194,6 @@
           nixvim.homeModules.nixvim
           stylix.homeModules.stylix
           spicetify-nix.homeManagerModules.default
-          #nixcord.homeModules.nixcord
           zen-browser.homeModules.twilight-official
         ];
         extraSpecialArgs = {
@@ -221,7 +203,6 @@
           inherit pkgs-master;
           inherit systemSettings;
           inherit userSettings;
-          #inherit hyprfocus;
         };
       };
       fionnbennett-laptop = home-manager.lib.homeManagerConfiguration {
@@ -242,7 +223,6 @@
           inherit pkgs-master;
           inherit systemSettings;
           inherit userSettings;
-          #inherit hyprfocus;
         };
       };
     };
