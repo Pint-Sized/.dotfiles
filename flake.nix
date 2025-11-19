@@ -210,9 +210,9 @@
         modules = [
           ./home.nix
           ./modules/hyprland/variables-laptop.nix
-          nixvim.homeManagerModules.nixvim
+          nixvim.homeModules.nixvim
           stylix.homeModules.stylix
-          spicetify-nix.homeModules.default
+          spicetify-nix.homeManagerModules.default
           nixcord.homeModules.nixcord
           zen-browser.homeModules.twilight-official
         ];

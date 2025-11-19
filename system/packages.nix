@@ -72,6 +72,8 @@
       zathura
       zed-editor
       zip
+
+      nodejs_latest
     ])
     # ----- UNSTABLE ----- #
     ++ (with pkgs-unstable; [
