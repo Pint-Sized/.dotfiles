@@ -57,6 +57,9 @@
     # ----------- KITTY  ------------- #
     ./modules/kitty.nix
 
+    # ----- MICRO ----- #
+    ./modules/micro.nix
+
     # ----- MICROSOFT-OFFICE ----- #
     ./applications/microsoft-office/office.nix
 
