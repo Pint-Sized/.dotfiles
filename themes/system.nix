@@ -14,6 +14,6 @@
     };
     targets.nixos-icons.enable = true;
     targets.plymouth.enable = true;
-    targest.console.enable = true;
+    targets.console.enable = true;
   };
 }
