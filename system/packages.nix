@@ -2,7 +2,6 @@
   pkgs,
   pkgs-unstable,
   userSettings,
-  inputs,
   ...
 }: {
   # -------- STABLE ------- #
