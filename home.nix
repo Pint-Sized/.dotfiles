@@ -98,7 +98,7 @@
     ./modules/wlogout/wlogout.nix
 
     # --------- YAZI ------------ #
-    ./modules/yazi/yazi.nix
+    ./modules/yazi.nix
 
     # --------- ZATHURA ---------- #
     ./modules/zathura.nix
