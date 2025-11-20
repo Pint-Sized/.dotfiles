@@ -1,3 +1,3 @@
 {
-  programs.glance.enable = true;
+  services.glance.enable = true;
 }
