@@ -91,7 +91,7 @@
     ./modules/spicetify.nix
 
     # ------- STYLIX ----------- #
-    ./themes/home/stylix.nix
+    ./themes/home.nix
     ./themes/home/${userSettings.theme}.nix
 
     # --------- SWAYNC --------- #

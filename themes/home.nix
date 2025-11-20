@@ -29,7 +29,7 @@
     targets = {
       hyprland.enable = false;
       waybar.enable = false;
-      hyprlock.enable = true;
+      hyprlock.enable = false;
       gtk.flatpakSupport.enable = true;
       foot.enable = false;
       xresources.enable = true;
