@@ -194,6 +194,7 @@
           nixvim.homeModules.nixvim
           stylix.homeModules.stylix
           spicetify-nix.homeManagerModules.default
+          nixcord.homeModules.nixcord
           zen-browser.homeModules.twilight-official
         ];
         extraSpecialArgs = {
