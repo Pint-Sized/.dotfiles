@@ -45,9 +45,6 @@
     # ----- GITUI ------ #
     ./modules/gitui.nix
 
-    # ----- GLANCE ----- #
-    ./modules/glance.nix
-
     # ---------- GTK ------------- #
     ./modules/gtk.nix
 
