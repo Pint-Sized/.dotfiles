@@ -27,6 +27,9 @@
     # ----------- FISH ------------- #
     ./modules/fish.nix
 
+    # ----- FOLIATE ----- #
+    ./modules/foliate.nix
+
     # ---- FONTS ---- #
     ./fonts/fonts.nix
 
@@ -81,9 +84,6 @@
     # ------- STYLIX ----------- #
     ./themes/home/stylix.nix
     ./themes/home/${userSettings.theme}.nix
-
-    # ----- SWAYOSD ----- #
-    ./modules/swayosd/swayosd.nix
 
     # --------- SWAYNC --------- #
     ./modules/swaync.nix
