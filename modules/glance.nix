@@ -1,0 +1,3 @@
+{
+  programs.glance.enable = true;
+}

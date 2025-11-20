@@ -45,14 +45,23 @@
     # ----- GITUI ------ #
     ./modules/gitui.nix
 
+    # ----- GLANCE ----- #
+    ./modules/glance.nix
+
     # ---------- GTK ------------- #
     ./modules/gtk.nix
+
+    # ----- HALLOY ----- #
+    ./modules/halloy.nix
 
     # -------------- HOME-SETTINGS ------ #
     ./modules/home-settings.nix
 
     # ------------- HYPRLAND ---------- #
     ./modules/hyprland/hyprland.nix
+
+    # ----- HYPRLOCK ----- #
+    ./modules/hyprlock.nix
 
     # ---------- IMV ----------- #
     ./modules/imv.nix
