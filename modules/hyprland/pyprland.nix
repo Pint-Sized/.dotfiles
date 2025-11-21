@@ -50,8 +50,8 @@
 
         [scratchpads.discord]
         animation = "fromTop"
-        command = "discord --force-device-scale-factor=1.5"
-        class = "discord"
+        command = "vesktop"
+        class = "vesktop"
         size = "90% 90%"
         lazy = true
       '';

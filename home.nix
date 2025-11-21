@@ -75,6 +75,9 @@
     # ----- MPV ----- #
     ./modules/mpv.nix
 
+    # ----- NIXCORD ----- #
+    ./modules/nixcord.nix
+
     # --------- NIXVIM --------- #
     ./modules/nixvim/nixvim.nix
 

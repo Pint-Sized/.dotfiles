@@ -10,7 +10,23 @@
         font-family: var(--font), sans-serif;
       }
     ";
-    #discord.vencord.unstable = true;
+    vesktop = {
+      enable = true;
+      autoscroll.enable = true;
+      settings = {
+        audio = {
+          input_mode = "1";
+        };
+        keybinds = {
+          PUSHTOTALK = [
+            {
+              key = "V";
+              modifiers = [];
+            }
+          ];
+        };
+      };
+    };
     config = {
       useQuickCss = true;
       frameless = true;
@@ -24,10 +40,7 @@
         betterGifPicker.enable = true;
         betterRoleContext.enable = true;
         betterSettings.enable = true;
-        blurNSFW = {
-          enable = true;
-          blurAmount = 6;
-        };
+        blurNSFW.enable = false;
         callTimer.enable = true;
         clearURLs.enable = true;
         copyUserURLs.enable = true;
