@@ -15,8 +15,8 @@
     #};
     #};
     #};
-    useQuickCss = true;
-    frameless = true;
+    #useQuickCss = true;
+    #frameless = true;
     vencord.settings = {
       useQuicCss = true;
       plugins = {
