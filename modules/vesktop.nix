@@ -57,7 +57,6 @@
           enabled = true;
           spotify = true;
           steam = true;
-          epic = true;
           tidal = true;
           itunes = true;
         };

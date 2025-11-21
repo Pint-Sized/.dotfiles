@@ -73,7 +73,7 @@
     ./modules/mpv.nix
 
     # ----- NIXCORD ----- #
-    ./modules/nixcord.nix
+    ./modules/vesktop.nix
 
     # --------- NIXVIM --------- #
     ./modules/nixvim/nixvim.nix
