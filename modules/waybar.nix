@@ -201,7 +201,7 @@
             <big>{:%Y %B}</big>
             <tt><small>{calendar}</small></tt>'';
           "format" = "{:%a, %d %b, %I:%M %p}";
-          "on-click" = "pkill waybar; waybar";
+          "on-click" = "~/.dotfiles/scripts/reloader";
         };
         "custom/weather#main" = {
           "format" = "{}°";
