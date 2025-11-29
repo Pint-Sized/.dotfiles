@@ -122,7 +122,6 @@
     "it.mijorus.whisper"
     "org.prismlauncher.PrismLauncher"
     "com.stremio.Stremio"
-    "com.discordapp.Discord"
   ];
 
   programs = {
