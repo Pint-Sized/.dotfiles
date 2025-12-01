@@ -8,7 +8,7 @@
       liquidctl
       polychromatic
       protontricks
-      protonup
+      protonup-ng
       openrgb-with-all-plugins
     ])
     ++ (with pkgs-unstable; [
@@ -21,10 +21,7 @@
   #};
 
   programs = {
-    coolercontrol = {
-      enable = true;
-      nvidiaSupport = true;
-    };
+    coolercontrol.enable = true;
     gamemode.enable = true;
     steam.enable = true;
     gamescope = {

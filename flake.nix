@@ -1,7 +1,7 @@
 {
   inputs = {
     # ----- NIX PACKAGES ----- #
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-master.url = "github:/nixos/nixpkgs/master";
 
@@ -18,7 +18,7 @@
 
     # ----- HOME-MANAGER ----- #
     home-manager = {
-      url = "github:nix-community/home-manager/release-25.05";
+      url = "github:nix-community/home-manager/release-25.11";
       #url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
@@ -31,7 +31,7 @@
 
     # ----- STYLIX ----- #
     stylix = {
-      url = "github:nix-community/stylix/release-25.05";
+      url = "github:nix-community/stylix/release-25.11";
       #url = "github:nix-community/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };

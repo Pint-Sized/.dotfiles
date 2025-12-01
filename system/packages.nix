@@ -43,7 +43,6 @@
       playerctl
       pokeget-rs
       pyprland
-      python
       python3
       quickgui
       ripgrep

@@ -72,7 +72,7 @@
     # ----- MPV ----- #
     ./modules/mpv.nix
 
-    # ----- NIXCORD ----- #
+    # ----- VESKTOP ----- #
     ./modules/vesktop.nix
 
     # --------- NIXVIM --------- #
@@ -100,9 +100,6 @@
     # ----- VIRTUALISATION ----- #
     ./modules/virtualisation.nix
 
-    # ----- VSCODIUM ----- #
-    ./modules/vscodium.nix
-
     # ---------- WAYBAR ----------- #
     ./modules/waybar.nix
 
@@ -114,9 +111,6 @@
 
     # --------- ZATHURA ---------- #
     ./modules/zathura.nix
-
-    # ---- ZED ----- #
-    ./modules/zed.nix
   ];
 
   nixpkgs.config = {

@@ -34,7 +34,7 @@
     pkgs.nerd-fonts.caskaydia-cove
     pkgs.nerd-fonts._0xproto
     pkgs.corefonts
-    pkgs.vistafonts
+    pkgs.vista-fonts
     pkgs.nerd-fonts.symbols-only
   ];
 

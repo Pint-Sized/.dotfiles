@@ -1,3 +1,0 @@
-{
-  programs.halloy.enable = true;
-}
