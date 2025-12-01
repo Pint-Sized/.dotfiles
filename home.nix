@@ -48,9 +48,6 @@
     # ---------- GTK ------------- #
     ./modules/gtk.nix
 
-    # ----- HALLOY ----- #
-    ./modules/halloy.nix
-
     # -------------- HOME-SETTINGS ------ #
     ./modules/home-settings.nix
 

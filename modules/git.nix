@@ -1,10 +1,14 @@
 {
   programs.git = {
     enable = true;
-    userName = "Pint Sized";
-    userEmail = "fionnbennett06@gmail.com";
-    extraConfig = {
-      init.defaultBranch = "main";
+    settings = {
+      user = {
+        email = "fionnbennett06@gmail.com";
+        name = "Pint Sized";
+      };
+      extraConfig = {
+        init.defaultBranch = "main";
+      };
     };
   };
   home.file.".gitconfig".text = ''

@@ -1,22 +1,6 @@
 {userSettings, ...}: {
   programs.vesktop = {
     enable = true;
-    #settings = {
-    #audio = {
-    #input_mode = "1";
-    #};
-    #keybinds = {
-    #PUSHTOTALK = [
-    #{
-    #key = "V";
-    #modifiers = [];
-    #}
-    #];
-    #};
-    #};
-    #};
-    #useQuickCss = true;
-    #frameless = true;
     vencord.settings = {
       useQuicCss = true;
       plugins = {
