@@ -72,6 +72,7 @@
       zip
 
       nodejs_latest
+      nmgui
     ])
     # ----- UNSTABLE ----- #
     ++ (with pkgs-unstable; [
