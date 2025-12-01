@@ -100,6 +100,9 @@
     # ----- VIRTUALISATION ----- #
     ./modules/virtualisation.nix
 
+    # ----- VSCODIUM ----- #
+    ./modules/vscodium.nix
+
     # ---------- WAYBAR ----------- #
     ./modules/waybar.nix
 
