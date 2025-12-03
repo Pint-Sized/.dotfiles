@@ -73,6 +73,7 @@
 
       nodejs_latest
       nmgui
+      pandoc
     ])
     # ----- UNSTABLE ----- #
     ++ (with pkgs-unstable; [
