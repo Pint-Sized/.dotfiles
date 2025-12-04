@@ -81,6 +81,7 @@
   };
   console.keyMap = "us";
   nix.settings = {
+    optimise.automatic = true;
     experimental-features = [
       "nix-command"
       "flakes"
