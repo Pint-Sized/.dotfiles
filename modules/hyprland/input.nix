@@ -11,6 +11,6 @@
       workspace_swipe_invert = false;
       workspace_swipe_forever = true;
     };
-    gesture = "3, horizontal, workspace";
+    #gesture = "3, horizontal, workspace";
   };
 }
