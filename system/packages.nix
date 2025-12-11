@@ -32,6 +32,8 @@
       jq
       kdePackages.qt6ct
       libreoffice-qt6-fresh
+      hunspell
+      hunspellDicts.en_GB-ize
       libsForQt5.qt5ct
       lsd
       mpv
