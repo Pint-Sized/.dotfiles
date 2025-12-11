@@ -69,7 +69,6 @@
             "critical" = 15;
           };
           "format" = "{icon}{capacity}%";
-          "on-click-right" = "kitty nvim ~/.dotfiles/hosts/laptop/battery.nix";
           "format-charging" = "󰂄{capacity}%";
           "format-plugged" = "";
           "format-alt" = "{icon}{time}";
