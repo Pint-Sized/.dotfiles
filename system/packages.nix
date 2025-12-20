@@ -7,6 +7,7 @@
   # -------- STABLE ------- #
   environment.systemPackages =
     (with pkgs; [
+      prismlauncher
       kdePackages.ark
       bat
       base16-schemes
