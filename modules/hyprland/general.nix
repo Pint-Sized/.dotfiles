@@ -79,6 +79,7 @@
         close_special_on_empty = true;
         new_window_takes_over_fullscreen = 2;
         middle_click_paste = false;
+        vfr = true;
       };
       monitor = [
         "DP-2, 1920x1080@240, 0x0, 1"

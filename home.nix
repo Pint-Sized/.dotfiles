@@ -66,6 +66,9 @@
     # ----- MICROSOFT-OFFICE ----- #
     ./applications/microsoft-office/office.nix
 
+    # ----- LUTRIS ------ #
+    ./modules/lutris.nix
+
     # ----- MPV ----- #
     ./modules/mpv.nix
 
