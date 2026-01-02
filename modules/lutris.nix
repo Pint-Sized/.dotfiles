@@ -1,3 +1,3 @@
 {
-  programs.lutris.enalbe = true;
+  programs.lutris.enable = true;
 }
