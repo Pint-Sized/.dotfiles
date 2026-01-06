@@ -29,7 +29,7 @@
 
         [scratchpads.timetable]
         animation = "fromTop"
-        command = "imv ~/School/School-TimetableV2.png"
+        command = "imv ~/School/school-timetable.png"
         class = "imv"
         size = "90% 90%"
         lazy = true
