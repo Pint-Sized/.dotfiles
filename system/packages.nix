@@ -36,7 +36,6 @@
       hunspell
       hunspellDicts.en_GB-ize
       libsForQt5.qt5ct
-      lsd
       mpv
       nautilus
       nix-du
