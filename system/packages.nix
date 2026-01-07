@@ -7,6 +7,7 @@
   # -------- STABLE ------- #
   environment.systemPackages =
     (with pkgs; [
+      rpi-imager
       prismlauncher
       kdePackages.ark
       kdePackages.isoimagewriter
