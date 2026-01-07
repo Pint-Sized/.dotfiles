@@ -39,7 +39,7 @@
         {
           "type": "host",
           "key": "{#90}│ {#93}Machine     {#90}│",
-          "format": "{$3}{name} {#2}{version}",
+          "format": "{$3}{version} {#2}{name}",
         },
         {
           "type": "os",
