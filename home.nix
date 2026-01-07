@@ -1,6 +1,5 @@
 {userSettings, ...}: {
   imports = [
-    ./modules/ghostty.nix
     # ------ AERC ------ #
     ./modules/aerc.nix
 

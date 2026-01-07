@@ -8,6 +8,7 @@
   environment.systemPackages =
     (with pkgs; [
       rpi-imager
+      xterm
       prismlauncher
       kdePackages.ark
       kdePackages.isoimagewriter
