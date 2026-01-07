@@ -9,6 +9,7 @@
     (with pkgs; [
       prismlauncher
       kdePackages.ark
+      kdePackages.isoimagewriter
       bat
       base16-schemes
       black
