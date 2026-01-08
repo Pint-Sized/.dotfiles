@@ -58,12 +58,6 @@
       url = "github:kaylorben/nixcord/main";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    # ----- ZEN-BROWSER ----- #
-    zen-browser = {
-      url = "github:0xc000022070/zen-browser-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = inputs @ {
@@ -78,7 +72,6 @@
     spicetify-nix,
     nixcord,
     nixos-hardware,
-    zen-browser,
     ...
   }: let
     systemSettings = {
@@ -193,7 +186,6 @@
           stylix.homeModules.stylix
           spicetify-nix.homeManagerModules.default
           nixcord.homeModules.nixcord
-          zen-browser.homeModules.twilight-official
         ];
         extraSpecialArgs = {
           inherit inputs;
@@ -213,7 +205,6 @@
           stylix.homeModules.stylix
           spicetify-nix.homeManagerModules.default
           nixcord.homeModules.nixcord
-          zen-browser.homeModules.twilight-official
         ];
         extraSpecialArgs = {
           inherit inputs;
