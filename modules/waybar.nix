@@ -1,8 +1,13 @@
 {
   config,
   userSettings,
+  pkgs,
   ...
 }: {
+  home.packages = with pkgs; [
+    playerctl
+    wttrbar
+  ];
   programs.waybar = {
     enable = true;
     settings = [
@@ -105,7 +110,6 @@
           "on-click" = "playerctl play-pause";
           "on-scroll-up" = "playerctl previous";
           "on-scroll-down" = "playerctl next";
-          "on-click-right" = "g4music";
         };
         "pulseaudio" = {
           "format" = "{icon} {volume}%";

@@ -7,101 +7,57 @@
   # -------- STABLE ------- #
   environment.systemPackages =
     (with pkgs; [
-      rpi-imager
-      xterm
-      prismlauncher
       kdePackages.ark
       kdePackages.isoimagewriter
-      bat
       base16-schemes
       black
-      btop
       calligraphy
-      cava
       celluloid
       discover-overlay
+      fastfetch
       kdePackages.dolphin
       emote
       mediainfo
-      fastfetch
-      firefox
-      firefoxpwa
-      foot
       fragments
-      fzf
-      git
       gparted
-      imv
-      kitty
       jq
-      kdePackages.qt6ct
       libreoffice-qt6-fresh
       hunspell
       hunspellDicts.en_GB-ize
-      libsForQt5.qt5ct
-      mpv
       nautilus
       nix-du
       nix-unit
       ntfs3g
       pavucontrol
-      playerctl
       pokeget-rs
-      pyprland
+      prismlauncher
       python3
       quickgui
       ripgrep
-      spotify
-      swaynotificationcenter
-      swayosd
-      swww
       thunderbird
       tldr
       udisks
-      ulauncher
       unzip
       usbutils
       vencord
       volctl
-      waybar
-      waypaper
-      wdisplays
       wev
       which
       wl-clipboard
-      wlogout
-      yazi
       zapzap
-      zathura
       zed-editor
       zip
 
       nodejs_latest
-      nmgui
       pandoc
     ])
     # ----- UNSTABLE ----- #
     ++ (with pkgs-unstable; [
-      alejandra
       discord
-      gopls
-      hclfmt
       hyprpolkitagent
-      hyprshot
       lua
-      markdown-oxide
       nchat
-      neovim-unwrapped
-      nixd
-      nixfmt-rfc-style
       nix-output-monitor
-      prettierd
-      pyright
-      basedpyright
-      stylua
-      wttrbar
-      yamllint
-      yamlfmt
     ])
     # ----- PYTHON-PACKAGES ----- #
     ++ (with pkgs.python312Packages; [
@@ -109,16 +65,6 @@
       python-lsp-server
       pip
       psutil
-    ])
-    # --------- FISH PLUGINS --------- #
-    ++ (with pkgs-unstable.fishPlugins; [
-      autopair
-      colored-man-pages
-      done
-      hydro
-      puffer
-      sponge
-      transient-fish
     ]);
 
   services.flatpak.packages = [
@@ -158,7 +104,6 @@
     nix-index-database = {
       comma.enable = true;
     };
-    # ----- temp ----- #
     steam.enable = true;
     gamemode.enable = true;
     gamescope = {

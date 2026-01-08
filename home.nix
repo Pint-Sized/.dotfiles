@@ -6,9 +6,6 @@
     # ------- BAT ------- #
     ./modules/bat.nix
 
-    # ------ BOTTOM ----- #
-    ./modules/bottom.nix
-
     # ------- BTOP ------- #
     ./modules/btop.nix
 
