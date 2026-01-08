@@ -1,6 +1,6 @@
 {
   programs.hyprland = {
-    emable = true;
+    enable = true;
     xwayland.enable = true;
   };
   services.xserver = {
