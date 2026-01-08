@@ -7,5 +7,6 @@
     ./keymaps.nix
     ./plugins.nix
     ./settings.nix
+    ./packages.nix
   ];
 }

@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  home.packages = with pkgs; [
+  home.packages = with pkgs.fishPlugins; [
     autopair
     colored-man-pages
     done
