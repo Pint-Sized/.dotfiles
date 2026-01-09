@@ -8,6 +8,8 @@
   environment.systemPackages =
     (with pkgs; [
       kdePackages.ark
+      zstd
+      rpi-imager
       kdePackages.isoimagewriter
       base16-schemes
       black
@@ -17,14 +19,16 @@
       fastfetch
       kdePackages.dolphin
       emote
-      mediainfo
       fragments
       gparted
-      jq
-      libreoffice-qt6-fresh
       hunspell
+      jq
+      kitty
+      libreoffice-qt6-fresh
+      mediainfo
       hunspellDicts.en_GB-ize
       nautilus
+      neovim
       nix-du
       nix-unit
       ntfs3g
@@ -44,6 +48,7 @@
       wev
       which
       wl-clipboard
+      yazi
       zapzap
       zed-editor
       zip
