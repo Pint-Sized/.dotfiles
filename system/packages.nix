@@ -7,6 +7,7 @@
   # -------- STABLE ------- #
   environment.systemPackages =
     (with pkgs; [
+      traceroute
       kdePackages.ark
       zstd
       rpi-imager
