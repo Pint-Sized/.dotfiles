@@ -1,21 +1,11 @@
 {
   services = {
-    libinput = {
-      mouse = {
-        accelProfile = "flat";
-      };
-    };
-    udisks2 = {
-      enable = true;
-    };
-
+    libinput.mouse.accelProfile = "flat";
+    udisks2.enable = true;
     hardware.openrgb.enable = true;
-
     flatpak = {
       enable = true;
-      update = {
-        onActivation = true;
-      };
+      update.onActivation = true;
       uninstallUnmanaged = true;
       overrides = {
         global = {
@@ -25,41 +15,25 @@
             NIX_OZONE_WL = "1";
             NIX_OZONE = "1";
           };
-          Context = {
-            filesystems = [
-              "/usr/share/icons:ro"
-              "~/.icons:ro"
-              "~/.themes:ro"
-            ];
-          };
+          Context.filesystems = [
+            "/usr/share/icons:ro"
+            "~/.icons:ro"
+            "~/.themes:ro"
+          ];
         };
       };
     };
-
     pipewire = {
       enable = true;
       alsa = {
         enable = true;
         support32Bit = true;
       };
-      pulse = {
-        enable = true;
-      };
-      jack = {
-        enable = true;
-      };
+      pulse.enable = true;
+      jack.enable = true;
     };
-
-    gvfs = {
-      enable = true;
-    };
-
-    devmon = {
-      enable = true;
-    };
-
-    openssh = {
-      enable = true;
-    };
+    gvfs.enable = true;
+    devmon.enable = true;
+    openssh.enable = true;
   };
 }

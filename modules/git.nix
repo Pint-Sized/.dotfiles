@@ -6,9 +6,7 @@
         email = "fionnbennett06@gmail.com";
         name = "Pint Sized";
       };
-      extraConfig = {
-        init.defaultBranch = "main";
-      };
+      extraConfig.init.defaultBranch = "main";
     };
   };
   home.file.".gitconfig".text = ''

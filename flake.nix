@@ -42,7 +42,7 @@
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
 
-    # ------ NIX DECLERATIVE FLATPAKS ----- #
+    # ------ NIX-FLATPAKS ----- #
     nix-flatpak = {
       url = "github:gmodena/nix-flatpak/latest";
     };

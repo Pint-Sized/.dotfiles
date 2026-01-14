@@ -16,10 +16,6 @@
       vintagestory
     ]);
 
-  #services.flatpak = {
-  #packages = [];
-  #};
-
   programs = {
     coolercontrol.enable = true;
     gamemode.enable = true;

@@ -1,7 +1,5 @@
 {
-  programs.nixvim = {
-    enable = true;
-  };
+  programs.nixvim.enable = true;
   imports = [
     ./autocmds.nix
     ./keymaps.nix

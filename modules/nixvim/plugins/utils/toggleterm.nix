@@ -2,9 +2,7 @@
   programs.nixvim = {
     plugins.toggleterm = {
       enable = true;
-      settings = {
-        size = 20;
-      };
+      settings.size = 20;
     };
     keymaps = [
       {

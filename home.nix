@@ -50,7 +50,7 @@
 
     # ------------- HYPRLAND ---------- #
     ./modules/hyprland/hyprland.nix
-    #./modules/kde/kde.nix
+
     # ---------- IMV ----------- #
     ./modules/imv.nix
 

@@ -8,7 +8,6 @@
     ./system/virtualisation.nix
     ./themes/system.nix
     ./system/hyprland/hyprland.nix
-    #./system/kde/kde.nix
   ];
   system.stateVersion = "23.05";
 }
