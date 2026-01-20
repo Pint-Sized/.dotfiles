@@ -75,7 +75,7 @@
         font_family = "${userSettings.fontSerif}";
         animate_manual_resizes = true;
         close_special_on_empty = true;
-        new_window_takes_over_fullscreen = 2;
+        #new_window_takes_over_fullscreen = 2;
         middle_click_paste = false;
         vfr = true;
       };

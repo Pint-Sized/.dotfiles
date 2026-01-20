@@ -86,8 +86,6 @@
       ", XF86AudioMute, exec, swayosd-client --output-volume mute-toggle"
 
       "$mainMod, semicolon, exec, emote"
-
-      "$mainMod, TAB, hyprexpo:expo, toggle"
     ];
 
     binde = [
