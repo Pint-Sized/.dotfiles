@@ -1,6 +1,11 @@
 {
+  pkgs,
+  inputs,
+  ...
+}: {
   programs.hyprland = {
     enable = true;
+    package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
     xwayland.enable = true;
   };
   services.xserver = {
@@ -8,9 +13,6 @@
     displayManager.gdm = {
       enable = true;
       wayland = true;
-      banner = ''
-        0858244115 - fionnbennett06@gmail.com
-      '';
     };
     xkb = {
       variant = "";

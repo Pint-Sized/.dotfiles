@@ -81,18 +81,23 @@
   };
   console.keyMap = "us";
   nix.settings = {
-    #optimise.automatic = true;
     experimental-features = [
       "nix-command"
       "flakes"
     ];
-    substituters = ["https://hyprland.cachix.org"];
-    trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
+    substituters = [
+      "https://hyprland.cachix.org"
+      "https://cache.nixos.org"
+      "https://nix-community.cachix.org"
+    ];
+    trusted-public-keys = [
+      "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
+    ];
   };
   security.rtkit.enable = true;
-  xdg.portal = {
-    enable = true;
-    xdgOpenUsePortal = true;
-  };
+  #xdg.portal = {
+  #enable = true;
+  #xdgOpenUsePortal = true;
+  #};
   documentation.man.generateCaches = false;
 }

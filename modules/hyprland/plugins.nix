@@ -1,4 +1,5 @@
 {
+  inputs,
   config,
   pkgs,
   ...
@@ -10,6 +11,7 @@
       pkgs.hyprlandPlugins.csgo-vulkan-fix
       pkgs.hyprlandPlugins.hyprexpo
       pkgs.hyprlandPlugins.hypr-dynamic-cursors
+      inputs.hyprland-plugins.packages.${pkgs.system}.hyprfocus
     ];
     settings.plugin = {
       borders-plus-plus = {
