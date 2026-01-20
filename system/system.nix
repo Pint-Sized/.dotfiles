@@ -93,9 +93,9 @@
     ];
   };
   security.rtkit.enable = true;
-  #xdg.portal = {
-  #enable = true;
-  #xdgOpenUsePortal = true;
-  #};
+  xdg.portal = {
+    enable = true;
+    xdgOpenUsePortal = true;
+  };
   documentation.man.generateCaches = false;
 }
