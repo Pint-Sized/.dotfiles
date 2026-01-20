@@ -72,14 +72,14 @@
       psutil
     ]);
 
-  #services.flatpak.packages = [
-  #"io.github.giantpinkrobots.flatsweep"
-  #"com.usebottles.bottles"
-  #"io.frama.tractor.carburetor"
-  #"it.mijorus.whisper"
-  #"org.prismlauncher.PrismLauncher"
-  #"com.stremio.Stremio"
-  #];
+  services.flatpak.packages = [
+    "io.github.giantpinkrobots.flatsweep"
+    "com.usebottles.bottles"
+    "io.frama.tractor.carburetor"
+    "it.mijorus.whisper"
+    "org.prismlauncher.PrismLauncher"
+    "com.stremio.Stremio"
+  ];
 
   programs = {
     nh = {

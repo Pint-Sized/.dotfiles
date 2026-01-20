@@ -4,7 +4,7 @@
     udisks2.enable = true;
     hardware.openrgb.enable = true;
     flatpak = {
-      enable = false;
+      enable = true;
       update.onActivation = true;
       uninstallUnmanaged = true;
       overrides = {

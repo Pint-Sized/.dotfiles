@@ -7,7 +7,7 @@
     ./system/networking.nix
     ./system/virtualisation.nix
     ./themes/system.nix
-    #./system/hyprland/hyprland.nix
+    ./system/hyprland/hyprland.nix
   ];
   system.stateVersion = "23.05";
 }

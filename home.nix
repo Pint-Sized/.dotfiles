@@ -49,7 +49,7 @@
     ./modules/home-settings.nix
 
     # ------------- HYPRLAND ---------- #
-    #./modules/hyprland/hyprland.nix
+    ./modules/hyprland/hyprland.nix
 
     # ---------- IMV ----------- #
     ./modules/imv.nix
