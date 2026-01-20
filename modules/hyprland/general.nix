@@ -91,7 +91,9 @@
         no_warps = true;
         inactive_timeout = 10;
       };
-      windowrulev2 = ["suppressevent maximize, class:.*"];
+      windowrulev2 = [
+        "suppressevent maximize, class:.*"
+      ];
       xwayland = {
         enabled = true;
         force_zero_scaling = true;

@@ -51,7 +51,6 @@
       wl-clipboard
       yazi
       zapzap
-      zed-editor
       zip
 
       nodejs_latest
