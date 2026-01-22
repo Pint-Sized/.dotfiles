@@ -75,7 +75,7 @@
           };
           "format" = "{icon}{capacity}%";
           "format-charging" = "󰂄{capacity}%";
-          "format-plugged" = "";
+          "format-plugged" = "󱞜";
           "format-alt" = "{icon}{time}";
           "format-icons" = [
             "󰂃"
@@ -106,7 +106,7 @@
             "artist"
           ];
           "dynamic-separator" = "  ";
-          "max-length" = 24;
+          "max-length" = 50;
           "on-click" = "playerctl play-pause";
           "on-scroll-up" = "playerctl previous";
           "on-scroll-down" = "playerctl next";
