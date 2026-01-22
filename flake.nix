@@ -6,9 +6,7 @@
     nixpkgs-master.url = "github:/nixos/nixpkgs/master";
 
     # ----- NIXOS-HARDWARE ----- #
-    nixos-hardware = {
-      url = "github:NixOS/nixos-hardware/master";
-    };
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
     # ----- NIX-USER-REPOSITORY ----- #
     nur = {
@@ -19,7 +17,6 @@
     # ----- HOME-MANAGER ----- #
     home-manager = {
       url = "github:nix-community/home-manager/release-25.11";
-      #url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -32,20 +29,17 @@
     # ----- STYLIX ----- #
     stylix = {
       url = "github:nix-community/stylix/release-25.11";
-      #url = "github:nix-community/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     # ----- NIXVIM ----- #
     nixvim = {
-      url = "github:nix-community/nixvim/main";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
+      url = "github:nix-community/nixvim/nixos-25.11";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     # ------ NIX-FLATPAKS ----- #
-    nix-flatpak = {
-      url = "github:gmodena/nix-flatpak/latest";
-    };
+    nix-flatpak.url = "github:gmodena/nix-flatpak/latest";
 
     # ----- SPICETIFY ------ #
     spicetify-nix = {
@@ -94,7 +88,7 @@
       username = "fionnbennett";
       name = "Fionn Bennett";
       email = "fionnbennett06@gmail.com";
-      theme = "gruvbox-material-dark-soft";
+      theme = "spaceduck";
       fontPkg = "nerd-fonts.caskaydia-cove";
       fontSerif = "CaskaydiaCove NF";
       fontMono = "CaskaydiaCove NF";
