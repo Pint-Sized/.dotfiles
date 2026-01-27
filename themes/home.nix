@@ -38,6 +38,7 @@
         enable = true;
         plugin = "base16-nvim";
       };
+      spicetify.enable = false;
     };
   };
   home.file.".colours".text = with config.lib.stylix.colors; ''
