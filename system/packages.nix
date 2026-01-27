@@ -1,5 +1,7 @@
 {
   pkgs,
+  inputs,
+  system,
   pkgs-unstable,
   userSettings,
   ...
@@ -70,6 +72,9 @@
       python-lsp-server
       pip
       psutil
+    ])
+    ++ (with inputs; [
+      caelestia-shell.packages.x86_64-linux.default
     ]);
 
   services.flatpak.packages = [

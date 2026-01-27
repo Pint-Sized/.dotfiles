@@ -79,7 +79,7 @@
         {
           "type": "disk",
           "key": "{#90}│ {#91}Disk        {#90}│",
-          "format": "{$3}{size-used} / {size-used} ({size-percentage})",
+          "format": "{$3}{size-used} / {size-total} ({size-percentage})",
         },
         {
           "type": "poweradapter",

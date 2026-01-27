@@ -79,7 +79,7 @@
     ./modules/qt.nix
 
     # ------- SPICETIFY ------ #
-    ./modules/spicetify.nix
+    ./modules/spicetifymk2.nix
 
     # ------- STYLIX ----------- #
     ./themes/home.nix
