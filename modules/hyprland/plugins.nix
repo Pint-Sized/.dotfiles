@@ -7,14 +7,13 @@
   wayland.windowManager.hyprland = with config.lib.stylix.colors; {
     plugins = [
       pkgs.hyprlandPlugins.hypr-dynamic-cursors
-      #inputs.hyprland-plugins.packages.${pkgs.system}.hyprfocus
       inputs.hyprland-plugins.packages.${pkgs.system}.hyprwinwrap
       inputs.hyprland-plugins.packages.${pkgs.system}.borders-plus-plus
-      pkgs.hyprlandPlugins.hyprfocus
+      inputs.hyprfocus.packages.${pkgs.system}.hyprfocus
     ];
     settings.plugin = {
       hyprfocus = {
-        enabled = "yes";
+        enabled = "no";
         mode = "shrink";
         shrink_percentage = 0.8;
         in_speed = 0.5;
