@@ -1,7 +1,7 @@
 {
   wayland.windowManager.hyprland.settings = {
     input = {
-      kb_layout = "gb";
+      kb_layout = "ie";
       follow_mouse = 2;
       sensitivity = 0;
       special_fallthrough = true;
