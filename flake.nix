@@ -66,6 +66,11 @@
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
     };
+
+    hyprfocus = {
+      url = "github:daxisunder/hyprfocus";
+      inputs.hyprland.follows = "hyprland";
+    };
   };
   outputs = inputs @ {
     nixpkgs,
