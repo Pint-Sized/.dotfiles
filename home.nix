@@ -39,9 +39,6 @@
     # ---------- GIT --------------#
     ./modules/git.nix
 
-    # ----- GITUI ------ #
-    ./modules/gitui.nix
-
     # ---------- GTK ------------- #
     ./modules/gtk.nix
 
@@ -56,6 +53,9 @@
 
     # ----------- KITTY  ------------- #
     ./modules/kitty.nix
+
+    # ----- LAZYGIT ----- #
+    ./modules/lazygit.nix
 
     # ----- MICROSOFT-OFFICE ----- #
     ./applications/microsoft-office/office.nix

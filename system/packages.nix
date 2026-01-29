@@ -1,7 +1,6 @@
 {
   pkgs,
   inputs,
-  system,
   pkgs-unstable,
   userSettings,
   ...
@@ -9,11 +8,6 @@
   # -------- STABLE ------- #
   environment.systemPackages =
     (with pkgs; [
-      traceroute
-      kdePackages.ark
-      zstd
-      rpi-imager
-      kdePackages.isoimagewriter
       base16-schemes
       black
       calligraphy
@@ -26,6 +20,7 @@
       gparted
       hunspell
       jq
+      kdePackages.ark
       kitty
       libreoffice-qt6-fresh
       mediainfo
@@ -54,7 +49,6 @@
       yazi
       zapzap
       zip
-
       nodejs_latest
       pandoc
     ])
