@@ -61,7 +61,7 @@
           "key": "{#90}│ {#91}CPU         {#90}│",
           "showPeCoreCount": true,
           "temp": true,
-          "format": "{$3}{name} {#2}[C:{core-types}] {#2}[{freq-max}]",
+          "format": "{$3}{name} {#2}[T:{core-types}] {#2}[{freq-max}]",
         },
         {
           "type": "gpu",
