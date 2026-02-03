@@ -1,13 +1,20 @@
-{pkgs, ...}: {
-  home.packages = with pkgs; [
-    ulauncher
-    kdePackages.qt6ct
-    libsForQt5.qt5ct
-    pyprland
-    swayosd
-    swww
-    waypaper
-    wdisplays
-    hyprshot
-  ];
+{
+  pkgs,
+  pkgs-unstable,
+  ...
+}: {
+  home.packages =
+    (with pkgs; [
+      ulauncher
+      kdePackages.qt6ct
+      libsForQt5.qt5ct
+      swayosd
+      swww
+      waypaper
+      wdisplays
+      hyprshot
+    ])
+    ++ (with pkgs-unstable; [
+      pyprland
+    ]);
 }
