@@ -19,6 +19,8 @@
             "/usr/share/icons:ro"
             "~/.icons:ro"
             "~/.themes:ro"
+            "xdg-data/applications"
+            "home"
           ];
         };
       };

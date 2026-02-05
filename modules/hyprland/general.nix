@@ -21,15 +21,11 @@
       };
       decoration = {
         rounding = 4;
-        #active_opacity = 0.825;
-        #inactive_opacity = 0.825;
         active_opacity = 0.8;
         inactive_opacity = 0.8;
         fullscreen_opacity = 1;
         blur = {
           enabled = true;
-          #size = 2;
-          #passes = 3;
           size = 0;
           passes = 2;
           noise = 0;

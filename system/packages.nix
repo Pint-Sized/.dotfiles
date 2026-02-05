@@ -8,6 +8,7 @@
   # -------- STABLE ------- #
   environment.systemPackages =
     (with pkgs; [
+      wget
       base16-schemes
       black
       calligraphy
