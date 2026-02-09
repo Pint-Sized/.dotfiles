@@ -7,22 +7,20 @@
       enable = true;
       update.onActivation = true;
       uninstallUnmanaged = true;
-      overrides = {
-        global = {
-          Environment = {
-            XCURSOR_SIZE = "16";
-            MOZ_ENABLE_WAYLAND = "1";
-            NIX_OZONE_WL = "1";
-            NIX_OZONE = "1";
-          };
-          Context.filesystems = [
-            "/usr/share/icons:ro"
-            "~/.icons:ro"
-            "~/.themes:ro"
-            "xdg-data/applications"
-            "home"
-          ];
+      overrides.global = {
+        Environment = {
+          XCURSOR_SIZE = "16";
+          MOZ_ENABLE_WAYLAND = "1";
+          NIX_OZONE_WL = "1";
+          NIX_OZONE = "1";
         };
+        Context.filesystems = [
+          "/usr/share/icons:ro"
+          "~/.icons:ro"
+          "~/.themes:ro"
+          "xdg-data/applications"
+          "home"
+        ];
       };
     };
     pipewire = {

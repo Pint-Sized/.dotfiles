@@ -67,9 +67,6 @@
       python-lsp-server
       pip
       psutil
-    ])
-    ++ (with inputs; [
-      caelestia-shell.packages.x86_64-linux.default
     ]);
 
   services.flatpak.packages = [
@@ -96,15 +93,11 @@
       enable = true;
       package = pkgs.mtr;
     };
-    gnupg = {
-      agent = {
-        enable = true;
-        enableSSHSupport = true;
-      };
+    gnupg.agent = {
+      enable = true;
+      enableSSHSupport = true;
     };
-    nix-index-database = {
-      comma.enable = true;
-    };
+    nix-index-database.comma.enable = true;
     steam.enable = true;
     gamemode.enable = true;
     gamescope = {

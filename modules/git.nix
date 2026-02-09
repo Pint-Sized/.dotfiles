@@ -11,7 +11,7 @@
   };
   home.file.".gitconfig".text = ''
     [user]
-      name = Pint Sized
-      email = fionnbennett06@gmail.com
+    name = Pint Sized
+    email = fionnbennett06@gmail.com
   '';
 }

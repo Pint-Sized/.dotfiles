@@ -24,7 +24,7 @@
       };
       ".config/ulauncher/user-themes/theme/manifest.json" = {
         text = ''
-                {
+          {
             "manifest_version": "1",
             "name": "stylix-theme",
             "display_name": "Stylix Theme",
@@ -49,9 +49,9 @@
           @define-color window_border_color darker(@background);
           @define-color prefs_backgroud @foreground;
 
-                  /**
-                  * Input
-                  */
+          /**
+          * Input
+          */
            @define-color selected_bg_color @foreground;
            @define-color selected_fg_color @background;
            @define-color input_color @foreground;
@@ -59,7 +59,7 @@
 
            /**
             * Result items
-            */
+           */
            @define-color item_name @foreground;
            @define-color item_text @foreground_lessimportant;
            @define-color item_box_selected @current_line_background;

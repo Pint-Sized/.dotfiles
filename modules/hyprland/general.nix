@@ -15,9 +15,7 @@
         resize_on_border = false;
         allow_tearing = true;
         layout = "dwindle";
-        snap = {
-          enabled = true;
-        };
+        snap.enabled = true;
       };
       decoration = {
         rounding = 4;
@@ -71,7 +69,6 @@
         font_family = "${userSettings.fontSerif}";
         animate_manual_resizes = true;
         close_special_on_empty = true;
-        #new_window_takes_over_fullscreen = 2;
         middle_click_paste = false;
         vfr = true;
       };
