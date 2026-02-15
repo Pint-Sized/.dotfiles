@@ -1,6 +1,6 @@
 {
   pkgs,
-  pkgs-unstable,
+  pkgs-master,
   ...
 }: {
   home.packages =
@@ -14,7 +14,7 @@
       wdisplays
       hyprshot
     ])
-    ++ (with pkgs-unstable; [
+    ++ (with pkgs-master; [
       pyprland
     ]);
 }

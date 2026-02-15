@@ -2,7 +2,7 @@
   programs.cava = {
     enable = true;
     settings.general = {
-      framerate = 30;
+      framerate = 60;
       autosense = 0;
       sensitivity = 40;
     };
