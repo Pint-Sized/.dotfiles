@@ -160,17 +160,19 @@
             "󰤢"
             "󰤥"
           ];
-          "format-wifi" = "󰤥";
+          #"format-wifi" = "󰤥";
+          "format-wifi" = "";
           "rotate" = 0;
           "format-ethernet" = "󰈀";
-          "tooltip-format" = ''
-            Network: <big><b>{essid}</b></big>
-            Signal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>
-            Frequency: <b>{frequency}MHz</b>
-            Interface: <b>{ifname}</b>
-            IP: <b>{ipaddr}/{cidr}</b>
-            Gateway: <b>{gwaddr}</b>
-            Netmask: <b>{netmask}</b>'';
+          "tooltip-format" = "Disconnected.";
+          #"tooltip-format" = ''
+          #Network: <big><b>{essid}</b></big>
+          #Signal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>
+          #Frequency: <b>{frequency}MHz</b>
+          #Interface: <b>{ifname}</b>
+          #IP: <b>{ipaddr}/{cidr}</b>
+          #Gateway: <b>{gwaddr}</b>
+          #Netmask: <b>{netmask}</b>'';
           "format-linked" = "󰈀 {ifname} (No IP)";
           "format-disconnected" = "";
           "tooltip-format-disconnected" = "Disconnected";
