@@ -13,6 +13,7 @@
     ./plugins/editor/neo-tree.nix
     ./plugins/editor/todo-comments.nix
     ./plugins/editor/treesitter.nix
+    ./plugins/editor/hmts.nix
 
     #LSP
     ./plugins/lsp/conform.nix

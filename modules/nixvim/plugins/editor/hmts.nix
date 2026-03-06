@@ -1,3 +1,3 @@
 {
-  program.nvim.plugins.htms.enable = true;
+  programs.nixvim.plugins.hmts.enable = true;
 }
