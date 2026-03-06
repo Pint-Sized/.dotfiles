@@ -1,9 +1,8 @@
 {pkgs, ...}: {
   programs.nixvim.plugins.treesitter = {
     enable = true;
-    autoLoad = false;
     settings = {
-      highlight.enable = true;
+      highlight.enable = false;
       indent.enable = true;
       folding.enable = true;
     };
