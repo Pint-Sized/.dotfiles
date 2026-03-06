@@ -1,3 +1,6 @@
 {
-  programs.nixvim.plugins.hmts.enable = true;
+  programs.nixvim.plugins.hmts = {
+    enable = true;
+    autoLoad = true;
+  };
 }
