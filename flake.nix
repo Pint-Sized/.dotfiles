@@ -93,7 +93,7 @@
       username = "fionnbennett";
       name = "Fionn Bennett";
       email = "fionnbennett06@gmail.com";
-      theme = "gruvbox-material-dark-soft";
+      theme = "nord";
       fontPkg = "nerd-fonts.caskaydia-cove";
       fontSerif = "CaskaydiaCove NF";
       fontMono = "CaskaydiaCove NF";
