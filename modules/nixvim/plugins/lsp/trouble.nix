@@ -1,6 +1,9 @@
 {
   programs.nixvim = {
-    plugins.trouble.enable = true;
+    plugins.trouble = {
+      enable = true;
+      autoLoad = true;
+    };
     keymaps = [
       {
         mode = "n";
