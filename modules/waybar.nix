@@ -176,7 +176,6 @@
           "format-linked" = "󰈀 {ifname} (No IP)";
           "format-disconnected" = "";
           "tooltip-format-disconnected" = "Disconnected";
-          "on-click" = "kitty ~/.dotfiles/scripts/wifi-rebuild";
           "interval" = 2;
         };
         "memory" = {
