@@ -9,7 +9,8 @@
       #pkgs.hyprlandPlugins.hypr-dynamic-cursor
       pkgs.hyprlandPlugins.hyprwinwrap
       #inputs.hyprland-plugins.packages.${pkgs.system}.hyprwinwrap
-      inputs.hyprland-plugins.packages.${pkgs.system}.borders-plus-plus
+      #inputs.hyprland-plugins.packages.${pkgs.system}.borders-plus-plus
+      pkgs.hyprlandPlugins.borders-plus-plus
       inputs.hyprfocus.packages.${pkgs.system}.hyprfocus
     ];
     settings.plugin = {
