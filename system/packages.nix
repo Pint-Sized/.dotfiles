@@ -1,6 +1,5 @@
 {
   pkgs,
-  inputs,
   pkgs-unstable,
   userSettings,
   ...
