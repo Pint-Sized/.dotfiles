@@ -16,5 +16,12 @@
     ])
     ++ (with pkgs-master; [
       pyprland
+    ])
+    ++ (with pkgs.hyprlandPlugins; [
+      hyprwinwrap
+      hyprfocus
+      hypr-dynamic-cursors
+      borders-plus-plus
+      hyprfocus
     ]);
 }
