@@ -27,7 +27,8 @@
       kitty
       libreoffice-qt6-fresh
       mediainfo
-      hunspellDicts.en_GB-ize
+      hunspell
+      hunspellDicts.en_GB-ise
       nautilus
       neovim
       nix-du
