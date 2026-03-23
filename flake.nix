@@ -52,20 +52,6 @@
       url = "github:kaylorben/nixcord/main";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    # ----- HYPRLAND ----- #
-    hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
-
-    # ----- HYPRLAND-PLUGINS ----- #
-    hyprland-plugins = {
-      url = "github:hyprwm/hyprland-plugins";
-      inputs.hyprland.follows = "hyprland";
-    };
-
-    hyprfocus = {
-      url = "github:daxisunder/hyprfocus";
-      inputs.hyprland.follows = "hyprland";
-    };
   };
   outputs = inputs @ {
     nixpkgs,
@@ -79,7 +65,6 @@
     spicetify-nix,
     nixcord,
     nixos-hardware,
-    hyprland,
     ...
   }: let
     systemSettings = {
@@ -194,7 +179,6 @@
           stylix.homeModules.stylix
           spicetify-nix.homeManagerModules.default
           nixcord.homeModules.nixcord
-          hyprland.homeManagerModules.default
         ];
         extraSpecialArgs = {
           inherit inputs;
@@ -214,7 +198,6 @@
           stylix.homeModules.stylix
           spicetify-nix.homeManagerModules.default
           nixcord.homeModules.nixcord
-          hyprland.homeManagerModules.default
         ];
         extraSpecialArgs = {
           inherit inputs;
