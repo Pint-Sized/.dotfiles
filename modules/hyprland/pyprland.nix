@@ -1,6 +1,6 @@
 {
   home.file = {
-    ".config/hypr/pyprland.toml" = {
+    ".config/pypr/config.toml" = {
       text = ''
         [pyprland]
         plugins = [ "scratchpads" ]
