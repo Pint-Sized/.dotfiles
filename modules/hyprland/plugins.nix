@@ -6,12 +6,11 @@
 }: {
   wayland.windowManager.hyprland = with config.lib.stylix.colors; {
     plugins = [
-      #pkgs.hyprlandPlugins.hypr-dynamic-cursor
       pkgs.hyprlandPlugins.hyprwinwrap
-      #inputs.hyprland-plugins.packages.${pkgs.system}.hyprwinwrap
-      #inputs.hyprland-plugins.packages.${pkgs.system}.borders-plus-plus
+      pkgs.hyprlandPlugins.hyprfocus
+      pkgs.hyprlandPlugins.hypr-dynamic-cursors
       pkgs.hyprlandPlugins.borders-plus-plus
-      inputs.hyprfocus.packages.${pkgs.system}.hyprfocus
+      pkgs.hyprlandPlugins.hyprfocus
     ];
     settings.plugin = {
       hyprfocus = {
