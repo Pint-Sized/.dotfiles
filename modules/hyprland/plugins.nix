@@ -13,7 +13,7 @@
     ];
     settings.plugin = {
       hyprfocus = {
-        enabled = "no";
+        enabled = "yes";
         mode = "shrink";
         shrink_percentage = 0.8;
         in_speed = 0.5;
