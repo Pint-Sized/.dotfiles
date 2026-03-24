@@ -42,7 +42,10 @@
       };
       animations = {
         enabled = true;
-        bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
+        bezier = [
+          "myBezier, 0.05, 0.9, 0.1, 1.05"
+          #"accel, 0.3, 0, 0.8, 0.15"
+        ];
         animation = [
           "windows, 1, 8, myBezier, slide"
           "windowsOut, 1, 8, default, popin 80%"
@@ -50,8 +53,8 @@
           "borderangle, 1, 8, default"
           "fade, 1, 7, default"
           "workspaces, 1, 6, default"
-          "hyprfocusIn, 1, 1.7, myCurve"
-          "hyprfocusOut, 1, 1.7 myCurve2"
+          #"hyprfocusIn, 1, 1, accel"
+          #"hyprfocusOut, 1, 1 accel"
         ];
       };
 
