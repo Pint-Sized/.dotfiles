@@ -13,18 +13,10 @@
       size = 16;
     };
     fonts = {
-      serif = {
-        name = "${userSettings.fontMono}";
-      };
-      sansSerif = {
-        name = "${userSettings.fontMono}";
-      };
-      monospace = {
-        name = "${userSettings.fontMono}";
-      };
-      sizes = {
-        terminal = 11;
-      };
+      serif.name = "${userSettings.fontMono}";
+      sansSerif.name = "${userSettings.fontMono}";
+      monospace.name = "${userSettings.fontMono}";
+      sizes.terminal = 11;
     };
     targets = {
       hyprland.enable = false;
