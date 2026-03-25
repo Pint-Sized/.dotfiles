@@ -4,6 +4,7 @@
   config,
   ...
 }: {
+  imports = ./home/${userSettings.theme}.nix;
   stylix = {
     enable = true;
     cursor = {

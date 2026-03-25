@@ -1,57 +1,56 @@
 {userSettings, ...}: {
   imports = [
-    # ------ AERC ------ #
+    # ----- AERC ----- #
     ./modules/aerc.nix
-
-    # ------- BAT ------- #
+    # ----- BAT ----- #
     ./modules/bat.nix
 
-    # ------- BTOP ------- #
+    # ----- BTOP ----- #
     ./modules/btop.nix
 
-    # -------- CAVA -------- #
+    # ----- CAVA ----- #
     ./modules/cava.nix
 
     # ----- CHROMIUM ----- #
     ./modules/chromium.nix
 
-    # ------- FASTFETCH -------- #
+    # ----- FASTFETCH ----- #
     ./modules/fastfetch.nix
 
-    # --------- FIREFOX ----------- #
+    # ----- FIREFOX ----- #
     ./modules/firefox/firefox.nix
 
-    # ----------- FISH ------------- #
+    # ----- FISH ----- #
     ./modules/fish.nix
 
     # ----- FOLIATE ----- #
     ./modules/foliate.nix
 
-    # ---- FONTS ---- #
+    # ----- FONTS ----- #
     ./fonts/fonts.nix
 
-    # ---------- FOOT ------------ #
+    # ----- FOOT ----- #
     ./modules/foot.nix
 
-    # ------------ FZF ------------- #
+    # ----- FZF ----- #
     ./modules/fzf.nix
 
-    # ---------- GIT --------------#
+    # ----- GIT ----- #
     ./modules/git.nix
 
-    # ---------- GTK ------------- #
+    # ----- GTK ----- #
     ./modules/gtk.nix
 
-    # -------------- HOME-SETTINGS ------ #
+    # ----- HOME-SETTINGS ----- #
     ./modules/home-settings.nix
 
-    # ------------- HYPRLAND ---------- #
+    # ----- HYPRLAND ----- #
     ./modules/hyprland/hyprland.nix
 
-    # ---------- IMV ----------- #
+    # ----- IMV ----- #
     ./modules/imv.nix
 
-    # ----------- KITTY  ------------- #
+    # ----- KITTY  ----- #
     ./modules/kitty.nix
 
     # ----- LAZYGIT ----- #
@@ -69,44 +68,43 @@
     # ----- VESKTOP ----- #
     ./modules/vesktop.nix
 
-    # --------- NIXVIM --------- #
+    # ----- NIXVIM ----- #
     ./modules/nixvim/nixvim.nix
 
-    # ---------- OBS-STUDIO ------------ #
+    # ----- OBS-STUDIO ----- #
     ./modules/obs-studio.nix
 
-    # ---------- QT ----------- #
+    # ----- QT ----- #
     ./modules/qt.nix
 
-    # ------- SPICETIFY ------ #
+    # ----- SPICETIFY ----- #
     ./modules/spicetify.nix
 
-    # ------- STYLIX ----------- #
+    # ----- STYLIX ----- #
     ./themes/home.nix
-    ./themes/home/${userSettings.theme}.nix
 
-    # --------- SWAYNC --------- #
+    # ----- SWAYNC ----- #
     ./modules/swaync.nix
 
-    # --------- ULAUNCHER --------- #
+    # ----- ULAUNCHER ----- #
     ./modules/ulauncher/ulauncher.nix
 
     # ----- VIRTUALISATION ----- #
     ./modules/virtualisation.nix
 
-    # ---------- WAYBAR ----------- #
+    # ----- WAYBAR ----- #
     ./modules/waybar.nix
 
-    # -------- WLOGOUT -------- #
+    # ----- WLOGOUT ----- #
     ./modules/wlogout/wlogout.nix
 
-    # --------- YAZI ------------ #
+    # ----- YAZI ----- #
     ./modules/yazi.nix
 
-    # --------- ZATHURA ---------- #
+    # ----- ZATHURA ----- #
     ./modules/zathura.nix
 
-    # ----- ZED ------ #
+    # ----- ZED ----- #
     ./modules/zed.nix
   ];
 
