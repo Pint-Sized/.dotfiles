@@ -2,6 +2,7 @@
   pkgs,
   pkgs-unstable,
   userSettings,
+  sheets,
   ...
 }: {
   # -------- STABLE ------- #
@@ -55,6 +56,8 @@
       zip
       nodejs_latest
       pandoc
+
+      sheets
     ])
     # ----- UNSTABLE ----- #
     ++ (with pkgs-unstable; [

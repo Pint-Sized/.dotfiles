@@ -52,6 +52,11 @@
       url = "github:kaylorben/nixcord/main";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    sheets-src = {
+      url = "github:maaslalani/sheets";
+      flake = false;
+    };
   };
   outputs = inputs @ {
     nixpkgs,
@@ -65,6 +70,7 @@
     spicetify-nix,
     nixcord,
     nixos-hardware,
+    sheets-src,
     ...
   }: let
     systemSettings = {
@@ -78,7 +84,7 @@
       username = "fionnbennett";
       name = "Fionn Bennett";
       email = "fionnbennett06@gmail.com";
-      theme = "uwunicorn";
+      theme = "xcode-dusk";
       fontPkg = "nerd-fonts.caskaydia-cove";
       fontSerif = "CaskaydiaCove NF";
       fontMono = "CaskaydiaCove NF";
@@ -127,6 +133,18 @@
         ];
       };
     };
+    sheets = pkgs.buildGoModule {
+      pname = "sheets";
+      version = "main";
+      src = sheets-src;
+      vendorHash = "sha256-WWtAt0+W/ewLNuNgrqrgho5emntw3rZL9JTTbNo4GsI=";
+      meta = with pkgs.lib; {
+        description = "Terminal based spreadsheet tool";
+        homepage = "https://github.com/maaslalani/sheets";
+        license = licenses.mit;
+        maintainers = [];
+      };
+    };
   in {
     nixosConfigurations = {
       desktop = lib.nixosSystem {
@@ -146,6 +164,7 @@
           inherit pkgs-master;
           inherit systemSettings;
           inherit userSettings;
+          inherit sheets;
         };
       };
       laptop = lib.nixosSystem {
