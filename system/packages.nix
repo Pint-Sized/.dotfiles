@@ -8,9 +8,6 @@
   # -------- STABLE ------- #
   environment.systemPackages =
     (with pkgs; [
-      woeusb
-      woeusb-ng
-      mediawriter
       wget
       base16-schemes
       black
