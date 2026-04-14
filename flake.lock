@@ -541,25 +541,8 @@
         "nixpkgs-unstable": "nixpkgs-unstable",
         "nixvim": "nixvim",
         "nur": "nur",
-        "sheets-src": "sheets-src",
         "spicetify-nix": "spicetify-nix",
         "stylix": "stylix"
-      }
-    },
-    "sheets-src": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1775137464,
-        "narHash": "sha256-MBiFNilMaJ+OlwbHjlDMNZB1Q9BDYJiF/c8NYQVCWTY=",
-        "owner": "maaslalani",
-        "repo": "sheets",
-        "rev": "ee22261f224536e352345ddd049a5c4fcc5640f7",
-        "type": "github"
-      },
-      "original": {
-        "owner": "maaslalani",
-        "repo": "sheets",
-        "type": "github"
       }
     },
     "spicetify-nix": {

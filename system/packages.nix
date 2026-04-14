@@ -8,6 +8,7 @@
   environment.systemPackages =
     (with pkgs; [
       wget
+      appeditor
       base16-schemes
       black
       calligraphy
