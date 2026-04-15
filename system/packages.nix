@@ -7,6 +7,7 @@
   # -------- STABLE ------- #
   environment.systemPackages =
     (with pkgs; [
+      onefetch
       wget
       appeditor
       base16-schemes
