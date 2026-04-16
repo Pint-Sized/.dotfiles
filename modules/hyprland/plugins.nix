@@ -12,11 +12,11 @@
       pkgs.hyprlandPlugins.hyprfocus
     ];
     settings.plugin = {
-      hyprfocus = {
-        enabled = "no";
-        mode = "bounce";
-        bounce_strength = 0.99;
-      };
+      #hyprfocus = {
+      #enabled = "no";
+      #mode = "bounce";
+      #bounce_strength = 0.99;
+      #};
       borders-plus-plus = {
         add_borders = 1;
         "col.border_1" = "rgba(${base00-rgb-r}, ${base00-rgb-g}, ${base00-rgb-b}, 0.8)";
