@@ -87,7 +87,7 @@
     ./modules/swaync.nix
 
     # ----- ULAUNCHER ----- #
-    ./modules/ulauncher/ulauncher.nix
+    ./modules/ulauncher.nix
 
     # ----- VIRTUALISATION ----- #
     ./modules/virtualisation.nix
