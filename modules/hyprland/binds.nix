@@ -9,7 +9,7 @@
       "$mainMod, C, killactive"
       "$mainMod, Y, exec, $filemanager"
       "$mainMod, V, togglefloating,"
-      #"$mainMod, J, togglesplit, # dwindle"
+      "$mainMod, J, layoutmsg, togglesplit"
       "$mainMod, W, exec, $browser"
       "$mainMod, X, fullscreen, 0"
       "$mainMod, K, exec, wl-copy < ~/.dotfiles/scripts/tester"
