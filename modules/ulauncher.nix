@@ -3,10 +3,6 @@
   pkgs,
   ...
 }: {
-  imports = [
-    ./extensions/extensions.nix
-  ];
-
   home = with config.lib.stylix.colors; {
     packages = with pkgs; [
       ulauncher
