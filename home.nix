@@ -1,5 +1,6 @@
 {userSettings, ...}: {
   imports = [
+    ./modules/bottom.nix
     # ----- AERC ----- #
     ./modules/aerc.nix
     # ----- BAT ----- #
