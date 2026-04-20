@@ -1,5 +1,6 @@
 {userSettings, ...}: {
   imports = [
+    ./modules/fonts.nix
     # ----- AERC ----- #
     ./modules/aerc.nix
     # ----- BAT ----- #
@@ -27,7 +28,7 @@
     ./modules/foliate.nix
 
     # ----- FONTS ----- #
-    ./fonts/fonts.nix
+    #./fonts/fonts.nix
 
     # ----- FOOT ----- #
     ./modules/foot.nix
