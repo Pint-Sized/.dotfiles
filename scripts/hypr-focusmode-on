@@ -1,6 +1,0 @@
-hyprctl keyword animations:enabled true;
-hyprctl keyword decoration:blur:enabled false;
-hyprctl keyword decoration:active_opacity 1;
-hyprctl keyword decoration:inactive_opacity 1;
-hyprctl keyword general:gaps_in 0;
-hyprctl keyword plugin:borders-plus-plus:add_borders 0;
