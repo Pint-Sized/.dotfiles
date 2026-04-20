@@ -9,7 +9,6 @@
     "udiskie &"
     "wl-paste --watch clihist store &"
     "pypr &"
-    "~/.dotfiles/scripts/auto-pull"
     "systemctl --user start hyprpolkitagent &"
     "pkexec swayosd-libinput-backend &"
     "swayosd-server &"
