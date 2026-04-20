@@ -1,4 +1,4 @@
-#!/run/current-system/sw/bin/bash
+#!/usr/bin/env bash
 hyprctl keyword animations:enabled false
 hyprctl keyword decoration:blur:enabled false
 hyprctl keyword decoration:active_opacity 1
