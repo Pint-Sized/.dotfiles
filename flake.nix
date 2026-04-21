@@ -3,7 +3,7 @@
     # ----- NIX PACKAGES ----- #
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixpkgs-master.url = "github:/nixos/nixpkgs/master";
+    nixpkgs-master.url = "github:nixos/nixpkgs/master";
 
     # ----- NIXOS-HARDWARE ----- #
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
@@ -53,20 +53,15 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
+
   outputs = inputs @ {
     nixpkgs,
     home-manager,
     nixpkgs-unstable,
     nixpkgs-master,
-    nix-index-database,
-    nixvim,
-    nix-flatpak,
-    stylix,
-    spicetify-nix,
-    nixcord,
-    nixos-hardware,
     ...
   }: let
+    # --- Shared Settings --- #
     systemSettings = {
       system = "x86_64-linux";
       hostname = "sisyphus";
@@ -86,150 +81,89 @@
       cursorName = "Bibata-Modern-Classic";
     };
 
-    inherit (nixpkgs) lib;
-    system = "x86_64-linux";
-    pkgs = import nixpkgs {
-      inherit system;
-      config = {
-        allowUnfree = true;
-        permittedInsecurePackages = [
-          "electron-33.4.11"
-          "python-2.7.18.8"
-          "dotnet-runtime-7.0.20"
-          "dotnet-runtime-wrapped-7.0.20"
-          "mbedtls-2.28.10"
-        ];
-      };
-    };
-    pkgs-unstable = import nixpkgs-unstable {
-      inherit system;
-      config = {
-        allowUnfree = true;
-        permittedInsecurePackages = [
-          "electron-33.4.11"
-          "python-2.7.18.8"
-          "dotnet-runtime-7.0.20"
-          "dotnet-runtime-wrapped-7.0.20"
-          "mbedtls-2.28.10"
-        ];
-      };
+    # --- Nixpkgs Config Logic --- #
+    # This config is shared across all package sets (Stable, Unstable, Master)
+    sharedConfig = {
+      allowUnfree = true;
+      permittedInsecurePackages = [
+        "electron-33.4.11"
+        "python-2.7.18.8"
+        "dotnet-runtime-7.0.20"
+        "dotnet-runtime-wrapped-7.0.20"
+        "mbedtls-2.28.10"
+      ];
     };
 
-    pkgs-master = import nixpkgs-master {
-      inherit system;
-      config = {
-        allowUnfree = true;
-        permittedInsecurePackages = [
-          "electron-33.4.11"
-          "python-2.7.18.8"
-          "dotnet-runtime-7.0.20"
-          "dotnet-runtime-wrapped-7.0.20"
-        ];
+    # Helper for importing nixpkgs instances
+    mkPkgs = source:
+      import source {
+        inherit (systemSettings) system;
+        config = sharedConfig;
       };
-    };
+
+    pkgs = mkPkgs nixpkgs;
+    pkgs-unstable = mkPkgs nixpkgs-unstable;
+    pkgs-master = mkPkgs nixpkgs-master;
+
+    # --- NixOS Helper --- #
+    mkSystem = hostModule: extraModules:
+      nixpkgs.lib.nixosSystem {
+        inherit (systemSettings) system;
+        modules =
+          [
+            ./configuration.nix
+            hostModule
+            inputs.nixvim.nixosModules.nixvim
+            inputs.stylix.nixosModules.stylix
+            inputs.nix-flatpak.nixosModules.nix-flatpak
+            inputs.nix-index-database.nixosModules.nix-index
+            {nixpkgs.config = sharedConfig;}
+          ]
+          ++ extraModules;
+        specialArgs = {
+          inherit
+            inputs
+            pkgs-unstable
+            pkgs-master
+            systemSettings
+            userSettings
+            ;
+        };
+      };
+
+    # --- Home Manager Helper --- #
+    mkHome = varFile:
+      home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        modules = [
+          ./home.nix
+          varFile
+          inputs.nixvim.homeModules.nixvim
+          inputs.stylix.homeModules.stylix
+          inputs.spicetify-nix.homeManagerModules.default
+          inputs.nixcord.homeModules.nixcord
+        ];
+        extraSpecialArgs = {
+          inherit
+            inputs
+            pkgs-unstable
+            pkgs-master
+            systemSettings
+            userSettings
+            ;
+        };
+      };
   in {
     nixosConfigurations = {
-      desktop = lib.nixosSystem {
-        inherit system;
-        modules = [
-          {
-            nixpkgs.config = {
-              allowUnfree = true;
-              permittedInsecurePackages = [
-                "electron-33.4.11"
-                "python-2.7.18.8"
-                "dotnet-runtime-7.0.20"
-                "dotnet-runtime-wrapped-7.0.20"
-                "mbedtls-2.28.10"
-              ];
-            };
-          }
-          ./configuration.nix
-          ./hosts/desktop/configuration.nix
-          nixvim.nixosModules.nixvim
-          stylix.nixosModules.stylix
-          nix-flatpak.nixosModules.nix-flatpak
-          nix-index-database.nixosModules.nix-index
-        ];
-        specialArgs = {
-          inherit inputs;
-          inherit pkgs-unstable;
-          inherit pkgs-master;
-          inherit systemSettings;
-          inherit userSettings;
-        };
-      };
-      laptop = lib.nixosSystem {
-        inherit system;
-        modules = [
-          {
-            nixpkgs.config = {
-              allowUnfree = true;
-              permittedInsecurePackages = [
-                "electron-33.4.11"
-                "python-2.7.18.8"
-                "dotnet-runtime-7.0.20"
-                "dotnet-runtime-wrapped-7.0.20"
-                "mbedtls-2.28.10"
-              ];
-            };
-          }
-          ./configuration.nix
-          ./hosts/laptop/configuration.nix
-          nixvim.nixosModules.nixvim
-          stylix.nixosModules.stylix
-          nix-flatpak.nixosModules.nix-flatpak
-          nix-index-database.nixosModules.nix-index
-          nixos-hardware.nixosModules.lenovo-thinkpad-t480
-        ];
-        specialArgs = {
-          inherit inputs;
-          inherit pkgs-unstable;
-          inherit pkgs-master;
-          inherit systemSettings;
-          inherit userSettings;
-        };
-      };
+      desktop = mkSystem ./hosts/desktop/configuration.nix [];
+      laptop = mkSystem ./hosts/laptop/configuration.nix [
+        inputs.nixos-hardware.nixosModules.lenovo-thinkpad-t480
+      ];
     };
+
     homeConfigurations = {
-      fionnbennett-desktop = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        modules = [
-          ./home.nix
-          ./modules/hyprland/variables-desktop.nix
-          nixvim.homeModules.nixvim
-          stylix.homeModules.stylix
-          spicetify-nix.homeManagerModules.default
-          nixcord.homeModules.nixcord
-        ];
-        extraSpecialArgs = {
-          inherit inputs;
-          inherit pkgs;
-          inherit pkgs-unstable;
-          inherit pkgs-master;
-          inherit systemSettings;
-          inherit userSettings;
-        };
-      };
-      fionnbennett-laptop = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        modules = [
-          ./home.nix
-          ./modules/hyprland/variables-laptop.nix
-          nixvim.homeModules.nixvim
-          stylix.homeModules.stylix
-          spicetify-nix.homeManagerModules.default
-          nixcord.homeModules.nixcord
-        ];
-        extraSpecialArgs = {
-          inherit inputs;
-          inherit pkgs;
-          inherit pkgs-unstable;
-          inherit pkgs-master;
-          inherit systemSettings;
-          inherit userSettings;
-        };
-      };
+      fionnbennett-desktop = mkHome ./modules/hyprland/variables-desktop.nix;
+      fionnbennett-laptop = mkHome ./modules/hyprland/variables-laptop.nix;
     };
   };
 }
