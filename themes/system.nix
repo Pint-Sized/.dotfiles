@@ -12,8 +12,10 @@
       name = "${userSettings.cursorName}";
       size = 16;
     };
-    targets.nixos-icons.enable = true;
-    targets.plymouth.enable = true;
-    targets.console.enable = true;
+    targets = {
+      nixos-icons.enable = true;
+      plymouth.enable = true;
+      console.enable = true;
+    };
   };
 }
