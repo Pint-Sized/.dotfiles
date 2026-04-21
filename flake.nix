@@ -132,6 +132,18 @@
       desktop = lib.nixosSystem {
         inherit system;
         modules = [
+          {
+            nixpkgs.config = {
+              allowUnfree = true;
+              permittedInsecurePackages = [
+                "electron-33.4.11"
+                "python-2.7.18.8"
+                "dotnet-runtime-7.0.20"
+                "dotnet-runtime-wrapped-7.0.20"
+                "mbedtls-2.28.10"
+              ];
+            };
+          }
           ./configuration.nix
           ./hosts/desktop/configuration.nix
           nixvim.nixosModules.nixvim
@@ -141,7 +153,6 @@
         ];
         specialArgs = {
           inherit inputs;
-          inherit pkgs;
           inherit pkgs-unstable;
           inherit pkgs-master;
           inherit systemSettings;
@@ -151,6 +162,18 @@
       laptop = lib.nixosSystem {
         inherit system;
         modules = [
+          {
+            nixpkgs.config = {
+              allowUnfree = true;
+              permittedInsecurePackages = [
+                "electron-33.4.11"
+                "python-2.7.18.8"
+                "dotnet-runtime-7.0.20"
+                "dotnet-runtime-wrapped-7.0.20"
+                "mbedtls-2.28.10"
+              ];
+            };
+          }
           ./configuration.nix
           ./hosts/laptop/configuration.nix
           nixvim.nixosModules.nixvim
@@ -161,7 +184,6 @@
         ];
         specialArgs = {
           inherit inputs;
-          inherit pkgs;
           inherit pkgs-unstable;
           inherit pkgs-master;
           inherit systemSettings;
