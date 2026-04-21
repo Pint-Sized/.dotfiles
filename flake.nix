@@ -61,7 +61,6 @@
     nixpkgs-master,
     ...
   }: let
-    # --- Shared Settings --- #
     systemSettings = {
       system = "x86_64-linux";
       hostname = "sisyphus";
@@ -81,8 +80,6 @@
       cursorName = "Bibata-Modern-Classic";
     };
 
-    # --- Nixpkgs Config Logic --- #
-    # This config is shared across all package sets (Stable, Unstable, Master)
     sharedConfig = {
       allowUnfree = true;
       permittedInsecurePackages = [
@@ -94,7 +91,6 @@
       ];
     };
 
-    # Helper for importing nixpkgs instances
     mkPkgs = source:
       import source {
         inherit (systemSettings) system;
@@ -105,7 +101,6 @@
     pkgs-unstable = mkPkgs nixpkgs-unstable;
     pkgs-master = mkPkgs nixpkgs-master;
 
-    # --- NixOS Helper --- #
     mkSystem = hostModule: extraModules:
       nixpkgs.lib.nixosSystem {
         inherit (systemSettings) system;

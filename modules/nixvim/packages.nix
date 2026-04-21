@@ -1,11 +1,10 @@
 {pkgs-unstable, ...}: {
   home.packages = with pkgs-unstable; [
-    alejandra
     gopls
     hclfmt
     markdown-oxide
     nixd
-    nixfmt-rfc-style
+    nixfmt
     prettierd
     pyright
     basedpyright
