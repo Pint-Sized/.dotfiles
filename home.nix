@@ -1,8 +1,5 @@
 {userSettings, ...}: {
   imports = [
-    ./modules/fonts.nix
-    # ----- AERC ----- #
-    ./modules/aerc.nix
     # ----- BAT ----- #
     ./modules/bat.nix
 
@@ -24,11 +21,8 @@
     # ----- FISH ----- #
     ./modules/fish.nix
 
-    # ----- FOLIATE ----- #
-    ./modules/foliate.nix
-
     # ----- FONTS ----- #
-    #./fonts/fonts.nix
+    ./modules/fonts.nix
 
     # ----- FOOT ----- #
     ./modules/foot.nix
@@ -53,12 +47,6 @@
 
     # ----- KITTY  ----- #
     ./modules/kitty.nix
-
-    # ----- LAZYGIT ----- #
-    ./modules/lazygit.nix
-
-    # ----- LUTRIS ------ #
-    ./modules/lutris.nix
 
     # ----- MPV ----- #
     ./modules/mpv.nix
