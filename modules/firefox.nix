@@ -1,8 +1,12 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   home.packages = with pkgs; [
     firefoxpwa
   ];
+  home.file.".config/chevron".source = pkgs.fetchzip {
+    url = "https://github.com/kholmogorov27/chevron/releases/download/v2.2.0/Chevron_v2.2.0.zip";
+    sha256 = "sha256-jGsHZznSeDeWd9YFInAJmWPukf//rvzkjmNsry0zuKM=";
+    stripRoot = false;
+  };
   programs.firefox = {
     enable = true;
     profiles."8b2kzims.default" = {
@@ -19,9 +23,9 @@
         "network.http.rcwn.enabled" = false;
         "privacy.resistFingerprinting" = true;
         "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
-        "browser.uidensity" = 0; # Set UI density to normal
-        "svg.context-properties.content.enabled" = true; # Enable SVG context-propertes
-        "browser.theme.dark-private-windows" = false; # Disable private window dark theme
+        "browser.uidensity" = 0;
+        "svg.context-properties.content.enabled" = true;
+        "browser.theme.dark-private-windows" = false;
       };
       extraConfig = ''
         //
@@ -263,7 +267,7 @@
   };
   stylix.targets.firefox = {
     enable = true;
-    profileNames = [ "8b2kzims.default" ];
+    profileNames = ["8b2kzims.default"];
     firefoxGnomeTheme.enable = true;
   };
 }

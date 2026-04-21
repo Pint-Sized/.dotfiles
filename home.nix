@@ -19,7 +19,7 @@
     ./modules/fastfetch.nix
 
     # ----- FIREFOX ----- #
-    ./modules/firefox/firefox.nix
+    ./modules/firefox.nix
 
     # ----- FISH ----- #
     ./modules/fish.nix

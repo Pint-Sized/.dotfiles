@@ -15,7 +15,7 @@
     "foot cava"
     "pkill waybar"
     "waybar &"
-    "npx http-server ~/.dotfiles/modules/firefox/chevron"
+    "npx http-server ~/.config/chevron"
     "discover-overlay"
   ];
 }
