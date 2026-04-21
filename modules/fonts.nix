@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  ahome.file = {
+  home.file = {
     ".local/share/fonts/anurati".source = pkgs.fetchzip {
       url = "https://font.download/dl/font/anurati.zip";
       sha256 = "sha256-dmZpAWkryDUYA7YBc2D/T8s2KQVnEgJbtGHJr6arDj4=";
