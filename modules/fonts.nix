@@ -20,11 +20,11 @@
       sha256 = "sha256-37+X8ZysUOAk7em+tIgJWjOkXsn93hhJzNXJhm+F6xY=";
       stripRoot = true;
     };
-    #".local/share/fonts/electric-formula".source = pkgs.fetchzip {
-    #url = "https://font.download/dl/font/electric-formula.zip";
-    #sha256 = "";
-    #stripRoot = true;
-    #};
+    ".local/share/fonts/electric-formula".source = pkgs.fetchzip {
+      url = "https://font.download/dl/font/electric-formula.zip";
+      sha256 = "";
+      stripRoot = true;
+    };
     #".local/share/fonts/elvishring".source = pkgs.fetchzip {
     # url = "https://font.download/dl/font/elvish-ring-nfi-2.zip";
     # sha256 = "";
