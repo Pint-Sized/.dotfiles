@@ -1,6 +1,5 @@
 {
   imports = [
-    ./system/fonts.nix
     ./system/hardware.nix
     ./system/packages.nix
     ./system/services.nix
