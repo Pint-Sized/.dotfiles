@@ -1,4 +1,5 @@
-{config, ...}: {
+{ config, ... }:
+{
   programs.nixvim = with config.lib.stylix.colors; {
     plugins.lualine = {
       enable = true;
@@ -65,7 +66,7 @@
               '';
             }
           ];
-          lualine_c = [{}];
+          lualine_c = [ { } ];
           lualine_x = [
             {
               __unkeyed-1 = "filetype";
@@ -79,7 +80,7 @@
             }
             {
               __unkeyed-1 = "lsp_status";
-              ignore_lsp = ["null-ls"];
+              ignore_lsp = [ "null-ls" ];
               icon = "";
               color = {
                 fg = "#${base05-hex}";

@@ -2,7 +2,8 @@
   config,
   userSettings,
   ...
-}: {
+}:
+{
   services.swaync = {
     enable = true;
     settings = {

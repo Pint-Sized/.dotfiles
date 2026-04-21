@@ -3,7 +3,8 @@
   systemSettings,
   userSettings,
   ...
-}: {
+}:
+{
   users.users.${userSettings.username} = {
     shell = pkgs.fish;
     isNormalUser = true;
@@ -39,9 +40,9 @@
   ];
 
   fonts.fontconfig.defaultFonts = {
-    serif = ["${userSettings.fontSerif}"];
-    sansSerif = ["${userSettings.fontSerif}"];
-    monospace = ["${userSettings.fontMono}"];
+    serif = [ "${userSettings.fontSerif}" ];
+    sansSerif = [ "${userSettings.fontSerif}" ];
+    monospace = [ "${userSettings.fontMono}" ];
   };
   boot = {
     plymouth.enable = true;
@@ -53,7 +54,7 @@
       efi.efiSysMountPoint = "/boot";
       grub = {
         enable = true;
-        devices = ["nodev"];
+        devices = [ "nodev" ];
         efiSupport = true;
         configurationLimit = 15;
         useOSProber = true;

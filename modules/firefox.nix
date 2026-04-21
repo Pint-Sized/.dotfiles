@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   home.packages = with pkgs; [
     firefoxpwa
   ];
@@ -267,7 +268,7 @@
   };
   stylix.targets.firefox = {
     enable = true;
-    profileNames = ["8b2kzims.default"];
+    profileNames = [ "8b2kzims.default" ];
     firefoxGnomeTheme.enable = true;
   };
 }

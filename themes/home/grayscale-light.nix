@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   stylix = {
     base16Scheme = "${pkgs.base16-schemes}/share/themes/grayscale-light.yaml";
     targets.cava.rainbow.enable = true;

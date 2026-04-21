@@ -3,8 +3,9 @@
   pkgs,
   config,
   ...
-}: {
-  imports = [./home/${userSettings.theme}.nix];
+}:
+{
+  imports = [ ./home/${userSettings.theme}.nix ];
   stylix = {
     enable = true;
     cursor = {
@@ -25,7 +26,7 @@
       gtk.flatpakSupport.enable = true;
       foot.enable = false;
       xresources.enable = true;
-      firefox.profileNames = ["8b2kzims.default"];
+      firefox.profileNames = [ "8b2kzims.default" ];
       zathura.enable = false;
       nixvim = {
         enable = true;

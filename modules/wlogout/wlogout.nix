@@ -2,7 +2,8 @@
   config,
   userSettings,
   ...
-}: {
+}:
+{
   # --------- WLOGOUT --------- #
   programs.wlogout = {
     enable = true;

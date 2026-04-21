@@ -2,7 +2,8 @@
   config,
   userSettings,
   ...
-}: {
+}:
+{
   wayland.windowManager.hyprland = with config.lib.stylix.colors; {
     settings = {
       general = {
@@ -99,6 +100,6 @@
         force_zero_scaling = true;
       };
     };
-    systemd.variables = ["--all"];
+    systemd.variables = [ "--all" ];
   };
 }

@@ -1,4 +1,5 @@
-{userSettings, ...}: {
+{ userSettings, ... }:
+{
   programs.vesktop = {
     enable = true;
     vencord.settings = {

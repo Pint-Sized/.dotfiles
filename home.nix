@@ -1,4 +1,5 @@
-{userSettings, ...}: {
+{ userSettings, ... }:
+{
   imports = [
     # ----- BAT ----- #
     ./modules/bat.nix

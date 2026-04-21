@@ -3,7 +3,8 @@
   userSettings,
   pkgs,
   ...
-}: {
+}:
+{
   home.packages = with pkgs; [
     playerctl
     wttrbar

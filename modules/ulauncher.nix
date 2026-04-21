@@ -2,7 +2,8 @@
   config,
   pkgs,
   ...
-}: {
+}:
+{
   home = with config.lib.stylix.colors; {
     packages = with pkgs; [
       ulauncher
