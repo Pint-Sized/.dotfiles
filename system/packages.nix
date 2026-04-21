@@ -3,14 +3,13 @@
   pkgs-unstable,
   userSettings,
   ...
-}: {
+}:
+{
   # -------- STABLE ------- #
   environment.systemPackages =
     (with pkgs; [
-      onefetch
-      wget
       appeditor
-      base16-schemes
+      #base16-schemes
       black
       calligraphy
       celluloid
@@ -26,6 +25,7 @@
       kitty
       libreoffice-qt6-fresh
       mediainfo
+      onefetch
       hunspell
       hunspellDicts.en_GB-ise
       nautilus
@@ -47,6 +47,7 @@
       vencord
       volctl
       wev
+      wget
       which
       wl-clipboard
       yazi
