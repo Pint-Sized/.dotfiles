@@ -1,35 +1,35 @@
 { userSettings, ... }:
 {
   imports = [
-    ./modules/bat.nix
-    ./modules/btop.nix
-    ./modules/cava.nix
-    ./modules/chromium.nix
-    ./modules/fastfetch.nix
-    ./modules/firefox.nix
-    ./modules/fish.nix
-    ./modules/fonts.nix
-    ./modules/foot.nix
-    ./modules/fzf.nix
-    ./modules/git.nix
-    ./modules/gtk.nix
-    ./modules/hyprland/hyprland.nix
-    ./modules/imv.nix
-    ./modules/kitty.nix
-    ./modules/mpv.nix
-    ./modules/vesktop.nix
-    ./modules/nixvim/nixvim.nix
-    ./modules/obs-studio.nix
-    ./modules/qt.nix
-    ./modules/spicetify.nix
-    ./modules/swaync.nix
-    ./modules/ulauncher.nix
-    ./modules/virtualisation.nix
-    ./modules/waybar.nix
-    ./modules/wlogout/wlogout.nix
-    ./modules/yazi.nix
-    ./modules/zathura.nix
-    ./modules/zed.nix
+    ./bat.nix
+    ./btop.nix
+    ./cava.nix
+    ./chromium.nix
+    ./fastfetch.nix
+    ./firefox.nix
+    ./fish.nix
+    ./fonts.nix
+    ./foot.nix
+    ./fzf.nix
+    ./git.nix
+    ./gtk.nix
+    ./hyprland/hyprland.nix
+    ./imv.nix
+    ./kitty.nix
+    ./mpv.nix
+    ./vesktop.nix
+    ./nixvim/nixvim.nix
+    ./obs-studio.nix
+    ./qt.nix
+    ./spicetify.nix
+    ./swaync.nix
+    ./ulauncher.nix
+    ./virtualisation.nix
+    ./waybar.nix
+    ./wlogout/wlogout.nix
+    ./yazi.nix
+    ./zathura.nix
+    ./zed.nix
   ];
 
   nixpkgs.config = {
