@@ -109,7 +109,8 @@
         nixpkgs.lib.nixosSystem {
           inherit (systemSettings) system;
           modules = [
-            ./configuration.nix
+            ./system/configuration.nix
+            ./themes/system.nix
             hostModule
             inputs.nixvim.nixosModules.nixvim
             inputs.stylix.nixosModules.stylix
@@ -129,13 +130,13 @@
           };
         };
 
-      # --- Home Manager Helper --- #
       mkHome =
         varFile:
         home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           modules = [
-            ./home.nix
+            ./modules/home.nix
+            ./themes/home.nix
             varFile
             inputs.nixvim.homeModules.nixvim
             inputs.stylix.homeModules.stylix
