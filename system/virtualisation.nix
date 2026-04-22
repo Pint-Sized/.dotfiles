@@ -1,8 +1,4 @@
-{
-  pkgs,
-  userSettings,
-  ...
-}:
+{ pkgs, userSettings, ... }:
 {
   virtualisation = {
     libvirtd = {

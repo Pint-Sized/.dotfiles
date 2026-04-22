@@ -1,10 +1,5 @@
+{ config, userSettings, ... }:
 {
-  config,
-  userSettings,
-  ...
-}:
-{
-  # ------ ZATHURA ---- #
   programs.zathura = with config.lib.stylix.colors; {
     enable = true;
     options = {

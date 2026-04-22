@@ -1,8 +1,4 @@
-{
-  pkgs,
-  pkgs-master,
-  ...
-}:
+{ pkgs, pkgs-master, ... }:
 {
   home.packages =
     (with pkgs; [

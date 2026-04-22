@@ -1,10 +1,5 @@
+{ config, userSettings, ... }:
 {
-  config,
-  userSettings,
-  ...
-}:
-{
-  # --------- WLOGOUT --------- #
   programs.wlogout = {
     enable = true;
     layout = [

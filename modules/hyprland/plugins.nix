@@ -1,8 +1,4 @@
-{
-  config,
-  pkgs,
-  ...
-}:
+{ config, pkgs, ... }:
 {
   wayland.windowManager.hyprland = with config.lib.stylix.colors; {
     plugins = [

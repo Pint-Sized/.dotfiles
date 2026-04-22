@@ -9,7 +9,6 @@
   environment.systemPackages =
     (with pkgs; [
       appeditor
-      #base16-schemes
       black
       calligraphy
       celluloid
