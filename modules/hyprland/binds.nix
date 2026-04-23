@@ -60,8 +60,8 @@
       "$mainMod, M, exec, pypr toggle calculator"
 
       "$mainMod, L, exec, pkill wlogout || wlogout"
-      "$mainMod, U, exec, ~/.dotfiles/scripts/hypr-powersaver-on.sh"
-      "$mainMod, I, exec, ~/.dotfiles/scripts/hypr-powersaver-off.sh"
+      "$mainMod, U, exec, ~/.local/scripts/hypr-powersaver-on.sh"
+      "$mainMod, I, exec, ~/.local/scripts/hypr-powersaver-off.sh"
 
       "$mainMod, S, togglespecialworkspace, magic"
       "$mainMod SHIFT, S, movetoworkspace, special:magic"
@@ -74,7 +74,7 @@
       "$mainMod, E, exec, kitty --detach fish -C y"
       "$mainMod, O, exec, remnote --enable-features=UseOzonePlatform --ozone-platform=wayland"
 
-      "$mainMod, R, exec, ~/.dotfiles/scripts/reloader.sh"
+      "$mainMod, R, exec, ~/.local/scripts/reloader.sh"
 
       ",XF86AudioMicMute, exec, swayosd-client --input-volume mute-toggle"
       ",XF86Display, exec, kitty ~/.dotfiles/scripts/theme-switcher"

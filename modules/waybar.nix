@@ -206,7 +206,7 @@
             <big>{:%Y %B}</big>
             <tt><small>{calendar}</small></tt>'';
           "format" = "{:%a, %d %b, %I:%M %p}";
-          "on-click" = "~/.dotfiles/scripts/reloader.sh";
+          "on-click" = "~/.local/scripts/reloader.sh";
         };
         "custom/weather#main" = {
           "format" = "{}°";
