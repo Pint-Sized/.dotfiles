@@ -23,6 +23,7 @@
     ./qt.nix
     ./spicetify.nix
     ./swaync.nix
+    ./themes/themes.nix
     ./ulauncher.nix
     ./virtualisation.nix
     ./waybar.nix

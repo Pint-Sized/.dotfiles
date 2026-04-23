@@ -5,6 +5,7 @@
     ./services.nix
     ./system.nix
     ./networking.nix
+    ./themes.nix
     ./virtualisation.nix
     ./hyprland.nix
   ];

@@ -110,7 +110,6 @@
           inherit (systemSettings) system;
           modules = [
             ./system/configuration.nix
-            ./themes/system.nix
             hostModule
             inputs.nixvim.nixosModules.nixvim
             inputs.stylix.nixosModules.stylix
@@ -136,7 +135,6 @@
           inherit pkgs;
           modules = [
             ./modules/home.nix
-            ./themes/home.nix
             varFile
             inputs.nixvim.homeModules.nixvim
             inputs.stylix.homeModules.stylix
