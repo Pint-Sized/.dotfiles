@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-hyprctl keyword animations:enabled false
-hyprctl keyword decoration:blur:enabled false
-hyprctl keyword decoration:active_opacity 1
-hyprctl keyword decoration:inactive_opacity 1
-hyprctl keyword plugin:hyprfocus:enabled false
-hyprctl keyword decoration:shadow:enabled false

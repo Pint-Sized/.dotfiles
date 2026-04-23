@@ -154,8 +154,8 @@
     in
     {
       nixosConfigurations = {
-        desktop = mkSystem ./hosts/desktop/configuration.nix [ ];
-        laptop = mkSystem ./hosts/laptop/configuration.nix [
+        desktop = mkSystem ./system/hosts/desktop/configuration.nix [ ];
+        laptop = mkSystem ./system/hosts/laptop/configuration.nix [
           inputs.nixos-hardware.nixosModules.lenovo-thinkpad-t480
         ];
       };
