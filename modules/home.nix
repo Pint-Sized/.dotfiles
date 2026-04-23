@@ -23,6 +23,7 @@
     ./qt.nix
     ./scripts.nix
     ./spicetify.nix
+    ./splashes.nix
     ./swaync.nix
     ./themes/themes.nix
     ./ulauncher.nix
