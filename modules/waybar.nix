@@ -456,10 +456,4 @@
         }
     '';
   };
-
-  home.file = {
-    ".config/waybar/scripts" = {
-      source = ../scripts;
-    };
-  };
 }
