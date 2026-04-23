@@ -21,7 +21,7 @@
     ./nixvim/nixvim.nix
     ./obs-studio.nix
     ./qt.nix
-    #./scripts.nix
+    #./script.nix
     ./spicetify.nix
     ./swaync.nix
     ./themes/themes.nix
