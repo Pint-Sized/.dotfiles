@@ -81,7 +81,7 @@
       sha256 = "sha256-qXxVXyxSfllgRLezXlJy2hdG9dAsxT2FyzfikWuTuao=";
       stripRoot = false;
     };
-    "./local/share/ringbearer".source = pkgs.fetchzip {
+    ".local/share/fonts/ringbearer".source = pkgs.fetchzip {
       url = "https://www.1001fonts.com/download/ringbearer.zip";
       sha256 = "sha256-j9Dlqs9UNgCtVWiPWpftwvpaAkCiiudH+seGY05gE5w=";
       stripRoot = false;
