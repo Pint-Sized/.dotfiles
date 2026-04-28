@@ -32,7 +32,6 @@
     ./plugins/ui/noice.nix
     ./plugins/ui/notify.nix
     ./plugins/ui/nui.nix
-    ./plugins/ui/startup.nix
 
     # Utils
     ./plugins/utils/web-devicons.nix
