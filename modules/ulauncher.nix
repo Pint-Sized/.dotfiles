@@ -1,4 +1,7 @@
 { config, pkgs, ... }:
+let
+  colors = config.lib.stylix.colors;
+in
 {
   home = with config.lib.stylix.colors; {
     packages = with pkgs; [
@@ -7,12 +10,12 @@
     file = {
       ".config/ulauncher/user-themes/theme/colours.css" = {
         text = ''
-          @define-color background #${base00-hex};
-          @define-color current_line_background #${base01-hex};
-          @define-color foreground #${base04-hex};
-          @define-color foreground_lessimportant #${base05-hex};
-          @define-color accent #${base09-hex};
-          @define-color highlight #${base09-hex};
+          @define-color background #${colors.base00-hex};
+          @define-color current_line_background #${colors.base01-hex};
+          @define-color foreground #${colors.base04-hex};
+          @define-color foreground_lessimportant #${colors.base05-hex};
+          @define-color accent #${colors.base09-hex};
+          @define-color highlight #${colors.base09-hex};
         '';
       };
       ".config/ulauncher/user-themes/theme/manifest.json" = {
@@ -25,8 +28,8 @@
             "css_file": "theme.css",
             "css_file_gtk_3.20+": "theme-gtk-3.20.css",
             "matched_text_hl_colors": {
-              "when_selected": "#${base0E-hex}",
-              "when_not_selected": "#${base0E-hex}"
+              "when_selected": "#${colors.base0E-hex}",
+              "when_not_selected": "#${colors.base0E-hex}"
             }
           }
         '';

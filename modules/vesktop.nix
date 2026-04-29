@@ -1,4 +1,3 @@
-{ userSettings, ... }:
 {
   programs.vesktop = {
     enable = true;

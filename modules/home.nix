@@ -34,18 +34,15 @@
     ./zathura.nix
     ./zed.nix
   ];
-
   nixpkgs.config = {
     allowUnfree = true;
     allowUnfreePredicate = true;
   };
-
-  programs.home-manager.enable = true; # allows home-manager to manage itself
-
+  programs.home-manager.enable = true;
   home = {
     username = "${userSettings.username}";
     homeDirectory = "/home/${userSettings.username}/";
     enableNixpkgsReleaseCheck = false;
-    stateVersion = "24.05"; # do not change without consulting manual
+    stateVersion = "24.05";
   };
 }

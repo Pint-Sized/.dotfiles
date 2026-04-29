@@ -87,7 +87,6 @@
 
       "$mainMod, semicolon, exec, emote"
     ];
-
     binde = [
       "$mainMod ctrl, left, resizeactive, -10 0"
       "$mainMod ctrl, right, resizeactive, 10 0"
@@ -98,12 +97,10 @@
       ",XF86MonBrightnessDown, exec, swayosd-client --brightness lower"
       ",XF86MonBrightnessUp, exec, swayosd-client --brightness raise"
     ];
-
     bindm = [
       "$mainMod, mouse:272, movewindow"
       "$mainMod, mouse:273, resizewindow"
     ];
-
     bindn = [
       ", v, pass, class:^(vesktop)$"
       ", Caps_Lock, exec, sleep 0.1; swayosd-client --caps-lock"

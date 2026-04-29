@@ -14,9 +14,9 @@
       size = 16;
     };
     fonts = {
-      serif.name = "${userSettings.fontMono}";
-      sansSerif.name = "${userSettings.fontMono}";
-      monospace.name = "${userSettings.fontMono}";
+      serif.name = userSettings.fontMono;
+      sansSerif.name = userSettings.fontMono;
+      monospace.name = userSettings.fontMono;
       sizes.terminal = 11;
     };
     targets = {
@@ -35,21 +35,21 @@
     };
   };
   home.file.".colours.txt".text = with config.lib.stylix.colors; ''
-    base00  ->  #${base00-hex}  ->   rgb(${base00-rgb-r}, ${base00-rgb-g}, ${base00-rgb-b})
-    base01  ->  #${base01-hex}  ->   rgb(${base01-rgb-r}, ${base01-rgb-g}, ${base01-rgb-b})
-    base02  ->  #${base02-hex}  ->   rgb(${base02-rgb-r}, ${base02-rgb-g}, ${base02-rgb-b})
-    base03  ->  #${base03-hex}  ->   rgb(${base03-rgb-r}, ${base03-rgb-g}, ${base03-rgb-b})
-    base04  ->  #${base04-hex}  ->   rgb(${base04-rgb-r}, ${base04-rgb-g}, ${base04-rgb-b})
-    base05  ->  #${base05-hex}  ->   rgb(${base05-rgb-r}, ${base05-rgb-g}, ${base05-rgb-b})
-    base06  ->  #${base06-hex}  ->   rgb(${base06-rgb-r}, ${base06-rgb-g}, ${base06-rgb-b})
-    base07  ->  #${base07-hex}  ->   rgb(${base07-rgb-r}, ${base07-rgb-g}, ${base07-rgb-b})
-    base08  ->  #${base08-hex}  ->   rgb(${base08-rgb-r}, ${base08-rgb-g}, ${base08-rgb-b})
-    base09  ->  #${base09-hex}  ->   rgb(${base09-rgb-r}, ${base09-rgb-g}, ${base09-rgb-b})
-    base0A  ->  #${base0A-hex}  ->   rgb(${base0A-rgb-r}, ${base0A-rgb-g}, ${base0A-rgb-b})
-    base0B  ->  #${base0B-hex}  ->   rgb(${base0B-rgb-r}, ${base0B-rgb-g}, ${base0B-rgb-b})
-    base0C  ->  #${base0C-hex}  ->   rgb(${base0C-rgb-r}, ${base0C-rgb-g}, ${base0C-rgb-b})
-    base0D  ->  #${base0D-hex}  ->   rgb(${base0D-rgb-r}, ${base0D-rgb-g}, ${base0D-rgb-b})
-    base0E  ->  #${base0E-hex}  ->   rgb(${base0E-rgb-r}, ${base0E-rgb-g}, ${base0E-rgb-b})
-    base0F  ->  #${base0F-hex}  ->   rgb(${base0F-rgb-r}, ${base0F-rgb-g}, ${base0F-rgb-b})
+    base00  ->  #${colors.base00-hex}  ->   rgb(${colors.base00-rgb-r}, ${colors.base00-rgb-g}, ${colors.base00-rgb-b})
+    base01  ->  #${colors.base01-hex}  ->   rgb(${colors.base01-rgb-r}, ${colors.base01-rgb-g}, ${colors.base01-rgb-b})
+    base02  ->  #${colors.base02-hex}  ->   rgb(${colors.base02-rgb-r}, ${colors.base02-rgb-g}, ${colors.base02-rgb-b})
+    base03  ->  #${colors.base03-hex}  ->   rgb(${colors.base03-rgb-r}, ${colors.base03-rgb-g}, ${colors.base03-rgb-b})
+    base04  ->  #${colors.base04-hex}  ->   rgb(${colors.base04-rgb-r}, ${colors.base04-rgb-g}, ${colors.base04-rgb-b})
+    base05  ->  #${colors.base05-hex}  ->   rgb(${colors.base05-rgb-r}, ${colors.base05-rgb-g}, ${colors.base05-rgb-b})
+    base06  ->  #${colors.base06-hex}  ->   rgb(${colors.base06-rgb-r}, ${colors.base06-rgb-g}, ${colors.base06-rgb-b})
+    base07  ->  #${colors.base07-hex}  ->   rgb(${colors.base07-rgb-r}, ${colors.base07-rgb-g}, ${colors.base07-rgb-b})
+    base08  ->  #${colors.base08-hex}  ->   rgb(${colors.base08-rgb-r}, ${colors.base08-rgb-g}, ${colors.base08-rgb-b})
+    base09  ->  #${colors.base09-hex}  ->   rgb(${colors.base09-rgb-r}, ${colors.base09-rgb-g}, ${colors.base09-rgb-b})
+    base0A  ->  #${colors.base0A-hex}  ->   rgb(${colors.base0A-rgb-r}, ${colors.base0A-rgb-g}, ${colors.base0A-rgb-b})
+    base0B  ->  #${colors.base0B-hex}  ->   rgb(${colors.base0B-rgb-r}, ${colors.base0B-rgb-g}, ${colors.base0B-rgb-b})
+    base0C  ->  #${colors.base0C-hex}  ->   rgb(${colors.base0C-rgb-r}, ${colors.base0C-rgb-g}, ${colors.base0C-rgb-b})
+    base0D  ->  #${colors.base0D-hex}  ->   rgb(${colors.base0D-rgb-r}, ${colors.base0D-rgb-g}, ${colors.base0D-rgb-b})
+    base0E  ->  #${colors.base0E-hex}  ->   rgb(${colors.base0E-rgb-r}, ${colors.base0E-rgb-g}, ${colors.base0E-rgb-b})
+    base0F  ->  #${colors.base0F-hex}  ->   rgb(${colors.base0F-rgb-r}, ${colors.base0F-rgb-g}, ${colors.base0F-rgb-b})
   '';
 }

@@ -1,6 +1,9 @@
 { config, pkgs, ... }:
+let
+  colors = config.lib.stylix.colors;
+in
 {
-  wayland.windowManager.hyprland = with config.lib.stylix.colors; {
+  wayland.windowManager.hyprland = {
     plugins = [
       pkgs.hyprlandPlugins.hyprwinwrap
       pkgs.hyprlandPlugins.hyprfocus
@@ -9,14 +12,10 @@
       pkgs.hyprlandPlugins.hyprfocus
     ];
     settings.plugin = {
-      #hyprfocus = {
-      #enabled = "no";
-      #mode = "bounce";
-      #bounce_strength = 0.99;
-      #};
       borders-plus-plus = {
         add_borders = 1;
-        "col.border_1" = "rgba(${base00-rgb-r}, ${base00-rgb-g}, ${base00-rgb-b}, 0.8)";
+        "col.border_1" =
+          "rgba(${colors.base00-rgb-r}, ${colors.base00-rgb-g}, ${colors.base00-rgb-b}, 0.8)";
         border_size_1 = 10;
         natural_rounding = "on";
       };

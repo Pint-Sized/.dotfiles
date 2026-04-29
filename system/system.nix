@@ -63,22 +63,22 @@
   };
   time.timeZone = systemSettings.timezone;
   i18n = {
-    defaultLocale = "${systemSettings.locale}";
+    defaultLocale = systemSettings.locale;
     extraLocaleSettings = {
-      LC_ADDRESS = "${systemSettings.locale}";
-      LC_IDENTIFICATION = "${systemSettings.locale}";
-      LC_MEASUREMENT = "${systemSettings.locale}";
-      LC_MONETARY = "${systemSettings.locale}";
-      LC_NAME = "${systemSettings.locale}";
-      LC_NUMERIC = "${systemSettings.locale}";
-      LC_PAPER = "${systemSettings.locale}";
-      LC_TELEPHONE = "${systemSettings.locale}";
-      LC_TIME = "${systemSettings.locale}";
-      LC_ALL = "${systemSettings.locale}";
-      LC_CTYPE = "${systemSettings.locale}";
-      LC_COLLATE = "${systemSettings.locale}";
-      LC_MESSAGES = "${systemSettings.locale}";
-      LANGUAGE = "${systemSettings.locale}";
+      LC_ADDRESS = systemSettings.locale;
+      LC_IDENTIFICATION = systemSettings.locale;
+      LC_MEASUREMENT = systemSettings.locale;
+      LC_MONETARY = systemSettings.locale;
+      LC_NAME = systemSettings.locale;
+      LC_NUMERIC = systemSettings.locale;
+      LC_PAPER = systemSettings.locale;
+      LC_TELEPHONE = systemSettings.locale;
+      LC_TIME = systemSettings.locale;
+      LC_ALL = systemSettings.locale;
+      LC_CTYPE = systemSettings.locale;
+      LC_COLLATE = systemSettings.locale;
+      LC_MESSAGES = systemSettings.locale;
+      LANGUAGE = systemSettings.locale;
     };
   };
   console.keyMap = "us";
@@ -87,12 +87,8 @@
       "nix-command"
       "flakes"
     ];
-    substituters = [
-      "https://hyprland.cachix.org"
-    ];
-    trusted-public-keys = [
-      "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
-    ];
+    substituters = [ "https://hyprland.cachix.org" ];
+    trusted-public-keys = [ "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=" ];
   };
   security.rtkit.enable = true;
   xdg.portal = {

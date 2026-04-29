@@ -4,6 +4,9 @@
   pkgs,
   ...
 }:
+let
+  colors = config.lib.stylix.colors;
+in
 {
   home.packages = with pkgs; [
     playerctl
@@ -229,7 +232,6 @@
         ];
         "custom/day" = {
           "exec" = "date +'%^A'";
-          #"exec" = "date +'%A'";
           "format" = "{}";
         };
       }
@@ -266,7 +268,7 @@
         };
       }
     ];
-    style = with config.lib.stylix.colors; ''
+    style = ''
       * {
           font-family: "${userSettings.fontMono}";
           font-size: 13px;
@@ -277,7 +279,7 @@
 
         #waybar {
           background: transparent;
-          color: #${base05-hex};
+          color: #${colors.base05-hex};
           margin: 5px 5px;
           opacity: 0.9;
         }
@@ -285,35 +287,35 @@
         #workspaces {
           border-radius: 0px 1rem 1rem 0px;
           margin: 5px;
-          background-color: rgba(${base00-rgb-r}, ${base00-rgb-g}, ${base00-rgb-b}, 0.9);
+          background-color: rgba(${colors.base00-rgb-r}, ${colors.base00-rgb-g}, ${colors.base00-rgb-b}, 0.9);
           margin-left: 0rem;
           margin-right: 1rem;
         }
 
         #workspaces button {
-          color: #${base07-hex};
+          color: #${colors.base07-hex};
           border-radius: 1rem;
           padding: 0.4rem;
         }
 
         #workspaces button.active {
-          color: #${base0C-hex};
+          color: #${colors.base0C-hex};
           border-radius: 1rem;
         }
 
         #workspaces button:hover {
-          color: #${base0C-hex};
+          color: #${colors.base0C-hex};
           border-radius: 1rem;
         }
 
         #custom-launcher {
-          color: #${base05-hex};
+          color: #${colors.base05-hex};
           border-radius: 1rem 0px 0px 1rem;
           margin-left: 6px;
         }
 
         #custom-launcher:hover {
-          color: #${base0C-hex};
+          color: #${colors.base0C-hex};
           border-radius: 1rem 0px 0px 1rem;
         }
 
@@ -332,7 +334,7 @@
         #network,
         #custom-launcher,
         #memory {
-          background-color: rgba(${base00-rgb-r}, ${base00-rgb-g}, ${base00-rgb-b}, 0.9);
+          background-color: rgba(${colors.base00-rgb-r}, ${colors.base00-rgb-g}, ${colors.base00-rgb-b}, 0.9);
           padding: 0.5rem 0.75rem;
           margin: 5px 0;
         }
@@ -341,98 +343,98 @@
         #custom-notification,
         #custom-lock,
         #custom-power {
-          background-color: rgba(${base00-rgb-r}, ${base00-rgb-g}, ${base00-rgb-b}, 0.9);
+          background-color: rgba(${colors.base00-rgb-r}, ${colors.base00-rgb-g}, ${colors.base00-rgb-b}, 0.9);
           padding: 0.5rem 1rem;
           margin: 5px 0;
         }
 
         #clock.clock1 {
-          color: #${base07-hex};
+          color: #${colors.base07-hex};
           border-radius: 1rem 0px 0px 1rem;
         }
 
         #custom-weather.main {
-          color: #${base0F-hex};
+          color: #${colors.base0F-hex};
       	  border-radius: 0px 1rem 1rem 0px;
         }
 
         #battery {
-          color: #${base0B-hex};
+          color: #${colors.base0B-hex};
         }
 
         #battery.charging {
-          color: #${base0B-hex};
+          color: #${colors.base0B-hex};
         }
 
         #battery.warning:not(.charging) {
-          color: #${base0A-hex};
+          color: #${colors.base0A-hex};
         }
 
         #battery.critical:not(.charging) {
-          color: #${base08-hex};
+          color: #${colors.base08-hex};
         }
 
         #backlight {
-          color: #${base09-hex};
+          color: #${colors.base09-hex};
         }
 
         #pulseaudio {
-          color: #${base08-hex};
+          color: #${colors.base08-hex};
           border-radius: 1rem 0px 0px 1rem;
           margin-left: 1rem;
         }
 
         #custom-notification {
          border-radius: 1rem 0px 0px 1rem;
-         color: #${base0F-hex};
+         color: #${colors.base0F-hex};
         }
 
         #custom-lock {
           border-radius: 0rem 0px 0px 0rem;
-          color: #${base07-hex};
+          color: #${colors.base07-hex};
         }
 
         #custom-power {
           border-radius: 0px 1rem 1rem 0px;
-          color: #${base08-hex};
+          color: #${colors.base08-hex};
         }
 
         #network {
          border-radius: 0rem 0px 0px 0rem;
-         color: #${base07-hex};
+         color: #${colors.base07-hex};
         }
 
         #memory {
-         color: #${base0E-hex};
+         color: #${colors.base0E-hex};
          border-radius: 0px 1rem 1rem 0px;
          margin-right: 1rem;
         }
 
         #custom-gpu {
-         color: #${base0A-hex};
+         color: #${colors.base0A-hex};
         }
 
         #cpu {
-      	  color: #${base07-hex};
+      	  color: #${colors.base07-hex};
         }
 
         #mpris.playing {
-          background: rgba(${base00-rgb-r}, ${base00-rgb-g}, ${base00-rgb-b}, 0.9);
+          background: rgba(${colors.base00-rgb-r}, ${colors.base00-rgb-g}, ${colors.base00-rgb-b}, 0.9);
 
-          color: #${base0E-hex};
+          color: #${colors.base0E-hex};
           border-radius: 1rem;
         }
 
         #mpris.paused,
         #mpris.stopped {
-          background: rgba(${base00-rgb-r}, ${base00-rgb-g}, ${base00-rgb-b}, 0.9);
+          background: rgba(${colors.base00-rgb-r}, ${colors.base00-rgb-g}, ${colors.base00-rgb-b}, 0.9);
 
-          color: #${base05-hex};
+          color: #${colors.base05-hex};
           border-radius: 1rem;
         }
 
         #cava {
-          color: #${base05-hex};
+          color: #${colors.base05-hex};
           border-radius: 0px 1rem 1rem 0px;
         }
 
@@ -441,16 +443,16 @@
           font-size: 60px;
           letter-spacing: 30px;
           /*letter-spacing: 5px;*/
-          color: #${base07-hex};
+          color: #${colors.base07-hex};
         }
 
         #clock.date {
-          color: #${base07-hex};
+          color: #${colors.base07-hex};
           font-size: 20px;
           font-weight: bold;
         }
         #clock.time {
-          color: #${base07-hex};
+          color: #${colors.base07-hex};
           font-size: 15px;
           font-weight: bold;
         }

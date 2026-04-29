@@ -1,4 +1,7 @@
 { config, userSettings, ... }:
+let
+  colors = config.lib.stylix.colors;
+in
 {
   programs.wlogout = {
     enable = true;
@@ -40,12 +43,12 @@
         "keybind" = "e";
       }
     ];
-    style = with config.lib.stylix.colors; ''
+    style = ''
       window {
         font-family: "${userSettings.fontSerif}";
         font-size: 14pt;
-        color: #${base05-hex};
-        background-color: rgba(${base01-rgb-r}, ${base01-rgb-g}, ${base01-rgb-b}, 0.5);
+        color: #${colors.base05-hex};
+        background-color: rgba(${colors.base01-rgb-r}, ${colors.base01-rgb-g}, ${colors.base01-rgb-b}, 0.5);
       }
 
       button {
@@ -53,18 +56,18 @@
         background-position: center;
         background-size: 25%;
         border: none;
-        background-color: rgba(${base01-rgb-r}, ${base01-rgb-g}, ${base01-rgb-b}, 0);
+        background-color: rgba(${colors.base01-rgb-r}, ${colors.base01-rgb-g}, ${colors.base01-rgb-b}, 0);
         margin: 5px;
         transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
       }
 
       button:hover {
-        background-color: rgba(${base01-rgb-r}, ${base01-rgb-g}, ${base01-rgb-b}, 0.1);
+        background-color: rgba(${colors.base01-rgb-r}, ${colors.base01-rgb-g}, ${colors.base01-rgb-b}, 0.1);
       }
 
       button:focus {
-        background-color: #${base0E-hex};
-        color: #${base00-hex};
+        background-color: #${colors.base0E-hex};
+        color: #${colors.base00-hex};
       }
       #lock {
         background-image: image(url("icons/lock.png"));

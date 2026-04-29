@@ -1,14 +1,17 @@
 { config, userSettings, ... }:
+let
+  colors = config.lib.stylix.colors;
+in
 {
-  wayland.windowManager.hyprland = with config.lib.stylix.colors; {
+  wayland.windowManager.hyprland = {
     settings = {
       general = {
         gaps_in = 4;
         gaps_out = "0,10,10,10";
         border_size = 3;
         no_focus_fallback = true;
-        "col.active_border" = "rgb(${base0E-hex})";
-        "col.inactive_border" = "rgb(${base02-hex})";
+        "col.active_border" = "rgb(${colors.base0E-hex})";
+        "col.inactive_border" = "rgb(${colors.base02-hex})";
         resize_on_border = false;
         allow_tearing = true;
         layout = "dwindle";
@@ -29,20 +32,11 @@
           contrast = 1.5;
           xray = false;
         };
-        shadow = {
-          enabled = false;
-          ignore_window = true;
-          range = 50;
-          render_power = 4;
-          color = "0xee${base00-hex}";
-        };
       };
       animations = {
         enabled = true;
         bezier = [
           "myBezier, 0.05, 0.9, 0.1, 1.05"
-          #"shrink, 0.1, 1, 0, 1"
-          #"back, 0.3, 0, 0.8, 0.15"
         ];
         animation = [
           "windows, 1, 8, myBezier, slide"
@@ -51,25 +45,20 @@
           "borderangle, 1, 8, default"
           "fade, 1, 7, default"
           "workspaces, 1, 6, default"
-          #"hyprfocusIn, 1, 2, default"
-          #"hyprfocusOut, 1, 2, default"
         ];
       };
-
       dwindle = {
         pseudotile = true;
         preserve_split = true;
         force_split = 2;
         smart_resizing = false;
       };
-
       master.new_status = "master";
-
       misc = {
         force_default_wallpaper = -1;
         disable_hyprland_logo = true;
         disable_splash_rendering = true;
-        font_family = "${userSettings.fontSerif}";
+        font_family = userSettings.fontSerif;
         animate_manual_resizes = true;
         close_special_on_empty = true;
         middle_click_paste = false;
@@ -80,17 +69,12 @@
         "eDP-1, 1920x1080, 0x0, 1"
         "HDMI-A-2, 1920x1080, 1920x0, 1"
       ];
-
       cursor = {
         no_hardware_cursors = true;
         enable_hyprcursor = true;
         no_warps = true;
         inactive_timeout = 10;
       };
-      #windowrulev2 = [
-      #"suppressevent maximize, class:.*"
-      #];
-      #windowrule = "suppress_event maximize, class:./*";
       xwayland = {
         enabled = true;
         force_zero_scaling = true;
