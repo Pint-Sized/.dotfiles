@@ -17,8 +17,6 @@
     };
   };
   programs.virt-manager.enable = true;
-  environment.systemPackages = with pkgs; [
-    distrobox
-  ];
+  environment.systemPackages = with pkgs; [ distrobox ];
   users.groups.libvirtd.members = [ "${userSettings.username}" ];
 }
