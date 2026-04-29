@@ -4,6 +4,9 @@
   config,
   ...
 }:
+let
+  colors = config.lib.stylix.colors;
+in
 {
   imports = [ ./themes/${userSettings.theme}.nix ];
   stylix = {
