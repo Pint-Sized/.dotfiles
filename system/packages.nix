@@ -23,6 +23,7 @@
       kdePackages.ark
       kitty
       libreoffice-qt6-fresh
+      lm_sensors
       mediainfo
       onefetch
       hunspell
