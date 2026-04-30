@@ -1,2 +1,0 @@
-- sort hyprland binds
-- wlogout fetch icons
