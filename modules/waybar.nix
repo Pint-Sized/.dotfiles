@@ -6,6 +6,7 @@
 }:
 let
   colors = config.lib.stylix.colors;
+  font = import ./themes/fonts.nix;
 in
 {
   home.packages = with pkgs; [
@@ -439,7 +440,7 @@ in
         }
 
         #custom-day {
-          font-family: "anurati";
+          font-family: "${font.fonts.main}";
           font-size: 60px;
           letter-spacing: 30px;
           color: #${colors.base07-hex};

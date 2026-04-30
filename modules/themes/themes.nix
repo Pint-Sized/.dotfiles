@@ -8,7 +8,10 @@ let
   colors = config.lib.stylix.colors;
 in
 {
-  imports = [ ./themes/${userSettings.theme}.nix ];
+  imports = [
+    ./themes/${userSettings.theme}.nix
+    ./fonts.nix
+  ];
   stylix = {
     enable = true;
     cursor = {
