@@ -8,16 +8,6 @@ in
       ulauncher
     ];
     file = {
-      ".config/ulauncher/user-themes/theme/colours.css" = {
-        text = ''
-          @define-color background #${colors.base00-hex};
-          @define-color current_line_background #${colors.base01-hex};
-          @define-color foreground #${colors.base04-hex};
-          @define-color foreground_lessimportant #${colors.base05-hex};
-          @define-color accent #${colors.base09-hex};
-          @define-color highlight #${colors.base09-hex};
-        '';
-      };
       ".config/ulauncher/user-themes/theme/manifest.json" = {
         text = ''
           {
@@ -36,76 +26,57 @@ in
       };
       ".config/ulauncher/user-themes/theme/theme.css" = {
         text = ''
-          @import "colours.css";
-          @define-color bg_color @background;
-          @define-color window_bg @background;
-          @define-color window_border_color darker(@background);
-          @define-color prefs_backgroud @foreground;
-           @define-color selected_bg_color @foreground;
-           @define-color selected_fg_color @background;
-           @define-color input_color @foreground;
-           @define-color caret_color @foreground;
-           @define-color item_name @foreground;
-           @define-color item_text @foreground_lessimportant;
-           @define-color item_box_selected @current_line_background;
-           @define-color item_text_selected @accent;
-           @define-color item_name_selected @accent;
-           @define-color item_shortcut_color @foreground;
-           @define-color item_shortcut_shadow darker(@background);
-           @define-color item_shortcut_color_sel @highlight;
-           @define-color item_shortcut_shadow_sel darker(@item_box_selected);
-           .app {
-               background-color: @window_bg;
-               border-color: @window_border_color;
+          .app {
+               background-color: #${colors.base00-hex};
+               border-color: #${colors.base00-hex};
            }
            .input {
-               color: @input_color;
+               color: #${colors.base04-hex};
            }
            .input *:selected,
            .input *:focus,
            *:selected:focus {
-               background-color: alpha (@selected_bg_color, 0.9);
-               color: @selected_fg_color;
+               background-color: alpha (#${colors.base04-hex}, 0.9);
+               color: #${colors.base00-hex};
            }
            .item-text {
-               color: @item_text;
+               color: #${colors.base05-hex};
            }
            .item-name {
-               color: @item_name;
+               color: #${colors.base04-hex};
            }
            .selected.item-box {
-               background-color: @item_box_selected;
-               border-left: 1px solid @window_border_color;
-               border-right: 1px solid @window_border_color;
+               background-color: #${colors.base01-hex};
+               border-left: 1px solid #${colors.base00-hex};
+               border-right: 1px solid #${colors.base00-hex};
            }
            .selected.item-box .item-text {
-               color: @item_text_selected;
+               color: #${colors.base05-hex};
            }
            .selected.item-box .item-name {
-               color: @item_name_selected;
+               color: #${colors.base09-hex};
            }
            .item-shortcut {
-               color: @item_shortcut_color;
-               text-shadow: 1px 1px 1px @item_shortcut_shadow;
+               color: #${colors.base04-hex};
+               text-shadow: 1px 1px 1px #${colors.base00-hex};
            }
            .selected.item-box .item-shortcut {
-               color: @item_shortcut_color_sel;
-               text-shadow: 1px 1px 1px @item_shortcut_shadow_sel;
+               color: #${colors.base04-hex};
+               text-shadow: 1px 1px 1px #${colors.base01-hex};
            }
            .prefs-btn {
                opacity: 0.8;
            }
            .prefs-btn:hover {
-               background-color: @prefs_backgroud;
+               background-color: #${colors.base04-hex};
            }
         '';
       };
       ".config/ulauncher/user-themes/theme/theme-gtk-3.20.css" = {
         text = ''
-          @import "colours.css";
           @import url("theme.css");
           .input {
-              caret-color: @caret_color;
+              caret-color: #${colors.base04-hex};
           }
           .selected.item-box {
               border: none;
