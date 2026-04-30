@@ -442,7 +442,6 @@ in
           font-family: "anurati";
           font-size: 60px;
           letter-spacing: 30px;
-          /*letter-spacing: 5px;*/
           color: #${colors.base07-hex};
         }
 
