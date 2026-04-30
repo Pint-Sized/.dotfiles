@@ -10,7 +10,6 @@
           "document_symbols"
         ];
         addBlankLineAtTop = false;
-
         filesystem = {
           bindToCwd = false;
           followCurrentFile.enabled = true;
@@ -19,7 +18,6 @@
             hideGitignored = true;
           };
         };
-
         defaultComponentConfigs = {
           indent = {
             withExpanders = true;
@@ -27,19 +25,16 @@
             expanderExpanded = "󰅀";
             expanderHighlight = "NeoTreeExpander";
           };
-
-          gitStatus = {
-            symbols = {
-              added = " ";
-              conflict = "󰩌 ";
-              deleted = "󱂥";
-              ignored = " ";
-              modified = " ";
-              renamed = "󰑕";
-              staged = "󰩍";
-              unstaged = "";
-              untracked = " ";
-            };
+          gitStatus.symbols = {
+            added = " ";
+            conflict = "󰩌 ";
+            deleted = "󱂥";
+            ignored = " ";
+            modified = " ";
+            renamed = "󰑕";
+            staged = "󰩍";
+            unstaged = "";
+            untracked = " ";
           };
         };
       };

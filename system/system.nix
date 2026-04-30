@@ -38,7 +38,6 @@
     pkgs.vista-fonts
     pkgs.nerd-fonts.symbols-only
   ];
-
   fonts.fontconfig.defaultFonts = {
     serif = [ "${userSettings.fontSerif}" ];
     sansSerif = [ "${userSettings.fontSerif}" ];

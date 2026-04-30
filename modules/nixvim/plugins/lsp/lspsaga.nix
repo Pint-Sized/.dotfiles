@@ -6,11 +6,11 @@
       settings = {
         beacon.enable = true;
         ui = {
-          border = "rounded"; # One of none, single, double, rounded, solid, shadow
-          codeAction = "💡"; # Can be any symbol you want 💡
+          border = "rounded";
+          codeAction = "💡";
         };
         hover = {
-          openCmd = "!floorp"; # Choose your browser
+          openCmd = "!floorp";
           openLink = "gx";
         };
         diagnostic = {
@@ -18,7 +18,7 @@
           diagnosticOnlyCurrent = false;
           showCodeAction = true;
         };
-        symbolInWinbar.enable = false; # Breadcrumbs
+        symbolInWinbar.enable = false;
         codeAction = {
           extendGitSigns = false;
           showServerName = true;
@@ -53,8 +53,8 @@
           autoClose = true;
           autoPreview = true;
           closeAfterJump = true;
-          layout = "normal"; # normal or float
-          winPosition = "right"; # left or right
+          layout = "normal";
+          winPosition = "right";
           keys = {
             jump = "e";
             quit = "q";

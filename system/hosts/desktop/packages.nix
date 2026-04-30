@@ -12,7 +12,6 @@
       lm_sensors
       vintagestory
     ]);
-
   programs = {
     coolercontrol.enable = true;
     gamemode.enable = true;

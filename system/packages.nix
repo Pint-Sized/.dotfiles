@@ -70,7 +70,6 @@
       pip
       psutil
     ]);
-
   services.flatpak.packages = [
     "io.github.giantpinkrobots.flatsweep"
     "com.usebottles.bottles"
@@ -78,7 +77,6 @@
     "org.prismlauncher.PrismLauncher"
     "com.stremio.Stremio"
   ];
-
   programs = {
     nh = {
       enable = true;

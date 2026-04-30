@@ -1,6 +1,9 @@
 { config, ... }:
+let
+  colors = config.lib.stylix.colors;
+in
 {
-  programs.nixvim = with config.lib.stylix.colors; {
+  programs.nixvim = {
     plugins.lualine = {
       enable = true;
       settings = {
@@ -24,8 +27,8 @@
               icon_only = true;
               colored = false;
               color = {
-                fg = "#${base00-hex}";
-                bg = "#${base00-hex}";
+                fg = "#${colors.base00-hex}";
+                bg = "#${colors.base00-hex}";
               };
               padding = 0;
               separator = {
@@ -59,8 +62,8 @@
                   newfile = "󰎔",
                 },
                 color = {
-                  fg = "#${base05-hex}",
-                  bg = "#${base00-hex}",
+                  fg = "#${colors.base05-hex}",
+                  bg = "#${colors.base00-hex}",
                   gui = "bold",
                 },
               '';
@@ -74,8 +77,8 @@
               colored = false;
               icon.align = "left";
               color = {
-                fg = "#${base01-hex}";
-                bg = "#${base0F-hex}";
+                fg = "#${colors.base01-hex}";
+                bg = "#${colors.base0F-hex}";
               };
             }
             {
@@ -83,8 +86,8 @@
               ignore_lsp = [ "null-ls" ];
               icon = "";
               color = {
-                fg = "#${base05-hex}";
-                bg = "#${base01-hex}";
+                fg = "#${colors.base05-hex}";
+                bg = "#${colors.base01-hex}";
               };
               padding = 1;
             }
@@ -95,8 +98,8 @@
               icon_only = true;
               colored = false;
               color = {
-                fg = "#${base00-hex}";
-                bg = "#${base00-hex}";
+                fg = "#${colors.base00-hex}";
+                bg = "#${colors.base00-hex}";
               };
               padding = 0;
               separator = {
@@ -110,15 +113,15 @@
               __unkeyed-1 = "progress";
               separator.left = "";
               color = {
-                fg = "#${base01-hex}";
-                bg = "#${base08-hex}";
+                fg = "#${colors.base01-hex}";
+                bg = "#${colors.base08-hex}";
               };
             }
             {
               __unkeyed-1 = "location";
               color = {
-                fg = "#${base05-hex}";
-                bg = "#${base01-hex}";
+                fg = "#${colors.base05-hex}";
+                bg = "#${colors.base01-hex}";
               };
               padding = 1;
             }
@@ -127,8 +130,8 @@
               icon_only = true;
               colored = false;
               color = {
-                fg = "#${base00-hex}";
-                bg = "#${base00-hex}";
+                fg = "#${colors.base00-hex}";
+                bg = "#${colors.base00-hex}";
               };
               padding = 0;
               separator = {
@@ -142,7 +145,7 @@
     };
     extraConfigLua = ''
       local custom_base16 = require'lualine.themes.base16'
-      custom_base16.normal.c.bg = '#${base00-hex}'
+      custom_base16.normal.c.bg = '#${colors.base00-hex}'
       require('lualine').setup {
         options = { theme = custom_base16 },
         ...

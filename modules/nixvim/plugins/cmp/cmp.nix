@@ -23,26 +23,22 @@
             { name = "nvim_lsp"; }
             { name = "emoji"; }
             {
-              name = "buffer"; # text within current buffer
+              name = "buffer";
               option.get_bufnrs.__raw = "vim.api.nvim_list_bufs";
               keywordLength = 3;
             }
             {
-              name = "path"; # file system paths
+              name = "path";
               keywordLength = 3;
             }
             {
-              name = "luasnip"; # snippets
+              name = "luasnip";
               keywordLength = 3;
             }
           ];
           window = {
-            completion = {
-              border = "solid";
-            };
-            documentation = {
-              border = "solid";
-            };
+            completion.border = "solid";
+            documentation.border = "solid";
           };
           mapping = {
             "<C-Tab>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
@@ -92,15 +88,12 @@
         Operator = " ",
         TypeParameter = " ",
       }
-
       local cmp = require'cmp'
-
       cmp.setup.cmdline({'/', "?" }, {
         sources = {
            { name = 'buffer' }
         }
       })
-
       cmp.setup.filetype('gitcommit', {
         sources = cmp.config.sources({
            { name = 'cmp_git' }, -- You can specify the `cmp_git` source if you were installed it.
@@ -108,7 +101,6 @@
            { name = 'buffer' },
         })
       })
-
       cmp.setup.cmdline(':', {
         sources = cmp.config.sources({
           { name = 'path' }

@@ -13,17 +13,14 @@
       "$mainMod, W, exec, $browser"
       "$mainMod, X, fullscreen, 0"
       "$mainMod, K, exec, wl-copy < ~/.dotfiles/scripts/tester"
-
       "$mainMod, left, movefocus, l"
       "$mainMod, right, movefocus, r"
       "$mainMod, up, movefocus, u"
       "$mainMod, down, movefocus, d"
-
       "$mainMod SHIFT, left, swapwindow, l"
       "$mainMod SHIFT, right, swapwindow, r"
       "$mainMod SHIFT, up, swapwindow, u"
       "$mainMod SHIFT, down, swapwindow, d"
-
       "$mainMod, 1, workspace, 1"
       "bind = $mainMod, 1 , exec, hyprctl monitors -j | jq -r '.[] | select(.focused == true) | .specialWorkspace.name' | sed 's/special://' | xargs -I [] hyprctl dispatch togglespecialworkspace []"
       "$mainMod, 2, workspace, 2"
@@ -36,21 +33,18 @@
       "bind = $mainMod, 5 , exec, hyprctl monitors -j | jq -r '.[] | select(.focused == true) | .specialWorkspace.name' | sed 's/special://' | xargs -I [] hyprctl dispatch togglespecialworkspace []"
       "$mainMod, 6, workspace, 6"
       "bind = $mainMod, 6 , exec, hyprctl monitors -j | jq -r '.[] | select(.focused == true) | .specialWorkspace.name' | sed 's/special://' | xargs -I [] hyprctl dispatch togglespecialworkspace []"
-
       "$mainMod, 1, exec, pypr hide '*'"
       "$mainMod, 2, exec, pypr hide '*'"
       "$mainMod, 3, exec, pypr hide '*'"
       "$mainMod, 4, exec, pypr hide '*'"
       "$mainMod, 5, exec, pypr hide '*'"
       "$mainMod, 6, exec, pypr hide '*'"
-
       "$mainMod SHIFT, 1, movetoworkspace, 1"
       "$mainMod SHIFT, 2, movetoworkspace, 2"
       "$mainMod SHIFT, 3, movetoworkspace, 3"
       "$mainMod SHIFT, 4, movetoworkspace, 4"
       "$mainMod SHIFT, 5, movetoworkspace, 5"
       "$mainMod SHIFT, 6, movetoworkspace, 6"
-
       "$mainMod, 7, exec, pypr toggle timetable"
       "$mainMod, 8, exec, pypr toggle pavucontrol"
       "$mainMod, 9, exec, pypr toggle discord"
@@ -58,24 +52,19 @@
       "$mainMod, code:20, exec, pypr toggle email"
       "$mainMod, code:21, exec, pypr toggle spotify"
       "$mainMod, M, exec, pypr toggle calculator"
-
       "$mainMod, L, exec, pkill wlogout || wlogout"
       "$mainMod, U, exec, ~/.local/scripts/hypr-powersaver-on.sh"
       "$mainMod, I, exec, ~/.local/scripts/hypr-powersaver-off.sh"
-
       "$mainMod, S, togglespecialworkspace, magic"
       "$mainMod SHIFT, S, movetoworkspace, special:magic"
       "$mainMod SHIFT, P, exec, hyprshot -m region"
-
       "$mainMod, N, exec, ulauncher-toggle"
       "$mainMod, B, exec, swaync-client -t"
       "$mainMod SHIFT, B, exec, swaync-client -C"
       "$mainMod, P, exec, waypaper"
       "$mainMod, E, exec, kitty --detach fish -C y"
       "$mainMod, O, exec, remnote --enable-features=UseOzonePlatform --ozone-platform=wayland"
-
       "$mainMod, R, exec, ~/.local/scripts/reloader.sh"
-
       ",XF86AudioMicMute, exec, swayosd-client --input-volume mute-toggle"
       ",XF86Display, exec, kitty ~/.dotfiles/scripts/theme-switcher"
       ",XF86WLAN, exec, kitty ~/.dotfiles/scripts/wifi-rebuild"
@@ -84,7 +73,6 @@
       ",XF86Keyboard, exec, polychromatic-controller"
       ",XF86Favorites, exec, kitty ~/.dotfiles/scripts/package-rebuild"
       ", XF86AudioMute, exec, swayosd-client --output-volume mute-toggle"
-
       "$mainMod, semicolon, exec, emote"
     ];
     binde = [

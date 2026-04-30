@@ -47,13 +47,6 @@
         class = "org.pulseaudio.pavucontrol"
         size = "90% 90%"
         lazy = true
-
-        #[scratchpads.discord]
-        #animation = "fromTop"
-        #command = "vesktop"
-        #class = "vesktop"
-        #size = "90% 90%"
-        #lazy = true
       '';
     };
   };

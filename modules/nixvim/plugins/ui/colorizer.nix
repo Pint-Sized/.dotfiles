@@ -3,9 +3,7 @@
     enable = true;
     autoLoad = true;
     settings = {
-      filetypes = {
-        __unkeyed-1 = "*";
-      };
+      filetypes.__unkeyed-1 = "*";
       user_default_options = {
         RGB = true;
         RRGGBB = true;
