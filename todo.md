@@ -1,3 +1,2 @@
-- ulauncher themes
 - sort hyprland binds
 - wlogout fetch icons
