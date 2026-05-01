@@ -1,6 +1,4 @@
 {
-  hardware.openrgb.enable = true;
-
   services = {
     devmon.enable = true;
 

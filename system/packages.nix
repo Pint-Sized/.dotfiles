@@ -15,6 +15,7 @@
       emote
       fastfetch
       fragments
+      gnome-calculator
       gparted
       hunspell
       hunspellDicts.en_GB-ise

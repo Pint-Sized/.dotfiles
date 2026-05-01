@@ -1,22 +1,25 @@
-{ pkgs, userSettings, ... }:
+{ pkgs, ... }:
 {
+  environment.systemPackages = with pkgs; [ distrobox ];
+
+  programs.virt-manager.enable = true;
+
   virtualisation = {
     libvirtd = {
       enable = true;
       qemu = {
         package = pkgs.qemu_kvm;
         runAsRoot = true;
-        vhostUserPackages = [ pkgs.virtiofsd ];
         swtpm.enable = true;
+        vhostUserPackages = [ pkgs.virtiofsd ];
       };
     };
-    spiceUSBRedirection.enable = true;
+
     podman = {
-      enable = true;
       dockerCompat = true;
+      enable = true;
     };
+
+    spiceUSBRedirection.enable = true;
   };
-  programs.virt-manager.enable = true;
-  environment.systemPackages = with pkgs; [ distrobox ];
-  users.groups.libvirtd.members = [ "${userSettings.username}" ];
 }

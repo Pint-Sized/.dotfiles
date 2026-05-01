@@ -11,7 +11,6 @@
       "$mainMod, W, exec, $browser"
       "$mainMod, Y, exec, $filemanager"
       "$mainMod, E, exec, kitty --detach fish -C y"
-      "$mainMod, O, exec, remnote --enable-features=UseOzonePlatform --ozone-platform=wayland"
       "$mainMod, P, exec, waypaper"
       "$mainMod, N, exec, ulauncher-toggle"
       "$mainMod, semicolon, exec, emote"

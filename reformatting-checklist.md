@@ -1,16 +1,16 @@
 # Reformatting Checklist
 
-## System
+# System
 
 - [x] hyprland.nix
 - [x] packages.nix
 - [x] services.nix
-- [ ] system.nix
-- [ ] virtualisation.nix
+- [x] system.nix
+- [x] virtualisation.nix
 
-### Hosts
+## Hosts
 
-#### Desktop
+### Desktop
 
 - [ ] configuration.nix
 - [ ] hardware.nix
@@ -18,7 +18,7 @@
 - [ ] packages.nix
 - [ ] services.nix
 
-#### Laptop
+### Laptop
 
 - [ ] configuration.nix
 - [ ] hardware.nix
@@ -27,9 +27,7 @@
 - [ ] power.nix
 - [ ] services.nix
 
----
-
-## Modules
+# Modules
 
 - [ ] fastfetch.nix
 - [ ] fish.nix
@@ -44,19 +42,19 @@
 - [ ] zathura.nix
 - [ ] wlogout.nix
 
-### Hyprland
+## Hyprland
 
 - [ ] general.nix
 - [ ] plugins.nix
 - [ ] pyprland.nix
 
-### Nixvim
+## Nixvim
 
 - [ ] autocms.nix
 - [ ] keymaps.nix
 - [ ] settings.nix
 
-#### Plugins
+### Plugins
 
 - [ ] cmp.nix
 - [ ] neo-tree.nix
