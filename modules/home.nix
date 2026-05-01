@@ -29,7 +29,7 @@
     ./ulauncher.nix
     ./virtualisation.nix
     ./waybar.nix
-    ./wlogout/wlogout.nix
+    ./wlogout.nix
     ./yazi.nix
     ./zathura.nix
     ./zed.nix
