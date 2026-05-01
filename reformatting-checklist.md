@@ -4,7 +4,7 @@
 
 - [x] hyprland.nix
 - [x] packages.nix
-- [ ] services.nix
+- [x] services.nix
 - [ ] system.nix
 - [ ] virtualisation.nix
 
