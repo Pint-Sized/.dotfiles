@@ -111,44 +111,26 @@ in
   };
   home.file = {
     ".config/wlogout/icons/lock-hover.png".source = pkgs.fetchurl {
-      url = "https://github.com/the-pint-sized-powerhouse/icons/blob/main/lock-hover.png";
+      url = "https://raw.githubusercontent.com/the-pint-sized-powerhouse/icons/main/lock-hover.png";
       sha256 = "sha256-b3IEdAUjngfWf1fx0FaKfAiECCS35PL9X7Q4W2nquYI=";
     };
     ".config/wlogout/icons/lock.png".source = pkgs.fetchurl {
-      url = "https://github.com/the-pint-sized-powerhouse/icons/blob/main/lock.png";
-      sha256 = "sha256-+ZbG2FjAkj24cmfUD3uG60ZENrEeCefIW2gtd2FIGQg=";
     };
     ".config/wlogout/icons/logout-hover.png".source = pkgs.fetchurl {
-      url = "https://github.com/the-pint-sized-powerhouse/icons/blob/main/logout-hover.png";
-      sha256 = "sha256-VO1fCogwVLrZ9cNB8AGeeeZwpQBHgJulb9l59kOsPSQ=";
     };
     ".config/wlogout/icons/logout.png".source = pkgs.fetchurl {
-      url = "https://github.com/the-pint-sized-powerhouse/icons/blob/main/logout.png";
-      sha256 = "sha256-gwNSLGFxl5VWKSO1bUJVpT8bJZ3tLDYa6lG4Z/h3J5M=";
     };
     ".config/wlogout/icons/power-hover.png".source = pkgs.fetchurl {
-      url = "https://github.com/the-pint-sized-powerhouse/icons/blob/main/power-hover.png";
-      sha256 = "sha256-7ooFoYYMT6NdLu3MBf9ISCzfhidW6O/PqeMgYvLqVIM=";
     };
     ".config/wlogout/icons/power.png".source = pkgs.fetchurl {
-      url = "https://github.com/the-pint-sized-powerhouse/icons/blob/main/power.png";
-      sha256 = "sha256-qESgHLrqsKVBBUZ04vCAs4vJ92vWObMFGMHhS6h/dw8=";
     };
     ".config/wlogout/icons/restart-hover.png".source = pkgs.fetchurl {
-      url = "https://github.com/the-pint-sized-powerhouse/icons/blob/main/restart-hover.png";
-      sha256 = "sha256-WtuSrKMN5SSNZEjhhEgz7R1g5qjV47j345+OuCLMn/k=";
     };
     ".config/wlogout/icons/restart.png".source = pkgs.fetchurl {
-      url = "https://github.com/the-pint-sized-powerhouse/icons/blob/main/restart.png";
-      sha256 = "sha256-J/VJxfSKlpcqG2ikj763dPMkAijscPXZTZmf+W+cGJY=";
     };
     ".config/wlogout/icons/sleep-hover.png".source = pkgs.fetchurl {
-      url = "https://github.com/the-pint-sized-powerhouse/icons/blob/main/sleep-hover.png";
-      sha256 = "sha256-z0n2gUbc0l+rj3AKSk0zGRQal/atonoYlgr49f+jobs=";
     };
     ".config/wlogout/icons/sleep.png".source = pkgs.fetchurl {
-      url = "https://github.com/the-pint-sized-powerhouse/icons/blob/main/sleep.png";
-      sha256 = "sha256-efAKX6O8FgPYB8T2HilKHayu21p7nBOmiQqhwkS/ucY=";
     };
   };
 }
