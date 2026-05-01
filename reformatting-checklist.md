@@ -2,14 +2,10 @@
 
 ## System
 
-- [ ] configuration.nix
-- [ ] hardware.nix
-- [ ] hyprland.nix
-- [ ] networking.nix
-- [ ] packages.nix
+- [x] hyprland.nix
+- [x] packages.nix
 - [ ] services.nix
 - [ ] system.nix
-- [ ] themes.nix
 - [ ] virtualisation.nix
 
 ### Hosts

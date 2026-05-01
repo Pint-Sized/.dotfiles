@@ -4,21 +4,23 @@
     enable = true;
     xwayland.enable = true;
   };
+
   services = {
-    xserver = {
-      enable = true;
-      excludePackages = [
-        pkgs.xterm
-        pkgs.nano
-      ];
-      xkb = {
-        variant = "";
-        layout = "us";
-      };
-    };
     displayManager.gdm = {
       enable = true;
       wayland = true;
+    };
+
+    xserver = {
+      enable = true;
+      excludePackages = [
+        pkgs.nano
+        pkgs.xterm
+      ];
+      xkb = {
+        layout = "us";
+        variant = "";
+      };
     };
   };
 }

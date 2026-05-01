@@ -5,7 +5,6 @@
   ...
 }:
 {
-  # -------- STABLE ------- #
   environment.systemPackages =
     (with pkgs; [
       appeditor
@@ -13,26 +12,27 @@
       calligraphy
       celluloid
       discover-overlay
-      fastfetch
-      kdePackages.dolphin
       emote
+      fastfetch
       fragments
       gparted
       hunspell
+      hunspellDicts.en_GB-ise
       jq
       kdePackages.ark
+      kdePackages.dolphin
       kitty
       libreoffice-qt6-fresh
       lm_sensors
       mediainfo
-      onefetch
-      hunspell
-      hunspellDicts.en_GB-ise
       nautilus
       neovim
       nix-du
       nix-unit
+      nodejs_latest
       ntfs3g
+      onefetch
+      pandoc
       pavucontrol
       pokeget-rs
       prismlauncher
@@ -53,10 +53,7 @@
       yazi
       zapzap
       zip
-      nodejs_latest
-      pandoc
     ])
-    # ----- UNSTABLE ----- #
     ++ (with pkgs-unstable; [
       discord
       hyprpolkitagent
@@ -64,45 +61,49 @@
       nchat
       nix-output-monitor
     ])
-    # ----- PYTHON-PACKAGES ----- #
     ++ (with pkgs.python312Packages; [
       libcst
-      python-lsp-server
       pip
       psutil
+      python-lsp-server
     ]);
-  services.flatpak.packages = [
-    "io.github.giantpinkrobots.flatsweep"
-    "com.usebottles.bottles"
-    "it.mijorus.whisper"
-    "org.prismlauncher.PrismLauncher"
-    "com.stremio.Stremio"
-  ];
+
   programs = {
-    nh = {
-      enable = true;
-      clean.enable = true;
-      clean.extraArgs = "--keep-since 4d --keep 3";
-      flake = "/home/${userSettings.username}/.dotfiles";
-    };
-    fish = {
-      enable = true;
-      package = pkgs.fish;
-    };
-    mtr = {
-      enable = true;
-      package = pkgs.mtr;
-    };
-    gnupg.agent = {
-      enable = true;
-      enableSSHSupport = true;
-    };
-    nix-index-database.comma.enable = true;
-    steam.enable = true;
+    fish.enable = true;
+
     gamemode.enable = true;
+
     gamescope = {
       enable = true;
       capSysNice = true;
     };
+
+    gnupg.agent = {
+      enable = true;
+      enableSSHSupport = true;
+    };
+
+    mtr.enable = true;
+
+    nh = {
+      enable = true;
+      clean = {
+        enable = true;
+        extraArgs = "--keep-since 4d --keep 3";
+      };
+      flake = "/home/${userSettings.username}/.dotfiles";
+    };
+
+    nix-index-database.comma.enable = true;
+
+    steam.enable = true;
   };
+
+  services.flatpak.packages = [
+    "com.stremio.Stremio"
+    "com.usebottles.bottles"
+    "io.github.giantpinkrobots.flatsweep"
+    "it.mijorus.whisper"
+    "org.prismlauncher.PrismLauncher"
+  ];
 }
