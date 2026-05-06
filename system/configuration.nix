@@ -1,13 +1,13 @@
 {
   imports = [
     ./hardware.nix
+    ./hyprland.nix
+    ./networking.nix
     ./packages.nix
     ./services.nix
     ./system.nix
-    ./networking.nix
     ./themes.nix
     ./virtualisation.nix
-    ./hyprland.nix
   ];
   system.stateVersion = "23.05";
 }

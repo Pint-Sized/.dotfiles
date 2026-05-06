@@ -3,13 +3,14 @@
   environment.systemPackages =
     (with pkgs; [
       liquidctl
+      openrgb-with-all-plugins
       polychromatic
       protontricks
       protonup-ng
-      openrgb-with-all-plugins
     ])
     ++ (with pkgs-unstable; [
       vintagestory
     ]);
+
   programs.coolercontrol.enable = true;
 }

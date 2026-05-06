@@ -1,7 +1,6 @@
 {
   services = {
     devmon.enable = true;
-
     flatpak = {
       enable = true;
       overrides.global = {
@@ -22,25 +21,18 @@
       uninstallUnmanaged = true;
       update.onActivation = true;
     };
-
     gvfs.enable = true;
-
-    hardware.openrgb.enable = true;
-
     libinput.mouse.accelProfile = "flat";
-
     openssh.enable = true;
-
     pipewire = {
-      enable = true;
       alsa = {
         enable = true;
         support32Bit = true;
       };
+      enable = true;
       jack.enable = true;
       pulse.enable = true;
     };
-
     udisks2.enable = true;
   };
 }

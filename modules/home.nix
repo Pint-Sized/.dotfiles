@@ -17,7 +17,6 @@
     ./imv.nix
     ./kitty.nix
     ./mpv.nix
-    ./vesktop.nix
     ./nixvim/nixvim.nix
     ./obs-studio.nix
     ./qt.nix
@@ -27,6 +26,7 @@
     ./swaync.nix
     ./themes/themes.nix
     ./ulauncher.nix
+    ./vesktop.nix
     ./virtualisation.nix
     ./waybar.nix
     ./wlogout.nix
@@ -34,11 +34,14 @@
     ./zathura.nix
     ./zed.nix
   ];
+
   nixpkgs.config = {
     allowUnfree = true;
     allowUnfreePredicate = true;
   };
+
   programs.home-manager.enable = true;
+
   home = {
     username = "${userSettings.username}";
     homeDirectory = "/home/${userSettings.username}/";

@@ -26,7 +26,6 @@
   };
 
   console.keyMap = "us";
-
   documentation.man.generateCaches = false;
 
   environment = {
@@ -78,7 +77,6 @@
   };
 
   security.rtkit.enable = true;
-
   time.timeZone = systemSettings.timezone;
 
   users.users.${userSettings.username} = {

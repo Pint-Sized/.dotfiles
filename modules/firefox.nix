@@ -1,13 +1,13 @@
 { pkgs, ... }:
 {
-  home.packages = with pkgs; [
-    firefoxpwa
-  ];
+  home.packages = with pkgs; [ firefoxpwa ];
+
   home.file.".config/chevron".source = pkgs.fetchzip {
     url = "https://github.com/kholmogorov27/chevron/releases/download/v2.2.0/Chevron_v2.2.0.zip";
     sha256 = "sha256-jGsHZznSeDeWd9YFInAJmWPukf//rvzkjmNsry0zuKM=";
     stripRoot = false;
   };
+
   programs.firefox = {
     enable = true;
     profiles."8b2kzims.default" = {
@@ -15,7 +15,7 @@
         "browser.startup.homepage" = "http://127.0.0.1:8080";
         "widget.non-native-theme.scrollbar.style" = 3;
         "browser.tabs.closeWindowWithLastTab" = false;
-        "rowser.dataFeatureRecommendations.enabled" = false;
+        "browser.dataFeatureRecommendations.enabled" = false;
         "browser.newtabpage.activity-stream.feeds.recommendationprovider" = false;
         "browser.newtabpage.activity-stream.feeds.recommendationproviderswitcher" = false;
         "extensions.htmlaboutaddons.recommendations.enabled" = false;
@@ -113,7 +113,6 @@
         user_pref("network.connectivity-service.enabled", false);
         user_pref("browser.privatebrowsing.vpnpromourl", "");
         user_pref("extensions.getAddons.showPane", false);
-        user_pref("extensions.htmlaboutaddons.recommendations.enabled", false);
         user_pref("browser.discovery.enabled", false);
         user_pref("browser.shell.checkDefaultBrowser", false);
         user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons", false);
@@ -122,9 +121,8 @@
         user_pref("browser.aboutConfig.showWarning", false);
         user_pref("browser.aboutwelcome.enabled", false);
         user_pref("browser.profiles.enabled", true);
-        user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
         user_pref("browser.compactmode.show", true);
-        user_pref("browser.privateWindowSeparation.enabled", false); // WINDOWS
+        user_pref("browser.privateWindowSeparation.enabled", false);
         user_pref("full-screen-api.transition-duration.enter", "0 0");
         user_pref("full-screen-api.transition-duration.leave", "0 0");
         user_pref("full-screen-api.warning.timeout", 0);
@@ -154,6 +152,7 @@
       '';
     };
   };
+
   stylix.targets.firefox = {
     enable = true;
     profileNames = [ "8b2kzims.default" ];

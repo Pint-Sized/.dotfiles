@@ -71,32 +71,25 @@
 
   programs = {
     fish.enable = true;
-
     gamemode.enable = true;
-
     gamescope = {
-      enable = true;
       capSysNice = true;
+      enable = true;
     };
-
     gnupg.agent = {
       enable = true;
       enableSSHSupport = true;
     };
-
     mtr.enable = true;
-
     nh = {
-      enable = true;
       clean = {
         enable = true;
         extraArgs = "--keep-since 4d --keep 3";
       };
+      enable = true;
       flake = "/home/${userSettings.username}/.dotfiles";
     };
-
     nix-index-database.comma.enable = true;
-
     steam.enable = true;
   };
 

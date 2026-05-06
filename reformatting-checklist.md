@@ -1,32 +1,3 @@
-# Reformatting Checklist
-
-# System
-
-- [x] hyprland.nix
-- [x] packages.nix
-- [x] services.nix
-- [x] system.nix
-- [x] virtualisation.nix
-
-## Hosts
-
-### Desktop
-
-- [ ] configuration.nix
-- [ ] hardware.nix
-- [ ] networking.nix
-- [ ] packages.nix
-- [ ] services.nix
-
-### Laptop
-
-- [ ] configuration.nix
-- [ ] hardware.nix
-- [ ] networking.nix
-- [ ] packages.nix
-- [ ] power.nix
-- [ ] services.nix
-
 # Modules
 
 - [ ] fastfetch.nix
@@ -36,7 +7,7 @@
 - [ ] home.nix
 - [ ] swaync.nix
 - [ ] ulauncher.nix
-- [ ] veskto.nix
+- [ ] vesktop.nix
 - [ ] waybar.nix
 - [ ] yazi.nix
 - [ ] zathura.nix
