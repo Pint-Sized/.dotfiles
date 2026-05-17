@@ -9,6 +9,7 @@ let
 in
 {
   home.packages = with pkgs; [
+    networkmanagerapplet
     playerctl
     wttrbar
   ];

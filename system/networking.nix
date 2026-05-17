@@ -1,7 +1,12 @@
 {
   networking = {
-    wireless = {
+    networkmanager = {
       enable = true;
+      wifi.powersave = false;
+    };
+
+    wireless = {
+      enable = false;
       networks = {
         eir34764285.psk = "BfBC3fe7CV";
         Gwayyy.psk = "0512Fionn";

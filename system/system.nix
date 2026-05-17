@@ -84,7 +84,6 @@
     extraGroups = [
       "libvirtd"
       "networkmanager"
-      "openrazer"
       "wheel"
     ];
     isNormalUser = true;
