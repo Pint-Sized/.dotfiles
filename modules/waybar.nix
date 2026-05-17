@@ -99,7 +99,7 @@ in
         "mpris" = {
           "format" = "{status_icon} {dynamic}";
           "interval" = 0.5;
-          "dynamic-len" = 50;
+          "dynamic-len" = 100;
           "status-icons" = {
             "playing" = "󰝚 ";
             "paused" = "󰝛 ";
@@ -110,7 +110,7 @@ in
             "artist"
           ];
           "dynamic-separator" = "  ";
-          "max-length" = 50;
+          "max-length" = 100;
           "on-click" = "playerctl play-pause";
           "on-scroll-up" = "playerctl previous";
           "on-scroll-down" = "playerctl next";
@@ -181,6 +181,7 @@ in
           "format-disconnected" = "";
           "tooltip-format-disconnected" = "Disconnected";
           "interval" = 2;
+          "on-click" = "";
         };
         "memory" = {
           "interval" = 3;
@@ -316,8 +317,6 @@ in
         #cpu,
         #custom-weather.main,
         #mpris,
-        #music,
-        #cava,
         #memory,
         #custom-gpu,
         #network,
@@ -400,10 +399,6 @@ in
           background: rgba(${colors.base00-rgb-r}, ${colors.base00-rgb-g}, ${colors.base00-rgb-b}, 0.9);
           color: #${colors.base05-hex};
           border-radius: 1rem;
-        }
-        #cava {
-          color: #${colors.base05-hex};
-          border-radius: 0px 1rem 1rem 0px;
         }
         #custom-day {
           font-family: "anurati";

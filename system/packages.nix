@@ -7,6 +7,7 @@
 {
   environment.systemPackages =
     (with pkgs; [
+      unixtools.net-tools
       appeditor
       black
       calligraphy
