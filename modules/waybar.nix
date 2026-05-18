@@ -99,7 +99,9 @@ in
         "mpris" = {
           "format" = "{status_icon} {dynamic}";
           "interval" = 0.5;
-          "dynamic-len" = 100;
+          "dynamic-len" = 50;
+          "title-len" = 30;
+          "artist-len" = 15;
           "status-icons" = {
             "playing" = "󰝚 ";
             "paused" = "󰝛 ";
@@ -110,7 +112,7 @@ in
             "artist"
           ];
           "dynamic-separator" = "  ";
-          "max-length" = 100;
+          "max-length" = 50;
           "on-click" = "playerctl play-pause";
           "on-scroll-up" = "playerctl previous";
           "on-scroll-down" = "playerctl next";
