@@ -7,9 +7,6 @@
 {
   environment.systemPackages =
     (with pkgs; [
-      zoom-us
-      vlc
-      unixtools.net-tools
       appeditor
       black
       calligraphy
@@ -46,6 +43,7 @@
       thunderbird
       tldr
       udisks
+      unixtools.net-tools
       unzip
       usbutils
       vencord
