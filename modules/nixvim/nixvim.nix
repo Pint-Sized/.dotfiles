@@ -3,7 +3,6 @@ let
   colors = config.lib.stylix.colors;
 in
 {
-  imports = [ ./extraFiles.nix ];
   programs.nixvim = {
     enable = true;
     globals.mapleader = " ";
