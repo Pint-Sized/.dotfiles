@@ -3,7 +3,7 @@ let
   colors = config.lib.stylix.colors;
 in
 {
-  imports = ./lualine.nix;
+  imports = [ ./lualine.nix ];
   programs.nixvim = {
     enable = true;
     extraPackages = with pkgs; [
@@ -126,8 +126,34 @@ in
       nvim-autopairs.enable = true;
       web-devicons.enable = true;
       gitsigns.enable = true;
-      lualine = {
+      lualine.enable = true;
+      noice.enable = true;
+      notify.enable = true;
+      indent-blankline = {
         enable = true;
+        settings = {
+          indent.char = "│";
+          scope = {
+            enabled = true;
+            show_start = false;
+            show_end = false;
+          };
+        };
+      };
+      colorizer = {
+        enable = true;
+        settings = {
+          filetypes = [ "*" ];
+          userDefaultOptions = {
+            names = false;
+            css = true;
+            RRGGBBAA = true;
+            AARRGGBB = true;
+            rgb_fn = true;
+            hsl_fn = true;
+            mode = "background";
+          };
+        };
       };
     };
     highlight = {

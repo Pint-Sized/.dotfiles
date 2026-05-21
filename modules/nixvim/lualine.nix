@@ -4,6 +4,10 @@ let
 in
 {
   programs.nixvim = {
+    opts = {
+      showtabline = 2;
+      laststatus = 0;
+    };
     plugins.lualine = {
       enable = true;
       settings = {
@@ -19,8 +23,6 @@ in
               "alpha"
             ];
           };
-
-          # THE FIX: Safely patch the base16 theme inline without double-calling setup()
           theme.__raw = ''
             (function()
               local theme = require('lualine.themes.base16')
@@ -30,11 +32,16 @@ in
             end)()
           '';
         };
-
-        # Change this to `tabline` if you actually wanted this at the top of the screen
         sections = {
+          lualine_a = [ "" ];
+          lualine_b = [ "" ];
+          lualine_c = [ "" ];
+          lualine_x = [ "" ];
+          lualine_y = [ "" ];
+          lualine_z = [ "" ];
+        };
+        tabline = {
           lualine_a = [
-            # Your left spacer hack
             {
               __unkeyed-1 = "filetype";
               icon_only = true;
@@ -49,7 +56,6 @@ in
                 right = "";
               };
             }
-            # Custom Mode text (1st letter only)
             {
               __unkeyed-1.__raw = ''
                 'mode',
@@ -58,7 +64,6 @@ in
               '';
             }
           ];
-
           lualine_b = [
             {
               __unkeyed-1.__raw = ''
@@ -78,9 +83,7 @@ in
               '';
             }
           ];
-
-          lualine_c = [ "" ]; # Keep middle completely empty for the transparent effect
-
+          lualine_c = [ "" ];
           lualine_x = [
             {
               __unkeyed-1 = "filetype";
@@ -92,13 +95,12 @@ in
                 bg = "#${colors.base0F-hex}";
               };
             }
-            # THE FIX: Custom function to actually display attached LSPs
             {
               __unkeyed-1.__raw = ''
                 function()
                   local msg = 'No Active Lsp'
                   local buf_ft = vim.api.nvim_buf_get_option(0, 'filetype')
-                  local clients = vim.lsp.get_active_clients()
+                  local clients = vim.lsp.get_clients({ bufnr = 0 })
                   if next(clients) == nil then return msg end
                   for _, client in ipairs(clients) do
                     local filetypes = client.config.filetypes
@@ -119,7 +121,6 @@ in
           ];
 
           lualine_y = [
-            # Your middle spacer hack
             {
               __unkeyed-1 = "filetype";
               icon_only = true;
@@ -135,7 +136,6 @@ in
               };
             }
           ];
-
           lualine_z = [
             {
               __unkeyed-1 = "progress";
@@ -153,7 +153,6 @@ in
               };
               padding = 1;
             }
-            # Your right spacer hack
             {
               __unkeyed-1 = "filetype";
               icon_only = true;
