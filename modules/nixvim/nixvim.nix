@@ -14,26 +14,59 @@ in
     ];
     globals.mapleader = " ";
     opts = {
+      termguicolors = true;
       number = true;
       relativenumber = true;
-      shiftwidth = 2;
+      cursorline = true;
+      wrap = false;
+      scrolloff = 8;
+      sidescrolloff = 8;
+
       tabstop = 2;
+      shiftwidth = 2;
+      softtabstop = 2;
       expandtab = true;
       smartindent = true;
-      clipboard = "unnamedplus";
-      termguicolors = true;
+      autoindent = true;
+      linebreak = true;
+      breakindent = true;
+
       ignorecase = true;
       smartcase = true;
-      updatetime = 250;
-      cursorline = true;
-      undofile = true;
+      hlsearch = true;
+      incsearch = true;
+
       signcolumn = "yes";
+      showmatch = true;
+      fillchars = {
+        eob = " ";
+      };
+
+      backup = false;
+      writebackup = false;
+      swapfile = false;
+      undofile = true;
+      updatetime = 250;
+      timeoutlen = 500;
+      ttimeoutlen = 50;
+      autoread = true;
+      autowrite = false;
+
+      hidden = true;
+      backspace = "indent,eol,start";
+      path = "**";
+      selection = "inclusive";
+      mouse = "a";
+      clipboard = "unnamedplus";
+      modifiable = true;
+
+      foldmethod = "expr";
+      foldexpr = "v:lua.vim.treesitter.foldexpr()";
+      foldlevel = 99;
+
       splitbelow = true;
       splitright = true;
       splitkeep = "screen";
-      linebreak = true;
-      breakindent = true;
-      scrolloff = 8;
     };
     plugins = {
       treesitter = {
@@ -76,14 +109,17 @@ in
           };
         };
       };
+      luasnip.enable = true;
       cmp = {
         enable = true;
         settings = {
           autoEnableSources = true;
+          snippet.expand = "luasnip";
           sources = [
             { name = "nvim_lsp"; }
             { name = "path"; }
             { name = "buffer"; }
+            { name = "luasnip"; }
           ];
           mapping = {
             "<CR>" = "cmp.mapping.confirm({ select = true })";
