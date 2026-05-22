@@ -53,7 +53,7 @@
         username = "fionnbennett";
         name = "Fionn Bennett";
         email = "fionnbennett06@gmail.com";
-        theme = "tokyo-night-moon";
+        theme = "uwunicorn";
         fontPkg = "nerd-fonts.caskaydia-cove";
         fontSerif = "CaskaydiaCove NF";
         fontMono = "CaskaydiaCove NF";
