@@ -99,19 +99,6 @@ in
           lua_ls.enable = true;
           marksman.enable = true;
         };
-        keymaps = {
-          diagnostic = {
-            "[d" = "goto_prev";
-            "]d" = "goto_next";
-          };
-          lspBuf = {
-            "gd" = "definition";
-            "gD" = "references";
-            "K" = "hover";
-            "<leader>rn" = "rename";
-            "<leader>ca" = "code_action";
-          };
-        };
       };
       luasnip.enable = true;
       cmp = {
@@ -195,8 +182,84 @@ in
           };
         };
       };
+      lspkind.enable = true;
+      illuminate = {
+        enable = true;
+        settings = {
+          delay = 200;
+          large_file_cutoff = 2000;
+          providers = [
+            "lsp"
+            "treesitter"
+            "regex"
+          ];
+        };
+      };
+      lspsaga = {
+        enable = true;
+        settings = {
+          ui = {
+            border = "solid";
+            codeAction = "💡";
+          };
+          symbolInWinbar.enable = false;
+          lightbulb.enable = false;
+          rename = {
+            autoSave = true;
+            keys = {
+              quit = "<C-c>";
+              exec = "<CR>";
+            };
+          };
+        };
+      };
+      modicator = {
+        enable = true;
+        settings.show_warnings = false;
+      };
     };
     highlight = {
+      NormalMode = {
+        fg = "#${colors.base0D}";
+        bold = true;
+      };
+      InsertMode = {
+        fg = "#${colors.base0B}";
+        bold = true;
+      };
+      VisualMode = {
+        fg = "#${colors.base0E}";
+        bold = true;
+      };
+      CommandMode = {
+        fg = "#${colors.base09}";
+        bold = true;
+      };
+      ReplaceMode = {
+        fg = "#${colors.base08}";
+        bold = true;
+      };
+      SelectMode = {
+        fg = "#${colors.base0E}";
+        bold = true;
+      };
+      TerminalMode = {
+        fg = "#${colors.base09}";
+        bold = true;
+      };
+      TerminalNormalMode = {
+        fg = "#${colors.base0D}";
+        bold = true;
+      };
+      IlluminatedWordText = {
+        bg = "#${colors.base02}";
+      };
+      IlluminatedWordRead = {
+        bg = "#${colors.base02}";
+      };
+      IlluminatedWordWrite = {
+        bg = "#${colors.base02}";
+      };
       "@property" = {
         fg = "#${colors.base0D}";
       };
@@ -235,5 +298,79 @@ in
         fg = "#${colors.base08}";
       };
     };
+    keymaps = [
+      {
+        mode = "n";
+        key = "K";
+        action = "<cmd>Lspsaga hover_doc<CR>";
+        options = {
+          desc = "Hover Documentation";
+          silent = true;
+        };
+      }
+      {
+        mode = "n";
+        key = "gd";
+        action = "<cmd>Lspsaga goto_definition<CR>";
+        options = {
+          desc = "Goto Definition";
+          silent = true;
+        };
+      }
+      {
+        mode = "n";
+        key = "gh";
+        action = "<cmd>Lspsaga finder<CR>";
+        options = {
+          desc = "LSP Finder (References & Implementation)";
+          silent = true;
+        };
+      }
+      {
+        mode = "n";
+        key = "<leader>ca";
+        action = "<cmd>Lspsaga code_action<CR>";
+        options = {
+          desc = "Code Action";
+          silent = true;
+        };
+      }
+      {
+        mode = "n";
+        key = "<leader>rn";
+        action = "<cmd>Lspsaga rename<CR>";
+        options = {
+          desc = "Rename Variable";
+          silent = true;
+        };
+      }
+      {
+        mode = "n";
+        key = "<leader>e";
+        action = "<cmd>Lspsaga show_line_diagnostics<CR>";
+        options = {
+          desc = "Show Line Diagnostics";
+          silent = true;
+        };
+      }
+      {
+        mode = "n";
+        key = "[d";
+        action = "<cmd>Lspsaga diagnostic_jump_prev<CR>";
+        options = {
+          desc = "Previous Diagnostic";
+          silent = true;
+        };
+      }
+      {
+        mode = "n";
+        key = "]d";
+        action = "<cmd>Lspsaga diagnostic_jump_next<CR>";
+        options = {
+          desc = "Next Diagnostic";
+          silent = true;
+        };
+      }
+    ];
   };
 }

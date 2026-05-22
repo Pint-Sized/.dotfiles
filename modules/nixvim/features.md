@@ -1,7 +1,4 @@
-illuminate
 neotree
-lspsaga
-modicator
 markdown-preview
 render-markdown
 bullets
