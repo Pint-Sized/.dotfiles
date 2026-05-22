@@ -21,6 +21,10 @@ in
       wrap = false;
       scrolloff = 8;
       sidescrolloff = 8;
+      cmdheight = 0;
+      laststatus = 0;
+      showmode = false;
+      ruler = false;
 
       tabstop = 2;
       shiftwidth = 2;
