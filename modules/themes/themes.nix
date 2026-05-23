@@ -37,7 +37,7 @@ in
       };
     };
   };
-  home.file.".colours.txt".text = with config.lib.stylix.colors; ''
+  home.file.".colours.txt".text = ''
     base00  ->  #${colors.base00-hex}  ->   rgb(${colors.base00-rgb-r}, ${colors.base00-rgb-g}, ${colors.base00-rgb-b})
     base01  ->  #${colors.base01-hex}  ->   rgb(${colors.base01-rgb-r}, ${colors.base01-rgb-g}, ${colors.base01-rgb-b})
     base02  ->  #${colors.base02-hex}  ->   rgb(${colors.base02-rgb-r}, ${colors.base02-rgb-g}, ${colors.base02-rgb-b})

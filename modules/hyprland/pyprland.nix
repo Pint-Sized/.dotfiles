@@ -1,7 +1,7 @@
 {
   home.file = {
-    ".config/pypr/config.toml" = {
-      text = ''
+    ".config/pypr/config.toml".text = # toml
+      ''
         [pyprland]
         plugins = [ "scratchpads" ]
 
@@ -48,6 +48,5 @@
         size = "90% 90%"
         lazy = true
       '';
-    };
   };
 }

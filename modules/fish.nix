@@ -41,28 +41,30 @@
       frl = "sudo clear; cat ~/.local/splashes/fullRebuild; nix flake update --flake ~/.dotfiles; sudo nixos-rebuild switch --flake ~/.dotfiles/#laptop; home-manager switch --flake ~/.dotfiles/#fionnbennett-laptop"; # ~/.dotfiles/scripts/zen-browser-themer";
       y = {
         description = "Yazi changes directory on exit";
-        body = ''
-          set tmp (mktemp -t "yazi-cwd.XXXXXX")
-          yazi $argv --cwd-file="$tmp"
-          if set cwd (command cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
-            builtin cd -- "$cwd"
-          end
-          rm -f -- "$tmp"
-        '';
+        body = # fish
+          ''
+            set tmp (mktemp -t "yazi-cwd.XXXXXX")
+            yazi $argv --cwd-file="$tmp"
+            if set cwd (command cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
+              builtin cd -- "$cwd"
+            end
+            rm -f -- "$tmp"
+          '';
       };
       mkdir = {
         description = "changes to newly created directory";
-        body = ''
-          command mkdir $argv
-            if test $status = 0
-              switch $argv[(count $argv)]
-                case '-*'
-                case '*'
-                  cd $argv[(count $argv)]
-                  return
+        body = # fish
+          ''
+            command mkdir $argv
+              if test $status = 0
+                switch $argv[(count $argv)]
+                  case '-*'
+                  case '*'
+                    cd $argv[(count $argv)]
+                    return
+                end
               end
-            end
-        '';
+          '';
       };
       gc = "git add *; git commit -m $argv; git push github main";
       nix-template = "nix flake init -t github:nix-community/templates#$argv";

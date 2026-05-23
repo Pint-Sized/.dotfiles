@@ -5,3 +5,6 @@
 - [ ] change cava
 - [ ] change waybar
 - [ ] create widgets
+- [ ] stylix: set emoji font pack
+- [ ] setup fonts properly
+- [ ] check gtk extra css

@@ -1,4 +1,5 @@
 smooth scrolling
+set keybindings
 add folding
 add ssh support
 add tab support
