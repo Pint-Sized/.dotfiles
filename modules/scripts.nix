@@ -39,6 +39,8 @@
         swaync
         pkill cava
         foot cava
+        pkill .swayosd-server
+        swayosd-server
       '';
     };
   };

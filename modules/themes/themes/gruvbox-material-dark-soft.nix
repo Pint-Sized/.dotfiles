@@ -16,7 +16,5 @@
         echo "Gruvbox-Material-Dark"
       '';
     };
-    ".config/waybar/fonts.css" = {
-    };
   };
 }
