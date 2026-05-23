@@ -24,12 +24,14 @@ in
         fullscreen_opacity = 1;
         blur = {
           enabled = true;
-          size = 0;
+          size = 6;
           passes = 2;
           noise = 0;
           new_optimizations = false;
-          brightness = 1.5;
-          contrast = 1.5;
+          #brightness = 1.5;
+          brightness = 1;
+          #contrast = 1.5;
+          contrast = 1;
           xray = false;
         };
       };

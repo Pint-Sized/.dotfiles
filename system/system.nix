@@ -54,6 +54,11 @@
       pkgs.corefonts
       pkgs.nerd-fonts._0xproto
       pkgs.nerd-fonts.caskaydia-cove
+      pkgs.nerd-fonts.victor-mono
+      pkgs.nerd-fonts.geist-mono
+      pkgs.nerd-fonts.lilex
+      pkgs.nerd-fonts.commit-mono
+      pkgs.maple-mono.NF
       pkgs.nerd-fonts.symbols-only
       pkgs.vista-fonts
     ];

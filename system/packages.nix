@@ -7,6 +7,7 @@
 {
   environment.systemPackages =
     (with pkgs; [
+      neovide
       appeditor
       black
       calligraphy

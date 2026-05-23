@@ -1,6 +1,11 @@
 { pkgs, ... }:
 {
   home.file = {
+    ".local/share/fonts/anakron".source = pkgs.fetchzip {
+      url = "https://github.com/molarmanful/ANAKRON/releases/download/v0.0.1/anakron-release_v0.0.1.zip";
+      sha256 = "sha256-6sZ0c4G48RXOM1RQnJg8Dq7hFRSG5tYmf9Ml4ChRTf8=";
+      stripRoot = true;
+    };
     ".local/share/fonts/anurati".source = pkgs.fetchzip {
       url = "https://font.download/dl/font/anurati.zip";
       sha256 = "sha256-dmZpAWkryDUYA7YBc2D/T8s2KQVnEgJbtGHJr6arDj4=";

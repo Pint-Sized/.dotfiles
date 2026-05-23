@@ -54,9 +54,10 @@
         name = "Fionn Bennett";
         email = "fionnbennett06@gmail.com";
         theme = "uwunicorn";
-        fontPkg = "nerd-fonts.caskaydia-cove";
-        fontSerif = "CaskaydiaCove NF";
-        fontMono = "CaskaydiaCove NF";
+        fontPkg = "nerd-fonts.victor-mono";
+        fontSerif = "Lilex Nerd Font";
+        fontMono = "Lilex Nerd Font";
+        fontItalic = "Lilex Nerd Font";
         cursorPkg = "pkgs.bibata-cursors";
         cursorName = "Bibata-Modern-Classic";
       };

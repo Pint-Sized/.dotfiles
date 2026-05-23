@@ -16,7 +16,7 @@ in
         add_borders = 1;
         "col.border_1" =
           "rgba(${colors.base00-rgb-r}, ${colors.base00-rgb-g}, ${colors.base00-rgb-b}, 0.8)";
-        border_size_1 = 10;
+        border_size_1 = 6;
         natural_rounding = "on";
       };
       dynamic-cursors = {
