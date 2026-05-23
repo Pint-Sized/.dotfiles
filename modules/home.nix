@@ -24,6 +24,7 @@
     ./spicetify.nix
     ./splashes.nix
     ./swaync.nix
+    ./swayosd.nix
     ./themes/themes.nix
     ./ulauncher.nix
     ./vesktop.nix

@@ -1,6 +1,6 @@
 - [ ] finish nvim config
 - [ ] change window border colours
-- [ ] fix swaync transparency
+- [x] fix swaync transparency
 - [ ] fix swayosd
 - [ ] change cava
 - [ ] change waybar
