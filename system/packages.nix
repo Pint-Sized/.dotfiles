@@ -7,7 +7,6 @@
 {
   environment.systemPackages =
     (with pkgs; [
-      neovide
       appeditor
       black
       calligraphy
@@ -22,7 +21,6 @@
       hunspellDicts.en_GB-ise
       jq
       kdePackages.ark
-      kdePackages.dolphin
       kitty
       libreoffice-qt6-fresh
       lm_sensors

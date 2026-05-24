@@ -9,3 +9,4 @@
 - [ ] setup fonts properly
 - [ ] check gtk extra css
 - [ ] change gaps
+- [x] kitty fixed cursor trail

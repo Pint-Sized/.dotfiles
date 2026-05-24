@@ -271,7 +271,7 @@ in
     style = # css
       ''
         * {
-            font-family: "${userSettings.fontMono}";
+            font-family: "${userSettings.fontPropo}";
             font-size: 13px;
             min-height: 0;
             padding: 0;

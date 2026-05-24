@@ -56,7 +56,8 @@
         theme = "gruvbox-material-dark-soft";
         fontPkg = "nerd-fonts.victor-mono";
         fontSerif = "VictorMono NF";
-        fontMono = "VictorMono NF";
+        fontMono = "VictorMono NFM";
+        fontPropo = "VictorMono NFP";
         fontItalic = "VictorMono NF";
         cursorPkg = "pkgs.bibata-cursors";
         cursorName = "Bibata-Modern-Classic";
@@ -135,8 +136,8 @@
         ];
       };
       homeConfigurations = {
-        fionnbennett-desktop = mkHome ./modules/hyprland/variables-desktop.nix;
-        fionnbennett-laptop = mkHome ./modules/hyprland/variables-laptop.nix;
+        fionnbennett-desktop = mkHome ./modules/hypr/variables-desktop.nix;
+        fionnbennett-laptop = mkHome ./modules/hypr/variables-laptop.nix;
       };
     };
 }
