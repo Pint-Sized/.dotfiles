@@ -8,3 +8,4 @@
 - [ ] stylix: set emoji font pack
 - [ ] setup fonts properly
 - [ ] check gtk extra css
+- [ ] change gaps
