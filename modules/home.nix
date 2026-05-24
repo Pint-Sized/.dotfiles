@@ -13,7 +13,7 @@
     ./fzf.nix
     ./git.nix
     ./gtk.nix
-    ./hyprland/hyprland.nix
+    ./hypr/hyprland.nix
     ./imv.nix
     ./kitty.nix
     ./mpv.nix
