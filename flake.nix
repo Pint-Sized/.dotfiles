@@ -55,9 +55,9 @@
         email = "fionnbennett06@gmail.com";
         theme = "gruvbox-material-dark-soft";
         fontPkg = "nerd-fonts.victor-mono";
-        fontSerif = "Lilex Nerd Font";
-        fontMono = "Lilex Nerd Font";
-        fontItalic = "Lilex Nerd Font";
+        fontSerif = "VictorMono NF SemiBold";
+        fontMono = "VictorMono NF SemiBold";
+        fontItalic = "VictorMono NF SemiBold";
         cursorPkg = "pkgs.bibata-cursors";
         cursorName = "Bibata-Modern-Classic";
       };
