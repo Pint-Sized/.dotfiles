@@ -460,11 +460,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1779717889,
-        "narHash": "sha256-YOI/ejur5NlF6Z6kj8Fv5j6KtECcvaM0gcpZ/npojRE=",
+        "lastModified": 1779718663,
+        "narHash": "sha256-8IqYpjnwfrsaXAQSaujPYl5UkxDKoEjcThQiB9DN0U4=",
         "owner": "the-pint-sized-powerhouse",
         "repo": "NUR",
-        "rev": "bf32531e3da1cef4f99980287cc4e034639af5fc",
+        "rev": "7ec47a75487f62a60cfb43152528ae5fc290849d",
         "type": "github"
       },
       "original": {
