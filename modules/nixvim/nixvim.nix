@@ -94,13 +94,30 @@ in
       splitright = true;
       splitkeep = "screen";
     };
-
     plugins = {
       treesitter = {
         enable = true;
-        settings.highlight.enable = true;
+        settings = {
+          highlight.enable = true;
+          ident.enable = true;
+          incremental_selection = {
+            enable = true;
+            keymaps = {
+              init_selection = "<C-space>";
+              node_incremental = "<C-space>";
+              node_decremental = "<bs>";
+              scope_incremental = false;
+            };
+          };
+        };
       };
-
+      treesitter-context = {
+        enable = false;
+        settings = {
+          max_lines = 3;
+          multiline_threshold = 1;
+        };
+      };
       lsp = {
         enable = true;
         servers = {
@@ -175,6 +192,7 @@ in
         settings = {
           picker.enabled = true;
           explorer.enabled = true;
+          bigfile.enabled = true;
         };
       };
 

@@ -59,6 +59,7 @@
       nerd-fonts.lilex
       nerd-fonts.commit-mono
       nerd-fonts.fantasque-sans-mono
+      nerd-fonts.recursive-mono
       maple-mono.NF
       nerd-fonts.symbols-only
       vista-fonts

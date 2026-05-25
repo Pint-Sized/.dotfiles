@@ -54,11 +54,10 @@
         name = "Fionn Bennett";
         email = "fionnbennett06@gmail.com";
         theme = "gruvbox-material-dark-soft";
-        fontPkg = "nerd-fonts.victor-mono";
-        fontSerif = "VictorMono NF";
-        fontMono = "VictorMono NFM";
-        fontPropo = "VictorMono NFP";
-        fontItalic = "VictorMono NF";
+        fontSerif = "RecMonoCasual Nerd Font";
+        fontMono = "RecMonoCasual Nerd Font Mono";
+        fontPropo = "RecMonoCasual Nerd Font Propo";
+        fontItalic = "RecMonoCasual Nerd Font";
         cursorPkg = "pkgs.bibata-cursors";
         cursorName = "Bibata-Modern-Classic";
       };
