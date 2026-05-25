@@ -2,11 +2,12 @@
 {
   home.packages =
     (with pkgs; [
+      swww
+      mpvpaper
       ulauncher
       kdePackages.qt6ct
       libsForQt5.qt5ct
       swayosd
-      swww
       waypaper
       wdisplays
       hyprshot
