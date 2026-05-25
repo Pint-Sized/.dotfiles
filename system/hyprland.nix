@@ -6,11 +6,9 @@
   };
 
   services = {
-    displayManager.gdm = {
-      enable = true;
-      wayland = true;
-    };
-
+    #displayManager.gdm = {
+    #enable = true;
+    #wayland = true;
     xserver = {
       enable = true;
       excludePackages = [

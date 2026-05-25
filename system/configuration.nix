@@ -8,6 +8,8 @@
     ./system.nix
     ./themes.nix
     ./virtualisation.nix
+
+    ./ssdm.nix
   ];
   system.stateVersion = "23.05";
 }

@@ -1,6 +1,8 @@
 {
   pkgs,
   pkgs-unstable,
+  inputs,
+  systemSettings,
   userSettings,
   ...
 }:
@@ -68,7 +70,6 @@
       psutil
       python-lsp-server
     ]);
-
   programs = {
     fish.enable = true;
     gamemode.enable = true;
@@ -92,7 +93,6 @@
     nix-index-database.comma.enable = true;
     steam.enable = true;
   };
-
   services.flatpak.packages = [
     "com.stremio.Stremio"
     "com.usebottles.bottles"
