@@ -9,8 +9,6 @@
     ./system.nix
     ./themes.nix
     ./virtualisation.nix
-
-    ./grub.nix
   ];
   system.stateVersion = "23.05";
 }
