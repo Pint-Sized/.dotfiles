@@ -13,7 +13,7 @@
     ".config/fastfetch/theme" = {
       executable = true;
       text = ''
-        echo "Gruvbox-Material-Dark"
+        echo "Gruvbox Mat. Dark"
       '';
     };
   };

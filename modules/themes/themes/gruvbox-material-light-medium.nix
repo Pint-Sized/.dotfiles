@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   stylix = {
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-light-hard.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-light-medium.yaml";
     targets.cava.rainbow.enable = true;
   };
   programs = {
@@ -13,7 +13,7 @@
     ".config/fastfetch/theme" = {
       executable = true;
       text = ''
-        echo "Gruvbox Material Light Soft"
+        echo "Gruvbox Mat. Light"
       '';
     };
   };

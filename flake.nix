@@ -60,7 +60,7 @@
         username = "fionnbennett";
         name = "Fionn Bennett";
         email = "fionnbennett06@gmail.com";
-        theme = "gruvbox-dark-medium";
+        theme = "gruvbox-material-light-medium";
         fontSerif = "RecMonoCasual Nerd Font";
         fontMono = "RecMonoCasual Nerd Font Mono";
         fontPropo = "RecMonoCasual Nerd Font Propo";
