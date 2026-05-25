@@ -104,8 +104,8 @@ in
           background-image: image(url("icons/sleep-hover.png"));
         }
       '';
-    xdg.configFile."wlogout/icons".source = "${
-      inputs.nur.packages.${pkgs.system}.wlogout-icons
-    }/share/wlogout/icons";
   };
+  xdg.configFile."wlogout/icons".source = "${
+    inputs.nur.packages.${pkgs.system}.wlogout-icons
+  }/share/wlogout/icons";
 }
