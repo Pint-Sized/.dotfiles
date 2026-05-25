@@ -12,13 +12,10 @@
   };
   environment.systemPackages = [
     inputs.nur.packages.${pkgs.stdenv.hostPlatform.system}.sddm-theme
-    pkgs.kdePackages.qt5compat
-    pkgs.kdePackages.qtdeclarative
-    pkgs.kdePackages.qtmultimedia
-    pkgs.kdePackages.qtsvg
     pkgs.quickshell
-
-    # If your theme uses video backgrounds, add GStreamer here too!
+    pkgs.qt6.qtdeclarative
+    pkgs.qt6.qt5compat
+    pkgs.qt6.qtmultimedia
     pkgs.gst_all_1.gst-plugins-base
     pkgs.gst_all_1.gst-plugins-good
     pkgs.gst_all_1.gst-plugins-bad
