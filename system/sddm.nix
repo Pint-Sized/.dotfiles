@@ -21,5 +21,7 @@
     pkgs.gst_all_1.gst-plugins-bad
     pkgs.gst_all_1.gst-plugins-ugly
   ];
-  system.activationScripts.clearSddmCache = "rm-rf /var/lib/sddm/.cache ";
+  system.activationScripts.clearSddmCache = ''
+    rm -rf /var/lib/sddm/.cache 
+  '';
 }

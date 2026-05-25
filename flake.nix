@@ -40,6 +40,9 @@
       url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    grub2-themes = {
+      url = "github:vinceliuice/grub2-themes";
+    };
   };
   outputs =
     inputs@{
