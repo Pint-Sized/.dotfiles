@@ -4,6 +4,7 @@ add folding
 add ssh support
 add tab support
 customise which-key
+fix indent highlight flickering
 
 convert over to snacks.nvim:
 

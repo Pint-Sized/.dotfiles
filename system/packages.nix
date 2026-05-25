@@ -21,12 +21,14 @@
       gparted
       hunspell
       hunspellDicts.en_GB-ise
+      imv
       jq
       kdePackages.ark
       kitty
       libreoffice-qt6-fresh
       lm_sensors
       mediainfo
+      mpv
       nautilus
       neovim
       nix-du
@@ -42,6 +44,7 @@
       quickgui
       ripgrep
       thunderbird
+      timg
       tldr
       udisks
       unixtools.net-tools

@@ -1,7 +1,8 @@
-- [ ] finish nvim config
-- [ ] change window border colours
+- [x] kitty fixed cursor trail
 - [x] fix swaync transparency
 - [x] fix swayosd
+- [ ] finish nvim config
+- [ ] change window border colours
 - [ ] change cava
 - [ ] change waybar
 - [ ] create widgets
@@ -9,4 +10,4 @@
 - [ ] setup fonts properly
 - [ ] check gtk extra css
 - [ ] change gaps
-- [x] kitty fixed cursor trail
+- [ ] Hyprcursor
