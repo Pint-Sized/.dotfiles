@@ -11,3 +11,4 @@
 - [ ] check gtk extra css
 - [ ] change gaps
 - [ ] Hyprcursor
+- [ ] fix cava

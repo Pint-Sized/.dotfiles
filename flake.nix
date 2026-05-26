@@ -6,11 +6,8 @@
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     nur = {
       url = "github:the-pint-sized-powerhouse/NUR";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
-    #nur = {
-    #url = "github:nix-community/NUR";
-    #inputs.nixpkgs.follows = "nixpkgs";
-    #};
     home-manager = {
       url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -60,7 +57,7 @@
         username = "fionnbennett";
         name = "Fionn Bennett";
         email = "fionnbennett06@gmail.com";
-        theme = "gruvbox-material-light-soft";
+        theme = "gruvbox-material-dark-soft";
         fontSerif = "RecMonoCasual Nerd Font";
         fontMono = "RecMonoCasual Nerd Font Mono";
         fontPropo = "RecMonoCasual Nerd Font Propo";

@@ -9,6 +9,7 @@
 {
   environment.systemPackages =
     (with pkgs; [
+      hyprshade
       appeditor
       black
       calligraphy
