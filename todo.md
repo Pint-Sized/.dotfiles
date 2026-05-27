@@ -12,3 +12,4 @@
 - [ ] change gaps
 - [ ] Hyprcursor
 - [ ] fix cava
+- [ ] nix store optimise
