@@ -13,3 +13,4 @@
 - [ ] Hyprcursor
 - [ ] fix cava
 - [ ] nix store optimise
+- [ ] fix yazi
