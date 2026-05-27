@@ -1,4 +1,7 @@
 { config, ... }:
+let
+  colors = config.lib.stylix.colors;
+in
 {
   home.file.".config/AdwSteamGtk/custom.css".text = # css
     ''
