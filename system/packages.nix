@@ -1,14 +1,13 @@
 {
   pkgs,
   pkgs-unstable,
-  inputs,
-  systemSettings,
   userSettings,
   ...
 }:
 {
   environment.systemPackages =
     (with pkgs; [
+      adwsteamgtk
       loupe
       hyprshade
       appeditor

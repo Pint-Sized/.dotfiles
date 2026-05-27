@@ -1,6 +1,7 @@
 { userSettings, ... }:
 {
   imports = [
+    ./adwsteamgtk.nix
     ./bat.nix
     ./btop.nix
     ./cava.nix

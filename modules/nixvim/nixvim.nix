@@ -200,7 +200,7 @@ in
       web-devicons.enable = true;
       gitsigns.enable = true;
       noice.enable = true;
-      notify.enable = true;
+      #notify.enable = true;
 
       indent-blankline = {
         enable = true;
