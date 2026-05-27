@@ -8,9 +8,6 @@
         sensitivity = 40;
         hide_on_silence = true;
       };
-      output = {
-        method = "sdl";
-      };
     };
   };
 }

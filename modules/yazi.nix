@@ -14,24 +14,24 @@
       show_symlink = true
 
       [preview]
-      wrap = "yes"
+      wrap = "no"
       image_filter = "catmull-rom"
       image_quality = 90
 
-      [opener]
-      play = [
-      	{ run = 'mpv "$@"', orphan = true, block = true, for = "unix" },
-      ]
-      edit = [
-      	{ run = '$EDITOR "$@"', block = true, for = "unix" },
-      ]
-      open = [
-        { run = 'xdg-open "$@" &', orphan = true, desc = "Open" },
-      ]
+      #[opener]
+      #play = [
+      	#{ run = 'mpv "$@"', orphan = true, block = true, for = "unix" },
+      #]
+      #edit = [
+      	#{ run = '$EDITOR "$@"', block = true, for = "unix" },
+      #]
+      #open = [
+        #{ run = 'xdg-open "$@" &', orphan = true, desc = "Open" },
+      #]
 
-      [plugin]
-      prepend_previewers = [
-        { mime = "audio/*",   run = "exifaudio"}
-      ]
+      #[plugin]
+      #prepend_previewers = [
+        #{ mime = "audio/*",   run = "exifaudio"}
+      #]
     '';
 }

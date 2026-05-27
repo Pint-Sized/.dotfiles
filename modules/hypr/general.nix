@@ -24,8 +24,8 @@ in
         fullscreen_opacity = 1;
         blur = {
           enabled = true;
-          size = 6;
-          passes = 2;
+          size = 4;
+          passes = 3;
           noise = 0;
           new_optimizations = false;
           #brightness = 1.5;
