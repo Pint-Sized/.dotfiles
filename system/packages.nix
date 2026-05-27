@@ -62,7 +62,6 @@
       zip
     ])
     ++ (with pkgs-unstable; [
-      discord
       hyprpolkitagent
       lua
       nchat
