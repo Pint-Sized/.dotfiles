@@ -6,5 +6,6 @@
       package = pkgs.openrgb-with-all-plugins;
     };
     xserver.videoDrivers = [ "nvidia" ];
+    blueman.enable = true;
   };
 }
