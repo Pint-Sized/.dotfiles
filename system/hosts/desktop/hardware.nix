@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 {
   hardware = {
     nvidia = {
@@ -11,5 +11,13 @@
       enable = true;
       powerOnBoot = true;
     };
+    enableRedistributableFirmware = true;
+    firmware = with pkgs; [
+      linux-firmware
+    ];
   };
+  boot.kernelModules = [
+    "btusb"
+    "btmk"
+  ];
 }
