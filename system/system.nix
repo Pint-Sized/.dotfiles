@@ -20,7 +20,7 @@
         useOSProber = true;
       };
       systemd-boot.enable = false;
-      timeout = 3;
+      timeout = 10;
     };
     plymouth.enable = true;
   };
