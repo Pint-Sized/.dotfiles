@@ -2,9 +2,13 @@
   pkgs,
   systemSettings,
   userSettings,
+  config,
   ...
 }:
 {
+  boot.blacklistedKernelModules = [ "r8169" ];
+  boot.extraModulePackages = [ config.boot.kernelPackages.r8125 ];
+  boot.kernelModules = [ "r8125" ];
   boot = {
     kernelPackages = pkgs.linuxPackages_latest;
     loader = {
