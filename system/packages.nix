@@ -7,7 +7,7 @@
 {
   environment.systemPackages =
     (with pkgs; [
-      stremio
+      losange
       usbview
       adwsteamgtk
       loupe
