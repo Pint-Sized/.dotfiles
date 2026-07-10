@@ -7,6 +7,7 @@
 {
   environment.systemPackages =
     (with pkgs; [
+      stremio
       usbview
       adwsteamgtk
       loupe
@@ -98,7 +99,6 @@
     steam.enable = true;
   };
   services.flatpak.packages = [
-    "com.stremio.Stremio"
     "com.usebottles.bottles"
     "io.github.giantpinkrobots.flatsweep"
     "it.mijorus.whisper"
