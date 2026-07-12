@@ -16,7 +16,7 @@
       pyprland
     ])
     ++ (with pkgs.hyprlandPlugins; [
-      hyprwinwrap
+      #hyprwinwrap
       hyprfocus
       hypr-dynamic-cursors
       borders-plus-plus
