@@ -5,7 +5,7 @@ in
 {
   wayland.windowManager.hyprland = {
     plugins = [
-      pkgs.hyprlandPlugins.hyprwinwrap
+      #pkgs.hyprlandPlugins.hyprwinwrap
       pkgs.hyprlandPlugins.hyprfocus
       pkgs.hyprlandPlugins.hypr-dynamic-cursors
       pkgs.hyprlandPlugins.borders-plus-plus
@@ -29,7 +29,7 @@ in
           function = "negative_quadratic";
         };
       };
-      hyprwinwrap.class = "foot";
+      #hyprwinwrap.class = "foot";
     };
   };
 }

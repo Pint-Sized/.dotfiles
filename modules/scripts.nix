@@ -40,8 +40,8 @@
           pkill .swaync-client-
           pkill .swaync-wrapped
           swaync
-          pkill cava
-          foot cava
+          #pkill cava
+          #foot cava
           pkill .swayosd-server
           swayosd-server --style ~/.config/swayosd/style.css
         '';
