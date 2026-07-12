@@ -50,7 +50,7 @@ in
         ];
       };
       dwindle = {
-        pseudotile = true;
+        #pseudotile = true;
         preserve_split = true;
         force_split = 2;
         smart_resizing = false;
@@ -64,7 +64,6 @@ in
         animate_manual_resizes = true;
         close_special_on_empty = true;
         middle_click_paste = false;
-        vfr = true;
       };
       monitor = [
         "DP-2, 1920x1080@240, 0x0, 1"
