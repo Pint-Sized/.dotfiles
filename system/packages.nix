@@ -7,6 +7,7 @@
 {
   environment.systemPackages =
     (with pkgs; [
+      home-manager
       losange
       usbview
       adwsteamgtk
@@ -76,6 +77,7 @@
       python-lsp-server
     ]);
   programs = {
+    git.enable = true;
     fish.enable = true;
     gamemode.enable = true;
     gamescope = {
