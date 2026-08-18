@@ -7,8 +7,9 @@
 {
   environment.systemPackages =
     (with pkgs; [
+      steamtinkerlaunch
+      pince
       home-manager
-      losange
       usbview
       adwsteamgtk
       loupe
@@ -105,5 +106,6 @@
     "io.github.giantpinkrobots.flatsweep"
     "it.mijorus.whisper"
     "org.prismlauncher.PrismLauncher"
+    "com.stremio.Stremio"
   ];
 }
