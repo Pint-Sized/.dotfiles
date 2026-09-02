@@ -10,7 +10,7 @@
   boot.extraModulePackages = [ config.boot.kernelPackages.r8125 ];
   boot.kernelModules = [ "r8125" ];
   boot = {
-    kernelPackages = pkgs.linuxPackages_latest;
+    kernelPackages = pkgs.linuxPackages;
     loader = {
       efi = {
         canTouchEfiVariables = true;

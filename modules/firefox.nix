@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 {
   home.packages = with pkgs; [ firefoxpwa ];
 
@@ -10,6 +10,7 @@
 
   programs.firefox = {
     enable = true;
+    configPath = "${config.xdg.configHome}/mozilla/firefox";
     profiles."8b2kzims.default" = {
       settings = {
         "browser.startup.homepage" = "http://127.0.0.1:8080";

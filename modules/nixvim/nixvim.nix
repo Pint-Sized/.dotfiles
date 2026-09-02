@@ -6,7 +6,7 @@ in
   programs.nixvim = {
     enable = true;
     extraPackages = with pkgs; [
-      nixfmt-rfc-style
+      nixfmt
       black
       stylua
       prettierd
@@ -253,7 +253,7 @@ in
             codeAction = "💡";
           };
           symbol_in_winbar = {
-            enable = false;
+            enable = true;
           };
           lightbulb = {
             enable = false;

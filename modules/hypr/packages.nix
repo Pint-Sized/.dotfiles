@@ -2,7 +2,7 @@
 {
   home.packages =
     (with pkgs; [
-      swww
+      awww
       mpvpaper
       ulauncher
       kdePackages.qt6ct

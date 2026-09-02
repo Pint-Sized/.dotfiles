@@ -2,6 +2,7 @@
   programs.yazi = {
     enable = true;
     enableFishIntegration = true;
+    shellWrapperName = "y";
   };
   xdg.configFile."yazi/yazi.toml".text = # toml
     ''
