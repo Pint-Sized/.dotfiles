@@ -1,5 +1,6 @@
 { pkgs, ... }:
 {
+  fonts.fontconfig.enable = true;
   home.file = {
     ".local/share/fonts/anakron".source = pkgs.fetchzip {
       url = "https://github.com/molarmanful/ANAKRON/releases/download/v0.0.1/anakron-release_v0.0.1.zip";
