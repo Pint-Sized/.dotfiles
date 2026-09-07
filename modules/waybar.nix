@@ -270,7 +270,7 @@
       with config.lib.stylix.colors; # css
       ''
         * {
-            font-family: "${userSettings.fontMono}";
+            font-family: "${userSettings.fontSerif}";
             font-size: 13px;
             min-height: 0;
             padding: 0;
