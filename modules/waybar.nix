@@ -25,7 +25,7 @@
         "modules-left" = [
           "custom/launcher"
           "hyprland/workspaces"
-          "mpris"
+          #"mpris"
         ];
         "modules-center" = [
           "clock#clock1"
@@ -93,25 +93,25 @@
             "󰁹"
           ];
         };
-        "mpris" = {
-          "format" = "{status_icon} {dynamic}";
-          "interval" = 0.5;
-          "dynamic-len" = 50;
-          "status-icons" = {
-            "playing" = "󰝚 ";
-            "paused" = "󰝛 ";
-            "stopped" = " ";
-          };
-          "dynamic-order" = [
-            "title"
-            "artist"
-          ];
-          "dynamic-separator" = "  ";
-          "max-length" = 50;
-          "on-click" = "playerctl play-pause";
-          "on-scroll-up" = "playerctl previous";
-          "on-scroll-down" = "playerctl next";
-        };
+        #"mpris" = {
+        #"format" = "{status_icon} {dynamic}";
+        #"interval" = 0.5;
+        #"dynamic-len" = 50;
+        #"status-icons" = {
+        #"playing" = "󰝚 ";
+        #"paused" = "󰝛 ";
+        #"stopped" = " ";
+        #};
+        #"dynamic-order" = [
+        #"title"
+        #"artist"
+        #];
+        #"dynamic-separator" = "  ";
+        #"max-length" = 50;
+        #"on-click" = "playerctl play-pause";
+        #"on-scroll-up" = "playerctl previous";
+        #"on-scroll-down" = "playerctl next";
+        #};
         "pulseaudio" = {
           "format" = "{icon} {volume}%";
           "format-muted" = " ";
@@ -266,195 +266,197 @@
         };
       }
     ];
-    style = with config.lib.stylix.colors; ''
-      * {
-          font-family: "${userSettings.fontMono}";
-          font-size: 13px;
-          min-height: 0;
-          padding: 0;
-          margin: 0;
-        }
+    style =
+      with config.lib.stylix.colors; # css
+      ''
+        * {
+            font-family: "${userSettings.fontMono}";
+            font-size: 13px;
+            min-height: 0;
+            padding: 0;
+            margin: 0;
+          }
 
-        #waybar {
-          background: transparent;
-          color: #${base05-hex};
-          margin: 5px 5px;
-          opacity: 0.9;
-        }
+          #waybar {
+            background: transparent;
+            color: #${base05-hex};
+            margin: 5px 5px;
+            opacity: 0.9;
+          }
 
-        #workspaces {
-          border-radius: 0px 1rem 1rem 0px;
-          margin: 5px;
-          background-color: rgba(${base00-rgb-r}, ${base00-rgb-g}, ${base00-rgb-b}, 0.9);
-          margin-left: 0rem;
-          margin-right: 1rem;
-        }
+          #workspaces {
+            border-radius: 0px 1rem 1rem 0px;
+            margin: 5px;
+            background-color: rgba(${base00-rgb-r}, ${base00-rgb-g}, ${base00-rgb-b}, 0.9);
+            margin-left: 0rem;
+            margin-right: 1rem;
+          }
 
-        #workspaces button {
-          color: #${base07-hex};
-          border-radius: 1rem;
-          padding: 0.4rem;
-        }
+          #workspaces button {
+            color: #${base07-hex};
+            border-radius: 1rem;
+            padding: 0.4rem;
+          }
 
-        #workspaces button.active {
-          color: #${base0C-hex};
-          border-radius: 1rem;
-        }
+          #workspaces button.active {
+            color: #${base0C-hex};
+            border-radius: 1rem;
+          }
 
-        #workspaces button:hover {
-          color: #${base0C-hex};
-          border-radius: 1rem;
-        }
+          #workspaces button:hover {
+            color: #${base0C-hex};
+            border-radius: 1rem;
+          }
 
-        #custom-launcher {
-          color: #${base05-hex};
-          border-radius: 1rem 0px 0px 1rem;
-          margin-left: 6px;
-        }
+          #custom-launcher {
+            color: #${base05-hex};
+            border-radius: 1rem 0px 0px 1rem;
+            margin-left: 6px;
+          }
 
-        #custom-launcher:hover {
-          color: #${base0C-hex};
-          border-radius: 1rem 0px 0px 1rem;
-        }
+          #custom-launcher:hover {
+            color: #${base0C-hex};
+            border-radius: 1rem 0px 0px 1rem;
+          }
 
-        #tray,
-        #backlight,
-        #clock.clock1,
-        #battery,
-        #pulseaudio,
-        #cpu,
-        #custom-weather.main,
-        #mpris,
-        #music,
-        #cava,
-        #memory,
-        #custom-gpu,
-        #network,
-        #custom-launcher,
-        #memory {
-          background-color: rgba(${base00-rgb-r}, ${base00-rgb-g}, ${base00-rgb-b}, 0.9);
-          padding: 0.5rem 0.75rem;
-          margin: 5px 0;
-        }
+          #tray,
+          #backlight,
+          #clock.clock1,
+          #battery,
+          #pulseaudio,
+          #cpu,
+          #custom-weather.main,
+          /* #mpris, */
+          #music,
+          #cava,
+          #memory,
+          #custom-gpu,
+          #network,
+          #custom-launcher,
+          #memory {
+            background-color: rgba(${base00-rgb-r}, ${base00-rgb-g}, ${base00-rgb-b}, 0.9);
+            padding: 0.5rem 0.75rem;
+            margin: 5px 0;
+          }
 
-        #custom-launcher,
-        #custom-notification,
-        #custom-lock,
-        #custom-power {
-          background-color: rgba(${base00-rgb-r}, ${base00-rgb-g}, ${base00-rgb-b}, 0.9);
-          padding: 0.5rem 1rem;
-          margin: 5px 0;
-        }
+          #custom-launcher,
+          #custom-notification,
+          #custom-lock,
+          #custom-power {
+            background-color: rgba(${base00-rgb-r}, ${base00-rgb-g}, ${base00-rgb-b}, 0.9);
+            padding: 0.5rem 1rem;
+            margin: 5px 0;
+          }
 
-        #clock.clock1 {
-          color: #${base07-hex};
-          border-radius: 1rem 0px 0px 1rem;
-        }
+          #clock.clock1 {
+            color: #${base07-hex};
+            border-radius: 1rem 0px 0px 1rem;
+          }
 
-        #custom-weather.main {
-          color: #${base0F-hex};
-      	  border-radius: 0px 1rem 1rem 0px;
-        }
+          #custom-weather.main {
+            color: #${base0F-hex};
+        	  border-radius: 0px 1rem 1rem 0px;
+          }
 
-        #battery {
-          color: #${base0B-hex};
-        }
+          #battery {
+            color: #${base0B-hex};
+          }
 
-        #battery.charging {
-          color: #${base0B-hex};
-        }
+          #battery.charging {
+            color: #${base0B-hex};
+          }
 
-        #battery.warning:not(.charging) {
-          color: #${base0A-hex};
-        }
+          #battery.warning:not(.charging) {
+            color: #${base0A-hex};
+          }
 
-        #battery.critical:not(.charging) {
-          color: #${base08-hex};
-        }
+          #battery.critical:not(.charging) {
+            color: #${base08-hex};
+          }
 
-        #backlight {
-          color: #${base09-hex};
-        }
+          #backlight {
+            color: #${base09-hex};
+          }
 
-        #pulseaudio {
-          color: #${base08-hex};
-          border-radius: 1rem 0px 0px 1rem;
-          margin-left: 1rem;
-        }
+          #pulseaudio {
+            color: #${base08-hex};
+            border-radius: 1rem 0px 0px 1rem;
+            margin-left: 1rem;
+          }
 
-        #custom-notification {
-         border-radius: 1rem 0px 0px 1rem;
-         color: #${base0F-hex};
-        }
+          #custom-notification {
+           border-radius: 1rem 0px 0px 1rem;
+           color: #${base0F-hex};
+          }
 
-        #custom-lock {
-          border-radius: 0rem 0px 0px 0rem;
-          color: #${base07-hex};
-        }
+          #custom-lock {
+            border-radius: 0rem 0px 0px 0rem;
+            color: #${base07-hex};
+          }
 
-        #custom-power {
-          border-radius: 0px 1rem 1rem 0px;
-          color: #${base08-hex};
-        }
+          #custom-power {
+            border-radius: 0px 1rem 1rem 0px;
+            color: #${base08-hex};
+          }
 
-        #network {
-         border-radius: 0rem 0px 0px 0rem;
-         color: #${base07-hex};
-        }
+          #network {
+           border-radius: 0rem 0px 0px 0rem;
+           color: #${base07-hex};
+          }
 
-        #memory {
-         color: #${base0E-hex};
-         border-radius: 0px 1rem 1rem 0px;
-         margin-right: 1rem;
-        }
+          #memory {
+           color: #${base0E-hex};
+           border-radius: 0px 1rem 1rem 0px;
+           margin-right: 1rem;
+          }
 
-        #custom-gpu {
-         color: #${base0A-hex};
-        }
+          #custom-gpu {
+           color: #${base0A-hex};
+          }
 
-        #cpu {
-      	  color: #${base07-hex};
-        }
+          #cpu {
+        	  color: #${base07-hex};
+          }
 
-        #mpris.playing {
-          background: rgba(${base00-rgb-r}, ${base00-rgb-g}, ${base00-rgb-b}, 0.9);
+          /*#mpris.playing {
+            background: rgba(${base00-rgb-r}, ${base00-rgb-g}, ${base00-rgb-b}, 0.9);
 
-          color: #${base0E-hex};
-          border-radius: 1rem;
-        }
+            color: #${base0E-hex};
+            border-radius: 1rem;
+          }
 
-        #mpris.paused,
-        #mpris.stopped {
-          background: rgba(${base00-rgb-r}, ${base00-rgb-g}, ${base00-rgb-b}, 0.9);
+          #mpris.paused,
+          #mpris.stopped {
+            background: rgba(${base00-rgb-r}, ${base00-rgb-g}, ${base00-rgb-b}, 0.9);
 
-          color: #${base05-hex};
-          border-radius: 1rem;
-        }
+            color: #${base05-hex};
+            border-radius: 1rem;
+          } */
 
-        #cava {
-          color: #${base05-hex};
-          border-radius: 0px 1rem 1rem 0px;
-        }
+          #cava {
+            color: #${base05-hex};
+            border-radius: 0px 1rem 1rem 0px;
+          }
 
-        #custom-day {
-          font-family: "anurati";
-          font-size: 60px;
-          letter-spacing: 30px;
-          /*letter-spacing: 5px;*/
-          color: #${base07-hex};
-        }
+          #custom-day {
+            font-family: "anurati";
+            font-size: 60px;
+            letter-spacing: 30px;
+            /*letter-spacing: 5px;*/
+            color: #${base07-hex};
+          }
 
-        #clock.date {
-          color: #${base07-hex};
-          font-size: 20px;
-          font-weight: bold;
-        }
-        #clock.time {
-          color: #${base07-hex};
-          font-size: 15px;
-          font-weight: bold;
-        }
-    '';
+          #clock.date {
+            color: #${base07-hex};
+            font-size: 20px;
+            font-weight: bold;
+          }
+          #clock.time {
+            color: #${base07-hex};
+            font-size: 15px;
+            font-weight: bold;
+          }
+      '';
   };
 
   #home.file = {
