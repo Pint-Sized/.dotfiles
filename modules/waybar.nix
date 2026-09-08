@@ -212,7 +212,7 @@
           "format" = "{}°";
           "tooltip" = true;
           "interval" = 3600;
-          "exec" = "wttrbar --location New+Ross";
+          "exec" = "wttrbar --location Limerick";
           "return-type" = "json";
         };
       }
