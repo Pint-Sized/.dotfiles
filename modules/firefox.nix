@@ -11,7 +11,7 @@
   programs.firefox = {
     enable = true;
     configPath = "${config.xdg.configHome}/mozilla/firefox";
-    profiles."8b2kzims.default" = {
+    profiles."15iw7ukd.default" = {
       settings = {
         "browser.startup.homepage" = "http://127.0.0.1:8080";
         "widget.non-native-theme.scrollbar.style" = 3;
@@ -156,7 +156,7 @@
   };
   stylix.targets.firefox = {
     enable = true;
-    profileNames = [ "8b2kzims.default" ];
+    profileNames = [ "15iw7ukd.default" ];
     firefoxGnomeTheme.enable = true;
   };
 }
