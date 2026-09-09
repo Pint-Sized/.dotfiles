@@ -13,7 +13,6 @@
     "systemctl --user start hyprpolkitagent &"
     "pkexec swayosd-libinput-backend &"
     "swayosd-server &"
-    #"foot cava"
     "pkill waybar"
     "waybar &"
     "npx http-server ~/.config/chevron"
