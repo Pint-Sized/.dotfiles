@@ -39,18 +39,6 @@
       hrl = "clear; cat ~/.local/splashes/homeRebuild; home-manager switch --flake ~/.dotfiles/#fionnbennett-laptop";
       frd = "sudo clear; cat ~/.local/splashes/fullRebuild; nix flake update --flake ~/.dotfiles; sudo nixos-rebuild switch --flake ~/.dotfiles/#desktop; home-manager switch --flake ~/.dotfiles/#fionnbennett-desktop"; # ~/.dotfiles/scripts/zen-browser-themer";
       frl = "sudo clear; cat ~/.local/splashes/fullRebuild; nix flake update --flake ~/.dotfiles; sudo nixos-rebuild switch --flake ~/.dotfiles/#laptop; home-manager switch --flake ~/.dotfiles/#fionnbennett-laptop"; # ~/.dotfiles/scripts/zen-browser-themer";
-      #y = {
-      #description = "Yazi changes directory on exit";
-      #body = # fish
-      #''
-      #set tmp (mktemp -t "yazi-cwd.XXXXXX")
-      #yazi $argv --cwd-file="$tmp"
-      #if set cwd (command cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
-      #builtin cd -- "$cwd"
-      #end
-      #rm -f -- "$tmp"
-      #'';
-      #};
       mkdir = {
         description = "changes to newly created directory";
         body = # fish
