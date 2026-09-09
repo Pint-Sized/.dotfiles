@@ -4,7 +4,7 @@
     "sleep 4"
     "dbus-update-activation-environment --system --all"
     "hyprctl setcursor 16"
-    "swww-daemon &"
+    "awww-daemon &"
     "sleep 2"
     "ulauncher --no-window-shadow &"
     "udiskie &"
