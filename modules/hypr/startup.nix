@@ -5,7 +5,6 @@
     "dbus-update-activation-environment --system --all"
     "hyprctl setcursor 16"
     "awww-daemon &"
-    "sleep 2"
     "ulauncher --no-window-shadow &"
     "udiskie &"
     "wl-paste --watch clihist store &"
@@ -13,8 +12,7 @@
     "systemctl --user start hyprpolkitagent &"
     "pkexec swayosd-libinput-backend &"
     "swayosd-server &"
-    "pkill waybar"
-    "waybar &"
+    "waybar"
     "npx http-server ~/.config/chevron"
     "discover-overlay"
   ];
