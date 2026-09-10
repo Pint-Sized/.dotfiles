@@ -1,8 +1,6 @@
 {
-  networking = {
-    networkmanager = {
-      enable = true;
-      wifi.powersave = false;
-    };
+  networking.networkmanager = {
+    enable = true;
+    wifi.powersave = false;
   };
 }

@@ -139,6 +139,7 @@ in
           taplo.enable = true;
           lua_ls.enable = true;
           marksman.enable = true;
+          jdtls.enable = true;
         };
       };
 
