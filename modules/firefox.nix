@@ -10,7 +10,7 @@
 
   programs.firefox = {
     enable = true;
-    configPath = "${config.xdg.configHome}/mozilla/firefox";
+    configPath = ".mozilla/firefox";
     profiles."15iw7ukd.default" = {
       settings = {
         "browser.startup.homepage" = "http://127.0.0.1:8080";
