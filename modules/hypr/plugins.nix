@@ -6,7 +6,7 @@ in
   wayland.windowManager.hyprland = {
     plugins = [
       #pkgs.hyprlandPlugins.hyprwinwrap
-      pkgs.hyprlandPlugins.hyprfocus
+      #pkgs.hyprlandPlugins.hyprfocus
       pkgs.hyprlandPlugins.hypr-dynamic-cursors
       pkgs.hyprlandPlugins.borders-plus-plus
       pkgs.hyprlandPlugins.hyprfocus
