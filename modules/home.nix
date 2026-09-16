@@ -17,6 +17,7 @@
     ./hypr/hyprland.nix
     ./imv.nix
     ./kitty.nix
+    ./lazygit.nix
     ./mpv.nix
     ./nixvim/nixvim.nix
     ./obs-studio.nix

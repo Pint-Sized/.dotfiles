@@ -7,6 +7,7 @@
 {
   environment.systemPackages =
     (with pkgs; [
+      vscode
       jdk
       waybar
       steamtinkerlaunch
