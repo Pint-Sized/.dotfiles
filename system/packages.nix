@@ -5,9 +5,13 @@
   ...
 }:
 {
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    libsecret
+    glib
+  ];
   environment.systemPackages =
     (with pkgs; [
-      vscode
       jdk
       waybar
       steamtinkerlaunch
