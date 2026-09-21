@@ -12,6 +12,9 @@
   ];
   environment.systemPackages =
     (with pkgs; [
+      bun
+      gcc
+      go
       jdk
       waybar
       steamtinkerlaunch
