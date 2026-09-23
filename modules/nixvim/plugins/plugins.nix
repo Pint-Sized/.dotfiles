@@ -1,0 +1,35 @@
+{ ... }:
+{
+  imports = [
+    ./ai/avante.nix
+    ./ai/copilot-lua.nix
+    ./completion/cmp.nix
+    ./completion/luasnip.nix
+    ./editing/bullets.nix
+    ./editing/nvim-autopairs.nix
+    ./formatting/conform-nvim.nix
+    ./lsp/fidget.nix
+    ./lsp/lsp.nix
+    ./lsp/lspkind.nix
+    ./lsp/lspsaga.nix
+    ./markdown/markdown-preview.nix
+    ./markdown/render-markdown.nix
+    ./navigation/aerial.nix
+    ./navigation/snacks.nix
+    ./navigation/which-key.nix
+    ./syntax/colorizer.nix
+    ./syntax/illuminate.nix
+    ./syntax/rainbow-delimiters.nix
+    ./syntax/todo-comments.nix
+    ./syntax/treesitter.nix
+    ./syntax/treesitter-context.nix
+    ./ui/csvview.nix
+    ./ui/gitsigns.nix
+    ./ui/indent-blankline.nix
+    ./ui/lualine.nix
+    ./ui/modicator.nix
+    ./ui/noice.nix
+    ./ui/tiny-glimmer.nix
+    ./ui/web-devicons.nix
+  ];
+}

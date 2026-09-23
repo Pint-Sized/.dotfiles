@@ -1,0 +1,198 @@
+{ config, ... }:
+let
+  colors = config.lib.stylix.colors;
+in
+{
+  programs.nixvim.plugins = {
+    lualine = {
+      enable = true;
+      settings = {
+        options = {
+          globalstatus = false;
+          ignore_focus = [
+            "aerial"
+            "snacks_picker_list"
+            "snacks_picker_input"
+            "neo-tree"
+          ];
+          extensions = [
+            "fzf"
+            "neo-tree"
+          ];
+          disabled_filetypes = {
+            statusline = [
+              "startup"
+              "alpha"
+            ];
+            winbar = [
+              "startup"
+              "alpha"
+            ];
+          };
+          theme.__raw = ''
+            (function()
+              local theme = require('lualine.themes.base16')
+              theme.normal.c.bg = '#${colors.base00-hex}'
+              return theme
+            end)()
+          '';
+        };
+
+        winbar = {
+          lualine_a = [
+            {
+              __unkeyed-1 = "filetype";
+              icon_only = true;
+              colored = false;
+              color = {
+                fg = "#${colors.base00-hex}";
+                bg = "#${colors.base00-hex}";
+              };
+              padding = 0;
+              separator = {
+                left = "";
+                right = "";
+              };
+            }
+            {
+              __unkeyed-1.__raw = ''
+                'mode',
+                separator = { left = "" },
+                fmt = function(str) return str:sub(1,1) end
+              '';
+            }
+          ];
+          lualine_b = [
+            {
+              __unkeyed-1.__raw = ''
+                'filename',
+                separator = { left = "" },
+                symbols = {
+                  modified = "",
+                  readonly = "󰷧",
+                  unnamed = "[No Name]",
+                  newfile = "󰎔",
+                },
+                color = {
+                  fg = "#${colors.base05-hex}",
+                  bg = "#${colors.base00-hex}",
+                  gui = "bold",
+                }
+              '';
+            }
+          ];
+          lualine_c = [ "" ];
+          lualine_x = [
+            {
+              __unkeyed-1 = "filetype";
+              separator.left = "";
+              colored = false;
+              icon.align = "left";
+              color = {
+                fg = "#${colors.base01-hex}";
+                bg = "#${colors.base0F-hex}";
+              };
+            }
+            {
+              __unkeyed-1.__raw = ''
+                function()
+                  local msg = 'No Active Lsp'
+                  local buf_ft = vim.api.nvim_buf_get_option(0, 'filetype')
+                  local clients = vim.lsp.get_clients({ bufnr = 0 })
+                  if next(clients) == nil then return msg end
+                  for _, client in ipairs(clients) do
+                    local filetypes = client.config.filetypes
+                    if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
+                      return client.name
+                    end
+                  end
+                  return msg
+                end
+              '';
+              icon = "";
+              color = {
+                fg = "#${colors.base05-hex}";
+                bg = "#${colors.base01-hex}";
+              };
+              padding = 1;
+            }
+          ];
+          lualine_y = [
+            {
+              __unkeyed-1 = "filetype";
+              icon_only = true;
+              colored = false;
+              color = {
+                fg = "#${colors.base00-hex}";
+                bg = "#${colors.base00-hex}";
+              };
+              padding = 0;
+              separator = {
+                left = "";
+                right = "";
+              };
+            }
+          ];
+          lualine_z = [
+            {
+              __unkeyed-1 = "progress";
+              separator.left = "";
+              color = {
+                fg = "#${colors.base01-hex}";
+                bg = "#${colors.base08-hex}";
+              };
+            }
+            {
+              __unkeyed-1 = "location";
+              color = {
+                fg = "#${colors.base05-hex}";
+                bg = "#${colors.base01-hex}";
+              };
+              padding = 1;
+            }
+            {
+              __unkeyed-1 = "filetype";
+              icon_only = true;
+              colored = false;
+              color = {
+                fg = "#${colors.base00-hex}";
+                bg = "#${colors.base00-hex}";
+              };
+              padding = 0;
+              separator = {
+                left = "";
+                right = "";
+              };
+            }
+          ];
+        };
+
+        inactive_winbar = {
+          lualine_a = [ "" ];
+          lualine_b = [ "" ];
+          lualine_c = [ "" ];
+          lualine_x = [ "" ];
+          lualine_y = [ "" ];
+          lualine_z = [ "" ];
+        };
+        sections = {
+          lualine_a = [ "" ];
+          lualine_b = [ "" ];
+          lualine_c = [ "" ];
+          lualine_x = [ "" ];
+          lualine_y = [ "" ];
+          lualine_z = [ "" ];
+        };
+        inactive_sections = {
+          lualine_a = [ "" ];
+          lualine_b = [ "" ];
+          lualine_c = [ "" ];
+          lualine_x = [ "" ];
+          lualine_y = [ "" ];
+          lualine_z = [ "" ];
+        };
+        tabline = { };
+      };
+    };
+  };
+}
