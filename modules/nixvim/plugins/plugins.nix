@@ -2,7 +2,7 @@
 {
   imports = [
     ./ai/avante.nix
-    ./ai/copilot-lua.nix
+    #./ai/copilot-lua.nix
     ./completion/cmp.nix
     ./completion/luasnip.nix
     ./editing/bullets.nix
