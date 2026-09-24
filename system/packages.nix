@@ -12,6 +12,8 @@
   ];
   environment.systemPackages =
     (with pkgs; [
+      cool-retro-term
+      cmatrix
       networkmanagerapplet
       bun
       gcc
