@@ -115,7 +115,6 @@
     steam.enable = true;
   };
   services.flatpak.packages = [
-    "org.pvermeer.WebAppHub"
     "com.usebottles.bottles"
     "io.github.giantpinkrobots.flatsweep"
     "it.mijorus.whisper"
