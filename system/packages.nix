@@ -1,6 +1,7 @@
 {
   pkgs,
   pkgs-unstable,
+  pkgs-master,
   userSettings,
   ...
 }:
@@ -12,7 +13,6 @@
   ];
   environment.systemPackages =
     (with pkgs; [
-      solaar
       pipes
       cool-retro-term
       cmatrix
@@ -85,6 +85,9 @@
       lua
       nchat
       nix-output-monitor
+    ])
+    ++ (with pkgs-master; [
+      solaar
     ])
     ++ (with pkgs.python312Packages; [
       libcst
