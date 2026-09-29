@@ -1,4 +1,3 @@
-{ ... }:
 {
   imports = [
     ./ai/avante.nix

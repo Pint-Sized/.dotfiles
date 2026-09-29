@@ -34,6 +34,7 @@
       url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    solaar.url = "https://flakehub.com/f/Svenum/Solaar-flake/*.tar.gz";
   };
   outputs =
     inputs@{
@@ -92,6 +93,7 @@
             inputs.stylix.nixosModules.stylix
             inputs.nix-flatpak.nixosModules.nix-flatpak
             inputs.nix-index-database.nixosModules.nix-index
+            inputs.solaar.nixosModules.default
             { nixpkgs.config = sharedConfig; }
           ]
           ++ extraModules;
