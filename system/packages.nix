@@ -114,7 +114,7 @@
     };
     nix-index-database.comma.enable = true;
     solaar = {
-      enable - true;
+      enable = true;
       userService.enable = true;
     };
     steam.enable = true;
