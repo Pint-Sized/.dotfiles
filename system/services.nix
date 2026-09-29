@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 {
   services = {
     devmon.enable = true;
@@ -34,5 +36,12 @@
       pulse.enable = true;
     };
     udisks2.enable = true;
+    udev = {
+      enable = true;
+      packages = [ pkgs.solaar ];
+      extraRules = ''
+        SUBSYSTEM=="hidraw", ATTRS{idVendor}=="046d", TAG+="uaccess"
+      '';
+    };
   };
 }
