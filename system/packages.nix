@@ -13,10 +13,7 @@
   ];
   environment.systemPackages =
     (with pkgs; [
-      pipes
-      cool-retro-term
-      cmatrix
-      networkmanagerapplet
+      kando
       bun
       gcc
       go
