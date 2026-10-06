@@ -13,8 +13,8 @@
   ];
   environment.systemPackages =
     (with pkgs; [
-      sone
-      tidal-hifi
+      tonearm
+      high-tide
       kando
       bun
       gcc

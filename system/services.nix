@@ -3,6 +3,7 @@
 {
   services = {
     devmon.enable = true;
+    gnome.gnome-keyring.enable = true;
     flatpak = {
       enable = true;
       overrides.global = {
