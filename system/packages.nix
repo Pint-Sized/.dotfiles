@@ -94,7 +94,7 @@
       psutil
       python-lsp-server
     ])
-    ++ )(with inputs; [
+    ++ (with inputs; [
       hiresTI.packages.${pkgs.system}.default
     ]);
   programs = {
