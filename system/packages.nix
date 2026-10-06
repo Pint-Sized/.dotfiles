@@ -93,6 +93,9 @@
       pip
       psutil
       python-lsp-server
+    ])
+    ++ )(with inputs; [
+      hiresTI.packages.${pkgs.system}.default
     ]);
   programs = {
     git.enable = true;

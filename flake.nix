@@ -30,8 +30,8 @@
       url = "github:kaylorben/nixcord/main";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    quickshell = {
-      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
+    hiresTI = {
+      url = "github:yelanxin/hiresTI";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
