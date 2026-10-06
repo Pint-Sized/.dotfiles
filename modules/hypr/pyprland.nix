@@ -5,7 +5,7 @@
         [pyprland]
         plugins = [ "scratchpads" ]
 
-        [scratchpads.spotify]
+        [scratchpads.music]
         animation = "fromTop"
         command = "spotify --force-device-scale-factor=1.5 %U"
         class = "Spotify"

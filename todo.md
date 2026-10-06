@@ -1,6 +1,3 @@
-- [x] kitty fixed cursor trail
-- [x] fix swaync transparency
-- [x] fix swayosd
 - [ ] finish nvim config
 - [ ] change window border colours
 - [ ] change cava
@@ -14,3 +11,5 @@
 - [ ] fix cava
 - [ ] nix store optimise
 - [ ] fix yazi
+- [ ] cachix for stylix rebuilds
+- [ ] package dark reader with presets

@@ -81,7 +81,7 @@
       "$mainMod, 9, exec, pypr toggle discord"
       "$mainMod, 0, exec, pypr toggle whatsapp"
       "$mainMod, code:20, exec, pypr toggle email"
-      "$mainMod, code:21, exec, pypr toggle spotify"
+      "$mainMod, code:21, exec, pypr toggle music"
       "$mainMod, M, exec, pypr toggle calculator"
       "$mainMod, S, togglespecialworkspace, magic"
       "$mainMod SHIFT, S, movetoworkspace, special:magic"
