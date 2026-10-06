@@ -13,7 +13,7 @@
   ];
   environment.systemPackages =
     (with pkgs; [
-      tidal
+      tidal-hifi
       kando
       bun
       gcc
