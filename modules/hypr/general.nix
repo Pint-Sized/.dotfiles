@@ -56,6 +56,9 @@ in
         smart_resizing = false;
       };
       master.new_status = "master";
+      windowrule = [
+        "match:class ^(kitty)$, tile on, suppress_event maximize fullscreen"
+      ];
       misc = {
         force_default_wallpaper = -1;
         disable_hyprland_logo = true;
