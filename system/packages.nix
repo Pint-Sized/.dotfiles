@@ -14,6 +14,7 @@
   ];
   environment.systemPackages =
     (with pkgs; [
+      maven
       tonearm
       high-tide
       kando
