@@ -7,8 +7,8 @@
 
         [scratchpads.music]
         animation = "fromTop"
-        command = "spotify --force-device-scale-factor=1.5 %U"
-        class = "Spotify"
+        command = "com.mastermindzh.tidal-hifi"
+        class = "com.mastermindzh.tidal-hifi"
         size = "90% 90%"
         lazy = true
 
