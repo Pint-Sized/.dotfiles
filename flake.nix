@@ -30,10 +30,6 @@
       url = "github:kaylorben/nixcord/main";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    hiresTI = {
-      url = "github:yelanxin/hiresTI";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
   outputs =
     inputs@{

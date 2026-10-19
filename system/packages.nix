@@ -1,5 +1,4 @@
 {
-  inputs,
   pkgs,
   pkgs-unstable,
   pkgs-master,
@@ -14,9 +13,8 @@
   ];
   environment.systemPackages =
     (with pkgs; [
+      vial
       maven
-      tonearm
-      high-tide
       kando
       bun
       gcc
@@ -95,9 +93,6 @@
       pip
       psutil
       python-lsp-server
-    ])
-    ++ (with inputs; [
-      hiresTI.packages.${pkgs.system}.default
     ]);
   programs = {
     git.enable = true;
