@@ -1,6 +1,5 @@
 - [ ] finish nvim config
 - [ ] change window border colours
-- [ ] change cava
 - [ ] change waybar
 - [ ] create widgets
 - [ ] stylix: set emoji font pack
@@ -8,8 +7,6 @@
 - [ ] check gtk extra css
 - [ ] change gaps
 - [ ] Hyprcursor
-- [ ] fix cava
-- [ ] nix store optimise
 - [ ] fix yazi
 - [ ] cachix for stylix rebuilds
 - [ ] package dark reader with presets

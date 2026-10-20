@@ -30,7 +30,6 @@
       }
     ];
     functions = {
-      c = "clear";
       n = "nvim $argv";
       l = "lsd -a $argv";
       nrd = "sudo clear; cat ~/.local/splashes/systemRebuild; sudo nixos-rebuild switch --flake ~/.dotfiles/#desktop";
