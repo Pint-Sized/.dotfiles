@@ -96,6 +96,7 @@
       "libvirtd"
       "networkmanager"
       "wheel"
+      "docker"
     ];
     isNormalUser = true;
     shell = pkgs.fish;

@@ -16,9 +16,11 @@
     };
 
     podman = {
-      dockerCompat = true;
+      #dockerCompat = true;
       enable = true;
     };
+
+    docker.enable = true;
 
     spiceUSBRedirection.enable = true;
   };
