@@ -21,6 +21,7 @@
     ./nixvim/nixvim.nix
     ./obs-studio.nix
     ./qt.nix
+    ./robocode.nix
     ./scripts.nix
     ./spicetify.nix
     ./splashes.nix
