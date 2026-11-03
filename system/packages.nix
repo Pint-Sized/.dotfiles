@@ -13,6 +13,7 @@
   ];
   environment.systemPackages =
     (with pkgs; [
+      jupyter-all
       awscli2
       vial
       maven

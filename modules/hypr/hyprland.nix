@@ -3,6 +3,7 @@
     enable = true;
     xwayland.enable = true;
     configType = "hyprlang";
+    portalPackage = null; # NixOS provides the portals; HM would shadow them with a hyprland-only dir
   };
   imports = [
     ./binds.nix
