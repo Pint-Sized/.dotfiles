@@ -1,4 +1,9 @@
 {
+  # Mirror every external display onto the laptop panel as soon as it is connected
+  wayland.windowManager.hyprland.settings.monitor = [
+    "eDP-1, 1920x1080, 0x0, 1"
+    ", preferred, auto, 1, mirror, eDP-1"
+  ];
   wayland.windowManager.hyprland.settings.env = [
     "HYPRCURSOR_SIZE,14"
     "QT_QPA_PLATFORM,wayland;xcb"

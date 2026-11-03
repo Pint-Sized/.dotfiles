@@ -1,4 +1,8 @@
 {
+  wayland.windowManager.hyprland.settings.monitor = [
+    "DP-2, 1920x1080@240, 0x0, 1"
+    "HDMI-A-2, 1920x1080, 1920x0, 1"
+  ];
   wayland.windowManager.hyprland.settings.env = [
     "HYPRCURSOR_SIZE,14"
     "QT_QPA_PLATFORM,wayland;xcb"

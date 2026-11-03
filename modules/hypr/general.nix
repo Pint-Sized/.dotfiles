@@ -68,11 +68,6 @@ in
         close_special_on_empty = true;
         middle_click_paste = false;
       };
-      monitor = [
-        "DP-2, 1920x1080@240, 0x0, 1"
-        "eDP-1, 1920x1080, 0x0, 1"
-        "HDMI-A-2, 1920x1080, 1920x0, 1"
-      ];
       cursor = {
         no_hardware_cursors = true;
         enable_hyprcursor = true;
