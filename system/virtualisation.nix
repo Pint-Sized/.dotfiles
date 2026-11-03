@@ -16,7 +16,6 @@
     };
 
     podman = {
-      #dockerCompat = true;
       enable = true;
     };
 

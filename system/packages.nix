@@ -118,10 +118,6 @@
       flake = "/home/${userSettings.username}/.dotfiles";
     };
     nix-index-database.comma.enable = true;
-    #solaar = {
-    #enable = true;
-    #userService.enable = true;
-    #};
     steam.enable = true;
   };
   services.flatpak.packages = [
