@@ -35,5 +35,9 @@
       pulse.enable = true;
     };
     udisks2.enable = true;
+    solaar = {
+      enable = true;
+      window = "hide";
+    };
   };
 }
