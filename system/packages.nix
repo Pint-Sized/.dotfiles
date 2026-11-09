@@ -1,7 +1,6 @@
 {
   pkgs,
   pkgs-unstable,
-  pkgs-master,
   userSettings,
   ...
 }:
@@ -88,9 +87,6 @@
       lua
       nchat
       nix-output-monitor
-    ])
-    ++ (with pkgs-master; [
-      solaar
     ])
     ++ (with pkgs.python312Packages; [
       libcst
