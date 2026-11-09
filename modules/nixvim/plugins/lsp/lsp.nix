@@ -28,7 +28,10 @@
         phpactor.enable = true;
         ruby_lsp.enable = true;
         elixirls.enable = true;
-        hls.enable = true;
+        hls = {
+          enable = true;
+          installGhc = true;
+        };
         zls.enable = true;
         dartls.enable = true;
         ocamllsp.enable = true;
