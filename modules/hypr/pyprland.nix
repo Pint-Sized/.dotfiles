@@ -11,6 +11,7 @@
         class = "com.mastermindzh.tidal-hifi"
         size = "90% 90%"
         lazy = false 
+        process_tracking = false
 
         [scratchpads.whatsapp]
         animation = "fromTop"
