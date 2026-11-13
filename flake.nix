@@ -51,7 +51,7 @@
         username = "fionnbennett";
         name = "Fionn Bennett";
         email = "fionnbennett06@gmail.com";
-        theme = "catppuccin-mocha";
+        theme = "gruvbox-material-dark-soft";
         fontSerif = "RecMonoCasual Nerd Font";
         fontMono = "RecMonoCasual Nerd Font Mono";
         fontPropo = "RecMonoCasual Nerd Font Propo";
