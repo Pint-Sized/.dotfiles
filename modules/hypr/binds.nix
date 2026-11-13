@@ -76,7 +76,6 @@
       "$mainMod SHIFT, 6, movetoworkspace, 6"
 
       # --- Pyprland Dropdowns & Special Workspaces ---
-      "$mainMod, 7, exec, pypr toggle timetable"
       "$mainMod, 8, exec, pypr toggle pavucontrol"
       "$mainMod, 9, exec, pypr toggle discord"
       "$mainMod, 0, exec, pypr toggle whatsapp"

@@ -27,14 +27,6 @@
         size = "90% 90%"
         lazy = false
 
-
-        [scratchpads.timetable]
-        animation = "fromTop"
-        command = "imv ~/School/school-timetable.png"
-        class = "imv"
-        size = "90% 90%"
-        lazy = true
-
         [scratchpads.calculator]
         animation = "fromTop"
         command = "gnome-calculator"
