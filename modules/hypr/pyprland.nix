@@ -10,7 +10,7 @@
         command = "com.mastermindzh.tidal-hifi"
         class = "com.mastermindzh.tidal-hifi"
         size = "90% 90%"
-        lazy = true
+        lazy = false 
 
         [scratchpads.whatsapp]
         animation = "fromTop"
