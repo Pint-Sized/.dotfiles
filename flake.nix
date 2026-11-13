@@ -22,10 +22,6 @@
     };
     nixvim.url = "github:nix-community/nixvim/nixos-26.05";
     nix-flatpak.url = "github:gmodena/nix-flatpak/latest";
-    spicetify-nix = {
-      url = "github:Gerg-L/spicetify-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     nixcord = {
       url = "github:kaylorben/nixcord/main";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -112,7 +108,6 @@
             varFile
             inputs.nixvim.homeModules.nixvim
             inputs.stylix.homeModules.stylix
-            inputs.spicetify-nix.homeManagerModules.default
             inputs.nixcord.homeModules.nixcord
           ];
           extraSpecialArgs = {

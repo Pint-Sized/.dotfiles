@@ -23,7 +23,6 @@
     ./qt.nix
     ./robocode.nix
     ./scripts.nix
-    ./spicetify.nix
     ./splashes.nix
     ./swaync.nix
     ./swayosd.nix
