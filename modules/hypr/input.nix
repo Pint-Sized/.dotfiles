@@ -5,7 +5,7 @@
       follow_mouse = 2;
       sensitivity = 0;
       special_fallthrough = true;
-      touchpad.natural_scroll = false;
+      touchpad.natural_scroll = true;
     };
     gestures = {
       workspace_swipe_invert = false;
