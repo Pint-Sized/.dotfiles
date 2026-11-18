@@ -12,6 +12,7 @@
   ];
   environment.systemPackages =
     (with pkgs; [
+      stremio-linux-shell
       rustc
       cargo
       jupyter-all
@@ -123,7 +124,6 @@
     "io.github.giantpinkrobots.flatsweep"
     "it.mijorus.whisper"
     "org.prismlauncher.PrismLauncher"
-    "com.stremio.Stremio"
     "com.mastermindzh.tidal-hifi"
   ];
 }
